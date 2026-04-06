@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <!-- 1. 引入 jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+    <!-- 2. 自动加载头部 + 底部 -->
+    <script>
+      $(function () {
+        $("#header").load("/header.html"); // 引入头部
+        $("#footer").load("/footer.html"); // 引入底部
+      });
+    </script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 头部会自动加载到这里 -->
+    <div id="header"></div>
+
+    <main>
+      <h1>TO BE CONTINUE...</h1>
+    </main>
+
+    <!-- 底部会自动加载到这里 -->
+    <div id="footer"></div>
+  </body>
+</html>

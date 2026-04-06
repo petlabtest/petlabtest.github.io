@@ -1,0 +1,215 @@
+@import url("./root.css");
+html {
+  font-size: 1vw;
+  overflow-x: hidden;
+}
+.industry-main {
+  min-height: 100vh;
+  font-family: var(--font-family, "Microsoft YaHei", Arial, sans-serif);
+}
+.industry-list {
+  margin: 0rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+}
+.industry-item {
+  display: flex;
+  position: relative;
+  height: 38rem;
+}
+.industry-item-img {
+  position: absolute;
+  width: 48rem;
+  height: 28rem;
+  flex-shrink: 0;
+  border-radius: 0;
+  z-index: 1;
+}
+.industry-item-subimg {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  line-height: 2;
+  box-sizing: border-box;
+}
+.industry-item-info {
+  position: absolute;
+  left: 5rem;
+  top: 4rem;
+  width: 38rem;
+  min-height: 20rem;
+  background: var(--theme-color1);
+  color: #fff;
+  padding: 2.5rem 3rem 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.industry-item-info-dark {
+  background: var(--theme-color2);
+}
+.industry-item-info-blue {
+  background: var(--theme-color1);
+}
+.industry-item-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+}
+.industry-item-info p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 2;
+    font-weight: 100;
+}
+.industry-item-tags {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  color: #fff;
+}
+.industry-item-alt .industry-item-info {
+  left: 48rem;
+  top: 2rem;
+  width: 39rem;
+}
+.industry-item-alt .industry-item-img {
+  order: 2;
+  left: 0;
+}
+.industry-item-multi {
+  display: flex;
+  align-items: stretch;
+  min-height: 18rem;
+}
+.industry-item-multi .industry-item-info {
+  position: static;
+  width: 60%;
+  min-height: 18rem;
+  padding: 2.5rem 2rem 2.5rem 2.5rem;
+  display: flex;
+  align-items: center;
+}
+.industry-item-multi .industry-item-img-multi {
+  width: 20rem;
+  height: 18rem;
+  background: #e0e0e0 center center/cover no-repeat;
+  flex-shrink: 0;
+}
+.industry-multi-row {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+}
+.industry-multi-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #fff;
+}
+.industry-multi-col h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+  font-weight: 400;
+}
+.industry-multi-col p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+.image-card-year {
+  writing-mode: vertical-lr;
+  letter-spacing: 1rem;
+}
+.image-card-item:hover {
+  flex: 4 1 0 !important;
+}
+/* å¢žåŠ å››ä½åšå£«ç”Ÿæˆ–è€…ç ”ç©¶å‘˜çš„ç‰¹æ®Šæ ¼å¼ */
+/* å›¢é˜Ÿå±•ç¤ºåŒºå—æ•´ä½“æ ·å¼ */
+.team-section {
+  margin-top: 2rem;
+  padding: 5rem 2rem;
+  background-color: #0f4c81; /* èƒŒæ™¯è‰²ï¼ˆå¯æ ¹æ®éœ€æ±‚è°ƒæ•´ï¼‰ */
+  color: #fff; /* æ–‡å­—é¢œè‰² */
+}
+
+/* æˆå‘˜å¡ç‰‡å®¹å™¨ï¼šFlexå¸ƒå±€å®žçŽ°æ¨ªå‘æŽ’åˆ—+è‡ªåŠ¨æ¢è¡Œ */
+.team-container {
+  display: flex;
+  flex-wrap: wrap; /* è‡ªåŠ¨æ¢è¡Œ */
+  justify-content: center; /* æ°´å¹³å±…ä¸­ */
+
+  margin: 0 auto; /* æ°´å¹³å±…ä¸­ */
+  position: relative;
+}
+
+/* å•ä¸ªæˆå‘˜å¡ç‰‡ */
+.team-card {
+  width: 27.3rem;
+  margin: 0rem;
+  text-align: center; /* æ–‡å­—å±…ä¸­ */
+  position: relative; /* ç”¨äºŽåˆ†å‰²çº¿å®šä½ */
+}
+/* æ ¸å¿ƒï¼šåªç»™éžç¬¬ä¸€ä¸ªå¡ç‰‡æ·»åŠ å·¦ä¾§åˆ†å‰²çº¿ */
+.team-card:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  left: 0; /* å®šä½åœ¨å¡ç‰‡å·¦ä¾§è¾¹ç¼˜ */
+  top: 53%; /* åž‚ç›´æ–¹å‘å±…ä¸­åä¸Šï¼ˆå¯è°ƒæ•´ï¼‰ */
+  height: 46%; /* åˆ†å‰²çº¿é«˜åº¦ï¼ˆå¯è°ƒæ•´ï¼‰ */
+  width: 0.05rem; /* åˆ†å‰²çº¿ç²—ç»† */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* åˆ†å‰²çº¿é¢œè‰²ï¼ˆåŠé€æ˜Žç™½è‰²ï¼Œé€‚é…è“è‰²èƒŒæ™¯ï¼‰ */
+}
+/* åœ†å½¢å¤´åƒ */
+.team-card img {
+  width: 12rem;
+  height: 12.5rem;
+  position: center;
+  border-radius: 50%; /* åœ†å½¢æ•ˆæžœ */
+  object-fit: cover; /* ä¿æŒå›¾ç‰‡æ¯”ä¾‹ï¼Œé¿å…æ‹‰ä¼¸ */
+  margin-bottom: 0rem;
+}
+
+/* å§“åæ ·å¼ */
+.team-card h3 {
+  font-size: 1.7rem;
+  font-weight: 430;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.1rem;
+}
+
+/* ç®€ä»‹æ ·å¼ */
+.team-card p {
+  font-size: 0.9rem;
+  font-weight: 100;
+  line-height: 2;
+  padding: 0 0.1rem; /* å·¦å³å†…è¾¹è·ï¼Œé¿å…æ–‡å­—è´´è¾¹ */
+}
+.team-card {
+  margin-top: 2.5rem;
+  font-size: 0.75rem;
+  font-weight: 100;
+  line-height: 1.7;
+  padding: 0rem 1.5rem; /* å·¦å³å†…è¾¹è·ï¼Œé¿å…æ–‡å­—è´´è¾¹ */
+}
+
+.detailed-intro {
+  text-align: left;
+  margin-top: 2.5rem;
+  font-size: 0.75rem;
+  font-weight: 100;
+  line-height: 1.7;
+  padding: 0rem 1.5rem; /* å·¦å³å†…è¾¹è·ï¼Œé¿å…æ–‡å­—è´´è¾¹ */
+}

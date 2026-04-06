@@ -1,0 +1,436 @@
+<!doctype html>
+<html
+  lang="en"
+  style="--dpl-header-cols-width: calc(868px + var(--dpl-gap-lg) - 25px)"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数字PET实验室</title>
+    <meta name="keywords" content="数字PET实验室" />
+    <meta
+      name="description"
+      content="Digital PET Laboratory is advancing the scope of human health."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta
+      property="og:title"
+      content="Digital PET Lab | All Digital PET, A Reinvention"
+    />
+    <meta
+      property="og:description"
+      content="Digital PET Laboratory is advancing the scope of human health."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://petlab.hust.edu.cn/" />
+    <meta property="og:site_name" content="Digital PET Laboratory" />
+    <meta property="og:image" content="/picture/PETLAB_LOGO.png" />
+    <link rel="dns-prefetch" href="/fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="/s.w.org" />
+    <link rel="canonical" href="https://petlab.hust.edu.cn/" />
+    <link
+      rel="alternate"
+      title="oEmbed (JSON)"
+      type="application/json+oembed"
+      href="/oembed/oembed.json"
+    />
+    <link
+      rel="alternate"
+      title="oEmbed (XML)"
+      type="text/xml+oembed"
+      href="/oembed/oembed.xml"
+    />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- 免费商用中文字体 -->
+    <link
+      href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 1. 引入 jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <!-- 2. 自动加载头部 + 底部 -->
+    <script>
+      $(function () {
+        $("#header").load("/header.html"); // 引入头部
+        $("#footer").load("/footer.html"); // 引入底部
+        $("#join_page").load("/join_page.html"); // 引入底部
+      });
+    </script>
+
+    <!-- 1. 引入 style -->
+    <link href="/css/global.css" rel="stylesheet" />
+    <link href="/css/timeline.css" rel="stylesheet" />
+    <style>
+      /* ———————————————————————————————————————————————————————————————————————————————————— */
+      /* join */
+      /* ———————————————————————————————————————————————————————————————————————————————————— */
+      /* 整体容器：cloud 主题浅灰背景 */
+      .dpl_join-container {
+        width: 100%;
+        background-color: #f5f7fa;
+        /* cloud 背景 */
+        padding: 5rem 1rem;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* 内容宽度限制 */
+      .dpl_join-cta-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: stretch;
+        gap: 0;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      /* 图片区域：占 50%，撑满 */
+      .cta-media {
+        flex: 1.1;
+        min-height: 420px;
+        position: relative;
+      }
+
+      .cta-media img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      /* 右侧文字区域 */
+      .cta-content {
+        flex: 1;
+        background: #fff;
+        padding: 3.5rem 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      /* 标题 */
+      .cta-title {
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: #192b53;
+        margin: 0 0 1.5rem;
+        line-height: 1.2;
+      }
+
+      /* 正文 */
+      .cta-rich-text p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #333;
+        margin: 0 0 2rem;
+        font-weight: 400;
+      }
+
+      /* dpl_join 按钮 inline-go 样式 */
+      .cta-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #192b53;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .cta-button:hover {
+        color: #0071bc;
+      }
+
+      .cta-button::after {
+        content: "→";
+        font-size: 1.2rem;
+        transition: transform 0.2s;
+      }
+
+      .cta-button:hover::after {
+        transform: translateX(4px);
+      }
+
+      /* 底部装饰图案 */
+      .dpl_join-pattern {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.59,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' fill='%23ffffff'/%3E%3C/svg%3E");
+        background-repeat: repeat-x;
+        background-size: 1200px 40px;
+        pointer-events: none;
+      }
+
+      /* 响应式 */
+      @media (max-width: 768px) {
+        .dpl_join-cta-wrapper {
+          flex-direction: column;
+        }
+
+        .cta-media {
+          min-height: 280px;
+        }
+
+        .cta-content {
+          padding: 2.5rem 2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 头部会自动加载到这里 -->
+    <div id="header"></div>
+
+    <main>
+      <!-- ============================================================================================= -->
+      <!-- Hero -->
+      <!-- ============================================================================================= -->
+      <section
+        class="dpl-hero-section"
+        style="
+          position: relative;
+          width: 100%;
+          height: 520px;
+          overflow: hidden;
+          margin: 0;
+          padding: 0;
+        "
+      >
+        <div
+          class="dpl-hero-bg"
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+          "
+        >
+          <img
+            src="/picture/guoguang1.jpg"
+            alt="dpl Hero"
+            style="
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+              display: block;
+            "
+          />
+        </div>
+
+        <!-- 左下角文字 -->
+        <div
+          class="dpl-hero-content"
+          style="
+            position: absolute;
+            left: 5%;
+            bottom: 12%;
+            z-index: 2;
+            max-width: 800px;
+            color: white;
+            padding: 0rem 1rem;
+          "
+        >
+          <div
+            class="dpl-hero-eyebrow"
+            style="
+              font-size: 3rem;
+              font-weight: 800;
+              margin-bottom: 0.8rem;
+              text-transform: uppercase;
+              letter-spacing: 0.1rem;
+              opacity: 1;
+            "
+          >
+            加入我们
+          </div>
+          <h1
+            class="dpl-hero-title"
+            style="
+              font-size: 1.4rem;
+              font-weight: 400;
+              line-height: 1.6;
+              margin: 0;
+              letter-spacing: 0.1rem;
+            "
+          >
+            使用我们的世界级科研设施，发掘发展机遇，探索前沿科学。
+          </h1>
+        </div>
+      </section>
+
+      <!-- 蓝色主题 · 短分隔线 + 中间小方块 -->
+      <section class="short dividing line">
+        <div
+          theme="blue"
+          wrapper-size="sm"
+          style="width: 100%; max-width: 900px; margin: 0 auto; padding: 0 20px"
+        >
+          <div
+            style="
+              position: relative;
+              width: 120px;
+              height: 1px;
+              background-color: #192b53;
+              margin: 32px auto;
+            "
+          >
+            <span
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: #192b53;
+              "
+            ></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================================================= -->
+      <!-- Content -->
+      <!-- ============================================================================================= -->
+      <!-- 白色背景 + 图右文左 -->
+      <div class="rlprt-container" theme="white">
+        <div class="rlprt-cta-inner layout-right">
+          <div class="rlprt-cta-media">
+            <img src="../picture/engage_hero.jpg" alt="" />
+          </div>
+          <div class="rlprt-cta-content">
+            <h2 class="rlprt-cta-title">开放共享</h2>
+            <p class="rlprt-cta-desc">
+              依托世界一流设施与资源开放共享，助力全球科研人员协同探索，共拓科学边界。了解我们如何助力您的科研事业更进一步。
+            </p>
+            <a href="/about/about_ov.html" class="rlprt-cta-btn">了解更多</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 浅灰色背景 + 图左文右 -->
+      <div class="rlprt-container" theme="cloud">
+        <div class="rlprt-cta-inner layout-left">
+          <div class="rlprt-cta-media">
+            <img src="../picture/engage_hero.jpg" alt="" />
+          </div>
+          <div class="rlprt-cta-content">
+            <h2 class="rlprt-cta-title">科研合作</h2>
+            <p class="rlprt-cta-desc">
+              汇聚多元智慧与跨界力量，深化国内外科研合作，携手应对重大科学与时代挑战。了解我们如何以协作方案应对重大科学挑战。
+            </p>
+            <a href="/people/people_ov.html" class="rlprt-cta-btn">了解更多</a>
+          </div>
+        </div>
+      </div>
+      <!-- 白色背景 + 图右文左 -->
+      <div class="rlprt-container" theme="white">
+        <div class="rlprt-cta-inner layout-right">
+          <div class="rlprt-cta-media">
+            <img src="../picture/engage_hero.jpg" alt="" />
+          </div>
+          <div class="rlprt-cta-content">
+            <h2 class="rlprt-cta-title">人才招募</h2>
+            <p class="rlprt-cta-desc">
+              广纳全球英才，提供卓越创新环境与发展平台，与顶尖团队共同驱动前沿科学发现。了解我们如何为您提供优质职业发展机遇。
+            </p>
+            <a href="/about/about_ov.html" class="rlprt-cta-btn">了解更多</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 浅灰色背景 + 图左文右 -->
+      <div class="rlprt-container" theme="cloud">
+        <div class="rlprt-cta-inner layout-left">
+          <div class="rlprt-cta-media">
+            <img src="../picture/engage_hero.jpg" alt="" />
+          </div>
+          <div class="rlprt-cta-content">
+            <h2 class="rlprt-cta-title">教育机会</h2>
+            <p class="rlprt-cta-desc">
+              面向学子与青年研究者提供优质科研实践与培养项目，培育未来科学领军人才。了解我们如何培养独当一面的“发动机”式人才。
+            </p>
+            <a href="/people/people_ov.html" class="rlprt-cta-btn">了解更多</a>
+          </div>
+        </div>
+      </div>
+      <!-- 白色背景 + 图右文左 -->
+      <div class="rlprt-container" theme="white">
+        <div class="rlprt-cta-inner layout-right">
+          <div class="rlprt-cta-media">
+            <img src="../picture/engage_hero.jpg" alt="" />
+          </div>
+          <div class="rlprt-cta-content">
+            <h2 class="rlprt-cta-title">捐赠支持</h2>
+            <p class="rlprt-cta-desc">
+              我们可以吸引聪明的学生和敬业的老师，
+              我们可以与医生们并肩战斗对抗死神，
+              我们可以建立更多的联合研究中心，
+              同全球科学家们一起探索基础学科的奥秘， 我们可以挽救生命。
+            </p>
+            <a href="/about/about_ov.html" class="rlprt-cta-btn"
+              >我们需要你站出来</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================================================= -->
+      <!-- join  -->
+      <!-- ============================================================================================= -->
+      <section class="dpl-join-block">
+        <div class="dpl_join-container" theme="cloud" has-pattern-bottom>
+          <div class="dpl_join-cta-wrapper">
+            <!-- 左侧图片 -->
+            <div class="cta-media">
+              <img
+                src="../picture/yanjiufangxiang.png"
+                alt="Purple-gloved hands connecting wires to a battery."
+              />
+            </div>
+
+            <!-- 右侧文字 -->
+            <div class="cta-content">
+              <h2 class="cta-title">全数字PET发源地</h2>
+              <div class="cta-rich-text">
+                <p>
+                  数字PET实验室以培养全球数字医学影像前沿研究领军人才为使命，以实现数字PET在早期诊断、精准治疗、药物研发中的应用突破为愿景，聚焦生命科学与医学需求，形其未见、成其未来，助力人类早日攻克癌症和脑病等重大疾病。
+                </p>
+              </div>
+              <a href="/about/about_ov.html" class="cta-button">关于我们</a>
+            </div>
+          </div>
+
+          <!-- 底部波浪装饰 -->
+          <div class="dpl_join-pattern"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 底部会自动加载到这里 -->
+    <div id="footer"></div>
+  </body>
+</html>

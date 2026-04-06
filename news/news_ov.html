@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数字PET实验室</title>
+    <meta name="keywords" content="数字PET实验室" />
+    <meta
+      name="description"
+      content="Digital PET Laboratory is advancing the scope of human health."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta
+      property="og:title"
+      content="Digital PET Lab | All Digital PET, A Reinvention"
+    />
+    <meta
+      property="og:description"
+      content="Digital PET Laboratory is advancing the scope of human health."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://petlab.hust.edu.cn/" />
+    <meta property="og:site_name" content="Digital PET Laboratory" />
+    <meta property="og:image" content="/picture/PETLAB_LOGO.png" />
+    <link rel="dns-prefetch" href="/fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="/s.w.org" />
+    <link rel="canonical" href="https://petlab.hust.edu.cn/" />
+    <link
+      rel="alternate"
+      title="oEmbed (JSON)"
+      type="application/json+oembed"
+      href="/oembed/oembed.json"
+    />
+    <link
+      rel="alternate"
+      title="oEmbed (XML)"
+      type="text/xml+oembed"
+      href="/oembed/oembed.xml"
+    />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- 免费商用中文字体 -->
+    <link
+      href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 引入 头部 + 底部 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#header").load("/header.html"); // 引入头部
+        $("#footer").load("/footer.html"); // 引入底部
+        $("#join_page").load("/join_page.html"); // 引入底部
+      });
+    </script>
+
+    <link href="/css/global.css" rel="stylesheet" />
+    <style>
+      /* 响应式 */
+      @media (max-width: 768px) {
+        .focus-news-wrapper {
+          grid-template-columns: 1fr;
+        }
+
+        .focus-news-wrapper::before {
+          display: none;
+        }
+
+        .news-item {
+          grid-template-columns: 120px 1fr;
+        }
+      }
+
+      /* 移动端自适应 */
+      @media (max-width: 768px) {
+        .dc-video-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+
+      /* 移动端自适应 */
+      @media (max-width: 768px) {
+        .tc-pt-b-grid-3 {
+          grid-template-columns: 1fr;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- 头部会自动加载到这里 -->
+    <div id="header"></div>
+
+    <main>
+      <!-- ============================================================================================= -->
+      <!-- Hero -->
+      <!-- ============================================================================================= -->
+      <section
+        class="dpl-hero-section"
+        style="
+          position: relative;
+          width: 100%;
+          height: 520px;
+          overflow: hidden;
+          margin: 0;
+          padding: 0;
+        "
+      >
+        <div
+          class="dpl-hero-bg"
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+          "
+        >
+          <img
+            src="/picture/News_hero.jpg"
+            alt="dpl Hero"
+            style="
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+              display: block;
+            "
+          />
+        </div>
+
+        <!-- 左下角文字 -->
+        <div
+          class="dpl-hero-content"
+          style="
+            position: absolute;
+            left: 5%;
+            bottom: 12%;
+            z-index: 2;
+            max-width: 800px;
+            color: white;
+            padding: 0rem 1rem;
+          "
+        >
+          <div
+            class="dpl-hero-eyebrow"
+            style="
+              font-size: 3rem;
+              font-weight: 800;
+              margin-bottom: 0.8rem;
+              text-transform: uppercase;
+              letter-spacing: 0.1rem;
+              opacity: 1;
+            "
+          >
+            新闻中心
+          </div>
+          <h1
+            class="dpl-hero-title"
+            style="
+              font-size: 1.4rem;
+              font-weight: 400;
+              line-height: 1.6;
+              margin: 0;
+              letter-spacing: 0.1rem;
+            "
+          >
+            科研动态、重要成果与团队资讯，全方位呈现研究进展与创新发展。
+          </h1>
+        </div>
+      </section>
+      <!-- 蓝色主题 · 短分隔线 + 中间小方块 -->
+      <section class="short dividing line">
+        <div
+          theme="blue"
+          wrapper-size="sm"
+          style="width: 100%; max-width: 900px; margin: 0 auto; padding: 0 20px"
+        >
+          <div
+            style="
+              position: relative;
+              width: 120px;
+              height: 1px;
+              background-color: #192b53;
+              margin: 32px auto;
+            "
+          >
+            <span
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: #192b53;
+              "
+            ></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================================================= -->
+      <!-- Focused news-->
+      <!-- ============================================================================================= -->
+      <div class="focus-news-container">
+        <h2 class="focus-news-title">焦点新闻</h2>
+
+        <div class="focus-news-wrapper">
+          <!-- 左侧主要文章 -->
+          <div class="primary-story">
+            <a
+              href="https://www.ncsti.gov.cn/kjdt/ztbd/zggdzzy/202309/t20230904_132812.html"
+            >
+              <img src="../picture/news/news1.png" alt="news1" />
+            </a>
+            <h3>
+              <a
+                href="https://www.ncsti.gov.cn/kjdt/ztbd/zggdzzy/202309/t20230904_132812.html"
+              >
+                世界首台脑部专用全数字PET获准入市
+              </a>
+            </h3>
+            <a
+              href="https://www.ncsti.gov.cn/kjdt/ztbd/zggdzzy/202309/t20230904_132812.html"
+              class="read-more"
+            >
+              阅读文章
+            </a>
+          </div>
+
+          <!-- 右侧列表文章（全部可点击） -->
+          <div class="news-list">
+            <div class="news-item">
+              <a href="https://petlab.hust.edu.cn/info/1046/1479.htm">
+                <img src="../picture/news/news2.jpg" alt="news2" />
+              </a>
+              <div>
+                <h4>
+                  <a href="https://petlab.hust.edu.cn/info/1046/1479.htm">
+                    新型医学影像设备频频走出武汉实验室
+                  </a>
+                </h4>
+                <a href="https://petlab.hust.edu.cn/info/1046/1479.htm">
+                  阅读文章
+                </a>
+              </div>
+            </div>
+
+            <div class="news-item">
+              <a href="https://petlab.hust.edu.cn/info/1046/1476.htm">
+                <img src="../picture/news/news3.png" alt="news3" />
+              </a>
+              <div>
+                <h4>
+                  <a href="https://petlab.hust.edu.cn/info/1046/1476.htm">
+                    鄂研鄂产鄂用 健博会上的“全球领先”产品
+                  </a>
+                </h4>
+                <a href="https://petlab.hust.edu.cn/info/1046/1476.htm">
+                  阅读文章
+                </a>
+              </div>
+            </div>
+
+            <div class="news-item">
+              <a href="https://petlab.hust.edu.cn/info/1046/1453.htm">
+                <img src="../picture/news/news4.jpg" alt="new4" />
+              </a>
+              <div>
+                <h4>
+                  <a href="https://petlab.hust.edu.cn/info/1046/1453.htm">
+                    我国首台！武汉自主研发临床全数字PET销售海外
+                  </a>
+                </h4>
+                <a href="https://petlab.hust.edu.cn/info/1046/1453.htm">
+                  阅读文章
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================================================= -->
+      <!-- focus footnote-->
+      <!-- ============================================================================================= -->
+      <div class="ffootnote-cta-container">
+        <a
+          href="https://petlab.hust.edu.cn/all-news/"
+          class="ffootnote-cta-slim"
+        >
+          阅读所有新闻
+        </a>
+      </div>
+      <div><br /></div>
+      <div><br /></div>
+      <!-- 蓝色主题 · 短分隔线 + 中间小方块 -->
+      <section class="short dividing line">
+        <div
+          theme="blue"
+          wrapper-size="sm"
+          style="width: 100%; max-width: 900px; margin: 0 auto; padding: 0 20px"
+        >
+          <div
+            style="
+              position: relative;
+              width: 120px;
+              height: 1px;
+              background-color: #192b53;
+              margin: 32px auto;
+            "
+          >
+            <span
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: #192b53;
+              "
+            ></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================================================= -->
+      <!-- Latest  -->
+      <!-- ============================================================================================= -->
+      <div class="focus-news-container">
+        <h2 class="focus-news-title">前沿速递</h2>
+      </div>
+
+      <section class="updt3-section">
+        <!-- 三列网格卡片 -->
+        <div class="updt3-container">
+          <div class="updt3-grid">
+            <!-- 1 -->
+            <div class="updt3-grid-card">
+              <img
+                class="updt3-card-media"
+                src="../picture/yanjiufangxiang.png"
+                alt="1"
+              />
+              <h3 class="updt3-card-title">
+                <a href="https://www.dpl.gov/research/ai">最新进展1</a>
+              </h3>
+              <p class="updt3-card-title-content">description</p>
+              <a href="https://www.dpl.gov/research/ai" class="updt3-card-btn"
+                >了解更多</a
+              >
+            </div>
+
+            <!-- 2 -->
+            <div class="updt3-grid-card">
+              <img
+                class="updt3-card-media"
+                src="../picture/yanjiufangxiang.png"
+                alt="2"
+              />
+              <h3 class="updt3-card-title">
+                <a href="https://www.dpl.gov/research/accelerator-technologies"
+                  >最新进展2</a
+                >
+              </h3>
+              <p class="updt3-card-title-content">description</p>
+              <a
+                href="https://www.dpl.gov/research/accelerator-technologies"
+                class="updt3-card-btn"
+                >了解更多</a
+              >
+            </div>
+
+            <!-- 3 -->
+            <div class="updt3-grid-card">
+              <img
+                class="updt3-card-media"
+                src="../picture/yanjiufangxiang.png"
+                alt="3"
+              />
+              <h3 class="updt3-card-title">
+                <a href="https://www.dpl.gov/research/cosmic-frontiers/"
+                  >最新进展3</a
+                >
+              </h3>
+              <p class="updt3-card-title-content">description</p>
+              <a
+                href="https://www.dpl.gov/research/cosmic-frontiers/"
+                class="updt3-card-btn"
+                >了解更多</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 蓝色主题 · 短分隔线 + 中间小方块 -->
+      <section class="short dividing line">
+        <div
+          theme="blue"
+          wrapper-size="sm"
+          style="width: 100%; max-width: 900px; margin: 0 auto; padding: 0 20px"
+        >
+          <div
+            style="
+              position: relative;
+              width: 120px;
+              height: 1px;
+              background-color: #192b53;
+              margin: 32px auto;
+            "
+          >
+            <span
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: #192b53;
+              "
+            ></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================================================= -->
+      <!-- People_video  -->
+      <!-- ============================================================================================= -->
+      <div class="focus-news-container">
+        <h2 class="focus-news-title">人物故事</h2>
+      </div>
+      <!-- 双视频并排模块 -->
+      <div class="dc-video-grid">
+        <!-- 视频 1 -->
+        <a
+          href="https://mp.weixin.qq.com/s/Vl7t9qjQ9BVtFDcHwNoX_g"
+          target="_blank"
+          class="dc-video-card"
+        >
+          <div class="dc-video-cover">
+            <img src="../picture/cooperation2.jpg" alt="视频封面" />
+            <div class="dc-video-play-btn"></div>
+          </div>
+          <div class="dc-video-title">100天能干成什么？她干成了芯片攻关</div>
+        </a>
+
+        <!-- 视频 2 -->
+        <a
+          href="https://mp.weixin.qq.com/s/替换成第二个公众号链接"
+          target="_blank"
+          class="dc-video-card"
+        >
+          <div class="dc-video-cover">
+            <img src="../picture/cooperation2.jpg" alt="视频封面" />
+            <div class="dc-video-play-btn"></div>
+          </div>
+          <div class="dc-video-title">
+            工科男也有爽文剧本？他的18到40就是答案
+          </div>
+        </a>
+      </div>
+
+      <!-- 蓝色主题 · 短分隔线 + 中间小方块 -->
+      <section class="short dividing line">
+        <div
+          theme="blue"
+          wrapper-size="sm"
+          style="width: 100%; max-width: 900px; margin: 0 auto; padding: 0 20px"
+        >
+          <div
+            style="
+              position: relative;
+              width: 120px;
+              height: 1px;
+              background-color: #192b53;
+              margin: 32px auto;
+            "
+          >
+            <span
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: #192b53;
+              "
+            ></span>
+          </div>
+        </div>
+      </section>
+      <!-- ============================================================================================= -->
+      <!-- popular  -->
+      <!-- ============================================================================================= -->
+      <div class="tc-pt-b-container">
+        <!-- 标题 + 右侧按钮 -->
+        <div class="tc-pt-b-header">
+          <h2 class="tc-pt-b-title">科普新闻</h2>
+          <a
+            href="https://petlab.hust.edu.cn/kxcb/yckp.htm"
+            class="tc-pt-b-btn"
+          >
+            阅读更多
+          </a>
+        </div>
+
+        <!-- 三列新闻卡片 -->
+        <div class="tc-pt-b-grid-3">
+          <!-- 卡片 1 -->
+          <div class="tc-pt-b-card">
+            <!-- 顶部区域：标题+日期+简介 顶部对齐 -->
+            <div class="tc-pt-b-card-top">
+              <h3 class="tc-pt-b-card-title">
+                <a href="链接" target="_blank"
+                  >把PET“戴”在头上 看大脑的“模样”</a
+                >
+              </h3>
+              <div class="tc-pt-b-card-date">2024年07月22日</div>
+              <div class="tc-pt-b-card-desc">
+                什么？PET还能做成头盔？别皮
+                此“头盔”非彼“头盔”将PET做成头盔“戴”在头上，患者可以不受地点、环境限制，以任意姿势实现PET的实时动态成像。便携式设计：占地面积小、高度可调、配备轮子，便于在大多数临床和介入环境中移动。
+                适应不同体位：甚至可以边扫PET边玩手机
+                当PET变成头盔，至少有三大“妙用”：一、病人可用任意pose进行扫描：系统的横向和轴向视野分别为200毫米和124毫米，站立、坐姿、卧姿，皆可...
+              </div>
+            </div>
+
+            <!-- 底部来源：永远底部对齐 -->
+            <a href="链接" class="tc-pt-b-card-source">阅读文章</a>
+          </div>
+
+          <!-- 卡片 2 -->
+          <div class="tc-pt-b-card">
+            <div class="tc-pt-b-card-top">
+              <h3 class="tc-pt-b-card-title">
+                <a href="链接">我不是药神 ▏谁才是药神？</a>
+              </h3>
+              <div class="ntc-pt-b-card-date">2018年07月17日</div>
+              <div class="tc-pt-b-card-desc">
+                编辑：数字PET实验室博士 肖文昌
+                国产大片《我不是药神》近期大火，刷屏朋友圈的同时，大家有否想过，我不是药神，到底谁才是药神？
+                （药神：大雾（徐铮）） （药神原型：陆勇） ...
+              </div>
+            </div>
+            <a href="链接" class="tc-pt-b-card-source">阅读文章</a>
+          </div>
+
+          <!-- 卡片 3 -->
+          <div class="tc-pt-b-card">
+            <div class="tc-pt-b-card-top">
+              <h3 class="tc-pt-b-card-title">
+                <a href="链接">辐不辐之二：酱紫的房子敢买吗？ </a>
+              </h3>
+              <div class="tc-pt-b-card-date">2018年06月30日</div>
+              <div class="tc-pt-b-card-desc">
+                我们会经常看到“家里辐射之王竟然是它!为孩子健康每个妈妈都应知道!”
+                “今晚12点30分——3点，极度危险的宇宙辐射贴近地球经过？”
+                “手机辐射致癌？辐射：臣...
+              </div>
+            </div>
+            <a href="链接" class="tc-pt-b-card-source">阅读文章</a>
+          </div>
+        </div>
+      </div>
+
+      
+      <!-- join us page-->
+      <div id="join_page"></div>
+    </main>
+
+    <!-- 底部会自动加载到这里 -->
+    <div id="footer"></div>
+  </body>
+</html>

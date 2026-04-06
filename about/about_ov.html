@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数字PET实验室</title>
+  <meta name="keywords" content="数字PET实验室" />
+  <meta name="description" content="Digital PET Laboratory is advancing the scope of human health." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta property="og:title" content="Digital PET Lab | All Digital PET, A Reinvention" />
+  <meta property="og:description" content="Digital PET Laboratory is advancing the scope of human health." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://petlab.hust.edu.cn/" />
+  <meta property="og:site_name" content="Digital PET Laboratory" />
+  <meta property="og:image" content="/picture/PETLAB_LOGO.png" />
+  <link rel="dns-prefetch" href="/fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="/s.w.org" />
+  <link rel="canonical" href="https://petlab.hust.edu.cn/" />
+  <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/oembed/oembed.json" />
+  <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/oembed/oembed.xml" />
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- 免费商用中文字体 -->
+  <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- 1. 引入 jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <!-- 2. 自动加载头部 + 底部 -->
+  <script>
+    $(function () {
+      $("#header").load("/header.html"); // 引入头部
+      $("#footer").load("/footer.html"); // 引入底部
+      $("#join_page").load("/join_page.html"); // 引入底部
+    });
+  </script>
+
+  <!-- 引入：TimelineJS 样式和脚本 -->
+  <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+  <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline-min.js"></script>
+  <!-- 引入 style -->
+  <link href="/css/global.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/style/root.css">
+  <link rel="stylesheet" href="/style/header.css">
+  <link rel="stylesheet" href="/style/footer.css">
+  <link rel="stylesheet" href="/style/industry02.css">
+  <script src="scripts/loader.js"></script>
+  <script src="/scripts/industry02.js"></script>
+
+
+
+
+  <style>
+    #timeline-embed {
+      width: 100%;
+      height: 500px;
+      background-color: #f8f9fa !important;
+    }
+
+    /* 时间轴 事件卡片 背景色 */
+    #timeline-embed .tl-slide-content {
+      padding: 20px !important;
+    }
+
+    /* 时间轴 大标题 */
+    #timeline-embed .tl-headline h2 {
+      font-size: 30px !important;
+      color: #2c3e50 !important;
+    }
+
+    /* 时间轴 日期文字 */
+    #timeline-embed .tl-time {
+      font-size: 18px !important;
+      color: #0052cc !important;
+    }
+
+    /* 时间轴 事件标题 */
+    #timeline-embed .tl-slide-title h3 {
+      font-size: 20px !important;
+      color: #222 !important;
+    }
+
+    /* 时间轴 事件正文 */
+    #timeline-embed .tl-slide-text p {
+      font-size: 16px !important;
+      line-height: 1.6 !important;
+      color: #000 !important;
+    }
+
+    /* 时间轴 整个右侧面板背景 */
+    #timeline-embed .tl-slides {
+      background-color: #f7f7f7 !important;
+    }
+  </style>
+</head>
+
+<body style="background-color: #F2F2F2;">
+  <!-- 头部会自动加载到这里 -->
+  <div id="header"></div>
+
+  <main>
+    <!-- ============================================================================================= -->
+    <!-- Hero -->
+    <!-- ============================================================================================= -->
+    <div style="
+        background: #0F4C81;
+        padding: 3rem 0rem 0rem 9rem;
+        margin-bottom: 7rem;
+      ">
+      <div style="
+          margin: 0 auto;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+        ">
+        <div style="flex: 0.37; padding: 0 0rem 0rem 0">
+          <h1 style="
+              color: #fff;
+              font-size: 3rem;
+              font-weight: bold;
+              line-height: 1.4;
+              margin-bottom: 3.2rem;
+              margin-top: 5rem;
+              width: 34rem;
+            ">
+            Driven by passion, strengthened by <br>
+            20 years of hard work.
+          </h1>
+          <div style="color: #fff; font-size: 1.2rem; margin-bottom: 1.5rem">
+            一群人，坚持做了二十多年很硬核的事
+          </div>
+        </div>
+        <div style="
+            flex: 0.63;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background: var(--theme-color2);
+            padding: 2rem 0 2rem 0;
+            margin-bottom: -4rem;
+          ">
+          <div style="display: flex">
+            <img src="/picture/about/pic1.jpg" alt="团队活动1" style="
+                width: 100%;
+                height: 10rem;
+                object-position: center;
+                object-fit: cover;
+                background: #eee;
+              ">
+          </div>
+          <div style="display: flex">
+            <img src="/picture/about/pic2.jpg" alt="团队活动2" style="
+                width: 100%;
+                height: 12rem;
+                object-position: center;
+                object-fit: cover;
+                background: #eee;
+              ">
+          </div>
+          <div style="display: flex">
+            <img src="/picture/about/pic3.jpg" alt="团队活动3" style="
+                width: 100%;
+                height: 10rem;
+                object-position: center;
+                object-fit: cover;
+                background: #eee;
+              ">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 研究简介-->
+    <h2 style="font-size: 3rem;
+    font-weight: 800;
+    color: #192b53;
+    margin: 2rem 5rem 2rem;">研究简介</h2>
+
+    <div style="
+        margin: 1rem 1.8rem 3rem 1.8rem;
+        padding: 0 7.2rem;
+        font-size: 1.1rem;
+        color: #222;
+        line-height: 1.8;
+        text-align: justify;
+        text-justify: inter-ideograph;
+      ">
+      <p>
+        智能探测与成像实验室由谢庆国教授领衔，汇聚了来自中国、意大利、俄罗斯、芬兰等多个国家的科学家，涵盖生物医学工程、电信、电子、控制、计算机、数学、机械、核医学、放射学、临床医学等十余个学科研究内容。团队于2001年开创了数字PET的研究新方向，历经二十年发展，依托强大的科研平台基础，逐渐形成人才培养、技术创新和产业支撑为一体的全球顶尖产学研用平台。
+      </p>
+      <p>
+        团队通过发明的多电压阈值采样法(MVT)，解决了高速脉冲精确数字化的难题，系统性地发展了全数字、模块化的 PET
+        探测器技术以及一系列智能化成像方法，深入研究了PET中五个数学物理过程（从物质到能量、射线到光、光到电、模拟到数据、数据到图像）的科学原理和技术创新。
+      </p>
+      <p>
+        全球首创的MVT采样方法实现了多领域通用，在医学成像领域，先后完成了全球首台动物全数字PET科学仪器（Trans-PET
+        BioCaliburn）、全球首台临床全数字PET医疗装备（D-PET100）、全球首个标准CMOS硅光电倍增器（TP3050）、全球首台脑部专用全数字PET系统（DigitMI
+        i30），全球首台质子刀PET系统，拥有全套自主知识产权。相关工作改变了PET行业的评价标准，开启了全数字PET新时代。在高能射线探测领域，包括石油探测、辐射探测、安检设备、核聚变中子探测器等研究工作中，均已实现技术突破和成果应用。
+      </p>
+      <p>
+        团队已实现从科学发现、技术发明到应用发展的完整创新闭环。在关键材料（高性能闪烁晶体）、关键器件（极弱光探测芯片）、核心部件（智能化模块化粒子探测器）、核心软件（全流程软件平台）、系统整机（动物全数字PET科学仪器和临床全数字PET医疗器械）全产业链均已实现成果转化。累计已申请专利600余件，授权240余件，覆盖电子学、探测器、系统集成、软件算法到产品全技术链，在数量上名列领域全球第一。
+      </p>
+      <p>
+        以数字PET脑成像平台、超级数字PET成像平台等大科学装置为依托，团队积极拓展新应用、发现新规律、积累新数据，以探索宇宙的起源、探索生命的起源、探索意识的起源为使命愿景，为造福人类健康、推动科学发展贡献智慧力量。
+      </p>
+    </div>
+
+    <!-- ============================================================================================= -->
+    <!-- Timeline -->
+    <!-- ============================================================================================= -->
+    <div id="timeline-embed"></div>
+
+    <script>
+      // 你的数据 👇 把这里换成你自己的所有数据
+      const data = {
+        "title": {
+          "text": {
+            "headline": "PET实验室历程",
+            "text": "2004至今"
+          }
+        },
+        "events": [
+          {
+            "start_date": { "year": "2004", "month": "2" },
+            "end_date": { "year": "2004", "month": "3" },
+            "text": {
+              "headline": "发明多电压阈值(MVT)采样法",
+              "text": "发明多电压阈值（MVT）采样法，解决了高速闪烁脉冲源头数字化的世界难题"
+            },
+            "group": "科学发现"
+          },
+          {
+            "start_date": { "year": "2005" },
+            "text": {
+              "headline": "基于MVT方法提出全数字PET系统架构",
+              "text": "基于MVT方法首创性提出全数字PET系统架构"
+            },
+            "group": "技术发明"
+          },
+          {
+            "start_date": { "year": "2008" },
+            "text": {
+              "headline": "首次完成全数字PET探测器的模块化集成",
+              "text": "首次完成全数字PET探测器的模块化集成。"
+            },
+            "group": "技术发明"
+          },
+          {
+            "start_date": { "year": "2010" },
+            "text": {
+              "headline": "首次基于MVT和1:1:1探测技术",
+              "text": "首次基于MVT和1:1:1探测技术实现了实际空间分辨率与内秉空间分辨率一致。"
+            },
+            "group": "技术发明"
+          },
+          {
+            "start_date": { "year": "2010" },
+            "text": {
+              "headline": "首台动物全数字PET科学仪器",
+              "text": " 完成首台动物全数字PET科学仪器，基于该设备迭代系列产品，与国内外多家知名高校、科研院所、教学科研型医院在脑疾病、肿瘤、心血管、代谢等领域的疾病研究及新药开发开展应用合作，相关成发表于行业内权威学术期刊。"
+            },
+            "group": "产业发展"
+          },
+          {
+            "start_date": { "year": "2015" },
+            "text": {
+              "headline": "首台临床全数字PET/CT医疗设备",
+              "text": " 完成首台临床全数字PET/CT医疗设备，空间分辨率、时间分辨率、灵敏度等关键指标全面领先，拥有全套自主知识产权。"
+            },
+            "group": "产业发展"
+          },
+          {
+            "start_date": { "year": "2017" },
+            "text": {
+              "headline": "首台面向质子治疗监测的专用数字PET样机",
+              "text": " 研发成功首台面向质子治疗监测的专用数字PET样机，验证了全数字PET技术在质子治疗在线在束监测中的可行性。"
+            },
+            "group": "技术发明"
+          },
+          {
+            "start_date": { "year": "2017", "month": "4" },
+            "end_date": { "year": "2017", "month": "6" },
+            "text": {
+              "headline": "首次利用平板全数字PET监测",
+              "text": " 首次利用平板全数字PET监测到质子束辐照生物组织产生的氧15，对破解质子束在线在束监测的世界难题意义重大。"
+            },
+            "group": "科学发现"
+          },
+          {
+            "start_date": { "year": "2017", "month": "9" },
+            "end_date": { "year": "2017", "month": "12" },
+            "text": {
+              "headline": "基于MVT数字化方法首次实现SiPM",
+              "text": " 基于MVT数字化方法首次实现SiPM 全数字化数据读出，直接获取闪烁事件的能量、时间等信息，解决了SiPM读出通道密度大、数据获取困难的问题。"
+            },
+            "group": "科学发现"
+          },
+          {
+            "start_date": { "year": "2018" },
+            "text": {
+              "headline": "全数字PET/CT获得国家创新医疗器械特别审批"
+            },
+            "group": "产业发展"
+          },
+          {
+            "start_date": { "year": "2018", "month": "2" },
+            "text": {
+              "headline": "首个标准CMOS SiPM研发成功"
+            },
+            "group": "技术发明"
+          },
+          {
+            "start_date": { "year": "2018", "month": "9" },
+            "text": {
+              "headline": "研发成功首台脑部专用全数字PET样机",
+              "text": " 研发成功首台脑部专用全数字PET样机，实现了16.7 kcps/Mbq的系统灵敏度和平均2.0 mm的空间分辨率指标。"
+            },
+            "group": "技术发明"
+          },
+          {
+            "start_date": { "year": "2019" },
+            "text": {
+              "headline": "兼具快衰减和高均一的大尺寸LYSO晶体研发成功",
+            },
+            "group": "技术发明"
+          },
+          {
+            "start_date": { "year": "2019", "month": "2" },
+            "end_date": { "year": "2019", "month": "8" },
+            "text": {
+              "headline": "围绕全数字PET关键材料新需求",
+              "text": " 围绕全数字PET关键材料新需求，揭示基于共掺杂和氧平衡的闪烁晶体可编程规律，实现大尺寸、快衰减LYSO全结晶生长，为全数字TOF-PET发展奠定基础。"
+            },
+            "group": "科学发现"
+          },
+          {
+            "start_date": { "year": "2019", "month": "3" },
+            "text": {
+              "headline": "临床全数字PET/CT获得国家医疗器械注册证",
+              "text": " 临床全数字PET/CT（DPET100）获得国家医疗器械注册证，正式获得市场准入资质，表明数字PET全新技术路线的全线贯通。"
+            },
+            "group": "产业发展"
+          },
+          {
+            "start_date": { "year": "2019", "month": "9" },
+            "end_date": { "year": "2019", "month": "11" },
+            "text": {
+              "headline": "脑部专用全数字PET原型机应用",
+              "text": " 利用脑部专用全数字PET原型机研究了包括脑肿瘤、帕金森、AD等12种脑部疾病，首次刻画出了纹状体等亚核团结构。"
+            },
+            "group": "科学发现"
+          },
+          {
+            "start_date": { "year": "2019", "month": "12" },
+            "text": {
+              "headline": "牵头承担国家重点研发计划“全数字PET技术标准和规范”",
+              "text": " 牵头承担国家重点研发计划“全数字PET技术标准和规范”，并且在该项目支持下制定了全数字PET行业标准和两项产品注册指导原则。"
+            },
+            "group": "科学发现"
+          },
+          {
+            "start_date": { "year": "2023" },
+            "text": {
+              "headline": "首台商用脑部专用全数字PET获得国家医疗器械注册证",
+              "text": "首台商用脑部专用全数字PET（DigitMI i30）获得国家医疗器械注册证，实现了当前最高帧率40FPS（每秒传输帧数）的高频动态观测，毫秒级地捕捉脑部代变化、神经元放电等生理过程。"
+            },
+            "group": "产业发展"
+          },
+          {
+            "start_date": { "year": "2024" },
+            "text": {
+              "headline": "实现适用于运动状态下的脑部成像技术",
+              "text": "在首款头盔全数字PET系统的研发中，通过紧凑、微型化的系统设计，实现了适用于运动状态下的脑部动态成像技术。"
+            },
+            "group": "技术发明"
+          },
+          {
+            "start_date": { "year": "2024" },
+            "text": {
+              "headline": "全数字PET产品接受习总书记检阅",
+              "text": "全数字PET产品接受习总书记检阅，数字PETer向习总书记当面汇报工作。"
+            },
+            "group": "产业发展"
+          },
+          {
+            "start_date": { "year": "2024", "month": "2" },
+            "end_date": { "year": "2024", "month": "9" },
+            "text": {
+              "headline": "基于全数字PET技术研究DOI信息提取方法",
+              "text": "基于全数字PET技术研究DOI信息提取方法，突破了空间分辨率瓶颈，首次提出适配半球形结构算法，成像质量大幅提升。"
+            },
+            "group": "科学发现"
+          },
+          {
+            "start_date": { "year": "2025" },
+            "text": {
+              "headline": "首台质子束在生物组织内的能量输运观测装置",
+              "text": "研发成功首台质子束在生物组织内的能量输运观测装置。首次实现了质子束诱导产生的正电子核素的三维动态分布和质子束射程的亚毫米在线监测技术。"
+            },
+            "group": "技术发明"
+          },
+          {
+            "start_date": { "year": "2025" },
+            "text": {
+              "headline": "临床全数字PET/CT通过FDA注册认证",
+              "text": "临床全数字PET/CT（DigitMI）通过FDA（美国食品药品监督管理局）注册认证。"
+            },
+            "group": "产业发展"
+          },
+          {
+            "start_date": { "year": "2025", "month": "2" },
+            "end_date": { "year": "2025", "month": "3" },
+            "text": {
+              "headline": "探索质子治疗中的糖代谢变化过程",
+              "text": "利用质子束在生物组织内的能量输运观测装置探索了质子治疗中的糖代谢变化过程，分析了质子束在生物体内的生物冲刷效应，对质子放射治疗中剂量引导和生物引导、治疗评估和设备质控起到关键作用。"
+            },
+            "group": "科学发现"
+          }
+        ]
+      };
+
+      // 自动渲染时间轴 ✅
+      window.timeline = new TL.Timeline('timeline-embed', data);
+    </script>
+
+
+
+    <!-- ============================================================================================= -->
+    <!-- achievement -->
+    <!-- ============================================================================================= -->
+    <h2 style="font-size: 3rem;
+    font-weight: 800;
+    color: #192b53;
+    margin: 5rem 5rem 3rem;">科研成果与社会影响</h2>
+
+    <Container class="industry02-main" >
+      <!-- 完全自主知识产权板块 -->
+      <section class="industry02-section ip-section">
+        <div style="
+            float: left;
+            position: absolute;
+            background-color: #343434;
+            height: 28.8rem;
+            width: 71rem;
+            left: 0;
+            z-index: -1;
+          "></div>
+        <div style="
+            float: right;
+            position: absolute;
+            background-color: #0f4c81;
+            height: 28.8rem;
+            width: 29rem;
+            right: 0;
+            z-index: -1;
+          "></div>
+        <p style="color: #fff; font-size: 2.5rem">知识产权</p>
+        <div class="ip-grid">
+          <div class="ip-item ip-img" style="
+              background: #2a2a2a;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              aspect-ratio: 1/1;
+            ">
+            <img src="/picture/about/achievement1.jpg"alt="奖杯"
+              style="width: 100%; height: 100%; object-fit: cover; border: none">
+          </div>
+          <div class="ip-item ip-award" style="
+              background: #ffffff;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              aspect-ratio: 1/1;
+            ">
+            <h3 style="
+                font-size: 1.5em;
+                color: #333;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 0;
+              ">
+              世界知识产权组织<br>WIPO首届全球奖
+            </h3>
+            <p style="font-size: 1.1em; color: #333; text-align: center">
+              全球五个项目之一
+            </p>
+          </div>
+          <div class="ip-item ip-num" style="
+              background: #2a2a2a;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              aspect-ratio: 1/1;
+            ">
+            <span style="font-size: 2.5em; font-weight: normal; color: #fff">850+</span>
+            <p style="position: relative; top:1.25rem; font-size: 1.1em; color: #fff">专利申请</p>
+          </div>
+          <div class="ip-item ip-img" style="
+              background: #2a2a2a;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              aspect-ratio: 1/1;
+            ">
+            <img src="/picture/about/achievement2.jpg" alt="奖杯"
+              style="width: 100%; height: 100%; object-fit: cover; border: none">
+          </div>
+          <div class="ip-item ip-rate" style="
+              background: #c5d2db;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              aspect-ratio: 1/1;
+            ">
+            <span style="font-size: 2.5em; color: #333;">14个</span>
+
+            <p style="font-size: 1.1em; color: #333">国家和地区专利覆盖</p>
+          </div>
+          <div class="ip-item ip-global" style="
+              background: #2a2a2a;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              aspect-ratio: 1/1;
+            ">
+            <span style="font-size: 2.5em; font-weight: normal; color: #fff">460+</span>
+            <p style="font-size: 1.1em; color: #fff">授权专利</p>
+          </div>
+          <div class="ip-item ip-medal" style="
+              background: #2a2a2a;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              aspect-ratio: 1/1;
+            ">
+            <img src="/picture/about/achievement3.jpg" alt="奖牌"
+              style="width: 100%; height: 100%; object-fit: cover; border: none">
+          </div>
+          <div class="ip-item ip-china" style="
+              background: var(--theme-color1);
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              aspect-ratio: 1/1;
+            ">
+            <h3 style="
+                font-size: 1.5em;
+                color: #fff;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 0;
+              ">
+              中国发明专利金奖
+            </h3>
+            <p style="font-size: 1.1em; color: #fff; text-align: center">
+              PET领域唯一一个
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 社会评价板块 -->
+      <section class="industry02-section social-section" style="margin-bottom: 4rem">
+        <div style="
+            float: right;
+            position: absolute;
+            background-color: var(--theme-color1);
+            height: 15.5rem;
+            width: 100rem;
+            right: -12rem;
+            z-index: -1;
+          "></div>
+        <div style="
+            float: right;
+            position: absolute;
+            background-color: var(--theme-color2);
+            height: 24rem;
+            width: 70rem;
+            left: -12rem;
+            top: 10rem;
+            z-index: -1;
+          "></div>
+        <p style="font-size: 2.5rem; margin-bottom: 6rem">社会评价</p>
+        <div class="social-title">
+          <h2>中国十大科技进展新闻</h2>
+          <p style="font-size: 1.5rem; min-height: 2rem;">两院院士评选</p>
+        </div>
+        <div class="social-cert">
+          <div style="
+              float: right;
+              position: absolute;
+              background: url(/picture/about/achievement4.jpg);
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+              width: 26.5rem;
+              height: 18rem;
+              right: 0rem;
+              top: 6rem;
+            " alt="证书"></div>
+        </div>
+        <div class="social-awards" style="position: relative; margin-top: 5rem">
+          <div class="btn-right" style="
+              float: right;
+              position: absolute;
+              background-color: var(--theme-color2);
+              height: 6rem;
+              width: 4rem;
+              left: 74rem;
+              top: 1.25rem;
+              text-align: center;
+              line-height: 6rem;
+              font-size: 3rem;
+              cursor: pointer;
+              user-select: none;
+            ">
+            &gt;
+          </div>
+          <div class="btn-left" style="
+              float: right;
+              position: absolute;
+              background-color: #ddd;
+              height: 6rem;
+              width: 4rem;
+              left: 70rem;
+              top: 1.25rem;
+              text-align: center;
+              line-height: 6rem;
+              font-size: 3rem;
+              cursor: pointer;
+              user-select: none;
+            ">
+            &lt;
+          </div>
+          <img src="/picture/about/achievement4.jpg" alt="奖状1" style="width: 11.8rem; height: 8rem;">
+          <img src="/picture/about/achievement5.jpg" alt="奖状2" style="width: 10.5rem; height: 8rem">
+          <img src="/picture/about/achievement6.jpg" alt="奖状4" style="width: 11.2rem; height: 8rem;">
+          <img src="/picture/about/achievement7.jpg" alt="奖状5" style="width: 14.7rem; height: 8rem;">
+        </div>
+      </section>
+
+      <!-- 权威媒体报道板块（改版） -->
+      <section class="media-section media-section-new" style="
+    margin-top: 8rem;
+    height: 37rem;
+">
+        <div class="media-title media-title-blue" style="
+    left: 10rem;
+    top: -5rem;
+">
+          <h2 style="
+    font-size: 2.5rem;
+    font-weight: 400;
+">社会关注</h2>
+        </div>
+        <div class="media-vertical-texts" style="
+    position: absolute;
+    left: 10rem;
+    top: 12rem;
+    gap: 1.5rem;
+">
+          <p>面向世界科技前沿</p>
+          <p>面向经济主战场</p>
+          <p>面向国家重大需求</p>
+          <p>面向人民生命健康</p>
+        </div>
+
+        <div class="media-images-row" style="
+    left: 30rem;
+    top: 3rem;
+">
+          <img src="/picture/about/achievement_bg.jpg" alt="新闻"
+            style="width: 67rem;height: 35rem;object-fit:cover;left: 1.2rem;top: -1.2rem;">
+        </div>
+      </section>
+    </Container>
+
+  </main>
+
+  <!-- 底部会自动加载到这里 -->
+  <div id="footer"></div>
+</body>
+
+</html>

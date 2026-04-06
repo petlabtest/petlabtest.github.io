@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <!-- 1. 引入 jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <!-- 2. 自动加载头部 + 底部 -->
+  <script>
+    $(function () {
+      $("#header").load("/header.html"); // 引入头部
+      $("#footer").load("/footer.html"); // 引入底部
+    });
+  </script>
+
+  <link href="/css/global.css" rel="stylesheet" />
+  <link href="/style/donation.css" rel="stylesheet" />
+  <link href="/style/card.css" rel="stylesheet" />
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <!-- 头部会自动加载到这里 -->
+  <div id="header"></div>
+
+  <main>
+    <section class="donation-hero">
+      <div class="donation-hero-left">
+        <h2>We came,<br>We saw,<br>We seek - endlessly, relentlessly</h2>
+        <p>我们到来，我们看见，我们穷究</p>
+      </div>
+
+      <!-- 科学探索1 -->
+      <div style="position: absolute; width: 18.25rem; height: 42rem; top: 7.6rem; right: 0rem; overflow: hidden;">
+        <img src="/picture/donate/dona1.jpg" alt="科学探索1"
+          style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+      </div>
+
+      <!-- 科学探索2 -->
+      <div style="position: absolute;width: 12.75rem;height: 10rem;top: 26rem;right: 18.25rem;overflow: hidden;">
+        <img src="/picture/donate/dona2.jpg" alt="科学探索2"
+          style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+      </div>
+
+      <!-- 科学探索3 -->
+      <div style="position: absolute;width: 12.75rem;height: 9rem;top: 36rem;right: 18.25rem;overflow: hidden;">
+        <img src="/picture/donate/dona3.jpg" alt="科学探索3"
+          style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+      </div>
+
+      <!-- 科学探索4 -->
+      <div style="position: absolute;width: 13.75rem;height: 9rem;top: 36rem;right: 31rem;overflow: hidden;">
+        <img src="/picture/donate/dona5.jpg" alt="科学探索5"
+          style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+      </div>
+
+    </section>
+
+
+
+    <section class="donation-vision">
+      <p style="font-weight: 100;font-size: 1rem;color:rgba(255,255,255,1);margin: 3rem 9rem 3rem 9rem;line-height: 2;">
+        本团队以全数字PET科学仪器和医疗器械为主方向，研究工作覆盖从关键材料、核心器件到创新系统、前沿应用的整个创新链。以MVT方法的发明为起点，我们用二十余年的时间一步步实现了数字PET从采样原理到临床应用的创新闭环。<br>探索“生命起源、意识起源、宇宙起源”是团队的终极愿景。我们相信这样的努力，可能会对人类文明的发展产生无法估量、无可替代的作用。还有什么，会比这更令人痴迷和满足呢？
+      </p>
+    </section>
+
+
+    <section class="donation-support">
+      <p style="font-weight: 400;font-size: 2rem;color: var(--theme-color1);">而您，可以不仅仅做一个旁观者！</p>
+      <div class="donation-support-list">
+        <div class="card-component card-blue">
+          <p style="margin-top:4rem">
+            对世界富有好奇心的您，可以与我们一同去绘制分子层面的代谢图谱、窥探神经网络到主观体验的跃迁、破解宇宙元事件分布的奥秘。您的捐赠，是对追寻科学真理精神的激励、是对人类踏上好奇心之旅的鼓舞。</p>
+        </div>
+        <div class="card-component">
+          <p style="margin-top:4rem">
+            对人类富有悲悯心的您，可以与我们一同去揭示癌症、脑病、罕见病等疾病的发生发展内在规律，开辟疾病诊疗与药物开发新范式。为医生在肿瘤、心脑血管疾病和神经系统等重大健康危害的早期诊断、精准治疗中提供更多工具，为生物学家在病理研究、新药开发中提供更多利器。您的捐赠，是对重大疾病从“早期可见”走向“超早期可量、可治”的助力，是让人类平均寿命得以飞跃性延长的希望。
+          </p>
+        </div>
+        <div class="card-component card-blue">
+          <p style="margin-top:4rem">
+            对社会富有责任心的您，可以与我们一同去凝聚那些三观正直、勇于担当的热血青年，培养生医、电子、自动化、计算机、核医学、临床医学等专业的科研人才、产业精英。您的捐赠，将帮助有潜力的学生创造更多的机会、帮助有志向的青年研究人员实现抱负，为造福人类健康、探寻科学真理贡献力量！
+          </p>
+        </div>
+      </div>
+      <link rel="stylesheet" href="style/card.css">
+      <p style="font-weight: 400;font-size: 2rem;color: var(--theme-color1);text-align: center;">
+        人生如白驹过隙，您不妨加入进来，一起做一些可能永恒的事情。<br><span style="">联系邮箱：petlab@hust.mail.edu.cn </span></p>
+    </section>
+
+
+
+  </main>
+
+
+  <!-- 底部会自动加载到这里 -->
+  <div id="footer"></div>
+</body>
+
+</html>

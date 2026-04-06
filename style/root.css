@@ -1,0 +1,48 @@
+html {
+  font-size: 1vw;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%; /* 防止Safari自动调整字体 */
+  text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #f2f2f2;
+}
+/* root.css 全局样式变量 */
+:root {
+  --footer-bg: #343434;
+  --theme-color1: #0f4c81;
+  --theme-color2: #343434;
+  --theme-banner: rgba(15, 76, 129, 0.8);
+}
+
+.more-icon {
+  height: 2rem;
+}
+.more-icon2 {
+  height: 0.5rem;
+}
+
+/* 扩大点击范围 */
+a:has(.more-icon),
+a:has(.more-icon2) {
+  position: relative;
+}
+a:has(.more-icon)::after {
+  content: "";
+  position: absolute;
+  top: -3rem;
+  left: -2rem;
+  bottom: -2rem;
+  right: -2rem;
+}
+a:has(.more-icon2)::after {
+  content: "";
+  position: absolute;
+  top: -2rem;
+  left: -2rem;
+  bottom: -2rem;
+  right: -2rem;
+}

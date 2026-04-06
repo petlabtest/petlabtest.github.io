@@ -1,0 +1,81 @@
+
+  /* 外环 1000px / 内环 800px / 颜色 #0f4c81 */
+  
+  .ring-container {
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+    margin: 0 auto;
+  }
+  .blue-ring {
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50% !important;
+    background: #0f4c81;
+  }
+  .white-inner {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    left: 100px;
+    top: 100px;
+    border-radius: 50% !important;
+    background: #fff;
+  }
+
+
+
+  /* 图片 200×150 */
+  .ring_item {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+  .ring_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    z-index: 3;
+  }
+  .ring_item .ring_title {
+    margin-top: 6px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    z-index: 2;
+  }
+
+  /* 大标题 */
+  .ring_group {
+    position: absolute;
+    color: #222;
+    white-space: nowrap;
+    z-index: 2;
+  }
+  .ring_group1 { top: 120px; left: 1000px; }
+  .ring_group2 { top: 1050px; left: 780px; transform: translateX(-50%); }
+  .ring_group3 { top: 310px; left: -270px; }
+
+
+  /* ============== 中心实心圆（可贴图） ============== */
+  .center-circle {
+    position: absolute;
+    width: 237px;    /* 中心圆大小 */
+    height: 261px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #fff; /* 实心底色 */
+    overflow: hidden;
+  }
+  .center-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 图片填满圆形 */
+  }

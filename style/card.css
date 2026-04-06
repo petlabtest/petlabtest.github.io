@@ -1,0 +1,93 @@
+/* style/card.css 卡片组件样式 */
+@import url("./root.css");
+html {
+  font-size: 1vw;
+}
+
+.card-component {
+  position: relative;
+  background: var(--theme-color2);
+  overflow: hidden;
+  color: #fff;
+  height: 26rem;
+}
+.card-component p {
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 2;
+  margin: 7rem 2rem 0 2rem;
+}
+.card-blue {
+  background: var(--theme-color1) !important;
+}
+.card-index-bg-lt {
+  position: absolute;
+  left: -2rem;
+  top: -3rem;
+  font-size: 24rem;
+  font-weight: 400;
+  color: #888;
+  opacity: 0.22;
+  pointer-events: none;
+  z-index: 0;
+  line-height: 1;
+}
+.card-index-bg-rd {
+  position: absolute;
+  right: -1rem;
+  bottom: -8.5rem;
+  font-size: 24rem;
+  font-weight: 400;
+  color: #888;
+  opacity: 0.22;
+  pointer-events: none;
+  z-index: 0;
+  line-height: 1;
+}
+.card-content {
+  position: relative;
+  padding: 3rem 2rem 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+}
+.card-title {
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 5rem;
+  text-align: center;
+  font-weight: 400;
+}
+.card-items {
+  display: flex;
+  gap: 0.5rem;
+  font-weight: lighter;
+  font-size: 0.8rem;
+  width: 36rem;
+  color: #fff;
+  align-items: center;
+  margin-bottom: 3rem;
+  justify-content: center;
+}
+.card-item {
+  text-align: center;
+  line-height: 1.5rem;
+}
+.card-desc {
+  font-size: 1rem;
+  font-weight: lighter;
+  line-height: 2;
+  color: #fff;
+}
+.card-divider {
+  height: 1rem;
+  border-right: 0.1rem solid rgba(255, 255, 255, 0.5);
+  margin: 0 0.75rem;
+  align-self: center;
+}
+
+.card-blue .card-divider {
+  border-right-color: rgba(255, 255, 255, 0.5);
+}
+/* 可调节card-bg颜色和card-index位置，参照design/捐赠.jpg */

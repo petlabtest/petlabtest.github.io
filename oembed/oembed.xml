@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oembed>
+<version>1.0</version>
+<provider_name>Digital PET Laboratory</provider_name>
+<provider_url>https://petlab.hust.edu.cn/</provider_url>
+<author_name>DPLZWR</author_name>
+<author_url>https://petlab.hust.edu.cn/</author_url>
+<title>Digital PET Lab</title>
+<type>rich</type>
+<width>600</width>
+<height>338</height>
+<description>Digital PET Laboratory is advancing the scope of human health.</description>
+<thumbnail_url>https://petlab.hust.edu.cn/picture/PETLAB_LOGO.png</thumbnail_url>
+<thumbnail_width>800</thumbnail_width>
+<thumbnail_height>533</thumbnail_height>
+</oembed>

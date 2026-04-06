@@ -1,0 +1,1361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.content-text {
+  text-align: justify;
+  text-justify: inter-ideograph; /* 专门优化中文两端对齐 */
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+/* pure-test-list */
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+.dpl-pure-test-list-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+/* 区块标题 */
+.dpl-pure-test-list-section-header {
+  margin: 60px 0 40px;
+}
+
+.dpl-pure-test-list-section-header .title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #192b53;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.dpl-pure-test-list-section-header .text {
+  font-size: 20px;
+  color: #333;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+/* 左右布局 */
+.dpl-pure-test-list-asymmetrical-columns {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 40px;
+  padding: 22px 0;
+  /* 上下内边距 */
+}
+
+/* 项目之间的横线 */
+.dpl-pure-test-list-asymmetrical-columns:not(:last-child) {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* 左侧标题 */
+[slot="asymmetrical-col-left"] {
+  font-size: 35px;
+  font-weight: 600;
+  color: #192b53;
+  line-height: 1.4;
+}
+
+/* 右侧内容 */
+[slot="asymmetrical-col-right"] p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .dpl-pure-test-list-asymmetrical-columns {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  [slot="asymmetrical-col-left"] {
+    font-size: 19px;
+  }
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+/* ltrb */
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+.dpl-ltrb-block {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 3rem 1rem;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.ltrb-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+.ltrb-content {
+  flex: 2;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ltrb-text {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #212529;
+  margin: 0 0 1.2rem;
+  /*font-style: italic;*/
+}
+
+.ltrb-author {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #192b53;
+  margin: 0;
+}
+
+/* 右侧卡片 - 修复左对齐 */
+.ltrb-cta-card {
+  flex: 1;
+  min-width: 260px;
+  background-color: #f5f7fa;
+  border-radius: 8px;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  /* 🔥 强制所有内容从顶部开始 + 左对齐 */
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.ltrb-cta-card:hover {
+  background-color: #0071bc;
+}
+
+.ltrb-card-title {
+  font-size: 2.7rem;
+  font-weight: 600;
+  color: #192b53;
+  margin: 0 0 2.5rem;
+  transition: color 0.3s ease;
+}
+
+.ltrb-cta-card:hover .ltrb-card-title {
+  color: #fff;
+}
+
+.ltrb-card-button {
+  display: inline-block;
+  border: 2px solid #192b53;
+  color: #192b53;
+  padding: 0.7rem 1.4rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  /* 关键：自动靠到底部 */
+  margin-top: auto;
+}
+
+.ltrb-cta-card:hover .ltrb-card-button {
+  color: #ffffff;
+  border-color: #ffffff;
+  background: transparent;
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+/* lbrt */
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+.dpl-lbrt-block {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 3rem 1rem;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 300px;
+}
+
+.lbrt-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: stretch;
+  flex-direction: row-reverse;
+}
+
+.lbrt-content {
+  flex: 2;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lbrt-text {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #212529;
+  margin: 0 0 1.2rem;
+  /*font-style: italic;*/
+}
+
+.lbrt-author {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #192b53;
+  margin: 0;
+}
+
+/* 右侧卡片 - 修复左对齐 */
+.lbrt-cta-card {
+  flex: 1;
+  min-width: 260px;
+  background-color: #f5f7fa;
+  border-radius: 8px;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  /* 🔥 强制所有内容从顶部开始 + 左对齐 */
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.lbrt-cta-card:hover {
+  background-color: #0071bc;
+}
+
+.lbrt-card-title {
+  font-size: 2.7rem;
+  font-weight: 600;
+  color: #192b53;
+  margin: 0 0 2.5rem;
+  transition: color 0.3s ease;
+}
+
+.lbrt-cta-card:hover .lbrt-card-title {
+  color: #fff;
+}
+
+.lbrt-card-button {
+  display: inline-block;
+  border: 2px solid #192b53;
+  color: #192b53;
+  padding: 0.7rem 1.4rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  /* 关键：自动靠到底部 */
+  margin-top: auto;
+}
+
+.lbrt-cta-card:hover .lbrt-card-button {
+  color: #ffffff;
+  border-color: #ffffff;
+  background: transparent;
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+/* updt3 */
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+.updt3-section {
+  box-sizing: border-box;
+}
+
+.updt3-container {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* 区块标题 */
+.updt3-section-header {
+  padding: 2rem 0 1rem;
+  margin-top: 3rem;
+}
+
+.updt3-section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #192b53;
+  margin-bottom: 0.8rem;
+}
+
+.updt3-section-text {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 三列网格 */
+.updt3-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem 3rem;
+  padding-bottom: 4rem;
+}
+
+/* 卡片 */
+.updt3-grid-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+/* 卡片图片 */
+.updt3-card-media {
+  width: 100%;
+  aspect-ratio: 890 / 700;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1.2rem;
+}
+
+/* 卡片标题 */
+.updt3-card-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #192b53;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.updt3-card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.updt3-card-title a:hover {
+  color: #0071bc;
+}
+
+/* 卡片内容 */
+.updt3-card-title-content {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 1rem;
+  line-height: 2;
+}
+
+/* inline 按钮 */
+.updt3-card-btn {
+  margin-top: auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #192b53;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.updt3-card-btn:hover {
+  color: #0071bc;
+}
+
+.updt3-card-btn::after {
+  content: "→";
+  font-size: 1.1rem;
+  transition: transform 0.2s;
+}
+
+.updt3-card-btn:hover::after {
+  transform: translateX(4px);
+}
+
+/* 响应式 */
+@media (max-width: 992px) {
+  .updt3-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .updt3-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .updt3-section-title {
+    font-size: 2rem;
+  }
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+/* flprt */
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+.flprt-full {
+  display: block;
+  width: 100%;
+  background: #192b53;
+  color: #f8f9fa;
+  /* 文本颜色 */
+  margin: 2rem 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.flprt-section {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 5rem 1rem;
+}
+
+.flprt-container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* ========== 左侧轮播 ========== */
+.flprt-slider {
+  flex: 1;
+  position: relative;
+  height: 320px;
+  border-radius: 0px;
+  /* 图片圆角 */
+  overflow: hidden;
+}
+
+.flprt-slides {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.flprt-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.flprt-slide.active {
+  opacity: 1;
+}
+
+.flprt-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 指示器 */
+.flprt-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.flprt-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.flprt-dot.active {
+  background: white;
+}
+
+/* ========== 右侧固定文字 ========== */
+.flprt-text {
+  flex: 1;
+}
+
+.flprt-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 3.5rem;
+  margin-top: 1rem;
+  font-weight: 300;
+}
+
+.flprt-link {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-bottom: 0rem;
+}
+
+.flprt-link:hover {
+  text-decoration: underline;
+  text-decoration: none;
+  color: #eabb5b;
+}
+
+@media (max-width: 768px) {
+  .flprt-container {
+    flex-direction: column;
+  }
+
+  .flprt-content {
+    padding: 2rem;
+  }
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+/* rlprt */
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+/* 区块背景 */
+.rlprt-container {
+  width: 100%;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  /* 上下留白，露出背景 */
+}
+
+.rlprt-container[theme="white"] {
+  background: #ffffff;
+}
+
+.rlprt-container[theme="cloud"] {
+  background: #f5f7fa;
+}
+
+/* 中间内容宽度：控制整体占比 */
+.rlprt-cta-inner {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: center; /* 👈 这一句是关键！强制居中排列 */
+  gap: 2rem;
+}
+
+/* 布局顺序 */
+.layout-left .rlprt-cta-media {
+  order: 1;
+}
+
+.layout-left .rlprt-cta-content {
+  order: 2;
+}
+
+.layout-right .rlprt-cta-media {
+  order: 2;
+}
+
+.layout-right .rlprt-cta-content {
+  order: 1;
+}
+
+/* 图片和文字各占约 35%，左右留空露出背景 */
+.rlprt-cta-media {
+  flex: 0 1 45%;
+  min-height: 300px;
+  /* 原420 - 20% */
+  position: relative;
+}
+
+.rlprt-cta-media img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.rlprt-cta-content {
+  flex: 0 1 45%;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+/* 文字样式 */
+.rlprt-cta-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #192b53;
+  line-height: 1.6;
+}
+
+.rlprt-cta-desc {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* 按钮 */
+.rlprt-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #192b53;
+  text-decoration: none;
+}
+
+.rlprt-cta-btn:hover {
+  color: #0071bc;
+}
+
+.rlprt-cta-btn::after {
+  content: "→";
+  font-size: 1.2rem;
+  transition: transform 0.2s;
+}
+
+.rlprt-cta-btn:hover::after {
+  transform: translateX(4px);
+}
+
+/* 手机 */
+@media (max-width: 768px) {
+  .rlprt-cta-inner {
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  .rlprt-cta-media,
+  .rlprt-cta-content {
+    flex: none;
+    width: 100%;
+  }
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+/* lrbtn */
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+.lrbtn-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 5rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.lrbtn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+/* 卡片整体链接 */
+.lrbtn-cta-card {
+  display: flex;
+  flex-direction: column;
+  background: #f5f7fa;
+  border-radius: 10px;
+  padding: 2.8rem 2.5rem;
+  text-decoration: none;
+  transition: all 0.28s ease;
+  min-height: 220px;
+}
+
+/* hover 整块变深蓝 */
+.lrbtn-cta-card:hover {
+  background-color: #192b53;
+}
+
+.lrbtn-card-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #192b53;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  transition: color 0.28s ease;
+}
+
+.lrbtn-card-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 3rem;
+  transition: color 0.28s ease;
+}
+
+/* 文字 hover 变白 */
+.lrbtn-cta-card:hover .lrbtn-card-title,
+.lrbtn-cta-card:hover .lrbtn-card-text {
+  color: #ffffff;
+}
+
+/* 🔥 箭头固定在右下角底部 */
+.lrbtn-card-btn {
+  margin-top: auto;
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #192b53;
+  color: #fff;
+  transition: all 0.28s ease;
+}
+
+/* 🔥 箭头加大加粗 */
+.lrbtn-card-btn::after {
+  content: "→";
+  font-size: 2rem;
+  font-weight: 1700;
+}
+
+/* hover 箭头按钮反色 */
+.lrbtn-cta-card:hover .lrbtn-card-btn {
+  background: #ffffff;
+  color: #192b53;
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .lrbtn-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .lrbtn-cta-card {
+    padding: 2.2rem 2rem;
+  }
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+/* tc-peo-stu  */
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+.tc-peo-stu-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* 完全和新闻区域的内外间距统一 */
+  padding: 3rem 1rem;
+}
+
+.tc-peo-stu-title {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: left;
+  margin-bottom: 2rem;
+  padding: 0rem 4rem;
+}
+
+/* 人物布局：严格和新闻卡片对齐 */
+.tc-peo-stu-grid {
+  display: flex;
+  padding: 0 4rem;
+}
+
+.tc-peo-stu-card {
+  flex: 1;
+  padding: 0 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 分隔线 */
+.tc-peo-stu-card + .tc-peo-stu-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  bottom: 1rem;
+  width: 1px;
+  background-color: #ddd;
+}
+
+/* 图片 */
+.tc-peo-stu-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* 名字 */
+.tc-peo-stu-name {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  /* 🔥 名字 ↔ 头衔间距（想多大改这里） */
+}
+
+/* 头衔 —— 这次 min-height 一定生效！ */
+.tc-peo-stu-title {
+  font-size: 0.95rem;
+  color: #555;
+  height: 4rem;
+  /* 🔥 固定高度，改了一定生效 */
+  margin-bottom: 1rem;
+  /* 🔥 头衔 ↔ 引言间距 */
+  display: block;
+}
+
+/* 引言 */
+.tc-peo-stu-quote {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  font-style: italic;
+  flex-grow: 1;
+}
+
+/* 链接 */
+.tc-peo-stu-link {
+  font-size: 0.95rem;
+  color: #006699;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.tc-peo-stu-link:hover {
+  text-decoration: underline;
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+/* focus-news */
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+.focus-news-container {
+  margin: 5rem auto;
+  box-sizing: border-box;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  width: 100%;
+  max-width: 85%;
+}
+
+.focus-news-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  color: #000000;
+}
+
+/* 主布局：左侧放大，右侧缩小 */
+.focus-news-wrapper {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1rem;
+  align-items: start;
+  position: relative;
+  align-items: stretch;
+  /* 关键：让左右高度一致 */
+}
+
+/* 中间竖线分割 */
+.focus-news-wrapper::before {
+  content: "";
+  position: absolute;
+  left: calc(57.5%);
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ddd;
+}
+
+/* 主文章 */
+.primary-story {
+  padding-right: 1rem;
+}
+
+.primary-story img {
+  width: 100%;
+  height: auto;
+  border-radius: 0px;
+  display: block;
+}
+
+.primary-story h3 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 14px 0 20px;
+}
+
+.primary-story h3 a:hover {
+  color: #0071bc;
+}
+
+.primary-story a {
+  color: #192b53;
+  text-decoration: none;
+}
+
+.read-more {
+  font-size: 15px;
+  color: #192b53;
+  text-decoration: none;
+}
+
+/* read more hover 变色 */
+.read-more:hover {
+  color: #0071bc;
+}
+
+/* 右侧文章列表 */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+/* 每条新闻 + 横线分割线 */
+.news-item {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  gap: 16px;
+  padding: 8px 0;
+  border-top: 1px solid #eee;
+  align-items: stretch;
+}
+
+.news-item:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+/* 右侧图片容器 */
+.news-item > a:first-child {
+  display: block;
+  overflow: hidden;
+  border-radius: 0px;
+  height: 100%;
+}
+
+.news-item img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/13;
+  object-fit: cover;
+  border-radius: 0px;
+}
+
+/* 右侧文字区域：纵向弹性布局 */
+.news-item > div:last-child {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.news-item h4 {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  margin: 0 0 18px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* 右侧标题 hover 变色 */
+.news-item h4 a:hover {
+  color: #0071bc;
+}
+
+/* Read the article 推到底部，和图片下沿对齐 */
+.news-item > div:last-child > a:last-child {
+  margin-top: auto;
+  font-size: 14px;
+  color: #192b53;
+  text-decoration: none;
+}
+
+/* 右侧 read more hover 变色 */
+.news-item > div:last-child > a:last-child:hover {
+  color: #0071bc;
+}
+
+/* 鼠标悬停图片微微放大 */
+.primary-story img,
+.news-item img {
+  transition: transform 0.3s ease;
+}
+
+.primary-story a:hover img,
+.news-item a:hover img {
+  transform: scale(1.05);
+}
+
+.primary-story a,
+.news-item a {
+  display: block;
+  overflow: hidden;
+  border-radius: 0px;
+  text-decoration: none;
+  color: #192b53;
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+/* ffootnote */
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+.ffootnote-cta-container {
+  max-width: 85%;
+  margin: 40px auto 0;
+}
+
+/* ========== 按钮主体：撑满、左右分布 ========== */
+.ffootnote-cta-slim {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* 文字左，箭头区右 */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 24px;
+  background-color: #192b53;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  position: relative;
+  /* 给竖线定位用 */
+}
+
+.ffootnote-cta-slim:hover {
+  background-color: #0071bc;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ========== 关键：白色竖线分隔（文字 ↔ 箭头） ========== */
+.ffootnote-cta-slim::before {
+  content: "";
+  position: absolute;
+  right: 70px;
+  /* 调整竖线离右侧距离 */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 100%;
+  /* 竖线高度 */
+  background-color: #ffffff;
+  /* 白色分隔线 */
+}
+
+/* ========== 右侧箭头方块 ========== */
+.ffootnote-cta-slim::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  /* 箭头形状（三角形） */
+  clip-path: polygon(4px 4px, 16px 10px, 4px 16px);
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+/* dc-video */
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+/* 双视频并排容器 */
+.dc-video-grid {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* 视频卡片 - 去掉全局下划线 */
+.dc-video-card {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none !important;
+  /* 关键：去掉下划线 */
+}
+
+/* 视频封面容器 */
+.dc-video-cover {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #000;
+}
+
+.dc-video-cover img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* 悬停微微放大 */
+.dc-video-card:hover .dc-video-cover img {
+  transform: scale(1.03);
+}
+
+/* 播放按钮 */
+.dc-video-play-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dc-video-play-btn::after {
+  content: "";
+  border-style: solid;
+  border-width: 12px 0 12px 20px;
+  border-color: transparent transparent transparent #192b53;
+  margin-left: 4px;
+}
+
+/* 视频标题 - 无下划线 */
+.dc-video-title {
+  margin-top: 12px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none !important;
+  /* 关键：确保无下划线 */
+}
+
+/* 悬停也不出现下划线 */
+.dc-video-card:hover .dc-video-title {
+  text-decoration: none !important;
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+/* tc-pt-b */
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+/* ------------------------------
+      1. In the News 头部：标题 + 右侧按钮
+      ------------------------------- */
+.tc-pt-b-container {
+  max-width: 88%;
+  margin: 60px auto 30px;
+  padding: 0 20px;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.tc-pt-b-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.tc-pt-b-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 3rem 0;
+}
+
+.tc-pt-b-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #192b53;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tc-pt-b-btn::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #0071bc;
+  clip-path: polygon(3px 3px, 13px 8px, 3px 13px);
+}
+
+.tc-pt-b-btn:hover {
+  color: #0071bc;
+}
+
+.tc-pt-b-btn:hover::after {
+  background-color: #0071bc;
+}
+
+/* ------------------------------
+   2. 三列网格布局
+------------------------------- */
+.tc-pt-b-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* ------------------------------
+   3. 新闻卡片（终极正确布局）
+------------------------------- */
+.tc-pt-b-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* 让所有卡片高度一样 */
+}
+
+/* 顶部内容包裹：标题+日期+简介 自动流式排列 */
+.tc-pt-b-card-top {
+  margin-bottom: 2rem;
+}
+
+.tc-pt-b-card-title {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  min-height: calc(1.5em * 2);
+}
+
+.tc-pt-b-card-title a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.tc-pt-b-card-title a:hover {
+  color: #0066cc;
+}
+
+.tc-pt-b-card-date {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.tc-pt-b-card-desc {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.8rem;
+}
+
+/* 来源按钮：固定在最底部，全部对齐 */
+.tc-pt-b-card-source {
+  margin-top: auto;
+  /* 核心：把来源压在最底部 */
+  font-size: 1rem;
+  font-weight: 600;
+  color: #192b53;
+  text-decoration: none;
+}
+
+.tc-pt-b-card-source:hover {
+  color: #004c99;
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+/* page-text-list */
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+.page-text-list-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 整条变成链接，去掉默认链接样式 */
+.page-text-list-paper-item {
+  display: flex;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+  gap: 20px;
+  text-decoration: none; /* 去掉下划线 */
+  color: inherit; /* 继承文字颜色，不变紫 */
+}
+
+/* 鼠标悬浮时整行轻微高亮 */
+.page-text-list-paper-item:hover {
+  background-color: #f7f7f7;
+}
+
+/* 左侧：类型 + 时间 */
+.page-text-list-paper-meta {
+  width: 130px;
+  flex-shrink: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.page-text-list-paper-type {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+/* 中间标题 */
+.page-text-list-paper-title {
+  flex: 1;
+  font-size: 20px;
+  color: #222;
+}
+
+/* 右侧图片 */
+.page-text-list-paper-image {
+  width: 140px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.page-text-list-paper-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 分页样式 */
+.page-text-list-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  gap: 8px;
+}
+
+.page-text-list-page-btn {
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.page-text-list-page-btn.active {
+  background: #192b53;
+  color: white;
+  border-color: #192b53;
+}

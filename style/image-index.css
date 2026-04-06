@@ -1,0 +1,80 @@
+/* style/image-index.css 并排图片索引组件样式 */
+html {
+  font-size: 1vw;
+}
+.image-index-group {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  height: 23rem;
+}
+.image-index-item {
+  position: relative;
+  height: 100%;
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  overflow: hidden;
+}
+.image-index-img-wrap {
+  position: relative;
+  flex: 1rem;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  width: 100%;
+}
+.image-index-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s;
+}
+.image-index-content {
+  position: absolute;
+  top: 6rem;
+  left: 0;
+  width: 100%;
+  height: 9.375rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 2;
+  padding: 0rem 2rem 1rem 2rem;
+  box-sizing: border-box;
+}
+.image-index-title {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #fff;
+  min-height: 4rem; 
+  text-align: left;
+}
+.image-index-desc {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #fff;
+  text-align: left;
+  margin: 2rem 0 0 0;
+  min-height: 5rem;
+  line-height: 2;
+}
+.image-index-more {
+  align-self: flex-end;
+  color: #fff;
+  background: none;
+  font-size: 0.57rem;
+  font-weight: 500;
+  border-radius: 0;
+  padding: 0.125rem 0.5625rem;
+  text-decoration: none;
+  box-shadow: none;
+  transition: color 0.2s;
+}
+.image-index-item {
+  width: 45rem;
+  z-index: 1;
+}

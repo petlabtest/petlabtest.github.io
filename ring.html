@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>环形图片最终完美版</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background: #fff;
+    padding: 50px 0;
+  }
+
+  /* 最外层只负责定位，不加 overflow，图片不会被切 */
+  .ring-container {
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+    margin: 0 auto;
+  }
+
+  /* 单独画蓝色圆环，不影响图片 */
+  .blue-ring {
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    background: #0f4c81;
+  }
+  .white-inner {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    left: 100px;
+    top: 100px;
+    border-radius: 50%;
+    background: #fff;
+  }
+
+  /* 图片：完整显示，不被切割 */
+  .item {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+  .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .item .title {
+    margin-top: 6px;
+    text-align: center;
+    font-size: 13px;
+    color: #333;
+  }
+
+  /* 大标题 */
+  .group {
+    position: absolute;
+    font-size: 22px;
+    font-weight: bold;
+    color: #222;
+    z-index: 20;
+    white-space: nowrap;
+  }
+  .group1 { top: 220px; left: 1080px; }
+  .group2 { top: 1150px; left: 500px; transform: translateX(-50%); }
+  .group3 { top: 220px; left: -80px; }
+</style>
+</head>
+
+<body>
+
+<div class="ring-container">
+  <!-- 圆环单独渲染，不限制图片 -->
+  <div class="blue-ring"></div>
+  <div class="white-inner"></div>
+
+  <!-- 标题 -->
+  <div class="group group1">第一部分</div>
+  <div class="group group2">第二部分</div>
+  <div class="group group3">第三部分</div>
+
+  <!-- 图片：外扩 + 下移，完整显示 -->
+  <div class="item" style="top:100px; left:500px">
+    <img src="1.jpg"><div class="title">标题1</div>
+  </div>
+  <div class="item" style="top:150px; left:750px">
+    <img src="2.jpg"><div class="title">标题2</div>
+  </div>
+  <div class="item" style="top:320px; left:880px">
+    <img src="3.jpg"><div class="title">标题3</div>
+  </div>
+  <div class="item" style="top:500px; left:940px">
+    <img src="4.jpg"><div class="title">标题4</div>
+  </div>
+
+  <div class="item" style="top:680px; left:880px">
+    <img src="5.jpg"><div class="title">标题5</div>
+  </div>
+  <div class="item" style="top:850px; left:750px">
+    <img src="6.jpg"><div class="title">标题6</div>
+  </div>
+  <div class="item" style="top:900px; left:500px">
+    <img src="7.jpg"><div class="title">标题7</div>
+  </div>
+  <div class="item" style="top:850px; left:250px">
+    <img src="8.jpg"><div class="title">标题8</div>
+  </div>
+
+  <div class="item" style="top:680px; left:120px">
+    <img src="9.jpg"><div class="title">标题9</div>
+  </div>
+  <div class="item" style="top:500px; left:60px">
+    <img src="10.jpg"><div class="title">标题10</div>
+  </div>
+  <div class="item" style="top:320px; left:120px">
+    <img src="11.jpg"><div class="title">标题11</div>
+  </div>
+  <div class="item" style="top:150px; left:250px">
+    <img src="12.jpg"><div class="title">标题12</div>
+  </div>
+</div>
+
+</body>
+</html>

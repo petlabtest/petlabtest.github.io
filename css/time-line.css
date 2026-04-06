@@ -1,0 +1,73 @@
+#timeline {
+width: 100%;
+max-width: 1200px;
+margin: 2rem auto;
+font-family: 'Microsoft Yahei', sans-serif;
+position: relative;
+}
+
+
+/* 顶部分类标题 */
+.timeline-header {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 60px;
+position: relative;
+margin-left: 80px;
+}
+
+
+.category {
+font-weight: bold;
+font-size: 20px;
+color: #1a4d8f;
+position: relative;
+}
+
+
+#science { top: 0; }
+#tech { top: 120px; }
+#industry { top: 240px; }
+
+
+/* 主体事件部分 */
+.timeline-body {
+position: relative;
+margin-top: -260px;
+margin-left: 180px;
+height: 360px;
+}
+
+
+.event {
+position: absolute;
+width: 200px;
+text-align: center;
+transition: all 0.3s ease;
+}
+
+
+.event .event-content {
+background: #fff;
+border: 2px solid #1a4d8f;
+border-radius: 8px;
+padding: 8px 10px;
+font-size: 14px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+cursor: pointer;
+}
+
+
+.event .connector {
+width: 2px;
+background: #1a4d8f;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+}
+
+
+.event.science {
+top: 0;
+}

@@ -1,0 +1,186 @@
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+/* timeline */
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+#timeline {
+  width: 100%;
+  height: 650px;
+  background: #fff;
+  position: relative;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.tl-slide-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 60px;
+  background-color: #192b53;
+  margin-bottom: 0px;
+}
+
+/* 左右三角箭头 */
+.tl-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 360px;
+  /* 固定高度，不再随内容变 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: rgba(255, 255, 255, 0.7);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 2;
+}
+
+.tl-arrow:hover {
+  color: #fff;
+}
+
+.tl-arrow.prev {
+  left: 10px;
+}
+
+.tl-arrow.next {
+  right: 10px;
+}
+
+/* 卡片整体固定宽高 */
+.tl-card {
+  max-width: 900px;
+  width: 100%;
+  height: 360px;
+  /* 固定总高度 */
+  display: flex;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+/* 图片区域：强制固定尺寸，不变形 */
+.tl-card-img {
+  width: 65%;
+  height: 100%;
+  /* 占满卡片高度 */
+  background-size: cover;
+  background-position: center;
+  background-color: #445;
+  border-radius: 6px;
+}
+
+/* 文字区域：强制固定布局，绝不乱动 */
+.tl-card-body {
+  width: 55%;
+  height: 100%;
+  padding: 32px 36px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tl-card-body h3 {
+  font-size: 35px;
+  color: #fff;
+  margin-bottom: 16px;
+  min-height: 30px;
+  line-height: 1.6;
+  /* 固定标题高度 */
+}
+
+.tl-card-body p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  min-height: 120px;
+}
+
+/* 下方时间轴 */
+.tl-timeline-area {
+  height: 130px;
+  position: relative;
+  border-top: 1px solid #eee;
+  padding: 0 5%;
+}
+
+.tl-axis {
+  position: absolute;
+  top: 30px;
+  left: 5%;
+  right: 5%;
+  height: 3px;
+  background: #ddd;
+}
+
+.tl-markers {
+  position: absolute;
+  top: 30px;
+  left: 5%;
+  right: 5%;
+}
+
+.tl-marker {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border: 3px solid #bbb;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tl-marker.active {
+  background: #192b53;
+  border-color: #192b53;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.tl-year {
+  position: absolute;
+  top: 14px;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #666;
+  white-space: nowrap;
+}
+
+.tl-year.active {
+  color: #192b53;
+  font-weight: bold;
+}
+
+.tl-zoom {
+  position: absolute;
+  bottom: 20px;
+  right: 5%;
+  display: flex;
+  gap: 6px;
+}
+
+.tl-zoom button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.tl-zoom button:hover {
+  background: #192b53;
+  color: #fff;
+}

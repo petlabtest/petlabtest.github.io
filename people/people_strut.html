@@ -1,0 +1,895 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数字PET实验室</title>
+    <meta name="keywords" content="数字PET实验室" />
+    <meta
+      name="description"
+      content="Digital PET Laboratory is advancing the scope of human health."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta
+      property="og:title"
+      content="Digital PET Lab | All Digital PET, A Reinvention"
+    />
+    <meta
+      property="og:description"
+      content="Digital PET Laboratory is advancing the scope of human health."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://petlab.hust.edu.cn/" />
+    <meta property="og:site_name" content="Digital PET Laboratory" />
+    <meta property="og:image" content="/picture/PETLAB_LOGO.png" />
+    <link rel="dns-prefetch" href="/fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="/s.w.org" />
+    <link rel="canonical" href="https://petlab.hust.edu.cn/" />
+    <link
+      rel="alternate"
+      title="oEmbed (JSON)"
+      type="application/json+oembed"
+      href="/oembed/oembed.json"
+    />
+    <link
+      rel="alternate"
+      title="oEmbed (XML)"
+      type="text/xml+oembed"
+      href="/oembed/oembed.xml"
+    />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- 免费商用中文字体 -->
+    <link
+      href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 引入 头部 + 底部 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#header").load("/header.html"); // 引入头部
+        $("#footer").load("/footer.html"); // 引入底部
+        $("#join_page").load("/join_page.html"); // 引入底部
+      });
+    </script>
+
+    <link href="/css/global.css" rel="stylesheet" />
+
+    <style>
+      /* ———————————————————————————————————————————————————————————————————————————————————— */
+      /* people_list */
+      /* ———————————————————————————————————————————————————————————————————————————————————— */
+      .page-section {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+
+      /* 横线 */
+      .page-section:not(:last-child) {
+        border-bottom: 5px solid #e0e0e0;
+        padding-bottom: 3rem;
+      }
+
+      .content-wrapper {
+        width: 100%;
+        max-width: 85%;
+        /* 全屏 94%，只留很小边距 */
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      .list-section-title {
+        text-align: left;
+        padding-bottom: 3rem;
+        padding-left: 1rem;
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+
+      .user-items-list-simple {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 3rem 0rem;
+        list-style: none;
+      }
+
+      .list-item {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 3rem;
+      }
+
+      .list-item-media {
+        width: 75%;
+        margin-bottom: 8%;
+      }
+
+      .list-item-media-inner {
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .list-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .list-item-content__title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1.8rem;
+        max-width: 75%;
+      }
+
+      .list-item-content__description {
+        font-size: 1rem;
+        line-height: 1;
+        max-width: 75%;
+      }
+
+      .list-item-content__description a {
+        color: inherit;
+        text-decoration: underline;
+      }
+
+      @media (max-width: 1099px) {
+        .user-items-list-simple {
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 60px 60px;
+        }
+      }
+
+      @media (max-width: 575px) {
+        .user-items-list-simple {
+          grid-template-columns: 1fr;
+        }
+
+        .list-section-title {
+          padding-bottom: 40px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 头部会自动加载到这里 -->
+    <div id="header"></div>
+
+    <main>
+      <!-- ============================================================================================= -->
+      <!-- Hero -->
+      <!-- ============================================================================================= -->
+      <section
+        class="dpl-hero-section"
+        style="
+          position: relative;
+          width: 100%;
+          height: 520px;
+          overflow: hidden;
+          margin: 0;
+          padding: 0;
+        "
+      >
+        <div
+          class="dpl-hero-bg"
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+          "
+        >
+          <img
+            src="/picture/people_hero.jpg"
+            alt="dpl Hero"
+            style="
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+              display: block;
+            "
+          />
+        </div>
+
+        <!-- 左下角文字 -->
+        <div
+          class="dpl-hero-content"
+          style="
+            position: absolute;
+            left: 5%;
+            bottom: 12%;
+            z-index: 2;
+            max-width: 800px;
+            color: white;
+            padding: 0rem 1rem;
+          "
+        >
+          <div
+            class="dpl-hero-eyebrow"
+            style="
+              font-size: 3rem;
+              font-weight: 800;
+              margin-bottom: 0.8rem;
+              text-transform: uppercase;
+              letter-spacing: 0.1rem;
+              opacity: 1;
+            "
+          >
+            人才队伍
+          </div>
+          <h1
+            class="dpl-hero-title"
+            style="
+              font-size: 1.4rem;
+              font-weight: 400;
+              line-height: 1.6;
+              margin: 0;
+              letter-spacing: 0.1rem;
+            "
+          >
+            建设结构合理、素养卓越的专业化人才队伍，涵盖科研、技术与管理骨干，为实验室长远发展提供坚实人才保障。
+          </h1>
+        </div>
+      </section>
+      <!-- 蓝色主题 · 短分隔线 + 中间小方块 -->
+      <section class="short dividing line">
+        <div
+          theme="blue"
+          wrapper-size="sm"
+          style="width: 100%; max-width: 900px; margin: 0 auto; padding: 0 20px"
+        >
+          <div
+            style="
+              position: relative;
+              width: 120px;
+              height: 1px;
+              background-color: #192b53;
+              margin: 32px auto;
+            "
+          >
+            <span
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: #192b53;
+              "
+            ></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================================================= -->
+      <!-- People_list -->
+      <!-- ============================================================================================= -->
+      <div style="text-align: center; padding-bottom: 3rem">
+        <a style="font-size: 3rem; font-weight: 800"> 组织架构 </a>
+      </div>
+
+      <!-- 负责人模块 -->
+      <section class="page-section">
+        <div class="content-wrapper">
+          <div class="content">
+            <div
+              style="
+                text-align: left;
+                padding-left: 1rem;
+                font-size: 2.5rem;
+                font-weight: 600;
+              "
+            >
+              实验室主任
+            </div>
+            <div
+              class="principal-investigator-block clearfix"
+              style="overflow: hidden; margin: 3rem 2rem"
+            >
+              <div class="pi-left" style="float: left; margin-right: 25px">
+                <a href="https://pesaranlab.org/people/bijan-pesaran/">
+                  <img
+                    width="300"
+                    height="400"
+                    src="../picture/PI.jpg"
+                    class="attachment-thumbnail size-thumbnail wp-post-image"
+                    alt=""
+                    decoding="async"
+                    sizes="(max-width: 150px) 100vw, 150px"
+                    style="border-radius: 0; object-fit: cover"
+                  />
+                </a>
+              </div>
+
+              <div class="pi-right" style="overflow: hidden; line-height: 1.6">
+                <h2
+                  style="font-size: 1.8rem; margin: 0 0 10px; font-weight: 600"
+                >
+                  谢庆国教授
+                </h2>
+
+                <p
+                  style="
+                    margin: 1.2rem 0rem 0rem;
+                    font-size: 1.1rem;
+                    color: #333;
+                    text-align: justify;
+                    text-justify: inter-ideograph;
+                  "
+                >
+                  武汉光电国家研究中心、华中科技大学教授，博士生导师，全数字PET发明人。
+                  专注于正电子发射断层成像（Positron Emission
+                  Tomography，简称PET）方法研究和仪器研制。
+                  2001年在华中科技大学创立数字PET实验室，历经理论创新、技术突破和系统创制的三个阶段，开辟了全数字PET这一新方向，完成了脉冲数字化方法、探测器技术、成像系统三个层面的创新，
+                  实现了从概念到系统、从原理到应用的跨越。<br />
+                  谢庆国教授带领团队相继完成了动物全数字PET、临床全数字PET、脑部专用全数字PET等创新系统的研制。动物全数字PET于2013年获得湖北省技术发明一等奖，临床全数字PET/CT于2019年5月获批中国医疗器械注册认证，相关工作入选两院院士评选的“2019年度中国十大科技进展新闻”、2019年度黄家驷生物医学工程技术发明一等奖、第五届“互联网+”大学生创新创业大赛全国金奖、2019年度中国医学重大进展等，谢庆国本人获评科学中国人“信息技术与电子”领域2012年度人物、“CCTV科技盛典-2019年度十大科技创新人物”…
+                  <a
+                    href="https://pesaranlab.org/people/bijan-pesaran/"
+                    style="color: #0066cc; text-decoration: none"
+                    >阅读更多</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Teacher -->
+      <section class="page-section">
+        <div class="content-wrapper">
+          <div class="content">
+            <div class="user-items-list">
+              <div class="list-section-title" style="margin-top: 3rem">
+                指导教师
+              </div>
+
+              <ul class="user-items-list-simple">
+                <!-- 1 -->
+                <li class="list-item">
+                  <div class="list-item-media">
+                    <div class="list-item-media-inner">
+                      <img
+                        src="../picture/people/people_test.jpg"
+                        class="list-image"
+                      />
+                    </div>
+                  </div>
+                  <div class="list-item-content">
+                    <h2 class="list-item-content__title">teacher1</h2>
+                    <div class="list-item-content__description">
+                      <p>华中科技大学教授</p>
+                      <p>博士生导师</p>
+                      <p><a href="#" class="cta-engage-btn">了解更多</a></p>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 2 -->
+                <li class="list-item">
+                  <div class="list-item-media">
+                    <div class="list-item-media-inner">
+                      <img
+                        src="../picture/people/people_test.jpg"
+                        class="list-image"
+                      />
+                    </div>
+                  </div>
+                  <div class="list-item-content">
+                    <h2 class="list-item-content__title">teacher2</h2>
+                    <div class="list-item-content__description">
+                      <p>华中科技大学教授</p>
+                      <p>博士生导师</p>
+                      <p><a href="#" class="cta-engage-btn">了解更多</a></p>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 3 -->
+                <li class="list-item">
+                  <div class="list-item-media">
+                    <div class="list-item-media-inner">
+                      <img
+                        src="../picture/people/people_test.jpg"
+                        class="list-image"
+                      />
+                    </div>
+                  </div>
+                  <div class="list-item-content">
+                    <h2 class="list-item-content__title">teacher3</h2>
+                    <div class="list-item-content__description">
+                      <p>华中科技大学教授</p>
+                      <p>博士生导师</p>
+                      <p><a href="#" class="cta-engage-btn">了解更多</a></p>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 4 -->
+                <li class="list-item">
+                  <div class="list-item-media">
+                    <div class="list-item-media-inner">
+                      <img
+                        src="../picture/people/people_test.jpg"
+                        class="list-image"
+                      />
+                    </div>
+                  </div>
+                  <div class="list-item-content">
+                    <h2 class="list-item-content__title">teacher4</h2>
+                    <div class="list-item-content__description">
+                      <p>华中科技大学教授</p>
+                      <p>博士生导师</p>
+                      <p><a href="#" class="cta-engage-btn">了解更多</a></p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RA-X -->
+      <section class="page-section">
+        <div class="content-wrapper">
+          <div class="content">
+            <div class="user-items-list">
+              <div class="list-section-title" style="margin-top: 3rem">
+                RA-X
+              </div>
+
+              <ul class="user-items-list-simple">
+                <!-- 1 -->
+                <li class="list-item">
+                  <div class="list-item-media">
+                    <div class="list-item-media-inner">
+                      <img
+                        src="../picture/people/people_test.jpg"
+                        class="list-image"
+                      />
+                    </div>
+                  </div>
+                  <div class="list-item-content">
+                    <h2 class="list-item-content__title">student1</h2>
+                    <div class="list-item-content__description">
+                      <p>2023级博士研究生</p>
+                      <p>【研究方向】</p>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 2 -->
+                <li class="list-item">
+                  <div class="list-item-media">
+                    <div class="list-item-media-inner">
+                      <img
+                        src="../picture/people/people_test.jpg"
+                        class="list-image"
+                      />
+                    </div>
+                  </div>
+                  <div class="list-item-content">
+                    <h2 class="list-item-content__title">student2</h2>
+                    <div class="list-item-content__description">
+                      <p>2023级博士研究生</p>
+                      <p>【研究方向】</p>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 3 -->
+                <li class="list-item">
+                  <div class="list-item-media">
+                    <div class="list-item-media-inner">
+                      <img
+                        src="../picture/people/people_test.jpg"
+                        class="list-image"
+                      />
+                    </div>
+                  </div>
+                  <div class="list-item-content">
+                    <h2 class="list-item-content__title">student3</h2>
+                    <div class="list-item-content__description">
+                      <p>2023级博士研究生</p>
+                      <p>【研究方向】</p>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 4 -->
+                <li class="list-item">
+                  <div class="list-item-media">
+                    <div class="list-item-media-inner">
+                      <img
+                        src="../picture/people/people_test.jpg"
+                        class="list-image"
+                      />
+                    </div>
+                  </div>
+                  <div class="list-item-content">
+                    <h2 class="list-item-content__title">student4</h2>
+                    <div class="list-item-content__description">
+                      <p>2023级博士研究生</p>
+                      <p>【研究方向】</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RA-4 -->
+      <section class="page-section">
+        <div class="content-wrapper">
+          <div class="content">
+            <div class="user-items-list">
+              <div class="list-section-title" style="margin-top: 3rem">
+                RA-4
+              </div>
+
+              <ul class="user-items-list-simple">
+                <!-- 1 -->
+                <li class="list-item">
+                  <div class="list-item-media">
+                    <div class="list-item-media-inner">
+                      <img
+                        src="../picture/people/people_test.jpg"
+                        class="list-image"
+                      />
+                    </div>
+                  </div>
+                  <div class="list-item-content">
+                    <h2 class="list-item-content__title">student1</h2>
+                    <div class="list-item-content__description">
+                      <p>2023级博士研究生</p>
+                      <p>【研究方向】</p>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 2 -->
+                <li class="list-item">
+                  <div class="list-item-media">
+                    <div class="list-item-media-inner">
+                      <img
+                        src="../picture/people/people_test.jpg"
+                        class="list-image"
+                      />
+                    </div>
+                  </div>
+                  <div class="list-item-content">
+                    <h2 class="list-item-content__title">student2</h2>
+                    <div class="list-item-content__description">
+                      <p>2023级博士研究生</p>
+                      <p>【研究方向】</p>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 3 -->
+                <li class="list-item">
+                  <div class="list-item-media">
+                    <div class="list-item-media-inner">
+                      <img
+                        src="../picture/people/people_test.jpg"
+                        class="list-image"
+                      />
+                    </div>
+                  </div>
+                  <div class="list-item-content">
+                    <h2 class="list-item-content__title">student3</h2>
+                    <div class="list-item-content__description">
+                      <p>2023级博士研究生</p>
+                      <p>【研究方向】</p>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 4 -->
+                <li class="list-item">
+                  <div class="list-item-media">
+                    <div class="list-item-media-inner">
+                      <img
+                        src="../picture/people/people_test.jpg"
+                        class="list-image"
+                      />
+                    </div>
+                  </div>
+                  <div class="list-item-content">
+                    <h2 class="list-item-content__title">student4</h2>
+                    <div class="list-item-content__description">
+                      <p>2023级博士研究生</p>
+                      <p>【研究方向】</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RA-3 -->
+      <section class="page-section">
+        <div class="content-wrapper">
+          <div class="content">
+            <div class="user-items-list">
+              <div class="list-section-title" style="margin-top: 3rem">
+                RA-3
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RA-2 -->
+      <section class="page-section">
+        <div class="content-wrapper">
+          <div class="content">
+            <div class="user-items-list">
+              <div class="list-section-title" style="margin-top: 3rem">
+                RA-2
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RA-1 -->
+      <section class="page-section">
+        <div class="content-wrapper">
+          <div class="content">
+            <div class="user-items-list">
+              <div class="list-section-title" style="margin-top: 3rem">
+                RA-1
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================================================= -->
+      <!-- Stewardship -->
+      <!-- ============================================================================================= -->
+      <div class="lrbtn-container" theme="white" has-pattern-bottom>
+        <div class="lrbtn-grid">
+          <a
+            href="https://www.dpl-results.gov/people/excellence/"
+            class="lrbtn-cta-card"
+            theme="cloud"
+          >
+            <h3 class="lrbtn-card-title">团队奖项</h3>
+            <p class="lrbtn-card-text">
+              健全内部激励机制，表彰先进典型与突出贡献，激发团队创新活力与干事热情，凝聚协同发展合力。
+            </p>
+            <div class="lrbtn-card-btn"></div>
+          </a>
+
+          <a
+            href="https://www.dpl-results.gov/people/our-community-of-support/"
+            class="lrbtn-cta-card"
+            theme="cloud"
+          >
+            <h3 class="lrbtn-card-title">组织活动</h3>
+            <p class="lrbtn-card-text">
+              常态化开展学术交流、技能提升与文化团建活动，丰富科研生活，营造团结奋进、开放包容的团队氛围。
+            </p>
+            <div class="lrbtn-card-btn"></div>
+          </a>
+        </div>
+      </div>
+      <!-- 蓝色主题 · 短分隔线 + 中间小方块 -->
+      <section class="short dividing line">
+        <div
+          theme="blue"
+          wrapper-size="sm"
+          style="width: 100%; max-width: 900px; margin: 0 auto; padding: 0 20px"
+        >
+          <div
+            style="
+              position: relative;
+              width: 120px;
+              height: 1px;
+              background-color: #192b53;
+              margin: 32px auto;
+            "
+          >
+            <span
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: #192b53;
+              "
+            ></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================================================= -->
+      <!-- value -->
+      <!-- ============================================================================================= -->
+      <section id="dpl-pure-test-list-value">
+        <!-- 顶部标题 -->
+        <div class="dpl-pure-test-list-container">
+          <div class="dpl-pure-test-list-section-header">
+            <h2 class="title">核心价值观</h2>
+            <p class="content-text">
+              呵护实验室环境、关爱彼此同仁，我们恪守以下核心价值观，以此指引各项决策与行为。
+            </p>
+          </div>
+        </div>
+
+        <!-- 核心价值观列表 -->
+        <div class="dpl-pure-test-list-container">
+          <div class="dpl-pure-test-list-asymmetrical-columns">
+            <h3 slot="asymmetrical-col-left">激情</h3>
+            <div slot="asymmetrical-col-right">
+              <p class="content-text">
+                我们怀揣对未知世界的热忱与探索激情，以持久专注投身科研事业，在攻坚克难中保持锐意进取的精神风貌，以热爱驱动创新，以热忱坚守使命。
+              </p>
+            </div>
+          </div>
+
+          <div class="dpl-pure-test-list-asymmetrical-columns">
+            <h3 slot="asymmetrical-col-left">梦想</h3>
+            <div slot="asymmetrical-col-right">
+              <p class="content-text">
+                我们心怀探索科学前沿的远大梦想，致力于突破认知边界、解答时代难题，以崇高理想引领方向，让每一项研究都服务于人类进步与国家发展的长远愿景。
+              </p>
+            </div>
+          </div>
+
+          <div class="dpl-pure-test-list-asymmetrical-columns">
+            <h3 slot="asymmetrical-col-left">勇气</h3>
+            <div slot="asymmetrical-col-right">
+              <p class="content-text">
+                我们秉持直面挑战、勇于探索的科学勇气，敢于涉足无人区、攻克硬骨头，在风险与未知面前坚守求真精神，以开拓魄力推动原创性、引领性科研突破。
+              </p>
+            </div>
+          </div>
+
+          <div class="dpl-pure-test-list-asymmetrical-columns">
+            <h3 slot="asymmetrical-col-left">责任</h3>
+            <div slot="asymmetrical-col-right">
+              <p class="content-text">
+                我们牢记服务公众、守护安全、珍惜资源的重要责任，恪守学术诚信与职业操守，对科研成果、团队伙伴与社会公众负责，以担当践行科研工作者的使命与承诺。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 蓝色主题 · 短分隔线 + 中间小方块 -->
+      <section class="short dividing line">
+        <div
+          theme="blue"
+          wrapper-size="sm"
+          style="width: 100%; max-width: 900px; margin: 0 auto; padding: 0 20px"
+        >
+          <div
+            style="
+              position: relative;
+              width: 120px;
+              height: 1px;
+              background-color: #192b53;
+              margin: 32px auto;
+            "
+          >
+            <span
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: #192b53;
+              "
+            ></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================================================= -->
+      <!-- VIDEO -->
+      <!-- ============================================================================================= -->
+      <div style="text-align: center; padding-bottom: 1rem">
+        <a style="font-size: 3rem; font-weight: 800"> 人员风采 </a>
+      </div>
+      <div class="dc-video-grid">
+        <!-- 视频 1 -->
+        <a
+          href="https://mp.weixin.qq.com/s/Vl7t9qjQ9BVtFDcHwNoX_g"
+          target="_blank"
+          class="dc-video-card"
+        >
+          <div class="dc-video-cover">
+            <img src="../picture/cooperation2.jpg" alt="视频封面" />
+            <div class="dc-video-play-btn"></div>
+          </div>
+          <div class="dc-video-title">100天能干成什么？她干成了芯片攻关</div>
+        </a>
+
+        <!-- 视频 2 -->
+        <a
+          href="https://mp.weixin.qq.com/s/替换成第二个公众号链接"
+          target="_blank"
+          class="dc-video-card"
+        >
+          <div class="dc-video-cover">
+            <img src="../picture/cooperation2.jpg" alt="视频封面" />
+            <div class="dc-video-play-btn"></div>
+          </div>
+          <div class="dc-video-title">
+            工科男也有爽文剧本？他的18到40就是答案
+          </div>
+        </a>
+      </div>
+      <!-- 蓝色主题 · 短分隔线 + 中间小方块 -->
+      <section class="short dividing line">
+        <div
+          theme="blue"
+          wrapper-size="sm"
+          style="width: 100%; max-width: 900px; margin: 0 auto; padding: 0 20px"
+        >
+          <div
+            style="
+              position: relative;
+              width: 120px;
+              height: 1px;
+              background-color: #192b53;
+              margin: 32px auto;
+            "
+          >
+            <span
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: #192b53;
+              "
+            ></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- join us page-->
+      <div id="join_page"></div>
+    </main>
+
+    <!-- 底部会自动加载到这里 -->
+    <div id="footer"></div>
+  </body>
+</html>

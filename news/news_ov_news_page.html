@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数字PET实验室</title>
+    <meta name="keywords" content="数字PET实验室" />
+    <meta
+      name="description"
+      content="Digital PET Laboratory is advancing the scope of human health."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta
+      property="og:title"
+      content="Digital PET Lab | All Digital PET, A Reinvention"
+    />
+    <meta
+      property="og:description"
+      content="Digital PET Laboratory is advancing the scope of human health."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://petlab.hust.edu.cn/" />
+    <meta property="og:site_name" content="Digital PET Laboratory" />
+    <meta property="og:image" content="/picture/PETLAB_LOGO.png" />
+    <link rel="dns-prefetch" href="/fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="/s.w.org" />
+    <link rel="canonical" href="https://petlab.hust.edu.cn/" />
+    <link
+      rel="alternate"
+      title="oEmbed (JSON)"
+      type="application/json+oembed"
+      href="/oembed/oembed.json"
+    />
+    <link
+      rel="alternate"
+      title="oEmbed (XML)"
+      type="text/xml+oembed"
+      href="/oembed/oembed.xml"
+    />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- 免费商用中文字体 -->
+    <link
+      href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 引入 头部 + 底部 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#header").load("/header.html"); // 引入头部
+        $("#footer").load("/footer.html"); // 引入底部
+        $("#join_page").load("/join_page.html"); // 引入底部
+      });
+    </script>
+
+    <link href="/css/global.css" rel="stylesheet" />
+
+    <style>
+      /* 响应式 */
+      @media (max-width: 768px) {
+        .focus-news-wrapper {
+          grid-template-columns: 1fr;
+        }
+
+        .focus-news-wrapper::before {
+          display: none;
+        }
+
+        .news-item {
+          grid-template-columns: 120px 1fr;
+        }
+      }
+
+      /* 移动端自适应 */
+      @media (max-width: 768px) {
+        .dc-video-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* 移动端自适应 */
+      @media (max-width: 768px) {
+        .tc-pt-b-grid-3 {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 头部会自动加载到这里 -->
+    <div id="header"></div>
+
+    <main>
+      <!-- ============================================================================================= -->
+      <!-- Hero -->
+      <!-- ============================================================================================= -->
+      <section
+        class="dpl-hero-section"
+        style="
+          position: relative;
+          width: 100%;
+          height: 520px;
+          overflow: hidden;
+          margin: 0;
+          padding: 0;
+        "
+      >
+        <div
+          class="dpl-hero-bg"
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+          "
+        >
+          <img
+            src="/picture/News_hero.jpg"
+            alt="dpl Hero"
+            style="
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+              display: block;
+            "
+          />
+        </div>
+
+        <!-- 左下角文字 -->
+        <div
+          class="dpl-hero-content"
+          style="
+            position: absolute;
+            left: 5%;
+            bottom: 12%;
+            z-index: 2;
+            max-width: 800px;
+            color: white;
+            padding: 0rem 1rem;
+          "
+        >
+          <div
+            class="dpl-hero-eyebrow"
+            style="
+              font-size: 3rem;
+              font-weight: 800;
+              margin-bottom: 0.8rem;
+              text-transform: uppercase;
+              letter-spacing: 0.1rem;
+              opacity: 1;
+            "
+          >
+            新闻中心
+          </div>
+          <h1
+            class="dpl-hero-title"
+            style="
+              font-size: 1.4rem;
+              font-weight: 400;
+              line-height: 1.6;
+              margin: 0;
+              letter-spacing: 0.1rem;
+            "
+          >
+            科研动态、重要成果与团队资讯，全方位呈现研究进展与创新发展。
+          </h1>
+        </div>
+      </section>
+      <!-- 蓝色主题 · 短分隔线 + 中间小方块 -->
+      <section class="short dividing line">
+        <div
+          theme="blue"
+          wrapper-size="sm"
+          style="width: 100%; max-width: 900px; margin: 0 auto; padding: 0 20px"
+        >
+          <div
+            style="
+              position: relative;
+              width: 120px;
+              height: 1px;
+              background-color: #192b53;
+              margin: 32px auto;
+            "
+          >
+            <span
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: #192b53;
+              "
+            ></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================================================= -->
+      <!-- Focused news-->
+      <!-- ============================================================================================= -->
+
+      <div class="page-text-list-container">
+        <!-- 文章会自动渲染在这里 -->
+        <div id="articleList"></div>
+        <!-- 分页按钮会自动生成在这里 -->
+        <div class="page-text-list-pagination" id="pagination"></div>
+      </div>
+    </main>
+
+    <!-- =============================== -->
+    <!-- page-text-list 列表样式 -->
+    <!-- =============================== -->
+    <script>
+      const articles = [
+        {
+          id: 20,
+          type: "新闻报道",
+          date: "2024年07月10日",
+          title: "新型医学影像设备频频走出武汉实验室",
+          url: "https://petlab.hust.edu.cn/info/1046/1479.htm", // 跳转链接,
+          img: "/picture/picture/news2",
+        },
+        {
+          id: 19,
+          type: "新闻报道",
+          date: "2024年07月10日",
+          title: "安徽省第二人民医院再添早期诊断“利器”",
+          url: "https://petlab.hust.edu.cn/info/1046/1479.htm", // 跳转链接,
+          img: "/picture/picture/news2",
+        },
+        {
+          id: 18,
+          type: "新闻报道",
+          date: "2024年07月10日",
+          title: "鄂研鄂产鄂用 健博会上的“全球领先”产品",
+          url: "https://petlab.hust.edu.cn/info/1046/1479.htm", // 跳转链接,
+          img: "/picture/picture/news2",
+        },
+        {
+          id: 17,
+          type: "新闻报道",
+          date: "2023年09月05日",
+          title: "我国首台！武汉自主研发临床全数字PET销售海外",
+          url: "https://petlab.hust.edu.cn/info/1046/1479.htm", // 跳转链接,
+          img: "/picture/picture/news2",
+        },
+        {
+          id: 16,
+          type: "新闻报道",
+          date: "2023年09月05日",
+          title: "世界首台脑部专用全数字PET获准入市",
+          url: "https://petlab.hust.edu.cn/info/1046/1479.htm", // 跳转链接,
+          img: "/picture/picture/news2",
+        },
+        {
+          id: 15,
+          type: "新闻报道",
+          date: "2023年06月26日",
+          title: "国产全数字PET产业化应用加速 京皖鲁等地多点开花",
+          url: "https://petlab.hust.edu.cn/info/1046/1479.htm", // 跳转链接,
+          img: "/picture/picture/news2",
+        },
+        {
+          id: 14,
+          type: "新闻报道",
+          date: "2023年06月26日",
+          title: "全数字PET在山东开建第三个生产基地",
+          url: "https://petlab.hust.edu.cn/info/1046/1479.htm", // 跳转链接,
+          img: "/picture/picture/news2",
+        },
+        {
+          id: 13,
+          type: "新闻报道",
+          date: "2023年06月26日",
+          title: "我国成功开发第二代“数字PET”单床位扫描成像20秒",
+          url: "https://petlab.hust.edu.cn/info/1046/1479.htm", // 跳转链接,
+          img: "/picture/picture/news2",
+        },
+        {
+          id: 12,
+          type: "新闻报道",
+          date: "2022年07月26日",
+          title: "数字PET原理创新获世界知识产权组织全球奖",
+          url: "https://petlab.hust.edu.cn/info/1046/1479.htm", // 跳转链接,
+          img: "/picture/picture/news2",
+        },
+        {
+          id: 11,
+          type: "新闻报道",
+          date: "2022年04月18日",
+          title: "这台“湖北造”被纳入国家数字诊疗装备行业技术标准",
+          url: "https://petlab.hust.edu.cn/info/1046/1479.htm", // 跳转链接,
+          img: "/picture/picture/news2",
+        },
+        {
+          id: 10,
+          type: "新闻报道",
+          date: "2022年01月08日",
+          title: "数字PET发明人谢庆国亮相《弘扬科学家精神系列人物》央视短片",
+          url: "https://petlab.hust.edu.cn/info/1046/1382.htm", // 跳转链接,
+          img: "/picture/picture/news2",
+        },
+        {
+          id: 9,
+          type: "新闻报道",
+          date: "2022年01月08日",
+          title: "数字PET发明人谢庆国亮相《弘扬科学家精神系列人物》央视短片",
+          url: "https://petlab.hust.edu.cn/info/1046/1382.htm", // 跳转链接,
+          img: "/picture/picture/news2",
+        },
+        {
+          id: 8,
+          type: "新闻报道",
+          date: "2022年01月08日",
+          title: "数字PET发明人谢庆国亮相《弘扬科学家精神系列人物》央视短片",
+          url: "https://petlab.hust.edu.cn/info/1046/1382.htm", // 跳转链接,
+          img: "/picture/picture/news2",
+        },
+        {
+          id: 7,
+          type: "新闻报道",
+          date: "2022年01月08日",
+          title: "数字PET发明人谢庆国亮相《弘扬科学家精神系列人物》央视短片",
+          url: "https://petlab.hust.edu.cn/info/1046/1382.htm", // 跳转链接,
+          img: "/picture/picture/news2",
+        },
+        {
+          id: 6,
+          type: "新闻报道",
+          date: "2022年01月08日",
+          title: "数字PET发明人谢庆国亮相《弘扬科学家精神系列人物》央视短片",
+          url: "https://petlab.hust.edu.cn/info/1046/1382.htm", // 跳转链接,
+          img: "/picture/picture/news2",
+        },
+        {
+          id: 5,
+          type: "新闻报道",
+          date: "2022年01月08日",
+          title: "数字PET发明人谢庆国亮相《弘扬科学家精神系列人物》央视短片",
+          url: "https://petlab.hust.edu.cn/info/1046/1382.htm", // 跳转链接,
+          img: "/picture/picture/news2",
+        },
+        {
+          id: 4,
+          type: "新闻报道",
+          date: "2022年01月08日",
+          title: "数字PET发明人谢庆国亮相《弘扬科学家精神系列人物》央视短片",
+          url: "https://petlab.hust.edu.cn/info/1046/1382.htm", // 跳转链接,
+          img: "/picture/picture/news2",
+        },
+        {
+          id: 3,
+          type: "新闻报道",
+          date: "2022年01月08日",
+          title: "数字PET发明人谢庆国亮相《弘扬科学家精神系列人物》央视短片",
+          url: "https://petlab.hust.edu.cn/info/1046/1382.htm", // 跳转链接,
+          img: "/picture/picture/news2",
+        },
+        {
+          id: 2,
+          type: "新闻报道",
+          date: "2022年01月08日",
+          title: "数字PET发明人谢庆国亮相《弘扬科学家精神系列人物》央视短片",
+          url: "https://petlab.hust.edu.cn/info/1046/1382.htm", // 跳转链接,
+          img: "/picture/picture/news2",
+        },
+        {
+          id: 1,
+          type: "新闻报道",
+          date: "2022年01月08日",
+          title: "数字PET发明人谢庆国亮相《弘扬科学家精神系列人物》央视短片",
+          url: "https://petlab.hust.edu.cn/info/1046/1382.htm", // 跳转链接,
+          img: "/picture/picture/news2",
+        },
+      ];
+
+      /* 如果需要自动编号的话 */
+      /*articles.forEach((item, index) => {
+        item.id = index + 1; // 自动从 1 开始编号
+      });*/
+
+      // 每页显示数量
+      const itemsPerPage = 10;
+      let currentPage = 1;
+
+      // 总页数
+      function totalPages() {
+        return Math.ceil(articles.length / itemsPerPage);
+      }
+
+      // 渲染文章
+      function renderArticles() {
+        const start = (currentPage - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        const pageArticles = articles.slice(start, end);
+
+        const list = document.getElementById("articleList");
+        list.innerHTML = "";
+
+        pageArticles.forEach((art) => {
+          // 这里可以正常使用 art.id 了！
+          list.innerHTML += `
+          <a class="page-text-list-paper-item" href="${art.url}" target="_blank">
+            <div class="page-text-list-paper-meta">
+              <div class="page-text-list-paper-type">${art.type}</div>
+              <div>${art.date}</div>
+            </div>
+            <div class="page-text-list-paper-title">${art.title}</div>
+            <div class="page-text-list-paper-image">
+              <img src="${art.img}">
+            </div>
+          </a>
+        `;
+        });
+      }
+
+      // 渲染分页 << < 1 2 > >>
+      function renderPagination() {
+        const pager = document.getElementById("pagination");
+        pager.innerHTML = "";
+        const pages = totalPages();
+
+        // 首页 <<
+        const firstBtn = document.createElement("button");
+        firstBtn.className = "page-text-list-page-btn";
+        firstBtn.innerText = "<<";
+        firstBtn.disabled = currentPage === 1;
+        firstBtn.onclick = () => {
+          currentPage = 1;
+          renderArticles();
+          renderPagination();
+        };
+        pager.appendChild(firstBtn);
+
+        // 上一页 <
+        const prevBtn = document.createElement("button");
+        prevBtn.className = "page-text-list-page-btn";
+        prevBtn.innerText = "<";
+        prevBtn.disabled = currentPage === 1;
+        prevBtn.onclick = () => {
+          currentPage--;
+          renderArticles();
+          renderPagination();
+        };
+        pager.appendChild(prevBtn);
+
+        // 页码
+        for (let i = 1; i <= pages; i++) {
+          const btn = document.createElement("button");
+          btn.className =
+            "page-text-list-page-btn " + (i === currentPage ? "active" : "");
+          btn.innerText = i;
+          btn.onclick = () => {
+            currentPage = i;
+            renderArticles();
+            renderPagination();
+          };
+          pager.appendChild(btn);
+        }
+
+        // 下一页 >
+        const nextBtn = document.createElement("button");
+        nextBtn.className = "page-text-list-page-btn";
+        nextBtn.innerText = ">";
+        nextBtn.disabled = currentPage === pages;
+        nextBtn.onclick = () => {
+          currentPage++;
+          renderArticles();
+          renderPagination();
+        };
+        pager.appendChild(nextBtn);
+
+        // 末页 >>
+        const lastBtn = document.createElement("button");
+        lastBtn.className = "page-text-list-page-btn";
+        lastBtn.innerText = ">>";
+        lastBtn.disabled = currentPage === pages;
+        lastBtn.onclick = () => {
+          currentPage = pages;
+          renderArticles();
+          renderPagination();
+        };
+        pager.appendChild(lastBtn);
+      }
+
+      // 初始化
+      renderArticles();
+      renderPagination();
+    </script>
+
+    <!-- 底部会自动加载到这里 -->
+    <div id="footer"></div>
+  </body>
+</html>

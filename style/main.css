@@ -1,0 +1,272 @@
+/* main.css */
+@import url("./root.css");
+html {
+  font-size: 1vw;
+  overflow-x: hidden;
+}
+
+/* 顶部大图与标语 */
+.main-hero {
+  position: relative;
+  height: 47rem;
+}
+
+/* 轮播容器样式 */
+.main-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-carousel-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.main-hero-img {
+  position: absolute;
+  width: 90rem;
+  height: 47rem;
+  object-fit: cover;
+  left: 0rem;
+  top: 0rem;
+  opacity: 0; /* 初始状态下所有图片透明 */
+  transition: opacity 1s ease-in-out; /* 添加淡入淡出动画 */
+}
+
+.main-hero-img:nth-child(1) {
+  opacity: 1; /* 第一张图片初始不透明 */
+  transition: none; /* 禁用初始的淡入淡出动画 */
+}
+
+.main-hero-img.active {
+  opacity: 1; /* 当前显示的图片完全不透明 */
+}
+.main-hero-desc {
+  position: absolute;
+  right: 0;
+  top: 20rem;
+  width: 60rem;
+  height: 27rem;
+  background: var(--theme-banner);
+  color: #fff;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.main-hero-title {
+  margin-top: 2.3rem;
+  margin-left: 0rem;
+  font-size: 3.8rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+.main-hero-sub {
+  margin-top: 1.5rem;
+  margin-left: 0rem;
+  font-size: 1.2rem;
+}
+.main-hero-more {
+  margin-top: 1.5rem;
+  text-align: right;
+  font-size: 1rem;
+  padding-right: 6rem;
+}
+/* main.css 页面样式 */
+body {
+  margin: 0;
+  background: #f2f2f2;
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+.main-section {
+  margin: 0 auto;
+}
+.recent-news,
+.research-block {
+  margin-bottom: 3rem;
+}
+.card-list {
+  display: flex;
+  gap: 1.5rem;
+}
+.card {
+  background: var(--theme-color1);
+  color: #fff;
+  padding: 2rem;
+  flex: 1;
+  position: relative;
+}
+.card.more {
+  background: #fff;
+  color: var(--theme-color1);
+  border: 0.125rem solid var(--theme-color1);
+  text-align: right;
+  font-weight: bold;
+  cursor: pointer;
+}
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.research-item {
+  background: var(--theme-color1);
+  color: #fff;
+  padding: 1.5rem;
+  font-size: 1.1rem;
+}
+.professor-block {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.professor-info {
+  display: flex;
+  height: 32rem;
+  width: 68rem;
+  gap: 3rem;
+  align-items: center;
+  background: var(--theme-color1);
+  color: #fff;
+  padding: 2rem 2rem;
+  box-sizing: border-box;
+}
+.professor-photo {
+  width: 32rem;
+  height: 24rem;
+  object-fit: cover;
+}
+.professor-detail {
+  flex: 1;
+}
+.professor-stats {
+  min-width: 11.25rem;
+  text-align: left;
+  font-size: 1.2rem;
+}
+.professor-stats strong {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  display: block;
+}
+.professor-stats p {
+  display: block;
+  margin: 0;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 200;
+}
+.divider {
+  width: 8rem;
+  height: 0.5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0.5rem 0;
+}
+.professor-eval {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #fff;
+}
+.gallery {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+.gallery img {
+  width: 7.5rem;
+  height: 5rem;
+  object-fit: cover;
+}
+
+/* professor background block */
+.professor-bg-block {
+  background: url("images/blank.jpg") center/cover no-repeat;
+  padding: 10rem;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block-title {
+  color: var(--theme-color1);
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin: 3.5rem 0 2rem 0;
+  padding: 0rem 20rem;
+}
+
+.image-index-item {
+  width: 35rem !important;
+}
+
+/* Intro component styles */
+.intro-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 0.5rem 1.5rem 0rem 1.5rem;
+  color: #fff;
+}
+
+.intro-title {
+
+  height: 3rem;
+  margin-top: 3rem;
+  font-size: 2rem;
+  font-weight: 300;
+  z-index: 1;
+  color: #fff;
+}
+
+.intro-desc {
+  height: 5rem;
+  font-size: 1.1rem;
+  margin-top: 0.8rem;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+  z-index: 1;
+  color: #fff;
+}
+
+.intro-more {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.hover-bg {
+  transition: opacity 0.3s;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.hover-bg-blue {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--theme-color1);
+}
+
+.intro-component:hover .hover-bg {
+  opacity: 0;
+}
+
+.image-index-img {
+  height: 75% !important;
+}
