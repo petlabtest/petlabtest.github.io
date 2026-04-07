@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <!-- 1. 引入 jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+    <!-- 2. 自动加载头部 + 底部 -->
+    <script>
+        $(function () {
+            $("#header").load("/header.html"); // 引入头部
+            $("#footer").load("/footer.html"); // 引入底部
+        });
+    </script>
+
+
+    <link rel="stylesheet" href="/style/contact.css" />
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部会自动加载到这里 -->
+    <div id="header"></div>
+
+    <main>
+        <section class="section-1">
+            <div class="background-blue"></div>
+            <div class="background" style="
+    background: var(--theme-color2);
+    top: 32rem;
+    left: 12rem;
+    width: 40rem;
+    height: 20rem;
+    color: #FFF;
+    padding: 2rem 4rem;
+    box-sizing: border-box;
+">
+                <h2>科研合作</h2>
+                <p>我们诚邀全球高校、科研机构与学者，通过共建实验室、联合攻关、委托研发及学者访问等模式，共同探索前沿技术，推动基础科学突破。</p>
+                <p>邮箱：petlab@hust.edu.cn</p>
+            </div>
+            <div class="background" style="
+    background: #FFF;
+    top: 32rem;
+    left: 52rem;
+    width: 40rem;
+    height: 20rem;
+    padding: 2rem 4rem;
+    box-sizing: border-box;
+">
+                <h2>科技服务</h2>
+                <p>我们提供全方位、高水平、定制化的科技服务，推动前沿科研概念走向科研成果落地，助力关键技术攻关、产品创新升级与行业高质量发展。</p>
+                <p>邮箱：petlab@hust.edu.cn</p>
+            </div>
+            <h1 class="title-white">PETLab期待与来自世界各地的你相遇，共同探索、发明、创新、创造！</h1>
+            <h2 class="subtitle-white">若您想与我们认识，请联系petlab@hust.edu.cn</h2>
+
+            <img src="/picture/connect.jpg" alt="首图">
+        </section>
+
+        <section class="section-2">
+            <div class="background" style="
+              background-image: url(/picture/connect2.jpg);
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+          "></div>
+            <h1 class="title-blue">欢迎加入RayMember计划</h1>
+            <p class="p-white">
+                如果您有意向跟我们展开科研合作或科技服务的合作交流，欢迎<a href="https://v.wjx.cn/vm/rN9AZL6.aspx"
+                    style="color: inherit; text-decoration: underline;">点击链接</a>注册RayMember计划的一员。<br>
+                您将有机会获得我们的软硬件产品、科技服务方面的优惠、样品和试用机会等。
+            </p>
+        </section>
+        <div class="background-white"
+            style="background: #FAFAFA;position: absolute;top: 52rem;height: 30rem;width: 100rem;z-index: -1;"></div>
+
+    </main>
+
+    <!-- 底部会自动加载到这里 -->
+    <div id="footer"></div>
+</body>
+
+</html>

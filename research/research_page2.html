@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数字PET实验室</title>
+  <meta name="keywords" content="数字PET实验室" />
+  <meta name="description" content="Digital PET Laboratory is advancing the scope of human health." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta property="og:title" content="Digital PET Lab | All Digital PET, A Reinvention" />
+  <meta property="og:description" content="Digital PET Laboratory is advancing the scope of human health." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://petlab.hust.edu.cn/" />
+  <meta property="og:site_name" content="Digital PET Laboratory" />
+  <meta property="og:image" content="/picture/PETLAB_LOGO.png" />
+  <link rel="dns-prefetch" href="/fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="/s.w.org" />
+  <link rel="canonical" href="https://petlab.hust.edu.cn/" />
+  <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/oembed/oembed.json" />
+  <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/oembed/oembed.xml" />
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- 免费商用中文字体 -->
+  <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- 1. 引入 jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+  <!-- 2. 自动加载头部 + 底部 -->
+  <script>
+    $(function () {
+      $("#header").load("/header.html"); // 引入头部
+      $("#footer").load("/footer.html"); // 引入底部
+      $("#join_page").load("/join_page.html"); // 引入底部
+    });
+  </script>
+
+  <!-- 1. 引入 style -->
+  <link href="/css/global.css" rel="stylesheet" />
+  <link href="/css/timeline.css" rel="stylesheet" />
+
+  <style>
+    .main-hero {
+      margin-top: 0rem;
+      position: relative;
+      height: 41rem;
+      left: 0rem;
+    }
+
+    .main-hero-img {
+      position: absolute;
+      width: 80%;
+      height: 100%;
+      object-fit: cover;
+      left: 0rem;
+      display: block;
+    }
+
+    .main-hero-desc {
+      position: absolute;
+      right: 0rem;
+      top: 21rem;
+      width: 50rem;
+      height: 20rem;
+      background: rgba(15, 76, 129, 0.8);
+      color: #fff;
+      padding: 2rem 3rem 2rem 3rem;
+    }
+
+    .main-hero-title {
+      font-size: 3.5rem;
+      font-weight: 600;
+      line-height: 2;
+    }
+
+    .main-hero-sub {
+      margin-top: 1rem;
+      font-size: 2rem;
+    }
+
+    /* 32px = 2rem, 24px = 1.5rem */
+    .science-intro {
+      background: #333;
+      color: #fff;
+      padding: 2rem 9rem;
+      font-size: 1em;
+      margin-bottom: 1rem;
+      margin-top: 0rem;
+      line-height: 2;
+      font-weight: 100;
+      display: block;
+      text-align: justify;
+    }
+
+    .news-project-main {
+      background: #f7f7f7;
+      min-height: 100vh;
+      padding: 0;
+      font-family: var(--font-family, "Microsoft YaHei", Arial, sans-serif);
+    }
+
+    /* 第一屏 */
+    .news-hero {
+      position: relative;
+      height: 42rem;
+      color: #fff;
+    }
+
+    .news-hero-images {
+      position: absolute;
+      right: 0;
+      top: 5rem;
+      gap: 1.5rem;
+      background: var(--theme-color2);
+      width: 55rem;
+      padding: 4rem;
+      box-sizing: border-box;
+      z-index: 1;
+      height: 37rem;
+    }
+
+    .news-item-img img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 41rem;
+      height: 26rem;
+      object-fit: cover;
+    }
+
+    .news-hero-info {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100rem;
+      height: 40rem;
+      background: var(--theme-color1);
+      padding: 8rem 61rem 4rem 4rem;
+      box-sizing: border-box;
+      z-index: 0;
+    }
+
+    .news-hero-info h2 {
+      margin-top: 0;
+      font-size: 3.5rem;
+      margin-bottom: 6rem;
+    }
+
+    .news-item-info p {
+      font-size: 1rem;
+      margin: 0;
+      line-height: 2;
+    }
+
+    .news-list {
+      margin: 0rem 0;
+      padding-bottom: 6rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .news-list>* {
+      margin-bottom: 3rem;
+    }
+
+    .news-list>*:last-child {
+      margin-bottom: -3rem;
+    }
+
+    .news-item {
+      display: flex;
+      flex-direction: row-reverse;
+      background: var(--theme-color2, #222);
+      color: #fff;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+      width: 100rem;
+      box-sizing: border-box;
+    }
+
+    .news-item.alt {
+      background: var(--theme-color1, #205a8a);
+      flex-direction: row;
+      /* 统一图片在前文字在后 */
+    }
+
+    .news-item-img {
+      position: relative;
+      width: 50%;
+      height: 26rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      /* 图片缩小但区域不变 */
+      box-sizing: border-box;
+    }
+
+    .news-item-img img {
+      position: absolute;
+      left: 0;
+      width: 41rem;
+      height: 26rem;
+      object-fit: cover;
+      background: #e0e0e0;
+    }
+
+    .news-item.alt .news-item-img img {
+      left: auto;
+      right: 0;
+    }
+
+    .news-item-info {
+      width: 50%;
+      padding: 0 8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 26rem;
+      box-sizing: border-box;
+    }
+
+    .news-item-info h3 {
+      font-weight: 300;
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+      margin-top: 0rem;
+    }
+
+    .news-item-info p {
+      font-size: 1em;
+      margin: 0;
+    }
+
+    .news-item-content {
+      margin: auto 0;
+    }
+
+    .news-item-more {
+      position: relative;
+      margin-left: 30rem;
+      margin-bottom: 2.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 头部会自动加载到这里 -->
+  <div id="header"></div>
+
+  <main>
+    <!-- ============================================================================================= -->
+    <!-- Hero -->
+    <!-- ============================================================================================= -->
+    <div class="main-hero">
+      <img src="/picture/capabilities/capabilities1.png" alt="banner" class="main-hero-img">
+      <div class="main-hero-desc">
+        <div class="main-hero-title">Radiopharmaceutical </div>
+        <div class="main-hero-sub">放射性核药</div>
+      </div>
+    </div>
+
+    <div class="science-intro">
+      <p>
+        数字PET实验室，坚持自主创新、开放协同、产学研医融合，打造国际一流、国内领先的放射性核药创新高地，培养核药交叉领军人才，产出具有自主知识产权与重大临床价值的原创成果，为攻克不治之症、实现健康中国、科技自立自强贡献核科技力量。依托医用回旋加速器、放射性药物 GMP 热室、多模态核医学影像平台、非人灵长类评价体系、全流程质控体系的顶尖设施，开展正电子核素（¹⁸F、⁶⁸Ga、⁸⁹Zr）、治疗核素（¹⁷⁷Lu、⁹⁰Y、²²⁵Ac）等关键核素的药物研发。
+      </p>
+    </div>
+
+
+
+    <section class="news-project-main">
+      <section class="news-list">
+        <!-- 1. 放射性核药开发 -->
+        <div class="news-item alt">
+          <div class="news-item-img">
+            <img src="/picture/capabilities/page2/app1.jpg" alt="放射性核药开发">
+          </div>
+          <div class="news-item-info">
+            <div class="news-item-content">
+              <h3 style="margin-top: 4rem;">放射性核药开发</h3>
+              <p>
+                利用放射性核素标记探针可实现靶点特异性验证、受体占有率测定、药物 - 靶点结合能力定量评价，快速筛选高活性化合物，为候选药物遴选提供关键依据。
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 2. 临床前验证研究 -->
+        <div class="news-item">
+          <div class="news-item-img">
+            <img src="/picture/capabilities/sys2.jpg" alt="临床前验证研究">
+          </div>
+          <div class="news-item-info">
+            <div class="news-item-content">
+              <h3 style="margin-top: 4rem;">临床前验证研究</h3>
+              <p>
+                无创、动态、定量地获取药物在活体动物体内的组织分布、药代动力学（PK）、靶器官富集与代谢清除特征，精准评估有效性与安全性，为推进至人体试验提供科学支撑。
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 3. 人体微量给药研究 -->
+        <div class="news-item alt">
+          <div class="news-item-img">
+            <img src="/picture/capabilities/sys3.jpg" alt="人体微量给药研究/临床0期">
+          </div>
+          <div class="news-item-info">
+            <div class="news-item-content">
+              <h3 style="margin-top: 4rem;">人体微量给药研究/临床0期</h3>
+              <p>
+                微量放射性标记药物可在极低暴露风险下，直接获得药物在人体内的靶点结合、组织分布与血脑屏障穿透等关键信息，提前判断候选药物成药潜力，避免无效药物进入后续高成本临床试验。
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 4. 药代动力学研究 -->
+        <div class="news-item">
+          <div class="news-item-img">
+            <img src="/picture/capabilities/sys4.jpg" alt="药代动力学研究/临床Ⅰ期">
+          </div>
+          <div class="news-item-info">
+            <div class="news-item-content">
+              <h3 style="margin-top: 4rem;">药代动力学研究/临床Ⅰ期</h3>
+              <p>
+               剂量探索、靶区药物暴露定量、治疗窗口评估，同时实现早期疗效标志物监测，为给药方案优化、毒性风险控制和 Ⅱ 期临床设计提供精准数据支持。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        
+      </section>
+    </section>
+
+
+
+  </main>
+
+  <!-- 底部会自动加载到这里 -->
+  <div id="footer"></div>
+</body>
+
+</html>

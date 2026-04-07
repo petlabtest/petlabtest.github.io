@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数字PET实验室</title>
+    <meta name="keywords" content="数字PET实验室" />
+    <meta name="description" content="Digital PET Laboratory is advancing the scope of human health." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta property="og:title" content="Digital PET Lab | All Digital PET, A Reinvention" />
+    <meta property="og:description" content="Digital PET Laboratory is advancing the scope of human health." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://petlab.hust.edu.cn/" />
+    <meta property="og:site_name" content="Digital PET Laboratory" />
+    <meta property="og:image" content="/picture/PETLAB_LOGO.png" />
+    <link rel="dns-prefetch" href="/fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="/s.w.org" />
+    <link rel="canonical" href="https://petlab.hust.edu.cn/" />
+    <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/oembed/oembed.json" />
+    <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/oembed/oembed.xml" />
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- 免费商用中文字体 -->
+    <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- 1. 引入 jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <!-- 2. 自动加载头部 + 底部 -->
+    <script>
+        $(function () {
+            $("#header").load("/header.html"); // 引入头部
+            $("#footer").load("/footer.html"); // 引入底部
+            $("#join_page").load("/join_page.html"); // 引入底部
+        });
+    </script>
+
+
+
+    <!-- 必须引入：TimelineJS 样式和脚本 -->
+    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline-min.js"></script>
+    <!-- 1. 引入 style -->
+    <link href="/css/global.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/team-intro.css">
+
+    <link rel="stylesheet" href="/style/root.css">
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/footer.css">
+    <link rel="stylesheet" href="/style/team-intro.css">
+
+
+    <style>
+        .section-1 {
+            position: relative;
+            width: 100rem;
+            height: 42.5rem;
+        }
+
+        .section-1 .background-blue {
+            position: absolute;
+            top: 35rem;
+            left: 39rem;
+            width: 51rem;
+            height: 20rem;
+            z-index: 1;
+            background-color: var(--theme-banner);
+            padding: 2.7rem 0rem 2rem 2rem;
+            box-sizing: border-box;
+        }
+
+        .section-1 .title-white {
+            font-size: 3.44rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 0;
+        }
+
+        .section-1 img {
+            position: absolute;
+            top: 0rem;
+            left: 8rem;
+            width: 84rem;
+            height: 45rem;
+            object-fit: contain;
+            /* âœ… ç­‰æ¯”ä¾‹ç¼©æ”¾ï¼Œå®Œæ•´æ˜¾ç¤º */
+        }
+
+        .background-black {
+            position: relative;
+            left: 0rem;
+            right: 0rem;
+            height: auto;
+            background-color: var(--theme-color2);
+            padding: 12rem 0 0 0;
+            margin: 0;
+        }
+
+        /* Markdown converted content styles */
+        .md-container {
+            position: relative;
+            width: 88rem;
+            margin: 0 auto;
+            padding: 3rem 4rem;
+            box-sizing: border-box;
+            color: #fff;
+        }
+
+        .md-title {
+            font-size: 2.4rem;
+            font-weight: 400;
+            margin: 0 0 1.5rem 0;
+            color: #fff;
+        }
+
+        .md-subtitle {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin: 3rem 0 0.8rem 0;
+            color: #fff;
+        }
+
+        .md-paragraph {
+            position: relative;
+            font-size: 1rem;
+            line-height: 2.2rem;
+            margin: 2rem 0;
+            color: #fff;
+            font-weight: 100;
+        }
+
+        .md-list {
+            position: relative;
+            margin: 0 0 1.2rem 1rem;
+            padding: 0;
+            color: #fff;
+        }
+
+        .md-paragraph {
+            position: relative;
+            margin: 0 0 0rem 0rem;
+            font-size: 1rem;
+            line-height: 1.2;
+            padding: 0;
+            color: #fff;
+        }
+
+        .md-list li {
+            margin: 0.6rem 0;
+            font-size: 1rem;
+            font-weight: 100;
+        }
+
+        .md-divider {
+            border: none;
+            height: .2px;
+            background: rgba(255, 255, 255, 0.18);
+            margin: 6rem 0;
+        }
+    </style>
+</head>
+
+<body style="background-color: #F2F2F2;">
+    <!-- 头部会自动加载到这里 -->
+    <div id="header"></div>
+
+
+    <section class="section-1">
+        <div class="background-blue">
+            <h1 class="title-white">
+                We want Partners, <br>
+                Who are Ambitious, <br>Self-motivated and Diligent.
+            </h1>
+        </div>
+
+        <img src="/picture/people/engage/mission1.jpg" alt="合影">
+    </section>
+
+
+    <div class="background-black">
+        <div class="md-container">
+            <h1 class="md-title">PETLab向所有怀揣科研火种的本科同学发出邀约，不论经验、不论资历，只要你怀揣对科研的激情、梦想、勇气、责任，就是我们的同路人。</h1>
+
+            <h2 class="md-subtitle">希望你们具备</h2>
+
+            <ol class="md-list">
+                <li>材料、化学、光电工程、物理、电子、自动化、计算机、电信、生物医学工程、生物学、药学、临床医学、放射学核医学等相关专业背景；</li>
+                <li>有团队合作精神和能力，有较好的沟通表达能力，对质量和结果有追求；</li>
+                <li>专业英语听、说、读、写，具备流利的口语表达能力；</li>
+                <li>对科学研究有浓厚的兴趣；</li>
+                <li>拥有诚信、自律、自立、坚韧的价值观。</li>
+            </ol>
+
+            <p class="md-paragraph">本科生进入团队后，将被纳入团队内部RA培养体系，配置相应科研资源，并有机会去往全球（中国武汉、合肥、深圳、美国芝加哥
+                、意大利伯兹里、卡塞塔、德国马格德堡等地）进行学术交流。</p>
+
+            <hr class="md-divider">
+
+            <h1 class="md-title">PETLab现面向全球招聘博士后，欢迎有志于投身科研事业，成为数字PET研究、智能探测、软件算法等领域领军人才的优秀青年加盟！</h1>
+
+            <h2 class="md-subtitle">应聘条件</h2>
+
+            <ol class="md-list">
+                <li>材料、化学、光电工程、物理、电子、自动化、计算机、电信、生物医学工程、生物学、药学、临床医学、放射学核医学等相关专业背景；</li>
+                <li>获得博士学位不超过3年；</li>
+                <li>年龄不超过35周岁；</li>
+                <li>独立负责过某科学研究，或参与过相关专业领域的科研项目并担任主要研究者；</li>
+                <li>有团队合作精神和能力，有较好的沟通表达能力，对质量和结果有追求；</li>
+                <li>专业英语听、说、读、写，具备流利的口语表达能力；</li>
+                <li>对科学研究有浓厚的兴趣。</li>
+            </ol>
+
+            <h2 class="md-subtitle">工作地点安排及待遇</h2>
+
+            <ol class="md-list">
+                <li>武汉、合肥、深圳、芝加哥 （美国）、伯兹里（意大利）、卡塞塔 （意大利）、马格德堡（德国）；</li>
+                <li>聘期2-6年，阶段性驻外（美国、芬兰、意大利、德国）培养，优秀者可获得研究领域或产业领城正式岗位；</li>
+                <li>薪酬待遇：面议。</li>
+            </ol>
+
+            <p class="md-paragraph">硕士研究生、博士研究生招生需求详见教授简介。</p>
+        </div>
+    </div>
+
+    <!-- 底部会自动加载到这里 -->
+    <div id="footer"></div>
+</body>
+
+</html>

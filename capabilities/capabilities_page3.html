@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数字PET实验室</title>
+  <meta name="keywords" content="数字PET实验室" />
+  <meta name="description" content="Digital PET Laboratory is advancing the scope of human health." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta property="og:title" content="Digital PET Lab | All Digital PET, A Reinvention" />
+  <meta property="og:description" content="Digital PET Laboratory is advancing the scope of human health." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://petlab.hust.edu.cn/" />
+  <meta property="og:site_name" content="Digital PET Laboratory" />
+  <meta property="og:image" content="/picture/PETLAB_LOGO.png" />
+  <link rel="dns-prefetch" href="/fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="/s.w.org" />
+  <link rel="canonical" href="https://petlab.hust.edu.cn/" />
+  <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/oembed/oembed.json" />
+  <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/oembed/oembed.xml" />
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- 免费商用中文字体 -->
+  <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- 1. 引入 jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+  <!-- 2. 自动加载头部 + 底部 -->
+  <script>
+    $(function () {
+      $("#header").load("/header.html"); // 引入头部
+      $("#footer").load("/footer.html"); // 引入底部
+      $("#join_page").load("/join_page.html"); // 引入底部
+    });
+  </script>
+
+  <!-- 1. 引入 style -->
+  <link href="/css/global.css" rel="stylesheet" />
+  <link href="/css/timeline.css" rel="stylesheet" />
+
+  <style>
+    .main-hero {
+      margin-top: 0rem;
+      position: relative;
+      height: 41rem;
+      left: 0rem;
+    }
+
+    .main-hero-img {
+      position: absolute;
+      width: 80%;
+      height: 100%;
+      object-fit: cover;
+      left: 0rem;
+      display: block;
+    }
+
+    .main-hero-desc {
+      position: absolute;
+      right: 0rem;
+      top: 21rem;
+      width: 50rem;
+      height: 20rem;
+      background: rgba(15, 76, 129, 0.8);
+      color: #fff;
+      padding: 2rem 3rem 2rem 3rem;
+    }
+
+    .main-hero-title {
+      font-size: 3.5rem;
+      font-weight: 600;
+      line-height: 2;
+    }
+
+    .main-hero-sub {
+      margin-top: 1rem;
+      font-size: 2rem;
+    }
+
+    /* 32px = 2rem, 24px = 1.5rem */
+    .science-intro {
+      background: #333;
+      color: #fff;
+      padding: 2rem 9rem;
+      font-size: 1em;
+      margin-bottom: 1rem;
+      margin-top: 0rem;
+      line-height: 2;
+      font-weight: 100;
+      display: block;
+      text-align: justify;
+    }
+
+    .news-project-main {
+      background: #f7f7f7;
+      min-height: 100vh;
+      padding: 0;
+      font-family: var(--font-family, "Microsoft YaHei", Arial, sans-serif);
+    }
+
+    /* 第一屏 */
+    .news-hero {
+      position: relative;
+      height: 42rem;
+      color: #fff;
+    }
+
+    .news-hero-images {
+      position: absolute;
+      right: 0;
+      top: 5rem;
+      gap: 1.5rem;
+      background: var(--theme-color2);
+      width: 55rem;
+      padding: 4rem;
+      box-sizing: border-box;
+      z-index: 1;
+      height: 37rem;
+    }
+
+    .news-item-img img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 41rem;
+      height: 26rem;
+      object-fit: cover;
+    }
+
+    .news-hero-info {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100rem;
+      height: 40rem;
+      background: var(--theme-color1);
+      padding: 8rem 61rem 4rem 4rem;
+      box-sizing: border-box;
+      z-index: 0;
+    }
+
+    .news-hero-info h2 {
+      margin-top: 0;
+      font-size: 3.5rem;
+      margin-bottom: 6rem;
+    }
+
+    .news-item-info p {
+      font-size: 1rem;
+      margin: 0;
+      line-height: 2;
+    }
+
+    .news-list {
+      margin: 0rem 0;
+      padding-bottom: 6rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .news-list>* {
+      margin-bottom: 3rem;
+    }
+
+    .news-list>*:last-child {
+      margin-bottom: -3rem;
+    }
+
+    .news-item {
+      display: flex;
+      flex-direction: row-reverse;
+      background: var(--theme-color2, #222);
+      color: #fff;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+      width: 100rem;
+      box-sizing: border-box;
+    }
+
+    .news-item.alt {
+      background: var(--theme-color1, #205a8a);
+      flex-direction: row;
+      /* 统一图片在前文字在后 */
+    }
+
+    .news-item-img {
+      position: relative;
+      width: 50%;
+      height: 26rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      /* 图片缩小但区域不变 */
+      box-sizing: border-box;
+    }
+
+    .news-item-img img {
+      position: absolute;
+      left: 0;
+      width: 41rem;
+      height: 26rem;
+      object-fit: cover;
+      background: #e0e0e0;
+    }
+
+    .news-item.alt .news-item-img img {
+      left: auto;
+      right: 0;
+    }
+
+    .news-item-info {
+      width: 50%;
+      padding: 0 8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 26rem;
+      box-sizing: border-box;
+    }
+
+    .news-item-info h3 {
+      font-weight: 300;
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+      margin-top: 0rem;
+    }
+
+    .news-item-info p {
+      font-size: 1em;
+      margin: 0;
+    }
+
+    .news-item-content {
+      margin: auto 0;
+    }
+
+    .news-item-more {
+      position: relative;
+      margin-left: 30rem;
+      margin-bottom: 2.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 头部会自动加载到这里 -->
+  <div id="header"></div>
+
+  <main>
+    <!-- ============================================================================================= -->
+    <!-- Hero -->
+    <!-- ============================================================================================= -->
+    <div class="main-hero">
+      <img src="/picture/capabilities/capabilities1.png" alt="banner" class="main-hero-img">
+      <div class="main-hero-desc">
+        <div class="main-hero-title">科技服务平台</div>
+        <div class="main-hero-sub">Technology Service Platform</div>
+      </div>
+    </div>
+
+    <div class="science-intro">
+      <p>
+        致力于为国内外科研机构和医药公司提供最先进和创新的分子影像服务，包括无创定量的体内体外成像、药代动力学分析、影像组学分析等，支持高水平论文发表和药物研发CRO服务。
+      </p>
+    </div>
+
+
+
+    <section class="news-project-main">
+      <section class="news-list">
+        <!-- 1. 小动物采血系统 -->
+        <div class="news-item alt">
+          <div class="news-item-img">
+            <img src="/picture/capabilities/page3/app1.jpg" alt="小动物采血系统">
+          </div>
+          <div class="news-item-info">
+            <div class="news-item-content">
+              <h3 style="margin-top: 4rem;">小动物采血系统</h3>
+              <p>
+                用于小动物的无创血液采集，分析药代动力学。
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 2. 伽马计数仪 -->
+        <div class="news-item">
+          <div class="news-item-img">
+            <img src="/picture/capabilities/page3/app2.jpg" alt="伽马计数仪">
+          </div>
+          <div class="news-item-info">
+            <div class="news-item-content">
+              <h3 style="margin-top: 4rem;">伽马计数仪</h3>
+              <p>
+                测量动物组织中放射性示踪剂的分布情况。
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 3. 脑部专用全数字PET -->
+        <div class="news-item alt">
+          <div class="news-item-img">
+            <img src="/picture/capabilities/page3/app3.jpg" alt="高效液相色谱仪+磷屏扫描仪">
+          </div>
+          <div class="news-item-info">
+            <div class="news-item-content">
+              <h3 style="margin-top: 4rem;">高效液相色谱仪+磷屏扫描仪</h3>
+              <p>进行放射性示踪剂分析和药物体内分布检测。
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 4. RayPlus智能医学影像云平台 -->
+        <div class="news-item">
+          <div class="news-item-img">
+            <img src="/picture/capabilities/page3/app5.jpg" alt="RayPlus智能医学影像云平台">
+          </div>
+          <div class="news-item-info">
+            <div class="news-item-content">
+              <h3 style="margin-top: 4rem;">RayPlus智能医学影像云平台</h3>
+              <p>
+                面向未来的影像计算与数据交互平台，为科研、临床及基层医疗提供高效的科技服务支持。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+
+
+  </main>
+
+  <!-- 底部会自动加载到这里 -->
+  <div id="footer"></div>
+</body>
+
+</html>

@@ -2,11 +2,92 @@
 <html lang="zh-hans">
 
 <head>
-    
+
     <style>
         /* ———————————————————————————————————————————————————————————————————————————————————— */
         /* footnote */
         /* ———————————————————————————————————————————————————————————————————————————————————— */
+
+        @import url("./root.css");
+
+        .footer-container {
+            width: 100%;
+            background: var(--footer-bg);
+            color: #fff;
+            padding: 1.25rem 15rem;
+            box-sizing: border-box;
+        }
+
+        .footer-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 1rem 10rem 3rem 10rem;
+            margin: 0 auto;
+        }
+
+        .footer-info-cols {
+            display: flex;
+            flex-direction: row;
+            gap: 3rem;
+            flex: 1;
+            margin-top: 1rem;
+        }
+
+        .footer-contact,
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: lighter;
+            line-height: 3;
+            text-align: left;
+        }
+
+        .footer-contact {
+            align-items: flex-start;
+        }
+
+        .footer-links {
+            align-items: flex-start;
+            margin-left: 7rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: lighter;
+            font-size: 0.82rem;
+        }
+
+        .footer-qrcode-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 7.5rem;
+            margin-top: 3rem;
+            margin: auto 0;
+        }
+
+        .footer-qrcode {
+            height: 15rem;
+            width: 15rem;
+            object-fit: contain;
+        }
+
+        .footer-bottom {
+            width: 100%;
+            text-align: left;
+            padding: 0.75rem 0 0.5rem 0;
+            color: #fff;
+            font-size: 0.75rem;
+            background: transparent;
+            font-weight: 100;
+            margin: 3rem auto 1rem auto;
+            padding-left: 0;
+        }
+
         .dpl-footer {
             background: #192B53;
             color: #ccc;
@@ -46,44 +127,35 @@
     <!-- 底部 Footer -->
     <!-- =============================== -->
     <footer class="dpl-footer">
-        <div class="dpl-footer__top py-5">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-md-3" style="text-align: center;">
-                        <h5>关于我们</h5>
-                        <ul class="nav flex-column">
-                            <li><a href="/capabilities/capabilities_ov.html">科研平台</a></li>
-                            <li><a href="/research/research_ov.html">科学研究</a></li>
-                            <li><a href="/people/people_ov.html">人才队伍</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3" style="text-align: center;">
-                        <h5>访问我们</h5>
-                        <ul class="nav flex-column">
-                            <li><a href="/capabilities/capabilities_ov.html">研究设备</a></li>
-                            <li><a href="/capabilities/capabilities_ov.html">研究设施</a></li>
-                            <li><a href="/capabilities/capabilities_ov.html">开放共享</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3" style="text-align: center;">
-                        <h5>加入我们</h5>
-                        <ul class="nav flex-column">
-                            <li><a href="/engage/engage_ov.html">研究合作</a></li>
-                            <li><a href="/engage/engage_ov.html">学生教育</a></li>
-                            <li><a href="/engage/engage_ov.html">人才招募</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3" style="text-align: center;">
-                        <h5>关注我们</h5>
-                        <ul class="nav flex-column">
-                            <li><a href="/news/news_ov.html">新闻报道</a></li>
-                            <li><a href="/news/news_ov.html">通知公告</a></li>
-                            <li><a href="/news/news_ov.html">相关单位</a></li>
-                        </ul>
+
+
+        <div class="footer-main">
+            <div class="footer-info-cols">
+                <div class="footer-contact" style="width: 30%;">
+                    <div><a href="/about/about_ov.html" style="text-decoration: none; color: #fff; font-size: 30px; font-weight: 600; ">全数字PET发源地</a></div>
+                    <div>
+                        <p style="color: #fff;line-height: 1.5rem;  text-align: justify; text-justify: inter-ideograph;">
+                        数字PET实验室以培养全球数字医学影像前沿研究领军人才为使命，以实现数字PET在早期诊断、精准治疗、药物研发中的应用突破为愿景，聚焦生命科学与医学需求，形其未见、成其未来，助力人类早日攻克癌症和脑病等重大疾病。
+                        </p>
+                        <p style="margin-top: -1rem;color: #fff;">petlab@hust.edu.cn</p>
                     </div>
                 </div>
+                <div class="footer-links" style="margin-left: 5rem; line-height: 2rem;">
+                    <div><a href="https://www.hust.edu.cn" target="_blank">华中科技大学：www.hust.edu.cn</a></div>
+                    <div><a href="https://wnlo.hust.edu.cn" target="_blank">武汉光电国家研究中心：wnlo.hust.edu.cn</a></div>
+                    <div><a href="https://imc.hust.edu.cn" target="_blank">华中科技大学国际医学中心：imc.hust.edu.cn</a></div>
+                    <div><a href="http://www.raysolution.com" target="_blank">锐世医疗：www.raysolution.com</a></div>
+                    <div><a href="http://www.ray-quant.com" target="_blank">锐光科技：www.ray-quant.com</a></div>
+                    <div><a href="http://www.ray-can.com" target="_blank">瑞派宁：www.ray-can.com</a></div>
+                </div>
+            </div>
+            <div class="footer-qrcode-wrap" >
+                <img src="/picture/qrcode.jpg" alt="二维码" class="footer-qrcode">
             </div>
         </div>
+
+
+
         <div class="dpl-footer__bottom py-3 text-black" style="background-color: #F2F2F2;">
             <div class="container">
                 <div class="d-flex justify-content-between flex-wrap small">

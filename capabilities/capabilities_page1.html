@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数字PET实验室</title>
+  <meta name="keywords" content="数字PET实验室" />
+  <meta name="description" content="Digital PET Laboratory is advancing the scope of human health." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta property="og:title" content="Digital PET Lab | All Digital PET, A Reinvention" />
+  <meta property="og:description" content="Digital PET Laboratory is advancing the scope of human health." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://petlab.hust.edu.cn/" />
+  <meta property="og:site_name" content="Digital PET Laboratory" />
+  <meta property="og:image" content="/picture/PETLAB_LOGO.png" />
+  <link rel="dns-prefetch" href="/fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="/s.w.org" />
+  <link rel="canonical" href="https://petlab.hust.edu.cn/" />
+  <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/oembed/oembed.json" />
+  <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/oembed/oembed.xml" />
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- 免费商用中文字体 -->
+  <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- 1. 引入 jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+  <!-- 2. 自动加载头部 + 底部 -->
+  <script>
+    $(function () {
+      $("#header").load("/header.html"); // 引入头部
+      $("#footer").load("/footer.html"); // 引入底部
+      $("#join_page").load("/join_page.html"); // 引入底部
+    });
+  </script>
+
+  <!-- 1. 引入 style -->
+  <link href="/css/global.css" rel="stylesheet" />
+  <link href="/css/timeline.css" rel="stylesheet" />
+
+  <style>
+    .main-hero {
+      margin-top: 0rem;
+      position: relative;
+      height: 41rem;
+      left: 0rem;
+    }
+
+    .main-hero-img {
+      position: absolute;
+      width: 80%;
+      height: 100%;
+      object-fit: cover;
+      left: 0rem;
+      display: block;
+    }
+
+    .main-hero-desc {
+      position: absolute;
+      right: 0rem;
+      top: 21rem;
+      width: 50rem;
+      height: 20rem;
+      background: rgba(15, 76, 129, 0.8);
+      color: #fff;
+      padding: 2rem 3rem 2rem 3rem;
+    }
+
+    .main-hero-title {
+      font-size: 3.5rem;
+      font-weight: 600;
+      line-height: 2;
+    }
+
+    .main-hero-sub {
+      margin-top: 1rem;
+      font-size: 2rem;
+    }
+
+    /* 32px = 2rem, 24px = 1.5rem */
+    .science-intro {
+      background: #333;
+      color: #fff;
+      padding: 2rem 9rem;
+      font-size: 1em;
+      margin-bottom: 1rem;
+      margin-top: 0rem;
+      line-height: 2;
+      font-weight: 100;
+      display: block;
+      text-align: justify;
+    }
+
+    .news-project-main {
+      background: #f7f7f7;
+      min-height: 100vh;
+      padding: 0;
+      font-family: var(--font-family, "Microsoft YaHei", Arial, sans-serif);
+    }
+
+    /* 第一屏 */
+    .news-hero {
+      position: relative;
+      height: 42rem;
+      color: #fff;
+    }
+
+    .news-hero-images {
+      position: absolute;
+      right: 0;
+      top: 5rem;
+      gap: 1.5rem;
+      background: var(--theme-color2);
+      width: 55rem;
+      padding: 4rem;
+      box-sizing: border-box;
+      z-index: 1;
+      height: 37rem;
+    }
+
+    .news-item-img img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 41rem;
+      height: 26rem;
+      object-fit: cover;
+    }
+
+    .news-hero-info {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100rem;
+      height: 40rem;
+      background: var(--theme-color1);
+      padding: 8rem 61rem 4rem 4rem;
+      box-sizing: border-box;
+      z-index: 0;
+    }
+
+    .news-hero-info h2 {
+      margin-top: 0;
+      font-size: 3.5rem;
+      margin-bottom: 6rem;
+    }
+
+    .news-item-info p {
+      font-size: 1rem;
+      margin: 0;
+      line-height: 2;
+    }
+
+    .news-list {
+      margin: 0rem 0;
+      padding-bottom: 6rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .news-list>* {
+      margin-bottom: 3rem;
+    }
+
+    .news-list>*:last-child {
+      margin-bottom: -3rem;
+    }
+
+    .news-item {
+      display: flex;
+      flex-direction: row-reverse;
+      background: var(--theme-color2, #222);
+      color: #fff;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+      width: 100rem;
+      box-sizing: border-box;
+    }
+
+    .news-item.alt {
+      background: var(--theme-color1, #205a8a);
+      flex-direction: row;
+      /* 统一图片在前文字在后 */
+    }
+
+    .news-item-img {
+      position: relative;
+      width: 50%;
+      height: 26rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      /* 图片缩小但区域不变 */
+      box-sizing: border-box;
+    }
+
+    .news-item-img img {
+      position: absolute;
+      left: 0;
+      width: 41rem;
+      height: 26rem;
+      object-fit: cover;
+      background: #e0e0e0;
+    }
+
+    .news-item.alt .news-item-img img {
+      left: auto;
+      right: 0;
+    }
+
+    .news-item-info {
+      width: 50%;
+      padding: 0 8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 26rem;
+      box-sizing: border-box;
+    }
+
+    .news-item-info h3 {
+      font-weight: 300;
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+      margin-top: 0rem;
+    }
+
+    .news-item-info p {
+      font-size: 1em;
+      margin: 0;
+    }
+
+    .news-item-content {
+      margin: auto 0;
+    }
+
+    .news-item-more {
+      position: relative;
+      margin-left: 30rem;
+      margin-bottom: 2.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 头部会自动加载到这里 -->
+  <div id="header"></div>
+
+  <main>
+    <!-- ============================================================================================= -->
+    <!-- Hero -->
+    <!-- ============================================================================================= -->
+    <div class="main-hero">
+      <img src="/picture/capabilities/capabilities1.png" alt="banner" class="main-hero-img">
+      <div class="main-hero-desc">
+        <div class="main-hero-title">先进影像平台</div>
+        <div class="main-hero-sub">Advanced Imaging Platform</div>
+      </div>
+    </div>
+
+    <div class="science-intro">
+      <p>
+        致力于提供高质量PET/CT影像服务，支持疾病早期筛查、疗效评估和个体化治疗。通过先进的影像技术和设备，我们为临床和研究提供精准的诊断支持，推动精准医学的发展，并为患者提供更为有效的治疗方案。
+      </p>
+    </div>
+
+
+
+    <section class="news-project-main">
+      <section class="news-list">
+        <!-- 1. 动物全数字PET -->
+        <div class="news-item alt">
+          <div class="news-item-img">
+            <img src="/picture/capabilities/page1/sys2.jpg" alt="PET医学影像展示">
+          </div>
+          <div class="news-item-info">
+            <div class="news-item-content">
+              <h3 style="margin-top: 4rem;">动物全数字PET</h3>
+              <p>
+                空间分辨率突破亚毫米级别。
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 2. 临床全数字PET -->
+        <div class="news-item">
+          <div class="news-item-img">
+            <img src="/picture/capabilities/page1/sys3.jpg" alt="JERRY也能照PET?">
+          </div>
+          <div class="news-item-info">
+            <div class="news-item-content">
+              <h3 style="margin-top: 4rem;">临床全数字PET</h3>
+              <p>
+                国家创新医疗器械<br><br>135 s全身扫描<br>249 ps飞行时间<br>0.05 mCi/kg注射剂量<br>1000×1000精密像素
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 3. 脑部专用全数字PET -->
+        <div class="news-item alt">
+          <div class="news-item-img">
+            <img src="/picture/capabilities/page1/sys4.jpg" alt="RadMay APP应用展示">
+          </div>
+          <div class="news-item-info">
+            <div class="news-item-content">
+              <h3 style="margin-top: 4rem;">脑部专用全数字PET</h3>
+              <p>世界首台商用脑部专用全数字<br><br>10 fps动态扫描<br>220 ps飞行时间<br>多示踪剂联合成像<br>1280×1280精密像素
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 4. 头盔全数字PET -->
+        <div class="news-item">
+          <div class="news-item-img">
+            <img src="/picture/capabilities/page1/sys5.jpg" alt="PET戴在头上看大脑模样">
+          </div>
+          <div class="news-item-info">
+            <div class="news-item-content">
+              <h3 style="margin-top: 4rem;">头盔全数字PET</h3>
+              <p>
+               革新了PET的扫描方式<br><br>探测效率提高:100倍<br>分辨率提高:2倍<br>灵敏度提高:10倍
+              </p>
+            </div>
+          </div>
+        </div>
+
+        
+        <!-- 5. PNI Imaging -->
+        <div class="news-item alt">
+          <div class="news-item-img">
+            <img src="/picture/capabilities/page1/sys6.jpg" alt="RadMay APP应用展示">
+          </div>
+          <div class="news-item-info">
+            <div class="news-item-content">
+              <h3 style="margin-top: 4rem;">Plug-n-Image</h3>
+              <p>Plug-n-Image技术体系的构建定位于支持智能探测与成像系统的灵活搭建、全过程数据的智能分析和临床（前）研究的快速开展。提供从数据获取、图像重建到数据分析全流程计算的标准化、模块化核心算子和接入机制；提供AI辅助的成像计算、数据分析计算工作流定义与智能调度能力。形成以PnI智能成像引擎为底座支撑探测与成像计算、医学影像分析和临床研究的技术体系，为驱动未来重大科学发现与前沿技术突破提供核心支撑
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+
+
+  </main>
+
+  <!-- 底部会自动加载到这里 -->
+  <div id="footer"></div>
+</body>
+
+</html>

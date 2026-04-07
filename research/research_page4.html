@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数字PET实验室</title>
+  <meta name="keywords" content="数字PET实验室" />
+  <meta name="description" content="Digital PET Laboratory is advancing the scope of human health." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta property="og:title" content="Digital PET Lab | All Digital PET, A Reinvention" />
+  <meta property="og:description" content="Digital PET Laboratory is advancing the scope of human health." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://petlab.hust.edu.cn/" />
+  <meta property="og:site_name" content="Digital PET Laboratory" />
+  <meta property="og:image" content="/picture/PETLAB_LOGO.png" />
+  <link rel="dns-prefetch" href="/fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="/s.w.org" />
+  <link rel="canonical" href="https://petlab.hust.edu.cn/" />
+  <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/oembed/oembed.json" />
+  <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/oembed/oembed.xml" />
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- 免费商用中文字体 -->
+  <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- 1. 引入 jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+  <!-- 2. 自动加载头部 + 底部 -->
+  <script>
+    $(function () {
+      $("#header").load("/header.html"); // 引入头部
+      $("#footer").load("/footer.html"); // 引入底部
+      $("#join_page").load("/join_page.html"); // 引入底部
+    });
+  </script>
+
+  <!-- 1. 引入 style -->
+  <link href="/css/global.css" rel="stylesheet" />
+  <link href="/css/timeline.css" rel="stylesheet" />
+
+  <style>
+    .main-hero {
+      margin-top: 0rem;
+      position: relative;
+      height: 41rem;
+      left: 0rem;
+    }
+
+    .main-hero-img {
+      position: absolute;
+      width: 80%;
+      height: 100%;
+      object-fit: cover;
+      left: 0rem;
+      display: block;
+    }
+
+    .main-hero-desc {
+      position: absolute;
+      right: 0rem;
+      top: 21rem;
+      width: 50rem;
+      height: 20rem;
+      background: rgba(15, 76, 129, 0.8);
+      color: #fff;
+      padding: 2rem 3rem 2rem 3rem;
+    }
+
+    .main-hero-title {
+      font-size: 3.5rem;
+      font-weight: 600;
+      line-height: 2;
+    }
+
+    .main-hero-sub {
+      margin-top: 1rem;
+      font-size: 2rem;
+    }
+
+    /* 32px = 2rem, 24px = 1.5rem */
+    .science-intro {
+      background: #333;
+      color: #fff;
+      padding: 2rem 9rem;
+      font-size: 1em;
+      margin-bottom: 1rem;
+      margin-top: 0rem;
+      line-height: 2;
+      font-weight: 100;
+      display: block;
+      text-align: justify;
+    }
+
+    .news-project-main {
+      background: #f7f7f7;
+      min-height: 100vh;
+      padding: 0;
+      font-family: var(--font-family, "Microsoft YaHei", Arial, sans-serif);
+    }
+
+    /* 第一屏 */
+    .news-hero {
+      position: relative;
+      height: 42rem;
+      color: #fff;
+    }
+
+    .news-hero-images {
+      position: absolute;
+      right: 0;
+      top: 5rem;
+      gap: 1.5rem;
+      background: var(--theme-color2);
+      width: 55rem;
+      padding: 4rem;
+      box-sizing: border-box;
+      z-index: 1;
+      height: 37rem;
+    }
+
+    .news-item-img img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 41rem;
+      height: 26rem;
+      object-fit: cover;
+    }
+
+    .news-hero-info {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100rem;
+      height: 40rem;
+      background: var(--theme-color1);
+      padding: 8rem 61rem 4rem 4rem;
+      box-sizing: border-box;
+      z-index: 0;
+    }
+
+    .news-hero-info h2 {
+      margin-top: 0;
+      font-size: 3.5rem;
+      margin-bottom: 6rem;
+    }
+
+    .news-item-info p {
+      font-size: 1rem;
+      margin: 0;
+      line-height: 2;
+    }
+
+    .news-list {
+      margin: 0rem 0;
+      padding-bottom: 6rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .news-list>* {
+      margin-bottom: 3rem;
+    }
+
+    .news-list>*:last-child {
+      margin-bottom: -3rem;
+    }
+
+    .news-item {
+      display: flex;
+      flex-direction: row-reverse;
+      background: var(--theme-color2, #222);
+      color: #fff;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+      width: 100rem;
+      box-sizing: border-box;
+    }
+
+    .news-item.alt {
+      background: var(--theme-color1, #205a8a);
+      flex-direction: row;
+      /* 统一图片在前文字在后 */
+    }
+
+    .news-item-img {
+      position: relative;
+      width: 50%;
+      height: 26rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      /* 图片缩小但区域不变 */
+      box-sizing: border-box;
+    }
+
+    .news-item-img img {
+      position: absolute;
+      left: 0;
+      width: 41rem;
+      height: 26rem;
+      object-fit: cover;
+      background: #e0e0e0;
+    }
+
+    .news-item.alt .news-item-img img {
+      left: auto;
+      right: 0;
+    }
+
+    .news-item-info {
+      width: 50%;
+      padding: 0 8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 26rem;
+      box-sizing: border-box;
+    }
+
+    .news-item-info h3 {
+      font-weight: 300;
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+      margin-top: 0rem;
+    }
+
+    .news-item-info p {
+      font-size: 1em;
+      margin: 0;
+    }
+
+    .news-item-content {
+      margin: auto 0;
+    }
+
+    .news-item-more {
+      position: relative;
+      margin-left: 30rem;
+      margin-bottom: 2.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 头部会自动加载到这里 -->
+  <div id="header"></div>
+
+  <main>
+    <!-- ============================================================================================= -->
+    <!-- Hero -->
+    <!-- ============================================================================================= -->
+    <div class="main-hero">
+      <img src="/picture/capabilities/capabilities1.png" alt="banner" class="main-hero-img">
+      <div class="main-hero-desc">
+        <div class="main-hero-title">Environmental Monitoring</div>
+        <div class="main-hero-sub">环境监测领域</div>
+      </div>
+    </div>
+
+    <div class="science-intro">
+      <p>
+        数字PET实验室聚焦精准核辐射测量、高灵敏度成像与定量分析，将研究领域延伸至能源勘探、核安全保障及环境辐射监测等关键场景，为复杂场景下的辐射探测、过程可视化与安全评估提供了创新技术路径。
+      </p>
+    </div>
+
+
+
+    <section class="news-project-main">
+      <section class="news-list">
+        <!-- 1. 石油与地下资源探测 -->
+        <div class="news-item alt">
+          <div class="news-item-img">
+            <img src="/picture/capabilities/page1/sys2.jpg" alt="石油与地下资源探测">
+          </div>
+          <div class="news-item-info">
+            <div class="news-item-content">
+              <h3 style="margin-top: 4rem;">石油与地下资源探测</h3>
+              <p>
+                PET 相关核探测与示踪技术可实现油气储层、地下流体运移及地质结构的精细成像。利用正电子核素示踪与 γ 光子探测，能够对油藏孔隙分布、流体渗流路径、裂缝发育及驱替效率进行无创、动态监测，为油气资源勘探、开发方案优化及提高采收率提供高精度数据支撑，尤其适用于传统地球物理方法难以清晰表征的复杂油气藏与非常规能源勘探。
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 2. 辐射防护监测 -->
+        <div class="news-item">
+          <div class="news-item-img">
+            <img src="/picture/capabilities/page1/sys3.jpg" alt="辐射防护监测">
+          </div>
+          <div class="news-item-info">
+            <div class="news-item-content">
+              <h3 style="margin-top: 4rem;">辐射防护监测</h3>
+              <p>
+                PET 探测器对 γ 射线及特征辐射信号具备高灵敏度与快速响应能力，可用于核设施、放射源场所及涉核作业环境的实时辐射防护监测。通过对辐射场强度、空间分布与时间变化的精准测量，能够快速识别异常辐射水平、定位辐射热点并评估人员暴露风险，为辐射防护最优化、作业安全管控及应急响应提供可靠技术手段。
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 3. 辐射环境监测 -->
+        <div class="news-item alt">
+          <div class="news-item-img">
+            <img src="/picture/capabilities/page1/sys4.jpg" alt="辐射环境监测">
+          </div>
+          <div class="news-item-info">
+            <div class="news-item-content">
+              <h3 style="margin-top: 4rem;">辐射环境监测</h3>
+              <p>在核事故应急、核设施周边及放射性污染区域，PET 式高分辨探测系统可实现大范围、网格化的辐射环境快速巡检与成像监测。通过对环境中 γ 射线能谱与空间分布的定量测量，能够识别放射性核素种类、评估污染范围与扩散趋势，为环境风险评估、去污治理效果验证及生态安全保障提供重要数据支撑。
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 4. 头盔全数字PET -->
+        <div class="news-item">
+          <div class="news-item-img">
+            <img src="/picture/capabilities/page1/sys5.jpg" alt="PET戴在头上看大脑模样">
+          </div>
+          <div class="news-item-info">
+            <div class="news-item-content">
+              <h3 style="margin-top: 4rem;">核聚变装置中子探测</h3>
+              <p>
+               核聚变等离子体约束与能量输出研究高度依赖高精度中子诊断。PET 相关的闪烁探测、符合测量与 TOF timing 技术，可用于聚变中子通量监测、能谱测量与中子发射区域成像，实现对等离子体温度、密度及约束性能的间接表征。其高时间分辨与空间分辨能力，为聚变装置运行状态监测、等离子体物理研究及工程安全评估提供了关键诊断手段。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        
+      </section>
+    </section>
+
+
+
+  </main>
+
+  <!-- 底部会自动加载到这里 -->
+  <div id="footer"></div>
+</body>
+
+</html>

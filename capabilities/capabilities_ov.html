@@ -1,521 +1,351 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>数字PET实验室</title>
-    <meta name="keywords" content="数字PET实验室" />
-    <meta
-      name="description"
-      content="Digital PET Laboratory is advancing the scope of human health."
-    />
-    <meta
-      name="robots"
-      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-    />
-    <meta
-      property="og:title"
-      content="Digital PET Lab | All Digital PET, A Reinvention"
-    />
-    <meta
-      property="og:description"
-      content="Digital PET Laboratory is advancing the scope of human health."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://petlab.hust.edu.cn/" />
-    <meta property="og:site_name" content="Digital PET Laboratory" />
-    <meta property="og:image" content="/picture/PETLAB_LOGO.png" />
-    <link rel="dns-prefetch" href="/fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="/s.w.org" />
-    <link rel="canonical" href="https://petlab.hust.edu.cn/" />
-    <link
-      rel="alternate"
-      title="oEmbed (JSON)"
-      type="application/json+oembed"
-      href="/oembed/oembed.json"
-    />
-    <link
-      rel="alternate"
-      title="oEmbed (XML)"
-      type="text/xml+oembed"
-      href="/oembed/oembed.xml"
-    />
-    <!-- Bootstrap 5 CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- 免费商用中文字体 -->
-    <link
-      href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
 
-    <!-- 1. 引入 jQuery -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数字PET实验室</title>
+  <meta name="keywords" content="数字PET实验室" />
+  <meta name="description" content="Digital PET Laboratory is advancing the scope of human health." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta property="og:title" content="Digital PET Lab | All Digital PET, A Reinvention" />
+  <meta property="og:description" content="Digital PET Laboratory is advancing the scope of human health." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://petlab.hust.edu.cn/" />
+  <meta property="og:site_name" content="Digital PET Laboratory" />
+  <meta property="og:image" content="/picture/PETLAB_LOGO.png" />
+  <link rel="dns-prefetch" href="/fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="/s.w.org" />
+  <link rel="canonical" href="https://petlab.hust.edu.cn/" />
+  <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/oembed/oembed.json" />
+  <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/oembed/oembed.xml" />
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- 免费商用中文字体 -->
+  <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
 
-    <!-- 2. 自动加载头部 + 底部 -->
-    <script>
-      $(function () {
-        $("#header").load("/header.html"); // 引入头部
-        $("#footer").load("/footer.html"); // 引入底部
-        $("#join_page").load("/join_page.html"); // 引入底部
-      });
-    </script>
+  <!-- 1. 引入 jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
-    <!-- 1. 引入 style -->
-    <link href="/css/global.css" rel="stylesheet" />
-    <link href="/css/timeline.css" rel="stylesheet" />
+  <!-- 2. 自动加载头部 + 底部 -->
+  <script>
+    $(function () {
+      $("#header").load("/header.html"); // 引入头部
+      $("#footer").load("/footer.html"); // 引入底部
+      $("#join_page").load("/join_page.html"); // 引入底部
+    });
+  </script>
 
-    <style></style>
-  </head>
+  <!-- 1. 引入 style -->
+  <link href="/css/global.css" rel="stylesheet" />
+  <link href="/css/timeline.css" rel="stylesheet" />
 
-  <body>
-    <!-- 头部会自动加载到这里 -->
-    <div id="header"></div>
+  <style>
+    .system-devices {
+      padding: 2rem 0;
+      background: #f2f2f2;
+    }
 
-    <main>
-      <!-- ============================================================================================= -->
-      <!-- Hero -->
-      <!-- ============================================================================================= -->
-      <section
-        class="dpl-hero-section"
-        style="
-          position: relative;
-          width: 100%;
-          height: 520px;
-          overflow: hidden;
-          margin: 0;
-          padding: 0;
-        "
-      >
+    .device-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 0;
+      margin: 3rem 9rem 1rem 9rem;
+    }
+
+    .device-img {
+      width: 100%;
+      height: 18.6rem;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .device-text {
+      padding: 2rem 2rem 0rem 2rem;
+      display: flex;
+      flex-direction: column;
+      background: var(--theme-color1);
+      color: white;
+      text-align: left;
+    }
+
+    .device-title {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      font-weight: normal;
+      letter-spacing: 0.1rem;
+    }
+
+    .device-subtitle {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    .device-desc {
+      font-size: 0.8rem;
+      font-weight: 100;
+      line-height: 1.8;
+    }
+
+    .device-features {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .device-feature {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 1.2rem;
+    }
+
+    .device-feature:before {
+      content: "â€¢";
+      position: absolute;
+      left: 0;
+    }
+
+    .system-platforms {
+      position: relative;
+      margin: 2rem 0;
+    }
+
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    /* 单个模块 */
+    .feature-item {
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    /* 图片：上浮出蓝色背景条 */
+    .feature-item img {
+      width: 20rem;
+      height: auto;
+      /* border-radius: 6px; */
+      margin-bottom: -2rem;
+      /* 让图片“浮出”蓝条 */
+      position: relative;
+
+    }
+
+    /* 文字：保持在蓝色条中 */
+    .feature-item p {
+      font-size: 1.5em;
+      font-weight: 300;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 头部会自动加载到这里 -->
+  <div id="header"></div>
+
+  <main>
+    <!-- ============================================================================================= -->
+    <!-- Hero -->
+    <!-- ============================================================================================= -->
+
+    <section style=" position: relative;  height: 35rem;  color: #fff; ">
+      <div
+        style=" position: absolute;  left: 0;  top: 5rem;  grid-template-columns: repeat(2, 15rem);  grid-template-rows: repeat(2, 11.25rem);  gap: 1.5rem;  background: var(--theme-color2);  width: 48rem;  padding: 4rem;  box-sizing: border-box;  height: 42rem;  z-index: 2;">
         <div
-          class="dpl-hero-bg"
-          style="
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-          "
-        >
-          <img
-            src="/picture/guoguang1.jpg"
-            alt="dpl-hero"
-            style="
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              object-position: center;
-              display: block;
-            "
-          />
-        </div>
-
-        <div
-          class="dpl-hero-content"
-          style="
-            position: absolute;
-            left: 5%;
-            bottom: 12%;
-            z-index: 2;
-            max-width: 800px;
-            color: white;
-            padding: 0rem 1rem;
-          "
-        >
-          <div
-            class="dpl-hero-eyebrow"
-            style="
-              font-size: 3rem;
-              font-weight: 800;
-              margin-bottom: 0.8rem;
-              text-transform: uppercase;
-              letter-spacing: 0.1rem;
-              opacity: 1;
-            "
-          >
-            科研平台
-          </div>
-          <h1
-            class="dpl-hero-title"
-            style="
-              font-size: 1.4rem;
-              font-weight: 400;
-              line-height: 1.6;
-              margin: 0;
-              letter-spacing: 0.1rem;
-            "
-          >
-            使用我们的世界级科研设施，发掘发展机遇，探索前沿科学。
-          </h1>
-        </div>
-      </section>
-      <!-- 蓝色主题 · 短分隔线 + 中间小方块 -->
-      <section class="short dividing line">
-        <div
-          theme="blue"
-          wrapper-size="sm"
-          style="width: 100%; max-width: 900px; margin: 0 auto; padding: 0 20px"
-        >
-          <div
-            style="
-              position: relative;
-              width: 120px;
-              height: 1px;
-              background-color: #192b53;
-              margin: 32px auto;
-            "
-          >
-            <span
-              style="
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                display: block;
-                width: 10px;
-                height: 10px;
-                background-color: #192b53;
-              "
-            ></span>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================================================= -->
-      <!-- equipment  -->
-      <!-- ============================================================================================= -->
-      <section class="updt3-section">
-        <div class="updt3-container">
-          <div class="updt3-section-header">
-            <h2 class="updt3-section-title">先进设备</h2>
-            <p class="updt3-section-text">
-              尖端自研科研仪器与先进配套实验设备，为前沿科学探索提供世界级的研究条件
-            </p>
-          </div>
-        </div>
-
-        <!-- 三列网格卡片 -->
-        <div class="updt3-container">
-          <div class="updt3-grid">
-            <!-- 1 -->
-            <div class="updt3-grid-card">
-              <img
-                class="updt3-card-media"
-                src="../picture/yanjiufangxiang.png"
-                alt="1"
-              />
-              <h3 class="updt3-card-title">
-                <a href="https://www.dpl.gov/research/ai">全数字小动物PET/CT</a>
-              </h3>
-              <p class="updt3-card-title-content">Exploration 180</p>
-              <a href="https://www.dpl.gov/research/ai" class="updt3-card-btn"
-                >了解更多</a
-              >
-            </div>
-
-            <!-- 2 -->
-            <div class="updt3-grid-card">
-              <img
-                class="updt3-card-media"
-                src="../picture/yanjiufangxiang.png"
-                alt="2"
-              />
-              <h3 class="updt3-card-title">
-                <a href="https://www.dpl.gov/research/accelerator-technologies"
-                  >全数字脑部专用PET</a
-                >
-              </h3>
-              <p class="updt3-card-title-content">DigitalMI i30</p>
-              <a
-                href="https://www.dpl.gov/research/accelerator-technologies"
-                class="updt3-card-btn"
-                >了解更多</a
-              >
-            </div>
-
-            <!-- 3 -->
-            <div class="updt3-grid-card">
-              <img
-                class="updt3-card-media"
-                src="../picture/yanjiufangxiang.png"
-                alt="3"
-              />
-              <h3 class="updt3-card-title">
-                <a href="https://www.dpl.gov/research/cosmic-frontiers/"
-                  >全数字超长轴距PET/CT</a
-                >
-              </h3>
-              <p class="updt3-card-title-content">DigitMI 9120</p>
-              <a
-                href="https://www.dpl.gov/research/cosmic-frontiers/"
-                class="updt3-card-btn"
-                >了解更多</a
-              >
-            </div>
-
-            <!-- 4 -->
-            <div class="updt3-grid-card">
-              <img
-                class="updt3-card-media"
-                src="../picture/yanjiufangxiang.png"
-                alt="4"
-              />
-              <h3 class="updt3-card-title">
-                <a
-                  href="https://www.dpl.gov/research/frontier-computing-sciences/"
-                  >全数字临床PET/CT</a
-                >
-              </h3>
-              <p class="updt3-card-title-content">DigitMI 930</p>
-              <a
-                href="https://www.dpl.gov/research/frontier-computing-sciences/"
-                class="updt3-card-btn"
-                >了解更多</a
-              >
-            </div>
-
-            <!-- 5 -->
-            <div class="updt3-grid-card">
-              <img
-                class="updt3-card-media"
-                src="../picture/yanjiufangxiang.png"
-                alt="5"
-              />
-              <h3 class="updt3-card-title">
-                <a
-                  href="https://www.dpl.gov/research/materials-and-chemical-sciences/"
-                  >全数字辐射探测器</a
-                >
-              </h3>
-              <p class="updt3-card-title-content">RadWall</p>
-              <a
-                href="https://www.dpl.gov/research/materials-and-chemical-sciences/"
-                class="updt3-card-btn"
-                >了解更多</a
-              >
-            </div>
-
-            <!-- 6 -->
-            <div class="updt3-grid-card">
-              <img
-                class="updt3-card-media"
-                src="../picture/yanjiufangxiang.png"
-                alt="Artificial Intelligence"
-              />
-              <h3 class="updt3-card-title">
-                <a
-                  href="https://www.dpl.gov/research/materials-and-chemical-sciences/"
-                  >回旋加速器</a
-                >
-              </h3>
-              <p class="updt3-card-title-content">IBA</p>
-              <a
-                href="https://www.dpl.gov/research/materials-and-chemical-sciences/"
-                class="updt3-card-btn"
-                >了解更多</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- 蓝色主题 · 短分隔线 + 中间小方块 -->
-      <section class="short dividing line">
-        <div
-          theme="blue"
-          wrapper-size="sm"
-          style="width: 100%; max-width: 900px; margin: 0 auto; padding: 0 20px"
-        >
-          <div
-            style="
-              position: relative;
-              width: 120px;
-              height: 1px;
-              background-color: #192b53;
-              margin: 32px auto;
-            "
-          >
-            <span
-              style="
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                display: block;
-                width: 10px;
-                height: 10px;
-                background-color: #192b53;
-              "
-            ></span>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================================================= -->
-      <!-- facilities  -->
-      <!-- ============================================================================================= -->
-      <section id="updt3-section">
-        <div class="updt3-container">
-          <div class="updt3-section-header">
-            <h2 class="updt3-section-title">综合设施</h2>
-            <p class="updt3-section-text">
-              依托国家级重大科技基础设施与开放共享平台，构筑支撑多学科交叉创新的一流科研环境。
-            </p>
-          </div>
-        </div>
-
-        <!-- 三列网格卡片 -->
-        <div class="updt3-container">
-          <div class="updt3-grid">
-            <!-- 1 -->
-            <div class="updt3-grid-card">
-              <img
-                class="updt3-card-media"
-                src="../picture/yanjiufangxiang.png"
-                alt="Artificial Intelligence"
-              />
-              <h3 class="updt3-card-title">
-                <a href="https://www.dpl.gov/research/ai">大科学装置</a>
-              </h3>
-              <p class="updt3-card-title-content">华中科技大学国际医学中心</p>
-              <a href="https://www.dpl.gov/research/ai" class="updt3-card-btn"
-                >了解更多</a
-              >
-            </div>
-
-            <!-- 2 -->
-            <div class="updt3-grid-card">
-              <img
-                class="updt3-card-media"
-                src="../picture/yanjiufangxiang.png"
-                alt="Accelerator Technologies"
-              />
-              <h3 class="updt3-card-title">
-                <a href="https://www.dpl.gov/research/accelerator-technologies"
-                  >生命科学与技术学院</a
-                >
-              </h3>
-              <p class="updt3-card-title-content">华中科技大学</p>
-              <a
-                href="https://www.dpl.gov/research/accelerator-technologies"
-                class="updt3-card-btn"
-                >了解更多</a
-              >
-            </div>
-
-            <!-- 3 -->
-            <div class="updt3-grid-card">
-              <img
-                class="updt3-card-media"
-                src="../picture/yanjiufangxiang.png"
-                alt="Cosmic Frontiers"
-              />
-              <h3 class="updt3-card-title">
-                <a href="https://www.dpl.gov/research/cosmic-frontiers/"
-                  >武汉光电国家研究中心</a
-                >
-              </h3>
-              <p class="updt3-card-title-content">华中科技大学</p>
-              <a
-                href="https://www.dpl.gov/research/cosmic-frontiers/"
-                class="updt3-card-btn"
-                >了解更多</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================================================= -->
-      <!-- capabilities  -->
-      <!-- ============================================================================================= -->
-      <section class="flprt-full">
-        <div class="flprt-section">
-          <div class="flprt-container">
-            <!-- 左侧：轮播图 -->
-            <div class="flprt-slider">
-              <div class="flprt-slides">
-                <div class="flprt-slide active">
-                  <img src="../picture/mission1.jpg" />
-                </div>
-                <!-- <div class="flprt-slide"><img src="../picture/mission2.jpg"></div>
-              <div class="flprt-slide"><img src="../picture/mission3.jpg"></div>-->
-              </div>
-              <!-- <div class="flprt-dots">
-              <span class="flprt-dot active"></span>
-              <span class="flprt-dot"></span>
-              <span class="flprt-dot"></span>
-            </div>-->
-            </div>
-
-            <!-- 右侧：固定文字 -->
-            <div class="flprt-text">
-              <div class="flprt-content">
-                <a
-                  href="#"
-                  class="flprt-link"
-                  style="
-                    font-size: 2.5rem;
-                    font-weight: 800;
-                    margin-bottom: 1.8rem;
-                  "
-                  >世界级的科研能力</a
-                >
-                <p class="content-text">
-                  我们一流的科研设备和科研设施支持研究人员、机构和公司的实验和数据需求。始终以实现数字PET在早期诊断、精准治疗、药物研发中的应用突破为愿景，聚焦生命科学与医学需求，形其未见、成其未来，助力人类早日攻克癌症和脑病等重大疾病。
-                </p>
-                <a href="#" class="flprt-link" style="font-weight: 500"
-                  >关于我们 →</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================================================= -->
-      <!-- research/people  -->
-      <!-- ============================================================================================= -->
-      <!-- 白色背景 + 图右文左 -->
-      <div class="rlprt-container" theme="white">
-        <div class="rlprt-cta-inner layout-right">
-          <div class="rlprt-cta-media">
-            <img src="../picture/engage_hero.jpg" alt="" />
-          </div>
-          <div class="rlprt-cta-content">
-            <h2 class="rlprt-cta-title">平台课题</h2>
-            <p class="rlprt-cta-desc">
-              依托世界一流设施与资源开放共享，助力全球科研人员协同探索，共拓科学边界。了解我们如何助力您的科研事业更进一步。
-            </p>
-            <a href="/about/about_ov.html" class="rlprt-cta-btn">了解更多</a>
-          </div>
+          style=" left: 0; top: 0; height: 100%; width: 100%; background: url(/picture/capabilities/f1.jpg)  no-repeat bottom center;  background-size: cover; position: absolute;">
         </div>
       </div>
-
-      <!-- 浅灰色背景 + 图左文右 -->
-      <div class="rlprt-container" theme="cloud">
-        <div class="rlprt-cta-inner layout-left">
-          <div class="rlprt-cta-media">
-            <img src="../picture/engage_hero.jpg" alt="" />
-          </div>
-          <div class="rlprt-cta-content">
-            <h2 class="rlprt-cta-title">平台支持</h2>
-            <p class="rlprt-cta-desc">
-              汇聚多元智慧与跨界力量，深化国内外科研合作，携手应对重大科学与时代挑战。了解我们如何以协作方案应对重大科学挑战。
-            </p>
-            <a href="/people/people_ov.html" class="rlprt-cta-btn">了解更多</a>
-          </div>
-        </div>
+      <div class="news-hero-info"
+        style="position: absolute; right: 0rem; top: 0rem; width: 65rem; height: 47rem; background: #0f4c81; padding: 14rem 7rem 4rem 14rem; box-sizing: border-box; z-index: 1;">
+        <h2
+          style="margin-top: -5rem; font-size: 3.2rem; margin-bottom: 4.5rem; margin-left: 0rem; width: 50rem;line-height: 5rem;">
+          Apparatus Empowers Discovery <br>Talent Drives Innovation <br>Sharing Achieves Excellence <br>Collaboration
+          Leads the Future
+        </h2>
+        <p style="margin: 0.75rem 0; font-size: 1rem; font-size: 1.3rem; margin-left: 0rem">
+          装置赋能探索，人才驱动创新，共享成就卓越，协同引领未来
+        </p>
       </div>
+    </section>
+    <div style="font-size: 1.1rem;
+  font-weight: lighter;
+  background: #343434;
+  color: #fff;
+  padding: 3rem 9rem;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 2; margin-top: 12rem;">
+      超级数字PET成像平台，是实验室科技创新的核心支撑与战略基石。以国家战略需求、国际科技前沿、重大科学问题、人民生命健康为导向，构建多学科交叉、多技术融合、多尺度表征、全链条支撑的世界一流科研设施体系。通过大科学装置、尖端探测设备、先进分析仪器、智能成像系统的有机集成，打造开放共享、高效协同、安全稳定、持续创新的公共技术支撑体系，为原创性科学发现、关键技术突破、重大成果转化、顶尖人才培养提供硬核保障。
+    </div>
 
-      <!-- join us page-->
-      <div id="join_page"></div>
-    </main>
 
-    <!-- 底部会自动加载到这里 -->
-    <div id="footer"></div>
-  </body>
+
+    <!-- 先进影像平台-->
+    <h2 style="font-size: 3rem;
+    font-weight: 800;
+    color: #192b53;
+    margin: 5rem 5rem 2rem;">先进影像平台</h2>
+
+    <div
+      style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; background-color: #0b4b84; height: 11rem; margin-top: 20rem; padding: 0 9rem; gap: 1rem; overflow: visible;">
+      <div class="feature-item">
+        <img src="/picture/capabilities/sys2.jpg" alt="世界首台动物全数字PET">
+        <p>世界首台动物全数字PET</p>
+        <p style="font-size: 1rem; margin-top: -0.5rem;">空间分辨率突破亚毫米级别</p>
+      </div>
+      <div class="feature-item">
+        <img src="/picture/capabilities/sys3.jpg" alt="世界首台临床全数字PET">
+        <p>世界首台临床全数字PET</p>
+        <p style="font-size: 1rem; margin-top: -0.5rem;">国家创新医疗器械</p>
+      </div>
+      <div class="feature-item">
+        <img src="/picture/capabilities/sys4.jpg" alt="世界首台商用脑部专用全数字PET">
+        <p>世界首台商用脑部专用全数字PET</p>
+        <p style="font-size: 1rem; margin-top: -0.5rem;">脑科学研究的尖端利器</p>
+      </div>
+      <div class="feature-item">
+        <img src="/picture/capabilities/sys5.jpg" alt="世界首台头盔全数字PET">
+        <p>世界首台头盔全数字PET</p>
+        <p style="font-size: 1rem; margin-top: -0.5rem;">革新了PET的扫描方式</p>
+      </div>
+    </div>
+
+
+    <div
+      style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; background-color: #343434; height: 11rem; margin-top: 25rem; padding: 0 9rem; gap: 1rem; overflow: visible;">
+      <div class="feature-item">
+        <img src="/picture/capabilities/sys6.jpg" alt="质子刀全数字PET系统">
+        <p>质子刀全数字PET系统</p>
+      </div>
+      <div class="feature-item">
+        <img src="/picture/capabilities/sys7.jpg" alt="术中全数字PET系统">
+        <p>术中全数字PET系统</p>
+      </div>
+      <div class="feature-item">
+        <img src="/picture/capabilities/sys8.jpg" alt="变结构全数字PET系统">
+        <p>变结构全数字PET系统</p>
+      </div>
+      <div class="feature-item">
+        <img src="/picture/capabilities/sys9.jpg" alt="双动态PET系统">
+        <p>双动态PET系统</p>
+      </div>
+    </div>
+
+
+
+
+
+    <!--核药研发平台 -->
+    <h2 style="font-size: 3rem;
+    font-weight: 800;
+    color: #192b53;
+    margin: 10rem 5rem 2rem;">核药研发平台</h2>
+
+
+    <div
+      style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; background-color: #0b4b84; height: 11rem; margin-top: 20rem; padding: 0 9rem; gap: 1rem; overflow: visible;">
+      <div class="feature-item">
+        <img src="/picture/capabilities/page2/app1.jpg" alt="回旋加速器">
+        <p>回旋加速器</p>
+        <p style="font-size: 1rem; margin-top: -0.5rem;">放射性核素生产与放射化学</p>
+      </div>
+      <div class="feature-item">
+        <img src="/picture/capabilities/page2/app2.jpg" alt="合成分装热室">
+        <p>合成分装热室</p>
+        <p style="font-size: 1rem; margin-top: -0.5rem;">用于放射性药物的安全操作和处理，提供必要的辐射防护</p>
+      </div>
+      <div class="feature-item">
+        <img src="/picture/capabilities/page2/app3.jpg" alt="化学合成仪">
+        <p>化学合成仪</p>
+        <p style="font-size: 1rem; margin-top: -0.5rem;">用于放射性药物可编程自动化合成</p>
+      </div>
+      <div class="feature-item">
+        <img src="/picture/capabilities/page2/app4.jpg" alt="高效液相色谱+放射性检测器">
+        <p>高效液相色谱+放射性检测器</p>
+        <p style="font-size: 1rem; margin-top: -0.5rem;">用于放射性药物的纯度分析和质量控制</p>
+      </div>
+    </div>
+
+
+    <!-- 科技服务平台 -->
+    <h2 style="font-size: 3rem;
+    font-weight: 800;
+    color: #192b53;
+    margin: 10rem 5rem 2rem;">科技服务平台</h2>
+
+    <div
+      style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; background-color: #343434; height: 11rem; margin-top: 25rem; padding: 0 9rem; gap: 1rem; overflow: visible;">
+      <div class="feature-item">
+        <img src="/picture/capabilities/page3/app1.jpg" alt="小动物采血系统">
+        <p>小动物采血系统</p>
+        <p style="font-size: 1rem; margin-top: -0.5rem;">药代动力学分析</p>
+      </div>
+      <div class="feature-item">
+        <img src="/picture/capabilities/page3/app2.jpg" alt="伽马计数仪">
+        <p>伽马计数仪</p>
+        <p style="font-size: 1rem; margin-top: -0.5rem;">放射性示踪剂组织分布</p>
+      </div>
+      <div class="feature-item">
+        <img src="/picture/capabilities/page3/app3.jpg" alt="高效液相色谱仪+磷屏扫描仪">
+        <p>高效液相色谱仪+磷屏扫描仪</p>
+        <p style="font-size: 1rem; margin-top: -0.5rem;">放射性示踪剂分析</p>
+      </div>
+      <div class="feature-item">
+        <img src="/picture/capabilities/page3/app5.jpg" alt="RayPlus智能医学影像云平台">
+        <p>RayPlus智能医学影像云平台</p>
+        <p style="font-size: 1rem; margin-top: -0.5rem;">面向未来的影像计算与数据交互平台</p>
+      </div>
+    </div>
+
+
+    <!-- 人才团队支持 -->
+    <h2 style="font-size: 3rem;
+    font-weight: 800;
+    color: #192b53;
+    margin: 10rem 5rem 2rem;">团队支持平台</h2>
+
+    <div
+      style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; background-color: #0b4b84; height: 11rem; margin-top: 20rem; padding: 0 9rem; gap: 1rem; overflow: visible;">
+      <div class="feature-item">
+        <img src="/picture/capabilities/page4/app1.jpg" alt="探测器组">
+        <p>探测器组</p>
+        <p style="font-size: 1rem; margin-top: -0.5rem;">PET探测器支持</p>
+      </div>
+      <div class="feature-item">
+        <img src="/picture/capabilities/page4/app1.jpg" alt="软件组">
+        <p>软件组</p>
+        <p style="font-size: 1rem; margin-top: -0.5rem;">应用场景软件支持</p>
+      </div>
+      <div class="feature-item">
+        <img src="/picture/capabilities/page4/app1.jpg" alt="整机系统组">
+        <p>整机系统组</p>
+        <p style="font-size: 1rem; margin-top: -0.5rem;">应用专用、应用适应性PET支持</p>
+      </div>
+      <div class="feature-item">
+        <img src="/picture/capabilities/page4/app1.jpg" alt="应用组">
+        <p>应用组</p>
+        <p style="font-size: 1rem; margin-top: -0.5rem;">数字PET应用支持</p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+  </main>
+
+  <!-- 底部会自动加载到这里 -->
+  <div id="footer"></div>
+</body>
+
 </html>
