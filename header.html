@@ -94,7 +94,7 @@
       background: #f2f2f2 !important;
       border-bottom: none !important;
       position: relative;
-      z-index: 999;
+      z-index: 4;
     }
 
     /* 关键：hover 下拉项 → 整个 header 变色 */
@@ -133,7 +133,7 @@
 
     /* 正确全屏下拉 —— 不遮挡、全屏、位置完美 */
     .mega-dropdown {
-      top: 5rem;
+      top: 4.3rem;
       left: 0;
       position: fixed;
       left: 0;
@@ -182,14 +182,14 @@
     .drop-col h5 {
       color: #0f4c81;
       margin-bottom: 6px;
-      font-size: 1rem;
+      font-size: 16px;
       font-weight: 600;
     }
 
     .drop-col a {
       display: block;
       padding: 6px 0;
-      font-size: 1rem;
+      font-size: 16px;
       font-weight: 500;
       color: #333;
       position: relative !important;
@@ -213,7 +213,7 @@
     .drop-col a:hover {
       display: block;
       padding: 6px 0;
-      font-size: 1rem;
+      font-size: 16px;
       font-weight: 600;
       color: #0f4c81;
     }
@@ -265,20 +265,20 @@
 
 <body>
   <header class="py-3">
-    <div class="container" style="position: relative; height: 100%;">
+    <div class="container" style="position: relative; height: 80px;">
       <div class="header-inner">
         <!-- Logo -->
-        <div class="logo-col">
+        <div class="logo-col" style="z-index: 9;">
           <a href="../index.html">
             <img src="/picture/PETLAB_LOGO.png" alt="Logo" height="70">
           </a>
         </div>
         <!-- 主导航 -->
-        <div class="main-nav">
+        <div class="main-nav" >
           <ul>
-            <li><a href="/about/about_ov.html" style="font-size:1.3rem; font-weight:600; color: #000;">关于我们</a></li>
+            <li><a href="/about/about_ov.html" style="font-size:23px; font-weight:600; color: #000; z-index: 9;" >关于我们</a></li>
             <li class="has-dropdown">
-              <a href="/research/research_ov.html" style="font-size:1.3rem; font-weight:600; color: #000;">科学研究</a>
+              <a href="/research/research_ov.html" style="font-size:23px; font-weight:600; color: #000;z-index: 9;">科学研究</a>
               <div class="mega-dropdown">
                 <img src="/picture/capabilities/sys3.jpg" class="drop-img" alt="">
                 <div class="drop-col">
@@ -319,7 +319,7 @@
 
             <li class="has-dropdown">
               <a href="/capabilities/capabilities_ov.html"
-                style="font-size:1.3rem; font-weight:600; color: #000;">研究平台</a>
+                style="font-size:23px; font-weight:600; color: #000;z-index: 9;">研究平台</a>
               <div class="mega-dropdown">
                 <img src="/picture/connect.jpg" class="drop-img" alt="">
 
@@ -352,7 +352,7 @@
             </li>
 
             <li class="has-dropdown">
-              <a href="/people/people_ov.html" style="font-size:1.3rem; font-weight:600; color: #000;">研究团队</a>
+              <a href="/people/people_ov.html" style="font-size:23px; font-weight:600; color: #000;z-index: 9;">研究团队</a>
               <div class="mega-dropdown">
                 <img src="/picture/mission1.jpg" class="drop-img" alt="">
 
@@ -382,10 +382,10 @@
                 </div>
             </li>
 
-            <li><a href="/donate/donate_ov.html" style="font-size:1.3rem; font-weight:600; color: #000;">捐赠</a></li>
-            <li><a href="/news/news_ov.html" style="font-size:1.3rem; font-weight:600; color: #000;">新闻中心</a></li>
+            <li><a href="/donate/donate_ov.html" style="font-size:23px; font-weight:600; color: #000;z-index: 9;">捐赠</a></li>
+            <li><a href="/news/news_ov.html" style="font-size:23px; font-weight:600; color: #000;z-index: 9;">新闻中心</a></li>
 
-            <li><a href="/connect/connect_ov.html" style="font-size:1.3rem; font-weight:600; color: #000;">联系我们</a></li>
+            <li><a href="/connect/connect_ov.html" style="font-size:23px; font-weight:600; color: #000;z-index: 9;">联系我们</a></li>
           </ul>
         </div>
       </div>
