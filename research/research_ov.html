@@ -1,89 +1,390 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>数字PET实验室</title>
-    <meta name="keywords" content="数字PET实验室" />
-    <meta
-      name="description"
-      content="Digital PET Laboratory is advancing the scope of human health."
-    />
-    <meta
-      name="robots"
-      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-    />
-    <meta
-      property="og:title"
-      content="Digital PET Lab | All Digital PET, A Reinvention"
-    />
-    <meta
-      property="og:description"
-      content="Digital PET Laboratory is advancing the scope of human health."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://petlab.hust.edu.cn/" />
-    <meta property="og:site_name" content="Digital PET Laboratory" />
-    <meta property="og:image" content="/picture/PETLAB_LOGO.png" />
-    <link rel="dns-prefetch" href="/fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="/s.w.org" />
-    <link rel="canonical" href="https://petlab.hust.edu.cn/" />
-    <link
-      rel="alternate"
-      title="oEmbed (JSON)"
-      type="application/json+oembed"
-      href="/oembed/oembed.json"
-    />
-    <link
-      rel="alternate"
-      title="oEmbed (XML)"
-      type="text/xml+oembed"
-      href="/oembed/oembed.xml"
-    />
-    <!-- Bootstrap 5 CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- 免费商用中文字体 -->
-    <link
-      href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- 引入 头部 + 底部 -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <script>
-      $(function () {
-        $("#header").load("/header.html"); // 引入头部
-        $("#footer").load("/footer.html"); // 引入底部
-        $("#join_page").load("/join_page.html"); // 引入底部
-      });
-    </script>
 
-    <link href="/css/global.css" rel="stylesheet" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数字PET实验室</title>
+  <meta name="keywords" content="数字PET实验室" />
+  <meta name="description" content="Digital PET Laboratory is advancing the scope of human health." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta property="og:title" content="Digital PET Lab | All Digital PET, A Reinvention" />
+  <meta property="og:description" content="Digital PET Laboratory is advancing the scope of human health." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://petlab.hust.edu.cn/" />
+  <meta property="og:site_name" content="Digital PET Laboratory" />
+  <meta property="og:image" content="/picture/PETLAB_LOGO.png" />
+  <link rel="dns-prefetch" href="/fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="/s.w.org" />
+  <link rel="canonical" href="https://petlab.hust.edu.cn/" />
+  <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/oembed/oembed.json" />
+  <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/oembed/oembed.xml" />
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- 免费商用中文字体 -->
+  <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <!-- 引入 头部 + 底部 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#header").load("/header.html"); // 引入头部
+      $("#footer").load("/footer.html"); // 引入底部
+      $("#join_page").load("/join_page.html"); // 引入底部
+    });
+  </script>
 
-    <style>
-        
-      
-    </style>
-  </head>
 
-  <body>
-    <!-- 头部会自动加载到这里 -->
-    <div id="header"></div>
 
-    <main>
+  <link rel="stylesheet" href="/style/root.css" />
+  <link rel="stylesheet" href="/style/main.css" />
+  <link rel="stylesheet" href="/style/image-index.css" />
+  <link rel="stylesheet" href="/style/science-method01.css" />
+  <link rel="stylesheet" href="/style/ring.css" />
 
-    <div class="container">
-      <div class="box">
-        <img src="/picture/research/sys1.png" style="width: 1200px; margin: auto 0; margin-top: 5rem; margin-bottom: 5rem;" />
+
+  <link href="/css/global.css" rel="stylesheet" />
+
+  <style>
+
+
+  </style>
+</head>
+
+<body>
+  <!-- 头部会自动加载到这里 -->
+  <div id="header"></div>
+
+  <main>
+
+    <div class="main-hero">
+      <img src="/picture/capabilities/capabilities1.png" alt="banner" class="main-hero-img">
+      <div class="main-hero-desc">
+        <div class="main-hero-title">Scientific Research</div>
+        <div class="main-hero-sub">科学研究</div>
       </div>
     </div>
 
-    </main>
+    <div class="science-intro">
+      <p>
+        实验室以多学科交叉融合为特色，汇聚全球顶尖人才与尖端设备，聚焦核科学与粒子探测、医学影像与分子科学、空间辐射与环境监测、先进材料与探测技术等战略领域。我们深耕基础研究以揭示自然规律本源，强化应用基础研究以突破关键核心技术瓶颈，加速成果转化以推动创新链与产业链深度融合。我们坚持开放共享、国际协同、产学研用一体化，打造世界一流的学术创新生态，培养顶尖科研人才，产出具有重大国际影响力的科研成果，为科技自立自强、人类文明进步与社会可持续发展贡献核心力量。
+      </p>
+    </div>
+    <!-- =============================== -->
+    <!--生命科学 -->
+    <!-- =============================== -->
+    <div class="research-bg-block" style="
+          background: var(--theme-color1);
+          height: 57rem;
+          padding: 5.28rem 0;
+          margin: 15rem 0rem 8rem 0rem;
+        ">
+      <div style="position: relative; width: 100rem; height: 42rem; margin: 0">
+        <div class="block-title" style="
+              position: absolute;
+              left: 43rem;
+              top: -15rem;
+              color: var(--theme-color1);
+              font-size: 2.4rem;
+              font-weight: 400;
+              z-index: 10;
+              text-align: center;
+            ">
+          生命科学领域
+        </div>
+        <div class="research-block" style="margin: 0rem auto">
+          <!-- 新仪器与新系统 -->
+          <div class="intro-component" style="
+                position: absolute;
+                left: 15.5rem;
+                top: -12rem;
+                width: 43rem;
+                height: 53rem;
+                padding-top: 8rem;
+                background:
+                  url(/picture/index/life1.jpg) center/cover no-repeat,
+                  rgba(0, 0, 0, 0.5);
+                background-blend-mode: multiply;
+              ">
+            <div class="intro-title">肿瘤医学</div>
+            <div class="intro-desc"></div>
+            <a href="/notyet/notyet.html" class="intro-more" style="margin-top: 0rem"><img src="/picture/more2.svg"
+                alt="探索更多" class="more-icon2" /></a>
+          </div>
+          <!-- (1,4) 空图片 -->
+          <div class="intro-component" style="
+                position: absolute;
+                left: 50.5rem;
+                top: 0rem;
+                width: 33rem;
+                height: 16.5rem;
+                background: url() center/cover no-repeat;
+              "></div>
+          <!-- (1,3) 方法研究 -->
+          <div class="intro-component" style="
+                position: absolute;
+                left: 50.5rem;
+                top: 0rem;
+                width: 16.5rem;
+                height: 16.5rem;
+                padding-right: 0rem;
+              ">
+            <div class="hover-bg-blue"></div>
+            <div class="hover-bg" style="
+                  background:
+                    url(/picture/index/life7.jpg) center/cover no-repeat,
+                    rgba(0, 0, 0, 0.65);
+                  background-blend-mode: multiply;
+                "></div>
+            <div class="intro-title">神经系统疾病</div>
+            <div class="intro-desc" style="font-size: 1rem"></div>
+            <a href="/notyet/notyet.html" class="intro-more"><img src="/picture/more2.svg" alt="探索更多"
+                class="more-icon2" /></a>
+          </div>
+          <!-- (2,2) 重稀土闪烁晶体 -->
+          <div class="intro-component" style="
+                position: absolute;
+                left: 34rem;
+                top: 16.5rem;
+                width: 16.5rem;
+                height: 16.5rem;
+              ">
+            <div class="hover-bg-blue"></div>
+            <div class="hover-bg" style="
+                  background:
+                    linear-gradient(
+                      rgba(15, 76, 129, 0.7),
+                      rgba(15, 76, 129, 0.7)
+                    ),
+                    url(/picture/index/life3.jpg) center/cover no-repeat;
+                "></div>
+            <div class="intro-title">心脑血管系统疾病</div>
+            <div class="intro-desc"></div>
+            <a href="/notyet/notyet.html" class="intro-more"><img src="/picture/more2.svg" alt="探索更多"
+                class="more-icon2" /></a>
+          </div>
+          <!-- (2,3) 极弱光探测 -->
+          <div class="intro-component" style="
+                position: absolute;
+                left: 50.5rem;
+                top: 16.5rem;
+                width: 16.5rem;
+                height: 16.5rem;
+                padding-right: 0rem;
+                color: #333;
+              ">
+            <div class="hover-bg-blue"></div>
+            <div class="hover-bg" style="
+                  background:
+                    linear-gradient(
+                      rgba(15, 76, 129, 0.7),
+                      rgba(15, 76, 129, 0.7)
+                    ),
+                    url(/picture/index/life4.jpg) center/cover no-repeat;
+                "></div>
+            <div class="intro-title" ;="">质子刀治疗</div>
+            <div class="intro-desc"></div>
+            <a href="/notyet/notyet.html" class="intro-more"><img src="/picture/more2.svg" alt="探索更多"
+                class="more-icon2" /></a>
+          </div>
+          <!-- (2,4) 粒子探测器 -->
+          <div class="intro-component" style="
+                position: absolute;
+                left: 67rem;
+                top: 16.5rem;
+                width: 16.5rem;
+                height: 16.5rem;
+              ">
+            <div class="hover-bg-blue"></div>
+            <div class="hover-bg" style="
+                  background:
+                    url(/picture/index/life5.jpg) center/cover no-repeat,
+                    rgba(0, 0, 0, 0.65);
+                  background-blend-mode: multiply;
+                "></div>
+            <div class="intro-title">免疫应答与免疫治疗</div>
+            <div class="intro-desc"></div>
+            <!-- 没有粒子探测器相关页面 -->
+            <a href="/notyet/notyet.html" class="intro-more"><img src="/picture/more2.svg" alt="探索更多"
+                class="more-icon2" /></a>
+          </div>
+          <!-- (3,3) 图像重建 -->
+          <div class="intro-component" style="
+                position: absolute;
+                left: 50.5rem;
+                top: 33rem;
+                width: 16.5rem;
+                height: 16.5rem;
+                color: #333;
+              ">
+            <div class="hover-bg-blue"></div>
+            <div class="hover-bg" style="
+                  background:
+                    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+                    url(/picture/index/life6.jpg) center/cover no-repeat;
 
-    <!-- 底部会自动加载到这里 -->
-    <div id="footer"></div>
-  </body>
+                  /*background-blend-mode: screen;*/
+                "></div>
+            <div class="intro-title">纤维化与间质疾病</div>
+            <div class="intro-desc"></div>
+            <a href="/notyet/notyet.html" class="intro-more"><img src="/picture/more2.svg" alt="探索更多"
+                class="more-icon2" /></a>
+          </div>
+          <!-- (3,4) 软件 -->
+          <div class="intro-component" style="
+                position: absolute;
+                left: 67rem;
+                top: 33rem;
+                width: 16.5rem;
+                height: 16.5rem;
+              ">
+            <div class="hover-bg-blue"></div>
+            <div class="hover-bg" style="
+                  background:
+                    url(/picture/index/life2.jpg) center/cover no-repeat,
+                    rgba(0, 0, 0, 0.65);
+                  background-blend-mode: multiply;
+                "></div>
+            <div class="intro-title">神经科学与脑认知</div>
+            <div class="intro-desc"></div>
+            <a href="/notyet/notyet.html" class="intro-more"><img src="/picture/more2.svg" alt="探索更多"
+                class="more-icon2" /></a>
+          </div>
+          <!-- (4,1) 空图片 -->
+          <div class="intro-component" style="
+                position: absolute;
+                left: 17.5rem;
+                top: 49.5rem;
+                width: 16.5rem;
+                height: 16.5rem;
+                background: url(/picture/index/life8.jpg) center/cover no-repeat;
+              "></div>
+          <!-- (4,2) 前沿应用 -->
+          <div class="intro-component" style="
+                position: absolute;
+                left: 34rem;
+                top: 49.5rem;
+                width: 16.5rem;
+                height: 16.5rem;
+                background: #0096aa;
+              ">
+            <div class="intro-title">再生医学与干细胞</div>
+            <div class="intro-desc"></div>
+            <a href="/notyet/notyet.html" class="intro-more"><img src="/picture/more2.svg" alt="探索更多"
+                class="more-icon2" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- =============================== -->
+    <!-- 研究内容 -->
+    <!-- =============================== -->
+
+    <div class="ring-container" style="margin-top: 25rem;">
+      <!-- 圆环单独渲染，不限制图片 -->
+      <div class="blue-ring"></div>
+      <div class="white-inner"></div>
+      <div class="center-circle">
+        <a href="/about/about_ov.html">
+          <img src="/picture/index/PETLAB_LOGO.png" alt="中心图片">
+        </a>
+      </div>
+      <div class="ring_group ring_group1" style="font-size: 2.5rem; color:var(--theme-color1);">生物医药领域</div>
+      <div class="ring_group ring_group2" style="font-size: 2.5rem; color:var(--theme-color1);">空间辐射领域</div>
+      <div class="ring_group ring_group3" style="font-size: 2.5rem; color:var(--theme-color1);">环境监测<br>领域</div>
+      <div class="ring_item" style="top:710px; left:510px; z-index: 3; width: 250px; text-align: center;">
+        <h2 style="font-size: 3rem;
+    font-weight: 800;
+    color: #192b53;"><a href="/about/about_ov.html" style="text-decoration:none; color: #000;">数字PET团队</a></h2>
+      </div>
+      <!-- 图片 → 整体再向外扩一点点 -->
+      <div class="ring_item" style="top:40px; left:500px">
+        <img src="/picture/index/app1.jpg">
+        <div class="ring_title">临床前验证研究<br />Laboratory Study</div>
+      </div>
+      <div class="ring_item" style="top:110px; left:780px">
+        <img src="/picture/index/app2.jpg">
+        <div class="ring_title">人体微量给药研究/0期<br />Phase 0</div>
+      </div>
+      <div class="ring_item" style="top:300px; left:920px">
+        <img src="/picture/index/app3.jpg">
+        <div class="ring_title">药代动力学研究/临床Ⅰ期<br />Phase Ⅰ</div>
+      </div>
+      <div class="ring_item" style="top:500px; left:960px">
+        <img src="/picture/index/app4.jpg">
+        <div class="ring_title">放射性核药开发<br />Theranostics</div>
+      </div>
+
+      <div class="ring_item" style="top:690px; left:880px">
+        <img src="/picture/index/app1.jpg">
+        <div class="ring_title">载人航天辐射剂量监测</div>
+      </div>
+      <div class="ring_item" style="top:880px; left:770px">
+        <img src="/picture/index/app2.jpg">
+        <div class="ring_title">宇宙线与正电子物理探测</div>
+      </div>
+      <div class="ring_item" style="top:960px; left:500px">
+        <img src="/picture/index/app3.jpg">
+        <div class="ring_title">太阳风暴与空间天气监测</div>
+      </div>
+      <div class="ring_item" style="top:880px; left:230px">
+        <img src="/picture/index/app4.jpg">
+        <div class="ring_title">辐射屏蔽与航天器安全评估</div>
+      </div>
+
+      <div class="ring_item" style="top:690px; left:80px">
+        <img src="/picture/index/app1.jpg">
+        <div class="ring_title">石油与地下资源探测</div>
+      </div>
+      <div class="ring_item" style="top:500px; left:40px">
+        <img src="/picture/index/app2.jpg">
+        <div class="ring_title">辐射防护监测</div>
+      </div>
+      <div class="ring_item" style="top:300px; left:80px">
+        <img src="/picture/index/app3.jpg">
+        <div class="ring_title">辐射环境监测</div>
+      </div>
+      <div class="ring_item" style="top:110px; left:220px">
+        <img src="/picture/index/app4.jpg">
+        <div class="ring_title">核聚变装置中子探测</div>
+      </div>
+    </div>
+
+
+
+    <!-- =============================== -->
+    <!-- 科研平台 -->
+    <!-- =============================== -->
+    <h2
+      style="margin-left: 10rem; font-size: 2.5rem; color:var(--theme-color1); margin-bottom: -5rem; margin-top: 15rem;">
+      科研设施
+    </h2>
+    <div class="feature-section">
+      <div class="feature-item">
+        <img src="/picture/index/pingtai3.jpg" alt="Laboratory Study" />
+        <p>数字PET脑成像平台</p>
+      </div>
+      <div class="feature-item">
+        <img src="/picture/index/pingtai2.jpg" alt="Phase 0" />
+        <p>超级数字PET成像平台</p>
+      </div>
+      <div class="feature-item">
+        <img src="/picture/index/pingtai1.jpg" alt="Pharmacokinetics" />
+        <p>华中科技大学</p>
+      </div>
+      <div class="feature-item">
+        <img src="/picture/index/pingtai4.jpg" alt="Theranostics" />
+        <p>武汉光电国家研究中心</p>
+      </div>
+    </div>
+
+
+  </main>
+
+  <!-- 底部会自动加载到这里 -->
+  <div id="footer"></div>
+</body>
+
 </html>

@@ -1,0 +1,90 @@
+<!-- 1. 组件模板（HTML 结构 + 样式 + 插槽） -->
+<template id="dpl-pattern-template">
+  <style>
+    /* 样式隔离：只作用于组件内部 */
+    .pattern {
+      display: block;
+      position: relative;
+    }
+    /* 对应 theme="image-text-cta" 的样式 */
+    .pattern--image-text-cta {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .pattern__image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .pattern__content {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    .pattern__title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .pattern__cta {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      background: #0b4b84;
+      color: white;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+  </style>
+
+  <!-- 2. 组件结构 + 命名插槽（外部内容插入点） -->
+  <div class="pattern">
+    <!-- 图片插槽 -->
+    <slot name="image">
+      <img class="pattern__image" src="default-image.jpg" alt="默认图">
+    </slot>
+    <!-- 文字内容插槽 -->
+    <div class="pattern__content">
+      <slot name="title">
+        <h3 class="pattern__title">默认标题</h3>
+      </slot>
+      <slot name="desc">
+        <p>默认描述文字</p>
+      </slot>
+      <!-- CTA 按钮插槽 -->
+      <slot name="cta">
+        <a class="pattern__cta" href="#">查看详情</a>
+      </slot>
+    </div>
+  </div>
+</template>
+
+<script>
+// 3. 自定义元素类（继承 HTMLElement）
+class dplPattern extends HTMLElement {
+  constructor() {
+    super();
+    // 4. 创建 Shadow DOM（隔离样式/结构）
+    const shadow = this.attachShadow({ mode: 'open' });
+    // 5. 克隆模板并挂载
+    const template = document.getElementById('dpl-pattern-template');
+    shadow.appendChild(template.content.cloneNode(true));
+  }
+
+  // 6. 监听 theme 属性变化
+  static get observedAttributes() {
+    return ['theme'];
+  }
+  attributeChangedCallback(name, oldVal, newVal) {
+    if (name === 'theme') {
+      const root = this.shadowRoot.querySelector('.pattern');
+      // 移除旧主题、添加新主题类
+      root.classList.remove(`pattern--${oldVal}`);
+      root.classList.add(`pattern--${newVal}`);
+    }
+  }
+}
+
+// 7. 注册自定义元素（<dpl-pattern>）
+customElements.define('dpl-pattern', dplPattern);
+</script>
