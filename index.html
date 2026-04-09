@@ -31,7 +31,6 @@
       $("#header").load("/header.html"); // 引入头部
       $("#footer").load("/footer.html"); // 引入底部
       $("#join_page").load("/join_page.html"); // 引入底部
-      $("#ring_page").load("/ring.html"); // 引入底部
     });
   </script>
 
@@ -443,7 +442,7 @@
           <img src="/picture/index/hero1.jpg" alt="图片1" class="main-hero-img active" />
         </div>
       </div>
-      <div class="main-hero-desc" style="margin-top: 4rem;">
+      <div class="main-hero-desc">
         <div class="main-hero-title">
           Pioneering the uncharted: <br />life, consciousness, and the cosmos.
         </div>
@@ -453,22 +452,77 @@
       </div>
     </div>
 
-    <!-- =============================== -->
-    <!-- 主要页面 -->
-    <!-- =============================== -->
+    <!-- 
     <div style="margin: 10rem 10rem 2rem 10rem; object-position: center; width: 80%; ">
       <img src="/picture/index.png" alt="home"
         style="width: 60%;  height: 60%;  object-fit: cover; margin-left: 15rem; " />
     </div>
 
-<div style="margin-bottom: 10rem; "><p style="text-align: center; font-size: 2rem;">拟实现文字与图像点击效果</p></div>
+    <div style="margin-bottom: 10rem; ">
+      <p style="text-align: center; font-size: 2rem;">拟实现文字与图像点击效果</p>
+    </div>
+-->
 
 
-
-    <div class="professor-bg-block" style="
-        background: url('/picture/index/bg.jpg') center/cover no-repeat;
-        position: relative;
+    <!-- =============================== -->
+    <!-- 页面主要内容 -->
+    <!-- =============================== -->
+    <div style="
+        background: url('/picture/index/universe.jpg') center/cover no-repeat;
+        position: relative; 
+        height: 60rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;    /* 禁止内容超出盒子 */
+        width: 100%;        /* 强制宽度占满，不超出 */
       ">
+
+      <!-- 中间图片 + 文字 容器 -->
+      <div style="position: relative; width: auto; text-align: center;">
+        <!-- 图片 -->
+        <img src="/picture/index/index_bg.png" alt="背景图" style="width: 900px; max-width: 100%; height: auto;">
+
+        <!-- 文字悬浮在图片正中央 -->
+        <div style="
+      position: absolute; 
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -50%); 
+      text-align: center;
+      white-space: nowrap;
+    ">
+          <p style="transform: translate(250px, -90px);"><a href="/engage/engage_ov.html"
+              style="font-size: 50px; font-weight: 600; color: #fff;  ">加入我们</a></p>
+          <p style="transform: translate(-570px, 260px);"><a href="/about/about_ov.html"
+              style="font-size: 50px; font-weight: 600; color: #fff;  ">关于我们</a></p>
+          <p style="transform: translate(520px, 160px);"><a href="/donate/donate_ov.html"
+              style="font-size: 50px; font-weight: 600; color: #fff;  ">捐赠</a></p>
+          <p style="transform: translate(-270px, 580px);"><a href="/news/news_ov.html"
+              style="font-size: 50px; font-weight: 600; color: #fff;  ">新闻中心</a></p>
+
+          <p style="transform: translate(0px, -135px); line-height: 40px;"><a href="/research/research_ov.html"
+              style="font-size: 40px; font-weight: 600; color: #000;  ">科学<br>研究</a></p>
+          <p style="transform: translate(-127px, -35px); line-height: 40px;"><a
+              href="/capabilities/capabilities_ov.html"
+              style="font-size: 40px; font-weight: 600; color: #000;  ">研究<br>平台</a></p>
+          <p style="transform: translate(130px, -150px); line-height: 40px;"><a href="/people/people_ov.html"
+              style="font-size: 40px; font-weight: 600; color: #000;  ">研究<br>团队</a></p>
+          <p style="transform: translate(0px, -360px);"><a href="/about/about_ov.html"><img
+                src="/picture/index/PETLAB_LOGO.png" width="110px" /></a></p>
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <!-- =============================== -->
+    <!-- 页面底部 -->
+    <!-- =============================== -->
+    <div class="professor-bg-block" style="
+        background: url('/picture/index/bg.jpg') center/cover no-repeat;">
       <div class="professor-block">
         <div class="professor-info">
           <img src="/picture/mission1.jpg" alt="个人照片" class="professor-photo">

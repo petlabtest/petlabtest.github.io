@@ -1,0 +1,141 @@
+html {
+  font-size: 1vw;
+  overflow-x: hidden;
+}
+.student-conference-main {
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+  margin: 0 auto;
+  padding-bottom: 0rem;
+}
+
+/* 第一屏 */
+.news-hero {
+  position: relative;
+  height: 35rem;
+  color: #fff;
+}
+.news-hero-images {
+  position: absolute;
+  left: 0;
+  top: 5rem;
+  /* display: grid; */
+  grid-template-columns: repeat(2, 15rem);
+  grid-template-rows: repeat(2, 11.25rem);
+  gap: 1.5rem;
+  background: var(--theme-color2);
+  width: 48rem;
+  padding: 4rem;
+  box-sizing: border-box;
+  height: 42rem;
+  z-index: 2;
+}
+.news-hero-info {
+  position: absolute;
+  right: 0rem;
+  top: 0rem;
+  width: 65rem;
+  height: 47rem;
+  background: #0f4c81;
+  padding: 6rem 7rem 4rem 14rem;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.news-hero-info h2 {
+  margin-top: 0;
+  font-size: 3.2em;
+  margin-bottom: 4.5rem;
+  margin-left: 3rem;
+  width: 40rem;
+}
+.news-hero-info p {
+  margin: 0.75rem 0;
+  font-size: 1rem;
+}
+
+.conference-banner {
+  background: var(--theme-color1);
+  color: #fff;
+  padding: 2.5rem 0 1.5rem 0;
+}
+.conference-banner-imgs {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  gap: 0;
+}
+.conference-banner-imgs img {
+  width: 25%;
+  height: 11.25rem;
+  object-fit: cover;
+  background: #fff;
+}
+.conference-banner-text {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background: var(--theme-color1);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 2.5rem;
+  box-sizing: border-box;
+}
+.conference-banner-text h2 {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.conference-banner-text p {
+  font-size: 1.1em;
+  margin-bottom: 0;
+}
+.conference-list {
+  margin: 20rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+}
+.conference-item {
+  position: relative;
+  background: #f2f2f2;
+  height: 36rem;
+}
+.conference-date {
+  width: auto;
+  min-width: 0;
+  padding: 0;
+  display: inline-block;
+  font-weight: bold;
+  text-align: left;
+}
+.conference-info {
+  position: absolute;
+  padding: 2rem 1.5rem;
+  color: #f2f2f2;
+  background: var(--theme-color1);
+  display: flex;
+  flex-direction: column;
+  justify-content: first baseline;
+}
+.conference-info h3 {
+  margin-bottom: 0.75rem;
+}
+.conference-info p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.conference-img {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.conference-img div {
+  width: 18.75rem;
+  height: 12.5rem;
+  object-fit: cover;
+  background: #f2f2f2;
+}

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数字PET实验室</title>
+  <meta name="keywords" content="数字PET实验室" />
+  <meta name="description" content="Digital PET Laboratory is advancing the scope of human health." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta property="og:title" content="Digital PET Lab | All Digital PET, A Reinvention" />
+  <meta property="og:description" content="Digital PET Laboratory is advancing the scope of human health." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://petlab.hust.edu.cn/" />
+  <meta property="og:site_name" content="Digital PET Laboratory" />
+  <meta property="og:image" content="/picture/PETLAB_LOGO.png" />
+  <link rel="dns-prefetch" href="/fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="/s.w.org" />
+  <link rel="canonical" href="https://petlab.hust.edu.cn/" />
+  <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/oembed/oembed.json" />
+  <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/oembed/oembed.xml" />
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- 免费商用中文字体 -->
+  <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- 1. 引入 jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <!-- 2. 自动加载头部 + 底部 -->
+  <script>
+    $(function () {
+      $("#header").load("/header.html"); // 引入头部
+      $("#footer").load("/footer.html"); // 引入底部
+      $("#join_page").load("/join_page.html"); // 引入底部
+    });
+  </script>
+
+  <!-- 引入：TimelineJS 样式和脚本 -->
+  <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+  <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline-min.js"></script>
+  <!-- 引入 style -->
+  <link href="/css/global.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/style/root.css">
+  <link rel="stylesheet" href="/style/header.css">
+  <link rel="stylesheet" href="/style/footer.css">
+  <link rel="stylesheet" href="/about/style/industry01.css">
+  <script src="/about/scripts/loader.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const items = document.querySelectorAll(".image-desc-item");
+      const firstItem = items[0];
+
+      items.forEach((item) => {
+        if (item !== firstItem) {
+          item.addEventListener("mouseenter", () => {
+            firstItem.classList.remove("active");
+          });
+          item.addEventListener("mouseleave", () => {
+            firstItem.classList.add("active");
+          });
+        }
+      });
+    });
+  </script>
+  <style>
+  </style>
+</head>
+
+<body style="background-color: #F2F2F2;">
+  <!-- 头部会自动加载到这里 -->
+  <div id="header"></div>
+
+  <main>
+    <!-- ============================================================================================= -->
+    <!-- Industry -->
+    <!-- ============================================================================================= -->
+    <div class="main-section">
+      <!-- image-desc组件 -->
+      <div class="image-desc-group">
+        <div class="image-desc-item active">
+          <div class="image-desc-img" style="background: rgb(15, 76, 130); position: relative">
+            <div class="image-desc-enterprise image-desc-enterprise1">
+              <img src="/picture/about/LOGO1.png" alt="icon" style="
+                  display: block;
+                  position: relative;
+                  bottom: 3rem;
+                  width: 9rem;
+                  height: 3.24rem;
+                  margin-right: 5rem;
+                ">
+              <span style="
+                  color: #fff;
+                  position: relative;
+                  bottom: 2rem;
+                  width: 20rem;
+                  left: 3rem;
+                  font-size: 2rem;
+                  font-weight: 300;
+                  letter-spacing: 0.05em;
+                ">锐世医疗</span>
+              <div class="image-desc-text">
+                <p style="font-size:1.15rem; font-weight: 350;">精准刻画生命代谢，诊一目了然，疗有的放矢</p>
+                锐世专注于全数字高端分子影像设备的技术研发与产品创新，提供全数字PET/CT、应用专用PET、诊疗一体化PET等高端设备。我们不断突破PET技术的临床边界，推动其从通用成像迈向应用专用与精准诊疗，并构建全链条AI生态，以数据与算法重塑临床与科研新范式。
+              </div>
+            </div>
+          </div>
+          <div class="image-desc-product" style="
+              background: url('/picture/about/dis1.jpg');
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+              background-blend-mode: multiply;
+            "></div>
+        </div>
+        <div class="image-desc-item">
+          <div class="image-desc-img" style="background: rgb(137, 3, 28); position: relative">
+            <div class="image-desc-enterprise image-desc-enterprise2">
+              <img src="/picture/about/LOGO2.png" alt="icon" style="
+                  display: block;
+                  position: relative;
+                  bottom: 4rem;
+                  width: 10rem;
+                  height: 4rem;
+                  margin-right: 4rem;
+                ">
+              <span style="
+                  color: #fff;
+                  left: 3rem;
+                  position: relative;
+                  bottom: 2rem;
+                  width: 20rem;
+                  font-size: 2rem;
+                  font-weight: 300;
+                  letter-spacing: 0.05em;
+                ">瑞派宁</span>
+              <div class="image-desc-text">
+                <p style="font-size:1.15rem; font-weight: 350;">形其未见，成其未来</p>
+                以全球领先的闪烁脉冲数字化方法为核心引擎，开创粒子探测与成像的全新技术范式，构建从探测器到成像系统的全链条解决方案。包括X/γ探测器及成像系统、中子探测器等，推动医学影像、安检安防、高能物理、石油勘探、辐射探测等领域跨越式发展。
+              </div>
+            </div>
+          </div>
+          <div class="image-desc-product" style="
+              background: url('/picture/about/dis3.jpg');
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+              background-blend-mode: multiply;
+            ">
+          </div>
+        </div>
+        <div class="image-desc-item">
+          <div class="image-desc-img" style="background: rgba(2, 71, 80, 1); position: relative">
+            <div class="image-desc-enterprise image-desc-enterprise3">
+              <img src="/picture/about/LOGO3.png" alt="icon" style="
+                  display: block;
+                  position: relative;
+                  bottom: 0.5rem;
+                  width: 9rem;
+                  height: 9rem;
+                  margin-right: 7rem;
+                ">
+              <span style="
+                  color: #fff;
+                  position: relative;
+                  bottom: 2rem;
+                  width: 20rem;
+                  left: 3rem;
+                  font-size: 2rem;
+                  font-weight: 300;
+                  letter-spacing: 0.05em;
+                ">锐光科技</span>
+              <div class="image-desc-text">
+                <p style="font-size:1.15rem; font-weight: 350;">精准溯源每一个光子事件</p>
+                锐光专注于单光子事件探测与极弱光成像技术，以前沿应用需求驱动技术持续迭代。提供高性能单光子探测芯片、多阈值采样芯片及应用解决方案，以芯片创新推动弱光探测领域的系统性变革。
+              </div>
+            </div>
+          </div>
+          <div class="image-desc-product" style="
+              background: url('/picture/about/dis2.jpg');
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+              background-blend-mode: multiply;
+            ">
+          </div>
+        </div>
+      </div>
+      <!-- /image-desc组件 -->
+    </div>
+  </main>
+
+  <!-- 底部会自动加载到这里 -->
+  <div id="footer"></div>
+</body>
+
+</html>

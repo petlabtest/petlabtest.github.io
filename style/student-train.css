@@ -1,0 +1,118 @@
+html {
+  font-size: 1vw;
+  overflow-x: hidden;
+}
+.student-train-main {
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+  margin: 0 auto;
+  padding-bottom: 2.5rem;
+}
+.student-train-banner {
+  display: flex;
+  background: var(--theme-color1);
+  color: #fff;
+  padding: 2.5rem 0rem 1.5rem 1.5rem;
+  align-items: center;
+}
+.student-train-banner-left {
+  flex: 1;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  padding-right: 2rem;
+}
+.student-train-banner-right {
+  display: block;
+}
+.student-train-banner-right img {
+  width: 54rem;
+  height: 40rem;
+  object-fit: cover;
+  background-position: center;
+}
+.student-train-desc {
+  margin: 2rem 0 0 0;
+  padding: 2rem 9rem;
+  /* box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.04); */
+  color: #333;
+  font-size: 0.9rem;
+  line-height: 1.8rem;
+}
+
+.student-train-desc p {
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  line-height: 2rem;
+}
+
+.student-train-desc p:last-child {
+  margin-bottom: 0;
+}
+.student-train-table {
+  color: #f2f2f2;
+  margin: 2rem 0 0 0;
+  padding: 0;
+  /* box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.04); */
+}
+.student-train-table-header {
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  background: #222;
+  color: #fff;
+  padding: 0.1rem 9rem 0.5rem 6rem;
+}
+.table-col {
+  flex: 1;
+  padding: 0 1rem;
+  text-align: center;
+}
+.table-col-1 {
+  min-width: 7.5rem;
+}
+.table-col-2 {
+  min-width: 50rem;
+}
+.table-col-3 {
+  min-width: 7.5rem;
+}
+.table-col span {
+  color: #222;
+  font-size: 3rem;
+  -webkit-text-stroke: 0.2px #888;
+}
+.student-train-table-body {
+  display: flex;
+  flex-direction: column;
+  padding: 0 9rem;
+}
+.table-row {
+  display: flex;
+  background: #f2f2f2;
+  color: #222;
+  font-size: 1rem;
+  line-height: 2rem;
+  align-items: center;
+}
+.table-row .table-col {
+  padding: 1.125rem 1rem;
+}
+.table-row .table-col-1 {
+  /* color: #888; */
+  font-size: 1rem;
+  font-weight: normal;
+}
+.table-row .table-col-2 {
+  text-align: left;
+  border-right: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+}
+.table-row .table-col-3 {
+  text-align: center;
+  /* color: var(--theme-color1); */
+  font-size: 1rem;
+  font-weight: normal;
+}
+.table-row.gray {
+  background-color: #e6e6e6;
+}

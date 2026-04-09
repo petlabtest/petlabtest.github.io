@@ -48,25 +48,7 @@
   <link rel="stylesheet" href="/style/industry02.css">
   <script src="scripts/loader.js"></script>
   <script src="/scripts/industry02.js"></script>
-  <link rel="stylesheet" href="/about/style/industry01.css">
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const items = document.querySelectorAll(".image-desc-item");
-      const firstItem = items[0];
-
-      items.forEach((item) => {
-        if (item !== firstItem) {
-          item.addEventListener("mouseenter", () => {
-            firstItem.classList.remove("active");
-          });
-          item.addEventListener("mouseleave", () => {
-            firstItem.classList.add("active");
-          });
-        }
-      });
-    });
-  </script>
 
 
 
@@ -443,45 +425,6 @@
       // 自动渲染时间轴 ✅
       window.timeline = new TL.Timeline('timeline-embed', data);
     </script>
-
-
-
-    <!-- ============================================================================================= -->
-    <!-- achievement -->
-    <!-- ============================================================================================= -->
-    <div class="lrbtn-container" has-pattern-bottom style="margin-top: 2rem; ">
-      <div class="lrbtn-grid" style="display: flex; gap: 5rem;">
-
-        <!-- 第一个卡片：团队奖项 + 背景图 -->
-        <a href="/research/research_ov.html" class="lrbtn-cta-card" style="
-        position: relative; 
-        overflow: hidden; /* 把图片锁在卡片里 */
-        z-index: 1;
-      ">
-
-          <h3 class="lrbtn-card-title">科学研究</h3>
-          <p class="lrbtn-card-text">
-            面向世界科技前沿、国家重大需求、经济主战场与人民生命健康，开展高水平、前瞻性、系统性的科学探索与技术攻关。
-          </p>
-          <div class="lrbtn-card-btn"></div>
-        </a>
-
-        <!-- 第二个卡片：加入我们 + 背景图 -->
-        <a href="/people/people_engage.html" class="lrbtn-cta-card" style="
-        position: relative; 
-        overflow: hidden; 
-        z-index: 1;
-      ">
-
-          <h3 class="lrbtn-card-title">加入我们</h3>
-          <p class="lrbtn-card-text">
-            PETLab向所有怀揣科研火种的本科同学发出邀约，不论经验、不论资历，只要你怀揣对科研的激情、梦想、勇气、责任，就是我们的同路人。
-          </p>
-          <div class="lrbtn-card-btn"></div>
-        </a>
-
-      </div>
-    </div>
 
   </main>
 
