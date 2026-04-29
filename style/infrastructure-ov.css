@@ -1,0 +1,293 @@
+@import url("./root.css");
+
+html {
+    font-size: 1vw;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #f2f2f2;
+    font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('/style/fonts/icomoon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+
+/* 动态按钮 */
+.home-carousel__cta {
+    margin-top: 3rem;
+    border-bottom: none;
+    color: #FFFFFF;
+}
+
+.cta--button {
+    color: #fff;
+    text-decoration: none;
+    line-height: 1;
+    display: inline-block;
+    border: 0;
+    transition: 0.2s ease;
+    position: relative;
+    padding: 0 15px 0 11px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.cta--button:before {
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 0;
+    width: 0.2rem;
+    height: 100%;
+    background: #F45A2B;
+    transform: translateY(-50%);
+    transition: 0.2s ease;
+}
+
+.cta--button:after {
+    font-family: "icomoon" !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e905";
+    position: relative;
+    font-size: 10px;
+    top: -1px;
+    transition: 0.2s ease;
+    margin-left: 10px;
+}
+
+.cta--button:hover {
+    padding-left: 19px;
+    padding-right: 0;
+}
+
+.cta--button:hover:before {
+    width: 12px;
+}
+
+
+
+.about-ov-hero-img {
+    position: absolute;
+    width: 68%;
+    max-width: 100rem;
+    object-fit: cover;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.about-ov-hero-img:nth-child(1) {
+    opacity: 1;
+    transition: none;
+}
+
+.about-ov-hero-img.active {
+    opacity: 1;
+}
+
+/* 选项卡整体布局 —— 左右两栏 */
+.rd-group {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* 左侧选项卡列表 改成 30% */
+.tabs {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+    margin-top: 1rem;
+}
+
+/* 单个选项卡：文字 + 指示器（线+圆） */
+.tab-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #0F4C81;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    width: 100%;
+}
+
+/* 选中时文字变色 */
+.tab-item.active {
+    color: #000;
+}
+
+/* 指示器容器：线 + 圆 */
+.tab-item .indicator {
+    position: relative;
+    height: 2px;
+    background-color: #000;
+    margin-left: 1.2rem;
+    flex: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tab-item.active .indicator {
+    opacity: 1;
+}
+
+/* 圆点：线右侧、右对齐、橙色 */
+.tab-item .indicator::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #F45A2B;
+}
+
+/* 右侧内容区 改成 70% */
+.panel-content {
+    width: 70%;
+    font-size: 1.3rem;
+    line-height: 2.7rem;
+    color: #333;
+    margin-top: 1rem;
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+
+.panel {
+    display: none;
+}
+
+.panel.active {
+    display: block;
+}
+
+
+
+
+
+/* 外层容器 */
+.p-project-carousel {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: 40rem;
+    top: 10rem;
+}
+
+/* 标题 */
+.p-project-carousel__header {
+    font-size: 28px;
+    margin-bottom: 24px;
+    color: #222;
+}
+
+/* 轮播容器 */
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* 轮播轨道 */
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+}
+
+/* 单个轮播项 */
+.carousel-item {
+    min-width: 100%;
+    flex-shrink: 0;
+}
+
+/* 图片 */
+.project-carousel__image img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+
+/* 内容区 */
+.project-carousel__content {
+    margin-top: 2rem;
+}
+
+/* 标签 */
+.project-carousel__tag {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #f45a2b;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* 标题 */
+.project-carousel__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.project-carousel__title a {
+    color: #222;
+    text-decoration: none;
+}
+
+/* 摘要 */
+.project-carousel__summary {
+    font-size: 1.5rem;
+    line-height: 2.7rem;
+    color: #444;
+}
+
+/* 指示器圆点 */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #f45a2b;
+}
+
+/* 查看更多按钮 */
+.p-project-carousel__cta {
+    text-align: right;
+    margin-top: 3rem;
+}

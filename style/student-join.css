@@ -1,0 +1,102 @@
+@import url("./root.css");
+html { 
+    font-size: 1vw;
+    font-family: var(--font-family), "Microsoft YaHei", Arial, sans-serif;
+ }
+
+.section-1 {
+    position: relative;
+    width: 100rem;
+    height: 42.5rem;
+}
+.section-1 .background-blue {
+    position: absolute;
+    top: 35rem;
+    left: 39rem;
+    width: 51rem;
+    height: 20rem;
+    z-index: 1;
+    background-color: var(--theme-banner);
+    padding: 2.7rem 0rem 2rem 2rem;
+    box-sizing: border-box;
+}
+.section-1 .title-white {
+    font-size: 3.44rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+}
+.section-1 img {
+    position: absolute;
+    top: 0rem;
+    left: 8rem;
+    width: 84rem;
+    height: 45rem;
+    object-fit: contain;   /* âœ… ç­‰æ¯”ä¾‹ç¼©æ”¾ï¼Œå®Œæ•´æ˜¾ç¤º */
+}
+
+.background-black {
+    position: relative;
+    left: 0rem;
+    right: 0rem;
+    height: auto;
+    background-color: var(--theme-color2);
+    padding: 12rem 0 0 0;
+    margin: 0;
+}
+
+/* Markdown converted content styles */
+.md-container {
+    position: relative;
+    width: 88rem;
+    margin: 0 auto;
+    padding: 3rem 4rem;
+    box-sizing: border-box;
+    color: #fff;
+}
+.md-title {
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin: 0 0 1.5rem 0;
+    color: #fff;
+}
+.md-subtitle {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin: 3rem 0 0.8rem 0;
+    color: #fff;
+}
+.md-paragraph {
+    position: relative;
+    font-size: 1rem;
+    line-height: 2.2rem;
+    margin: 2rem 0;
+    color: #fff;
+    font-weight: 100;
+}
+.md-list {
+    position: relative;
+    margin: 0 0 1.2rem 1rem;
+    padding: 0;
+    color: #fff;
+}
+
+.md-paragraph {
+    position: relative;
+    margin: 0 0 0rem 0rem;
+    font-size: 1rem;
+    line-height: 1.2;
+    padding: 0;
+    color: #fff;
+}
+.md-list li {
+    margin: 0.6rem 0;
+    font-size: 1rem;
+    font-weight: 100;
+}
+.md-divider {
+    border: none;
+    height: .2px;
+    background: rgba(255,255,255,0.18);
+    margin: 6rem 0;
+}

@@ -1,0 +1,103 @@
+@import url("./root.css");
+
+html {
+  font-size: 1vw;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #f2f2f2;
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+@font-face {
+  font-family: 'icomoon';  
+  src: url('/style/fonts/icomoon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+
+/* 动态按钮 */
+.home-carousel__cta {
+  margin-top: 3rem;
+  border-bottom: none;
+    color: #FFFFFF;
+}
+
+.cta--button {
+    color: #fff;
+    text-decoration: none;
+    line-height: 1;
+    display: inline-block;
+    border: 0;
+    transition: 0.2s ease;
+    position: relative;
+    padding: 0 15px 0 11px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.cta--button:before {
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 0;
+    width: 0.2rem;
+    height: 100%;
+    background: #F45A2B;
+    transform: translateY(-50%);
+    transition: 0.2s ease;
+}
+
+.cta--button:after {
+    font-family: "icomoon" !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e905";
+    position: relative;
+    font-size: 10px;
+    top: -1px;
+    transition: 0.2s ease;
+    margin-left: 10px;
+}
+
+.cta--button:hover {
+    padding-left: 19px;
+    padding-right: 0;
+}
+
+.cta--button:hover:before {
+    width: 12px;
+}
+
+
+
+.about-ov-hero-img {
+  position: absolute;
+  width: 68%;
+  max-width: 100rem;
+  object-fit: cover;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.about-ov-hero-img:nth-child(1) {
+  opacity: 1;
+  transition: none;
+}
+
+.about-ov-hero-img.active {
+  opacity: 1;
+}

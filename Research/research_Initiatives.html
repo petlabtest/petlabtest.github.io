@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数字PET实验室 Digital PET Laboratory(DPL) - 华中科技大学</title>
+  <link rel="icon" href="/pic/main/PETLAB_LOGO_Pure.png" />
+  <meta name="keywords" content="数字PET实验室" />
+  <meta name="description" content="Digital PET Laboratory is advancing the scope of human health." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta property="og:title" content="Digital PET Lab | All Digital PET, A Reinvention" />
+  <meta property="og:description" content="Digital PET Laboratory is advancing the scope of human health." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://petlab.hust.edu.cn/" />
+  <meta property="og:site_name" content="Digital PET Laboratory" />
+  <meta property="og:image" content="/pic/main/PETLAB_LOGO.png" />
+  <link rel="dns-prefetch" href="/fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="/s.w.org" />
+  <link rel="canonical" href="https://petlab.hust.edu.cn/" />
+  <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/oembed/oembed.json" />
+  <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/oembed/oembed.xml" />
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- 免费商用中文字体 -->
+  <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" media="all"
+    href="//fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600i|Roboto+Condensed:700|Cardo:700" />
+  <link rel="stylesheet" href="/style/header.css" />
+  <link rel="stylesheet" href="/style/footer.css" />
+  <link rel="stylesheet" href="/style/science-method01.css" />
+  <link rel="stylesheet" href="/style/science-initiatives.css" />
+  <link rel="stylesheet" href="/style/root.css" />
+
+  <script>
+    // 加载头部
+    fetch("/header.html")
+      .then((res) => res.text())
+      .then((data) => (document.getElementById("header").innerHTML = data));
+
+    // 加载底部
+    fetch("/footer.html")
+      .then((res) => res.text())
+      .then((data) => (document.getElementById("footer").innerHTML = data));
+  </script>
+</head>
+
+<body style="background-color: #f2f2f2">
+  <!-- 头部菜单 -->
+  <div id="header"></div>
+
+  <div class="main-hero">
+    <img src="/pic/Research/Initiatives/sys1.jpg" alt="banner" class="main-hero-img" />
+    <div class="main-hero-desc">
+      <div class="main-hero-title">重点专项</div>
+      <div class="main-hero-sub">Key Initiatives</div>
+    </div>
+  </div>
+
+  <div class="science-intro">
+    <p>
+      实验室正围绕使命与更广泛的科研共同体推进多项核心举措，整合跨研究领域的专业能力与资源。其中一项专项，是运用本实验室的系统与技术，支撑质子治疗监测任务。
+    </p>
+  </div>
+
+
+  <main>
+
+
+    <div class="section-item" style="height: 40rem; top: 5rem;">
+      <div class="section-info" style="
+              background: var(--theme-color1);
+              left: 9rem;
+              top: 0rem;
+              width: 91rem;
+              height: 30rem;
+              z-index: 1;
+              box-sizing: border-box;
+              padding: 2rem 2rem 2rem 44rem;
+          ">
+        <div class="section-title" style="margin-top: 1rem;font-size: 2.4rem;font-weight: 400">研究目标</div>
+        <h3 style="font-size: 1.5rem;font-weight: 300;margin-top: 2rem;">
+          质子束在束PET探测系统
+        </h3>
+        <p style="margin-bottom: 0rem;line-height: 2rem;font-size: 0.9rem;font-weight: 300;">
+          围绕质子治疗在束监测这一核心目标与难点，从质子束入射靶体产生的正电子核素这一次级粒子切入，研究了质子束能量输运与射程监测的物理原理，研制了面向质子治疗监测的双平板数字 PET 系统，发展了质子治疗在束监测精确成像方法、在束 PET直接验证质子射程方法。从信号预演、信号采集、信号处理、信息提取几个方面，对质子治疗射程在束监测中面临的挑战逐个击破，实现了基于数字 PET 的质子治疗射程在束验证。</p>
+      </div>
+
+      <div class="section-img" style="
+            background: url(/pic/Research/Initiatives/pic1.jpg)
+              no-repeat center center;
+            background-size: cover;
+            left: 0rem;
+            top: 6rem;
+            width: 48rem;
+            height: 28rem;
+            z-index: 2;
+          "></div>
+    </div>
+
+    <div class="tech2-scene-container" style="height: 50rem; top: 5rem;">
+      <div class="tech2-scene-title">研究内容</div>
+      <div class="tech2-scene-img-card" style="
+          left: 9rem;
+          top: 0;
+          width: 48rem;
+          height: 30rem;
+          background-image: url('/pic/Research/Initiatives/3.png');
+        "></div>
+      <div class="tech2-scene-text-card" style="
+          left: 37rem;
+          top: 10rem;
+          width: 20rem;
+          height: 20rem;
+          background: var(--theme-color2);
+        ">
+        <h2>探测系统设计与实现</h2>
+        <p>开放式结构的质子治疗监测系统能够更广泛地适应多种治疗条件和方案的需求。</p>
+
+      </div>
+      <div class="tech2-scene-img-card" style="
+          left: 57rem;
+          top: 10rem;
+          width: 33.1rem;
+          height: 20rem;
+          background-image: url('/pic/Research/Initiatives/4.png');
+        "></div>
+      <div class="tech2-scene-text-card" style="left: 18rem; top: 30rem; width: 20rem; height: 20rem">
+        <h3 style="position: absolute; top: -3rem; left: 4rem;">精确成像方法</h3>
+
+        <p style="margin-top: 4rem;">面向质子束在束期间辐射背景噪声影响在束信号应用的问题，研究质子束在束监测数字 PET 精确成像方法</p>
+      </div>
+      <div class="tech2-scene-img-card" style="
+          left: 38rem;
+          top: 30rem;
+          width: 32rem;
+          height: 20rem;
+          background-image: url('/pic/Research/Initiatives/5.png');
+        "></div>
+      <div class="tech2-scene-text-card" style="
+          left: 70rem;
+          top: 30rem;
+          width: 20rem;
+          height: 20rem;
+          background: var(--theme-color2);
+        ">
+        <h2>质子射程验证方法</h2>
+        <p>探索基于测量的 PET 活度分布直接验证质子束剂量范围的方法。</p>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="tech2-scene-title" style="position: relative; left: 9rem; height: 8rem; top: 9rem;">研究相关</div>
+    <div class="feature-section" style="top: 0rem;">
+      <div class="feature-item">
+        <a href="/Research/research_ov.html"><img src="/pic/Research/Collaboration/3-1.jpg" alt="科学研究"
+            style="height:15rem;" /></a>
+        <p><a href="/Research/research_ov.html" style="text-decoration: none; color: #fff;">科学研究</a>
+        </p>
+      </div>
+      <div class="feature-item">
+        <a href="/Infrastructure/infrastructure_ov.html" style="text-decoration: none; color: #fff;"><img
+            src="/pic/Research/tech3/1.jpg" alt="研究平台" style="height:15rem;" /></a>
+        <p><a href="/Infrastructure/infrastructure_ov.html" style="text-decoration: none; color: #fff;">研究设施</a>
+        </p>
+      </div>
+      <div class="feature-item">
+        <a href="/Infrastructure/infrastructure_instrumentation.html" style="text-decoration: none; color: #fff;"><img
+            src="/pic/Research/tech5/sys1.jpg" alt="科学仪器" style="height:15rem;" /></a>
+        <p><a href="/Infrastructure/infrastructure_instrumentation.html"
+            style="text-decoration: none; color: #fff;">科学仪器</a></p>
+      </div>
+      <div class="feature-item">
+        <a href="/About/about_leadership.html" style="text-decoration: none; color: #fff;"><img
+            src="/pic/Research/Initiatives/6.jpg" alt="创新研究团队" style="height:15rem;" /></a>
+        <p><a href="/About/about_leadership.html" style="text-decoration: none; color: #fff;">创新研究团队</a></p>
+      </div>
+    </div>
+
+
+
+    <!-- 联系我们 -->
+    <div class="about-ov-partner-container" style="position: relative; width: 100%; height: 28rem; top: 8rem; ">
+      <div class="ov-partner-home"
+        style="position: absolute; left: 60%;  transform: translate(-50%, 0);  width: 68%;  max-width: 100rem; ">
+        <!-- Partner Images -->
+        <img src="/pic/join_us.jpg" alt="partner_pic"
+          style="position: absolute; width: 60%;  object-fit: cover; left: 15%; transform: translate(-50%, -22%); z-index: 1;">
+
+        <div class="ov-partner-desc"
+          style="position: absolute; right: 16%; top: 0rem; width: 60rem; height: 20rem; background: var(--theme-color1); color: #fff; padding: 2rem; box-sizing: border-box;">
+
+          <div class="ov-partner-title"
+            style="margin-top: 1rem; margin-left: 35rem; font-size: 2.6rem; font-weight: 600; line-height: 1.3;">
+            <a href="/Contact/connect_ov.html" style="text-decoration: none; color: #fff;">研究合作 </a>
+          </div>
+          <div class="ov-partner-content"
+            style="margin-top: 1.5rem; margin-left: 35rem; font-size: 1.2rem; line-height: 2rem; text-align: justify; text-justify: inter-ideograph;">
+            <a>PETLab期待与来自世界各地的你相遇，<br>共同探索、发明、创新、创造！</a>
+          </div>
+          <div class="home-carousel__cta" style="margin-top: 2rem; margin-left: 35rem;"><a
+              href="/Contact/connect_ov.html" class="cta--button">联系我们</span></a></div>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+
+
+
+
+
+
+  <!-- 底部版权 -->
+  <div id="footer"></div>
+</body>
+
+</html>

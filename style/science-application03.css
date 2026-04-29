@@ -1,0 +1,118 @@
+html {
+  font-size: 1vw;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+}
+.app-main {
+  width: 100%;
+  margin: 0 auto;
+  background: #f2f2f2;
+  box-sizing: border-box;
+}
+.app-results {
+  padding: 3rem 0 2rem 0;
+}
+.result-list {
+  display: flex;
+  gap: 2rem;
+  padding: 0 2rem; /* Add some padding to the sides */
+  flex-direction: row;
+}
+
+.result-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.result-item {
+  background: #fff;
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.08);
+  border-radius: 0;
+  width: 22rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+.result-img {
+  width: 8rem;
+  height: 8rem;
+  background: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+}
+.result-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.result-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.result-title {
+  font-size: 1.2rem;
+  color: var(--theme-color1);
+  margin-bottom: 0.5rem;
+}
+.result-desc {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+.result-ref {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.custom-component {
+  width: 34rem;
+  margin: 0 auto 2rem auto; /* Added bottom margin */
+}
+
+.custom-component-image {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.custom-component-bottom {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.5rem 0rem 1rem 0rem;
+  background: #fff;
+}
+
+.custom-component-icon {
+  width: 1rem;
+  height: 1rem;
+  background: var(--theme-color1);
+  margin: 0.5rem 1.5rem 0 0;
+  flex-shrink: 0;
+}
+
+.custom-component-text {
+  flex: 1;
+}
+
+.custom-component-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.custom-component-desc {
+  font-size: 0.6rem;
+  color: #444;
+}

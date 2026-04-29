@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字PET实验室 Digital PET Laboratory(DPL) - 华中科技大学</title>
+    <link rel="icon" href="/pic/main/PETLAB_LOGO_Pure.png">
+    <meta name="keywords" content="数字PET实验室" />
+    <meta name="description" content="Digital PET Laboratory is advancing the scope of human health." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta property="og:title" content="Digital PET Lab | All Digital PET, A Reinvention" />
+    <meta property="og:description" content="Digital PET Laboratory is advancing the scope of human health." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://petlab.hust.edu.cn/" />
+    <meta property="og:site_name" content="Digital PET Laboratory" />
+    <meta property="og:image" content="/pic/main/PETLAB_LOGO.png" />
+    <link rel="dns-prefetch" href="/fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="/s.w.org" />
+    <link rel="canonical" href="https://petlab.hust.edu.cn/" />
+    <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/oembed/oembed.json" />
+    <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/oembed/oembed.xml" />
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- 免费商用中文字体 -->
+    <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" media="all"
+        href="//fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600i|Roboto+Condensed:700|Cardo:700">
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/footer.css">
+    <link rel="stylesheet" href="/style/image-index.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/about_ov.css">
+    <link rel="stylesheet" href="/style/student-join.css">
+
+
+    <script>
+        // 加载头部
+        fetch("/header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        // 加载底部
+        fetch("/footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+
+    <style>
+        /* 垂直时间轴容器 */
+        .timeline-container {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            margin: 4rem auto;
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        /* 中间竖线 */
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background-color: #0f4c81;
+        }
+
+        /* 时间轴每一项 */
+        .timeline-item {
+            position: relative;
+            margin: 3rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* 左侧项目 */
+        .timeline-item.left {
+            flex-direction: row;
+        }
+
+        .timeline-item.left .timeline-content {
+            margin-right: 0;
+            transform: translateX(8%);
+            /* 向左移 → 向中间靠 */
+        }
+
+        /* 右侧项目 */
+        .timeline-item.right {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-item.right .timeline-content {
+            margin-left: 0;
+            transform: translateX(-8%);
+            /* 向右移 → 向中间靠 */
+        }
+
+        /* 内容框宽度不变 */
+        .timeline-content {
+            width: 42%;
+            padding: 1.5rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #192b53;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* 时间节点圆点 */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: #F45A2B;
+            z-index: 10;
+        }
+    </style>
+
+
+</head>
+
+
+<body style="background-color: #f2f2f2;">
+    <!-- 头部菜单 -->
+    <div id="header"></div>
+
+
+
+    <main>
+        <section class="section-1">
+            <div class="background-blue">
+                <h1 class="title-white">
+                    实验室生活
+                </h1>
+                <p style="font-size: 2.2rem; color: #fff; padding-top: 3rem; font-weight: 400;">凝心聚力，共启新篇</p>
+            </div>
+
+            <img src="/pic/People/life/4.jpg" alt="合影">
+        </section>
+
+        <div class="background-black">
+
+
+            <!-- 垂直时间轴 -->
+            <div class="timeline-container">
+
+                <!-- 第1项 左侧 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <img src="/pic/People/life/1.jpg" alt="时间轴图片">
+                        <h3>数字PETer邱奥、刘煜、胡文韬、李曦蒙进行年度学术进展汇报</h3>
+                    </div>
+                </div>
+
+                <!-- 第2项 右侧 -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <img src="/pic/People/life/2.jpg" alt="时间轴图片">
+                        <h3>PETLab创始人谢庆国教授新春致辞</h3>
+                    </div>
+                </div>
+
+                <!-- 第3项 左侧 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <img src="/pic/People/life/3.jpg" alt="时间轴图片">
+                        <h3>数字PETer刘若兰、母登云新春致辞</h3>
+                    </div>
+                </div>
+
+                <!-- 第4项 右侧 -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <img src="/pic/People/life/4.jpg" alt="时间轴图片">
+                        <h3>数字PET实验室年会合影留念</h3>
+                    </div>
+                </div>
+
+
+
+                <!-- 第1项 左侧 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <img src="/pic/People/life/5.png" alt="时间轴图片">
+                        <h3>数字PETer张博出席巴黎峰会</h3>
+                    </div>
+                </div>
+
+                <!-- 第2项 右侧 -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <img src="/pic/People/life/5.jpg" alt="时间轴图片">
+                        <h3>年度科研之星：邱奥</h3>
+                    </div>
+                </div>
+
+                <!-- 第3项 左侧 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <img src="/pic/People/life/6.jpg" alt="时间轴图片">
+                        <h3>年度服务之星：朱婧敏</h3>
+                    </div>
+                </div>
+
+                <!-- 第4项 右侧 -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <img src="/pic/People/life/7.jpg" alt="时间轴图片">
+                        <h3>最佳新人：钟悦茹</h3>
+                    </div>
+                </div>
+
+
+
+
+                <!-- 第1项 左侧 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <img src="/pic/People/life/8.jpg" alt="时间轴图片">
+                        <h3>年度优秀团队：动物PET项目组</h3>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+
+
+    <!-- 底部版权 -->
+    <div id="footer"></div>
+</body>

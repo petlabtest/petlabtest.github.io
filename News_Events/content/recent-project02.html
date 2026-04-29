@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字PET实验室 Digital PET Laboratory(DPL) - 华中科技大学</title>
+    <link rel="icon" href="/pic/main/PETLAB_LOGO_Pure.png">
+    <meta name="keywords" content="数字PET实验室" />
+    <meta name="description" content="Digital PET Laboratory is advancing the scope of human health." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta property="og:title" content="Digital PET Lab | All Digital PET, A Reinvention" />
+    <meta property="og:description" content="Digital PET Laboratory is advancing the scope of human health." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://petlab.hust.edu.cn/" />
+    <meta property="og:site_name" content="Digital PET Laboratory" />
+    <meta property="og:image" content="/pic/main/PETLAB_LOGO.png" />
+    <link rel="dns-prefetch" href="/fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="/s.w.org" />
+    <link rel="canonical" href="https://petlab.hust.edu.cn/" />
+    <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/oembed/oembed.json" />
+    <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/oembed/oembed.xml" />
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- 免费商用中文字体 -->
+    <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" media="all"
+        href="//fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600i|Roboto+Condensed:700|Cardo:700">
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/footer.css">
+    <link rel="stylesheet" href="/style/news-detail.css">
+    <link rel="stylesheet" href="/style/main.css">
+
+
+    <script>
+        // 加载头部
+        fetch("/header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        // 加载底部
+        fetch("/footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+
+
+
+
+</head>
+
+
+<body style="background-color: #f2f2f2;">
+    <!-- 头部菜单 -->
+    <div id="header"></div>
+
+
+    <main class="news-detail-main">
+        <section class="news-detail-hero" style="height: 26rem">
+            <div class="news-detail-hero-img" style="
+            position: absolute;
+            right: 2rem;
+            top: 3rem;
+            width: 46rem;
+            height: 32rem;
+            background: url(/pic/news/content/2.jpg) no-repeat
+              center center;
+            background-size: cover;
+          "></div>
+            <div class="news-detail-hero-title" style="
+            position: absolute;
+            left: 0;
+            top: 10rem;
+            width: 55rem;
+            height: 22rem;
+            padding-top: 3rem;
+          ">
+                <h1 style="font-size: 2.8rem; margin-top: -1rem;">为“光子捕手”装配“魔法芯片”    新一代标准CMOS工艺的硅光电倍增器来了！ </h1>
+                <p class="news-detail-date">2025.07.22</p>
+            </div>
+        </section>
+
+        <section class="news-detail-content" style="margin-top: 10rem;">
+            <p class="highlight-blue">什么是硅光电倍增器？</p>
+
+            <p>想象一台能在完全黑暗中捕捉单颗光子的“超级相机”——这个能在极弱光环境下进行光电探测的“光子捕手”，便是硅光电倍增器（Silicon Photomultiplier,
+                简称SiPM）。作为核医学PET/CT、粒子物理探测、激光雷达（LiDAR）、天文观测的“工业之眼”，它能捕捉微弱至极的光信号。</p>
+
+            <p>目前绝大多数SiPM需采用专用定制工艺制备，定制化程度高导致价格昂贵、工艺繁琐、产能受限，更难以与信号处理电路实现片上集成。</p>
+
+            <p class="highlight-blue">什么是CMOS工艺？</p>
+
+            <p>CMOS（互补金属氧化物半导体）是芯片制造的成熟技术，常被用于制造手机芯片。采用CMOS工艺造SiPM，则是性价比最高的生产路径。</p>
+
+            <p>（1）直接利用成熟CMOS产线，实现量产，单位成本远低于商用定制工艺，并且技术更新迭代速度更快。</p>
+            <p>（2）能够实现单光子传感器与数字读出电子器件在同一块芯片上的集成，这一技术进步将推动精密传感方法的发展，其应用领域涵盖核医学、汽车工程及消费电子等多个行业。</p>
+
+            <p class="highlight-blue">基于CMOS工艺的SiPM有什么挑战？</p>
+
+            <p>CMOS工艺本身并不是为了SiPM量身定制，直接采用标准CMOS工艺制备的SiPM不仅光子探测效率（Photon Detection Efficiency, PDE）普遍低下（&lt;
+                30%）,且往往具有很高的噪声水平（~MHz）。</p>
+            <figure class="image-container">
+                <img src="/pic/news/content/2-1.jpg" alt="">
+                <figcaption>
+                    对比采用定制工艺（如Hamamatsu公司的S13360系列、Onsemi公司的FJ30035、Broadcom公司的NUV-MT系列）与不同CMOS工艺节点（包括0.5μm、0.35μm、0.2μm、0.18μm、0.16μm及0.055μm）制造的SiPM性能参数。
+                </figcaption>
+            </figure>
+
+            <p>从图表中可以发现，0.18 μm和0.35μm CMOS工艺节点已实现显著突破，然而，更小尺寸CMOS工艺制造的SiPM往往表现出PDE下降和DCR上升的现象。</p>
+
+            <p class="highlight-blue">问题来了！</p>
+
+            <p class="highlight-blue">为什么更小的CMOS工艺反而导致SiPM性能下降？</p>
+
+            <p>这归因于工艺尺寸缩减导致掺杂浓度升高，好比在越来越小的房间里捉迷藏，房间小（工艺尺寸小）虽然容易快速找到人（载流子迁移快），但墙皮剥落（STI深能级缺陷）和过度拥挤（掺杂浓度高）会产生大量干扰（暗计数）。如何在可见光谱范围内（尤其是蓝光波段）实现高光子探测效率的同时，保持与定制商用技术相媲美的暗噪声水平，是目前CMOS
+                SiPM设计的一大难题。</p>
+
+            <p>针对这一挑战，PETLab教授Nicola
+                Dascenzo带领数字PETer、博士生陈警斌、劳慧等人，基于新一代标准CMOS工艺节点，重点优化了多种SiPM结构参数的设计，深入分析了其对器件暗噪声和光子探测效率PDE的影响，解决了CMOS工艺的探测效率低、固有噪声高等难题。
+            </p>
+
+            <p>最终所设计实现的SiPM器件取得了突破性性能：在3 V过偏置电压下420 nm波长处达到62%的光子探测效率（PDE），同时保持174
+                kcps/mm²的低暗计数率（DCR）。这一性能指标不仅显著超越了现有CMOS工艺制备的SiPM器件，更达到了商业定制技术产品的同等水平。</p>
+
+            <figure class="image-container">
+                <img src="/pic/news/content/2-2.jpg" alt="">
+                <figcaption>进行优化设计的相关结构参数及制备的1 mm² SiPM样片显微图</figcaption>
+            </figure>
+            <figure class="image-container">
+                <img src="/pic/news/content/2-3.jpg" alt="">
+                <img src="/pic/news/content/2-4.jpg" alt="">
+                <figcaption>对采用不同结构参数设计实现的SiPM进行了暗噪声性能和PDE参数的全面评估，验证并选取了最优的结构参数设计，为下一步芯片性能的优化指明了方向。</figcaption>
+            </figure>
+
+            <p>上述相关研究成果以“A Low-Noise High-Photon Detection Efficiency Silicon Photomultiplier in 0.11-μm
+                CMOS”为题，发表于电子器件领域顶级期刊IEEE Transactions on Electron Devices。</p>
+            <figure class="image-container">
+                <img src="/pic/news/content/2-5.jpg" alt="">
+                <figcaption></figcaption>
+            </figure>
+            <p>目前，数字PETer正致力于将高性能SiPM所采用的0.11 μm CMOS工艺节点进一步用于开发全数字化的SiPM，为新一代集成智能电子元件的单光子传感器开辟道路。</p>
+            <figure class="image-container">
+                <img src="/pic/news/content/2-6.jpg" alt="">
+                <figcaption>PETLab自主开发的TP3000系列SiPM阵列</figcaption>
+            </figure>
+
+            <p>一直以来，数字PETer都致力于实现弱光光电探测技术的自主创新。如今，团队自主研发的SiPM已经广泛应用于正电子发射断层成像设备、口腔影像等高端医疗器械，核辐射探测、高能物理等光电探测领域，覆盖华东、华南、华北、东北、华中等区域和地区的数百家用户单位，其中包括同方威视、上海通用汽车、华为技术有限公司等知名企业。
+            </p>
+            <figure class="image-container">
+                <img src="/pic/news/content/2-7.jpg" alt="">
+                <figcaption>数字PET产业化公司锐光科技生产的标准CMOS SiPM与市面其他厂商的技术指标对比</figcaption>
+            </figure>
+
+            <p>未来，在医学影像领域，自主研发的全数字SiPM可在光到电这个环节实现更精确的量化信息，这意味着PET成像不仅仅是功能活度的可视化呈现，更能提供精准、定量的生化、代谢的数据信息，为医生提供“绝对值”数据，突破医学影像的定量化挑战。
+            </p>
+
+            <p>在辐射探测领域，全数字SiPM也有望替代传统光电探测器，直接搭载于卫星平台，精准捕捉宇宙射线、伽玛暴等粒子事件，实现对宙元事例分布式观测。</p>
+        </section>
+    </main>
+
+
+
+
+    <!-- 底部版权 -->
+    <div id="footer"></div>
+</body>

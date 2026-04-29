@@ -1,0 +1,215 @@
+@import url("./root.css");
+html {
+  font-size: 1vw;
+  overflow-x: hidden;
+}
+.industry-main {
+  min-height: 100vh;
+  font-family: var(--font-family, "Microsoft YaHei", Arial, sans-serif);
+}
+.industry-list {
+  margin: 0rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+}
+.industry-item {
+  display: flex;
+  position: relative;
+  height: 38rem;
+}
+.industry-item-img {
+  position: absolute;
+  width: 48rem;
+  height: 28rem;
+  flex-shrink: 0;
+  border-radius: 0;
+  z-index: 1;
+}
+.industry-item-subimg {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  line-height: 2;
+  box-sizing: border-box;
+}
+.industry-item-info {
+  position: absolute;
+  left: 5rem;
+  top: 4rem;
+  width: 38rem;
+  min-height: 20rem;
+  background: var(--theme-color1);
+  color: #fff;
+  padding: 2.5rem 3rem 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.industry-item-info-dark {
+  background: var(--theme-color2);
+}
+.industry-item-info-blue {
+  background: var(--theme-color1);
+}
+.industry-item-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+}
+.industry-item-info p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 2;
+    font-weight: 100;
+}
+.industry-item-tags {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  color: #fff;
+}
+.industry-item-alt .industry-item-info {
+  left: 48rem;
+  top: 2rem;
+  width: 39rem;
+}
+.industry-item-alt .industry-item-img {
+  order: 2;
+  left: 0;
+}
+.industry-item-multi {
+  display: flex;
+  align-items: stretch;
+  min-height: 18rem;
+}
+.industry-item-multi .industry-item-info {
+  position: static;
+  width: 60%;
+  min-height: 18rem;
+  padding: 2.5rem 2rem 2.5rem 2.5rem;
+  display: flex;
+  align-items: center;
+}
+.industry-item-multi .industry-item-img-multi {
+  width: 20rem;
+  height: 18rem;
+  background: #e0e0e0 center center/cover no-repeat;
+  flex-shrink: 0;
+}
+.industry-multi-row {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+}
+.industry-multi-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #fff;
+}
+.industry-multi-col h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+  font-weight: 400;
+}
+.industry-multi-col p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+.image-card-year {
+  writing-mode: vertical-lr;
+  letter-spacing: 1rem;
+}
+.image-card-item:hover {
+  flex: 4 1 0 !important;
+}
+/* 增加四位博士生或者研究员的特殊格式 */
+/* 团队展示区块整体样式 */
+.team-section {
+  margin-top: 2rem;
+  padding: 5rem 2rem;
+  background-color: #0f4c81; /* 背景色（可根据需求调整） */
+  color: #fff; /* 文字颜色 */
+}
+
+/* 成员卡片容器：Flex布局实现横向排列+自动换行 */
+.team-container {
+  display: flex;
+  flex-wrap: wrap; /* 自动换行 */
+  justify-content: center; /* 水平居中 */
+
+  margin: 0 auto; /* 水平居中 */
+  position: relative;
+}
+
+/* 单个成员卡片 */
+.team-card {
+  width: 27.3rem;
+  margin: 0rem;
+  text-align: center; /* 文字居中 */
+  position: relative; /* 用于分割线定位 */
+}
+/* 核心：只给非第一个卡片添加左侧分割线 */
+.team-card:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  left: 0; /* 定位在卡片左侧边缘 */
+  top: 53%; /* 垂直方向居中偏上（可调整） */
+  height: 46%; /* 分割线高度（可调整） */
+  width: 0.05rem; /* 分割线粗细 */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* 分割线颜色（半透明白色，适配蓝色背景） */
+}
+/* 圆形头像 */
+.team-card img {
+  width: 12rem;
+  height: 12.5rem;
+  position: center;
+  border-radius: 50%; /* 圆形效果 */
+  object-fit: cover; /* 保持图片比例，避免拉伸 */
+  margin-bottom: 0rem;
+}
+
+/* 姓名样式 */
+.team-card h3 {
+  font-size: 1.7rem;
+  font-weight: 430;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.1rem;
+}
+
+/* 简介样式 */
+.team-card p {
+  font-size: 0.9rem;
+  font-weight: 100;
+  line-height: 2;
+  padding: 0 0.1rem; /* 左右内边距，避免文字贴边 */
+}
+.team-card {
+  margin-top: 2.5rem;
+  font-size: 0.75rem;
+  font-weight: 100;
+  line-height: 1.7;
+  padding: 0rem 1.5rem; /* 左右内边距，避免文字贴边 */
+}
+
+.detailed-intro {
+  text-align: left;
+  margin-top: 2.5rem;
+  font-size: 0.75rem;
+  font-weight: 100;
+  line-height: 1.7;
+  padding: 0rem 1.5rem; /* 左右内边距，避免文字贴边 */
+}

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字PET实验室 Digital PET Laboratory(DPL) - 华中科技大学</title>
+    <link rel="icon" href="/pic/main/PETLAB_LOGO_Pure.png">
+    <meta name="keywords" content="数字PET实验室" />
+    <meta name="description" content="Digital PET Laboratory is advancing the scope of human health." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta property="og:title" content="Digital PET Lab | All Digital PET, A Reinvention" />
+    <meta property="og:description" content="Digital PET Laboratory is advancing the scope of human health." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://petlab.hust.edu.cn/" />
+    <meta property="og:site_name" content="Digital PET Laboratory" />
+    <meta property="og:image" content="/pic/main/PETLAB_LOGO.png" />
+    <link rel="dns-prefetch" href="/fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="/s.w.org" />
+    <link rel="canonical" href="https://petlab.hust.edu.cn/" />
+    <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/oembed/oembed.json" />
+    <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/oembed/oembed.xml" />
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- 免费商用中文字体 -->
+    <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" media="all"
+        href="//fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600i|Roboto+Condensed:700|Cardo:700">
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/footer.css">
+    <link rel="stylesheet" href="/style/image-index.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/about_ov.css">
+    <link rel="stylesheet" href="/style/science-system01.css">
+    <link rel="stylesheet" href="/style/science-application01.css">
+    <link rel="stylesheet" href="/style/science-tech05.css">
+    <link rel="stylesheet" href="/style/science-tech03.css">
+
+
+
+    <script>
+        // 加载头部
+        fetch("/header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        // 加载底部
+        fetch("/footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+            background: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 0 2rem;
+            width: 100%;
+            max-width: 1800px;
+            /* 关键：设置最大宽度 */
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin: 3rem 0 2rem;
+            color: #222;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background-color: var(--theme-color1);
+        }
+
+        .card h3 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .card h4 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .card a {
+            color: #005bb5;
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        .card p {
+            font-size: 0.8rem;
+            color: #fff;
+            line-height: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 8px;
+            color: #005bb5;
+            font-weight: 500;
+        }
+
+        .divider {
+            height: 1px;
+            background: #eee;
+            margin: 40px 0;
+        }
+
+        .impact-card {
+            margin-top: 40px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .impact-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .impact-content {
+            padding: 24px;
+        }
+
+        .impact-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .eyebrow {
+            font-size: 13px;
+            color: #666;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+    </style>
+
+</head>
+
+
+<body style="background-color: #f2f2f2;">
+    <!-- 头部菜单 -->
+    <div id="header"></div>
+
+
+    <!-- 顶部大图与标语 -->
+    <div class="system-hero">
+        <div class="system-hero-img" style="
+            background-image: url('/pic/Research/tech5/sys1.jpg');
+          "></div>
+        <div class="system-hero-desc">
+            <div class="system-hero-title-big">科研合作</div>
+            <div class="system-hero-title">构建资源共享的科研生态</div>
+        </div>
+    </div>
+    <div class="system-hero-text">
+        数字PET实验室坚持开放共享、优势互补、协同创新、互惠共赢的合作理念，以重大科研需求为导向，以关键技术突破为目标，以成果产出与转化为动力，构建长期稳定、务实高效、互利共赢的科研合作生态。支持联合申报项目、共建科研平台、联合培养人才、共享仪器设备、共同发表高水平论文、共同推进成果转化、产学研协同创新等多种合作模式，可灵活定制合作方案，实现资源最优配置与合作价值最大化。
+    </div>
+
+
+
+
+    <main>
+
+        <div class="container">
+
+
+            <!-- ====================== 开展联合研究 ====================== -->
+            <h2 class="section-title">开展联合研究</h2>
+            <div class="grid" style="
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;">
+                <div class="card" style="background-color: var(--theme-color1);">
+                    <h3><a>前沿学科交叉研究</a></h3>
+                </div>
+                <div class="card" style="background-color: var(--theme-color1);">
+                    <h3><a>关键技术协同研发</a></h3>
+                </div>
+                <div class="card" style="background-color: var(--theme-color1);">
+                    <h3><a>共建课题与项目研究</a></h3>
+                </div>
+                <div class="card" style="background-color: var(--theme-color1);">
+                    <h3><a>学术交流与人才联合培养</a></h3>
+                </div>
+                <div class="card" style="background-color: var(--theme-color1);">
+                    <h3><a>应用示范与成果转化</a></h3>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+
+
+            <!-- ====================== 申报联合课题 ====================== -->
+            <h2 class="section-title">申报联合课题</h2>
+            <div class="grid" style="
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;">
+                <div class="card" style="background-color: var(--theme-color2);">
+                    <h3><a>课题方向联合探索</a></h3>
+                </div>
+                <div class="card" style="background-color: var(--theme-color2);">
+                    <h3><a>各级项目联合申报</a></h3>
+                </div>
+                <div class="card" style="background-color: var(--theme-color2);">
+                    <h3><a>课题协同实施管理</a></h3>
+                </div>
+                <div class="card" style="background-color: var(--theme-color2);">
+                    <h3><a>成果共建共享转化</a></h3>
+                </div>
+                <div class="card" style="background-color: var(--theme-color2);">
+                    <h3><a>长效合作机制搭建</a></h3>
+                </div>
+            </div>
+            <div class="divider"></div>
+
+
+            <!-- ====================== 提供技术服务 ====================== -->
+            <h2 class="section-title">提供技术服务</h2>
+            <div class="grid" style="
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;">
+                <div class="card" style="background-color: var(--theme-color1);">
+                    <h3><a>科研设施</a></h3>
+                    <p>1、提供肿瘤学、心血管、神经科学等方向的多模PET/CT、 MRI、超声及光学成像服务<br>
+                        2、开展在体代谢成像、分子通路研究与多模态影像融合分析<br>
+                        3、提供实验方案设计、动物造模与纵向动态成像方案制定<br>
+                        4、支持多中心协作研究与数据共享
+                    </p>
+                </div>
+                <div class="card" style="background-color: var(--theme-color1);">
+                    <h3><a>科研平台</a></h3>
+                    <p>1、提供放射性示踪剂合成与质量检测服务（18F、11C、15O、68Ga 等）<br>
+                        2、开展新药早期药代动力学（PK/PD）与靶向性评估研究<br>
+                        3、支持放射性标记药物研发、活体示踪与代谢分布成像<br>
+                        4、提供定量影像分析、药效评价及真实世界数据服务<br>
+                        5、承接CRO药物开发项目（含GLP/GMP级别合作）
+                    </p>
+                </div>
+                <div class="card" style="background-color: var(--theme-color1);">
+                    <h3><a>科研仪器</a></h3>
+                    <p>1、提供小动物健康评估与影像体检（PET/CT、MRI、超声）<br>
+                        2、小动物早期肿瘤检测与病灶定位成像<br>
+                        3、实验动物疗效跟踪与干预效果评估<br>
+                        4、动物-临床影像指标对照与生物标志物验证
+                    </p>
+                </div>
+            </div>
+            <div class="divider"></div>
+
+        </div>
+
+
+        <!-- ====================== 成功范例 ====================== -->
+        <section class="section-5" style="top: 3rem;">
+            <img src="/pic/Research/Collaboration/1-1.jpg" class="background-blue" alt="背景图片描述">
+            <h1 class="title-blue"
+                style="top: 3rem; left: 20rem; font-weight: 500; font-size: 2.2rem; font-weight: 600; color: #222;">成功范例
+            </h1>
+            <div class="component-grid">
+                <div class="component-item">
+                    <div class="img-container">
+                        <img src="/pic/Research/Collaboration/1-2.jpg" alt="组件图片">
+                        <div class="mask"></div>
+                        <p class="center-text">光子计数CT</p>
+                    </div>
+                </div>
+                <div class="component-item">
+                    <div class="img-container">
+                        <div class="mask"></div>
+                        <img src="/pic/Research/Collaboration/1-3.jpg" alt="组件图片">
+                        <p class="center-text">雷电探测</p>
+                    </div>
+                </div>
+                <div class="component-item">
+                    <div class="img-container">
+                        <div class="mask"></div>
+                        <img src="/pic/Research/Collaboration/1-4.jpg" alt="组件图片">
+                        <p class="center-text">中子诊断</p>
+                    </div>
+                </div>
+                <div class="component-item">
+                    <div class="img-container">
+                        <div class="mask"></div>
+
+                        <img src="/pic/Research/Collaboration/1-5.jpg" alt="组件图片">
+                        <p class="center-text">核聚变观测</p>
+                    </div>
+                </div>
+                <div class="component-item">
+                    <div class="img-container">
+                        <div class="mask"></div>
+
+                        <img src="/pic/Research/Collaboration/1-6.jpg" alt="组件图片">
+                        <p class="center-text">动态过程成像</p>
+                    </div>
+                </div>
+                <div class="component-item">
+                    <div class="img-container">
+                        <div class="mask"></div>
+
+                        <img src="/pic/Research/Collaboration/1-7.jpg" alt="组件图片">
+                        <p class="center-text">大物体成像</p>
+                    </div>
+                </div>
+                <div class="component-item">
+                    <div class="img-container">
+                        <div class="mask"></div>
+
+                        <img src="/pic/Research/Collaboration/1-8.jpg" alt="组件图片">
+                        <p class="center-text">缪子成像</p>
+                    </div>
+                </div>
+                <div class="component-item">
+                    <div class="img-container">
+                        <div class="mask"></div>
+
+                        <img src="/pic/Research/Collaboration/1-9.jpg" alt="组件图片">
+                        <p class="center-text">中子成像</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="tech2-scene-container" style="height: 58rem; top: 8rem;">
+            <div class="tech2-scene-title">上天、入地、下海</div>
+            <div class="tech2-scene-img-card" style="
+          left: 9rem;
+          top: 0;
+          width: 48rem;
+          height: 30rem;
+          background-image: url('/pic/Research/Collaboration/2-1.jpg');
+        "></div>
+            <div class="tech2-scene-text-card" style="
+          left: 37rem;
+          top: 10rem;
+          width: 20rem;
+          height: 20rem;
+          background: var(--theme-color2);
+        ">
+                <h2>遥感卫星"上天"</h2>
+                <p>团队自主研制的SiPM芯片作为核心部件搭载卫星成功进入太空，在高宇宙射线辐射的恶劣工况下，在轨稳定测量有效数据超500万次。</p>
+
+            </div>
+            <div class="tech2-scene-img-card" style="
+          left: 57rem;
+          top: 10rem;
+          width: 33.1rem;
+          height: 20rem;
+          background-image: url('/pic/Research/Collaboration/2-2.jpg');
+        "></div>
+            <div class="tech2-scene-text-card" style="left: 18rem; top: 30rem; width: 20rem; height: 20rem">
+                <h3>水下光通信"下海"</h3>
+
+
+            </div>
+            <div class="tech2-scene-img-card" style="
+          left: 38rem;
+          top: 30rem;
+          width: 32rem;
+          height: 20rem;
+          background-image: url('/pic/Research/Collaboration/2-3.jpg');
+        "></div>
+            <div class="tech2-scene-text-card" style="
+          left: 70rem;
+          top: 30rem;
+          width: 20rem;
+          height: 20rem;
+          background: var(--theme-color2);
+        ">
+                <h2>石油勘探"入地"</h2>
+                <p>团队研制的SiPM芯片作为石油探井装置的核心部件，在油田井下2000米进行探测作业。</p>
+
+            </div>
+        </div>
+
+
+        <div style="
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          gap: 3rem;
+          justify-content: center;
+          align-items: stretch;
+          margin-top: 5rem;
+          height: 50rem;
+        ">
+            <div class="tech2-scene-title">前沿应用探索</div>
+            <div style="
+            position: absolute;
+            left: 9rem;
+            top: 0;
+            width: 49rem;
+            height: 30rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url(/pic/Research/Collaboration/3-1.jpg);
+            background-size: cover;
+          "></div>
+            <div style="
+            position: absolute;
+            left: 36rem;
+            top: 10rem;
+            width: 22rem;
+            height: 20rem;
+            background: var(--theme-color1);
+            color: #fff;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 1.5rem 3rem 3rem 3rem;
+            box-sizing: border-box;
+          ">
+                <h2 style="
+              font-size: 1.8rem;
+              margin: 0 0 0.8rem 0;
+              text-align: left;
+              font-weight: 400;
+              line-height: 1.5;
+            ">
+                    疾病模型临床/临床前研究
+                </h2>
+                <p style="
+              font-size: 0.8rem;
+              text-align: left;
+              line-height: 1.5;
+              font-weight: lighter;
+            ">
+                    面向肿瘤、心脑血管和神经系统等重大疾病，开展从细胞、动物到人类的跨尺度、多模态分子影像研究。<br>
+                    通过临床与动物模型的影像数据融合与定量分析，实现疾病过程的可视化、定量化与动态追踪，揭示疾病发生发展的代谢与分子机制。为诊断评估与疗效验证提供影像学依据。
+                </p>
+                <a href="science-application02.htm" style="
+              color: inherit;
+              text-decoration: none;
+              position: absolute;
+              left: 18rem;
+              top: 18rem;
+            "><img src="/pic/more2.svg" alt="了解更多" class="more-icon2"></a>
+            </div>
+            <div style="
+            position: absolute;
+            left: 58rem;
+            top: 10rem;
+            width: 31.7rem;
+            display: block;
+            height: 20rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url(/pic/Research/Collaboration/3-2.jpg);
+            background-size: contain;
+          "></div>
+            <div style="
+            position: absolute;
+            left: 14rem;
+            top: 30rem;
+            width: 22rem;
+            height: 20rem;
+            background: var(--theme-color2);
+            color: #fff;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 1.5rem 3rem 3rem 3rem;
+            box-sizing: border-box;
+          ">
+                <h2 style="
+              font-size: 1.8rem;
+              margin: 0 0 0.8rem 0;
+              text-align: left;
+              font-weight: 400;
+              line-height: 1.5;
+            ">
+                    仪器性能评估与成像方法优化研究
+                </h2>
+                <p style="
+              font-size: 0.8rem;
+              text-align: left;
+              line-height: 1.5;
+              font-weight: lighter;
+            ">
+                    聚焦成像系统性能指标、重建算法及校准流程的系统优化，开展从硬件到方法学的完整系统评估与性能优化研究。<br>
+                    通过定制假体实验与活体研究结合，验证算法改进与系统优化的有效性，完善成像性能的量化与标准化体系，为绝对定量分析与多模态成像提供技术支撑。
+                </p>
+                <a href="science-application03.htm" style="
+              color: inherit;
+              text-decoration: none;
+              position: absolute;
+              left: 18rem;
+              top: 18rem;
+            "><img src="/pic/more2.svg" alt="了解更多" class="more-icon2"></a>
+            </div>
+            <div style="
+            position: absolute;
+            left: 36rem;
+            top: 30rem;
+            width: 34rem;
+            height: 20rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url(/pic/Research/Collaboration/3-3.jpg);
+            background-size: contain;
+          "></div>
+            <div style="
+            position: absolute;
+            right: 9rem;
+            top: 30rem;
+            width: 22rem;
+            height: 20rem;
+            background: var(--theme-color1);
+            color: #fff;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 1.5rem 3rem 3rem 3rem;
+            box-sizing: border-box;
+          ">
+                <h2 style="
+              font-size: 1.8rem;
+              margin: 0 0 0.8rem 0;
+              text-align: left;
+              font-weight: 400;
+              line-height: 1.5;
+            ">
+                    药代动力学与新药研发
+                </h2>
+                <p style="
+              font-size: 0.8rem;
+              text-align: left;
+              line-height: 1.5;
+              font-weight: lighter;
+            ">
+                    基于全数字PET平台，结合放射性药物示踪技术，通过体内药物分布与代谢过程的实时追踪，开展药代动力学（PK/PD）分析与作用机制研究。<br>
+                    结合影像参数建模与真实世界数据解析，揭示药物吸收、分布、代谢与排泄的动态规律，开辟药物开发新范式。为新药筛选、药效评价与临床转化提供定量化支撑。
+                </p>
+                <a href="science-application04.htm" style="
+              color: inherit;
+              text-decoration: none;
+              position: absolute;
+              left: 18rem;
+              top: 18rem;
+            "><img src="/pic/more2.svg" alt="了解更多" class="more-icon2"></a>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- 联系我们 -->
+        <div class="about-ov-partner-container" style="position: relative; width: 100%; height: 28rem; top: 8rem; ">
+            <div class="ov-partner-home"
+                style="position: absolute; left: 60%;  transform: translate(-50%, 0);  width: 68%;  max-width: 100rem; ">
+                <!-- Partner Images -->
+                <img src="/pic/join_us.jpg" alt="partner_pic"
+                    style="position: absolute; width: 60%;  object-fit: cover; left: 15%; transform: translate(-50%, -22%); z-index: 1;">
+
+                <div class="ov-partner-desc"
+                    style="position: absolute; right: 16%; top: 0rem; width: 60rem; height: 20rem; background: var(--theme-color1); color: #fff; padding: 2rem; box-sizing: border-box;">
+
+                    <div class="ov-partner-title"
+                        style="margin-top: 1rem; margin-left: 35rem; font-size: 2.6rem; font-weight: 600; line-height: 1.3;">
+                        <a href="/Contact/connect_ov.html" style="text-decoration: none; color: #fff;">科研合作 </a>
+                    </div>
+                    <div class="ov-partner-content"
+                        style="margin-top: 1.5rem; margin-left: 35rem; font-size: 1.2rem; line-height: 2rem; text-align: justify; text-justify: inter-ideograph;">
+                        <a>PETLab期待与来自世界各地的你相遇，<br>共同探索、发明、创新、创造！</a>
+                    </div>
+                    <div class="home-carousel__cta" style="margin-top: 2rem; margin-left: 35rem;"><a
+                            href="/Contact/connect_ov.html" class="cta--button">联系我们</span></a></div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+
+
+
+    <!-- 底部版权 -->
+    <div id="footer"></div>
+</body>

@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字PET实验室 Digital PET Laboratory(DPL) - 华中科技大学</title>
+    <link rel="icon" href="/pic/main/PETLAB_LOGO_Pure.png">
+    <meta name="keywords" content="数字PET实验室" />
+    <meta name="description" content="Digital PET Laboratory is advancing the scope of human health." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta property="og:title" content="Digital PET Lab | All Digital PET, A Reinvention" />
+    <meta property="og:description" content="Digital PET Laboratory is advancing the scope of human health." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://petlab.hust.edu.cn/" />
+    <meta property="og:site_name" content="Digital PET Laboratory" />
+    <meta property="og:image" content="/pic/main/PETLAB_LOGO.png" />
+    <link rel="dns-prefetch" href="/fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="/s.w.org" />
+    <link rel="canonical" href="https://petlab.hust.edu.cn/" />
+    <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/oembed/oembed.json" />
+    <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/oembed/oembed.xml" />
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- 免费商用中文字体 -->
+    <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" media="all"
+        href="//fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600i|Roboto+Condensed:700|Cardo:700">
+
+
+    <!-- 动画 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/footer.css">
+    <link rel="stylesheet" href="/style/image-index.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/research-ov.css">
+
+
+    <script>
+        // 加载头部
+        fetch("/header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        // 加载底部
+        fetch("/footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+
+
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src: url('/style/fonts/icomoon.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        /* 主容器 */
+        .research-ov-res-home {
+            position: relative !important;
+            width: 100% !important;
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            left: 0 !important;
+            transform: none !important;
+        }
+
+        /* 轮播最外层 */
+        .carousel-main {
+            position: relative !important;
+            width: 100% !important;
+            height: auto !important;
+            margin-top: 2rem !important;
+        }
+
+        /* 轮播外壳 - 隐藏超出部分 */
+        .carousel-wrapper {
+            width: 100% !important;
+            overflow: hidden !important;
+            position: relative !important;
+        }
+
+        /* 图片轨道 */
+        .carousel-track {
+            display: flex !important;
+            transition: transform 0.5s ease !important;
+            width: 100% !important;
+        }
+
+        /* 每一项占满宽度 */
+        .carousel-item {
+            flex: 0 0 100% !important;
+            width: 100% !important;
+            height: 30rem !important;
+            position: relative !important;
+        }
+
+        /* 图片强制显示 */
+        .project-carousel__image img {
+            width: 100% !important;
+            height: 30rem !important;
+            object-fit: cover !important;
+            display: block !important;
+            position: relative !important;
+            z-index: 1 !important;
+        }
+
+        /* 悬浮卡片层 */
+        .card-float-layer {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            pointer-events: none !important;
+            z-index: 2 !important;
+        }
+
+        .card-float-item {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            opacity: 0 !important;
+            transition: none !important;
+        }
+
+        .card-float-item.active {
+            opacity: 1 !important;
+            pointer-events: all !important;
+        }
+
+        /* 蓝色内容框 */
+        .project-carousel__content {
+            position: absolute !important;
+            left: 0 !important;
+            bottom: -10rem !important;
+            width: 70% !important;
+            height: 25rem !important;
+            background: #0f4c81 !important;
+            color: white !important;
+            padding: 2rem !important;
+            z-index: 10 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+        }
+
+        /* 强制文字白色 */
+        .project-carousel__title,
+        .project-carousel__title a,
+        .project-carousel__summary {
+            color: #ffffff !important;
+        }
+
+        .project-carousel__title {
+            font-size: 2.6rem !important;
+            margin-bottom: 1rem !important;
+        }
+
+        .project-carousel__summary {
+            line-height: 1.5 !important;
+            overflow: hidden !important;
+        }
+
+        /* 箭头和圆点 */
+        .carousel-controls {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 1.2rem !important;
+            margin-top: 1rem !important;
+        }
+
+        .carousel-arrow {
+            background: transparent !important;
+            border: none !important;
+            outline: none !important;
+            color: #fff !important;
+            font-size: 1.8rem !important;
+            cursor: pointer !important;
+        }
+
+        .carousel-dots {
+            display: flex !important;
+            gap: 0.8rem !important;
+        }
+
+        .dot {
+            width: 0.7rem !important;
+            height: 0.7rem !important;
+            border-radius: 50% !important;
+            background: rgba(255, 255, 255, 0.5) !important;
+        }
+
+        .dot.active {
+            background: #F45A2B !important;
+        }
+
+
+
+        /* 动态按钮 */
+        .home-carousel__cta {
+            margin-top: 10rem;
+            border-bottom: none;
+            color: #FFFFFF;
+        }
+
+        .cta--button {
+            color: #000;
+            text-decoration: none;
+            line-height: 1;
+            display: inline-block;
+            border: 0;
+            transition: 0.2s ease;
+            position: relative;
+            padding: 0 1rem 0 0.7rem;
+            font-size: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .cta--button:before {
+            content: "";
+            position: absolute;
+            top: 55%;
+            left: 0;
+            width: 0.2rem;
+            height: 100%;
+            background: #F45A2B;
+            transform: translateY(-50%);
+            transition: 0.2s ease;
+        }
+
+        .cta--button:after {
+            font-family: "icomoon" !important;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            content: "\e905";
+            position: relative;
+            font-size: 1rem;
+            top: -1px;
+            transition: 0.2s ease;
+            margin-left: 10px;
+        }
+
+        .cta--button:hover {
+            padding-left: 19px;
+            padding-right: 0;
+        }
+
+        .cta--button:hover:before {
+            width: 12px;
+        }
+
+
+        /* 三列网格 */
+        .updt3-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem 3rem;
+            padding-bottom: 4rem;
+        }
+
+        /* 卡片 */
+        .updt3-grid-card {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+        }
+
+        /* 卡片图片 */
+        .updt3-card-media {
+            width: 100%;
+            aspect-ratio: 890 / 700;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 1.2rem;
+        }
+
+        /* 卡片标题 */
+        .updt3-card-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #192b53;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .updt3-card-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .updt3-card-title a:hover {
+            color: #0071bc;
+        }
+
+        /* 卡片内容 */
+        .updt3-card-title-content {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #000;
+            margin-bottom: 1rem;
+            line-height: 2;
+        }
+
+        /* inline 按钮 */
+        .updt3-card-btn {
+            margin-top: auto;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #192b53;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .updt3-card-btn:hover {
+            color: #0071bc;
+        }
+
+        .updt3-card-btn::after {
+            content: "→";
+            font-size: 1.1rem;
+            transition: transform 0.2s;
+        }
+
+        .updt3-card-btn:hover::after {
+            transform: translateX(4px);
+        }
+
+
+
+        /* 🔥 强制修复：开放获取模块不飘出页面、永远在 footer 上方 */
+        .research-ov-collaboration-container {
+            position: relative !important;
+            top: 0 !important;
+            /* 保证内部绝对定位元素有空间 */
+            margin-bottom: 5rem !important;
+        }
+
+        /* 禁止内部元素把页面撑开异常 */
+        .rd-group,
+        .tabs,
+        .panel-content {
+            position: relative !important;
+        }
+    </style>
+
+
+
+</head>
+
+
+<body>
+    <!-- 头部菜单 -->
+    <div id="header"></div>
+
+    <main>
+        <!-- Hero -->
+        <div class="research-ov-section" style="margin: 0 auto;">
+            <!-- 顶部大图与标语 -->
+            <div class="research-ov-hero"
+                style="position: relative;  height: 30rem;  margin: 0 auto;  padding: 0; top: 3.5rem;">
+                <div class="main-carousel" style="position: relative; width: 100%; height: 100%; overflow: hidden;">
+                    <div class="main-carousel-images" style="position: relative; width: 100%; height: 100%;">
+                        <img src="/pic/Infrastructure/ov/content4.png" alt="图片3" class="about-ov-hero-img">
+                        <!-- 下半黑色透明渐变蒙版 -->
+                        <div class="hero-mask" style="
+                    position: absolute;
+                    bottom: 4.6rem;
+                    left: 0;
+                    width: 68%;
+                    height: 70%;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    background: linear-gradient(to top, rgba(0,0,0,1), transparent);
+                    z-index: 1;
+                "></div>
+
+                        <!-- 图片中间靠下 白色标题+副标题 -->
+                        <div class="hero-mask-title" style="
+                    position: absolute;
+                    left: 37%;
+                    bottom: 8rem;
+                    transform: translate(-50%, 0);
+                    text-align: left;
+                    color: #fff;
+                    z-index: 2;
+                ">
+                            <p style="margin:0 0 1rem; font-size: 3rem; font-weight: 600;">基础设施</p>
+                            <p style="margin:0; font-size: 1.2rem; font-weight: 600; opacity: 0.9;">
+                                建成标准化、规范化、可追溯的高水平科研设施
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 科研设施 -->
+        <div class="research-ov-tech-container" style="position: relative; width: 100%; height: 40rem;  top: 0rem;">
+            <!-- 背景贴图盒子 -->
+            <div
+                style="position: absolute; top: -5rem; left: 50%; transform: translate(-50%, 0); width: 100%; overflow: hidden; z-index: -1; ">
+                <div style="width: 100%; max-width: 100rem; margin: 0 auto;">
+                    <img src="/pic/Research/ov/ov2.png"
+                        style=" display: block; margin: 0 auto; width: 68%;  max-width: 100rem; height: auto; ">
+                </div>
+            </div>
+
+            <!-- 技术研究盒子 -->
+            <div class="research-ov-tech-home"
+                style="position: absolute;  top: 0rem;  left: 48%;  transform: translate(-47%, 0);  width: 50%;  max-width: 100rem; z-index: 3;">
+                <div class="research-ov-roadmap-Title" style="margin-bottom: 2rem; margin-top: 1rem;">
+                    <a style="font-size: 3rem; font-weight: 600; color: #000;">科研设施</a>
+                    <div class="home-carousel__cta"
+                        style="position: absolute; text-align: left; left: 34%; margin-top: -2.3rem;">
+                        <a href="/Infrastructure/infrastructure_facility.html" class="cta--button" style="color: #000; font-size: 1.5rem;">了解更多</span></a>
+                    </div>
+                </div>
+                <div class="rd-group">
+                    <!-- 左侧选项卡 -->
+                    <div class="tabs" id="tabs">
+                        <div class="tab-item active" data-panel="1">
+                            大科学装置
+                            <div class="indicator"></div>
+                        </div>
+                        <div class="tab-item" data-panel="2">
+                            J1
+                            <div class="indicator"></div>
+                        </div>
+                        <div class="tab-item" data-panel="3">
+                            J2
+                            <div class="indicator"></div>
+                        </div>
+                        <div class="tab-item" data-panel="4">
+                            启明学院
+                            <div class="indicator"></div>
+                        </div>
+                    </div>
+
+                    <!-- 右侧内容 -->
+                    <div class="panel-content" id="panels">
+                        <div class="panel active" data-panel="1">
+                            按照“国内领先、国际一流”的标准搭建的高层次“医学+”科学研究平台及人才培养平台，面向世界科技前沿、面向经济主战场、面向国家重大需求、面向人民生命健康开展医工、医理、医文交叉研究，是引领“医学+”发展的研究中心，也是数字PET建设的重要抓手...
+                        </div>
+                        <div class="panel" data-panel="2">
+                            推动医工交叉学科创新发展，与企业深度融合，与市场无缝对接，促进科技成果转化和产业化...
+                        </div>
+                        <div class="panel" data-panel="3">
+                            推动医工交叉学科创新发展，与院校深度交流，与医疗机构无缝对接，促进科技成果转化和产业化...
+                        </div>
+                        <div class="panel" data-panel="4">
+                            包含图像融合与处理中心以及多种仪器设备集成的综合性研究设施与公益性服务设施...
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+        <!-- 研究平台 -->
+        <div class="about-ov-impact-container" style="position: relative; width: 100%; height: 15rem; top: -5rem;">
+            <div class="ov-impact-home"
+                style="position: absolute; left: 54%;  transform: translate(-50%, 0);  width: 45%;  max-width: 100rem; ">
+                <div
+                    style="position: absolute; left: 100%;  transform: translate(-50%, 0%);  width: 68%;  max-width: 100rem; ">
+                    <img src="/pic/main/plug.png" alt="plug"
+                        style="position: absolute; width: 60%; object-fit: cover; left: 50%; transform: translate(-80%, -90%); z-index: 2;">
+                </div>
+                <div style="text-align: justify; text-justify: inter-ideograph;">
+                    <p><a style="font-size: 3rem; font-weight: 600;">研究平台</a></p>
+                </div>
+                <div style="text-align: justify; text-justify: inter-ideograph; margin-top: 2rem">
+                    <p><a style="font-size: 1.2rem; font-weight: 400; line-height: 2rem;">实验室从早期平台搭建、技术攻关逐步发展为集基础研究、技术创新、临床转化、人才培养于一体的高水平科研平台，先后完成关键技术突破、重大装备升级与科研体系完善，形成了以数字
+                            PET 为核心、核药研发为特色、临床转化为目标的稳定科研平台。
+                        </a>
+                    </p>
+                </div>
+                <div class="home-carousel__cta" style="position: absolute; top: 5rem; right: 0rem;"><a href="/Infrastructure/infrastructure_platform.html"
+                        class="cta--button" style="color: #000; font-size: 1.5rem;">
+                        了解更多</span></a></div>
+
+            </div>
+        </div>
+
+
+        <!-- 科学仪器 -->
+        <div style="position: relative; width: 100%; height:35rem; margin-top: 5rem; background: #f2f2f2; z-index: 1;">
+            <div style="width: 68%; max-width: 1200px; margin: 0 auto; padding: 0rem 0;">
+                <div style="position: absolute; margin-top: 4rem;">
+                    <h2 style="font-size:3rem; font-weight: 600; margin-bottom: 2rem; margin-left: -3rem;">
+                        科<br>学<br>仪<br>器</h2>
+                </div>
+                <!-- 轮播 -->
+                <div style="position: relative; width: 100%; height: 30rem;">
+
+                    <!-- 图片轮播 -->
+                    <div
+                        style="position: absolute; width: 100%; height: 100%; top:0; left:0rem; overflow: hidden; left: 5rem;">
+                        <div id="track" style="display: flex; height: 100%; transition: transform 0.5s;">
+                            <div style="width:100%; height:100%; flex-shrink:0;">
+                                <img src="/pic/Infrastructure/instrumentation/sys2.jpg"
+                                    style="width:100%; height:100%; object-fit:cover;">
+                            </div>
+                            <div style="width:100%; height:100%; flex-shrink:0;">
+                                <img src="/pic/Infrastructure/instrumentation/sys3.jpg"
+                                    style="width:100%; height:100%; object-fit:cover;">
+                            </div>
+                            <div style="width:100%; height:100%; flex-shrink:0;">
+                                <img src="/pic/Infrastructure/instrumentation/sys4.jpg"
+                                    style="width:100%; height:100%; object-fit:cover;">
+                            </div>
+                            <div style="width:100%; height:100%; flex-shrink:0;">
+                                <img src="/pic/Infrastructure/instrumentation/sys5.jpg"
+                                    style="width:100%; height:100%; object-fit:cover;">
+                            </div>
+                            <div style="width:100%; height:100%; flex-shrink:0;">
+                                <img src="/pic/Infrastructure/instrumentation/sys6.jpg"
+                                    style="width:100%; height:100%; object-fit:cover;">
+                            </div>
+                            <div style="width:100%; height:100%; flex-shrink:0;">
+                                <img src="/pic/Infrastructure/instrumentation/sys7.jpg"
+                                    style="width:100%; height:100%; object-fit:cover;">
+                            </div>
+                            <div style="width:100%; height:100%; flex-shrink:0;">
+                                <img src="/pic/Infrastructure/instrumentation/sys8.jpg"
+                                    style="width:100%; height:100%; object-fit:cover;">
+                            </div>
+                            <div style="width:100%; height:100%; flex-shrink:0;">
+                                <img src="/pic/Infrastructure/instrumentation/sys9.jpg"
+                                    style="width:100%; height:100%; object-fit:cover;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 蓝色卡片 -->
+                    <div
+                        style="position: absolute;left: -5rem ;bottom:-10rem; width:70%; height:13rem; background:#0f4c81; color:white; padding:2rem; z-index:10;">
+                        <div class="card-content" style="display:block;">
+                            <h3 style="font-size:2.6rem; margin-bottom:1.5rem; font-weight: 500;">世界首台动物全数字PET</h3>
+                        </div>
+                        <div class="card-content" style="display:none;">
+                            <h3 style="font-size:2.6rem; margin-bottom:1.5rem;font-weight: 500;">世界首台临床全数字PET</h3>
+                        </div>
+                        <div class="card-content" style="display:none;">
+                            <h3 style="font-size:2.6rem; margin-bottom:1.5rem;font-weight: 500;">世界首台商用脑部专用全数字</h3>
+                        </div>
+                        <div class="card-content" style="display:none;">
+                            <h3 style="font-size:2.6rem; margin-bottom:1.5rem;font-weight: 500;">世界首台头盔全数字PET</h3>
+                        </div>
+                        <div class="card-content" style="display:none;">
+                            <h3 style="font-size:2.6rem; margin-bottom:1.5rem;font-weight: 500;">质子刀全数字PET系统</h3>
+                        </div>
+                        <div class="card-content" style="display:none;">
+                            <h3 style="font-size:2.6rem; margin-bottom:1.5rem;font-weight: 500;">术中全数字PET系统</h3>
+                        </div>
+                        <div class="card-content" style="display:none;">
+                            <h3 style="font-size:2.6rem; margin-bottom:1.5rem;font-weight: 500;">变结构全数字PET系统</h3>
+                        </div>
+                        <div class="card-content" style="display:none;">
+                            <h3 style="font-size:2.6rem; margin-bottom:1.5rem;font-weight: 500;">双动态PET系统</h3>
+                        </div>
+
+
+                        <!-- 箭头 + 圆点 -->
+                        <div
+                            style="position:absolute; bottom:20px; left:50%; transform:translateX(-50%); display:flex; gap:20px; align-items:center;">
+                            <button id="prev"
+                                style="background:none; border:none; color:#fff; font-size:22px; cursor:pointer;">‹</button>
+
+                            <div style="display:flex; gap:10px;">
+                                <span class="dot"
+                                    style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.5; cursor:pointer;"></span>
+                                <span class="dot"
+                                    style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.5; cursor:pointer;"></span>
+                                <span class="dot"
+                                    style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.5; cursor:pointer;"></span>
+                                <span class="dot"
+                                    style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.5; cursor:pointer;"></span>
+                                <span class="dot"
+                                    style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.5; cursor:pointer;"></span>
+                                <span class="dot"
+                                    style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.5; cursor:pointer;"></span>
+                                <span class="dot"
+                                    style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.5; cursor:pointer;"></span>
+                                <span class="dot"
+                                    style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.5; cursor:pointer;"></span>
+                            </div>
+
+                            <button id="next"
+                                style="background:none; border:none; color:#fff; font-size:22px; cursor:pointer;">›</button>
+                        </div>
+                    </div>
+
+                    <div class="home-carousel__cta" style="position: absolute; left: 75%; margin-top: 35rem;">
+                        <a href="/Infrastructure/infrastructure_instrumentation.html" class="cta--button" style="color: #000; font-size: 1.5rem;">更多仪器</span></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- 开放获取 -->
+        <div class="research-ov-collaboration-container"
+            style="position: relative; width: 100%; height: 41rem; margin-top: 15rem; z-index: 2">
+            <h2 style="font-size: 3rem; font-weight: 600; margin: 7rem 0 0 25rem; text-align: left; color: #000; ">
+                开放获取
+            </h2>
+
+            <!-- 合作类型盒子 -->
+            <div
+                style="position: absolute; top: 6rem; left: 50%; transform: translate(-50%, 0); width: 68%; margin: 0 auto; height:20rem; background:#343434;">
+                <h2
+                    style="font-size: 2.2rem; font-weight: 600; margin: 2rem 0 0 4rem; text-align: left; color: #fff; z-index: 1;">
+                    开放仪器
+                </h2>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem; padding: 0 4rem; width: 70%; margin-top: 2rem;">
+                    <div
+                        style="background:rgba(255,255,255,0.15); border-radius:8px; padding:1.5rem 1rem; text-align:center; color:#fff; font-size:1.1rem;">
+                        <a style="text-decoration: none; color: #fff; font-size: 1.2rem;">动物全数字PET</a>
+                    </div>
+                    <div
+                        style="background:rgba(255,255,255,0.15); border-radius:8px; padding:1.5rem 1rem; text-align:center; color:#fff; font-size:1.1rem;">
+                        <a style="text-decoration: none; color: #fff; font-size: 1.2rem;">临床全数字PET</a>
+                    </div>
+                    <div
+                        style="background:rgba(255,255,255,0.15); border-radius:8px; padding:1.5rem 1rem; text-align:center; color:#fff; font-size:1.1rem;">
+                        <a style="text-decoration: none; color: #fff; font-size: 1.2rem;">脑部专用全数字PET</a>
+                    </div>
+                    <div
+                        style="background:rgba(255,255,255,0.15); border-radius:8px; padding:1.5rem 1rem; text-align:center; color:#fff; font-size:1.1rem;">
+                        <a style="text-decoration: none; color: #fff; font-size: 1.2rem;">头盔全数字PET</a>
+                    </div>
+                    <div
+                        style="background:rgba(255,255,255,0.15); border-radius:8px; padding:1.5rem 1rem; text-align:center; color:#fff; font-size:1.1rem;">
+                        <a style="text-decoration: none; color: #fff; font-size: 1.2rem;">质子刀数字PET系统</a>
+                    </div>
+                    <div
+                        style="background:rgba(255,255,255,0.15); border-radius:8px; padding:1.5rem 1rem; text-align:center; color:#fff; font-size:1.1rem;">
+                        <a style="text-decoration: none; color: #fff; font-size: 1.2rem;">更多仪器...</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 成功范例盒子 -->
+            <div
+                style="position: absolute; top: 26rem; left: 50%; transform: translate(-50%, 0); width: 68%; margin: 0 auto; height:20rem; background:#0f4c81;">
+                <h2
+                    style="font-size: 2.2rem; font-weight: 600; margin: 2rem 0 0 4rem; text-align: left; color: #fff; z-index: 1;">
+                    技术服务
+                </h2>
+                <div
+                    style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 2rem; padding: 0 4rem; width: 100%;">
+
+                    <div style="position:relative; border-radius:8px; overflow:hidden; height:10rem;">
+                        <img src="/pic/Research/ov/example1.jpg" style="width:100%;height:100%;object-fit:cover;">
+                        <div
+                            style="position:absolute;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center; text-align: center;">
+                            <a style="color:#fff;font-size:1.1rem;text-decoration:none;">临床前/<br>临床基础科学研究</a>
+                        </div>
+                    </div>
+
+                    <div style="position:relative; border-radius:8px; overflow:hidden; height:10rem;">
+                        <img src="/pic/Research/ov/example2.jpg" style="width:100%;height:100%;object-fit:cover;">
+                        <div
+                            style="position:absolute;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center; text-align: center;">
+                            <a style="color:#fff;font-size:1.1rem;text-decoration:none;">药物开发与药代动力学</a>
+                        </div>
+                    </div>
+
+                    <div style="position:relative; border-radius:8px; overflow:hidden; height:10rem;">
+                        <img src="/pic/Research/ov/example3.jpg" style="width:100%;height:100%;object-fit:cover;">
+                        <div
+                            style="position:absolute;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;">
+                            <a style="color:#fff;font-size:1.1rem;text-decoration:none;">动物医学与转化服务</a>
+                        </div>
+                    </div>
+
+                    <div style="position:relative; border-radius:8px; overflow:hidden; height:10rem;">
+                        <img src="/pic/Research/ov/example4.jpg" style="width:100%;height:100%;object-fit:cover;">
+                        <div
+                            style="position:absolute;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;">
+                            <a style="color:#fff;font-size:1.1rem;text-decoration:none;">多模态影像数据分析</a>
+                        </div>
+                    </div>
+
+                    <div style="position:relative; border-radius:8px; overflow:hidden; height:10rem;">
+                        <div
+                            style="position:absolute;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;">
+                            <a style="color:#fff;font-size:1.1rem;text-decoration:none;">更多服务...</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 建立合作盒子 -->
+            <div
+                style="position: absolute; top: 23.5rem; right: 18%; transform: translate(0, -60%); width: 20rem; margin: 0 auto; height:18rem; background:#0073CF;">
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a style="color: #fff; font-size: 2.2rem; font-weight: 600;">用户指南</a>
+                </div>
+                <div style="text-align: left; margin-top: 1.5rem; transform: translate(15%, 0); width: 80%;">
+                    <a
+                        style="color: #fff; font-size: 1.2rem; font-weight: 400; line-height: 1.7;">对我们的科学仪器/科技服务感兴趣？</a>
+                </div>
+                <div class="home-carousel__cta" style="position: absolute; margin-top: 2rem; margin-left: 2.5rem; "><a
+                        href="/Infrastructure/infrastructure_access.html" class="cta--button" style="color: #fff; font-size: 1.3rem;">
+                        了解更多</span></a></div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // 获取所有选项卡和面板
+        const tabItems = document.querySelectorAll('.tab-item');
+        const panels = document.querySelectorAll('.panel');
+
+        tabItems.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetPanel = tab.dataset.panel;
+
+                // 1. 取消所有激活状态
+                tabItems.forEach(item => item.classList.remove('active'));
+                panels.forEach(p => p.classList.remove('active'));
+
+                // 2. 激活当前点击项
+                tab.classList.add('active');
+                document.querySelector(`.panel[data-panel="${targetPanel}"]`).classList.add('active');
+            });
+        });
+    </script>
+
+
+    <script>
+        let current = 0;
+        const total = 8;
+        const track = document.getElementById("track");
+        const cards = document.querySelectorAll(".card-content");
+        const dots = document.querySelectorAll(".dot");
+
+        update();
+
+        function update() {
+            track.style.transform = `translateX(-${current * 100}%)`;
+
+            cards.forEach((el, i) => {
+                el.style.display = i === current ? "block" : "none";
+            });
+
+            // 🔥 强制橙色！优先级最高！一定生效！
+            dots.forEach((dot, i) => {
+                if (i === current) {
+                    dot.style.cssText = "background: #F45A2B !important; opacity:1 !important;";
+                } else {
+                    dot.style.cssText = "background: #ffffff !important; opacity:0.5 !important;";
+                }
+            });
+        }
+
+        document.getElementById("next").onclick = () => {
+            current = (current + 1) % total;
+            update();
+        };
+        document.getElementById("prev").onclick = () => {
+            current = (current - 1 + total) % total;
+            update();
+        };
+
+        dots.forEach((dot, i) => {
+            dot.onclick = () => {
+                current = i;
+                update();
+            };
+        });
+    </script>
+
+    <!-- 底部版权 -->
+    <div id="footer"></div>
+
+
+
+
+</body>
+
+</html>

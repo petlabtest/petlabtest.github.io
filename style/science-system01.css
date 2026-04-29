@@ -1,0 +1,186 @@
+html {
+  font-size: 1vw;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+}
+.system-main {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 更新后的system-hero样式 */
+.system-hero {
+  position: relative;
+  height: 45rem;
+}
+.system-hero-img {
+  position: absolute;
+  width: 91rem;
+  height: 45rem;
+  object-fit: cover;
+  left: 9rem;
+  background-size: cover;
+  background-repeat: no-peat;
+  background-position: center;
+}
+.system-hero-desc {
+  position: absolute;
+  left: 0rem;
+  top: 23rem;
+  width: 48rem;
+  height: 22rem;
+  background: var(--theme-banner);
+  color: #fff;
+  padding: 0 9rem 0 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.system-hero-title-big {
+  letter-spacing: 0.1rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-top: -2rem;
+}
+.system-hero-title {
+  margin-top: 3rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+.system-hero-text {
+  font-size: 1.1rem;
+  font-weight: lighter;
+  background: var(--theme-color2);
+  color: #fff;
+  padding: 3rem 9rem;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 2;
+}
+
+/* 保留其他部分的样式 */
+.system-devices {
+  padding: 2rem 0;
+  background: #f2f2f2;
+}
+.device-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0;
+  margin: 3rem 9rem 1rem 9rem;
+}
+.device-img {
+  width: 100%;
+  height: 18.6rem;
+  background-size: cover;
+  background-position: center;
+}
+.device-text {
+  padding: 2rem 2rem 0rem 2rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--theme-color1);
+  color: white;
+  text-align: left;
+}
+.device-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+}
+.device-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+.device-desc {
+    font-size: 0.8rem;
+    font-weight: 100;
+    line-height: 1.8;
+}
+.device-features {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.device-feature {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+.device-feature:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}
+.system-platforms {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+/*.platform-img {
+    width: 100%;
+    height: 30rem;
+    background-size: cover;
+    background-position: center;
+}
+.platform-text {
+  font-weight: bold;
+  text-align: center;
+  color: var(--theme-color1);
+  padding: 1rem 0;
+}*/
+
+/* fy */
+
+.platform-row {
+  margin: 3rem 0rem 1rem 9rem;
+  display: flex;
+  gap: 0px;
+}
+
+.platform-item {
+  position: relative;
+  flex: 1;
+  height: 29rem;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.platform-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* 白色透明度，营造浅灰效果 */
+  /* background: rgba(242, 242, 242, 0.7); */
+}
+
+.platform-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: lighter;
+    width: 100%;
+    line-height: 1.5;
+    z-index: 1;
+}
+
+/* fy */

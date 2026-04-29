@@ -1,0 +1,126 @@
+/* ====================================== */
+/* FOOTER.CSS — 三列完美垂直居中对齐版 */
+/* ====================================== */
+
+footer.dpl-footer {
+  width: 100%;
+  background-image: url("/pic/main/header_bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+/* 三列等高布局 */
+.footer-main {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+
+/* 每一列内部上下两行自动对齐 */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* -------------------- */
+/* 第一列：LOGO + 文字 */
+/* -------------------- */
+.footer-contact {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 第一行：LOGO + 文字 垂直居中 */
+.footer-top-row {
+  display: flex;
+  align-items: center;    /* 垂直居中 */
+  gap: 1rem;
+  min-height: 3.75rem;   /* 固定行高 */
+}
+
+.footer-top-row img {
+  height: 3.75rem;        /* LOGO 大小 */
+  width: auto;
+}
+.footer-top-row span {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 第二行：版权 → 与上面文字严格左对齐 */
+.footer-contact p {
+  font-size: 0.95rem;
+  color: #fff;
+  margin: 0;
+  line-height: 1.6;
+  padding-left: calc(3.75rem + 1rem); /* 👈 关键：和文字对齐 */
+}
+
+/* -------------------- */
+/* 第二列：导航 + 地址 */
+/* -------------------- */
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 导航行：高度和左边一致 + 垂直居中 */
+.footer-center .nav-row {
+  display: flex;
+  align-items: center; /* 🔥 垂直居中 */
+  min-height: 3.75rem; /* 🔥 和左边行高一样 */
+  gap: 0.9rem;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+
+/* 地址行 */
+.footer-center .address-row {
+  font-size: 0.95rem;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.footer-center a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* -------------------- */
+/* 第三列：二维码 + 邮箱 */
+/* -------------------- */
+.footer-qrcode-wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-qrcode {
+  height: 5rem;
+  width: 5rem;
+  object-fit: contain;
+}
+.footer-qrcode-wrap a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding-bottom: 0.2rem;
+}
