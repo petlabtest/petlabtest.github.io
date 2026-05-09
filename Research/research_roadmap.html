@@ -43,7 +43,118 @@
       .then((res) => res.text())
       .then((data) => (document.getElementById("footer").innerHTML = data));
   </script>
+
+
+
+  <style>
+    /* S型技术路线图 外层 */
+    .s-roadmap-wrap {
+      width: 100%;
+      padding: 5rem 0;
+      background: #0a101f;
+    }
+
+    .s-roadmap-container {
+      width: 68%;
+      max-width: 100rem;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .s-roadmap-title {
+      text-align: center;
+      color: #fff;
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 8rem;
+    }
+
+    /* 中间竖主线 */
+    .s-roadmap-line {
+      position: absolute;
+      left: 50%;
+      top: 6rem;
+      bottom: 0;
+      width: 4px;
+      transform: translateX(-50%);
+      background: linear-gradient(180deg, #0071BC, #00d8ff);
+      border-radius: 4px;
+    }
+
+    /* 每个路线项 基础样式 */
+    .s-roadmap-item {
+      position: relative;
+      display: flex;
+      margin-bottom: 4rem;
+    }
+
+    /* 左侧项 */
+    .s-roadmap-item.left {
+      justify-content: flex-start;
+      padding-right: calc(50% + 2rem);
+      text-align: right;
+    }
+
+    /* 右侧项 */
+    .s-roadmap-item.right {
+      justify-content: flex-end;
+      padding-left: calc(50% + 2rem);
+      text-align: left;
+    }
+
+    /* 中间圆点 */
+    .s-roadmap-dot {
+      position: absolute;
+      left: 50%;
+      top: 1rem;
+      transform: translateX(-50%);
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 50%;
+      background: #00d8ff;
+      box-shadow: 0 0 12px #00d8ff;
+      z-index: 2;
+    }
+
+    /* 卡片样式 磨砂高级感 */
+    .s-roadmap-card {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 0.8rem;
+      padding: 1.8rem 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .s-roadmap-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 10px 30px rgba(0, 216, 255, 0.15);
+    }
+
+    .s-roadmap-year {
+      color: #00d8ff;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .s-roadmap-text {
+      color: #eee;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  </style>
+
+
 </head>
+
+
+
+
+
+
 
 <body style="background-color: #f2f2f2; margin: 0; padding: 0; overflow-x: hidden;">
   <!-- 头部菜单 -->
@@ -66,7 +177,7 @@
   <main style="padding: 0; margin: 0; width: 100%; overflow-x: hidden;">
 
     <!-- 关键里程碑 -->
-    <div class="Roadmap_programme" style="margin-bottom: 8rem;">
+    <div class="Roadmap_programme" style="margin-bottom: 8rem; margin-top: 5rem;">
       <div style="margin-left: 15rem; margin-bottom: 2rem;">
         <a style="font-size: 2.6rem; font-weight: 500; color: var(--theme-color1);">关键里程碑</a>
       </div>
@@ -76,13 +187,16 @@
             在数字PET实验室推进MVT技术落地与应用扩展的过程中，明确了三大核心关键里程碑，为全数字PET技术的有序推进、分步实施提供清晰指引，支撑实验室实现长期发展目标。
           </p>
           <p style="font-size: 1.5rem; margin:1.5rem 0 0.5rem 0;">1、实现全数字化成像优势</p>
-          <p style="margin:0;">聚焦特定应用场景，通过技术优化与算法创新，率先实现软件符合架构相对于传统符合电路的性能优势，验证基于MVT方法全数字化成像的独特价值，为后续技术迭代与规模扩展奠定坚实基础。</p>
+          <p style="margin:0;">聚焦特定应用场景，通过技术优化与算法创新，率先实现软件符合架构相对于传统符合电路的性能优势，验证基于MVT方法全数字化成像的独特价值，为后续技术迭代与规模扩展奠定坚实基础。
+          </p>
 
           <p style="font-size: 1.5rem; margin:1.5rem 0 0.5rem 0;">2、构建优质资源接入的研究平台</p>
-          <p style="margin:0;">搭建世界一流的科研平台体系，保障研究人员能够高效获取前沿全数字PET成像资源；同时，为世界科研院所、医疗机构等用户群体提供高性能设备，降低全数字PET技术应用门槛，赋能产学研协同创新。</p>
+          <p style="margin:0;">
+            搭建世界一流的科研平台体系，保障研究人员能够高效获取前沿全数字PET成像资源；同时，为世界科研院所、医疗机构等用户群体提供高性能设备，降低全数字PET技术应用门槛，赋能产学研协同创新。</p>
 
           <p style="font-size: 1.5rem; margin:1.5rem 0 0.5rem 0;">3、研发即插即成像的新仪器新系统</p>
-          <p style="margin:0;">数字PET系统凭借模块化与开放式设计，支持即插即用的灵活扩展，用户可根据成像需求自由选配不同性能的探测器模块，不仅推动了PET成像从通用模式走向应用专用与精准诊疗，也显著拓展了其在临床与研究中的应用边界。</p>
+          <p style="margin:0;">
+            数字PET系统凭借模块化与开放式设计，支持即插即用的灵活扩展，用户可根据成像需求自由选配不同性能的探测器模块，不仅推动了PET成像从通用模式走向应用专用与精准诊疗，也显著拓展了其在临床与研究中的应用边界。</p>
         </div>
       </div>
     </div>
@@ -101,55 +215,67 @@
           height: auto;
         ">
           <!-- 第1行 -->
-          <div style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
+          <div
+            style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
             <h3 style="color:#fff; font-size:1.4rem; margin:0 0 0.8rem; font-weight:500;">探索前沿成像原理</h3>
             <p style="color:#fff; font-size:1rem; line-height:1.5; margin:0;">开展医学影像、核探测、人工智能等多学科交叉基础理论研究，突破成像核心机理。</p>
           </div>
-          <div style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
+          <div
+            style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
             <h3 style="color:#fff; font-size:1.4rem; margin:0 0 0.8rem; font-weight:500;">研发核心探测技术</h3>
             <p style="color:#fff; font-size:1rem; line-height:1.5; margin:0;">攻克高速脉冲数字化、高精度定位、高灵敏度探测等关键核心技术与器件。</p>
           </div>
-          <div style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
+          <div
+            style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
             <h3 style="color:#fff; font-size:1.4rem; margin:0 0 0.8rem; font-weight:500;">构建高端仪器装备</h3>
             <p style="color:#fff; font-size:1rem; line-height:1.5; margin:0;">研制全数字PET、质子治疗监测、脑部专用成像等高端医疗装备。</p>
           </div>
-          <div style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
+          <div
+            style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
             <h3 style="color:#fff; font-size:1.4rem; margin:0 0 0.8rem; font-weight:500;">推动临床转化应用</h3>
             <p style="color:#fff; font-size:1rem; line-height:1.5; margin:0;">推进前沿技术临床落地，服务疾病早筛、精准诊疗、脑科学等重大需求。</p>
           </div>
 
           <!-- 第2行 -->
-          <div style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
+          <div
+            style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
             <h3 style="color:#fff; font-size:1.4rem; margin:0 0 0.8rem; font-weight:500;">培养顶尖科研人才</h3>
             <p style="color:#fff; font-size:1rem; line-height:1.5; margin:0;">打造国际化人才培养平台，培养生物医学工程、核技术、计算机交叉型人才。</p>
           </div>
-          <div style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
+          <div
+            style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
             <h3 style="color:#fff; font-size:1.4rem; margin:0 0 0.8rem; font-weight:500;">制定行业技术标准</h3>
             <p style="color:#fff; font-size:1rem; line-height:1.5; margin:0;">牵头制定全数字PET相关标准，引领行业规范与技术发展方向。</p>
           </div>
-          <div style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
+          <div
+            style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
             <h3 style="color:#fff; font-size:1.4rem; margin:0 0 0.8rem; font-weight:500;">开展国际学术合作</h3>
             <p style="color:#fff; font-size:1rem; line-height:1.5; margin:0;">与全球顶尖实验室、医院、科研机构开展深度学术交流与联合研究。</p>
           </div>
-          <div style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
+          <div
+            style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
             <h3 style="color:#fff; font-size:1.4rem; margin:0 0 0.8rem; font-weight:500;">实现产业自主可控</h3>
             <p style="color:#fff; font-size:1rem; line-height:1.5; margin:0;">突破国外技术垄断，实现高端影像装备核心技术自主可控。</p>
           </div>
 
           <!-- 第3行 -->
-          <div style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
+          <div
+            style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
             <h3 style="color:#fff; font-size:1.4rem; margin:0 0 0.8rem; font-weight:500;">提升疾病诊断精度</h3>
             <p style="color:#fff; font-size:1rem; line-height:1.5; margin:0;">通过超高分辨率成像，实现肿瘤、神经疾病等早期精准诊断。</p>
           </div>
-          <div style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
+          <div
+            style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
             <h3 style="color:#fff; font-size:1.4rem; margin:0 0 0.8rem; font-weight:500;">支撑放疗精准引导</h3>
             <p style="color:#fff; font-size:1rem; line-height:1.5; margin:0;">开发质子/重离子治疗在线监测技术，提升放射治疗精准度。</p>
           </div>
-          <div style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
+          <div
+            style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
             <h3 style="color:#fff; font-size:1.4rem; margin:0 0 0.8rem; font-weight:500;">推动脑科学研究突破</h3>
             <p style="color:#fff; font-size:1rem; line-height:1.5; margin:0;">提供动态、高清脑功能成像工具，助力脑认知与脑疾病研究。</p>
           </div>
-          <div style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
+          <div
+            style="background:rgba(255,255,255,0.1); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
             <h3 style="color:#fff; font-size:1.4rem; margin:0 0 0.8rem; font-weight:500;">服务健康中国战略</h3>
             <p style="color:#fff; font-size:1rem; line-height:1.5; margin:0;">面向国家重大医疗需求，提供普惠、精准、前沿的医学影像解决方案。</p>
           </div>
@@ -158,12 +284,60 @@
     </div>
 
     <!-- 路线图 -->
-    <div class="Roadmap_roadmap" style="margin-bottom: 6rem;">
-      <div style="margin-left: 15rem; margin-bottom: 2rem;">
-        <a style="font-size: 2.6rem; font-weight: 500; color: var(--theme-color1);">路线图</a>
-      </div>
-      <div style="text-align: center;">
-        <img src="/pic/Research/roadmap/roadmap.png" width="68%" style="width:68%; height:auto; display:inline-block;">
+    <div class="s-roadmap-wrap">
+      <div class="s-roadmap-container">
+        <div class="s-roadmap-title">研究路线图</div>
+        <!-- 中间竖向主线 -->
+        <div class="s-roadmap-line"></div>
+
+        <!-- 第1个 左 -->
+        <div class="s-roadmap-item left">
+          <div class="s-roadmap-dot"></div>
+          <div class="s-roadmap-card">
+            <div class="s-roadmap-year">2000</div>
+            <div class="s-roadmap-text">基础理论起步，探测器关键技术预研</div>
+          </div>
+        </div>
+
+        <!-- 第2个 右 -->
+        <div class="s-roadmap-item right">
+          <div class="s-roadmap-dot"></div>
+          <div class="s-roadmap-card">
+            <div class="s-roadmap-year">2005</div>
+            <div class="s-roadmap-text">核心芯片与读出电路自主研发攻关</div>
+          </div>
+        </div>
+
+        <!-- 第3个 左 -->
+        <div class="s-roadmap-item left">
+          <div class="s-roadmap-dot"></div>
+          <div class="s-roadmap-card">
+            <div class="s-roadmap-year">2010</div>
+            <div class="s-roadmap-text">全数字PET架构方案定型，算法体系搭建</div>
+          </div>
+        </div>
+
+        <!-- 第4个 右 -->
+        <div class="s-roadmap-item right">
+          <div class="s-roadmap-dot"></div>
+          <div class="s-roadmap-card">
+            <div class="s-roadmap-year">2015</div>
+            <div class="s-roadmap-text">首台原理样机研制完成，性能验证测试</div>
+          </div>
+        </div>
+
+        <!-- 第5个 左 -->
+        <div class="s-roadmap-item left">
+          <div class="s-roadmap-dot"></div>
+          <div class="s-roadmap-card">
+            <div class="s-roadmap-year">2018</div>
+            <div class="s-roadmap-text">工程化版本落地，进入临床示范应用</div>
+          </div>
+        </div>
+
+        <!-- 后面你可以无限复制 左右交替加十几个节点 -->
+        <!-- 格式：left 左卡片 / right 右卡片 交替写 -->
+
       </div>
     </div>
 
