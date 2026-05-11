@@ -48,6 +48,113 @@
     </script>
     <script src="/scripts/industry02.js"></script>
 
+
+
+
+    <style>
+        /* 外层间距 */
+        .partner-section {
+            width: 100%;
+            margin: 5rem 0;
+        }
+
+        /* 卡片容器：宽屏舒展 */
+        .partner-card {
+            width: 92%;
+            max-width: 68rem;
+            margin: 0 auto;
+        }
+
+        /* 内容色块：图片文字都在里面 */
+        .partner-content {
+            width: 100%;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            box-sizing: border-box;
+        }
+
+        /* 左图右文 配色 */
+        .wrap-left .partner-content {
+            background: var(--theme-color2);
+        }
+
+        /* 右图左文 配色 */
+        .wrap-right .partner-content {
+            background: var(--theme-color1);
+            flex-direction: row-reverse;
+        }
+
+        /* 内嵌图片：在色块内部 */
+        .partner-img-inner {
+            width: 40%;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .partner-img-inner:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 文字区域 */
+        .partner-text {
+            flex: 1;
+            color: #fff;
+        }
+
+        /* 标题 */
+        .partner-title {
+            font-size: 2.4rem;
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+            line-height: 1.3;
+        }
+
+        /* 列表间距 */
+        .partner-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+        }
+
+        /* 单行项目 */
+        .partner-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.5rem;
+        }
+
+        /* 链接按钮质感 */
+        .partner-btn {
+            padding: 0.5rem 1.6rem;
+            background: rgba(255, 255, 255, 0.18);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 50px;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .partner-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+
+
+
+
+
+
+
+
+
 </head>
 
 
@@ -55,106 +162,104 @@
     <!-- 头部菜单 -->
     <div id="header"></div>
 
-    
+
     <div style="height: 8rem; width: 70%; margin-left: 15.5rem; margin-top: 8rem;">
         <p><a style="font-size: 3rem; font-weight: 600; margin-bottom: 5rem;margin-top: 5rem;">相关单位</a></p>
-        <p><a style="font-size: 1.5rem; font-weight: 400; margin-bottom: 5rem; margin-top: 5rem; line-height: 2.2rem;">共同构建 “资助赋能、协同发力、共赢发展” 的良好生态，助力科研事业高质量发展，实现科研价值与社会价值的双重提升。</a>
+        <p><a style="font-size: 1.5rem; font-weight: 400; margin-bottom: 5rem; margin-top: 5rem; line-height: 2.2rem;">共同构建
+                “资助赋能、协同发力、共赢发展” 的良好生态，助力科研事业高质量发展，实现科研价值与社会价值的双重提升。</a>
         </p>
     </div>
 
 
 
     <!-- 资助单位 -->
-    <div class="impact-container" style="position: relative; width: 100%; height: 40rem; top: 10rem;">
-        <div class="impact-home"
-            style="position: absolute; left: 60%;  transform: translate(-50%, 0);  width: 68%;  max-width: 100rem; ">
-            <!-- Images -->
-            <img src="/pic/About/Partner/about-ov-partner.png" alt="资助单位图片"
-                style="position: absolute; width: 35%; object-fit: cover; left: 5%; transform: translate(-50%, -20%); z-index: 2;">
-
-            <div class="impact-desc"
-                style="position: absolute; right: 16%; top: 0rem; width: 60rem; background: var(--theme-color2); color: #fff; padding: 2rem; box-sizing: border-box;">
-                <div class="impact-title"
-                    style="margin-top: 0rem; margin-left: 19rem; font-size: 2.3rem; font-weight: 600; line-height: 1.3;">
-                    <a style="text-decoration: none; color: #fff;">资助单位</a>
-                </div>
-                <div class="impact-content"
-                    style="margin-top: 3rem; margin-left: 19rem; font-size: 0.8rem; line-height: 1.5rem; text-align: justify; text-justify: inter-ideograph;">
-                    <p><div class="home-carousel__cta" style="margin-top: 0rem; margin-left: 0rem;"><a style="font-size: 1.5rem;">国家自然科学基金</a><a href="https://www.nsfc.gov.cn/"
-                        class="cta--button" style="margin-top: 0rem; margin-left: 5rem;">链接导航</span></a></div></p>
-                    <p><div class="home-carousel__cta" style="margin-top: 0rem; margin-left: 0rem;"><a style="font-size: 1.5rem;">国家科学技术部</a><a href="https://www.most.gov.cn/index.html"
-                        class="cta--button" style="margin-top: 0rem; margin-left: 5rem;">链接导航</span></a></div></p>
-                    <p><div class="home-carousel__cta" style="margin-top: 0rem; margin-left: 0rem;"><a style="font-size: 1.5rem;">湖北省科学技术厅</a><a href="https://kjt.hubei.gov.cn/"
-                        class="cta--button" style="margin-top: 0rem; margin-left: 5rem;">链接导航</span></a></div></p>
-                    <p><div class="home-carousel__cta" style="margin-top: 0rem; margin-left: 0rem;"><a style="font-size: 1.5rem;">华中科技大学</a><a href="https://www.hust.edu.cn/index.htm"
-                        class="cta--button" style="margin-top: 0rem; margin-left: 5rem;">链接导航</span></a></div></p>
+    <div class="partner-section">
+        <div class="partner-card wrap-left">
+            <div class="partner-content">
+                <!-- 图片直接放进内容色块里 -->
+                <img src="/pic/About/Partner/partner1.png" alt="资助单位图片" class="partner-img-inner">
+                <div class="partner-text">
+                    <div class="partner-title">资助单位</div>
+                    <div class="partner-list">
+                        <div class="partner-item">
+                            <span>国家自然科学基金</span>
+                            <a href="https://www.nsfc.gov.cn/" target="_blank" class="partner-btn">链接导航</a>
+                        </div>
+                        <div class="partner-item">
+                            <span>国家科学技术部</span>
+                            <a href="https://www.most.gov.cn/index.html" target="_blank" class="partner-btn">链接导航</a>
+                        </div>
+                        <div class="partner-item">
+                            <span>湖北省科学技术厅</span>
+                            <a href="https://kjt.hubei.gov.cn/" target="_blank" class="partner-btn">链接导航</a>
+                        </div>
+                        <div class="partner-item">
+                            <span>华中科技大学</span>
+                            <a href="https://www.hust.edu.cn/index.htm" target="_blank" class="partner-btn">链接导航</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-
 
     <!-- 合作单位 -->
-    <div class="impact-container" style="position: relative; width: 100%; height: 35rem; top: 1rem;">
-        <div class="impact-home"
-            style="position: absolute; left: 60%;  transform: translate(-50%, 0);  width: 68%;  max-width: 100rem; ">
-            <!-- Images -->
-            <img src="/pic/About/Partner/about-ov-partner.png" alt="合作单位图片"
-                style="position: absolute; width: 35%; object-fit: cover; left: 68%; transform: translate(-50%, -20%); z-index: 2;">
-
-            <div class="impact-desc"
-                style="position: absolute; left: -13%; top: 0rem; width: 60rem; background: var(--theme-color1); color: #fff; padding: 2rem; box-sizing: border-box;">
-                <div class="impact-title"
-                    style="margin-top: 0rem; margin-left: 1rem; font-size: 2.3rem; font-weight: 600; line-height: 1.3;">
-                    <a style="text-decoration: none; color: #fff;">合作单位</a>
-                </div>
-                <div class="impact-content"
-                    style="margin-top: 3rem; margin-left: 1rem; font-size: 0.8rem; line-height: 1.5rem; text-align: justify; text-justify: inter-ideograph;">
-                    <p><div class="home-carousel__cta" style="margin-top: 0rem; margin-left: 0rem;"><a style="font-size: 1.5rem;">华中科技大学国际医学中心</a><a href="https://imc.hust.edu.cn/"
-                        class="cta--button" style="margin-top: 0rem; margin-left: 5rem;">链接导航</span></a></div></p>
-                    <p><div class="home-carousel__cta" style="margin-top: 0rem; margin-left: 0rem;"><a style="font-size: 1.5rem;">华中科技大学同济医学院附属同济医院</a><a href="https://www.tjh.com.cn/index.html"
-                        class="cta--button" style="margin-top: 0rem; margin-left: 5rem;">链接导航</span></a></div></p>
-                    <p><div class="home-carousel__cta" style="margin-top: 0rem; margin-left: 0rem;"><a style="font-size: 1.5rem;">华中科技大学同济医学院附属协和医院</a><a href="https://www.whuh.com/public.htm"
-                        class="cta--button" style="margin-top: 0rem; margin-left: 5rem;">链接导航</span></a></div></p>
-                    <p><div class="home-carousel__cta" style="margin-top: 0rem; margin-left: 0rem;"><a style="font-size: 1.5rem;">中国科学技术大学</a><a href="https://www.ustc.edu.cn/index.htm"
-                        class="cta--button" style="margin-top: 0rem; margin-left: 5rem;">链接导航</span></a></div></p>
+    <div class="partner-section">
+        <div class="partner-card wrap-right">
+            <div class="partner-content">
+                <img src="/pic/About/Partner/partner2.png" alt="合作单位图片" class="partner-img-inner">
+                <div class="partner-text">
+                    <div class="partner-title">合作单位</div>
+                    <div class="partner-list">
+                        <div class="partner-item">
+                            <span>华中科技大学国际医学中心</span>
+                            <a href="https://imc.hust.edu.cn/" target="_blank" class="partner-btn">链接导航</a>
+                        </div>
+                        <div class="partner-item">
+                            <span>同济医学院附属同济医院</span>
+                            <a href="https://www.tjh.com.cn/index.html" target="_blank" class="partner-btn">链接导航</a>
+                        </div>
+                        <div class="partner-item">
+                            <span>同济医学院附属协和医院</span>
+                            <a href="https://www.whuh.com/public.htm" target="_blank" class="partner-btn">链接导航</a>
+                        </div>
+                        <div class="partner-item">
+                            <span>中国科学技术大学</span>
+                            <a href="https://www.ustc.edu.cn/index.htm" target="_blank" class="partner-btn">链接导航</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    
-
 
     <!-- 成果转化 -->
-    <div class="impact-container" style="position: relative; width: 100%; height: 25rem; top: 1rem;">
-        <div class="impact-home"
-            style="position: absolute; left: 60%;  transform: translate(-50%, 0);  width: 68%;  max-width: 100rem; ">
-            <!-- Images -->
-            <img src="/pic/About/Partner/about-ov-partner.png" alt="成果转化图片"
-                style="position: absolute; width: 35%; object-fit: cover; left: 5%; transform: translate(-50%, -20%); z-index: 2;">
-
-            <div class="impact-desc"
-                style="position: absolute; right: 16%; top: 0rem; width: 60rem; background: var(--theme-color2); color: #fff; padding: 2rem; box-sizing: border-box;">
-                <div class="impact-title"
-                    style="margin-top: 0rem; margin-left: 19rem; font-size: 2.3rem; font-weight: 600; line-height: 1.3;">
-                    <a style="text-decoration: none; color: #fff;">转化单位</a>
-                </div>
-                <div class="impact-content"
-                    style="margin-top: 3rem; margin-left: 19rem; font-size: 0.8rem; line-height: 1.5rem; text-align: justify; text-justify: inter-ideograph;">
-                    <p><div class="home-carousel__cta" style="margin-top: 0rem; margin-left: 0rem;"><a style="font-size: 1.5rem;">锐世医疗</a><a href="http://www.raysolution.com/"
-                        class="cta--button" style="margin-top: 0rem; margin-left: 5rem;">链接导航</span></a></div></p>
-                    <p><div class="home-carousel__cta" style="margin-top: 0rem; margin-left: 0rem;"><a style="font-size: 1.5rem;">瑞派宁</a><a href="https://ray-can.com/"
-                        class="cta--button" style="margin-top: 0rem; margin-left: 5rem;">链接导航</span></a></div></p>
-                    <p><div class="home-carousel__cta" style="margin-top: 0rem; margin-left: 0rem;"><a style="font-size: 1.5rem;">锐光科技</a><a href="https://www.ray-quant.com/"
-                        class="cta--button" style="margin-top: 0rem; margin-left: 5rem;">链接导航</span></a></div></p>
-                    <p><div class="home-carousel__cta" style="margin-top: 0rem; margin-left: 0rem;"><a style="font-size: 1.5rem;">锐光科技</a><a href="https://www.ray-quant.com/"
-                        class="cta--button" style="margin-top: 0rem; margin-left: 5rem;">链接导航</span></a></div></p>
+    <div class="partner-section">
+        <div class="partner-card wrap-left">
+            <div class="partner-content">
+                <img src="/pic/About/Partner/partner3.png" alt="成果转化图片" class="partner-img-inner">
+                <div class="partner-text">
+                    <div class="partner-title">转化单位</div>
+                    <div class="partner-list">
+                        <div class="partner-item">
+                            <span>锐世医疗</span>
+                            <a href="http://www.raysolution.com/" target="_blank" class="partner-btn">链接导航</a>
+                        </div>
+                        <div class="partner-item">
+                            <span>瑞派宁</span>
+                            <a href="https://ray-can.com/" target="_blank" class="partner-btn">链接导航</a>
+                        </div>
+                        <div class="partner-item">
+                            <span>锐光科技</span>
+                            <a href="https://www.ray-quant.com/" target="_blank" class="partner-btn">链接导航</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+
 
     <!-- 联系我们 -->
     <div class="about-ov-partner-container" style="position: relative; width: 100%; height: 28rem; top: 8rem; ">

@@ -66,7 +66,7 @@
             margin: 0 auto;
             padding: 0 2rem;
             width: 100%;
-            max-width: 1800px;
+            max-width: 70rem;
             /* 关键：设置最大宽度 */
         }
 
@@ -91,7 +91,7 @@
             display: flex;
             flex-direction: column;
             gap: 1rem;
-            background-color: var(--theme-color1);
+            background-color: var(--theme-color2);
         }
 
         .card h3 {
@@ -99,7 +99,7 @@
             font-weight: 600;
             color: #fff;
         }
-        
+
         .card h4 {
             font-size: 1.5rem;
             font-weight: 500;
@@ -194,171 +194,254 @@
 
         <div class="container">
 
-            <!-- ====================== 研究设施 ====================== -->
-            <h2 class="section-title">研究设施</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3><a>大科学装置</a></h3>
-                </div>
-                <div class="card">
-                    <h3><a>动物PET成像设施</a></h3>
-                </div>
-                <div class="card">
-                    <h3><a>更多设施...</a></h3>
+            <h2 class="section-title" style="margin-top: 5rem;">共享领域</h2>
+            <div class="Roadmap_programme" style="margin-bottom: 3rem; margin-top: 0rem;">
+                <div style="width: 100%; margin: 0 auto; display: flex; gap: 2rem;">
+
+                    <!-- 科研设施 -->
+                    <div
+                        style="flex:1; position: relative; padding: 3rem 2rem; background: linear-gradient(135deg, #005a8c, #0071BC); border-radius: 1.2rem; color: #fff; overflow: hidden;">
+                        <!-- 大号底纹数字 不顶头、居中偏上 -->
+                        <div
+                            style="position: absolute; top: 0.5rem; left: 1rem; font-size: 7rem; font-weight: 700; color: rgba(255,255,255,0.08); line-height: 1;">
+                            01</div>
+                        <!-- 内容整体下移 避开大数字 -->
+                        <div style="position: relative; z-index: 2; margin-top: 6rem;">
+                            <div
+                                style="font-size: 2.6rem; font-weight: 500; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid #fff;">
+                                研究设施
+                            </div>
+                            <div
+                                style="font-size: 1rem; line-height: 1.8; opacity: 0.92; text-align: justify; text-justify: inter-ideograph;">
+                                数字PET实验室先后承担多项国家级、省部级及横向重大科研项目，研究方向覆盖高端医疗装备、临床转化与精准诊疗等重点领域；建成集成像研究、核药开发、动物实验、临床前评价与数据分析于一体的高水平科研设施，形成标准化、规范化、可追溯的研究体系。
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 科研平台 -->
+                    <div
+                        style="flex:1; position: relative; padding: 3rem 2rem; background: linear-gradient(135deg, #005a8c, #0071BC); border-radius: 1.2rem; color: #fff; overflow: hidden;">
+                        <div
+                            style="position: absolute; top: 0.5rem; left: 1rem; font-size: 7rem; font-weight: 700; color: rgba(255,255,255,0.08); line-height: 1;">
+                            02</div>
+                        <div style="position: relative; z-index: 2; margin-top: 6rem;">
+                            <div
+                                style="font-size: 2.6rem; font-weight: 500; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid #fff;">
+                                研究平台
+                            </div>
+                            <div
+                                style="font-size: 1rem; line-height: 1.8; opacity: 0.92; text-align: justify; text-justify: inter-ideograph;">
+                                平台整合超级全数字 PET 系统、动物 PET 成像平台、多模态影像融合分析平台、MVT
+                                数字化理论与算法仿真平台等核心科研设施，构建从理论建模、算法研发、仿真验证、小动物在体成像到临床转化研究的全链条科研支撑体系。
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 科研仪器 -->
+                    <div
+                        style="flex:1; position: relative; padding: 3rem 2rem; background: linear-gradient(135deg, #005a8c, #0071BC); border-radius: 1.2rem; color: #fff; overflow: hidden;">
+                        <div
+                            style="position: absolute; top: 0.5rem; left: 1rem; font-size: 7rem; font-weight: 700; color: rgba(255,255,255,0.08); line-height: 1;">
+                            03</div>
+                        <div style="position: relative; z-index: 2; margin-top: 6rem;">
+                            <div
+                                style="font-size: 2.6rem; font-weight: 500; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid #fff;">
+                                科学仪器
+                            </div>
+                            <div
+                                style="font-size: 1rem; line-height: 1.8; opacity: 0.92; text-align: justify; text-justify: inter-ideograph;">
+                                数字PET实验室具有多种全数字PET系统、IBA 18 MeV 回旋加速器、Hidex 15O
+                                发生器、68Ge/68Ga发生器等先进科学仪器，不仅推动了PET成像从通用模式走向应用专用与精准诊疗，也显著拓展了其在临床与研究中的应用边界。
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="divider"></div>
-
-            <!-- ====================== Centers ====================== -->
-            <h2 class="section-title">研究平台</h2>
-            <div class="grid">
-                <div class="card" style="background-color: var(--theme-color2);">
-                    <h3><a>闪烁晶体研究平台</a></h3>
-                </div>
-                <div class="card" style="background-color: var(--theme-color2);">
-                    <h3><a>极弱光探测芯片研究平台</a></h3>
-                </div>
-                <div class="card" style="background-color: var(--theme-color2);">
-                    <h3><a>粒子探测模块研究平台</a></h3>
-                </div>
-                <div class="card" style="background-color: var(--theme-color2); ">
-                    <h3 ><a style="font-size: 1.6rem;">多模态分子影像与放射性药物研发平台</a></h3>
-                </div>
-                <div class="card" style="background-color: var(--theme-color2);">
-                    <h3><a>多智能体临床数据研究平台</a></h3>
-                </div>
-                <div class="card" style="background-color: var(--theme-color2);">
-                    <h3><a>更多平台...</a></h3>
-                </div>
-            </div>
-
-            <div class="divider"></div>
-
-            <!-- ====================== 科学仪器 ====================== -->
-            <h2 class="section-title">科学仪器</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3><a>动物全数字PET</a></h3>
-                </div>
-                <div class="card">
-                    <h3><a>临床全数字PET</a></h3>
-                </div>
-                <div class="card">
-                    <h3><a>脑部专用全数字PET</a></h3>
-                </div>
-                <div class="card">
-                    <h3><a>头盔全数字PET</a></h3>
-                </div>
-                <div class="card">
-                    <h3><a>质子刀全数字PET</a></h3>
-                </div>
-                <div class="card">
-                    <h3><a>术中全数字PET</a></h3>
-                </div>
-                <div class="card">
-                    <h3><a>变结构全数字PET</a></h3>
-                </div>
-                <div class="card">
-                    <h3><a>临床全数字PET</a></h3>
-                </div>
-                <div class="card">
-                    <h3><a>双动态全数字PET</a></h3>
-                </div>
-                <div class="card">
-                    <h3><a>IBA 18 MeV 回旋加速器</a></h3>
-                </div>
-                <div class="card">
-                    <h3><a>Hidex 15O 发生器</a></h3>
-                </div>
-                <div class="card">
-                    <h3><a>68Ge/68Ga 发生器</a></h3>
-                </div>
-                <div class="card">
-                    <h3><a>更多仪器...</a></h3>
-                </div>
-            </div>
-
-            <div class="divider"></div>
 
             <!-- ====================== Other Programs ====================== -->
-            <h2 class="section-title">技术服务</h2>
-            <div class="grid" style="
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            margin-bottom: 2rem;">
-                <div class="card" style="background-color: var(--theme-color2);">
-                    <h3><a>临床前/临床基础科学研究</a></h3>
-                    <p>1、提供肿瘤学、心血管、神经科学等方向的多模PET/CT、 MRI、超声及光学成像服务<br>
-                        2、开展在体代谢成像、分子通路研究与多模态影像融合分析<br>
-                        3、提供实验方案设计、动物造模与纵向动态成像方案制定<br>
-                        4、支持多中心协作研究与数据共享
-                    </p>
-                </div>
-                <div class="card" style="background-color: var(--theme-color2);">
-                    <h3><a>药物开发与药代动力学</a></h3>
-                    <p>1、提供放射性示踪剂合成与质量检测服务（18F、11C、15O、68Ga 等）<br>
-                        2、开展新药早期药代动力学（PK/PD）与靶向性评估研究<br>
-                        3、支持放射性标记药物研发、活体示踪与代谢分布成像<br>
-                        4、提供定量影像分析、药效评价及真实世界数据服务<br>
-                        5、承接CRO药物开发项目（含GLP/GMP级别合作）
-                    </p>
-                </div>
-                <div class="card" style="background-color: var(--theme-color2);">
-                    <h3><a>动物医学与转化应用</a></h3>
-                    <p>1、提供小动物健康评估与影像体检（PET/CT、MRI、超声）<br>
-                        2、小动物早期肿瘤检测与病灶定位成像<br>
-                        3、实验动物疗效跟踪与干预效果评估<br>
-                        4、动物-临床影像指标对照与生物标志物验证
-                    </p>
-                </div>
-                <div class="card" style="background-color: var(--theme-color2);">
-                    <h3><a>多模态影像数据分析</a></h3>
-                    <p>1、多模态影像融合配准<br>
-                        2、定量参数提取与精准解析<br>
-                        3、智能诊断与特征挖掘<br>
-                        4、多中心大数据标准化处理<br>
-                        5、科研建模与可视化输出
+            <h2 class="section-title" style="margin-top: 5rem;">技术服务</h2>
+            <!-- 技术服务（统一高级卡片样式） -->
+            <div class="Roadmap_programme" style="margin-bottom: 3rem; margin-top: 0rem;">
+                <div
+                    style="width: 100%; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
 
-                    </p>
+                    <!-- 04 临床前/临床基础科学研究 -->
+                    <div
+                        style="position: relative; padding: 3rem 2rem; background: linear-gradient(135deg, #005a8c, #0071BC); border-radius: 1.2rem; color: #fff; overflow: hidden; min-height: 240px;">
+                        <div style="position: relative; z-index: 2; ">
+                            <div
+                                style="font-size: 2.2rem; font-weight: 500; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid #fff;">
+                                临床前/临床基础科学研究
+                            </div>
+                            <div
+                                style="font-size: 1rem; line-height: 1.8; opacity: 0.92; text-align: justify; text-justify: inter-ideograph;">
+                                1、提供肿瘤学、心血管、神经科学等方向的多模PET/CT、MRI、超声及光学成像服务<br>
+                                2、开展在体代谢成像、分子通路研究与多模态影像融合分析<br>
+                                3、提供实验方案设计、动物造模与纵向动态成像方案制定<br>
+                                4、支持多中心协作研究与数据共享
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 05 药物开发与药代动力学 -->
+                    <div
+                        style="position: relative; padding: 3rem 2rem; background: linear-gradient(135deg, #005a8c, #0071BC); border-radius: 1.2rem; color: #fff; overflow: hidden; min-height: 240px;">
+                        <div style="position: relative; z-index: 2; ">
+                            <div
+                                style="font-size: 2.2rem; font-weight: 500; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid #fff;">
+                                药物开发与药代动力学
+                            </div>
+                            <div
+                                style="font-size: 1rem; line-height: 1.8; opacity: 0.92; text-align: justify; text-justify: inter-ideograph;">
+                                1、提供放射性示踪剂合成与质量检测服务（18F、11C、15O、68Ga等）<br>
+                                2、开展新药早期药代动力学（PK/PD）与靶向性评估研究<br>
+                                3、支持放射性标记药物研发、活体示踪与代谢分布成像<br>
+                                4、提供定量影像分析、药效评价及真实世界数据服务<br>
+                                5、承接CRO药物开发项目（含GLP/GMP级别合作）
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 06 动物医学与转化应用 -->
+                    <div
+                        style="position: relative; padding: 3rem 2rem; background: linear-gradient(135deg, #005a8c, #0071BC); border-radius: 1.2rem; color: #fff; overflow: hidden; min-height: 240px;">
+                        <div style="position: relative; z-index: 2; ">
+                            <div
+                                style="font-size: 2.2rem; font-weight: 500; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid #fff;">
+                                动物医学与转化应用
+                            </div>
+                            <div
+                                style="font-size: 1rem; line-height: 1.8; opacity: 0.92; text-align: justify; text-justify: inter-ideograph;">
+                                1、提供小动物健康评估与影像体检（PET/CT、MRI、超声）<br>
+                                2、小动物早期肿瘤检测与病灶定位成像<br>
+                                3、实验动物疗效跟踪与干预效果评估<br>
+                                4、动物-临床影像指标对照与生物标志物验证
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 07 多模态影像数据分析 -->
+                    <div
+                        style="position: relative; padding: 3rem 2rem; background: linear-gradient(135deg, #005a8c, #0071BC); border-radius: 1.2rem; color: #fff; overflow: hidden; min-height: 240px;">
+                        <div style="position: relative; z-index: 2; ">
+                            <div
+                                style="font-size: 2.2rem; font-weight: 500; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid #fff;">
+                                多模态影像数据分析
+                            </div>
+                            <div
+                                style="font-size: 1rem; line-height: 1.8; opacity: 0.92; text-align: justify; text-justify: inter-ideograph;">
+                                1、多模态影像融合配准<br>
+                                2、定量参数提取与精准解析<br>
+                                3、智能诊断与特征挖掘<br>
+                                4、多中心大数据标准化处理<br>
+                                5、科研建模与可视化输出
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
             <!-- ====================== 申请流程 ====================== -->
-            <h2 class="section-title">申请流程</h2>
-            <div class="grid" style="
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 1rem;
-            margin-bottom: 2rem;">
-                <div class="card">
-                    <h4><a>(一) 申请协议</a></h4>
-                    <p>1. 填写《项目申请协议》<br>
-                        2. 将申请协议提交至指定邮箱(petlab@hust.mail.edu.cn)，进行审核；<br>
-                        3. 审核通过后，请将申请协议打印一份，附项目负责人签字，在第一次实验时提交。</p>
+            <!-- 申请流程 → 独立高端流程样式 -->
+            <div style="margin-bottom: 3rem; margin-top: 6rem;">
+                <div
+                    style="background: #ffffff; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); padding: 3.5rem; border-left: 6px solid var(--theme-color1);">
 
-                    <h4><a>(二) 签订合同</a></h4>
-                    <p>1. 填写《仪器设备开放服务协议书》<br>
-                        2. 合同填写要求：
-                        应先签合同，再做技术服务；
-                        签订日期不应晚于有效期限的起始日期，有效期限应完全涵盖项目服务器；
-                        有效期限不应超过一年。</p>
-                    <h4><a>(三) 缴费流程</a></h4>
-                    <p>...</p>
-                    <h4><a>(四) 成为用户</a></h4>
-                    <p>...</p>
-                    <h4><a>(五) 预约实验：</a></h4>
-                    <p>1. 仪器对外开放时间：工作日08:30-17:00；<br>
-                        2. 请提前至少24小时预约、修改或取消实验；<br>
-                        3. 若有任何问题，可电话：027-87792294。<br>
-                        另，涉及到人或动物的实验，需先提供人或动物的伦理评审报告。
-                    </p>
+                    <!-- 标题 -->
+                    <div
+                        style="font-size: 2.4rem; font-weight: 600; color: #1a2338; margin-bottom: 2.5rem; display: flex; align-items: center;">
+                        <span
+                            style="width: 10px; height: 30px; background: var(--theme-color1); border-radius: 4px; margin-right: 1rem;"></span>
+                        申请流程
+                    </div>
+
+                    <!-- 步骤 1 -->
+                    <div style="margin-bottom: 2.2rem;">
+                        <div
+                            style="font-size: 1.7rem; font-weight: 600; color: var(--theme-color1); margin-bottom: 0.8rem; display: flex; align-items: center;">
+                            (一) 申请协议
+                        </div>
+                        <p
+                            style="font-size: 1.05rem; line-height: 1.85; color: #333; margin:0; padding-left: 3.2rem; text-align: justify;">
+                            1. 申请人按要求完整填写《项目申请协议》，确保信息真实、准确、完整；<br>
+                            2. 将电子版《项目申请协议》发送至实验室指定邮箱：petlab@hust.mail.edu.cn，提交线上审核；<br>
+                            3. 待审核通过后，自行打印纸质版协议1 份，由项目负责人亲笔签字，于首次实验到场时提交至实验室管理人员备案留存。
+                        </p>
+                    </div>
+
+                    <!-- 步骤 2 -->
+                    <div style="margin-bottom: 2.2rem;">
+                        <div
+                            style="font-size: 1.7rem; font-weight: 600; color: var(--theme-color1); margin-bottom: 0.8rem; display: flex; align-items: center;">
+                            (二) 签订合同
+                        </div>
+                        <p
+                            style="font-size: 1.05rem; line-height: 1.85; color: #333; margin:0; padding-left: 3.2rem; text-align: justify;">
+                            1. 申请人按统一模板规范填写《仪器设备开放服务协议书》；<br>
+                            2. 签订严格遵循先签协议、后开展技术服务的原则，严禁先实验后补签；<br>
+                            3. 协议签订日期不得晚于服务有效期限起始日期，服务有效期须完整覆盖项目全部实验周期；<br>
+                            4. 单次协议有效期限最长不超过1 年，超期需重新办理续签手续。
+                        </p>
+                    </div>
+
+                    <!-- 步骤 3 -->
+                    <div style="margin-bottom: 2.2rem;">
+                        <div
+                            style="font-size: 1.7rem; font-weight: 600; color: var(--theme-color1); margin-bottom: 0.8rem; display: flex; align-items: center;">
+                            (三) 缴费流程
+                        </div>
+                        <p
+                            style="font-size: 1.05rem; line-height: 1.85; color: #333; margin:0; padding-left: 3.2rem; text-align: justify;">
+                            1. 项目审核及服务协议签订完成后，按照实验室仪器开放收费标准核算实验费用；<br>
+                            2. 由实验室管理人员出具缴费通知单，申请人依据学校财务规定办理缴费手续；<br>
+                            3. 经费可通过校内经费划转、对公转账等方式缴纳，不接受个人现金私下缴费；<br>
+                            4. 缴费完成后，须将缴费凭证截图或回执提交实验室备案，由管理员确认到账后方可开通仪器使用权限；<br>
+                            5. 若实验过程中需延长周期、增加实验机时，须重新核定费用并补办缴费手续，方可继续使用；<br>
+                            6. 已缴费用不予无故退费；因实验室设备维护、平台停服等不可抗因素无法开展实验，可按规定办理顺延或退费申请。
+                        </p>
+                    </div>
+
+                    <!-- 步骤 4 -->
+                    <div style="margin-bottom: 2.2rem;">
+                        <div
+                            style="font-size: 1.7rem; font-weight: 600; color: var(--theme-color1); margin-bottom: 0.8rem; display: flex; align-items: center;">
+                            (四) 成为用户
+                        </div>
+                        <p
+                            style="font-size: 1.05rem; line-height: 1.85; color: #333; margin:0; padding-left: 3.2rem; text-align: justify;">
+                            1. 所有使用人员须完成实名注册与信息备案，如实填写姓名、单位、导师 / 项目负责人、联系方式、研究方向等信息；<br>
+                            2. 首次使用仪器前，须参加实验室组织的仪器操作培训与安全准入考核，考核合格后方可开通系统账号与预约权限；<br>
+                            3. 用户实行一人一号、专人专用原则，严禁账号转借、共用、代预约；<br>
+                            4. 进入实验室须遵守实验室安全管理条例、仪器操作规程及环境卫生管理规定，服从管理人员调度；<br>
+                            5. 账号有效期与项目服务协议有效期同步，项目结束或协议到期后自动冻结使用权限；如需继续使用，须重新办理申请、签约及备案手续；<br>
+                            6. 建立用户信用管理机制，对无故爽约、恶意占用机时、违规操作仪器等行为，视情节给予约谈、限制预约、停用账号等处理。
+                        </p>
+                    </div>
+
+                    <!-- 步骤 5 -->
+                    <div style="margin-bottom: 0;">
+                        <div
+                            style="font-size: 1.7rem; font-weight: 600; color: var(--theme-color1); margin-bottom: 0.8rem; display: flex; align-items: center;">
+                            (五) 预约实验
+                        </div>
+                        <p
+                            style="font-size: 1.05rem; line-height: 1.85; color: #333; margin:0; padding-left: 3.2rem; text-align: justify;">
+                            1. 仪器对外开放时段：工作日 08:30–17:00，节假日及非工作时间需另行专项申请；<br>
+                            2. 实验预约、时间调整及取消操作，须至少提前 24 小时在预约系统完成提交，杜绝临时占用、无故爽约；<br>
+                            3. 预约及实验过程中如有疑问、故障或特殊事宜，可致电实验室办公电话：027-87792294 咨询协调；<br>
+                            4. 凡涉及人体受试者或实验动物的相关研究，须提前提交完备的伦理审查审批报告，伦理材料审核通过后方可预约及开展实验，未提供者不予安排上机。
+                        </p>
+                    </div>
 
                 </div>
             </div>
 
         </div>
+
+
+
+
 
         <!-- 联系我们 -->
         <div class="about-ov-partner-container" style="position: relative; width: 100%; height: 28rem; top: 8rem; ">
