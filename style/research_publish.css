@@ -93,8 +93,8 @@ html {
   padding: 0.5rem 0.5rem 0.5rem 0;
 }
 .news-paper-img img {
-  height: 8rem;
-  width: 6rem;
+  height: 12rem;
+  width: 9rem;
 }
 .news-paper-title {
   flex: 1;
