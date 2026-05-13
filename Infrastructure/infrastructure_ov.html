@@ -346,6 +346,93 @@
 
 
 
+        /* 选项卡整体布局 —— 左右两栏 */
+        .rd-group {
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        /* 左侧选项卡列表 改成 30% */
+        .tabs {
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            gap: 2.2rem;
+            margin-top: 0.4rem;
+        }
+
+        /* 单个选项卡：文字 + 指示器（线+圆） */
+        .tab-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #0F4C81;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        /* 选中时文字变色 */
+        .tab-item.active {
+            color: #000;
+        }
+
+        /* 指示器容器：线 + 圆 */
+        .tab-item .indicator {
+            position: relative;
+            height: 2px;
+            background-color: #000;
+            margin-left: 1.2rem;
+            flex: 1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .tab-item.active .indicator {
+            opacity: 1;
+        }
+
+        /* 圆点：线右侧、右对齐、橙色 */
+        .tab-item .indicator::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #F45A2B;
+        }
+
+        /* 右侧内容区 改成 70% */
+        .panel-content {
+            width: 65%;
+            font-size: 1.2rem;
+            line-height: 2.7rem;
+            color: #333;
+            margin-top: 0rem;
+            text-align: justify;
+            text-justify: inter-ideograph;
+        }
+
+        .panel {
+            display: none;
+        }
+
+        .panel.active {
+            display: block;
+        }
+
+
+
+
+
         /* 🔥 强制修复：开放获取模块不飘出页面、永远在 footer 上方 */
         .research-ov-collaboration-container {
             position: relative !important;
@@ -431,19 +518,20 @@
                 <div class="research-ov-roadmap-Title" style="margin-bottom: 2rem; margin-top: 2rem;">
                     <a style="font-size: 3rem; font-weight: 600; color: #000;">科研设施</a>
                     <div class="home-carousel__cta"
-                        style="position: absolute; text-align: left; left: 34%; margin-top: -2.3rem;">
-                        <a href="/Infrastructure/infrastructure_facility.html" class="cta--button" style="color: #000; font-size: 1.5rem;">了解更多</span></a>
+                        style="position: absolute; text-align: left; left: 39%; margin-top: -2.3rem;">
+                        <a href="/Infrastructure/infrastructure_facility.html" class="cta--button"
+                            style="color: #000; font-size: 1.5rem;">了解更多</span></a>
                     </div>
                 </div>
                 <div class="rd-group">
                     <!-- 左侧选项卡 -->
                     <div class="tabs" id="tabs">
                         <div class="tab-item active" data-panel="1">
-                            大科学装置
+                            高端生物医学成像设施
                             <div class="indicator"></div>
                         </div>
                         <div class="tab-item" data-panel="2">
-                            动物PET成像设施
+                            动物PET成像节点设施
                             <div class="indicator"></div>
                         </div>
                     </div>
@@ -454,7 +542,8 @@
                             按照“国内领先、国际一流”的标准搭建的高层次“医学+”科学研究平台及人才培养平台，面向世界科技前沿、面向经济主战场、面向国家重大需求、面向人民生命健康开展医工、医理、医文交叉研究，是引领“医学+”发展的研究中心，也是数字PET建设的重要抓手...
                         </div>
                         <div class="panel" data-panel="2">
-                            建成集小动物 PET 扫描、多模态影像融合、活体动态示踪、高分辨率动态成像与定量参数分析于一体的专业化动物 PET 成像平台，完善从模型动物制备、示踪剂注射、在体成像到数据重建、特征提取、定量评估的全流程实验体系...
+                            建成集小动物 PET 扫描、多模态影像融合、活体动态示踪、高分辨率动态成像与定量参数分析于一体的专业化动物 PET
+                            成像平台，完善从模型动物制备、示踪剂注射、在体成像到数据重建、特征提取、定量评估的全流程实验体系...
                         </div>
                     </div>
                 </div>
@@ -485,8 +574,9 @@
                         </a>
                     </p>
                 </div>
-                <div class="home-carousel__cta" style="position: absolute; top: 5rem; right: 0rem;"><a href="/Infrastructure/infrastructure_platform.html"
-                        class="cta--button" style="color: #000; font-size: 1.5rem;">
+                <div class="home-carousel__cta" style="position: absolute; top: 5rem; right: 0rem;"><a
+                        href="/Infrastructure/infrastructure_platform.html" class="cta--button"
+                        style="color: #000; font-size: 1.5rem;">
                         了解更多</span></a></div>
 
             </div>
@@ -602,7 +692,8 @@
                     </div>
 
                     <div class="home-carousel__cta" style="position: absolute; left: 75%; margin-top: 35rem;">
-                        <a href="/Infrastructure/infrastructure_instrumentation.html" class="cta--button" style="color: #000; font-size: 1.5rem;">更多仪器</span></a>
+                        <a href="/Infrastructure/infrastructure_instrumentation.html" class="cta--button"
+                            style="color: #000; font-size: 1.5rem;">更多仪器</span></a>
                     </div>
 
                 </div>
@@ -714,11 +805,11 @@
                     <a style="color: #fff; font-size: 2.2rem; font-weight: 600;">用户指南</a>
                 </div>
                 <div style="text-align: left; margin-top: 1.5rem; transform: translate(15%, 0); width: 80%;">
-                    <a
-                        style="color: #fff; font-size: 1.2rem; font-weight: 400; line-height: 1.7;">对我们的科学仪器/科技服务感兴趣？</a>
+                    <a style="color: #fff; font-size: 1.2rem; font-weight: 400; line-height: 1.7;">对我们的科学仪器/科技服务感兴趣？</a>
                 </div>
                 <div class="home-carousel__cta" style="position: absolute; margin-top: 2rem; margin-left: 2.5rem; "><a
-                        href="/Infrastructure/infrastructure_access.html" class="cta--button" style="color: #fff; font-size: 1.3rem;">
+                        href="/Infrastructure/infrastructure_access.html" class="cta--button"
+                        style="color: #fff; font-size: 1.3rem;">
                         了解更多</span></a></div>
             </div>
         </div>
