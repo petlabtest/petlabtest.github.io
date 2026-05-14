@@ -53,46 +53,75 @@
   <!-- 头部菜单 -->
   <div id="header"></div>
   <!-- Hero -->
-  <div class="research-ov-section" style="margin: 0 auto;">
-    <!-- 顶部大图与标语 -->
-    <div class="research-ov-hero"
-      style="position: relative;  height: 30rem;  margin: 0 auto;  padding: 0; top: 3.5rem;">
-      <div class="main-carousel" style="position: relative; width: 100%; height: 100%; overflow: hidden;">
-        <div class="main-carousel-images" style="position: relative; width: 100%; height: 100%;">
-          <img src="/pic/news/hero.jpg" alt="图片3" class="about-ov-hero-img">
-          <!-- 下半黑色透明渐变蒙版 -->
-          <div class="hero-mask" style="
-                    position: absolute;
-                    bottom: 4.6rem;
-                    left: 0;
-                    width: 68%;
-                    height: 70%;
-                    left: 50%;
-                    transform: translate(-50%, 0);
-                    background: linear-gradient(to top, rgba(0,0,0,1), transparent);
-                    z-index: 1;
-                "></div>
 
-          <!-- 图片中间靠下 白色标题+副标题 -->
-          <div class="hero-mask-title" style="
-                    position: absolute;
-                    left: 37%;
-                    bottom: 8rem;
-                    transform: translate(-50%, 0);
-                    text-align: left;
-                    color: #fff;
-                    z-index: 2;
-                ">
-            <p style="margin:0 0 1rem; font-size: 3rem; font-weight: 600;">新闻与活动</p>
-            <p style="margin:0; font-size: 1.2rem; font-weight: 600; opacity: 0.9;">
-              阅读数字PET的最新进展与科学发现。
-            </p>
+  <div style="
+        background: var(--theme-color1);
+        padding: 3rem 0rem 0rem 9rem;
+        margin-bottom: 7rem;
+      ">
+      <div style="
+          margin: 0 auto;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+        ">
+        <div style="flex: 0.37; padding: 0 0rem 0rem 0">
+          <h1 style="
+              color: #fff;
+              font-size: 4rem;
+              font-weight: bold;
+              line-height: 1.4;
+              margin-bottom: 3.2rem;
+              margin-top: 12rem;
+              width: 34rem;
+            ">
+            News  & Events
+          </h1>
+          <div style="color: #fff; font-size: 1.2rem; margin-bottom: 1.5rem; width: 85%; text-align: justify; line-height: 2.5rem;">
+            更新实验室重大科研进展、重点专项攻关动态、学术会议参会与举办、产学研合作签约等核心新闻，精准传递前沿技术突破与科研成果转化信息。
           </div>
-
+        </div>
+        <div style="
+            flex: 0.63;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background: var(--theme-color2);
+            padding: 2rem 0 2rem 0;
+            margin-bottom: -4rem;
+          ">
+          <div style="display: flex">
+            <img src="/pic/news/1.jpg" alt="团队活动1" style="
+                width: 100%;
+                height: 10rem;
+                object-position: center;
+                object-fit: cover;
+                background: #eee;
+              ">
+          </div>
+          <div style="display: flex">
+            <img src="/pic/news/2.jpg" alt="团队活动2" style="
+                width: 100%;
+                height: 12rem;
+                object-position: center;
+                object-fit: cover;
+                background: #eee;
+              ">
+          </div>
+          <div style="display: flex">
+            <img src="/pic/news/3.jpg" alt="团队活动3" style="
+                width: 100%;
+                height: 10rem;
+                object-position: center;
+                object-fit: cover;
+                background: #eee;
+              ">
+          </div>
         </div>
       </div>
     </div>
-  </div>
+
+
   <main style="margin: 0 auto; width: 68%;">
     <!-- ============================================================================================= -->
     <!-- Hero -->
@@ -103,7 +132,7 @@
     <!-- Focused news-->
     <!-- ============================================================================================= -->
     <div class="focus-news-container">
-      <h2 class="focus-news-title">焦点新闻</h2>
+      <h2 class="focus-news-title" style="z-index: 2; font-size: 3rem; margin-left: 1rem;">焦点新闻</h2>
 
       <div class="focus-news-wrapper">
         <!-- 左侧主要文章 -->
@@ -184,7 +213,6 @@
       </a>
     </div>
     <div><br /></div>
-    <div><br /></div>
 
     <!-- ============================================================================================= -->
     <!-- Latest  -->
@@ -192,10 +220,10 @@
     <div class="tc-pt-b-container">
       <!-- 标题 + 右侧按钮 -->
       <div class="tc-pt-b-header">
-        <h2 class="tc-pt-b-title">前沿速递</h2>
+        <h2 class="tc-pt-b-title" style="z-index: 2; font-size: 3rem; margin-left: 1rem;">前沿速递</h2>
       </div>
       <!-- 三列网格卡片 -->
-      <div class="updt3-grid">
+      <div class="updt3-grid" style="margin-top: -2rem;">
         <!-- 1 -->
         <div class="updt3-grid-card">
           <img class="updt3-card-media" src="/pic/pic_pbt.jpg" alt="1" />
@@ -242,10 +270,10 @@
     <div class="tc-pt-b-container">
       <!-- 标题 + 右侧按钮 -->
       <div class="tc-pt-b-header">
-        <h2 class="tc-pt-b-title">人物故事</h2>
+        <h2 class="tc-pt-b-title" style="z-index: 2; font-size: 3rem; margin-left: 1rem;">人物故事</h2>
       </div>
       <!-- 双视频并排模块 -->
-      <div class="dc-video-grid">
+      <div class="dc-video-grid" style="margin-top: -2rem;">
         <!-- 视频 1 -->
         <a href="https://mp.weixin.qq.com/s/Vl7t9qjQ9BVtFDcHwNoX_g" target="_blank" class="dc-video-card">
           <div class="dc-video-cover">
@@ -274,11 +302,11 @@
     <div id="news_event_focus" class="tc-pt-b-container" style="margin-top: 4rem;">
       <!-- 标题 + 右侧按钮 -->
       <div class="tc-pt-b-header">
-        <h2 class="tc-pt-b-title">学术活动</h2>
+        <h2 class="tc-pt-b-title" style="z-index: 2; font-size: 3rem; margin-left: 1rem;">学术活动</h2>
       </div>
 
       <!-- 三列新闻卡片 -->
-      <div class="tc-pt-b-grid-3" style="margin-top: 0rem;">
+      <div class="tc-pt-b-grid-3" style="margin-top: -2rem;">
         <!-- 卡片 1 -->
         <div class="tc-pt-b-card">
           <!-- 顶部区域：标题+日期+简介 顶部对齐 -->
@@ -337,9 +365,9 @@
     <!-- 科学研究 -->
     <!-- 国际会议 -->
     <div class="tc-pt-b-header">
-      <h2 class="tc-pt-b-title">国际会议</h2>
+      <h2 class="tc-pt-b-title" style="z-index: 2; font-size: 3rem; margin-left: 1rem;">国际会议</h2>
     </div>
-    <div style="position: relative; width: 100%; height:33rem; margin-top: 1rem; background: #f2f2f2; z-index: 1;">
+    <div style="position: relative; width: 100%; height:33rem; margin-top: -8rem; background: #f2f2f2; z-index: 1;">
       <div style="width: 68%; margin: 0 auto; padding: 0rem 0; margin-left: 16rem;">
         <!-- 轮播 -->
         <div style="position: relative; width: 100%; height: 30rem;">
