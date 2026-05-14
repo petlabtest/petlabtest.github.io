@@ -33,9 +33,8 @@
   <link rel="stylesheet" href="/style/main.css">
   <link rel="stylesheet" href="/style/about_ov.css">
   <link rel="stylesheet" href="/style/science-research01.css">
-  <link rel="stylesheet" href="/style/science-tech01.css">
   <link rel="stylesheet" href="/style/science-method01.css" />
-  <link rel="stylesheet" href="/style/science-initiatives.css" />
+  <link rel="stylesheet" href="/style/science-tech02.css">
 
 
 
@@ -51,6 +50,198 @@
       .then(data => document.getElementById("footer").innerHTML = data);
   </script>
 
+
+  <style>
+    .tech2-section {
+      position: relative;
+      margin: 6rem 0;
+      padding: 0;
+      height: 40rem;
+    }
+
+    .tech2-section-title-bg {
+      position: absolute;
+      top: 10rem;
+      left: 0rem;
+      width: 93rem;
+      height: 32rem;
+      background: var(--theme-color1);
+      z-index: 1;
+    }
+
+    .tech2-section-title {
+      position: absolute;
+      top: 4rem;
+      left: 9rem;
+      width: 60rem;
+      color: var(--theme-color1);
+      font-size: 2.4rem;
+      font-weight: 400;
+      z-index: 2;
+      margin: 0rem 0rem 1rem 0rem;
+    }
+
+    .tech2-section-text1,
+    .tech2-section-text2,
+    .tech2-section-text3,
+    .tech2-section-text4,
+    .tech2-section-text5 {
+      position: absolute;
+      left: 1.875rem;
+      /*width: 16rem;*/
+      color: #fff;
+      margin: 0;
+      z-index: 2;
+    }
+
+    .tech2-section-text1 {
+      top: 14rem;
+      left: 9rem;
+      width: 60rem;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    .tech2-section-text2 {
+      font-weight: 300;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      width: 30rem;
+      top: 35rem;
+      left: 9rem;
+    }
+
+    .tech2-section-text3 {
+      font-weight: 300;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      width: 16rem;
+      top: 35rem;
+      left: 38rem;
+    }
+
+    .tech2-section-text4 {
+      font-weight: 300;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      width: 16rem;
+      top: 17rem;
+      left: 62.5rem;
+    }
+
+    .tech2-section-text5 {
+      font-weight: 300;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      width: 16rem;
+      top: 40rem;
+      left: 62.5rem;
+    }
+
+    .tech2-section-img1,
+    .tech2-section-img2,
+    .tech2-section-img3,
+    .tech2-section-img4 {
+      position: absolute;
+      width: 12.5rem;
+      height: 9.375rem;
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+    }
+
+    .tech2-section-img1 {
+      top: 20rem;
+      left: 38rem;
+      height: 15rem;
+      width: 23rem;
+    }
+
+    .tech2-section-img2 {
+      left: 8.9rem;
+      top: 20rem;
+      height: 15rem;
+      width: 28rem;
+    }
+
+    .tech2-section-img3 {
+      top: -2rem;
+      right: 7rem;
+      height: 19rem;
+      width: 30rem;
+    }
+
+    .tech2-section-img4 {
+      top: 20rem;
+      right: 7rem;
+      height: 20rem;
+      width: 30rem;
+    }
+
+    .tech2-section-blue {
+      background: var(--theme-color1);
+      color: #fff;
+    }
+
+    .tech2-section-gray {
+      background: var(--theme-color2);
+      color: #fff;
+    }
+
+    .tech2-section-title h2 {
+      font-size: 1.3em;
+      margin-bottom: 0.75rem;
+    }
+
+    .tech2-section-title p {
+      font-size: 1em;
+      margin: 0;
+    }
+
+    .tech2-section-imgs {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .tech2-section-imgs img {
+      width: 12rem;
+      height: auto;
+    }
+
+    .tech2-section-blocks {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .tech2-block {
+      flex: 1;
+      min-width: 10rem;
+      padding: 1.2rem 1rem;
+      font-size: 1em;
+      font-weight: bold;
+      text-align: center;
+      box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.04);
+    }
+
+    .tech2-block-blue {
+      background: var(--theme-color1);
+
+      color: #fff;
+    }
+
+    .tech2-block-gray {
+      background: var(--theme-color2);
+
+      color: #fff;
+    }
+  </style>
+
+
 </head>
 
 
@@ -58,22 +249,19 @@
   <!-- 头部菜单 -->
   <div id="header"></div>
 
-
-
-  <main>
-    <!-- 顶部大图与标语 -->
-    <div style="
+  <!-- 顶部大图与标语 -->
+  <div style="
           position: relative;
           left: 0;
           top: 0;
           width: 100rem;
           height: 53rem;
         ">
-      <!-- 轮播图区域 -->
-      <div class="science-carousel-images">
-        <img src="/pic/Research/Initiatives/sys1.jpg" alt="应用研究平台主图1" class="science-carousel-image">
-      </div>
-      <div style="
+    <!-- 轮播图区域 -->
+    <div class="science-carousel-images">
+      <img src="/pic/Research/Initiatives/sys1.jpg" alt="应用研究平台主图1" class="science-carousel-image">
+    </div>
+    <div style="
             position: absolute;
             left: 49rem;
             top: 23rem;
@@ -87,19 +275,19 @@
             line-height: 2.5;
             padding: 1.5rem 9rem 4rem 3rem;
           ">
-        <h1 style="margin: 2rem 0 0 0; font-size: 4rem; font-weight: 600">
-          创新系统应用研究
-        </h1>
-        <h2 style="
+      <h1 style="margin: 2rem 0 0 0; font-size: 4rem; font-weight: 600">
+        创新系统应用研究
+      </h1>
+      <h2 style="
               margin: 2rem 0;
               font-size: 2.2rem;
               font-weight: 300;
               line-height: 1.35;
             ">
-          赋能科研升级，引领技术转化新方向
-        </h2>
-      </div>
-      <div style="
+        赋能科研升级，引领技术转化新方向
+      </h2>
+    </div>
+    <div style="
             position: absolute;
             left: 0rem;
             top: 40rem;
@@ -113,342 +301,301 @@
             line-height: 2;
             padding: 3.7rem 8rem 0rem 8rem;
           ">
-        <p style="margin: 0; font-size: 0.86rem; font-weight: lighter">
-          创新系统应用研究是实验室核心科研方向之一，秉持“原创引领、应用导向、协同赋能”的理念，聚焦科研系统的技术创新与场景化落地，打破学科壁垒与技术边界，依托实验室核心技术积累，开展跨领域、一体化的系统应用研究与创新实践，推动科研技术从“实验室样机”向“实用化系统”转化，从“单一技术”向“集成应用”升级，彰显科研平台的创新活力与应用价值。
-          同时聚焦系统集成创新、应用场景拓展、技术优化迭代三大重点，通过跨学科协同、产学研联动，研发适配不同场景的创新应用系统，攻克系统应用中的关键技术难题，推动科研成果转化落地，为生命科学、能源科学、核科学等领域的科研突破与产业升级提供核心支撑，助力实验室实现“原创性、交叉性、颠覆性”的技术创新目标。
-        </p>
+      <p style="margin: 0; font-size: 0.86rem; font-weight: lighter">
+        创新系统应用研究是实验室核心科研方向之一，秉持“原创引领、应用导向、协同赋能”的理念，聚焦科研系统的技术创新与场景化落地，打破学科壁垒与技术边界，依托实验室核心技术积累，开展跨领域、一体化的系统应用研究与创新实践，推动科研技术从“实验室样机”向“实用化系统”转化，从“单一技术”向“集成应用”升级，彰显科研平台的创新活力与应用价值。
+        同时聚焦系统集成创新、应用场景拓展、技术优化迭代三大重点，通过跨学科协同、产学研联动，研发适配不同场景的创新应用系统，攻克系统应用中的关键技术难题，推动科研成果转化落地，为生命科学、能源科学、核科学等领域的科研突破与产业升级提供核心支撑，助力实验室实现“原创性、交叉性、颠覆性”的技术创新目标。
+      </p>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- 主体内容 -->
+  <section class="conference-list">
+
+
+    <div style="position: relative; margin: 6rem 0; padding: 0; height: 35rem;">
+      <div
+        style="position: absolute; top: 10rem; left: 0rem; width: 93rem; height: 32rem; background: var(--theme-color1); z-index: 1;">
       </div>
+      <h2
+        style="position: absolute; top: 4rem; left: 9rem; width: 60rem; color: var(--theme-color1); font-size: 2.4rem; font-weight: 400; z-index: 2; margin: 0rem 0rem 1rem 0rem;">
+        质子刀PET应用研究
+      </h2>
+      <p class="tech2-section-text1" style="margin-top: -2rem; line-height: 2rem;">
+        <b>首次</b>看到质子治疗的四维剂量分布，射程分辨率达到1 mm；高清三维影像<br>
+        <b>首次</b>看到质子治疗过程中的糖代谢变化及FDG和质子信号的混叠模式<br>
+        <b>首次</b>探究了打药时机对质子治疗过程中糖代谢观测的影响<br>
+
+      </p>
+      <p class="tech2-section-text2">
+        质子治疗与乏氧的互作机制
+      </p>
+      <p class="tech2-section-text3">
+        质子治疗与免疫治疗的协同作用机制
+      </p>
+      <p class="tech2-section-text4">质子可变RBE建模</p>
+      <p class="tech2-section-text5">FLASH效应生物学机制</p>
+
+
+      <div class="tech2-section-img1" style="background-image: url('/pic/Research/sci4/sys1-1.png')"></div>
+      <div class="tech2-section-img2" style="background-image: url('/pic/Research/sci4/sys1-2.png')"></div>
+      <div class="tech2-section-img3" style="background-image: url('/pic/Research/sci4/sys1-3.png')"></div>
+      <div class="tech2-section-img4" style="background-image: url('/pic/Research/sci4/sys1-4.png')"></div>
     </div>
 
 
-    <div class="content-container">
-      <!-- Section 1: 1蓝、1白、1蓝、1 -->
-      <section class="content-section" style="height: 45rem">
-        <div class="section-title" style="
-            left: 7rem;
-            top: 12rem;
-            width: 30rem;
-            height: 5rem;
-            color: var(--theme-color1);
-            font-size: 2.5rem;
-            font-weight: 500;
-          ">
-          质子刀全数字PET系统
-        </div>
-        <div class="section-text" style="
-            left: 11rem;
-            top: 22rem;
-            width: 30rem;
-            height: 10rem;
-            color: #fff;
-            z-index: 4;
-            line-height: 1.8;
-            text-align: justify;
 
-          ">
-          基于采用 MVT 技术的全数字 PET 探测器，成功研发质子治疗专用全数字 PET 原型机。基于该探测器的快速采样和数据传输，系统拥有很好的计数率，在束期间实际测量的平均计数率为4.85
-          Mcps。考虑到原位集成的便携性以及避免系统部件对束流的干扰，系统采用平板设计，使得容易调整系统的成像视野大小；在算法方面，开
-          发基于噪声物理特性的射频相位（radio frequency delta time，RfDt）去噪方法，成功抑制在束期间的背景噪声，提升了在线在束 PET 成像质量。
-        </div>
-        <div class="section-bg" style="
-            background: var(--theme-color1);
-            left: 9rem;
-            top: 20rem;
-            width: 35rem;
-            height: 25rem;
-            z-index: 3;
-          "></div>
-        <div class="section-img" style="
-            background-image: url('/pic/Research/sci4/sys6.jpg');
-            left: 40rem;
-            top: 2rem;
-            width: 50rem;
-            height: 35rem;
-          "></div>
-      </section>
-
-      <!-- Section 2: 2白、1白、1黑、3 -->
-      <section class="content-section" style="height: 45rem">
-        <div class="section-subtitle" style="
-            left: 59rem;
-            top: 2rem;
-            width: 30rem;
-            height: 5rem;
-            color: #fff;
-            font-size: 2.5rem;
-          ">
-          术中全数字PET系统
-        </div>
-        <div class="section-text" style="
-            left: 59rem;
-            top: 7rem;
-            width: 30rem;
-            height: 10rem;
-            color: #fff;
-          ">
-          基于采用 MVT 技术的全数字 PET 探测器，成功研发术中全数字 PET 原型机。确保手术有开放的空间，同时通过放置的固定探测器阵列测量湮灭辐射。
-        </div>
-        <div class="section-bg" style="
-            background: var(--theme-color2);
-            left: 40rem;
-            top: 0rem;
-            width: 100rem;
-            height: 45rem;
-          "></div>
-        <div class="section-img" style="
-            background-image: url('/pic/Research/sci4/sys7.jpg');
-            left: 9rem;
-            top: 8rem;
-            width: 43rem;
-            height: 32rem;
-          "></div>
-        <div class="section-img" style="
-            background-image: url('/pic/Research/tech1/5.jpg');
-            left: 56rem;
-            top: 27rem;
-            width: 34rem;
-            height: 15rem;
-          "></div>
-
-      </section>
-
-      <!-- Section 3: 1白、1白、1蓝、2 -->
-      <section class="content-section" style="height: 44rem">
-        <div class="section-title" style="left: 7rem; top: 2rem; width: 30rem; height: 5rem; color: #fff">
-          变结构全数字PET系统
-        </div>
-        <div class="section-text" style="
-            left: 7rem;
-            top: 8rem;
-            width: 32rem;
-            height: 10rem;
-            color: #fff;
-          ">
-          基于 MVT 采样方法开发的模块化全数字 PET 探测器实现了软硬件解耦，缩短 PET 系统的开发周期，开发应用专用的变结构 PET 系统。
-        </div>
-        <div class="section-bg" style="
-            background: var(--theme-color1);
-            left: 0rem;
-            top: 0rem;
-            width: 57rem;
-            height: 43rem;
-          "></div>
-        <div class="section-img" style="
-            background-image: url('/pic/Research/tech1/6.jpg');
-            left: 9rem;
-            top: 25rem;
-            width: 33rem;
-            height: 14rem;
-          "></div>
-        <div class="section-img" style="
-            background-image: url('/pic/Research/sci4/sys8.jpg');
-            left: 49rem;
-            top: 18rem;
-            width: 41rem;
-            height: 28rem;
-          "></div>
-      </section>
-
-      <!-- Section 4: 2白、1白、1黑、3 -->
-      <section class="content-section" style="height: 44rem">
-        <div class="section-title" style="
-            left: 27rem;
-            top: 3rem;
-            width: 35rem;
-            height: 5rem;
-            color: #fff;
-            font-size: 2.5rem;
-          ">
-          双动态PET系统
-        </div>
-
-        <div class="section-text" style="
-            left: 27rem;
-            top: 9rem;
-            width: 26rem;
-            height: 10rem;
-            color: #fff;
-            text-align: justify;
-          ">
-          通过小动物 PET 对各种生物过程进行成像，已经广泛用于研究药物的生物分布和随着时间推移的疾病进展。传统的小动物 PET 成像通常采用麻醉或器具束缚使动物在 FOV
-          中心保持静止，以获得无运动伪影的图像。但是研究表明，对动物进行麻醉或束缚都会影响其生理活动。麻醉剂会改变诸如脑血流、体温和心率等生理参数来干扰几种正电子示踪剂的吸收，束缚的压力也会影响 18F-FDG和 11C-raclopride
-          等放射性示踪剂的代谢。考虑到以上干扰因素，为了能够准确真实地反映动物脑组织活动的正常状态，研究者们期望能够对清醒且自由移动动物进行动态 PET
-          扫描，实现动物脑功能高空间分辨、高时间分辨的动态观测，为脑功能研究提供更加客观、精细的信息。
-        </div>
-        <div class="section-bg" style="
-            background: var(--theme-color2);
-            right: 0rem;
-            top: 2rem;
-            width: 75rem;
-            height: 42rem;
-          "></div>
-        <div class="section-img" style="
-            background-image: url('/pic/Research/sci4/sys9.jpg');
-            left: 57rem;
-            top: 8rem;
-            width: 38rem;
-            height: 20rem;
-          "></div>
-      </section>
-
-
-      <div class="tech2-scene-title" style="position: relative; left: 9rem; height: 8rem; top: 2rem;">研究相关</div>
-      <div class="feature-section" style="top: -7rem;">
-        <div class="feature-item">
-          <a href="/Research/research_ov.html"><img src="/pic/Research/Collaboration/3-1.jpg" alt="科学研究"
-              style="height:15rem;" /></a>
-          <p><a href="/Research/research_ov.html" style="text-decoration: none; color: #fff;">科学研究</a>
-          </p>
-        </div>
-        <div class="feature-item">
-          <a href="/Infrastructure/infrastructure_ov.html" style="text-decoration: none; color: #fff;"><img
-              src="/pic/Research/tech3/1.jpg" alt="研究平台" style="height:15rem;" /></a>
-          <p><a href="/Infrastructure/infrastructure_ov.html" style="text-decoration: none; color: #fff;">研究设施</a>
-          </p>
-        </div>
-        <div class="feature-item">
-          <a href="/Infrastructure/infrastructure_instrumentation.html" style="text-decoration: none; color: #fff;"><img
-              src="/pic/Research/tech5/sys1.jpg" alt="科学仪器" style="height:15rem;" /></a>
-          <p><a href="/Infrastructure/infrastructure_instrumentation.html"
-              style="text-decoration: none; color: #fff;">科学仪器</a></p>
-        </div>
-        <div class="feature-item">
-          <a href="/About/about_leadership.html" style="text-decoration: none; color: #fff;"><img
-              src="/pic/Research/Initiatives/6.jpg" alt="创新研究团队" style="height:15rem;" /></a>
-          <p><a href="/About/about_leadership.html" style="text-decoration: none; color: #fff;">创新研究团队</a></p>
-        </div>
+    <div style="position: relative; margin: 6rem 0; padding: 0; height: 40rem; text-align: justify;">
+      <div
+        style="position: absolute; top: 10rem; left: 20rem; width: 93rem; height: 30rem; background: var(--theme-color2); z-index: 1;">
+      </div>
+      <h2
+        style="position: absolute; top: 4rem; left: 59rem; width: 60rem; color: var(--theme-color2); font-size: 2.4rem; font-weight: 400; z-index: 2; margin: 0rem 0rem 1rem 0rem;">
+        术中PET应用研究
+      </h2>
+      <p class="tech2-section-text1" style="margin-left: 43rem; margin-top: -1rem; line-height: 2rem; width: 35rem;">
+        该系统能够同时执行肿瘤介入和代谢成像，支持其用于临床前术中成像场景(如肿瘤切除或消融程序)的可行性。未来将专注于进一步提高图像质量和实时成像能力，以及探索更广泛的临床前和临床应用。
+      </p>
+      <div style="text-align: right;">
+        <p class="tech2-section-text2" style="margin-top: 1rem; font-size: 1.2rem; margin-left: 5rem;">
+          兔VX2肿瘤消融术中PET监测
+        </p>
+      </div>
+      <p class="tech2-section-text2" style="margin-top: 1rem; font-size: 1.2rem; margin-left: 40rem;">
+        术中全数字PET系统配置
+      </p>
+      <p class="tech2-section-text2" style="margin-top: 1rem; font-size: 1.2rem;  margin-left: 66rem;">
+        术中全数字PET系统评估
+      </p>
+      <div class="tech2-section-img1"
+        style="background-image: url('/pic/Research/sci4/sys2-1.png'); margin-left: -28rem; margin-top: -15rem; width: 36rem; height: 30rem;">
+      </div>
+      <div class="tech2-section-img1"
+        style="background-image: url('/pic/Research/sci4/sys2-2.png'); margin-left: 10rem; margin-top: 3rem; width: 25rem; height: 12rem;">
+      </div>
+      <div class="tech2-section-img1"
+        style="background-image: url('/pic/Research/sci4/sys2-3.png'); margin-left: 36rem; margin-top: 3rem; width: 16rem; height: 12rem;">
       </div>
 
+    </div>
 
 
-      
 
-      
+    <!-- Section 3: 双动态PET -->
+    <!-- Section 4: 变结构PET -->
+    <section>
+      <div
+        style="display: grid; grid-template-columns: 1fr 1fr; gap: 0rem; max-width: 100rem; margin: 0 auto; margin-bottom: 6rem;">
+
+        <div
+          style="background-color: var(--theme-color1); border-radius: 1.6rem; overflow: hidden; display: flex; flex-direction: column;">
+          <!-- 上图  居中 -->
+          <div style="display: flex; justify-content: center; padding-top: 2rem;">
+            <div
+              style="width: 70%; height: 32rem; background-image: url('/pic/Research/sci4/sys2.png'); background-size: cover; background-position: center; border-radius: 0.8rem;">
+            </div>
+          </div>
+          <!-- 下文字：标题 + 内容 -->
+          <div style="padding: 2.5rem 3rem; color: #fff; width: 80%; margin-left: 5rem;">
+            <h3 style="font-size: 2.2rem; font-weight: 500; margin: 0 0 1.2rem;">双动态PET系统</h3>
+            <p style="font-size: 1rem; line-height: 1.8; margin: 0; opacity: 0.95;">
+             通过对清醒且自由移动动物进行动态 PET 扫描， 能够更加准确真实地反映动物脑组织活动的正常状态，为脑功能研究提供更加客观、精细的信息。
+            </p>
+          </div>
+        </div>
+
+        <div
+          style="background-color: var(--theme-color2); border-radius: 1.6rem; overflow: hidden; display: flex; flex-direction: column;">
+
+          <!-- 上文字：标题 + 内容 -->
+          <div style="padding: 2.5rem 3rem; color: #fff; margin-left: 5rem; width: 80%;">
+            <h3 style="font-size: 2.2rem; font-weight: 500; margin: 0 0 1.2rem;">变结构全数字PET系统</h3>
+            <p style="font-size: 1rem; line-height: 1.8; margin: 0; opacity: 0.95;">
+              基于模块化、即插即成像架构的新一代柔性分子影像平台，可按需重构探测几何，适配从基础研究到临床精准诊疗的多场景成像应用需求。
+            </p>
+          </div>
+          <!-- 下图 居中 -->
+          <div style="display: flex; justify-content: center; padding-bottom: 2rem;">
+            <div
+              style="width: 70%; height: 32rem; background-image: url('/pic/Research/sci4/sys8.jpg'); background-size: cover; background-position: center; border-radius: 0.8rem;">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+  </section>
+
+
+
+
+
+
+  <div class="tech2-scene-title" style="position: relative; 
+  left: 60rem;
+  width: 60rem;
+  color: var(--theme-color1);
+  font-size: 2.5rem;
+  font-weight: 400;
+  z-index: 2;
+  margin: 0rem 0rem 1rem 0rem; left: 9rem; height: 8rem; top: 2rem; ">研究相关</div>
+  <div class="feature-section" style="top: -7rem;">
+    <div class="feature-item">
+      <a href="/Research/research_ov.html"><img src="/pic/Research/Collaboration/3-1.jpg" alt="科学研究"
+          style="height:15rem;" /></a>
+      <p><a href="/Research/research_ov.html" style="text-decoration: none; color: #fff;">科学研究</a>
+      </p>
+    </div>
+    <div class="feature-item">
+      <a href="/Infrastructure/infrastructure_ov.html" style="text-decoration: none; color: #fff;"><img
+          src="/pic/Research/tech3/1.jpg" alt="研究平台" style="height:15rem;" /></a>
+      <p><a href="/Infrastructure/infrastructure_ov.html" style="text-decoration: none; color: #fff;">研究设施</a>
+      </p>
+    </div>
+    <div class="feature-item">
+      <a href="/Infrastructure/infrastructure_instrumentation.html" style="text-decoration: none; color: #fff;"><img
+          src="/pic/Research/tech5/sys1.jpg" alt="科学仪器" style="height:15rem;" /></a>
+      <p><a href="/Infrastructure/infrastructure_instrumentation.html"
+          style="text-decoration: none; color: #fff;">科学仪器</a></p>
+    </div>
+    <div class="feature-item">
+      <a href="/About/about_leadership.html" style="text-decoration: none; color: #fff;"><img
+          src="/pic/Research/Initiatives/6.jpg" alt="创新研究团队" style="height:15rem;" /></a>
+      <p><a href="/About/about_leadership.html" style="text-decoration: none; color: #fff;">创新研究团队</a></p>
+    </div>
+  </div>
+
+
 
 
 
     <!-- 科研合作 -->
     <div class="research-ov-collaboration-container"
-      style="position: relative; width: 100%; height: 46rem;  z-index: 2">
-
-      <!-- 合作类型盒子 -->
-      <div
-        style="position: absolute; top: 6rem; left: 50%; transform: translate(-50%, 0); width: 68%; margin: 0 auto; height:20rem; background:#343434;">
-        <h2
-          style="font-size: 2.2rem; font-weight: 600; margin: 2rem 0 0 4rem; text-align: left; color: #fff; z-index: 1;">
-          合作类型
+        style="position: relative; width: 100%; height: 46rem;  top: 0rem; z-index: 2">
+        <h2 style="font-size: 3rem; font-weight: 600; margin: 7rem 0 0 25rem; text-align: left; color: #000; ">
+            科研合作
         </h2>
 
+        <!-- 合作类型盒子 -->
         <div
-          style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem; padding: 0 4rem; width: 70%; margin-top: 2rem;">
-          <div
-            style="background:rgba(255,255,255,0.15); border-radius:8px; padding:1.5rem 1rem; text-align:center; color:#fff; font-size:1.1rem;">
-            <a style="text-decoration: none; color: #fff; font-size: 1.2rem;">开展联合研究</a>
-          </div>
-          <div
-            style="background:rgba(255,255,255,0.15); border-radius:8px; padding:1.5rem 1rem; text-align:center; color:#fff; font-size:1.1rem;">
-            <a style="text-decoration: none; color: #fff; font-size: 1.2rem;">申报联合课题</a>
-          </div>
-          <div
-            style="background:rgba(255,255,255,0.15); border-radius:8px; padding:1.5rem 1rem; text-align:center; color:#fff; font-size:1.1rem;">
-            <a style="text-decoration: none; color: #fff; font-size: 1.2rem;">使用平台与设施</a>
-          </div>
-          <div
-            style="background:rgba(255,255,255,0.15); border-radius:8px; padding:1.5rem 1rem; text-align:center; color:#fff; font-size:1.1rem;">
-            <a style="text-decoration: none; color: #fff; font-size: 1.2rem;">寻求技术服务</a>
-          </div>
-          <div
-            style="background:rgba(255,255,255,0.15); border-radius:8px; padding:1.5rem 1rem; text-align:center; color:#fff; font-size:1.1rem;">
-            <a style="text-decoration: none; color: #fff; font-size: 1.2rem;">申请仪器使用</a>
-          </div>
-          <div
-            style="background:rgba(255,255,255,0.15); border-radius:8px; padding:1.5rem 1rem; text-align:center; color:#fff; font-size:1.1rem;">
-            <a style="text-decoration: none; color: #fff; font-size: 1.2rem;">更多类型...</a>
-          </div>
-        </div>
-      </div>
+            style="position: absolute; top: 6rem; left: 50%; transform: translate(-50%, 0); width: 68%; margin: 0 auto; height:20rem; background:#343434;">
+            <h2
+                style="font-size: 2.2rem; font-weight: 600; margin: 2rem 0 0 4rem; text-align: left; color: #fff; z-index: 1;">
+                合作类型
+            </h2>
 
-      <!-- 成功范例盒子 -->
-      <div
-        style="position: absolute; top: 26rem; left: 50%; transform: translate(-50%, 0); width: 68%; margin: 0 auto; height:20rem; background:#0f4c81;">
-        <h2
-          style="font-size: 2.2rem; font-weight: 600; margin: 2rem 0 0 4rem; text-align: left; color: #fff; z-index: 1;">
-          成功范例
-        </h2>
+            <div
+                style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem; padding: 0 4rem; width: 70%; margin-top: 2rem;">
+                <div
+                    style="background:rgba(255,255,255,0.15); border-radius:8px; padding:1.5rem 1rem; text-align:center; color:#fff; font-size:1.1rem;">
+                    <a style="text-decoration: none; color: #fff; font-size: 1.2rem;">前沿学科交叉</a>
+                </div>
+                <div
+                    style="background:rgba(255,255,255,0.15); border-radius:8px; padding:1.5rem 1rem; text-align:center; color:#fff; font-size:1.1rem;">
+                    <a style="text-decoration: none; color: #fff; font-size: 1.2rem;">技术协同研发</a>
+                </div>
+                <div
+                    style="background:rgba(255,255,255,0.15); border-radius:8px; padding:1.5rem 1rem; text-align:center; color:#fff; font-size:1.1rem;">
+                    <a style="text-decoration: none; color: #fff; font-size: 1.2rem;">课题协同实施</a>
+                </div>
+                <div
+                    style="background:rgba(255,255,255,0.15); border-radius:8px; padding:1.5rem 1rem; text-align:center; color:#fff; font-size:1.1rem;">
+                    <a style="text-decoration: none; color: #fff; font-size: 1.2rem;">应用示范转化</a>
+                </div>
+                <div
+                    style="background:rgba(255,255,255,0.15); border-radius:8px; padding:1.5rem 1rem; text-align:center; color:#fff; font-size:1.1rem;">
+                    <a style="text-decoration: none; color: #fff; font-size: 1.2rem;">项目联合申报</a>
+                </div>
+                <div
+                    style="background:rgba(255,255,255,0.15); border-radius:8px; padding:1.5rem 1rem; text-align:center; color:#fff; font-size:1.1rem;">
+                    <a style="text-decoration: none; color: #fff; font-size: 1.2rem;">更多类型...</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 成功范例盒子 -->
         <div
-          style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; margin-top: 2rem; padding: 0 4rem; width: 100%;">
-
-          <div style="position:relative; border-radius:8px; overflow:hidden; height:10rem;">
-            <img src="/pic/Research/ov/example1.jpg" style="width:100%;height:100%;object-fit:cover;">
+            style="position: absolute; top: 26rem; left: 50%; transform: translate(-50%, 0); width: 68%; margin: 0 auto; height:20rem; background:#0f4c81;">
+            <h2
+                style="font-size: 2.2rem; font-weight: 600; margin: 2rem 0 0 4rem; text-align: left; color: #fff; z-index: 1;">
+                成功范例
+            </h2>
             <div
-              style="position:absolute;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;">
-              <a style="color:#fff;font-size:1.1rem;text-decoration:none;">光子计数CT</a>
-            </div>
-          </div>
+                style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; margin-top: 2rem; padding: 0 4rem; width: 100%;">
 
-          <div style="position:relative; border-radius:8px; overflow:hidden; height:10rem;">
-            <img src="/pic/Research/ov/example2.jpg" style="width:100%;height:100%;object-fit:cover;">
-            <div
-              style="position:absolute;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;">
-              <a style="color:#fff;font-size:1.1rem;text-decoration:none;">中子诊断</a>
-            </div>
-          </div>
+                <div style="position:relative; border-radius:8px; overflow:hidden; height:10rem;">
+                    <img src="/pic/news/new1.png" style="width:100%;height:100%;object-fit:cover;">
+                    <div
+                        style="position:absolute;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;">
+                        <a style="color:#fff;font-size:1.1rem;text-decoration:none;">生物医学</a>
+                    </div>
+                </div>
 
-          <div style="position:relative; border-radius:8px; overflow:hidden; height:10rem;">
-            <img src="/pic/Research/ov/example3.jpg" style="width:100%;height:100%;object-fit:cover;">
-            <div
-              style="position:absolute;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;">
-              <a style="color:#fff;font-size:1.1rem;text-decoration:none;">遥感卫星</a>
-            </div>
-          </div>
+                <div style="position:relative; border-radius:8px; overflow:hidden; height:10rem;">
+                    <img src="/pic/Research/ov/example2.jpg" style="width:100%;height:100%;object-fit:cover;">
+                    <div
+                        style="position:absolute;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;">
+                        <a style="color:#fff;font-size:1.1rem;text-decoration:none;">中子诊断</a>
+                    </div>
+                </div>
 
-          <div style="position:relative; border-radius:8px; overflow:hidden; height:10rem;">
-            <img src="/pic/Research/ov/example4.jpg" style="width:100%;height:100%;object-fit:cover;">
-            <div
-              style="position:absolute;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;">
-              <a style="color:#fff;font-size:1.1rem;text-decoration:none;">石油勘探</a>
-            </div>
-          </div>
+                <div style="position:relative; border-radius:8px; overflow:hidden; height:10rem;">
+                    <img src="/pic/Research/ov/example3.jpg" style="width:100%;height:100%;object-fit:cover;">
+                    <div
+                        style="position:absolute;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;">
+                        <a style="color:#fff;font-size:1.1rem;text-decoration:none;">遥感卫星</a>
+                    </div>
+                </div>
 
-          <div style="position:relative; border-radius:8px; overflow:hidden; height:10rem;">
-            <img src="/pic/Research/ov/example5.jpg" style="width:100%;height:100%;object-fit:cover;">
-            <div
-              style="position:absolute;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;">
-              <a style="color:#fff;font-size:1.1rem;text-decoration:none;">水下光通信</a>
-            </div>
-          </div>
+                <div style="position:relative; border-radius:8px; overflow:hidden; height:10rem;">
+                    <img src="/pic/Research/ov/example4.jpg" style="width:100%;height:100%;object-fit:cover;">
+                    <div
+                        style="position:absolute;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;">
+                        <a style="color:#fff;font-size:1.1rem;text-decoration:none;">石油勘探</a>
+                    </div>
+                </div>
 
-          <div style="position:relative; border-radius:8px; overflow:hidden; height:10rem;">
-            <div
-              style="position:absolute;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;">
-              <a style="color:#fff;font-size:1.1rem;text-decoration:none;">更多合作...</a>
-            </div>
-          </div>
+                <div style="position:relative; border-radius:8px; overflow:hidden; height:10rem;">
+                    <img src="/pic/news/news2.jpg" style="width:100%;height:100%;object-fit:cover;">
+                    <div
+                        style="position:absolute;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;">
+                        <a style="color:#fff;font-size:1.1rem;text-decoration:none;">性能评估</a>
+                    </div>
+                </div>
 
+                <div style="position:relative; border-radius:8px; overflow:hidden; height:10rem;">
+                    <div
+                        style="position:absolute;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;">
+                        <a style="color:#fff;font-size:1.1rem;text-decoration:none;">更多合作...</a>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
 
-      <!-- 建立合作盒子 -->
-      <div
-        style="position: absolute; top: 23.5rem; right: 18%; transform: translate(0, -60%); width: 20rem; margin: 0 auto; height:18rem; background:#0073CF;">
-        <div style="text-align: center; margin-top: 2rem;">
-          <a style="color: #fff; font-size: 2.2rem; font-weight: 600;">建立合作</a>
+        <!-- 建立合作盒子 -->
+        <div
+            style="position: absolute; top: 23.5rem; right: 18%; transform: translate(0, -60%); width: 20rem; margin: 0 auto; height:18rem; background:#0073CF;">
+            <div style="text-align: center; margin-top: 2rem;">
+                <a style="color: #fff; font-size: 2.2rem; font-weight: 600;">建立合作</a>
+            </div>
+            <div style="text-align: left; margin-top: 1.5rem; transform: translate(15%, 0); width: 80%;">
+                <a
+                    style="color: #fff; font-size: 1.2rem; font-weight: 400; line-height: 1.7;">对我们的技术/科学研究感兴趣？请联系我们，开始对话。</a>
+            </div>
+            <div class="home-carousel__cta" style="position: absolute; margin-top: 2rem; margin-left: 2.5rem; "><a
+                    href="/Research/research_collaboration.html" class="cta--button" style="color: #fff; font-size: 1.3rem;">
+                    了解合作</span></a></div>
         </div>
-        <div style="text-align: left; margin-top: 1.5rem; transform: translate(15%, 0); width: 80%;">
-          <a style="color: #fff; font-size: 1.2rem; font-weight: 400; line-height: 1.7;">对我们的技术/科学研究感兴趣？请联系我们，开始对话。</a>
-        </div>
-        <div class="home-carousel__cta" style="position: absolute; margin-top: 2rem; margin-left: 2.5rem; "><a
-            href="/Research/research_collaboration.html" class="cta--button" style="color: #fff; font-size: 1.3rem;">
-            了解合作</span></a></div>
-      </div>
     </div>
 
 
-      </section>
-    </div>
 
-
-
-    <!-- 底部版权 -->
-    <div id="footer"></div>
+  <!-- 底部版权 -->
+  <div id="footer"></div>
 </body>
