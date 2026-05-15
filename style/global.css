@@ -1019,7 +1019,7 @@ body {
 /* ———————————————————————————————————————————————————————————————————————————————————— */
 .ffootnote-cta-container {
   max-width: 100%;
-  margin: 40px auto 0;
+  margin: 2rem auto 0;
 }
 
 /* ========== 按钮主体：撑满、左右分布 ========== */
@@ -1030,7 +1030,7 @@ body {
   /* 文字左，箭头区右 */
   width: 100%;
   box-sizing: border-box;
-  padding: 16px 24px;
+  padding: 0.6rem 0.8rem;
   background-color: #192b53;
   color: #fff;
   font-size: 1.2rem;
@@ -1052,10 +1052,9 @@ body {
   content: "";
   position: absolute;
   right: 3rem;
-  /* 调整竖线离右侧距离 */
   top: 50%;
   transform: translateY(-50%);
-  width: 1px;
+  width: 0.1rem;
   height: 100%;
   /* 竖线高度 */
   background-color: #ffffff;
@@ -1069,7 +1068,7 @@ body {
   height: 1rem;
   background-color: #ffffff;
   /* 箭头形状（三角形） */
-  clip-path: polygon(4px 4px, 16px 10px, 4px 16px);
+  clip-path: polygon(0.2rem 0.2rem, 0.8rem 0.5rem, 0.2rem 0.8rem);
 }
 
 /* ———————————————————————————————————————————————————————————————————————————————————— */

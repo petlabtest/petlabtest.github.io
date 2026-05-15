@@ -23,7 +23,7 @@ body {
 
 /* 动态按钮 */
 .home-carousel__cta {
-  margin-top: 3rem;
+  margin-top: 1rem;
   border-bottom: none;
     color: #FFFFFF;
 }
@@ -36,7 +36,7 @@ body {
     border: 0;
     transition: 0.2s ease;
     position: relative;
-    padding: 0 15px 0 11px;
+    padding: 0 0.2rem 0 0.8rem;
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -47,7 +47,7 @@ body {
     position: absolute;
     top: 55%;
     left: 0;
-    width: 0.2rem;
+    width: 0.4rem;
     height: 100%;
     background: #F45A2B;
     transform: translateY(-50%);
@@ -65,20 +65,22 @@ body {
     -moz-osx-font-smoothing: grayscale;
     content: "\e905";
     position: relative;
-    font-size: 10px;
-    top: -1px;
+    font-size: 0.8rem;
+    top: 55%;
     transition: 0.2s ease;
-    margin-left: 10px;
+    margin-left: 0.3rem;
 }
 
 .cta--button:hover {
-    padding-left: 19px;
+    padding-left: 1.5rem;
     padding-right: 0;
 }
 
 .cta--button:hover:before {
-    width: 12px;
+    width: 0.5rem;
 }
+
+
 
 
 

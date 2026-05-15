@@ -20443,7 +20443,7 @@ body.js-fixed .region-primary-menu .field--name-field-config-soc {
 }
 
 .home-carousel__cta {
-    margin-top: 14px;
+    margin-top: 1rem;
 }
 
 @media (min-width:700px) {
@@ -20455,7 +20455,7 @@ body.js-fixed .region-primary-menu .field--name-field-config-soc {
 .home-carousel>.caption {
     display: flex;
     justify-content: center;
-    margin: 10px 0 17px;
+    margin: 1rem 0 17px;
     line-height: 1;
 }
 
