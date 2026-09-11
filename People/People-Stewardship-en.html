@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="icon" type="image/png" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="apple-touch-icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="manifest" href="../assets/data/favicons/site.webmanifest">
+  <link rel="shortcut icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1" type="image/png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Development Philosophy | Digital PET Laboratory">
+  <title>Development Philosophy | Digital PET Laboratory</title>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <link rel="stylesheet" media="all" href="../assets/css/webarchive_inspiring-rising-stem-students/017.css">
+  <link rel="stylesheet" media="all" href="../assets/css/webarchive_inspiring-rising-stem-students/019.css">
+  <link rel="stylesheet" media="all" href="../assets/css/webarchive_inspiring-rising-stem-students/020.css">
+  <link rel="stylesheet" media="all" href="../assets/css/webarchive_inspiring-rising-stem-students/024.css">
+  <style>
+    .petlab-component-host {
+      display: block;
+      position: relative;
+      width: 100%
+    }
+
+    #petlab-header {
+      position: relative;
+      z-index: 1000;
+      overflow: visible
+    }
+
+    #petlab-footer {
+      position: relative;
+      z-index: 1
+    }
+
+    .layout-container>header[role="banner"],
+    .layout-container>footer[role="contentinfo"] {
+      display: none !important
+    }
+
+    /* Match the compact natural-center image scale used by the reference page. */
+    @media (min-width: 700px) {
+      .ll-content-side figure.embedded-entity .media--view-mode-natural-center .wysiwyg-image img {
+        width: 720px !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    /* Restore only the original color-block layout; keep the new hero bundle intact. */
+    .ll-p-color-block-content {
+      position: relative;
+      max-width: 1600px;
+      margin: 50px auto;
+    }
+
+    .ll-p-color-block-content:first-child {
+      margin-top: -15px;
+    }
+
+    .ll-p-color-block-content .ll-p-color-text {
+      position: relative;
+      z-index: 0;
+      max-width: 900px;
+      margin: 0 60px 0 0;
+      padding: 50px 50px 80px;
+      color: var(--color-white, #fff);
+    }
+
+    .ll-p-color-block-content .ll-p-color-text::before {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      width: 0;
+      content: '';
+      background-color: var(--color-blue3, #0875c9);
+      transition: width .3s ease;
+    }
+
+    .ll-p-color-block-content .ll-p-color-text>* {
+      position: relative;
+      margin-bottom: -10px;
+      opacity: 0;
+      transition: all .4s ease;
+      transition-delay: .3s;
+    }
+
+    .ll-p-color-block-content .ll-p-color-text h3 {
+      text-transform: uppercase;
+    }
+
+    .ll-p-color-block-content .ll-content-side {
+      position: relative;
+      z-index: 1;
+      margin: -100px 0 0 60px;
+      padding-top: 30px;
+      opacity: 0;
+      transition: opacity .5s ease;
+      transition-delay: .5s;
+    }
+
+    .ll-p-color-block-content.js-animate .ll-p-color-text::before {
+      width: 100%;
+    }
+
+    .ll-p-color-block-content.js-animate .ll-p-color-text>* {
+      margin-bottom: 0;
+      opacity: 1;
+    }
+
+    .ll-p-color-block-content.js-animate .ll-content-side {
+      opacity: 1;
+    }
+
+    .ll-p-color-block-content .ll-content-side .paragraph--type-wysiwyg {
+      width: auto;
+      max-width: 100%;
+    }
+
+    .ll-p-color-block-content .ll-content-side .wysiwyg-image--full {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    @media (min-width: 700px) {
+      .ll-p-color-block-content {
+        padding-bottom: 0;
+      }
+
+      .ll-p-color-block-content .ll-p-color-text {
+        padding-bottom: 90px;
+      }
+    }
+
+    @media (min-width: 1225px) {
+      .ll-p-color-block-content {
+        display: flex;
+      }
+
+      .ll-p-color-block-content .ll-p-color-text {
+        min-width: 900px;
+        padding-right: 530px;
+        padding-bottom: 80px;
+      }
+
+      .ll-p-color-block-content .ll-content-side {
+        flex-grow: 1;
+        margin-top: 0;
+        margin-left: -500px;
+        opacity: 1;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../assets/css/archive-consistency.css?v=20260908-wide1">
+  <link rel="stylesheet" href="../assets/css/page-canvas.css?v=20260911-1">
+</head>
+
+<body class="node-97161 path-node page-node-type-lab-pub-section production js-alert page-people-people-stewardship-cn"><a href="#main-content"
+    class="visually-hidden focusable skip-link">Skip to main content</a>
+  <div class="dialog-off-canvas-main-canvas">
+    <div class="overlay"></div>
+    <div class="layout-container">
+      <div id="petlab-header" class="petlab-component-host"></div>
+      <div data-component-id="mitll_theme:title_with_summary_hero"
+        class="mitll-hero hero--title-intro ll-pub-section-pg">
+        <div class="mitll-hero-inner">
+          <picture>
+            <source srcset="../assets/pic/join_us-cropped.jpg 1x" media="(min-width: 1025px)" type="image/jpeg"
+              width="1600" height="768">
+            <source srcset="../assets/pic/join_us-cropped.jpg 1x" media="(min-width: 700px)" type="image/jpeg"
+              width="1600" height="768">
+            <source srcset="../assets/pic/join_us-cropped.jpg 1x" type="image/jpeg" width="1600" height="768">
+            <img width="1600" height="768" src="../assets/pic/join_us-cropped.jpg" alt="" loading="eager"
+              typeof="foaf:Image">
+          </picture>
+          <div class="mitll-hero-title">
+            <div class="mitll-hero-title-content">
+              <h1>Development Philosophy</h1>
+            </div>
+          </div>
+        </div>
+        <div class="mitll-hero-intro">
+          <div>
+            <div>We pursue a development philosophy centered on human health needs, continuity from fundamental
+              research to clinical translation, and open collaboration in talent development. With all-digital PET as
+              a technological foundation, the Laboratory integrates detectors, electronics, imaging algorithms, and
+              system applications so that original research responds to real medical challenges and creates lasting
+              value for society.</div>
+          </div>
+        </div>
+      </div>
+      <main role="main">
+        <a id="main-content" tabindex="-1"></a>
+        <div class="layout-content">
+          <div class="region region-content">
+            <div id="block-mitll-theme-content" class="block block-system block-system-main-block">
+
+
+              <div class="ll-p-color-block-content js-animate">
+                <div>
+                  <div class="ll-p-color-text">
+                    <h3>
+                      <div class="field field--name-field-title field--type-string field--label-hidden field__item">
+                        Director's Message</div>
+                    </h3>
+                  </div>
+                </div>
+                <div class="ll-content-side">
+
+                  <div
+                    class="field field--name-field-p-paragraph-section field--type-entity-reference-revisions field--label-hidden field__items">
+                    <div class="field__item">
+                      <div class="paragraph paragraph--type-wysiwyg paragraph--view-mode-full">
+
+                        <div class="wysiwyg">
+                          <figure data-embed-button="media_image"
+                            data-entity-embed-display="view_mode:media.natural_center"
+                            data-entity-embed-display-settings="[]" data-entity-type="media"
+                            data-entity-uuid="22dfc379-a6cd-4952-9ed2-4c71a8e3ae50" data-langcode="en"
+                            class="embedded-entity">
+                            <div class="media media--type-image media--view-mode-natural-center">
+                              <div class="image wysiwyg-image">
+                                <div
+                                  class="field field--name-field-image field--type-image field--label-hidden field__item">
+                                  <picture>
+                                    <source srcset="../assets/pic/people/People-Stewardship/media/1.jpg 1x"
+                                      media="(min-width: 1025px)" type="image/jpeg" width="900" height="600">
+                                    <source
+                                      srcset="/sites/default/files/styles/no_crop_medium/public/publication/image/2026-06/AR24_Choi_Melissa_530254-003%20copy.jpg?itok=kyUoDElx 1x"
+                                      media="(min-width: 700px)" type="image/jpeg" width="900" height="600">
+                                    <source
+                                      srcset="/sites/default/files/styles/no_crop_small/public/publication/image/2026-06/AR24_Choi_Melissa_530254-003%20copy.jpg?itok=Kenk1DYf 1x"
+                                      type="image/jpeg" width="700" height="467">
+                                    <img loading="eager" width="900" height="600"
+                                      src="../assets/pic/people/People-Stewardship/media/1.jpg"
+                                      alt="Professor Qingguo Xie, director of the Digital PET Laboratory"
+                                      typeof="foaf:Image">
+                                  </picture>
+                                </div>
+                              </div>
+                            </div>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="paragraph paragraph--type-wysiwyg paragraph--view-mode-full">
+                <div class="wysiwyg">
+                  <p>In support of high-end medical equipment innovation and Healthy China 2030, our development path
+                    brings together three mutually reinforcing priorities: advancing key technologies through original
+                    research, connecting discoveries to application through systems engineering, and cultivating
+                    interdisciplinary talent through open collaboration. Digital nuclear medicine, artificial
+                    intelligence for medical imaging, and precision radiation therapy are both long-term research
+                    directions and important links among national needs, clinical challenges, and the global scientific
+                    frontier.</p>
+                  <p>Within one year, we executed 11 targeted technology transitions, transferring breakthrough
+                    technologies directly into clinical systems or to industry partners for production. Among them is a
+                    wearable helmet PET system that costs a fraction of conventional full-body scanners and can be
+                    deployed and calibrated at clinical sites in under two hours, expanding access to high-precision
+                    brain molecular imaging to grassroots hospitals and research institutions. Supporting multi-center
+                    clinical research networks across the country, we established a unified quantitative imaging
+                    analysis platform that has processed tens of thousands of patient scans to accelerate early cancer
+                    detection and treatment response assessment. Our world-class digital detector technology enabled
+                    real-time proton beam range verification for precision radiotherapy, and to unify research
+                    collaboration across institutions, we developed a secure, cross-domain medical data sharing
+                    architecture.</p>
+                  <p>To bolster domestic technological resilience, we fabricated fully self-developed silicon
+                    photomultiplier arrays that accelerate nationwide research in nuclear detection science, and
+                    delivered integrated digital pulse processing electronics to enable next-generation compact PET
+                    systems. We also achieved the first domestic mass-production of high-performance scintillator
+                    modules — a significant step toward reducing dependence on foreign supply chains for core imaging
+                    components.</p>
+                  <p>Our impact is made possible by our exceptional research community. Team members earned seven
+                    provincial and national science and technology awards for their breakthrough technologies, and
+                    inspired nearly 800 students through academic programs and STEM outreach initiatives, including
+                    joint collaborations with leading medical universities. Clinical fellows and physician-scientists
+                    embedded within our teams bridge the gap between frontline clinical needs and targeted technology
+                    solutions.</p>
+                  <p>Looking ahead, we will build on more than two decades of all-digital PET innovation while
+                    maintaining a long-term perspective, interdisciplinary integration, and responsible innovation. We
+                    will continue to build an open ecosystem with clinical, industry, and academic partners in China and
+                    abroad, helping advanced imaging technologies serve research and care more quickly and reliably
+                    while
+                    creating new scientific capabilities through the pursuit of real health challenges.</p>
+                </div>
+              </div>
+              <div class="paragraph paragraph--type-wysiwyg paragraph--view-mode-full">
+                <div class="wysiwyg">
+                  <p>Sincerely,</p>
+                  <p class="clearfix"><strong>Qingguo Xie</strong><br>
+                    Director</p>
+                  <p class="clearfix">&nbsp;</p>
+                  <p class="clearfix">&nbsp;</p>
+                </div>
+              </div>
+
+
+
+              <div class="ll-pub-section ll-accent-light_blue ll-background-dark-blue js-animate">
+                <div class="ll-pub-section-inner">
+                  <div class="ll-pub-section-content">
+                    <div class="ll-pub-section-content">
+                      <div class="ll-eyebrow"></div>
+                      <h2>Mission, vision, and values</h2>
+                    </div>
+                  </div>
+                  <div class="ll-pub-section-content">
+                    <div
+                      class="field field--name-field-p-ll-pub-pars field--type-entity-reference field--label-hidden field__items">
+                      <div class="field__item">
+                        <div class="paragraph paragraph--type-wysiwyg paragraph--view-mode-full">
+                          <div class="wysiwyg">
+                            <h3 class="ll-title-bl">Mission:</h3>
+                            <p><strong>Technology for National Demand</strong></p>
+                            <p>We bring together some of the nation’s top technical and clinical talent to advance
+                              digital PET system and core imaging technology development for precision medicine and
+                              translational research demands. Focused on frontier medical imaging innovation aligned
+                              with national healthcare strategies, we conduct specialized R&amp;D in partnership with
+                              clinical hospitals, medical research institutes, biomedical funding authorities, and
+                              public health agencies nationwide.
+                              &nbsp;</p>
+                            <div class="ll-two-by-callout bkg-lt">
+                              <div>
+                                <h4>Core competencies</h4>
+                                <ul>
+                                  <li>Multi-Voltage Threshold Method</li>
+                                  <li>scintillation crystals</li>
+                                  <li>ultra-weak light detection chips</li>
+                                  <li>modular particle detectors</li>
+                                  <li>end-to-end software platforms</li>
+                                  <li>all-digital PET scientific instruments</li>
+                                </ul>
+                              </div>
+
+                              <div>
+                                <h4>Core Value</h4>
+                                <ul>
+                                  <li>Passion</li>
+                                  <li>Ambition</li>
+                                  <li>Courage</li>
+                                  <li>Responsibility</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="field__item">
+                        <div class="paragraph paragraph--type-wysiwyg paragraph--view-mode-full">
+                          <div class="wysiwyg">
+                            <h3 class="ll-title-bl">Vision:</h3>
+                            <p><b>To be the nation’s premier laboratory advancing transformative digital technologies
+                                and imaging system prototypes for precision medicine and translational biomedical
+                                research.</b></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="field__item">
+                        <div class="paragraph paragraph--type-wysiwyg paragraph--view-mode-full">
+                          <div class="wysiwyg">
+                            <h3 class="ll-title-bl">Values:</h3>
+                            <div class="ll-two-by-callout bkg-lt">
+                              <div>
+                                <p><strong>How we approach our work</strong></p>
+                                <ul>
+                                  <li>Integrity, excellence, and innovation</li>
+                                </ul>
+                              </div>
+                              <div>
+                                <p><strong>How we interact with each other</strong></p>
+                                <ul>
+                                  <li>Belonging, respect, and service</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="ll-pub-section ll-accent-red ll-background-grey js-animate">
+                <div class="ll-pub-section-inner">
+                  <div class="ll-pub-section-content">
+                    <div class="ll-pub-section-content">
+                      <div class="ll-eyebrow"></div>
+                      <h2>Talent Development Philosophy</h2>
+                    </div>
+                  </div>
+                  <div class="ll-pub-section-content">
+
+                    <div
+                      class="field field--name-field-p-ll-pub-pars field--type-entity-reference field--label-hidden field__items">
+                      <div class="field__item">
+                        <div class="paragraph paragraph--type-wysiwyg paragraph--view-mode-full">
+
+                          <div class="wysiwyg">
+                            <p>
+                              PETLab is committed to establishing a structured cultivation system with rigorous academic
+                              requirements and inclusive selection mechanisms. Through our robust platform resources, we
+                              empower every student with potential, creativity, and drive to discover their unique
+                              position and stage for growth.
+                            </p>
+                            <p>Here, you will find</p>
+                            <ul>
+                              <li><strong>Newcomer anxiety transforms into systematic support: </strong>
+                                Our standardized orientation program features meticulously designed modular tutorials
+                                and hands-on sessions, enabling seamless transition from theoretical learning to
+                                research practice. This approach helps you rapidly build professional foundations and
+                                significantly accelerate your development.
+                              </li>
+                              <li><strong>Earning capabilities evolve through multidisciplinary cultivation: </strong>
+                                Spanning science, engineering, and medical disciplines, you'll learn to integrate
+                                knowledge across fields and drive innovation in this interdisciplinary environment.
+                              </li>
+                              <li><strong>World-class research platforms propel your growth: </strong>
+                                We pioneer groundbreaking achievements in digital PET technology, having developed
+                                multiple world-first innovations including digital PET 1.0, and are now advancing
+                                cutting-edge research on digital PET 2.0 systems like proton therapy PET. Our
+                                cutting-edge facilities, including major scientific installations with cyclotrons,
+                                provide unparalleled support for pushing innovation boundaries.
+                              </li>
+                              <li><strong>Global perspectives guide your journey: </strong>
+                                Our international academic collaboration network offers opportunities worldwide for
+                                conference participation, academic exchanges, and horizon expansion. Even undergraduate
+                                and master's students regularly win gold awards in various international academic
+                                competitions and invention contests.
+                              </li>
+                              <li><strong>Practical capabilities are forged through real-world experience: </strong>
+                                Leveraging our unique industry-academia-research integration, we maintain end-to-end
+                                practice bases covering principle invention, key materials, core components, medical
+                                devices, and application research. Your innovative idea can progress from lab conception
+                                to industrial production and clinical validation - all within a single day.
+                              </li>
+                              <li><strong>Leadership potential awakens through meaningful engagement: </strong>
+                                Through our deep industry-academia integration projects, you'll participate as core team
+                                members in complete innovation chains from conception and design to execution and
+                                implementation. Confronting complex real-world challenges, you'll systematically develop
+                                project management capabilities, master team collaboration skills, and cultivate
+                                value-driven leadership through resource integration and goal achievement.
+                              </li>
+                            </ul>
+                            <br>
+                            <p>
+                              Here, you'll continuously embrace and overcome challenges,</p>
+                            <p>
+                              discovering the boundaries of your potential,</p>
+                            <p>
+                              evolving into future research leaders and industry pioneers,</p>
+                            <p>
+                              becoming the most exceptional version of yourself!
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div id="petlab-footer" class="petlab-component-host"></div>
+    </div>
+  </div>
+
+
+
+  <script src="../assets/js/webarchive_inspiring-rising-stem-students/001.js"></script>
+  <script src="../assets/js/root/r001.js"></script>
+  <script src="../assets/js/root/003.js"></script>
+  <script src="../assets/js/root/002.js"></script>
+  <script src="../assets/js/root/007.js"></script>
+  <script src="../assets/js/webarchive_inspiring-rising-stem-students/009.js"></script>
+  <script src="../assets/js/root/010.js"></script>
+  <script src="../assets/js/webarchive_inspiring-rising-stem-students/012.js"></script>
+  <script src="../assets/js/webarchive_inspiring-rising-stem-students/028.js"></script>
+  <script src="../assets/js/root/029.js"></script>
+  <script src="../assets/js/root/r038.js"></script>
+  <script src="../assets/js/root/r039.js"></script>
+  <script src="../assets/js/root/r040.js"></script>
+  <script>
+    (function () {
+      var siteRoot = new URL('../', window.location.href);
+      var cssUrl = new URL('assets/css/site.css?v=20260908-wide1', siteRoot);
+
+      function rewriteComponentUrls(shadow) {
+        shadow.querySelectorAll('[src], [href]').forEach(function (node) {
+          ['src', 'href'].forEach(function (attribute) {
+            var value = node.getAttribute(attribute);
+            if (!value || /^(?:#|https?:|mailto:|tel:|javascript:|\/)/i.test(value)) return;
+            node.setAttribute(attribute, new URL(value, siteRoot).href);
+          });
+        });
+      }
+
+      function initHeader(shadow) {
+        var header = shadow.querySelector('[data-site-header]');
+        if (!header) return;
+        var primaryGroups = shadow.querySelectorAll('.primary-nav > .nav-group');
+        function setPrimaryGroupVisual(group, active) {
+          if (!group || !group.matches('.primary-nav > .nav-group')) return;
+          var color = active ? '#edf5fc' : '#fff';
+          group.style.setProperty('background-color', color, 'important');
+          var trigger = group.querySelector(':scope > .nav-trigger');
+          trigger?.style.setProperty('background-color', color, 'important');
+        }
+        function setPrimaryNavigationVisual(active) {
+          var color = active ? '#edf5fc' : '#fff';
+          primaryGroups.forEach(function (group) { setPrimaryGroupVisual(group, active); });
+          shadow.querySelectorAll('.lbl-header, .lbl-header .header-shell, .lbl-header .desktop-navigation, .lbl-header .header-top-row, .lbl-header .primary-nav').forEach(function (node) {
+            node.style.setProperty('background-color', color, 'important');
+          });
+        }
+        setPrimaryNavigationVisual(false);
+        var closeTimers = new WeakMap();
+        var openGroup = function (group) {
+          if (!group) return;
+          var timer = closeTimers.get(group);
+          if (timer) window.clearTimeout(timer);
+          group.classList.add('open');
+          group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'true');
+        };
+        var closeGroup = function (group) {
+          if (!group) return;
+          var timer = window.setTimeout(function () {
+            if (group.matches(':hover') || group.matches(':focus-within')) return;
+            group.classList.remove('open');
+            group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+          }, 180);
+          closeTimers.set(group, timer);
+        };
+        var closeAllGroups = function () {
+          shadow.querySelectorAll('.nav-group.open').forEach(function (group) {
+            var timer = closeTimers.get(group);
+            if (timer) window.clearTimeout(timer);
+            group.classList.remove('open');
+            group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+          });
+          setPrimaryNavigationVisual(false);
+          var activeElement = shadow.activeElement;
+          if (activeElement && activeElement.matches('.primary-nav .nav-trigger, .primary-nav .mega-menu__close')) activeElement.blur();
+        };
+        var host = shadow.host;
+        header.addEventListener('mouseleave', closeAllGroups);
+        host?.addEventListener('mouseleave', closeAllGroups);
+        header.addEventListener('mouseleave', function () {
+          shadow.querySelectorAll('.nav-group.open, .nav-group.dismissed').forEach(function (group) {
+            group.classList.remove('open', 'dismissed');
+            group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+          });
+          setPrimaryNavigationVisual(false);
+        });
+        shadow.querySelectorAll('.nav-group').forEach(function (group) {
+          group.addEventListener('mouseenter', function () {
+            var timer = closeTimers.get(group);
+            if (timer) clearTimeout(timer);
+            group.classList.remove('dismissed');
+            shadow.querySelectorAll('.nav-group.open').forEach(function (item) {
+              if (item !== group) {
+                item.classList.remove('open', 'dismissed');
+                item.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+                setPrimaryGroupVisual(item, true);
+              }
+            });
+            group.classList.add('open');
+            group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'true');
+            if (group.matches('.primary-nav > .nav-group')) setPrimaryNavigationVisual(true);
+          });
+          group.addEventListener('mouseleave', function () {
+            var timer = setTimeout(function () {
+              group.classList.remove('open');
+              group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+              if (group.matches('.primary-nav > .nav-group') && !header.matches(':hover')) setPrimaryNavigationVisual(false);
+              var activeElement = shadow.activeElement;
+              if (activeElement && group.contains(activeElement)) activeElement.blur();
+            }, 220);
+            closeTimers.set(group, timer);
+          });
+        });
+        shadow.querySelectorAll('.nav-trigger').forEach(function (trigger) {
+          trigger.addEventListener('click', function () {
+            var group = trigger.closest('.nav-group');
+            var open = group && group.classList.contains('open');
+            shadow.querySelectorAll('.nav-group.open').forEach(function (item) {
+              item.classList.remove('open', 'dismissed');
+              item.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+              setPrimaryGroupVisual(item, false);
+            });
+            if (group && !open) {
+              group.classList.add('open');
+              trigger.setAttribute('aria-expanded', 'true');
+              setPrimaryNavigationVisual(true);
+            } else if (group && open) {
+              setPrimaryNavigationVisual(false);
+            }
+          });
+        });
+        shadow.querySelectorAll('[data-menu-close]').forEach(function (button) {
+          button.addEventListener('click', function () {
+            var group = button.closest('.nav-group');
+            group?.classList.remove('open');
+            group?.classList.add('dismissed');
+            group?.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+            setPrimaryNavigationVisual(false);
+            if (shadow.activeElement && group?.contains(shadow.activeElement)) shadow.activeElement.blur();
+          });
+        });
+        var menuToggle = shadow.querySelector('[data-menu-toggle]');
+        menuToggle?.addEventListener('click', function () {
+          var active = header.classList.toggle('menu-active');
+          menuToggle.setAttribute('aria-expanded', String(active));
+        });
+      }
+
+      async function mount(hostId, componentPath, isHeader) {
+        var host = document.getElementById(hostId);
+        if (!host) return;
+        try {
+          var response = await fetch(new URL(componentPath, siteRoot));
+          var cssResponse = await fetch(cssUrl);
+          if (!response.ok || !cssResponse.ok) throw new Error('Component load failed');
+          var shadow = host.attachShadow({ mode: 'open' });
+          var style = document.createElement('style');
+          var cssText = await cssResponse.text();
+          cssText = cssText.replace(/url\((['"]?)\.\.\/([^'")]+)\1\)/g, function (_, quote, path) {
+            return 'url(' + quote + new URL('assets/' + path, siteRoot).href + quote + ')';
+          });
+          cssText += '\n@media (min-width: 1101px) {' +
+            '.lbl-header, .lbl-header .header-shell, .lbl-header .desktop-navigation, ' +
+            '.lbl-header .primary-nav, .lbl-header .nav-group { overflow: visible !important; }' +
+            '.lbl-header .nav-group.open > .mega-menu, .lbl-header .nav-group:hover > .mega-menu, ' +
+            '.lbl-header .nav-group:focus-within > .mega-menu { display: grid !important; z-index: 2000 !important; pointer-events: auto; }' +
+            '.lbl-header .nav-group.dismissed > .mega-menu { display: none !important; }' +
+            '.lbl-header .primary-nav > .nav-group { background: #fff !important; }' +
+            '.lbl-header .primary-nav > .nav-group:hover, .lbl-header .primary-nav > .nav-group.open, ' +
+            '.lbl-header .primary-nav > .nav-group:focus-within { background: #edf5fc !important; }' +
+            '.lbl-header .primary-nav > .nav-group.dismissed { background: #fff !important; }' +
+            '.lbl-header .primary-nav > .nav-group > .nav-trigger { background: #fff !important; color: #062f40 !important; transition: none !important; }' +
+            '.lbl-header .primary-nav > .nav-group:hover > .nav-trigger, .lbl-header .primary-nav > .nav-group.open > .nav-trigger, ' +
+            '.lbl-header .primary-nav > .nav-group:focus-within > .nav-trigger { background: #edf5fc !important; color: #062f40 !important; }' +
+            '.lbl-header .primary-nav > .nav-group.dismissed > .nav-trigger { background: #fff !important; color: #062f40 !important; transition: none !important; }' +
+            '.lbl-header .primary-nav > .nav-group, .lbl-header .primary-nav > .nav-group > .nav-trigger { transition: none !important; }' +
+            '}';
+          style.textContent = cssText.replace(/^:root\s*\{/, ':host {');
+          shadow.appendChild(style);
+          var content = document.createElement('div');
+          content.innerHTML = await response.text();
+          while (content.firstChild) shadow.appendChild(content.firstChild);
+          rewriteComponentUrls(shadow);
+          if (!isHeader) {
+            var year = shadow.querySelector('[data-current-year]');
+            if (year) year.textContent = String(new Date().getFullYear());
+          } else {
+            initHeader(shadow);
+          }
+        } catch (error) {
+          host.textContent = '';
+          console.error('Unable to load PETLab component', error);
+        }
+      }
+
+      var isCN = /-cn\.html/i.test(window.location.pathname) || document.documentElement.lang === 'zh';
+      var headerFile = isCN ? 'components/header-cn.html?v=20260908-wide1' : 'components/header.html?v=20260908-wide1';
+      var footerFile = isCN ? 'components/footer-cn.html?v=20260830-1' : 'components/footer.html?v=20260830-1';
+      Promise.all([
+        mount('petlab-header', headerFile, true),
+        mount('petlab-footer', footerFile, false)
+      ]);
+    }());
+  </script>
+
+  <script>
+    /* Hide skip-link by default, show on keyboard focus */
+    (function () {
+      function fixSkipLink(link) {
+        if (link.dataset.skipLinkFixed3) return;
+        link.dataset.skipLinkFixed3 = '1';
+        link.classList.remove('visually-hidden');
+        link.style.setProperty('position', 'fixed', 'important');
+        link.style.setProperty('top', '0', 'important');
+        link.style.setProperty('left', '1rem', 'important');
+        link.style.setProperty('z-index', '9999', 'important');
+        link.style.setProperty('transform', 'translateY(-200%)', 'important');
+        link.style.setProperty('background', '#fff', 'important');
+        link.style.setProperty('padding', '.75rem 1rem', 'important');
+        link.style.setProperty('text-decoration', 'none', 'important');
+        link.style.setProperty('color', '#000', 'important');
+        link.style.setProperty('transition', 'transform .2s ease', 'important');
+        link.style.setProperty('clip', 'auto', 'important');
+        link.style.setProperty('width', 'auto', 'important');
+        link.style.setProperty('height', 'auto', 'important');
+        link.style.setProperty('overflow', 'visible', 'important');
+        link.addEventListener('focus', function () { link.style.setProperty('transform', 'translateY(0)', 'important'); });
+        link.addEventListener('blur', function () { link.style.setProperty('transform', 'translateY(-200%)', 'important'); });
+      }
+      function fixAll() { document.querySelectorAll('.skip-link').forEach(fixSkipLink); }
+      fixAll();
+      var observer = new MutationObserver(fixAll);
+      observer.observe(document.documentElement, { childList: true, subtree: true });
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fixAll);
+      window.addEventListener('load', function () { setTimeout(fixAll, 100); });
+    })();
+  </script>
+
+</body>
+
+</html>

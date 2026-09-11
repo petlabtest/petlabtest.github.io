@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="从SPAD微单元到数字SiPM，了解硅光电倍增器如何把微弱闪烁光转化为PET可用的时间与能量信息。">
+  <link rel="canonical" href="https://petlab.hust.edu.cn/News/List/News-page11-cn.html">
+  <link rel="alternate" hreflang="en" href="https://petlab.hust.edu.cn/News/News-page11-en.html">
+  <link rel="image_src" href="../../assets/pic/news/kepu4/hero-sipm-sensor-lab.png">
+  <link rel="icon" type="image/png" href="../../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <title>把一粒光变成数字：硅光电倍增器如何重塑PET探测 | 数字PET实验室</title>
+  <link rel="stylesheet" media="all" href="../../assets/css/news/flexible-robot/r008.css">
+  <link rel="stylesheet" media="all" href="../../assets/css/root/009.css">
+  <link rel="stylesheet" media="all" href="../../assets/css/news/flexible-robot/r010.css">
+  <link rel="stylesheet" media="all" href="../../assets/css/news/flexible-robot/r015.css">
+  <link rel="stylesheet" media="all" href="../../assets/css/root/008.css">
+  <link rel="stylesheet" media="all" href="../../assets/css/research/counter-cwmd/15.css">
+  <link rel="stylesheet" media="all" href="../../assets/css/news/kepu-article.css?v=20260906-1">
+  <link rel="stylesheet" media="all" href="../../assets/css/news/news-metadata.css">
+  <link rel="stylesheet" href="../../assets/css/archive-consistency.css?v=20260911-news1">
+  <link rel="stylesheet" href="../../assets/css/page-canvas.css?v=20260911-1">
+</head>
+
+<body class="path-node page-node-type-news has-section-nav production js-alert"><a href="#main-content"
+    class="visually-hidden focusable skip-link">跳过主要内容</a>
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="overlay"></div>
+    <div class="layout-container">
+      <div id="petlab-header" class="petlab-component-host"></div>
+      <main role="main"><a id="main-content" tabindex="-1"></a>
+        <div class="layout-content">
+          <div class="region region-content">
+            <div class="block block-system block-system-main-block">
+              <article class="node node--type-news node--view-mode-full page clearfix">
+                <div class="page__inner">
+                  <div class="page__header">
+                    <div class="hero hero--small-image">
+                      <div class="hero__image">
+                        <picture><img loading="eager" fetchpriority="high"
+                            src="../../assets/pic/news/kepu4/hero-sipm-sensor-lab.png" alt="显微探针台上的硅光电倍增器芯片和传感器阵列">
+                        </picture>
+                      </div>
+                      <div class="hero__title-wrapper">
+                        <h1 class="hero__page-title">把一粒光变成数字：硅光电倍增器如何重塑PET探测</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="page__intro">
+                    <div class="ifde-page__intro">闪烁晶体只发出短暂而微弱的光。SiPM要在噪声中抓住这些光子，并把它们到达的时间和数量交给后面的数字系统。</div>
+                  </div>
+                  <div class="page__content">
+                    <div role="region" aria-label="日期和来源" class="news-full__meta meta">
+                      <div class="news-full__date">2024年7月</div>
+                      <div class="news-full__author">数字PET实验室</div>
+                    </div>
+                    <div class="news-full__body wysiwyg">
+                      <p>PET探测器里，闪烁晶体负责把511
+                        keV伽马光子变成可见光，光电探测器则负责把这阵光变成电信号。过去，光电倍增管（PMT）长期承担这一任务；今天，硅光电倍增器（SiPM）凭借体积小、工作电压低、磁场兼容和易于阵列化等特点，已经成为新一代PET的重要器件。
+                      </p>
+                      <p>
+                        SiPM的名字容易让人误以为它是一整块放大芯片。实际上，它由许多并联的单光子雪崩二极管（SPAD）微单元组成。每个微单元都像一只极敏感的开关：一个光子触发载流子雪崩，产生可被读取的电脉冲；许多微单元同时响应，合起来反映入射光的大致数量和时间分布。
+                      </p>
+                      <div class="science-note">
+                        <strong>“数字SiPM”不是把光变成0和1</strong>光子的到达仍是随机的，微单元也会受到暗计数、串扰和恢复时间影响。“数字”指的是把雪崩事件尽量靠近像素端完成判别、计数和时间标记，减少长距离模拟信号传输。
+                      </div>
+
+                      <h2 class="news-article-subheading">一场可控的微型雪崩</h2>
+                      <figure class="embedded-entity paper-figure paper-figure--floated align-right"><img loading="lazy"
+                          src="../../assets/pic/news/kepu4/sipm-structure.png" alt="SPAD雪崩结构和基于金属电阻半导体结构的SiPM示意图">
+                        <figcaption>SiPM微单元通过反向偏置PN结产生并淬灭雪崩。</figcaption>
+                      </figure>
+                      <p>
+                        SPAD工作在击穿电压以上。光子产生的载流子在强电场中加速，碰撞后制造更多载流子，形成雪崩倍增；淬灭电阻随后降低局部电压，让雪崩停止并等待微单元恢复。由此可获得约10<sup>5</sup>至10<sup>6</sup>量级的增益，使单光子也能留下清晰电信号。
+                      </p>
+                      <p>与体积较大的PMT相比，SiPM可在低于100 V的电压下工作，论文综述的典型器件光子探测效率可超过30%，单光子时间分辨可低于100
+                        ps，而且不惧磁场。这些特性让PET探测环可以更紧凑，也更容易与磁共振等设备共同工作。</p>
+
+                      <h2 class="news-article-subheading">TOF-PET把时间问题推到极限</h2>
+                      <p>
+                        飞行时间PET（TOF-PET）通过两束湮没光子到达探测器的时间差，估计事件在响应线上的位置。时间差每减少一点，事件定位区间就会缩短，重建图像所需的统计量也可能降低。论文指出，研究前沿正在向系统约10
+                        ps量级的挑战逼近，这远超单纯更换一个快速器件所能解决的范围。</p>
+                      <p>
+                        传统模拟SiPM把所有微单元的电流汇总后送到片外。大面积阵列的寄生电容、工艺差异、长连线噪声和模拟处理会共同拖慢边沿并模糊光子时间。提高SiPM本体速度固然重要，但若读出链仍在丢失信息，系统性能很快会碰到瓶颈。
+                      </p>
+
+                      <h2 class="news-article-subheading">三条数字化路线，各有取舍</h2>
+                      <ol class="application-list" aria-label="数字SiPM的三类架构">
+                        <li><strong>微单元／TDC阵列：</strong>给大量微单元配置时间数字转换器，可获得丰富时间、能量和位置信息，但数字电路占用光敏面积并增加读出负担；</li>
+                        <li><strong>数字光子计数器：</strong>多个SPAD共享计数、触发和时间电路，填充因子更高，但事件汇总与读出周期需要权衡；</li>
+                        <li><strong>多计数阈值：</strong>先汇总微单元输出，再记录计数阶跃跨越若干阈值的时刻，结构较简洁，但重建依赖可靠的先验模型。</li>
+                      </ol>
+                      <figure class="embedded-entity paper-figure"><img loading="lazy"
+                          src="../../assets/pic/news/kepu4/digital-sipm-architectures.png"
+                          alt="飞利浦数字光子计数器的像素结构、计数电路和芯片版图">
+                        <figcaption>商业化数字光子计数器让多个SPAD共享触发、计数与时间电路。</figcaption>
+                      </figure>
+                      <p>
+                        第一种路线保留的信息最细，但每个像素旁都塞入复杂电路会降低填充因子；三维集成可把光敏层与数字层垂直堆叠，缓解面积竞争，却提高制造难度。第二种路线是成熟度较高的折中方案。第三种路线在论文所述架构中可达到1
+                        Mcps级读出率，但它必须先理解闪烁光子到达的统计规律，才能由较少的阈值信息反推出时间序列。</p>
+
+                      <h2 class="news-article-subheading">用“阶梯”追踪一阵光</h2>
+                      <figure class="embedded-entity paper-figure"><img loading="lazy"
+                          src="../../assets/pic/news/kepu4/multi-threshold-sipm.png" alt="多电压阈值和多计数阈值对闪烁脉冲采样的原理对比">
+                        <figcaption>多计数阈值记录累计触发微单元数量跨越不同水平的时间。</figcaption>
+                      </figure>
+                      <p>
+                        设想每个光子触发一个微单元，累计触发数量随时间上升成一段阶梯。系统不必读出每一级，只记录阶梯越过若干“计数线”的时刻，再用闪烁光产生和传播模型推断原始到达序列。这样可以降低片上电路复杂度，却把更多责任交给建模与校正。
+                      </p>
+                      <p>
+                        暗计数可能制造假阶梯，光学串扰可能让一个事件看起来像多个光子，微单元恢复时间又会带来非线性。因此，这不是无损压缩的魔法。阈值数量和位置、温度补偿、器件一致性及模型误差，都可能改变最终时间估计。
+                      </p>
+
+                      <h2 class="news-article-subheading">下一代探测器需要从雪崩物理开始设计</h2>
+                      <p>
+                        数字SiPM要继续前进，一方面要理解载流子雪崩的空间和时间过程，减少工艺带来的微单元差异；另一方面要建立从晶体发光、光子输运到SPAD触发的联合模型。只有知道信息怎样产生，才能判断哪些信号必须逐一保留，哪些可以用少量阈值可靠概括。
+                      </p>
+                      <p>
+                        这也说明PET时间分辨率不是某一个器件的竞赛。晶体、光学耦合、SiPM、数字电路和算法共同决定最后的符合时间。把这些环节协同设计，才可能在不牺牲探测效率和读出能力的前提下，让每一个被捕获的光子贡献更多信息。
+                      </p>
+                      <p>
+                        原文刊载于《CT理论与应用研究（中英文）》2024年第33卷第4期，页421–432，DOI：<a
+                          href="https://doi.org/10.15953/j.ctta.2024.015">10.15953/j.ctta.2024.015</a>。</p>
+                    </div>
+                    <div role="region" aria-label="元数据">
+                      <div class="news-full__info info">
+                        <div class="tagged-as">
+                          <div class="tagged-as__label">相关链接</div>
+                          <div class="tagged-as__tags">
+                            <ul>
+                              <li><a href="../../Research/Research-ov-cn.html">科学研究</a></li>
+                              <li><a href="../../Research/Research-Tech-Chips-cn.html">极弱光探测芯片</a></li>
+                              <li><a href="../../Research/Research-Tech-Detectors-cn.html">粒子探测模块</a></li>
+                              <li><a href="../../Engage/Engage-ov-cn.html">科研合作</a></li>
+                              <li><a href="../News-ov-cn.html">新闻报道</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+    </div>
+    </main>
+    <div id="petlab-footer" class="petlab-component-host"></div>
+  </div>
+  </div>
+  <script src="../../assets/js/root/r001.js"></script>
+  <script src="../../assets/js/root/script-05.js"></script>
+  <script src="../../assets/js/root/r038.js"></script>
+  <script src="../../assets/js/root/r039.js"></script>
+  <script src="../../assets/js/root/r040.js"></script>
+  <script src="../../assets/js/archive-components.js?v=20260830-1"></script>
+</body>
+
+</html>

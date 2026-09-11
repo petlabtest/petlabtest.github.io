@@ -1,0 +1,166 @@
+/* Shared presentation for DPETLab's long-form science news features. */
+.node--type-news .page__header .hero.hero--small-image .hero__title-wrapper .hero__page-title {
+  font-size: 34px;
+  line-height: 1.22;
+}
+
+.node--type-news .page__header .hero.hero--small-image .hero__image {
+  height: auto;
+  padding-top: 0;
+  aspect-ratio: 2206 / 713;
+  overflow: hidden;
+  background: #fff;
+}
+
+.node--type-news .page__header .hero.hero--small-image .hero__image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.news-full__body .news-article-subheading {
+  clear: both;
+  margin: 2.4rem 0 .85rem;
+  font-size: 22px;
+  line-height: 1.4;
+  text-transform: none;
+}
+
+.news-full__body .embedded-entity img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.news-full__body .paper-figure {
+  margin: 3rem 0;
+}
+
+.news-full__body .paper-figure .field--name-field-caption,
+.news-full__body .paper-figure figcaption {
+  margin-top: .7rem;
+  color: #555;
+  font-size: .86em;
+  line-height: 1.5;
+}
+
+.news-full__body .paper-figure--floated {
+  margin-top: .4rem;
+  margin-bottom: 1.5rem;
+}
+
+.news-full__body .application-list {
+  list-style: none;
+  margin: 2.25rem 0 3rem;
+  padding: 1.5rem 2rem 1.5rem 3rem;
+  border-left: 6px solid #1589d2;
+  background: #f2f6f8;
+}
+
+.news-full__body .application-list li {
+  position: relative;
+  margin: .7rem 0;
+  padding-left: .4rem;
+}
+
+.news-full__body .application-list li::before {
+  position: absolute;
+  top: .68em;
+  left: -1.25rem;
+  width: .42rem;
+  height: .42rem;
+  border-radius: 50%;
+  background: #1589d2;
+  content: "";
+}
+
+.news-full__body .science-note {
+  margin: 2.5rem 0;
+  padding: 1.5rem 1.75rem;
+  border-top: 2px solid #111;
+  border-bottom: 2px solid #111;
+}
+
+.news-full__body .science-note strong {
+  display: block;
+  margin-bottom: .45rem;
+  text-transform: uppercase;
+}
+
+.news-full__author {
+  font-weight: 600;
+}
+
+.petlab-component-host {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+#petlab-header {
+  position: relative;
+  z-index: 999;
+  overflow: visible;
+}
+
+#petlab-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.layout-container > header[role="banner"],
+.layout-container > footer[role="contentinfo"] {
+  display: none !important;
+}
+
+@media (min-width: 700px) {
+  .node--type-news .page__header .hero.hero--small-image .hero__title-wrapper .hero__page-title {
+    font-size: 46px;
+    line-height: 1.2;
+  }
+
+  .news-full__body .news-article-subheading {
+    font-size: 25px;
+  }
+
+  .news-full__body .paper-figure--floated {
+    float: right;
+    width: 36%;
+    max-width: 320px;
+    margin-right: 0;
+    margin-left: 2.25rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .node--type-news .page__header .hero.hero--small-image .hero__title-wrapper .hero__page-title {
+    font-size: 56px;
+    line-height: 1.18;
+  }
+
+  .news-full__body .news-article-subheading {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 699px) {
+  .news-full__body .news-article-subheading {
+    margin-top: 2.25rem;
+  }
+
+  .news-full__body .paper-figure {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .news-full__body .application-list {
+    padding: 1.1rem 1rem 1.1rem 2.25rem;
+  }
+
+  .news-full__body .science-note {
+    padding: 1.1rem 1rem;
+  }
+}

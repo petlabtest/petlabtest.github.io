@@ -1,0 +1,1125 @@
+<!doctype html>
+<html lang="zh-CN" dir="ltr">
+
+<head>
+  <link rel="icon" type="image/png" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="apple-touch-icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="manifest" href="../assets/data/favicons/site.webmanifest">
+  <link rel="shortcut icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1" type="image/png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cyber Security and Information Sciences">
+  <title>重点专项 | 数字PET实验室</title>
+  <link rel="stylesheet" media="all" href="../assets/css/research/cyber-security/mitll.css">
+  <style>
+    .petlab-component-host {
+      display: block;
+      position: relative;
+      width: 100%;
+    }
+
+    #petlab-header {
+      position: relative;
+      z-index: 1000;
+      overflow: visible;
+    }
+
+    #petlab-footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    .layout-container>header[role="banner"],
+    .layout-container>footer[role="contentinfo"] {
+      display: none !important;
+    }
+
+    @media (min-width:1025px) {
+      body.path-node.page-node-type-rdarea .hero.hero--large-image {
+        margin-top: -50px;
+      }
+    }
+
+    /* Keep the custom Bilibili cover locked to the same 16:9 frame as the player. */
+    .paragraph--type-wysiwyg .video.wysiwyg-video--full .video__cover {
+      overflow: hidden;
+    }
+
+    .paragraph--type-wysiwyg .video.wysiwyg-video--full .video__cover>img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* Keep every Featured Projects slide on the original 16:9 media frame. */
+    .paragraph--type-p-project-carousel .project-carousel__image-wrapper {
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+
+    .paragraph--type-p-project-carousel .project-carousel__image,
+    .paragraph--type-p-project-carousel .project-carousel__image picture {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .paragraph--type-p-project-carousel .project-carousel__image-wrapper>a,
+    .paragraph--type-p-project-carousel .project-carousel__image-wrapper .field-group-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .paragraph--type-p-project-carousel .project-carousel__image-wrapper img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  </style>
+  <style>
+    /* Align the sloped Engage section with the other research pages and
+       remove the oversized gap after the masonry content. */
+    @media (min-width: 1025px) {
+      .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate {
+        margin-top: -300px !important;
+      }
+    }
+
+    /* p-rdgroups 样式调整 */
+    .p-rdgroups__tablist li {
+      font-size: 24px !important;
+      line-height: 1.5 !important;
+    }
+
+    .p-rdgroups__tablist .position {
+      width: auto !important;
+      display: inline-block !important;
+      background: transparent !important;
+      position: relative;
+    }
+
+    /* 隐藏原始的横线和小球 */
+    .p-rdgroups__tablist .contain::after,
+    .p-rdgroups__tablist .contain::before {
+      display: none !important;
+    }
+
+    /* 只有 active tab 显示横线和小球 */
+    /* 横线：右端固定对齐 contain 右边缘，左端由 JS 动态设置 */
+    .p-rdgroups__tablist li[aria-selected="true"] .contain {
+      position: relative;
+    }
+
+    .p-rdgroups__tablist li[aria-selected="true"] .contain::after {
+      content: "";
+      display: block !important;
+      position: absolute;
+      top: 50%;
+      right: 9px;
+      left: var(--line-left, 100%);
+      width: auto !important;
+      height: 1px;
+      background: #000;
+      transform: translateY(-50%);
+    }
+
+    /* 小球：固定在 contain 右边缘，中心对齐横线右端，垂直对齐文字中线 */
+    .p-rdgroups__tablist li[aria-selected="true"] .contain::before {
+      content: "" !important;
+      display: block !important;
+      position: absolute !important;
+      top: 50% !important;
+      right: 0 !important;
+      left: auto !important;
+      bottom: auto !important;
+      width: 9px !important;
+      height: 9px !important;
+      border-radius: 50% !important;
+      background: #F45A2B !important;
+      transform: translateY(-50%) !important;
+      z-index: 1 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      float: none !important;
+    }
+
+    .p-rdgroups__summary {
+      font-size: 22px !important;
+      line-height: 1.7 !important;
+      font-weight: 300 !important;
+    }
+  </style>
+  <link rel="stylesheet" href="../assets/css/cn-link-label.css?v=20260904-2">
+  <link rel="stylesheet" href="../assets/css/archive-consistency.css?v=20260908-wide1">
+  <link rel="stylesheet" href="../assets/css/research-latest-news.css?v=20260911-3">
+  <link rel="stylesheet" href="../assets/css/page-canvas.css?v=20260911-1">
+</head>
+
+
+
+
+<body class="node-63 path-node page-node-type-rdarea has-section-nav has-section-toggle production js-alert">
+  <a href="#main-content" class="visually-hidden focusable skip-link">Skip to main content</a>
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="overlay"></div>
+    <div class="layout-container">
+      <!-- Header -->
+      <div id="petlab-header" class="petlab-component-host"></div>
+      <main role="main">
+        <a id="main-content" tabindex="-1"></a>
+        <div class="layout-content">
+          <div class="region region-content">
+            <div id="block-mitll-theme-content" class="block block-system block-system-main-block">
+              <div class="node node--type-rdarea node--view-mode-full">
+
+                <!-- Research Hero -->
+                <div class="hero hero--large-image">
+                  <div class="hero__image">
+                    <picture>
+                      <source srcset="../assets/pic/research/cyber-security/asset-23.jpg?h=7fa92598&amp;itok=0kZj0cOV 1x"
+                        media="(min-width: 1025px)" type="image/jpeg" width="1600" height="774">
+                      <source srcset="../assets/pic/research/cyber-security/asset-23.jpg 1x" media="(min-width: 700px)"
+                        type="image/jpeg" width="1024" height="642">
+                      <source srcset="../assets/pic/research/cyber-security/asset-23.jpg 1x" type="image/jpeg" width="700"
+                        height="536">
+                      <img loading="eager" width="1600" height="774"
+                        src="../assets/pic/research/cyber-security/asset-23.jpg?h=7fa92598&amp;itok=0kZj0cOV"
+                        alt="Cyber Security and Information Sciences - Creating new tools for cyber defense and human language processing"
+                        typeof="foaf:Image">
+                    </picture>
+                  </div>
+                  <div class="hero__title-wrapper">
+                    <h1 class="hero__page-title">质子治疗监测</h1>
+                  </div>
+                </div>
+
+                <!-- Research Body -->
+                <div class="rdarea__body">
+                  <!-- Research Abstract -->
+                  <div
+                    class="paragraph paragraph--type-p-fullwidth paragraph--view-mode-full background--light-blue slope--neg js-animate">
+                    <div class="p-fullwidth__content">
+                      <h2 class="p-fullwidth__header">依托重点专项推动科学突破与成果转化
+                      </h2>
+                      <div class="p-fullwidth__body">
+                        <p>
+                          <span><span><span>重点专项是实验室高质量发展的核心驱动力。实验室立足基础科学与医学影像领域国家重大战略需求，依托专项明确核心研究方向、升级科研平台硬件条件，攻克关键核心技术。依托各类重点专项，实验室汇聚高水平科研人才，深化产学研协同创新，推动原创科研成果产出与产业化转化，夯实学科竞争优势，打造特色化学术品牌，为实验室长远发展与高标准建设提供坚实支撑。</span></span></span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Research Hero2 -->
+                  <div class="paragraph paragraph--type-p-rdgroups paragraph--view-mode-full slope--pos">
+
+                    <div class="p-rdgroups__content">
+                      <div class="p-rdgroups__image">
+                        <article class="media media--type-image media--view-mode-rd-group-list">
+                          <div class="field field--name-field-image field--type-image field--label-hidden field__item">
+                            <picture>
+                              <source srcset="../assets/pic/root/media/2-2.jpg 1x" media="(min-width: 1025px)"
+                                type="image/jpeg" width="1600" height="774">
+                              <source srcset="../assets/pic/root/media/2-2.jpg 1x" media="(min-width: 700px)"
+                                type="image/jpeg" width="1024" height="451">
+                              <source srcset="../assets/pic/root/media/2-2.jpg 1x" type="image/jpeg" width="699"
+                                height="328">
+                              <img loading="eager" width="1600" height="774" src="../assets/pic/root/media/2-2.jpg"
+                                alt="Cyber Security and Information Sciences - Creating new tools for cyber defense and human language processing"
+                                typeof="foaf:Image">
+                            </picture>
+                          </div>
+                        </article>
+                      </div>
+                      <h2 class="p-rdgroups__header">研究基础</h2>
+                    </div>
+
+                    <div class="p-rdgroups__list">
+                      <div class="views-element-container">
+                        <div
+                          class="view view-r-d-group-blocks view-id-r_d_group_blocks view-display-id-rdgroups js-view-dom-id-0715cd8f1ec729ed4d1608258e335f30b0dc4775f9910e5faeeb408804d172af">
+                          <div class="attachment attachment-before">
+                            <div class="views-element-container">
+                              <div
+                                class="view view-r-d-group-blocks view-id-r_d_group_blocks view-display-id-attachment_tabs js-view-dom-id-7a52b03889d604d6d03f24bc9571f343d2d45afb9b949ce2b27ecbc2d7753c96">
+                                <div class="view-content">
+                                  <div class="p-rdgroups__tabs">
+                                    <ul class="p-rdgroups__tablist">
+                                      <li class="tab" id="tab-0" role="tab" aria-controls="panel-0" aria-selected="true"
+                                        tabindex="0"><span class="contain"><span class="position"
+                                            style="width: 435px;">多电压阈值技术</span></span></li>
+                                      <li class="tab" id="tab-1" role="tab" aria-controls="panel-1" aria-selected="false"
+                                        tabindex="0"><span class="contain"><span class="position"
+                                            style="width: 435px;">闪烁晶体</span></span></li>
+                                      <li class="tab" id="tab-2" role="tab" aria-controls="panel-2"
+                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position"
+                                            style="width: 348px;">极弱光探测芯片</span></span>
+                                      </li>
+                                      <li class="tab" id="tab-3" role="tab" aria-controls="panel-3"
+                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position"
+                                            style="width: 298px;">粒子探测模块</span></span></li>
+                                      <li class="tab" id="tab-4" role="tab" aria-controls="panel-4"
+                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position"
+                                            style="width: 272px;">Plug-n-Image</span></span></li>
+                                      <li class="tab" id="tab-5" role="tab" aria-controls="panel-5"
+                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position"
+                                            style="width: 415px;">图像重建</span></span>
+                                      </li>
+                                      <li class="tab" id="tab-6" role="tab" aria-controls="panel-6"
+                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position"
+                                            style="width: 461px;">新仪器与新系统</span></span>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <div class="view-content">
+                            <div class="p-rdgroups__panel tab views-row" id="panel-0" role="tabpanel"
+                              aria-labeledby="tab-0" aria-hidden="false" tabindex="-1" style="height: 315px;">
+                              <div class="field-content p-rdgroups__summary">基于值域采样，结合信号先验信息，以若干阈值比较器即可简洁地完成海量通道高速信号的精确数字化。</div>
+                              <div class="field-content p-rdgroups__cta"><a href="Research-Core-cn.html"
+                                  class="cta--button" hreflang="en">
+                                  了解更多</a></div>
+                            </div>
+                            <div class="p-rdgroups__panel tab views-row" id="panel-1" role="tabpanel"
+                              aria-labeledby="tab-1" aria-hidden="true" tabindex="-1" style="height: 315px;">
+                              <div class="field-content p-rdgroups__summary">研发可编程新型闪烁晶体，为前沿探测与成像系统提供极致闪烁性能。</div>
+                              <div class="field-content p-rdgroups__cta"><a href="Research-Tech-Crystals-cn.html"
+                                  class="cta--button" hreflang="en">
+                                  了解更多</a></div>
+                            </div>
+                            <div class="p-rdgroups__panel tab views-row" id="panel-2" role="tabpanel"
+                              aria-labeledby="tab-2" aria-hidden="true" tabindex="-1" style="height: 315px;">
+                              <div class="field-content p-rdgroups__summary">研制定制化极弱光探测芯片，实现单光子事件的高精度探测与特征表征。 </div>
+                              <div class="field-content p-rdgroups__cta"><a href="Research-Tech-Chips-cn.html"
+                                  class="cta--button" hreflang="en">
+                                  了解更多</a></div>
+                            </div>
+                            <div class="p-rdgroups__panel tab views-row" id="panel-3" role="tabpanel"
+                              aria-labeledby="tab-3" aria-hidden="true" tabindex="-1" style="height: 315px;">
+                              <div class="field-content p-rdgroups__summary">搭建全数字化一体化模块化粒子探测器，具备超高事例计数能力。</div>
+                              <div class="field-content p-rdgroups__cta"><a href="Research-Tech-Detectors-cn.html"
+                                  class="cta--button" hreflang="en">
+                                  了解更多</a></div>
+                            </div>
+                            <div class="p-rdgroups__panel tab views-row" id="panel-4" role="tabpanel"
+                              aria-labeledby="tab-4" aria-hidden="true" tabindex="-1" style="height: 315px;">
+                              <div class="field-content p-rdgroups__summary">构建即插成像基础探测成像框架，作为智能成像体系的底层支撑。
+                              </div>
+                              <div class="field-content p-rdgroups__cta"><a href="Research-Tech-PnI-cn.html"
+                                  class="cta--button" hreflang="en">
+                                  了解更多</a></div>
+                            </div>
+                            <div class="p-rdgroups__panel tab views-row" id="panel-5" role="tabpanel"
+                              aria-labeledby="tab-5" aria-hidden="true" tabindex="-1" style="height: 315px;">
+                              <div class="field-content p-rdgroups__summary">面向专用场景开发端到端数据流驱动的图像重建算法，实现高保真定量成像。
+                              </div>
+                              <div class="field-content p-rdgroups__cta"><a href="Research-Tech-Imaging-cn.html"
+                                  class="cta--button" hreflang="en">
+                                  了解更多</a></div>
+                            </div>
+                            <div class="p-rdgroups__panel tab views-row" id="panel-6" role="tabpanel"
+                              aria-labeledby="tab-6" aria-hidden="true" tabindex="-1" style="height: 315px;">
+                              <div class="field-content p-rdgroups__summary">研发搭载乐高式即插成像架构的新型探测仪器与整机系统，部署灵活且可扩展性强。
+                              </div>
+                              <div class="field-content p-rdgroups__cta"><a href="Research-Tech-Instruments-cn.html"
+                                  class="cta--button" hreflang="en">
+                                  了解更多</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Video -->
+                  <div class="paragraph paragraph--type-wysiwyg paragraph--view-mode-full">
+                    <div class="wysiwyg">
+                      <h3>质子治疗有多强大？放射治疗领域的顶尖技术</h3>
+                      <figure data-embed-button="media_video" data-entity-embed-display="view_mode:media.wysiwyg__full"
+                        data-entity-type="media" data-entity-uuid="114fd1ac-5acb-41ea-8e83-1b3fb18080bc"
+                        data-langcode="en" data-entity-embed-display-settings="[]" class="embedded-entity">
+                        <div class="video wysiwyg-video wysiwyg-video--full video--inline clearfix" id="">
+                          <div class="video__wrapper">
+                            <div class="video__cover">
+                              <img loading="eager" src="../assets/pic/research/Research-Initiatives/media/1.png"
+                                width="3024" height="1964"
+                                alt="Cover image for the Bilibili video How Powerful Is Proton Therapy? The Pinnacle of Radiotherapy"
+                                typeof="foaf:Image" class="image-style-ifde-wysiwyg-full">
+                              <button type="button" class="video__play"
+                                onclick="window.location.href='https://www.bilibili.com/video/BV1g1421q7iy/'; return false;">播放视频<span
+                                  class="video__play-accent"></span></button>
+                            </div>
+                            <div class="video__embed">
+                              <div class="video-embed-field-provider-bilibili video-embed-field-responsive-video"
+                                id="proton-video-wrap">
+                              </div>
+                              <button type="button" class="video__close"
+                                onclick="closeProtonVideo(event); return false;">关闭视频</button>
+                            </div>
+                          </div>
+                          <div class="video__caption">
+                            <div
+                              class="field field--name-field-caption field--type-string field--label-hidden field__item">
+                              本视频由 52 赫兹实验室发布于哔哩哔哩平台，介绍质子治疗及其在现代放射治疗体系中的应用。<br> <a
+                                href="https://www.bilibili.com/video/BV1g1421q7iy/"
+                                rel="noopener">前往哔哩哔哩观看原视频</a>。</div>
+                          </div>
+                        </div>
+                      </figure>
+                    </div>
+                  </div>
+
+
+                  <!-- Latest News -->
+                  <div class="paragraph paragraph--type-p-news3up paragraph--view-mode-full research-latest-news js-animate">
+                    <h2 class="p-news3up__header">最新新闻</h2>
+                    <div class="p-news3up__content">
+                      <div class="views-element-container">
+                        <div class="view view-news-blocks view-id-news_blocks view-display-id-3up_rdgroup">
+                          <div class="view-content">
+                            <div class="views-row">
+                              <div class="node node--type-news node--view-mode-_-up">
+                                <div class="field field--name-field-news-er-image field--type-entity-reference field--label-hidden field__item">
+                                  <article class="media media--type-image media--view-mode-news-3-up">
+                                    <div class="field field--name-field-image field--type-image field--label-hidden field__item">
+                                      <a href="../News/List/News-page1-cn.html" hreflang="zh-CN">
+                                        <img loading="lazy" src="../assets/pic/root/media/1.jpg" width="320" height="320" alt="在线监测质子治疗的“摄像头系统”升级了！" typeof="foaf:Image" class="image-style-news-3-up">
+                                      </a>
+                                    </div>
+                                  </article>
+                                </div>
+                                <div class="field field--name-node-title field--type-ds field--label-hidden field__item">
+                                  <h3 class="link--animated" data-once="append-span">
+                                    <a href="../News/List/News-page1-cn.html" hreflang="zh-CN">在线监测质子治疗的“摄像头系统”升级了！<span></span></a><span></span>
+                                  </h3>
+                                </div>
+                                <div class="group-info">
+                                  <div class="field field--name-field-news-date field--type-datetime field--label-hidden field__item">9月29日</div>
+                                  <div class="news-source">数字PET实验室</div>
+                                </div>
+                                <div class="field field--name-mitll-news-featured-summary field--type-ds field--label-hidden field__item">
+                                  <p>质子刀PET，作为数字PET2.0创新系统代表成果之一，一直是数字PETer在前沿探索上的努力方向...</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="views-row">
+                              <div class="node node--type-news node--view-mode-_-up">
+                                <div class="field field--name-field-news-er-image field--type-entity-reference field--label-hidden field__item">
+                                  <article class="media media--type-image media--view-mode-news-3-up">
+                                    <div class="field field--name-field-image field--type-image field--label-hidden field__item">
+                                      <a href="../News/List/News-page4-cn.html" hreflang="zh-CN">
+                                        <img loading="lazy" src="../assets/pic/news/content/4.jpg" width="320" height="320" alt="能“看见”质子束的数字PET装置来了！" typeof="foaf:Image" class="image-style-news-3-up">
+                                      </a>
+                                    </div>
+                                  </article>
+                                </div>
+                                <div class="field field--name-node-title field--type-ds field--label-hidden field__item">
+                                  <h3 class="link--animated" data-once="append-span">
+                                    <a href="../News/List/News-page4-cn.html" hreflang="zh-CN">能“看见”质子束的数字PET装置来了！<span></span></a><span></span>
+                                  </h3>
+                                </div>
+                                <div class="group-info">
+                                  <div class="field field--name-field-news-date field--type-datetime field--label-hidden field__item">3月8日</div>
+                                  <div class="news-source">数字PET实验室</div>
+                                </div>
+                                <div class="field field--name-mitll-news-featured-summary field--type-ds field--label-hidden field__item">
+                                  <p>数字PET团队自主创新的数字PET 2.0系统取得重要突破...</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="views-row">
+                              <div class="node node--type-news node--view-mode-_-up">
+                                <div class="field field--name-field-news-er-image field--type-entity-reference field--label-hidden field__item">
+                                  <article class="media media--type-image media--view-mode-news-3-up">
+                                    <div class="field field--name-field-image field--type-image field--label-hidden field__item">
+                                      <a href="../News/List/News-page57-cn.html" hreflang="zh-CN">
+                                        <img loading="lazy" src="../assets/pic/news-media/24.svg" width="320" height="320" alt="大陆发明的数字PET首次在台湾用于质子束监测" typeof="foaf:Image" class="image-style-news-3-up">
+                                      </a>
+                                    </div>
+                                  </article>
+                                </div>
+                                <div class="field field--name-node-title field--type-ds field--label-hidden field__item">
+                                  <h3 class="link--animated" data-once="append-span">
+                                    <a href="../News/List/News-page57-cn.html" hreflang="zh-CN">大陆发明的数字PET首次在台湾用于质子束监测<span></span></a><span></span>
+                                  </h3>
+                                </div>
+                                <div class="group-info">
+                                  <div class="field field--name-field-news-date field--type-datetime field--label-hidden field__item">6月28日</div>
+                                  <div class="news-source">数字PET实验室</div>
+                                </div>
+                                <div class="field field--name-mitll-news-featured-summary field--type-ds field--label-hidden field__item">
+                                  <p>近日，大陆科学家首次在台湾长庚纪念医院将全数字平板PET用于质子束在线监测，并取得良好效果，这项研究表明有了全数字PET的精准追踪，质子放疗精准度将大大提高...</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider-wrapper"><div class="slider-content"></div></div>
+                    <div class="p-news3up__cta"><a href="../News/News-list-cn.html" class="cta--button">更多新闻</a></div>
+                  </div>
+
+
+                  <!-- Featured Projects -->
+                  <div class="paragraph paragraph--type-p-project-carousel paragraph--view-mode-full">
+                    <h2 class="p-project-carousel__header">
+                      重点科研项目
+                    </h2>
+                    <div class="p-project-carousel__content">
+                      <div class="views-element-container">
+                        <div
+                          class="view view-projects-blocks view-id-projects_blocks view-display-id-project_carousel_rdarea js-view-dom-id-0cb597ab4cca5e49c5611efe5d40910ee3cdcf182333757d1ecfeb2eea8a24e9">
+                          <div class="view-content">
+
+                            <div class="lab-carousel views-row">
+                              <div class="node node--type-project node--view-mode-carousel">
+                                <div class="project-carousel__image-wrapper">
+                                  <a class="field-group-link" hreflang="en">
+                                    <div class="project-carousel__image">
+                                      <picture>
+                                        <source srcset="../assets/pic/Illustration/3.png 1x" media="(min-width: 1025px)"
+                                          type="image/png" width="1600" height="900">
+                                        <source srcset="../assets/pic/Illustration/3.png 1x" type="image/png"
+                                          width="700" height="410">
+                                        <img loading="eager" width="1600" height="900"
+                                          src="../assets/pic/Illustration/3.png"
+                                          alt="A magnified view of superconducting circuits. " typeof="foaf:Image">
+                                      </picture>
+                                    </div>
+                                  </a>
+                                </div>
+                                <div class="project-carousel__content">
+                                  <div class="project-carousel__tag">国家自然科学基金国家重大科研仪器研制项目</div>
+                                  <h3 class="project-carousel__title">
+                                    <a>质子束生物组织能量输运观测装置</a>
+                                  </h3>
+                                  <div class="project-carousel__summary">
+                                    <p>自研质子束专用测量设备可定量解析质子束在生物组织内的能量沉积分布，实现剂量实时监测，支撑质子治疗方案精准优化。</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="lab-carousel views-row">
+                              <div class="node node--type-project node--view-mode-carousel">
+                                <div class="project-carousel__image-wrapper">
+                                  <a class="field-group-link" hreflang="en">
+                                    <div class="project-carousel__image">
+                                      <picture>
+                                        <source srcset="../assets/pic/Illustration/1.png 1x" media="(min-width: 1025px)"
+                                          type="image/jpeg" width="1600" height="900">
+                                        <source srcset="../assets/pic/Illustration/1.png 1x" type="image/jpeg"
+                                          width="700" height="410">
+                                        <img loading="eager" width="1600" height="900"
+                                          src="../assets/pic/Illustration/1.png"
+                                          alt="An illustration of a machine transforming &quot;C&quot; icons into &quot;Rust&quot; icons."
+                                          typeof="foaf:Image">
+                                      </picture>
+                                    </div>
+                                  </a>
+                                </div>
+
+                                <div class="project-carousel__content">
+                                  <div class="project-carousel__tag">国家杰出青年科学基金项目</div>
+                                  <h3 class="project-carousel__title">
+                                    <a>全数字PET成像</a>
+                                  </h3>
+                                  <div class="project-carousel__summary">
+                                    <p>全数字 PET 成像平台可完成海量并行通道与高速闪烁信号流的高精度数字化处理，为核医学临床诊疗与粒子物理实验提供高保真度的定量分子探测手段。
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="lab-carousel views-row">
+                              <div class="node node--type-project node--view-mode-carousel">
+                                <div class="project-carousel__image-wrapper">
+                                  <a class="field-group-link" hreflang="en">
+                                    <div class="project-carousel__image">
+                                      <picture>
+                                        <source srcset="../assets/pic/Illustration/2.png 1x" media="(min-width: 1025px)"
+                                          type="image/jpeg" width="1600" height="900">
+                                        <source srcset="../assets/pic/Illustration/2.png 1x" type="image/jpeg"
+                                          width="700" height="410">
+                                        <img loading="eager" width="1600" height="900"
+                                          src="../assets/pic/Illustration/2.png"
+                                          alt="A photo of a service member preparing a small autonomous robot. "
+                                          typeof="foaf:Image">
+                                      </picture>
+                                    </div>
+                                  </a>
+                                </div>
+
+                                <div class="project-carousel__content">
+                                  <div class="project-carousel__tag">国家自然科学基金原创探索计划项目</div>
+                                  <h3 class="project-carousel__title">
+                                    <a>高灵敏高计数率全数字化硅光电倍增器</a>
+                                  </h3>
+                                  <div class="project-carousel__summary">
+                                    <p>高灵敏、高通量全数字化硅光电倍增集成电路可在强辐照环境下分辨重叠闪烁脉冲信号，适配高计数率 PET 成像与辐射探测场景。</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="lab-carousel views-row">
+                              <div class="node node--type-project node--view-mode-carousel">
+                                <div class="project-carousel__image-wrapper">
+                                  <a class="field-group-link" hreflang="en">
+                                    <div class="project-carousel__image">
+                                      <picture>
+                                        <source srcset="../assets/pic/Illustration/4.png 1x" media="(min-width: 1025px)"
+                                          type="image/png" width="1600" height="900">
+                                        <source srcset="../assets/pic/Illustration/4.png 1x" type="image/png"
+                                          width="700" height="410">
+                                        <img loading="eager" width="1600" height="900"
+                                          src="../assets/pic/Illustration/4.png"
+                                          alt="Graphic showing a military servicemember on the left and a full hospital scenario on the right. "
+                                          typeof="foaf:Image">
+                                      </picture>
+                                    </div>
+                                  </a>
+                                </div>
+
+                                <div class="project-carousel__content">
+                                  <div class="project-carousel__tag">国家自然科学基金重大国际（地区）合作研究项目</div>
+                                  <h3 class="project-carousel__title">
+                                    <a>平板PET成像</a>
+                                  </h3>
+                                  <div class="project-carousel__summary">
+                                    <p>平板 PET 探测硬件拓展了分子成像应用体系，可实现术中成像、临床前小动物成像及便携式床旁扫描，弥补传统环形 PET 系统的应用局限。</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="p-project-carousel__cta"><a href="Research-Project-cn.html" class="cta--button">更多项目</a>
+                    </div>
+                  </div>
+
+
+                  <!-- Laboratory Stories -->
+                  <div class="paragraph paragraph--type-p-lab-carousel paragraph--view-mode-full">
+                    <h2 class="p-lab-carousel__header">
+                      实验室纪事
+                    </h2>
+                    <div class="p-lab-carousel__content">
+                      <div class="views-element-container">
+                        <div
+                          class="view view-laboratory-story-blocks view-id-laboratory_story_blocks view-display-id-lab_carousel_rdgroup js-view-dom-id-d08b6d1c90529b1967563aca44db7eae47d81ac1105fbda6cbc67c781a80f92a">
+                          <div class="view-content slick-initialized slick-slider slick-dotted">
+                            <div class="slick-list">
+                              <div class="slick-track" style="opacity: 1; width: 1512px;">
+                                <div class="lab-carousel views-row slick-slide slick-current slick-active"
+                                  data-slick-index="0" aria-hidden="false"
+                                  style="width: 1512px; position: relative; left: 0px; top: 0px; z-index: 199; opacity: 1;">
+                                  <div class="lab-carousel__left">
+                                    <div class="lab-carousel__quote">
+                                      我们的使命是打造一片适宜顶尖科学蓬勃发展的科研环境：保障科研人员发展、孕育创意与创新、完善硬件平台与基础设施，支撑 PET 实验室肩负服务国家的使命。
+                                    </div>
+                                    <h3 class="lab-carousel__display-name link--animated" data-once="append-span">
+                                      <a href="../About/About-QingguoXie-cn.html" hreflang="en">谢庆国<span></span></a>
+                                      <span></span>
+                                    </h3>
+                                    <div class="lab-carousel__job-title">首席研究员，教授，博士生导师</div>
+                                    <div class="lab-carousel__rdarea">数字化探测技术与仪器开发</div>
+                                    <div class="lab-carousel__rdgroup">质子治疗监测</div>
+                                  </div>
+                                  <div class="lab-carousel__right">
+                                    <a href="../About/About-QingguoXie-cn.html"
+                                      class="field-group-link lab-carousel__image" hreflang="en">
+                                      <img loading="lazy" src="../assets/pic/About/People/1-1.jpg" width="500"
+                                        height="500" alt="Rafael Jaimes" typeof="foaf:Image"
+                                        class="image-style-featured">
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="p-lab-carousel__cta"><a href="../About/About-leadership-cn.html"
+                        class="cta--button">了解更多</a></div>
+                  </div>
+
+
+                  <!-- Advancing Our Research-->
+                  <div class="paragraph paragraph--type-p-masonry paragraph--view-mode-full">
+                    <h2 class="p-masonry__header">进一步探索</h2>
+                    <div class="p-masonry__grid" style="position: relative; height: 1496.265625px;">
+
+                      <div class="p-masonry__item js-animate"
+                        style="position: absolute; left: 0px; top: 0px; transition-delay: 0s;">
+                        <div
+                          class="paragraph paragraph--type-p-masonry-generic paragraph--view-mode-full p-masonry-generic--no-image background--">
+                          <div class="p-masonry-generic__content">
+                            <h3 class="p-masonry-generic__title">科学研究</h3>
+                            <div class="p-masonry-generic__body">深入了解我们更多正在开展的科研工作。</div>
+                            <div class="p-masonry-generic__cta"><a href="Research-ov-cn.html"
+                                class="cta--button">了解更多</a></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Featured Publications -->
+                      <div class="p-masonry__item js-animate"
+                        style="position: absolute; left: 558px; top: 0px; transition-delay: 0.2s;">
+                        <div class="paragraph paragraph--type-p-masonry-pub paragraph--view-mode-full">
+                          <h3 class="p-masonry-pub__header">重点论文</h3>
+                          <div class="p-masonry-pub__content">
+                            <div class="views-element-container">
+                              <div
+                                class="view view-publication-blocks view-id-publication_blocks view-display-id-block_grid_rdgroup js-view-dom-id-e66323e97bba17f75c406801c91076ed33575d468150ae54fd2b43a50b53fb01">
+                                <div class="view-content">
+                                  <div class="views-row" style="transition-delay: 0.2s;">
+                                    <div class="node node--type-publication node--view-mode-grid">
+                                      <h4 class="publication-grid__title">
+                                        <a href="https://doi.org/10.1016/j.bspc.2024.106853"
+                                          class="publication__link publication__external-link">A novel
+                                          iterative iso-transmission line empirical material decomposition algorithm for
+                                          multi-energy photon-counting CT<span
+                                            class="icon icon--external-link"></span></a>
+                                      </h4>
+                                      <div class="publication-grid__content">
+                                        <div class="publication-grid__date">Jan 01</div>
+                                        <div class="publication-grid__source">Biomedical Signal Processing and Control,
+                                          99, 2025, 106853. doi:10.1016/j.bspc.2024.106853.</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="views-row" style="transition-delay: 0.3s;">
+                                    <div class="node node--type-publication node--view-mode-grid">
+                                      <h4 class="publication-grid__title">
+                                        <a href="https://doi.org/10.1109/TRPMS.2025.3526659"
+                                          class="publication__link publication__external-link"
+>Performance
+                                          Evaluation of New PET/CT DigitMI 930<span
+                                            class="icon icon--external-link"></span></a>
+                                      </h4>
+                                      <div class="publication-grid__content">
+                                        <div class="publication-grid__date">Jan 09</div>
+                                        <div class="publication-grid__source">IEEE Transactions on Radiation and Plasma
+                                          Medical Sciences, vol. 9, no. 5, pp. 578-585, May 2025, doi:
+                                          10.1109/TRPMS.2025.3526659.</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="views-row" style="transition-delay: 0.4s;">
+                                    <div class="node node--type-publication node--view-mode-grid">
+                                      <h4 class="publication-grid__title">
+                                        <a href="https://doi.org/10.1109/TRPMS.2025.3584122"
+                                          class="publication__link publication__external-link"
+>Investigation of a Dual-Panel In-Beam PET Based on Digital
+                                          Detectors for Proton Therapy Monitoring With Different Monitoring Strategies:
+                                          A Simulation Study <span class="icon icon--external-link"></span></a>
+                                      </h4>
+                                      <div class="publication-grid__content">
+                                        <div class="publication-grid__date">Jan 30</div>
+                                        <div class="publication-grid__source">IEEE Transactions on Radiation and Plasma
+                                          Medical Sciences, vol. 10, no. 4, pp. 582-592, April 2026, doi:
+                                          10.1109/TRPMS.2025.3584122.</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-masonry-pub__cta"><a href="Research-Publication-cn.html"
+                              class="cta--button">更多论文</a></div>
+                        </div>
+                      </div>
+
+                      <!-- Featured Capabilities -->
+                      <div class="p-masonry__item js-animate"
+                        style="position: absolute; left: 0px; top: 371px; transition-delay: 0.4s;">
+                        <div class="paragraph paragraph--type-p-masonry-facility paragraph--view-mode-full">
+                          <h3 class="p-masonry-facility__header">核心能力</h3>
+                          <div class="p-masonry-facility__content">
+                            <div class="views-element-container">
+                              <div
+                                class="view view-facility-blocks view-id-facility_blocks view-display-id-masonry_manual js-view-dom-id-dbb4682a7e718dd6214a353b6056a8f5eed988ac9fabde6d6924a16305d5a6ff">
+                                <div class="view-content">
+                                  <div class="views-row" style="transition-delay: 0.4s;">
+                                    <div class="node node--type-facility node--view-mode-grid">
+                                      <div class="facility-grid__image">
+                                        <img loading="lazy" src="../assets/pic/root/media/capabilities1.png" width="420"
+                                          height="240"
+                                          alt="A staff member holds up a test tube filled with orange liquid"
+                                          typeof="foaf:Image" class="image-style-facility-list">
+                                      </div>
+                                      <h4 class="facility-grid__title">
+                                        <a hreflang="en">先进生物成像设施</a>
+                                      </h4>
+                                    </div>
+                                  </div>
+                                  <div class="views-row" style="transition-delay: 0.5s;">
+                                    <div class="node node--type-facility node--view-mode-grid">
+                                      <div class="facility-grid__image">
+                                        <img loading="lazy" src="../assets/pic/Infrastructure/facility/f2-1.png"
+                                          width="420" height="240"
+                                          alt="Digital PET Laboratory is conducting health and performance research in its Computer Assisted Rehabilitation Environment (CAREN) dome in the new Sensorimotor Technology Realization in Immersive Virtual Environments (STRIVE) Center."
+                                          typeof="foaf:Image" class="image-style-facility-list">
+                                      </div>
+                                      <h4 class="facility-grid__title">
+                                        <a hreflang="en">数字PET成像平台</a>
+                                      </h4>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-masonry-facility__cta"><a href="../Capabilities/Capabilities-ov-cn.html"
+                              class="cta--button">了解更多 </a></div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+
+                  <!-- Engage with us-->
+                  <div
+                    class="paragraph paragraph--type-p-fullwidth paragraph--view-mode-full background--grey slope--pos js-animate">
+                    <div class="p-fullwidth__content">
+                      <h2 class="p-fullwidth__header">加入我们</h2>
+                      <div class="p-fullwidth__body">
+                        <p><span>诚邀各界伙伴携手合作，共同探索兼具前沿价值与技术挑战的科研方向。</span></p>
+                      </div>
+                      <div class="p-fullwidth__cta"><a href="../Engage/Engage-ov-cn.html" class="cta--button">了解更多 </a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div id="petlab-footer" class="petlab-component-host"></div>
+    </div>
+  </div>
+
+  <script src="../assets/js/root/r001.js"></script>
+  <script src="../assets/js/root/003.js"></script>
+  <script src="../assets/js/root/010.js"></script>
+  <script src="../assets/js/root/script-05.js"></script>
+  <script src="../assets/js/root/r038.js"></script>
+  <script src="../assets/js/root/r039.js"></script>
+  <script src="../assets/js/root/r040.js"></script>
+  <script src="../assets/js/root/r038.js"></script>
+  <script src="../assets/js/root/r039.js"></script>
+  <script src="../assets/js/root/r040.js"></script>
+  <script src="../assets/js/root/002.js"></script>
+  <script>
+    (function () {
+      var siteRoot = new URL('../', window.location.href);
+      var cssUrl = new URL('assets/css/site.css?v=20260908-wide1', siteRoot);
+
+      function rewriteComponentUrls(shadow) {
+        shadow.querySelectorAll('[src], [href]').forEach(function (node) {
+          ['src', 'href'].forEach(function (attribute) {
+            var value = node.getAttribute(attribute);
+            if (!value || /^(?:#|https?:|mailto:|tel:|javascript:|\/)/i.test(value)) return;
+            node.setAttribute(attribute, new URL(value, siteRoot).href);
+          });
+        });
+      }
+
+      function initHeader(shadow) {
+        var header = shadow.querySelector('[data-site-header]');
+        if (!header) return;
+        var primaryGroups = shadow.querySelectorAll('.primary-nav > .nav-group');
+        function setPrimaryGroupVisual(group, active) {
+          if (!group || !group.matches('.primary-nav > .nav-group')) return;
+          var color = active ? '#edf5fc' : '#fff';
+          group.style.setProperty('background-color', color, 'important');
+          var trigger = group.querySelector(':scope > .nav-trigger');
+          trigger?.style.setProperty('background-color', color, 'important');
+        }
+        function setPrimaryNavigationVisual(active) {
+          var color = active ? '#edf5fc' : '#fff';
+          primaryGroups.forEach(function (group) { setPrimaryGroupVisual(group, active); });
+          shadow.querySelectorAll('.lbl-header, .lbl-header .header-shell, .lbl-header .desktop-navigation, .lbl-header .header-top-row, .lbl-header .primary-nav').forEach(function (node) {
+            node.style.setProperty('background-color', color, 'important');
+          });
+        }
+        setPrimaryNavigationVisual(false);
+        var closeTimers = new WeakMap();
+        var openGroup = function (group) {
+          if (!group) return;
+          var timer = closeTimers.get(group);
+          if (timer) window.clearTimeout(timer);
+          group.classList.add('open');
+          group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'true');
+        };
+        var closeGroup = function (group) {
+          if (!group) return;
+          var timer = window.setTimeout(function () {
+            if (group.matches(':hover') || group.matches(':focus-within')) return;
+            group.classList.remove('open');
+            group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+          }, 180);
+          closeTimers.set(group, timer);
+        };
+        var closeAllGroups = function () {
+          shadow.querySelectorAll('.nav-group.open').forEach(function (group) {
+            var timer = closeTimers.get(group);
+            if (timer) window.clearTimeout(timer);
+            group.classList.remove('open');
+            group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+          });
+          setPrimaryNavigationVisual(false);
+          var activeElement = shadow.activeElement;
+          if (activeElement && activeElement.matches('.primary-nav .nav-trigger, .primary-nav .mega-menu__close')) activeElement.blur();
+        };
+        var host = shadow.host;
+        header.addEventListener('mouseleave', closeAllGroups);
+        host?.addEventListener('mouseleave', closeAllGroups);
+        header.addEventListener('mouseleave', function () {
+          shadow.querySelectorAll('.nav-group.open, .nav-group.dismissed').forEach(function (group) {
+            group.classList.remove('open', 'dismissed');
+            group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+          });
+          setPrimaryNavigationVisual(false);
+        });
+        shadow.querySelectorAll('.nav-group').forEach(function (group) {
+          group.addEventListener('mouseenter', function () {
+            var timer = closeTimers.get(group);
+            if (timer) clearTimeout(timer);
+            group.classList.remove('dismissed');
+            shadow.querySelectorAll('.nav-group.open').forEach(function (item) {
+              if (item !== group) {
+                item.classList.remove('open', 'dismissed');
+                item.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+                setPrimaryGroupVisual(item, true);
+              }
+            });
+            group.classList.add('open');
+            group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'true');
+            if (group.matches('.primary-nav > .nav-group')) setPrimaryNavigationVisual(true);
+          });
+          group.addEventListener('mouseleave', function () {
+            var timer = setTimeout(function () {
+              group.classList.remove('open');
+              group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+              if (group.matches('.primary-nav > .nav-group') && !header.matches(':hover')) setPrimaryNavigationVisual(false);
+              var activeElement = shadow.activeElement;
+              if (activeElement && group.contains(activeElement)) activeElement.blur();
+            }, 220);
+            closeTimers.set(group, timer);
+          });
+        });
+        shadow.querySelectorAll('.nav-trigger').forEach(function (trigger) {
+          trigger.addEventListener('click', function () {
+            var group = trigger.closest('.nav-group');
+            var open = group && group.classList.contains('open');
+            shadow.querySelectorAll('.nav-group.open').forEach(function (item) {
+              item.classList.remove('open', 'dismissed');
+              item.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+              setPrimaryGroupVisual(item, false);
+            });
+            if (group && !open) {
+              group.classList.add('open');
+              trigger.setAttribute('aria-expanded', 'true');
+              setPrimaryNavigationVisual(true);
+            } else if (group && open) {
+              setPrimaryNavigationVisual(false);
+            }
+          });
+        });
+        shadow.querySelectorAll('[data-menu-close]').forEach(function (button) {
+          button.addEventListener('click', function () {
+            var group = button.closest('.nav-group');
+            group?.classList.remove('open');
+            group?.classList.add('dismissed');
+            group?.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+            setPrimaryNavigationVisual(false);
+            if (shadow.activeElement && group?.contains(shadow.activeElement)) shadow.activeElement.blur();
+          });
+        });
+        var menuToggle = shadow.querySelector('[data-menu-toggle]');
+        menuToggle?.addEventListener('click', function () {
+          var active = header.classList.toggle('menu-active');
+          menuToggle.setAttribute('aria-expanded', String(active));
+        });
+      }
+
+      async function mount(hostId, componentPath, isHeader) {
+        var host = document.getElementById(hostId);
+        if (!host) return;
+        try {
+          var response = await fetch(new URL(componentPath, siteRoot));
+          var cssResponse = await fetch(cssUrl);
+          if (!response.ok || !cssResponse.ok) throw new Error('Component load failed');
+          var shadow = host.attachShadow({ mode: 'open' });
+          var style = document.createElement('style');
+          var cssText = await cssResponse.text();
+          cssText = cssText.replace(/url\((['"]?)\.\.\/([^'")]+)\1\)/g, function (_, quote, path) {
+            return 'url(' + quote + new URL('assets/' + path, siteRoot).href + quote + ')';
+          });
+          cssText += '\n@media (min-width: 1101px) {' +
+            '.lbl-header, .lbl-header .header-shell, .lbl-header .desktop-navigation, ' +
+            '.lbl-header .primary-nav, .lbl-header .nav-group { overflow: visible !important; }' +
+            '.lbl-header .nav-group.open > .mega-menu, .lbl-header .nav-group:hover > .mega-menu, ' +
+            '.lbl-header .nav-group:focus-within > .mega-menu { display: grid !important; z-index: 2000 !important; pointer-events: auto; }' +
+            '.lbl-header .nav-group.dismissed > .mega-menu { display: none !important; }' +
+            '.lbl-header .primary-nav > .nav-group { background: #fff !important; }' +
+            '.lbl-header .primary-nav > .nav-group:hover, .lbl-header .primary-nav > .nav-group.open, ' +
+            '.lbl-header .primary-nav > .nav-group:focus-within { background: #edf5fc !important; }' +
+            '.lbl-header .primary-nav > .nav-group.dismissed { background: #fff !important; }' +
+            '.lbl-header .primary-nav > .nav-group > .nav-trigger { background: #fff !important; color: #062f40 !important; transition: none !important; }' +
+            '.lbl-header .primary-nav > .nav-group:hover > .nav-trigger, .lbl-header .primary-nav > .nav-group.open > .nav-trigger, ' +
+            '.lbl-header .primary-nav > .nav-group:focus-within > .nav-trigger { background: #edf5fc !important; color: #062f40 !important; }' +
+            '.lbl-header .primary-nav > .nav-group.dismissed > .nav-trigger { background: #fff !important; color: #062f40 !important; transition: none !important; }' +
+            '.lbl-header .primary-nav > .nav-group, .lbl-header .primary-nav > .nav-group > .nav-trigger { transition: none !important; }' +
+            '}';
+          style.textContent = cssText.replace(/^:root\s*\{/, ':host {');
+          shadow.appendChild(style);
+          var content = document.createElement('div');
+          content.innerHTML = await response.text();
+          while (content.firstChild) shadow.appendChild(content.firstChild);
+          rewriteComponentUrls(shadow);
+          if (!isHeader) {
+            var year = shadow.querySelector('[data-current-year]');
+            if (year) year.textContent = String(new Date().getFullYear());
+          } else {
+            initHeader(shadow);
+          }
+        } catch (error) {
+          host.textContent = '';
+          console.error('Unable to load PETLab component', error);
+        }
+      }
+
+      Promise.all([
+        mount('petlab-header', 'components/header-cn.html?v=20260908-wide1', true),
+        mount('petlab-footer', 'components/footer-cn.html?v=20260811-119', false)
+      ]);
+    }());
+  </script>
+
+  <script>
+    // p-rdgroups 横线动态计算：右端固定对齐，左端随文字宽度变化
+    (function () {
+      var GAP = 25; // 文字与横线之间的间隙
+
+      function updateRdgroupsLines() {
+        var tabs = document.querySelectorAll('.p-rdgroups__tablist li');
+        tabs.forEach(function (tab) {
+          var contain = tab.querySelector('.contain');
+          var position = tab.querySelector('.position');
+          if (!contain || !position) return;
+
+          // 计算文字宽度
+          var textWidth = position.offsetWidth;
+          // 横线左端 = 文字宽度 + 间隙
+          var leftPos = textWidth + GAP;
+          // 设置横线的 left
+          contain.style.setProperty('--line-left', leftPos + 'px');
+        });
+
+        // 应用到 active tab 的横线上
+        var activeTab = document.querySelector('.p-rdgroups__tablist li[aria-selected="true"]');
+        if (activeTab) {
+          var contain = activeTab.querySelector('.contain');
+          if (contain) {
+            var leftPos = contain.style.getPropertyValue('--line-left');
+            if (leftPos) {
+              contain.style.setProperty('--line-left-applied', leftPos);
+            }
+          }
+        }
+      }
+
+      // 用 CSS 变量控制横线 left
+      var style = document.createElement('style');
+      style.textContent = '.p-rdgroups__tablist li[aria-selected="true"] .contain::after { left: var(--line-left, 100%); }';
+      document.head.appendChild(style);
+
+      // 页面加载后执行
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function () {
+          setTimeout(updateRdgroupsLines, 100);
+        });
+      } else {
+        setTimeout(updateRdgroupsLines, 100);
+      }
+
+      // 监听 tab 切换
+      document.addEventListener('click', function (e) {
+        if (e.target.closest('.p-rdgroups__tablist li')) {
+          setTimeout(updateRdgroupsLines, 50);
+        }
+      });
+
+      // 窗口大小变化时重新计算
+      window.addEventListener('resize', function () {
+        setTimeout(updateRdgroupsLines, 100);
+      });
+    })();
+  </script>
+
+  <script>
+    /* Hide skip-link by default, show on keyboard focus */
+    (function () {
+      function fixSkipLink(link) {
+        if (link.dataset.skipLinkFixed3) return;
+        link.dataset.skipLinkFixed3 = '1';
+        link.classList.remove('visually-hidden');
+        link.style.setProperty('position', 'fixed', 'important');
+        link.style.setProperty('top', '0', 'important');
+        link.style.setProperty('left', '1rem', 'important');
+        link.style.setProperty('z-index', '9999', 'important');
+        link.style.setProperty('transform', 'translateY(-200%)', 'important');
+        link.style.setProperty('background', '#fff', 'important');
+        link.style.setProperty('padding', '.75rem 1rem', 'important');
+        link.style.setProperty('text-decoration', 'none', 'important');
+        link.style.setProperty('color', '#000', 'important');
+        link.style.setProperty('transition', 'transform .2s ease', 'important');
+        link.style.setProperty('clip', 'auto', 'important');
+        link.style.setProperty('width', 'auto', 'important');
+        link.style.setProperty('height', 'auto', 'important');
+        link.style.setProperty('overflow', 'visible', 'important');
+        link.addEventListener('focus', function () { link.style.setProperty('transform', 'translateY(0)', 'important'); });
+        link.addEventListener('blur', function () { link.style.setProperty('transform', 'translateY(-200%)', 'important'); });
+      }
+      function fixAll() { document.querySelectorAll('.skip-link').forEach(fixSkipLink); }
+      fixAll();
+      var observer = new MutationObserver(fixAll);
+      observer.observe(document.documentElement, { childList: true, subtree: true });
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fixAll);
+      window.addEventListener('load', function () { setTimeout(fixAll, 100); });
+    })();
+  </script>
+
+</body>
+
+</html>

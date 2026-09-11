@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <link rel="icon" type="image/png" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+    <link rel="apple-touch-icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+    <link rel="manifest" href="../assets/data/favicons/site.webmanifest">
+    <link rel="shortcut icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1" type="image/png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#003c62">
+    <title>History | Digital PET Laboratory</title>
+    <meta name="keywords" content="Digital PET Laboratory, history, timeline">
+    <meta name="description" content="The development history of the Digital PET Laboratory from 2004 to the present.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta property="og:title" content="History | Digital PET Laboratory">
+    <meta property="og:description"
+        content="The development history of the Digital PET Laboratory from 2004 to the present.">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://petlab.hust.edu.cn/" />
+    <meta property="og:site_name" content="Digital PET Laboratory" />
+    <meta property="og:image" content="../assets/pic/main/PETLAB_LOGO_Pure.png">
+    <link rel="stylesheet" href="../assets/css/site.css?v=20260908-wide1">
+    <script src="../assets/js/site.js?v=20260804-118" defer></script>
+    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline-min.js"></script>
+
+
+    <style>
+        #timeline-embed {
+            width: 100%;
+            height: 30rem;
+            background-color: #f8f9fa !important;
+        }
+
+        /* 时间轴 事件卡片 背景色 */
+        #timeline-embed .tl-slide-content {
+            padding: 1rem !important;
+        }
+
+        /* 时间轴 大标题 */
+        #timeline-embed .tl-headline h2 {
+            font-size: 2rem !important;
+            color: #000 !important;
+        }
+
+        /* 时间轴 日期文字 */
+        #timeline-embed .tl-time {
+            font-size: 18px !important;
+            color: #0052cc !important;
+        }
+
+        /* 时间轴 事件标题 */
+        #timeline-embed .tl-slide-title h3 {
+            font-size: 20px !important;
+            color: #222 !important;
+        }
+
+        /* 时间轴 事件正文 */
+        #timeline-embed .tl-slide-text p {
+            font-size: 16px !important;
+            line-height: 1.6 !important;
+            color: #000 !important;
+        }
+
+        /* 时间轴 整个右侧面板背景 */
+        #timeline-embed .tl-slides {
+            background-color: #f7f7f7 !important;
+        }
+
+        /* Chapter navigation copied from the impact-report pages. */
+        .history-main>.mitll-ll-pub-nav-chapters {
+            width: 100%;
+            margin: 0;
+            padding: 30px;
+            box-sizing: border-box;
+            background: rgba(0, 25, 41, .95);
+            color: #fff;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .mitll-ll-pub-nav-chapters-inner {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters h3 {
+            margin: 0 0 40px;
+            color: #fff;
+            font-size: 30px;
+            line-height: 1.25;
+            text-transform: uppercase;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .mitll-ll-pub-bottom-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .mitll-ll-pub-bottom-nav>li {
+            position: relative;
+            flex: 0 0 100%;
+            min-width: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .ll-section-nav {
+            position: relative;
+            display: block;
+            height: 100%;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .ll-pub-bottom-nav-img {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            background: #00305c;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .ll-pub-bottom-nav-img::after {
+            position: absolute;
+            inset: 0;
+            background: #008eff;
+            content: "";
+            opacity: .7;
+            transition: opacity .8s ease;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .ll-pub-bottom-nav-img img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1.25s ease;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .ll-nav-text-side {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .ll-nav-title {
+            width: 100%;
+            margin: 0;
+            padding: 7px;
+            box-sizing: border-box;
+            color: #fff;
+            background: rgba(0, 48, 92, .7);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 38px;
+            line-height: 1.25;
+            font-weight: 700;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .ll-current-chapter .ll-pub-bottom-nav-img::after,
+        .history-main>.mitll-ll-pub-nav-chapters .ll-current-chapter .ll-nav-title {
+            background: rgba(255, 255, 255, .7);
+            color: #00305c;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .ll-section-nav:hover .ll-pub-bottom-nav-img::after {
+            opacity: 0;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .ll-section-nav:hover .ll-pub-bottom-nav-img img {
+            transform: scale(1.15);
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .ll-section-nav:hover .ll-nav-title {
+            padding-bottom: 15px;
+        }
+
+        @media (min-width: 700px) {
+            .history-main>.mitll-ll-pub-nav-chapters {
+                padding: 45px 30px 50px;
+            }
+
+            .history-main>.mitll-ll-pub-nav-chapters .mitll-ll-pub-bottom-nav>li {
+                flex-basis: calc(50% - 5px);
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .history-main>.mitll-ll-pub-nav-chapters {
+                padding-top: 60px;
+                padding-bottom: 80px;
+            }
+
+            .history-main>.mitll-ll-pub-nav-chapters .mitll-ll-pub-bottom-nav>li {
+                flex-basis: calc(20% - 8px);
+            }
+        }
+    </style>
+
+    <style>
+        /* Shared About-page hero styling. */
+        .about-hero-wrap {
+            position: relative;
+            min-height: min(78vh, 820px);
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            color: #fff;
+            background-color: #112c40;
+            background-image: url("../assets/pic/About/ov/about_ov_hero.png");
+            background-size: cover;
+            background-position: center 25%;
+            background-repeat: no-repeat;
+        }
+
+        .about-hero-wrap::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, .76), transparent 54%), linear-gradient(90deg, rgba(0, 20, 34, .18), transparent 70%);
+        }
+
+        .about-hero-inner {
+            position: relative;
+            z-index: 1;
+            width: min(calc(100% - 116px), 1280px);
+            margin: 0 auto;
+            padding-left: 18px;
+            padding-bottom: 52px;
+        }
+
+        .about-hero-title {
+            margin: 0;
+            font-size: clamp(3rem, 6vw, 5.2rem);
+            line-height: 1;
+            font-weight: 700;
+            letter-spacing: .02em;
+        }
+
+        @media (max-width: 1100px) {
+            .about-hero-wrap {
+                min-height: min(78vh, 820px);
+            }
+
+            .about-hero-inner {
+                width: calc(100% - 36px);
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        .history-main {
+            background: #f5f4f0;
+            color: #111820;
+        }
+
+        .history-hero {
+            position: relative;
+            min-height: 360px;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            color: #fff;
+            background: #003360;
+        }
+
+        .history-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(0, 24, 40, .9), rgba(0, 31, 52, .32) 72%), linear-gradient(0deg, rgba(0, 18, 29, .64), transparent 58%);
+        }
+
+        .history-hero__content {
+            position: relative;
+            z-index: 1;
+            width: min(calc(100% - 64px), 1440px);
+            margin: 0 auto;
+            padding: 4.5rem 0 4rem;
+        }
+
+        .history-hero__content p {
+            margin: 0 0 .85rem;
+            font-size: .76rem;
+            font-weight: 700;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+        }
+
+        .history-hero h1 {
+            max-width: 760px;
+            margin: 0;
+            font-size: clamp(3rem, 7vw, 6.3rem);
+            line-height: .95;
+            letter-spacing: -.045em;
+        }
+
+        .history-hero__lede {
+            max-width: 680px;
+            margin: 1.5rem 0 0 !important;
+            font-size: clamp(1rem, 1.8vw, 1.3rem) !important;
+            font-weight: 400 !important;
+            line-height: 1.5;
+            letter-spacing: 0 !important;
+            text-transform: none !important;
+        }
+
+        .history-timeline {
+            width: min(calc(100% - 64px), 1440px);
+            margin: 0 auto;
+            padding: clamp(3rem, 7vw, 7rem) 0 clamp(4rem, 8vw, 8rem);
+        }
+
+        .history-timeline__heading {
+            display: grid;
+            grid-template-columns: minmax(220px, .75fr) minmax(0, 2fr);
+            gap: clamp(2rem, 7vw, 8rem);
+            align-items: start;
+            margin-bottom: 2.5rem;
+        }
+
+        .history-timeline__heading h2 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 4.4rem);
+            line-height: 1.04;
+            letter-spacing: -.04em;
+        }
+
+        .history-timeline__heading p {
+            max-width: 740px;
+            margin: .35rem 0 0;
+            color: #34414b;
+            font-size: 1.15rem;
+            line-height: 1.6;
+        }
+
+        #timeline-embed {
+            width: 100%;
+            height: clamp(620px, 57vw, 820px);
+            overflow: hidden;
+            background: #fff !important;
+            border: 1px solid #d7dce0;
+            box-shadow: 0 18px 50px rgba(0, 31, 54, .12);
+        }
+
+        #timeline-embed .tl-slide-content {
+            padding: 1.4rem !important;
+        }
+
+        #timeline-embed .tl-headline h2 {
+            color: #111820 !important;
+            font-size: clamp(1.6rem, 2.8vw, 2.5rem) !important;
+            line-height: 1.1 !important;
+        }
+
+        #timeline-embed .tl-time {
+            color: #0067a7 !important;
+            font-size: 1rem !important;
+            font-weight: 700;
+        }
+
+        #timeline-embed .tl-slide-title h3 {
+            color: #222 !important;
+            font-size: clamp(1.1rem, 1.7vw, 1.5rem) !important;
+            line-height: 1.25 !important;
+        }
+
+        #timeline-embed .tl-slide-text p {
+            color: #34414b !important;
+            font-size: 1rem !important;
+            line-height: 1.65 !important;
+        }
+
+        #timeline-embed .tl-slides {
+            background: #f7f7f7 !important;
+        }
+
+        @media (max-width: 700px) {
+            .history-hero {
+                min-height: 410px;
+            }
+
+            .history-hero__content,
+            .history-timeline {
+                width: min(calc(100% - 32px), 1440px);
+            }
+
+            .history-hero__content {
+                padding: 3.5rem 0 3rem;
+            }
+
+            .history-timeline__heading {
+                display: block;
+            }
+
+            .history-timeline__heading h2 {
+                margin-bottom: 1rem;
+            }
+
+            .history-timeline__heading p {
+                font-size: 1rem;
+            }
+
+            #timeline-embed {
+                height: 650px;
+            }
+        }
+    </style>
+
+    <style>
+        /* Match the image-free sloped title hero used by the Chinese page. */
+        .about-hero-wrap {
+            position: relative;
+            isolation: isolate;
+            min-height: clamp(225px, 27.1vw, 390px) !important;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            color: #fff;
+            background: none !important;
+        }
+
+        .about-hero-wrap::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: #00305c;
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - clamp(42px, 10.85vw, 156px)), 0 100%);
+        }
+
+        .about-hero-inner {
+            position: relative;
+            z-index: 1;
+            width: min(calc(100% - 100px), 1000px);
+            margin: 0 auto;
+            padding: 24px 0 72px !important;
+        }
+
+        .about-hero-title {
+            margin: 0;
+            color: #fff;
+            letter-spacing: 0;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 699px) {
+            .about-hero-wrap {
+                min-height: 225px !important;
+            }
+
+            .about-hero-inner {
+                width: calc(100% - 30px);
+                padding: 14px 0 52px !important;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="../assets/css/archive-consistency.css?v=20260908-wide1">
+    <link rel="stylesheet" href="../assets/css/about-explore-nav.css?v=20260911-4">
+  <link rel="stylesheet" href="../assets/css/page-canvas.css?v=20260911-1">
+</head>
+
+
+<body class="page-history page-about-wide" id="top">
+    <div data-component="header"></div>
+
+    <main id="main-content" class="history-main">
+        <section class="about-hero-wrap">
+            <div class="about-hero-inner">
+                <h1 class="about-hero-title">Our History</h1>
+            </div>
+        </section>
+        <section class="history-timeline" aria-labelledby="history-title">
+            <div id="timeline-embed"></div>
+
+            <script>
+                // 你的数据 👇 把这里换成你自己的所有数据
+                const data = {
+                    "title": {
+                        "text": {
+                            "headline": "PET Laboratory Timeline",
+                            "text": "2004 to present"
+                        }
+                    },
+                    "events": [
+                        {
+                            "start_date": { "year": "2004", "month": "2" },
+                            "end_date": { "year": "2004", "month": "3" },
+                            "text": {
+                                "headline": "Invented the Multi-Voltage Threshold (MVT) sampling method"
+                            },
+                            "group": "Scientific Discoveries"
+                        },
+                        {
+                            "start_date": { "year": "2005" },
+                            "text": {
+                                "headline": "Pioneered the proposal of the All-Digital PET system architecture",
+                                "text": "Pioneered the proposal of the All-Digital PET system architecture based on the MVT method."
+                            },
+                            "group": "Technological Inventions"
+                        },
+                        {
+                            "start_date": { "year": "2008" },
+                            "text": {
+                                "headline": "Achieved the first modular integration",
+                                "text": "Achieved the first modular integration of an All-Digital PET detector."
+                            },
+                            "group": "Technological Inventions"
+                        },
+                        {
+                            "start_date": { "year": "2010" },
+                            "text": {
+                                "headline": "For the first time, realized consistency between the practical spatial resolution",
+                                "text": "For the first time, realized consistency between the practical spatial resolution and the intrinsic spatial resolution based on MVT and 1:1:1 detection technology."
+                            },
+                            "group": "Technological Inventions"
+                        },
+                        {
+                            "start_date": { "year": "2010" },
+                            "text": {
+                                "headline": "Completed the first animal-dedicated All-Digital PET scientific instrument",
+                                "text": "Completed the first animal-dedicated All-Digital PET scientific instrument. Based on this device, iterated a series of products and carried out application cooperation with many well-known universities, research institutes, and academic hospitals both domestically and internationally in disease research and new drug development for brain diseases, tumors, cardiovascular diseases, metabolism, and other fields. Related achievements were published in authoritative academic journals in the industry."
+                            },
+                            "group": "Industrial Expansion"
+                        },
+                        {
+                            "start_date": { "year": "2015" },
+                            "text": {
+                                "headline": "Completed the first clinical All-Digital PET/CT medical device",
+                                "text": "Completed the first clinical All-Digital PET/CT medical device, with key indicators such as spatial resolution, temporal resolution, and sensitivity leading comprehensively, possessing a full set of independent intellectual property rights."
+                            },
+                            "group": "Industrial Expansion"
+                        },
+                        {
+                            "start_date": { "year": "2017" },
+                            "text": {
+                                "headline": "Successfully developed the first specialized digital PET prototype",
+                                "text": "Successfully developed the first specialized digital PET prototype for proton therapy monitoring, validating the feasibility of All-Digital PET technology for online in-beam monitoring during proton therapy."
+                            },
+                            "group": "Technological Inventions"
+                        },
+                        {
+                            "start_date": { "year": "2017", "month": "4" },
+                            "end_date": { "year": "2017", "month": "6" },
+                            "text": {
+                                "headline": "Oxygen-15 produced by proton beam irradiation",
+                                "text": "For the first time, Oxygen-15 produced by proton beam irradiation of biological tissue was detected using a flat-panel All-Digital PET. This achievement holds significant importance for solving the challenge of online, in-beam proton beam monitoring."
+                            },
+                            "group": "Scientific Discoveries"
+                        },
+                        {
+                            "start_date": { "year": "2017", "month": "9" },
+                            "end_date": { "year": "2017", "month": "12" },
+                            "text": {
+                                "headline": "Achieved the first All-Digital data readout of SiPMs"
+                            },
+                            "group": "Scientific Discoveries"
+                        },
+                        {
+                            "start_date": { "year": "2018" },
+                            "text": {
+                                "headline": "The All-Digital PET/CT obtained special approval"
+                            },
+                            "group": "Industrial Expansion"
+                        },
+                        {
+                            "start_date": { "year": "2018", "month": "2" },
+                            "text": {
+                                "headline": "Successfully developed the first standard CMOS SiPM."
+                            },
+                            "group": "Technological Inventions"
+                        },
+                        {
+                            "start_date": { "year": "2018", "month": "9" },
+                            "text": {
+                                "headline": "Successfully developed the first brain-dedicated All-Digital PET prototype"
+                            },
+                            "group": "Technological Inventions"
+                        },
+                        {
+                            "start_date": { "year": "2019" },
+                            "text": {
+                                "headline": "Successfully developed large-size LYSO crystals"
+                            },
+                            "group": "Technological Inventions"
+                        },
+                        {
+                            "start_date": { "year": "2019", "month": "2" },
+                            "end_date": { "year": "2019", "month": "8" },
+                            "text": {
+                                "headline": "Addressing new requirements for key materials"
+                            },
+                            "group": "Scientific Discoveries"
+                        },
+                        {
+                            "start_date": { "year": "2019", "month": "3" },
+                            "text": {
+                                "headline": "The clinical all-digital PET/CT obtained the national medical device registration certificate"
+                            },
+                            "group": "Industrial Expansion"
+                        },
+                        {
+                            "start_date": { "year": "2019", "month": "9" },
+                            "end_date": { "year": "2019", "month": "11" },
+                            "text": {
+                                "headline": "Utilized a brain-dedicated All-Digital PET prototype"
+                            },
+                            "group": "Scientific Discoveries"
+                        },
+                        {
+                            "start_date": { "year": "2019", "month": "12" },
+                            "text": {
+                                "headline": "Took the lead in undertaking the National Key R&D Program"
+                            },
+                            "group": "Scientific Discoveries"
+                        },
+                        {
+                            "start_date": { "year": "2023" },
+                            "text": {
+                                "headline": "The first commercial brain-dedicated All-Digital PET obtained the national medical device registration certificate"
+                            },
+                            "group": "Industrial Expansion"
+                        },
+                        {
+                            "start_date": { "year": "2024" },
+                            "text": {
+                                "headline": "realized dynamic brain imaging technology suitable for use during motion"
+                            },
+                            "group": "Technological Inventions"
+                        },
+                        {
+                            "start_date": { "year": "2024" },
+                            "text": {
+                                "headline": "The All-Digital PET product was reviewed by General Secretary Xi"
+                            },
+                            "group": "Industrial Expansion"
+                        },
+                        {
+                            "start_date": { "year": "2024", "month": "2" },
+                            "end_date": { "year": "2024", "month": "9" },
+                            "text": {
+                                "headline": "Researched Depth-of-Interaction (DOI) information extraction methods"
+                            },
+                            "group": "Scientific Discoveries"
+                        },
+                        {
+                            "start_date": { "year": "2025" },
+                            "text": {
+                                "headline": "Successfully developed the first apparatus for observing energy transport"
+                            },
+                            "group": "Technological Inventions"
+                        },
+                        {
+                            "start_date": { "year": "2025" },
+                            "text": {
+                                "headline": "The clinical All-Digital PET/CT obtained FDAregistration and certification."
+                            },
+                            "group": "Industrial Expansion"
+                        },
+                        {
+                            "start_date": { "year": "2025", "month": "2" },
+                            "end_date": { "year": "2025", "month": "3" },
+                            "text": {
+                                "headline": "Utilized an apparatus for observing energy transport of proton beams"
+                            },
+                            "group": "Scientific Discoveries"
+                        }
+                    ]
+                };
+
+                // 自动渲染时间轴 ✅
+                window.timeline = new TL.Timeline('timeline-embed', data);
+            </script>
+        </section>
+
+
+
+
+
+
+        <div class="mitll-ll-pub-nav mitll-ll-pub-nav-chapters about-explore-section">
+      <div class="mitll-ll-pub-nav-chapters-inner">
+        <h3>Explore What Interests You</h3>
+        <ul class="mitll-ll-pub-bottom-nav about-explore-nav">
+          <li class="ll-ot">
+            <a href="About-about-en.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/root/media/2-3.jpg" alt="About Us" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">About Us</div>
+              </div>
+            </a>
+          </li>
+          <li class="ll-ot">
+            <a href="About-mission-en.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/about/explore-nav/mission-v3.jpg" alt="Our Mission" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">Our Mission</div>
+              </div>
+            </a>
+          </li>
+          <li class="ll-ot">
+            <a href="About-impact-en.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/about/explore-nav/impact-v2.jpg" alt="Our Impact" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">Our Impact</div>
+              </div>
+            </a>
+          </li>
+          <li class="ll-current-chapter">
+            <a href="About-history-en.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/about/explore-nav/history.jpg" alt="Our History" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">Our History</div>
+              </div>
+            </a>
+          </li>
+          <li class="ll-ot">
+            <a href="About-leadership-en.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/about/explore-nav/leadership-v2.jpg" alt="Leadership" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">Leadership</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
+    </main>
+    <div data-component="footer"></div>
+</body>

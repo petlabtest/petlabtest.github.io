@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="了解PnI如何把全数字PET的采集、校正与重建拆成可重组的软件模块，让仪器围绕问题快速改变。">
+  <link rel="canonical" href="https://petlab.hust.edu.cn/News/List/News-page10-cn.html"><link rel="alternate" hreflang="en" href="https://petlab.hust.edu.cn/News/News-page10-en.html"><link rel="image_src" href="../../assets/pic/news/kepu3/hero-pni-imaging-software.png"><link rel="icon" type="image/png" href="../../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <title>让PET像软件平台一样生长：PnI如何把成像流程变成“积木” | 数字PET实验室</title>
+  <link rel="stylesheet" media="all" href="../../assets/css/news/flexible-robot/r008.css"><link rel="stylesheet" media="all" href="../../assets/css/root/009.css"><link rel="stylesheet" media="all" href="../../assets/css/news/flexible-robot/r010.css"><link rel="stylesheet" media="all" href="../../assets/css/news/flexible-robot/r015.css"><link rel="stylesheet" media="all" href="../../assets/css/root/008.css"><link rel="stylesheet" media="all" href="../../assets/css/research/counter-cwmd/15.css"><link rel="stylesheet" media="all" href="../../assets/css/news/kepu-article.css?v=20260906-1"><link rel="stylesheet" media="all" href="../../assets/css/news/news-metadata.css"><link rel="stylesheet" href="../../assets/css/archive-consistency.css?v=20260911-news1">
+  <link rel="stylesheet" href="../../assets/css/page-canvas.css?v=20260911-1">
+</head>
+<body class="path-node page-node-type-news has-section-nav production js-alert">
+  <a href="#main-content" class="visually-hidden focusable skip-link">跳过主要内容</a><div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas><div class="overlay"></div><div class="layout-container"><div id="petlab-header" class="petlab-component-host"></div>
+  <main role="main"><a id="main-content" tabindex="-1"></a><div class="layout-content"><div class="region region-content"><div class="block block-system block-system-main-block"><article class="node node--type-news node--view-mode-full page clearfix"><div class="page__inner">
+    <div class="page__header"><div class="hero hero--small-image"><div class="hero__image"><picture><img loading="eager" fetchpriority="high" src="../../assets/pic/news/kepu3/hero-pni-imaging-software.png" alt="研究人员在PET成像软件工作站前检查三维重建"></picture></div><div class="hero__title-wrapper"><h1 class="hero__page-title">让PET像软件平台一样生长：PnI如何把成像流程变成“积木”</h1></div></div></div>
+    <div class="page__intro"><div class="ifde-page__intro">如果原始探测数据不再被固定硬件流程提前“定型”，一台PET就能尝试不同的校正、符合和重建方案。PnI要做的，是给这些变化一套共同的软件语言。</div></div>
+    <div class="page__content"><div role="region" aria-label="日期和来源" class="news-full__meta meta"><div class="news-full__date">2024年7月</div><div class="news-full__author">数字PET实验室</div></div>
+      <div class="news-full__body wysiwyg">
+        <p>一幅PET图像并不是探测器直接拍出来的。系统要先从海量闪烁脉冲中估计每个事件的时间、能量和位置，再寻找几乎同时发生的一对事件，进行衰减、散射、随机符合等校正，最后用重建算法推断示踪剂在体内的分布。任何一步的选择都可能改变图像。</p>
+        <p>传统PET常在硬件中完成波形处理和符合判断，传给计算机的已经是列表模式或正弦图数据。这样效率高、流程稳定，却也意味着原始信息提前被压缩：研究者若想更换脉冲模型、重新定义符合条件，往往必须改变硬件或根本无从回溯。</p>
+        <div class="science-note"><strong>PnI是什么</strong>PnI来自“Plug and Imaging”。这里的“即插即成像”不是随意连接就能工作，而是通过标准描述与接口，让探测器几何、成像流程和算法模块能够被软件识别、组合和复用。</div>
+
+        <h2 class="news-article-subheading">先把原始信息留到软件里</h2>
+        <figure class="embedded-entity paper-figure paper-figure--floated align-right"><img loading="lazy" src="../../assets/pic/news/kepu3/conventional-vs-all-digital.png" alt="传统PET和全数字PET从探测器到计算机的数据流程对比"><figcaption>传统PET在硬件端先完成符合；全数字PET把原始脉冲直接送入计算机。</figcaption></figure>
+        <p>全数字PET把闪烁脉冲数字化后直接交给计算机，脉冲拟合、事件筛选和图像计算都可以由软件完成。同一次采集因而能够用不同参数重复分析，也能让新算法在真实原始数据上接受检验。</p>
+        <p>这种自由并不会自动带来好图像。数据量变大后，算法之间必须清楚约定输入输出；不同形状的探测器要有统一的几何表达；采集、缓存、计算和显示还要在正确顺序协同。PnI架构正是为这类复杂性建立秩序。</p>
+
+        <h2 class="news-article-subheading">三层结构，把变化放在正确位置</h2>
+        <figure class="embedded-entity paper-figure"><img loading="lazy" src="../../assets/pic/news/kepu3/pni-software-architecture.png" alt="由成像协议层、成像算法层和成像设备层组成的PnI软件架构"><figcaption>PnI用三层架构分离流程定义、算法实现与探测器描述。</figcaption></figure>
+        <ol class="application-list" aria-label="PnI软件三层架构">
+          <li><strong>成像协议层：</strong>定义一次成像要执行哪些步骤、采用哪些算法和参数；</li>
+          <li><strong>成像算法层：</strong>提供数据获取、脉冲处理、符合、校正和重建等可替换模块；</li>
+          <li><strong>成像设备层：</strong>描述探测器几何、数据格式和通信方式，把具体硬件接入共同流程。</li>
+        </ol>
+        <p>协议层像一张可执行的实验处方。研究者可以从标准流程出发，也可以定义新的主流程和辅助流程。只要前一步输出与后一步输入一致，一个校正算法就能被替换，某个步骤也能用不同参数多次运行，而不必重写整套系统。</p>
+        <p>算法层则把复杂成像拆成可管理的“积木”。这里的模块化不只是程序文件分开存放，还要规定数据语义、调度顺序和错误处理。设备层把方形、圆环或其他探测器结构翻译成软件可以理解的几何关系，使上层算法不必为每台原型机重新认识世界。</p>
+
+        <h2 class="news-article-subheading">一套动物PET，怎样验证软件底座</h2>
+        <p>论文以Trans-PET D180全数字动物PET为实例，按NEMA NU 4-2008相关方法评估系统。报告显示，在特定测试与重建设置下，使用FBP时视野中心径向空间分辨率为2.56 ± 0.04 mm；采用带点扩散函数的三维OSEM后，中心径向、切向和轴向分辨率约为1.34、1.35和1.64 mm。</p>
+        <p>系统中心最大绝对灵敏度为4.00 ± 0.02%。针对不同尺寸模体，峰值噪声等效计数率随对象大小显著变化：小鼠、大鼠和猴体模分别约为713、207和47 kcps。这里最值得关注的并非简单排名，而是同一软件架构能否让采集协议、几何定义、校正和重建在完整测试中贯通。</p>
+        <p>这些指标仅代表论文所述设备、放射性活度、协议和算法条件，不能脱离实验设置与其他系统直接比较。软件开放性也不等于结果天然可靠：每一个新模块仍需独立验证，并记录版本、参数和数据流向，才能保证研究可复现。</p>
+
+        <h2 class="news-article-subheading">把PET从封闭流水线变成研究平台</h2>
+        <p>当原始脉冲得以保留，PET研究的入口就从“已经形成的图像”向前移动到“信号怎样产生和被解释”。电子学研究者可以比较脉冲重建，数学研究者可以改变优化目标，人工智能方法可以处理事件筛选或重建，医学和生物研究者则能围绕特定问题定义协议。</p>
+        <p>PnI的长期价值在于减少这些方向之间的重复建设：共同的设备描述和数据接口让算法更容易跨系统迁移，也让应用专用PET可以在相同数字底座上改变结构与流程。真正的“即插即成像”仍依赖标准化、性能验证和工程维护，但它提供了一个清晰方向——让仪器的能力不再在出厂时完全封死。</p>
+        <p>原文刊载于《CT理论与应用研究（中英文）》2024年第33卷第4期，页433–447，DOI：<a href="https://doi.org/10.15953/j.ctta.2024.013">10.15953/j.ctta.2024.013</a>。</p>
+      </div>
+      <div role="region" aria-label="元数据">
+        <div class="news-full__info info">
+          <div class="tagged-as">
+            <div class="tagged-as__label">相关链接</div>
+            <div class="tagged-as__tags">
+              <ul>
+                <li><a href="../../Research/Research-ov-cn.html">科学研究</a></li>
+                <li><a href="../../Research/Research-Tech-PnI-cn.html">Plug-n-Image</a></li>
+                <li><a href="../../Research/Research-Tech-Imaging-cn.html">图像重建</a></li>
+                <li><a href="../../Engage/Engage-ov-cn.html">科研合作</a></li>
+                <li><a href="../News-ov-cn.html">新闻报道</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></article></div></div></div></div></main><div id="petlab-footer" class="petlab-component-host"></div></div></div>
+  <script src="../../assets/js/root/r001.js"></script><script src="../../assets/js/root/script-05.js"></script><script src="../../assets/js/root/r038.js"></script><script src="../../assets/js/root/r039.js"></script><script src="../../assets/js/root/r040.js"></script><script src="../../assets/js/archive-components.js?v=20260830-1"></script>
+</body>
+</html>

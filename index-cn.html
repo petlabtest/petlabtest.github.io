@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <link rel="icon" type="image/png" href="assets/pic/main/PETLAB_LOGO_Pure.png?v=20260907-cn">
+  <link rel="apple-touch-icon" href="assets/pic/main/PETLAB_LOGO_Pure.png?v=20260907-cn">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/pic/main/PETLAB_LOGO_Pure.png?v=20260907-cn">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/pic/main/PETLAB_LOGO_Pure.png?v=20260907-cn">
+  <link rel="manifest" href="assets/data/favicons/site.webmanifest">
+  <link rel="shortcut icon" href="assets/pic/main/PETLAB_LOGO_Pure.png?v=20260907-cn" type="image/png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#003c62">
+  <title>主页 | 数字PET实验室</title>
+  <meta name="description" content="Digital PET Laboratory — the origin of all-digital PET.">
+  <link rel="stylesheet" href="assets/css/site.css?v=20260908-wide1">
+  <style>
+    /* Match the archived MIT LL homepage typography with local Poppins subsets. */
+    @font-face {
+      font-family: "Poppins Local";
+      src: url("assets/fonts/root/media/r024.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Poppins Local";
+      src: url("assets/fonts/root/media/r025.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Poppins Local";
+      src: url("assets/fonts/root/media/r026.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+    }
+
+    body.home,
+    body.home button,
+    body.home input,
+    body.home select,
+    body.home textarea {
+      font-family: "Poppins Local", Arial, sans-serif;
+    }
+
+    body.home {
+      font-weight: 300;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body.home h1,
+    body.home h2,
+    body.home h3,
+    body.home h4,
+    body.home h5,
+    body.home h6 {
+      font-family: "Poppins Local", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+
+    @media (min-width: 1025px) {
+
+      body.home .home-carousel__wrapper:first-child .home-carousel__super-title,
+      body.home .home-carousel__wrapper .home-carousel__super-title {
+        font-size: 25px;
+        line-height: 1.25;
+        letter-spacing: 6px;
+      }
+
+      body.home .home-carousel__wrapper:first-child .home-carousel__title,
+      body.home .home-carousel__wrapper .home-carousel__title {
+        font-size: 90px;
+        line-height: .967;
+        letter-spacing: 0;
+      }
+
+      body.home .home-fullwidth__panel h2,
+      body.home .p-home-news__header,
+      body.home .home-programs__collaboration-head h2,
+      body.home .home-impact h2,
+      body.home .research-cards__head h2 {
+        font-size: 50px;
+        line-height: 1.1;
+        letter-spacing: 0;
+      }
+
+      body.home .home-programs h2 {
+        font-size: 50px;
+        line-height: 1.1;
+        letter-spacing: 0;
+      }
+
+      body.home .research-cards__head>p:last-child,
+      body.home .home-impact p,
+      body.home .home-programs__collaboration-head>p,
+      body.home .home-programs__engage-copy>p:not(.eyebrow),
+      body.home .home-programs__events-copy>p:not(.eyebrow) {
+        font-size: 20px;
+        line-height: 1.75;
+      }
+
+      body.home .research-card__content h3 {
+        font-size: 25px;
+        line-height: 1.32;
+      }
+
+      body.home .research-card__content>p:not(.eyebrow) {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      body.home .home-programs__collaboration-links strong {
+        font-size: 30px;
+        line-height: 1.2;
+      }
+
+      body.home .home-programs__collaboration-links span {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    }
+
+    /* Research cards: fixed dark-blue research-tool background treatment. */
+    .research-cards {
+      background-color: #00305c;
+      background-image: url("assets/pic/root/media/09-bg_rd-tool-2964bfbf.png");
+      background-attachment: fixed;
+      background-position: top center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-blend-mode: multiply;
+    }
+
+    .research-cards::before {
+      background: transparent;
+    }
+
+    @media (max-width: 700px) {
+      .research-cards {
+        background-attachment: scroll;
+      }
+    }
+  </style>
+  <script src="assets/js/site.js?v=20260904-3" defer></script>
+  <link rel="stylesheet" href="assets/css/archive-consistency.css?v=20260908-wide1">
+  <link rel="stylesheet" href="assets/css/homepage-responsive.css?v=20260910-11">
+  <link rel="stylesheet" href="assets/css/page-canvas.css?v=20260911-1">
+</head>
+
+<body class="home" id="top">
+  <div data-component="header"></div>
+  <main id="main-content" role="main">
+    <section class="page_header home-carousel" aria-label="Homepage featured carousel">
+      <div class="home-carousel__slide">
+        <article class="home-carousel__wrapper active">
+          <div class="home-carousel__media"><video autoplay muted loop playsinline poster="assets/pic/main/hero1.jpg">
+              <source src="assets/video/index/media/5.mp4" type="video/mp4">
+            </video></div>
+          <div class="home-carousel__copy">
+            <p class="home-carousel__super-title">关于我们</p>
+            <h1 class="home-carousel__title">全数字PET，再次发明PET</h1>
+            <div class="home-carousel__cta"><a class="cta--button" href="./News/List/News-index1-cn.html">了解更多</a></div>
+          </div>
+        </article>
+        <article class="home-carousel__wrapper">
+          <div class="home-carousel__media"><img src="assets/pic/main/hero2.jpg" alt="PETLab researchers collaborating">
+          </div>
+          <div class="home-carousel__copy">
+            <p class="home-carousel__super-title">科学研究</p>
+            <h1 class="home-carousel__title">加速基础科学进程</h1>
+            <div class="home-carousel__cta"><a class="cta--button" href="./News/List/News-index2-cn.html">了解更多</a></div>
+          </div>
+        </article>
+        <article class="home-carousel__wrapper">
+          <div class="home-carousel__media"><img src="assets/pic/index/media/13.jpg"
+              alt="PETLab researchers advancing innovation"></div>
+          <div class="home-carousel__copy">
+            <p class="home-carousel__super-title">科研团队</p>
+            <h1 class="home-carousel__title">团队合作，攻克重大难题</h1>
+            <div class="home-carousel__cta"><a class="cta--button" href="./News/List/News-index3-cn.html">了解更多</a></div>
+          </div>
+        </article>
+        <article class="home-carousel__wrapper">
+          <div class="home-carousel__media"><img src="assets/pic/home/hero3.jpg" alt="Digital PET research in practice">
+          </div>
+          <div class="home-carousel__copy">
+            <p class="home-carousel__super-title">加入我们</p>
+            <h1 class="home-carousel__title">协同聚力，让理论走向现实</h1>
+            <div class="home-carousel__cta"><a class="cta--button" href="./News/List/News-index4-cn.html">了解更多</a></div>
+          </div>
+        </article>
+      </div>
+      <div class="caption" aria-label="Carousel controls">
+        <button class="carousel-arrow prev" type="button" aria-label="Previous story"></button>
+        <div class="dots" role="tablist" aria-label="Select featured story"></div>
+        <button class="carousel-arrow next" type="button" aria-label="Next story"></button>
+      </div>
+    </section>
+
+
+    <div class="page_content">
+      <section
+        class="paragraph paragraph--type-p-home-news paragraph--view-mode-full newshome--106 js-animate home-news"
+        aria-labelledby="recent-news-title">
+        <div class="home-news__inner">
+          <section class="home-fullwidth__panel" aria-labelledby="home-mission-title">
+            <p class="home-fullwidth__eyebrow">使命责任</p>
+            <h2 id="home-mission-title">探索科研无人区</h2>
+            <p>数字PET实验室致力于探寻宇宙、生命与意识的起源，以开拓性的学术探索推动科学进步，守护人类福祉。</p><a class="home-fullwidth__cta cta--button"
+              href="./About/About-about-cn.html">关于我们</a>
+          </section>
+          <div class="home-news__heading">
+            <h2 class="p-home-news__header" id="recent-news-title">最新新闻</h2>
+          </div>
+          <div class="Topic-news-home">
+            <article class="home-news__lead">
+              <div class="home-news__lead-media"><a class="home-news__image-link" href="./News/List/News-page1-cn.html"
+                  aria-label="Read Online Monitoring Proton Therapy's Camera System Upgraded"><img
+                    src="assets/pic/root/media/1.jpg" alt="Online proton therapy monitoring system"></a></div>
+              <div class="home-news__lead-copy">
+                <p class="home-news__date"><span class="home-news__date-label">9月29日</span> · 创新系统</p>
+                <h3><a class="home-news__title-link home-news__title-link--lead"
+                    href="./News/List/News-page1-cn.html"><span>在线监测质子治疗的“摄像头系统”升级了！</span><span
+                      class="home-news__read-cue" aria-hidden="true"><i></i><span>阅读</span></span></a></h3>
+                <p>质子刀PET，作为数字PET2.0创新系统代表成果之一，一直是数字PETer在前沿探索上的努力方向</p>
+              </div>
+            </article>
+            <div class="home-news__list">
+              <article class="home-news__item"><span class="home-news__list-date">7月22日</span>
+                <div class="home-news__story"><span>技术研究</span>
+                  <h3><a class="home-news__title-link" href="./News/List/News-page2-cn.html"><span>为“光子捕手”装配“魔法芯片”
+                        新一代标准CMOS工艺的硅光电倍增器来了！</span><span class="home-news__read-cue"
+                        aria-hidden="true"><i></i><span>阅读</span></span></a></h3>
+                </div>
+              </article>
+              <article class="home-news__item"><span class="home-news__list-date">5月19日</span>
+                <div class="home-news__story"><span>创新系统</span>
+                  <h3><a class="home-news__title-link" href="./News/List/News-page3-cn.html"><span>全数字PET迎来135厘米轴长新旗舰
+                        可实现单床位全身扫描</span><span class="home-news__read-cue"
+                        aria-hidden="true"><i></i><span>阅读</span></span></a></h3>
+                </div>
+              </article>
+            </div>
+            <div class="home-news__footer"><a class="home-news__more cta--button" href="./News/News-ov-cn.html">阅读更多</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-impact" aria-labelledby="home-impact-title">
+        <div class="group-content">
+          <figure class="group-content__media" data-group-media-reveal><img src="assets/pic/main/main_mvt.jpg"
+              alt="Multi-Voltage Threshold research technology"></figure>
+          <div class="group-content__body">
+            <h2 id="home-impact-title">面向国家核心战略需求</h2>
+            <p>
+              自2004年建室以来，数字PET实验室始终围绕国家战略重点任务、产业关键技术瓶颈与重大公共卫生难题开展研究。实验室构建起覆盖基础研究、技术创新、临床转化与产业应用的全链条创新体系，助力实现高水平科技自立自强，支撑国家战略发展。
+            </p><a class="group-content__cta cta--button" href="./About/About-impact-cn.html">学术影响</a>
+          </div>
+        </div>
+      </section>
+      <section class="research-cards" aria-labelledby="research-section-title">
+        <div class="shell">
+          <div class="research-cards__head">
+            <p class="eyebrow">科学研究</p>
+            <h2 id="research-section-title">从光子出发，洞悉生命精微图景</h2>
+            <p>数字 PET 实验室布局底层核心技术专项，深耕全数字 PET 技术创新，推动通用成像架构向专用化系统、精准诊疗方案迭代演进，持续拓展 PET 设备在临床诊疗与前沿科研领域的应用边界。</p>
+          </div>
+          <div class="research-card-grid">
+            <a class="research-card" href="./Research/Research-ov-cn.html">
+              <div class="research-card__media"><img src="assets/pic/main/hero2.jpg"
+                  alt="Digital PET research and development"></div>
+              <div class="research-card__content">
+                <h3>科学研究</h3>
+                <p>数字 PET 实验室以探索性基础科学为研究主线，主攻高灵敏探测、超高时间分辨、动态定量成像等关键核心技术。上述技术突破可显著提升微弱信号探测能力与定量成像精度，为精准分子影像研究筑牢底层技术支撑。
+                </p>
+              </div>
+            </a>
+            <a class="research-card" href="./Capabilities/Capabilities-ov-cn.html">
+              <div class="research-card__media"><img src="assets/pic/root/media/capabilities1.png"
+                  alt="Digital PET research capabilities"></div>
+              <div class="research-card__content">
+                <h3>核心能力</h3>
+                <p>数字 PET 实验室搭建具备国际领先水平的科研平台，推动学界、科研机构与产业端构成的全数字 PET
+                  创新生态开展跨领域协同攻关。该平台可支撑一套标准化、严谨化、可溯源的科研体系，持续拓展可规模化落地的全数字 PET 应用场景。</p>
+              </div>
+            </a>
+            <a class="research-card" href="./People/People-ov-cn.html">
+              <div class="research-card__media"><img src="assets/pic/index/media/13.jpg"
+                  alt="Digital PET research teams"></div>
+              <div class="research-card__content">
+                <h3>科研团队</h3>
+                <p>数字 PET 实验室汇聚硬件、软件及应用方向科研人员，共同完成全数字 PET 成像系统的研发、性能验证与运行调试；同时依托系统性能优势挖掘多元应用场景，适配现有临床需求与前沿新兴研究方向。</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-programs" aria-label="Laboratory initiatives and opportunities">
+        <section class="home-programs__initiative" aria-labelledby="home-key-initiatives-title">
+          <div class="shell home-programs__initiative-inner">
+            <div class="home-programs__initiative-copy">
+              <h2 id="home-key-initiatives-title">重点专项</h2>
+              <p>实验室以自身使命为指引，联动国内外广大科研共同体，推进多项跨学科核心专项研究，统筹整合各领域专业技术力量与科研资源。其中一项专项工作，是将实验室自研成像系统与核心技术应用于质子治疗剂量监测领域。</p><a
+                class="cta--button" href="./Research/Research-Initiatives-cn.html">质子治疗监测</a>
+            </div><img class="home-programs__initiative-accent" src="assets/pic/main/plug.png" alt=""
+              aria-hidden="true">
+          </div>
+        </section>
+        <section class="home-programs__collaboration" aria-labelledby="home-collaboration-title">
+          <div class="shell home-programs__collaboration-inner">
+            <div class="home-programs__collaboration-head" data-collab-reveal>
+              <h2 id="home-collaboration-title">科研合作</h2>
+              <p>本实验室诚挚邀约全球科研同仁携手开展前沿探索，共同推进交叉学科创新联合研究。</p>
+            </div>
+            <div class="home-programs__collaboration-links">
+              <a href="./Engage/Engage-ov-cn.html"
+                data-collab-reveal><strong>开放共享</strong><span>实验室对外开放多套数字化分子影像设备，提供开放式技术支撑服务，旨在优化科研资源配置、加速科研成果转化，助力重大科学难题实现原创突破。</span><span
+                  class="home-fullwidth__cta cta--button home-programs__collaboration-cta">了解更多</span></a>
+              <a href="./Engage/Engage-Research-cn.html"
+                data-collab-reveal><strong>协同创新</strong><span>实验室秉持开放、协作、互利、诚信的合作准则，积极开展全方位、多层次、宽领域的学术与科研合作。</span><span
+                  class="home-fullwidth__cta cta--button home-programs__collaboration-cta">了解更多</span></a>
+            </div>
+          </div>
+        </section>
+        <section class="home-programs__engage home-engage-fullwidth" aria-labelledby="home-engage-title">
+          <div class="group-content group-content--team">
+            <figure class="group-content__media group-content__media--workplace" data-group-media-reveal>
+              <img src="assets/pic/index/media/2.jpg" alt="Digital PET Laboratory team and research community">
+              <figcaption class="group-content__media-overlay">
+                <h3>本科生实践培育计划</h3>
+                <p>本科生实践培育计划（UPOP）为华中科技大学大二学生专属课外职业素养培育项目。该项目旨在锤炼学生核心专业综合能力，使其无论后续投身产业研发、科研院所还是高等学术领域，均能在选定的职业赛道长足发展。
+                </p>
+                <a class="cta--button" href="./People/People-UPOP-cn.html">了解更多</a>
+              </figcaption>
+            </figure>
+            <div class="group-content__body">
+              <h2 id="home-engage-title">加入我们的团队</h2>
+              <p>重大前沿科学难题的突破，需要多方智慧交融与跨学科思想碰撞。</p>
+              <h3>学生招生</h3>
+              <p>本实验室的创新研究离不开敢于直面挑战、富有创造力的优秀科研人才。秉持同等科研追求的有志之士，可前往人才培养板块了解团队加入渠道。</p>
+              <a class="group-content__cta cta--button" href="./People/People-Student-cn.html">了解更多</a>
+              <h3>人才招募</h3>
+              <p>实验室提供完备的科研培养与发展支撑体系，助力科研人员构建清晰职业发展路径，扶持青年科研骨干快速成长为领域学术带头人，与实验室同频共进、协同发展。</p>
+              <a class="group-content__cta cta--button" href="./People/People-Career-cn.html">了解更多</a>
+            </div>
+          </div>
+        </section>
+        <section class="home-programs__events home-events-fullwidth" aria-labelledby="home-events-title">
+          <div class="group-content group-content--events">
+            <figure class="group-content__media" data-group-media-reveal><img src="assets/pic/main/events-main.png"
+                alt="International academic exchange and events"></figure>
+            <div class="group-content__body">
+              <h2 id="home-events-title">扩展国际视野</h2>
+              <p>本团队拥有国际化科研交流平台，支持团队成员参与各类国际学术会议、开展跨境学术交流，拓宽全球科研视野。本科生与研究生亦有机会参与国际学术赛事、创新发明竞赛，角逐顶尖奖项。</p>
+              <a class="group-content__cta cta--button" href="./News/News-ov-cn.html">了解更多</a>
+            </div>
+          </div>
+        </section>
+      </section>
+
+
+    </div>
+  </main>
+  <div data-component="footer"></div>
+</body>
+
+</html>

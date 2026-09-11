@@ -1,0 +1,12 @@
+.node--type-news.node--view-mode-full .news-full__info {
+  display: flex;
+  align-items: center;
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: clamp(7.5rem, 12vw, 11rem);
+}
+
+.node--type-news.node--view-mode-full .news-full__info > .tagged-as {
+  width: min(100%, 880px);
+  margin: 0 auto;
+}

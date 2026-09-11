@@ -1,0 +1,10 @@
+/* Chinese label for the shared animated-link reveal. */
+html[lang^="zh"] .link--animated > span::after {
+  content: "阅读" !important;
+  display: inline-block !important;
+  width: max-content !important;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  writing-mode: horizontal-tb !important;
+  text-transform: none !important;
+}

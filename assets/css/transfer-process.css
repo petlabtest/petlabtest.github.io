@@ -1,0 +1,202 @@
+.transfer-process .transfer-process-flow {
+  width: 100%;
+  margin: 24px 0 86px;
+  padding: 58px clamp(22px, 5vw, 58px) 70px;
+  background: #ededed;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.transfer-process .transfer-process-flow__title {
+  margin: 0 0 42px;
+  padding: 0;
+  color: #111820;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.transfer-process .transfer-process-flow__list {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  list-style: none !important;
+  counter-reset: transfer-step;
+}
+
+.transfer-process .transfer-process-flow__list::before {
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 29px;
+  width: 1px;
+  content: "";
+  background: #aeb7bc;
+}
+
+.transfer-process .transfer-process-flow__step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 60px minmax(0, 1fr);
+  gap: 24px;
+  margin: 0 0 30px !important;
+  padding: 0 !important;
+  list-style: none !important;
+  counter-increment: transfer-step;
+}
+
+.js-transfer-process .transfer-process .transfer-process-flow__step {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .45s ease, transform .45s ease;
+}
+
+.transfer-process .transfer-process-flow__step:last-child {
+  margin-bottom: 0 !important;
+}
+
+.transfer-process .transfer-process-flow__step::before {
+  position: relative !important;
+  z-index: 2;
+  display: grid !important;
+  align-items: center;
+  width: 58px !important;
+  height: 58px !important;
+  margin: 14px 0 0 !important;
+  padding: 0 !important;
+  border: 8px solid #ededed;
+  border-radius: 50%;
+  background: #078ed8 !important;
+  color: #fff !important;
+  content: counter(transfer-step, decimal-leading-zero) !important;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.js-transfer-process .transfer-process .transfer-process-flow__step.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.transfer-process .transfer-process-flow__card {
+  min-width: 0;
+  margin: 0;
+  border: 1px solid #d4d4d4;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.transfer-process .transfer-process-flow__heading {
+  position: relative;
+  margin: 0;
+  padding: 23px 28px 22px 48px;
+  color: #0b0d0f;
+  font-size: 25px;
+  line-height: 1.16;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.transfer-process .transfer-process-flow__heading::before {
+  position: absolute;
+  top: 24px;
+  bottom: 22px;
+  left: 28px;
+  width: 3px;
+  content: "";
+  background: #f15a35;
+}
+
+.transfer-process .transfer-process-flow__body,
+.transfer-process .transfer-process-flow__action {
+  padding: 22px 28px;
+}
+
+.transfer-process .transfer-process-flow__body {
+  background: #c8c7c6;
+  color: #111820;
+}
+
+.transfer-process .transfer-process-flow__action {
+  background: #666a70;
+  color: #fff;
+}
+
+.transfer-process .transfer-process-flow__body p,
+.transfer-process .transfer-process-flow__action p {
+  margin: 0 0 11px;
+  padding: 0;
+  color: inherit;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.transfer-process .transfer-process-flow__body p:last-child,
+.transfer-process .transfer-process-flow__action p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 699px) {
+  .transfer-process .transfer-process-flow {
+    margin: 20px -15px 62px;
+    width: calc(100% + 30px);
+    padding: 42px 15px 52px;
+  }
+
+  .transfer-process .transfer-process-flow__title {
+    margin-bottom: 32px;
+    font-size: 25px;
+  }
+
+  .transfer-process .transfer-process-flow__list::before {
+    left: 20px;
+  }
+
+  .transfer-process .transfer-process-flow__step {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 12px;
+    margin-bottom: 22px !important;
+  }
+
+  .transfer-process .transfer-process-flow__step::before {
+    width: 42px !important;
+    height: 42px !important;
+    margin-top: 16px !important;
+    border-width: 6px;
+    font-size: 11px;
+  }
+
+  .transfer-process .transfer-process-flow__heading {
+    padding: 20px 18px 19px 34px;
+    font-size: 19px;
+  }
+
+  .transfer-process .transfer-process-flow__heading::before {
+    top: 20px;
+    bottom: 19px;
+    left: 19px;
+  }
+
+  .transfer-process .transfer-process-flow__body,
+  .transfer-process .transfer-process-flow__action {
+    padding: 18px 20px;
+  }
+
+  .transfer-process .transfer-process-flow__body p,
+  .transfer-process .transfer-process-flow__action p {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-transfer-process .transfer-process .transfer-process-flow__step {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

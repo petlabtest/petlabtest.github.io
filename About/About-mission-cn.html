@@ -1,0 +1,1344 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <link rel="icon" type="image/png" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="apple-touch-icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="manifest" href="../assets/data/favicons/site.webmanifest">
+  <link rel="shortcut icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1" type="image/png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>使命 | 数字PET实验室</title>
+  <link rel="stylesheet" href="../assets/css/site.css?v=20260908-wide1">
+  <script src="../assets/js/site.js?v=20260830-2" defer></script>
+  <style>
+    :root {
+      --navy: #031d31;
+      --deep: #06385f;
+      --blue: #0878c9;
+      --gray: #e4e4e4;
+      --ink: #171717;
+      --line: #d7dce0;
+      --shell: 1280px;
+      --orange: #f45a2b;
+      --font: Arial, "Helvetica Neue", sans-serif
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff !important;
+      color: var(--ink);
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.6
+    }
+
+    a {
+      color: inherit
+    }
+
+    img {
+      display: block;
+      max-width: 100%
+    }
+
+    .shell {
+      width: min(calc(100% - 116px), var(--shell));
+      margin: auto
+    }
+
+    .component-frame {
+      display: block;
+      width: 100%;
+      height: 1px;
+      border: 0;
+      overflow: hidden
+    }
+
+    /* Keep the shared header in the page stacking context so mega menus clear the hero. */
+    [data-component="header"] {
+      position: relative;
+      z-index: 999;
+      overflow: visible;
+      transform: none;
+      will-change: auto;
+      isolation: auto;
+      opacity: 1
+    }
+
+    [data-component="header"] .site-header {
+      position: relative;
+      z-index: 999;
+      overflow: visible;
+      transform: none;
+      will-change: auto;
+      isolation: auto;
+      opacity: 1
+    }
+
+    @media (min-width: 1101px) {
+
+      [data-component="header"] .header-shell,
+      [data-component="header"] .desktop-navigation,
+      [data-component="header"] .header-top-row,
+      [data-component="header"] .primary-nav,
+      [data-component="header"] .primary-nav>.nav-group {
+        overflow: visible
+      }
+
+      [data-component="header"] .mega-menu {
+        position: absolute;
+        z-index: 1000
+      }
+    }
+
+    /* 对应原页面 About Hero 头部区域 */
+    .about-hero-wrap {
+      position: relative;
+      min-height: min(78vh, 820px);
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      color: #fff;
+      background-color: #00305c
+    }
+
+    .about-hero-wrap:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, .76), transparent 54%), linear-gradient(90deg, rgba(0, 20, 34, .18), transparent 70%)
+    }
+
+    .about-hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(calc(100% - 116px), var(--shell));
+      margin: 0 auto;
+      padding-left: 18px;
+      padding-bottom: 52px
+    }
+
+    .about-hero-title {
+      margin: 0;
+      font-size: clamp(3rem, 6vw, 5.2rem);
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: .02em
+    }
+
+    /* About full-width斜切内容区块 */
+    .about-section {
+      position: relative;
+      margin: 0;
+      padding: 76px 0;
+      overflow: visible
+    }
+
+    .about-content {
+      width: min(calc(100% - 116px), var(--shell));
+      max-width: var(--shell);
+      margin: 0 auto;
+      padding: 0 18px
+    }
+
+    .about-copy {
+      max-width: 900px;
+      margin: 0 auto
+    }
+
+    .about-section h2 {
+      margin: 0 0 18px;
+      font-size: clamp(2rem, 3.3vw, 3.35rem);
+      line-height: 1.08;
+      letter-spacing: .025em;
+      text-transform: uppercase
+    }
+
+    .about-section p {
+      margin: 0 0 18px;
+      max-width: 850px;
+      font-size: clamp(1rem, 1.18vw, 1.16rem);
+      line-height: 1.7
+    }
+
+    .about-sec-navy {
+      background: var(--deep);
+      color: #fff;
+      padding-bottom: 126px;
+      clip-path: polygon(0 0, 100% 0, 100% 77%, 0 100%)
+    }
+
+    .about-sec-navy p {
+      color: #e3eef6
+    }
+
+    .about-sec-blue {
+      background: var(--blue);
+      color: #fff;
+      padding-bottom: 126px;
+      clip-path: polygon(0 0, 100% 0, 100% 77%, 0 100%)
+    }
+
+    .about-sec-blue p {
+      color: #eef8ff
+    }
+
+    .about-sec-white {
+      background: #fff
+    }
+
+    .about-sec-gray {
+      background: var(--gray);
+      padding-bottom: 90px
+    }
+
+    .cta {
+      position: relative;
+      display: inline-block;
+      margin-top: 10px;
+      padding: 7px 0 7px 18px;
+      color: inherit;
+      background: transparent;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: .03em;
+      line-height: 1;
+      transition: padding-left .2s ease
+    }
+
+    .cta::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 8px;
+      height: 24px;
+      background: var(--orange);
+      transform: translateY(-50%);
+      transition: width .2s ease
+    }
+
+    .cta::after {
+      content: "›";
+      margin-left: 8px;
+      font-size: 22px;
+      line-height: 0
+    }
+
+    .cta:hover,
+    .cta:focus-visible {
+      padding-left: 28px
+    }
+
+    .cta:hover::before,
+    .cta:focus-visible::before {
+      width: 16px
+    }
+
+    .about-sec-navy .cta,
+    .about-sec-blue .cta {
+      color: #fff
+    }
+
+    .about-sec-white .cta,
+    .about-sec-gray .cta {
+      color: var(--ink)
+    }
+
+    .about-sec-blue {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 77%)
+    }
+
+    .about-sec-navy .about-content,
+    .about-sec-blue .about-content {
+      max-width: 860px
+    }
+
+    .about-sec-white .about-content {
+      max-width: 1080px
+    }
+
+    .about-sec-gray .about-content {
+      max-width: 1040px
+    }
+
+    /* Local equivalent of the reference page__header / hero--small-image styles. */
+    .page__header {
+      position: relative;
+      z-index: 2
+    }
+
+    .page__header .hero--small-image {
+      position: relative;
+      margin: 0
+    }
+
+    .page__header .hero__image {
+      position: relative;
+      left: 50%;
+      width: 100vw;
+      margin-left: -50vw;
+      overflow: hidden;
+      padding-top: 84.563%;
+      background-color: #00305c
+    }
+
+    .page__header .hero__image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: none
+    }
+
+    .page__header .hero__title-wrapper {
+      margin: 0 0 15px;
+      padding: 22px 0 0
+    }
+
+    .page__header .hero__page-title {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.2;
+      font-weight: 600;
+      color: #000
+    }
+
+    @media (min-width: 700px) {
+      .page__header .hero__image {
+        padding-top: 46.1%
+      }
+
+      .page__header .hero__title-wrapper {
+        margin-bottom: 20px;
+        padding: 29px 0 1px
+      }
+
+      .page__header .hero__page-title {
+        font-size: 45px;
+        line-height: 1.1
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .page__header .hero__image {
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+        padding-top: 43.203%
+      }
+
+      .page__header .hero__title-wrapper {
+        position: relative;
+        left: calc(50% - 495px);
+        width: auto;
+        min-height: 153px;
+        margin: -153px 0 0;
+        padding: 4px 52px 0;
+        background: #fff
+      }
+
+      .page__header .hero__title-wrapper::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 153px;
+        background: #fff;
+        content: ""
+      }
+
+      .page__header .hero__page-title {
+        position: relative;
+        top: 32px;
+        width: 850px;
+        margin: 0 0 70px;
+        font-size: 65px;
+        line-height: 1.15
+      }
+    }
+
+    @media (min-width: 1600px) {
+      .page__header .hero__image {
+        max-width: 100%;
+        height: 691px;
+        padding-top: 0
+      }
+    }
+
+    .mission-hero-wrap {
+      position: relative;
+      min-height: min(78vh, 820px);
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      color: #fff;
+      background: #00305c
+    }
+
+    .mission-hero-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, .76), transparent 54%), linear-gradient(90deg, rgba(0, 20, 34, .18), transparent 70%)
+    }
+
+    .mission-hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(calc(100% - 116px), var(--shell));
+      margin: 0 auto;
+      padding: 0 18px 52px
+    }
+
+    .mission-hero-title {
+      margin: 0;
+      font-size: clamp(3rem, 6vw, 5.2rem);
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: .02em
+    }
+
+    .intro {
+      width: min(calc(100% - 116px), 940px);
+      margin: 0 auto;
+      padding: 40px 0 90px;
+      color: var(--ink);
+      font-size: 1rem;
+      line-height: 1.6
+    }
+
+    .story {
+      margin: 0 0 224px
+    }
+
+    .story:last-child {
+      margin-bottom: 0
+    }
+
+    .story h2 {
+      margin: 5px 0 20px;
+      font-size: clamp(2rem, 3.3vw, 3.35rem);
+      line-height: 1.08;
+      font-weight: 600
+    }
+
+    .story p {
+      margin: 0 0 24px
+    }
+
+    /* Match the WYSIWYG body text used by Template-About-OurPurpose. */
+    .intro .story,
+    .intro .story p {
+      font-family: "Poppins", sans-serif;
+      font-weight: 300
+    }
+
+    .intro .story p {
+      font-size: 16px;
+      line-height: 1.75
+    }
+
+    @media (min-width: 1025px) {
+      .intro .story p {
+        font-size: 20px;
+        line-height: 1.75
+      }
+    }
+
+    .story figure {
+      margin: 40px 0 30px
+    }
+
+    .story figure img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto
+    }
+
+    .story figure figcaption {
+      margin-top: 0;
+      font-size: .9rem;
+      line-height: 1.6
+    }
+
+    .story .wide {
+      width: min(calc(100% + 120px), 1060px);
+      margin-left: -60px
+    }
+
+    /* Chapter navigation styles; kept independent from the editable card content. */
+    #main>.mitll-ll-pub-nav-chapters {
+      width: 100%;
+      margin: 0;
+      padding: 30px;
+      background: rgba(0, 25, 41, .95);
+      color: #fff
+    }
+
+    @media (min-width: 1025px) {
+      #main>.mitll-ll-pub-nav-chapters {
+        padding-top: 60px;
+        padding-bottom: 80px
+      }
+    }
+
+    #main>.mitll-ll-pub-nav-chapters .mitll-ll-pub-nav-chapters-inner {
+      max-width: 1600px;
+      margin: 0 auto 50px
+    }
+
+    #main>.mitll-ll-pub-nav-chapters h3 {
+      margin: 0 0 40px;
+      color: #fff;
+      font-size: 30px;
+      line-height: 1.25;
+      text-transform: uppercase
+    }
+
+    #main>.mitll-ll-pub-nav-chapters .mitll-ll-pub-bottom-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none
+    }
+
+    #main>.mitll-ll-pub-nav-chapters .mitll-ll-pub-bottom-nav>li {
+      position: relative;
+      flex: 0 0 100%;
+      min-width: 0;
+      margin: 0;
+      list-style: none
+    }
+
+    #main>.mitll-ll-pub-nav-chapters .ll-section-nav {
+      position: relative;
+      display: block;
+      height: 100%;
+      color: #fff;
+      text-decoration: none
+    }
+
+    #main>.mitll-ll-pub-nav-chapters .ll-pub-bottom-nav-img {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      background: #00305c
+    }
+
+    #main>.mitll-ll-pub-nav-chapters .ll-pub-bottom-nav-img::after {
+      position: absolute;
+      inset: 0;
+      background: #008eff;
+      content: "";
+      opacity: .7;
+      transition: opacity .8s ease
+    }
+
+    #main>.mitll-ll-pub-nav-chapters .ll-pub-bottom-nav-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1.25s ease
+    }
+
+    #main>.mitll-ll-pub-nav-chapters .ll-nav-text-side {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%
+    }
+
+    #main>.mitll-ll-pub-nav-chapters .ll-nav-title {
+      width: 100%;
+      margin: 0;
+      padding: 7px;
+      color: #fff;
+      background: rgba(0, 48, 92, .7);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 38px;
+      line-height: 1.25;
+      font-weight: 700
+    }
+
+    #main>.mitll-ll-pub-nav-chapters .ll-current-chapter .ll-pub-bottom-nav-img::after,
+    #main>.mitll-ll-pub-nav-chapters .ll-current-chapter .ll-nav-title {
+      background: rgba(255, 255, 255, .7);
+      color: #00305c
+    }
+
+    #main>.mitll-ll-pub-nav-chapters .ll-section-nav:hover .ll-pub-bottom-nav-img::after {
+      opacity: 0
+    }
+
+    #main>.mitll-ll-pub-nav-chapters .ll-section-nav:hover .ll-pub-bottom-nav-img img {
+      transform: scale(1.15)
+    }
+
+    #main>.mitll-ll-pub-nav-chapters .ll-section-nav:hover .ll-nav-title {
+      padding-bottom: 15px
+    }
+
+    @media (min-width: 700px) {
+      #main>.mitll-ll-pub-nav-chapters .mitll-ll-pub-bottom-nav>li {
+        flex-basis: calc(50% - 5px)
+      }
+    }
+
+    @media (min-width: 1025px) {
+      #main>.mitll-ll-pub-nav-chapters .mitll-ll-pub-bottom-nav>li {
+        flex-basis: calc(20% - 8px)
+      }
+    }
+
+    .chapters {
+      padding: 42px 30px 50px;
+      background: #fff
+    }
+
+    .chapters h3 {
+      margin: 0 0 20px;
+      font-size: 30px;
+      line-height: 1.1;
+      font-weight: 600;
+      text-transform: uppercase
+    }
+
+    .chapter-cards {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px
+    }
+
+    .chapter-card {
+      position: relative;
+      height: 236px;
+      overflow: hidden;
+      color: #fff;
+      text-decoration: none
+    }
+
+    .chapter-card img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(.68)
+    }
+
+    .chapter-card span {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 600;
+      text-transform: uppercase
+    }
+
+    .chapter-card small {
+      display: block;
+      font-size: 13px;
+      line-height: 1.4;
+      font-weight: 300
+    }
+
+    .dpet-stats {
+      position: relative;
+      height: 900px;
+      overflow: hidden;
+      background: #2458aa url('../assets/pic/root/media/07-bg-81ac28d2.jpg') center/cover no-repeat;
+      font-family: Arial, "Helvetica Neue", sans-serif
+    }
+
+    .dpet-stats::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(24, 76, 165, .34)
+    }
+
+    .dpet-stats__panel {
+      position: absolute;
+      top: 290px;
+      left: 50%;
+      width: min(calc(100% - 144px), 1137px);
+      height: 320px;
+      transform: translateX(-50%);
+      padding: 65px;
+      border-radius: 10px;
+      background: #f1f1f1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 78px;
+      column-gap: 30px;
+      row-gap: 40px;
+      align-content: start;
+      z-index: 1
+    }
+
+    .dpet-stat {
+      text-align: center;
+      color: #2b56a0
+    }
+
+    .dpet-stat__number {
+      display: block;
+      font-size: 30px;
+      line-height: 30px;
+      font-weight: 600
+    }
+
+    .dpet-stat__number .plus {
+      margin-left: 5px;
+      font-weight: 500
+    }
+
+    .dpet-stat__label {
+      display: block;
+      margin-top: 10px;
+      color: #444;
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 600
+    }
+
+    @media(max-width:800px) {
+      .dpet-stats {
+        height: auto;
+        min-height: 610px;
+        padding: 45px 18px
+      }
+
+      .dpet-stats__panel {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: auto;
+        min-height: 520px;
+        transform: none;
+        padding: 28px 14px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 34px 10px
+      }
+
+      .dpet-stat__number {
+        font-size: 27px
+      }
+
+      .mission-hero-inner,
+      .intro {
+        width: calc(100% - 36px)
+      }
+
+      .intro {
+        padding-top: 52px
+      }
+
+      .story .wide {
+        width: 100%;
+        margin-left: 0
+      }
+
+      .chapter-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .about-hero-wrap {
+        min-height: min(78vh, 820px)
+      }
+
+      .about-hero-inner,
+      .about-content {
+        width: calc(100% - 36px);
+        padding-left: 0;
+        padding-right: 0
+      }
+
+      .about-section {
+        padding: 52px 0
+      }
+
+      .about-sec-navy,
+      .about-sec-blue {
+        padding-bottom: 70px;
+        clip-path: none
+      }
+
+      .about-copy {
+        margin: 0;
+        max-width: none
+      }
+
+      .about-section h2 {
+        font-size: 2rem
+      }
+
+      .about-section p {
+        font-size: 1rem
+      }
+
+    }
+
+    @media(max-width:560px) {
+      .chapter-cards {
+        grid-template-columns: 1fr
+      }
+
+      .chapters {
+        padding-left: 16px;
+        padding-right: 16px
+      }
+    }
+
+    /* Template1 main-content rhythm */
+    .intro {
+      width: 940px;
+      max-width: calc(100% - 40px);
+      padding-top: 40px;
+      padding-bottom: 90px;
+      font-size: 20px;
+      line-height: 35px
+    }
+
+    .story {
+      margin-bottom: 224px
+    }
+
+    .story h2 {
+      font-size: 50px;
+      line-height: 55px;
+      font-weight: 600
+    }
+
+    .story p {
+      margin-bottom: 24px
+    }
+
+    .story figure figcaption {
+      font-size: 16px;
+      line-height: 28px
+    }
+
+    .story .terminal {
+      float: right;
+      width: 400px;
+      margin: 40px -60px 30px 64px
+    }
+
+    .story .terminal img {
+      width: 400px;
+      height: auto
+    }
+
+    .story .wide {
+      width: 1060px;
+      margin-left: -60px
+    }
+
+    .story .wide img {
+      width: 1060px;
+      height: auto
+    }
+
+    /* Recreate the publication-section component copied from Our Purpose. */
+    #main>.ll-pub-section {
+      position: relative;
+      width: 100%;
+      padding: 0;
+      background: #00305c;
+      color: #000
+    }
+
+    #main>.ll-pub-section .ll-pub-section-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 50px 15px;
+      background: #fff
+    }
+
+    #main>.ll-pub-section .ll-pub-section-inner::before {
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: min(600px, calc(100% - 30px));
+      height: 20px;
+      background: #008eff;
+      clip-path: polygon(0 0, 0 100%, 100% 100%, calc(100% - 20px) 0);
+      content: ""
+    }
+
+    #main>.ll-pub-section.ll-accent-red.ll-background-grey {
+      background: #ededed
+    }
+
+    #main>.ll-pub-section.ll-accent-red.ll-background-grey .ll-pub-section-inner {
+      background: #ededed
+    }
+
+    #main>.ll-pub-section.ll-accent-red.ll-background-grey .ll-pub-section-inner::before {
+      background: #a71930
+    }
+
+    #main>.ll-pub-section .ll-pub-section-content {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto
+    }
+
+    #main>.ll-pub-section h2 {
+      margin: 5px 0 30px;
+      font-size: clamp(2rem, 4vw, 3.15rem);
+      line-height: 1.1;
+      font-weight: 600;
+      text-transform: none
+    }
+
+    #main>.ll-pub-section h3.ll-title-bl {
+      margin: 37px 0 30px;
+      color: #008eff;
+      font-size: clamp(1.6rem, 3vw, 2.5rem);
+      line-height: 1.1;
+      font-weight: 600
+    }
+
+    #main>.ll-pub-section .wysiwyg {
+      max-width: 1000px;
+      margin: 0 auto;
+      font-family: "Poppins", sans-serif;
+      font-weight: 300
+    }
+
+    #main>.ll-pub-section .wysiwyg p {
+      margin: 0 0 1.2em;
+      font-size: 16px;
+      line-height: 1.75
+    }
+
+    #main>.ll-pub-section .wysiwyg strong,
+    #main>.ll-pub-section .wysiwyg b {
+      font-weight: 600
+    }
+
+    #main>.ll-pub-section .wysiwyg ul {
+      margin: 0 0 1.2em;
+      padding: 0;
+      list-style: none
+    }
+
+    #main>.ll-pub-section .wysiwyg li {
+      position: relative;
+      margin: 0 0 3px;
+      padding-left: 29px;
+      font-size: 16px;
+      line-height: 1.75
+    }
+
+    #main>.ll-pub-section .wysiwyg li::before {
+      position: absolute;
+      top: .72em;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      background: #008eff;
+      content: ""
+    }
+
+    #main>.ll-pub-section .ll-two-by-callout {
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    #main>.ll-pub-section .ll-two-by-callout>div {
+      flex: 1;
+      padding: 30px;
+      background: #ebebeb
+    }
+
+    #main>.ll-pub-section .ll-two-by-callout h4 {
+      margin: 0 0 14px;
+      font-size: 20px;
+      line-height: 1.3;
+      font-weight: 600
+    }
+
+    @media (min-width: 700px) {
+      #main>.ll-pub-section .ll-pub-section-inner {
+        padding: 100px 60px
+      }
+
+      #main>.ll-pub-section .wysiwyg p,
+      #main>.ll-pub-section .wysiwyg li {
+        font-size: 20px;
+        line-height: 1.75
+      }
+
+      #main>.ll-pub-section .ll-two-by-callout {
+        flex-direction: row
+      }
+
+      #main>.ll-pub-section .ll-two-by-callout h4 {
+        font-size: 25px
+      }
+    }
+
+    .chapters {
+      padding: 42px 30px 50px
+    }
+
+    .chapters h3 {
+      font-size: 30px;
+      line-height: 33px
+    }
+
+    .chapter-card span {
+      font-size: 20px;
+      line-height: 24px
+    }
+
+    @media(max-width:900px) {
+      .intro {
+        width: calc(100% - 40px);
+        max-width: none;
+        padding-top: 65px
+      }
+
+      .story h2 {
+        font-size: clamp(32px, 6vw, 50px);
+        line-height: 1.1
+      }
+
+      .story .wide {
+        width: calc(100% + 40px);
+        margin-left: -20px
+      }
+
+      .story .wide img,
+      .story .terminal,
+      .story .terminal img {
+        width: 100%
+      }
+
+      .story .terminal {
+        float: none;
+        margin: 30px 0
+      }
+    }
+
+    @media(min-width:901px) {
+      .story {
+        margin-bottom: 311px
+      }
+
+      .chapters {
+        padding: 0 30px 10px;
+        margin-top: 32px;
+        margin-bottom: 32px
+      }
+    }
+  </style>
+  <style>
+    /* Image-free sloped title hero, matching Engage-Research-en.html. */
+    .about-hero-wrap {
+      position: relative;
+      isolation: isolate;
+      min-height: clamp(225px, 27.1vw, 390px) !important;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      color: #fff;
+      background: none !important;
+    }
+
+    .about-hero-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: #00305c;
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - clamp(42px, 10.85vw, 156px)), 0 100%);
+    }
+
+    .about-hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(calc(100% - 100px), 1000px);
+      margin: 0 auto;
+      padding: 24px 0 72px !important;
+    }
+
+    .about-hero-title {
+      margin: 0;
+      color: #fff;
+      font-size: clamp(2.5rem, 5vw, 4.0625rem);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 699px) {
+      .about-hero-wrap {
+        min-height: 225px !important;
+      }
+
+      .about-hero-inner {
+        width: calc(100% - 30px);
+        padding: 14px 0 52px !important;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../assets/css/archive-consistency.css?v=20260908-wide1">
+  <link rel="stylesheet" href="../assets/css/about-explore-nav.css?v=20260911-4">
+  <link rel="stylesheet" href="../assets/css/page-canvas.css?v=20260911-1">
+</head>
+
+<body class="page-about-mission page-about-wide">
+  <div data-component="header"></div>
+
+  <main id="main">
+    <section class="about-hero-wrap">
+      <div class="about-hero-inner">
+        <h1 class="about-hero-title">使命愿景</h1>
+      </div>
+    </section>
+
+    <div class="intro">
+      <article class="story">
+        <p>
+          数字PET实验室由谢庆国教授领导，汇集来自中国、意大利、俄罗斯、芬兰等国家的科学家，涵盖生物医学工程、电信、电子学、控制系统、计算机科学、数学、机械工程、核医学、放射学和临床医学等多个领域。2001年，团队开创了数字PET的新研究方向。经过二十多年的发展，并依托强大的科研平台支持，逐步发展成为集人才培养、技术创新及产业应用于一体的全球顶尖平台。
+        </p>
+        <p>
+          通过发明多电压阈值（MVT）采样方法解决了高速脉冲精确数字化的难题，团队系统推进了全数字模块化PET探测器技术以及一系列智能成像方法。深入研究了PET中的五个数学物理过程（物质到能量、辐射到光、光到电、模拟到数据及数据到图像）背后的科学原理和技术革新。
+        </p>
+        <p>全球首个MVT采样方法实现了跨领域的广泛应用，在医学影像领域，相继完成了：全球首台动物用全数字PET科研仪器（Trans-PET
+          BioCaliburn），全球首款临床全数字PET医疗设备（D-PET100），全球首款标准CMOS硅光电倍增管（TP3050），全球首个专用于大脑的全数字PET系统（DigitMI
+          i30）和全球首台质子束PET系统。所有这些成果均享有完整独立知识产权，改变了PET行业评价标准，并开启了全数字PET的新时代。在高能辐射检测领域，包括石油勘探、辐射探测、安检设备及核聚变中子探测器等领域的技术突破与成功应用也已实现。
+        </p>
+        <p>
+          团队实现了从科学发现和技术发明到应用开发的完整创新周期，在整个产业链上取得了成果：关键材料（高性能闪烁晶体），核心部件（超弱光检测芯片），核心技术模块（模块化粒子探测器），核心软件（端到端软件平台）和完整系统（用于动物科研仪器的全数字PET及临床使用的全数字PET医疗设备）。累计申请专利超过600项，其中获得授权240余项，涵盖了从电子学、探测器到系统集成以及软件算法与产品的整个技术链，在该领域全球总量中排名第一。
+        </p>
+        <p>依托数字PET脑成像平台和超级数字PET影像平台等大型科研设施，团队积极拓展新应用，发现新原理，并积累新数据。肩负探索生命起源、意识及宇宙的使命，为人类健康贡献智力支持并推动科学发展。</p>
+      </article>
+    </div>
+
+
+
+
+
+    <div class="ll-pub-section ll-accent-light_blue ll-background-dark-blue js-animate">
+      <div class="ll-pub-section-inner">
+        <div class="ll-pub-section-content">
+          <div class="ll-pub-section-content">
+            <div class="ll-eyebrow"></div>
+            <h2>使命、愿景与价值观</h2>
+          </div>
+        </div>
+        <div class="ll-pub-section-content">
+          <div
+            class="field field--name-field-p-ll-pub-pars field--type-entity-reference field--label-hidden field__items">
+            <div class="field__item">
+              <div class="paragraph paragraph--type-wysiwyg paragraph--view-mode-full">
+                <div class="wysiwyg">
+                  <h3 class="ll-title-bl">使命：</h3>
+                  <p><strong>服务于国家需求的技术创新</strong></p>
+                  <p>
+                    我们集合了国内顶尖的技术和临床人才，以服务精准医疗和转化研究的需求为核心，推进数字PET系统及核心成像技术的发展。聚焦符合国家战略健康政策的前沿医学影像技术创新，并与全国范围内的临床医院、医学研究所、生物医学资助机构以及公共卫生部门开展专项研发合作。
+                  </p>
+                  <div class="ll-two-by-callout bkg-lt">
+                    <div>
+                      <h4>核心技术</h4>
+                      <ul>
+                        <li>多电压阈值方法</li>
+                        <li>闪烁晶体</li>
+                        <li>极弱光探测芯片</li>
+                        <li>模块化粒子探测器</li>
+                        <li>PnI成像平台</li>
+                        <li>全数字PET科学仪器</li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4>核心价值</h4>
+                      <ul>
+                        <li>激情</li>
+                        <li>雄心</li>
+                        <li>勇气</li>
+                        <li>责任</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="field__item">
+              <div class="paragraph paragraph--type-wysiwyg paragraph--view-mode-full">
+                <div class="wysiwyg">
+                  <h3 class="ll-title-bl">愿景：</h3>
+                  <p><b>成为推进精准医疗和转化生物医学研究的变革性数字技术和成像系统原型的国家领先实验室。</b></p>
+                </div>
+              </div>
+            </div>
+            <div class="field__item">
+              <div class="paragraph paragraph--type-wysiwyg paragraph--view-mode-full">
+                <div class="wysiwyg">
+                  <h3 class="ll-title-bl">价值观：</h3>
+                  <div class="ll-two-by-callout bkg-lt">
+                    <div>
+                      <p><strong>我们对待工作的态度</strong></p>
+                      <ul>
+                        <li>诚信、卓越与创新</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <p><strong>我们相互交往的方式</strong></p>
+                      <ul>
+                        <li>归属感、尊重和服务</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="ll-pub-section ll-accent-red ll-background-grey js-animate">
+      <div class="ll-pub-section-inner">
+        <div class="ll-pub-section-content">
+          <div class="ll-pub-section-content">
+            <div class="ll-eyebrow"></div>
+            <h2>国家级数字PET研发中心</h2>
+          </div>
+        </div>
+        <div class="ll-pub-section-content">
+
+          <div
+            class="field field--name-field-p-ll-pub-pars field--type-entity-reference field--label-hidden field__items">
+            <div class="field__item">
+              <div class="paragraph paragraph--type-wysiwyg paragraph--view-mode-full">
+
+                <div class="wysiwyg">
+                  <p>
+                    作为国家数字PET领域的核心研发中心，我们将前沿影像技术研发与快速硬件原型开发、系统集成能力有机结合，聚焦临床机构或产业伙伴难以独立完成的变革性成像技术全链条研发。技术成熟后，实验室将与国家卫生主管部门和科研管理机构密切协同，推动成果向临床一线与产业伙伴转移，实现临床部署和规模化生产。
+                  </p>
+                  <p>这条端到端的创新路径是我们面向公众的研究使命的核心，为国家医疗进步及更广泛的医学生态系统带来独特优势。</p>
+                  <ul>
+                    <li><strong>持久的战略合作伙伴关系：</strong>
+                      我们作为长期战略合作伙伴服务于国家级卫生部门和临床网络，保持在关键数字PET领域的深厚专业知识连续性，灵活应对紧迫的临床和公共卫生需求，并与更广阔的医学研究社区分享我们的技术知识。
+                    </li>
+                    <li><strong>以创新为核心文化： </strong>
+                      我们认为在数字PET技术领域的开创性进展植根于思想的自由交流、挑战常规的意愿、进行探索性风险的自由、对不断变化的临床需求作出灵活响应的能力以及追求有意义影响的决心。我们致力于在整个实验室中培养和保护这种创新文化，赋能团队实现变革性的科学突破。
+                    </li>
+                    <li><strong>客观可信的专业能力：</strong> 作为可信、客观的技术能力供给方，我们始终服务公共利益和国家卫生健康战略，加快面向未满足临床需求的技术创新，推动精准医学规模化发展。
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- Interests -->
+    <div class="mitll-ll-pub-nav mitll-ll-pub-nav-chapters about-explore-section">
+      <div class="mitll-ll-pub-nav-chapters-inner">
+        <h3>探索您感兴趣的内容</h3>
+        <ul class="mitll-ll-pub-bottom-nav about-explore-nav">
+          <li class="ll-ot">
+            <a href="About-about-cn.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/root/media/2-3.jpg" alt="关于我们" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">关于我们</div>
+              </div>
+            </a>
+          </li>
+          <li class="ll-current-chapter">
+            <a href="About-mission-cn.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/about/explore-nav/mission-v3.jpg" alt="使命愿景" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">使命愿景</div>
+              </div>
+            </a>
+          </li>
+          <li class="ll-ot">
+            <a href="About-impact-cn.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/about/explore-nav/impact-v2.jpg" alt="学术影响" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">学术影响</div>
+              </div>
+            </a>
+          </li>
+          <li class="ll-ot">
+            <a href="About-history-cn.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/about/explore-nav/history.jpg" alt="发展历程" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">发展历程</div>
+              </div>
+            </a>
+          </li>
+          <li class="ll-ot">
+            <a href="About-leadership-cn.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/about/explore-nav/leadership-v2.jpg" alt="领导团队" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">领导团队</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+
+  <div data-component="footer"></div>
+
+</body>
+
+</html>

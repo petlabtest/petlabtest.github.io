@@ -1,0 +1,388 @@
+/* Shared fallbacks for archived page templates.
+ * Keep this file limited to presentation fixes that are safe across templates. */
+
+/* Featured Projects carousel: the archived markup uses p-project-carousel__content
+ * rather than the source site's slider-content wrapper. Keep inactive dots white
+ * and visibly mark the active project in PETLab blue. */
+.p-project-carousel__content .slick-dots li button:before {
+  background-color: #fff;
+}
+
+.p-project-carousel__content .slick-dots li.slick-active button:before {
+  background-color: #008eff !important;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/root/media/r024.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/root/media/r025.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/root/media/r026.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/root/media/r024.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/root/media/r025.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/root/media/r026.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 500 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/root/media/r029.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "mitll-icomoon";
+  src: url("../fonts/root/media/r030.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  font-display: block;
+}
+
+a.cta--button:not(#archive-consistency-never):not(:has(.last-word))::after,
+span.cta--button:not(#archive-consistency-never):not(:has(.last-word))::after,
+a.cta--button:not(#archive-consistency-never) .last-word::after,
+span.cta--button:not(#archive-consistency-never) .last-word::after {
+  content: "›" !important;
+  display: inline-block !important;
+  width: auto !important;
+  height: auto !important;
+  margin-left: 10px !important;
+  border: 0 !important;
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 1.35em !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 0 !important;
+  vertical-align: -0.06em;
+  transform: none;
+  transition: transform 0.2s ease;
+}
+
+/* Some archived page bundles draw a second border-based arrow directly on
+   the CTA even after Drupal has wrapped its final word. In that state the
+   shared .last-word arrow is canonical, so suppress only the duplicate on
+   the button itself. */
+a.cta--button:not(#archive-consistency-never):has(.last-word)::after,
+span.cta--button:not(#archive-consistency-never):has(.last-word)::after {
+  content: none !important;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background: none !important;
+  clip-path: none !important;
+}
+
+a.cta--button:not(#archive-consistency-never):not(:has(.last-word)):hover::after,
+a.cta--button:not(#archive-consistency-never):not(:has(.last-word)):focus-visible::after,
+a.cta--button:not(#archive-consistency-never):hover .last-word::after,
+a.cta--button:not(#archive-consistency-never):focus-visible .last-word::after {
+  transform: translateX(2px);
+}
+
+/* Consistent editorial hierarchy for Chinese and English news detail pages. */
+.page-node-type-news .node--type-news.node--view-mode-full .hero.hero--small-image .hero__image {
+  position: relative;
+  height: clamp(420px, 48vw, 620px);
+  min-height: 420px;
+  padding-top: 0;
+  aspect-ratio: auto;
+  overflow: hidden;
+  background: #111820;
+}
+
+.page-node-type-news .node--type-news.node--view-mode-full .hero.hero--small-image .hero__image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.page-node-type-news .node--type-news.node--view-mode-full .hero.hero--small-image .hero__title-wrapper .hero__page-title {
+  margin-top: 0;
+  font-size: 34px;
+  line-height: 1.22;
+  text-wrap: balance;
+}
+
+html[lang^="en"] .page-node-type-news .node--type-news.node--view-mode-full .hero.hero--small-image .hero__title-wrapper .hero__page-title {
+  font-size: 32px;
+}
+
+.page-node-type-news .node--type-news.node--view-mode-full .news-full__body .news-article-subheading,
+.page-node-type-news .node--type-news.node--view-mode-full .news-full__body > h2 {
+  clear: both;
+  margin-top: 2.4rem;
+  margin-bottom: .85rem;
+  font-size: 22px;
+  line-height: 1.4;
+  text-transform: none;
+}
+
+.page-node-type-news .node--type-news.node--view-mode-full .news-full__body figure.align-right,
+.page-node-type-news .node--type-news.node--view-mode-full .news-full__body .paper-figure--floated {
+  margin-top: .4rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 700px) {
+  .page-node-type-news .node--type-news.node--view-mode-full .hero.hero--small-image .hero__image {
+    height: clamp(520px, 47vw, 660px);
+    min-height: 520px;
+    aspect-ratio: auto;
+  }
+
+  .page-node-type-news .node--type-news.node--view-mode-full .hero.hero--small-image .hero__title-wrapper .hero__page-title {
+    font-size: 46px;
+    line-height: 1.2;
+  }
+
+  html[lang^="en"] .page-node-type-news .node--type-news.node--view-mode-full .hero.hero--small-image .hero__title-wrapper .hero__page-title {
+    font-size: 40px;
+  }
+
+  .page-node-type-news .node--type-news.node--view-mode-full .news-full__body .news-article-subheading,
+  .page-node-type-news .node--type-news.node--view-mode-full .news-full__body > h2 {
+    font-size: 25px;
+  }
+
+  .page-node-type-news .node--type-news.node--view-mode-full .news-full__body figure.align-right,
+  .page-node-type-news .node--type-news.node--view-mode-full .news-full__body .paper-figure--floated {
+    float: right;
+    width: 36%;
+    max-width: 320px;
+    margin-right: 0;
+    margin-left: 2.25rem;
+  }
+
+  .page-node-type-news .node--type-news.node--view-mode-full .news-full__body figure.align-right .media,
+  .page-node-type-news .node--type-news.node--view-mode-full .news-full__body figure.align-right .image,
+  .page-node-type-news .node--type-news.node--view-mode-full .news-full__body figure.align-right img,
+  .page-node-type-news .node--type-news.node--view-mode-full .news-full__body .paper-figure--floated .media,
+  .page-node-type-news .node--type-news.node--view-mode-full .news-full__body .paper-figure--floated .image,
+  .page-node-type-news .node--type-news.node--view-mode-full .news-full__body .paper-figure--floated img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .page-node-type-news .node--type-news.node--view-mode-full .hero.hero--small-image .hero__image {
+    height: clamp(620px, 46vw, 700px);
+    min-height: 620px;
+    aspect-ratio: auto;
+  }
+
+  .page-node-type-news .node--type-news.node--view-mode-full .hero.hero--small-image .hero__title-wrapper .hero__page-title {
+    font-size: 56px;
+    line-height: 1.18;
+  }
+
+  html[lang^="en"] .page-node-type-news .node--type-news.node--view-mode-full .hero.hero--small-image .hero__title-wrapper .hero__page-title {
+    font-size: 46px;
+    line-height: 1.2;
+  }
+
+  .page-node-type-news .node--type-news.node--view-mode-full .news-full__body .news-article-subheading,
+  .page-node-type-news .node--type-news.node--view-mode-full .news-full__body > h2 {
+    font-size: 26px;
+  }
+}
+
+/*
+ * Wide-display normalization.
+ *
+ * Several archived bundles scale their entire layout with html {font-size:1vw}
+ * and switch hero media to absolute positioning at 1600px.  Both assumptions
+ * are suitable for their original fixed canvas but cause oversized type,
+ * collapsed heroes, and left-anchored full-width panels on 2K displays.  Keep
+ * notebook-sized layouts untouched and normalize only genuinely wide CSS
+ * viewports.
+ */
+@media (min-width: 1800px) {
+  html {
+    font-size: 16px !important;
+  }
+
+  /* Archived small-image research/detail heroes retain their 1600px canvas,
+     while the media height and title block remain inside that canvas. */
+  .page-node-type-rdgroup .hero--small-image .hero__image {
+    position: relative !important;
+    left: 0 !important;
+    width: 100% !important;
+    max-width: 1600px !important;
+    height: auto !important;
+    margin-inline: auto !important;
+    padding-top: 43.203% !important;
+    overflow: hidden !important;
+  }
+
+  .page-node-type-rdgroup .hero--small-image .hero__image img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .page-node-type-rdgroup .hero--small-image .hero__title-wrapper {
+    width: calc(100% - ((100% - 990px) / 2)) !important;
+    max-width: calc(100% - ((100% - 990px) / 2)) !important;
+  }
+
+  .page-node-type-rdgroup .hero--small-image {
+    padding-bottom: 74px !important;
+  }
+
+  /* Match the centered Join Us treatment used by Research-Core. */
+  .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate,
+  .page-news-overview .news-join-us {
+    left: auto !important;
+    width: min(100vw, 1600px) !important;
+    max-width: 1600px !important;
+    margin-right: 0 !important;
+    margin-left: calc(50% - min(50vw, 800px)) !important;
+    transform: none !important;
+  }
+
+  .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__content {
+    padding-left: 50px !important;
+  }
+
+  /* The instrument cards use a viewport-wide grid in the archive bundle. */
+  .page-research-tech-instruments .core-technologies-showcase {
+    width: min(100%, 1600px) !important;
+    max-width: 1600px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  /* Overview mastheads share the same centered editorial canvas. */
+  .page-capabilities-overview .capabilities-hero,
+  .page-news-overview .people-style-hero-wrap,
+  .page-news-overview .people-style-hero,
+  .page-people-people-stewardship-cn .mitll-hero {
+    width: min(100%, 1600px) !important;
+    max-width: 1600px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  .page-news-overview .people-style-hero-wrap {
+    left: 0 !important;
+    transform: none !important;
+  }
+
+  .page-news-overview .people-style-hero .hero__image {
+    width: 100% !important;
+    max-width: 1600px !important;
+    margin-inline: auto !important;
+  }
+
+  /* Stewardship: constrain the image, mask, subtitle band and opening block. */
+  .page-people-people-stewardship-cn .mitll-hero-inner,
+  .page-people-people-stewardship-cn .mitll-hero-inner img,
+  .page-people-people-stewardship-cn .mitll-hero-title,
+  .page-people-people-stewardship-cn .mitll-hero-intro {
+    width: 100% !important;
+    max-width: 1600px !important;
+  }
+
+  .page-people-people-stewardship-cn .mitll-hero-inner img {
+    margin-inline: auto !important;
+  }
+
+  .page-people-people-stewardship-cn .ll-p-color-block-content {
+    width: min(calc(100% - 160px), 1400px) !important;
+    max-width: 1400px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  /* About pages use full-viewport archived bands.  Cap the complete editorial
+     sequence so its rhythm matches the other 1600px pages. */
+  .page-about main,
+  .page-about-wide main,
+  .page-about-leadership .industry-main,
+  .page-about-leadership > .about-hero-wrap,
+  .page-about-wide .about-hero-wrap {
+    width: min(100%, 1600px) !important;
+    max-width: 1600px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  .page-about main,
+  .page-about-wide main,
+  .page-about-leadership .industry-main {
+    overflow: hidden;
+  }
+
+  /* On the giving page the archive makes the hero image absolute at 1600px,
+     collapsing the hero to zero height and pulling the blue panel over it. */
+  .page-giving .page__header .hero--large-image {
+    width: min(100%, 1600px) !important;
+    max-width: 1600px !important;
+    margin-inline: auto !important;
+  }
+
+  .page-giving .page__header .hero--large-image .hero__image {
+    position: relative !important;
+    left: 0 !important;
+    width: 100% !important;
+    max-width: 1600px !important;
+    margin-inline: auto !important;
+  }
+}
+/* News title panels are offset inside the hero; clip their decorative background
+   at the centered 1600px hero boundary on wide displays. */
+@media (min-width: 1601px) {
+  .page-node-type-news .hero {
+    overflow: hidden;
+  }
+}

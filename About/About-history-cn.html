@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <link rel="icon" type="image/png" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="apple-touch-icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="manifest" href="../assets/data/favicons/site.webmanifest">
+  <link rel="shortcut icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1" type="image/png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#003c62">
+    <title>发展历程 | 数字PET实验室</title>
+    <meta name="keywords" content="Digital PET Laboratory, history, timeline">
+    <meta name="description" content="数字PET实验室自2004年至今的发展历程。">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta property="og:title" content="历史 | 数字PET实验室">
+    <meta property="og:description" content="数字PET实验室自2004年至今的发展历程。">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://petlab.hust.edu.cn/" />
+    <meta property="og:site_name" content="Digital PET Laboratory" />
+    <meta property="og:image" content="../assets/pic/main/PETLAB_LOGO_Pure.png">
+    <link rel="stylesheet" href="../assets/css/site.css?v=20260908-wide1">
+    <script src="../assets/js/site.js?v=20260830-2" defer></script>
+    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline-min.js"></script>
+
+
+    <style>
+        #timeline-embed {
+            width: 100%;
+            height: 30rem;
+            background-color: #f8f9fa !important;
+        }
+
+        /* 时间轴 事件卡片 背景色 */
+        #timeline-embed .tl-slide-content {
+            padding: 1rem !important;
+        }
+
+        /* 时间轴 大标题 */
+        #timeline-embed .tl-headline h2 {
+            font-size: 2rem !important;
+            color: #000 !important;
+        }
+
+        /* 时间轴 日期文字 */
+        #timeline-embed .tl-time {
+            font-size: 18px !important;
+            color: #0052cc !important;
+        }
+
+        /* 时间轴 事件标题 */
+        #timeline-embed .tl-slide-title h3 {
+            font-size: 20px !important;
+            color: #222 !important;
+        }
+
+        /* 时间轴 事件正文 */
+        #timeline-embed .tl-slide-text p {
+            font-size: 16px !important;
+            line-height: 1.6 !important;
+            color: #000 !important;
+        }
+
+        /* 时间轴 整个右侧面板背景 */
+        #timeline-embed .tl-slides {
+            background-color: #f7f7f7 !important;
+        }
+
+        /* Chapter navigation copied from the impact-report pages. */
+        .history-main>.mitll-ll-pub-nav-chapters {
+            width: 100%;
+            margin: 0;
+            padding: 30px;
+            box-sizing: border-box;
+            background: rgba(0, 25, 41, .95);
+            color: #fff;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .mitll-ll-pub-nav-chapters-inner {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters h3 {
+            margin: 0 0 40px;
+            color: #fff;
+            font-size: 30px;
+            line-height: 1.25;
+            text-transform: uppercase;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .mitll-ll-pub-bottom-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .mitll-ll-pub-bottom-nav>li {
+            position: relative;
+            flex: 0 0 100%;
+            min-width: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .ll-section-nav {
+            position: relative;
+            display: block;
+            height: 100%;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .ll-pub-bottom-nav-img {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            background: #00305c;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .ll-pub-bottom-nav-img::after {
+            position: absolute;
+            inset: 0;
+            background: #008eff;
+            content: "";
+            opacity: .7;
+            transition: opacity .8s ease;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .ll-pub-bottom-nav-img img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1.25s ease;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .ll-nav-text-side {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .ll-nav-title {
+            width: 100%;
+            margin: 0;
+            padding: 7px;
+            box-sizing: border-box;
+            color: #fff;
+            background: rgba(0, 48, 92, .7);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 38px;
+            line-height: 1.25;
+            font-weight: 700;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .ll-current-chapter .ll-pub-bottom-nav-img::after,
+        .history-main>.mitll-ll-pub-nav-chapters .ll-current-chapter .ll-nav-title {
+            background: rgba(255, 255, 255, .7);
+            color: #00305c;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .ll-section-nav:hover .ll-pub-bottom-nav-img::after {
+            opacity: 0;
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .ll-section-nav:hover .ll-pub-bottom-nav-img img {
+            transform: scale(1.15);
+        }
+
+        .history-main>.mitll-ll-pub-nav-chapters .ll-section-nav:hover .ll-nav-title {
+            padding-bottom: 15px;
+        }
+
+        @media (min-width: 700px) {
+            .history-main>.mitll-ll-pub-nav-chapters {
+                padding: 45px 30px 50px;
+            }
+
+            .history-main>.mitll-ll-pub-nav-chapters .mitll-ll-pub-bottom-nav>li {
+                flex-basis: calc(50% - 5px);
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .history-main>.mitll-ll-pub-nav-chapters {
+                padding-top: 60px;
+                padding-bottom: 80px;
+            }
+
+            .history-main>.mitll-ll-pub-nav-chapters .mitll-ll-pub-bottom-nav>li {
+                flex-basis: calc(20% - 8px);
+            }
+        }
+    </style>
+
+    <style>
+        /* Shared About-page hero styling. */
+        .about-hero-wrap {
+            position: relative;
+            min-height: min(78vh, 820px);
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            color: #fff;
+            background-color: #00305c;
+        }
+
+        .about-hero-wrap::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, .76), transparent 54%), linear-gradient(90deg, rgba(0, 20, 34, .18), transparent 70%);
+        }
+
+        .about-hero-inner {
+            position: relative;
+            z-index: 1;
+            width: min(calc(100% - 116px), 1280px);
+            margin: 0 auto;
+            padding-left: 18px;
+            padding-bottom: 52px;
+        }
+
+        .about-hero-title {
+            margin: 0;
+            font-size: clamp(3rem, 6vw, 5.2rem);
+            line-height: 1;
+            font-weight: 700;
+            letter-spacing: .02em;
+        }
+
+        @media (max-width: 1100px) {
+            .about-hero-wrap {
+                min-height: min(78vh, 820px);
+            }
+
+            .about-hero-inner {
+                width: calc(100% - 36px);
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        .history-main {
+            background: #f5f4f0;
+            color: #111820;
+        }
+
+        .history-hero {
+            position: relative;
+            min-height: 360px;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            color: #fff;
+            background: #003360;
+        }
+
+        .history-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(0, 24, 40, .9), rgba(0, 31, 52, .32) 72%), linear-gradient(0deg, rgba(0, 18, 29, .64), transparent 58%);
+        }
+
+        .history-hero__content {
+            position: relative;
+            z-index: 1;
+            width: min(calc(100% - 64px), 1440px);
+            margin: 0 auto;
+            padding: 4.5rem 0 4rem;
+        }
+
+        .history-hero__content p {
+            margin: 0 0 .85rem;
+            font-size: .76rem;
+            font-weight: 700;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+        }
+
+        .history-hero h1 {
+            max-width: 760px;
+            margin: 0;
+            font-size: clamp(3rem, 7vw, 6.3rem);
+            line-height: .95;
+            letter-spacing: -.045em;
+        }
+
+        .history-hero__lede {
+            max-width: 680px;
+            margin: 1.5rem 0 0 !important;
+            font-size: clamp(1rem, 1.8vw, 1.3rem) !important;
+            font-weight: 400 !important;
+            line-height: 1.5;
+            letter-spacing: 0 !important;
+            text-transform: none !important;
+        }
+
+        .history-timeline {
+            width: min(calc(100% - 64px), 1440px);
+            margin: 0 auto;
+            padding: clamp(3rem, 7vw, 7rem) 0 clamp(4rem, 8vw, 8rem);
+        }
+
+        .history-timeline__heading {
+            display: grid;
+            grid-template-columns: minmax(220px, .75fr) minmax(0, 2fr);
+            gap: clamp(2rem, 7vw, 8rem);
+            align-items: start;
+            margin-bottom: 2.5rem;
+        }
+
+        .history-timeline__heading h2 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 4.4rem);
+            line-height: 1.04;
+            letter-spacing: -.04em;
+        }
+
+        .history-timeline__heading p {
+            max-width: 740px;
+            margin: .35rem 0 0;
+            color: #34414b;
+            font-size: 1.15rem;
+            line-height: 1.6;
+        }
+
+        #timeline-embed {
+            width: 100%;
+            height: clamp(620px, 57vw, 820px);
+            overflow: hidden;
+            background: #fff !important;
+            border: 1px solid #d7dce0;
+            box-shadow: 0 18px 50px rgba(0, 31, 54, .12);
+        }
+
+        #timeline-embed .tl-slide-content {
+            padding: 1.4rem !important;
+        }
+
+        #timeline-embed .tl-headline h2 {
+            color: #111820 !important;
+            font-size: clamp(1.6rem, 2.8vw, 2.5rem) !important;
+            line-height: 1.1 !important;
+        }
+
+        #timeline-embed .tl-time {
+            color: #0067a7 !important;
+            font-size: 1rem !important;
+            font-weight: 700;
+        }
+
+        #timeline-embed .tl-slide-title h3 {
+            color: #222 !important;
+            font-size: clamp(1.1rem, 1.7vw, 1.5rem) !important;
+            line-height: 1.25 !important;
+        }
+
+        #timeline-embed .tl-slide-text p {
+            color: #34414b !important;
+            font-size: 1rem !important;
+            line-height: 1.65 !important;
+        }
+
+        #timeline-embed .tl-slides {
+            background: #f7f7f7 !important;
+        }
+
+        @media (max-width: 700px) {
+            .history-hero {
+                min-height: 410px;
+            }
+
+            .history-hero__content,
+            .history-timeline {
+                width: min(calc(100% - 32px), 1440px);
+            }
+
+            .history-hero__content {
+                padding: 3.5rem 0 3rem;
+            }
+
+            .history-timeline__heading {
+                display: block;
+            }
+
+            .history-timeline__heading h2 {
+                margin-bottom: 1rem;
+            }
+
+            .history-timeline__heading p {
+                font-size: 1rem;
+            }
+
+            #timeline-embed {
+                height: 650px;
+            }
+        }
+    </style>
+
+    <style>
+        /* Image-free sloped title hero, matching Engage-Research-en.html. */
+        .about-hero-wrap {
+            position: relative;
+            isolation: isolate;
+            min-height: clamp(225px, 27.1vw, 390px) !important;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            color: #fff;
+            background: none !important;
+        }
+
+        .about-hero-wrap::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: #00305c;
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - clamp(42px, 10.85vw, 156px)), 0 100%);
+        }
+
+        .about-hero-inner {
+            position: relative;
+            z-index: 1;
+            width: min(calc(100% - 100px), 1000px);
+            margin: 0 auto;
+            padding: 24px 0 72px !important;
+        }
+
+        .about-hero-title {
+            margin: 0;
+            color: #fff;
+            letter-spacing: 0;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 699px) {
+            .about-hero-wrap {
+                min-height: 225px !important;
+            }
+
+            .about-hero-inner {
+                width: calc(100% - 30px);
+                padding: 14px 0 52px !important;
+            }
+        }
+    </style>
+  <link rel="stylesheet" href="../assets/css/archive-consistency.css?v=20260908-wide1">
+  <link rel="stylesheet" href="../assets/css/about-explore-nav.css?v=20260911-4">
+  <link rel="stylesheet" href="../assets/css/page-canvas.css?v=20260911-1">
+</head>
+
+
+<body class="page-history page-about-wide" id="top">
+    <div data-component="header"></div>
+
+    <main id="main-content" class="history-main">
+        <section class="about-hero-wrap">
+            <div class="about-hero-inner">
+                <h1 class="about-hero-title">发展历程</h1>
+            </div>
+        </section>
+        <section class="history-timeline" aria-labelledby="history-title">
+            <div id="timeline-embed"></div>
+
+            <script>
+                // 你的数据 👇 把这里换成你自己的所有数据
+                const data = {
+                    "title": {
+                        "text": {
+                            "headline": "PET实验室历程",
+                            "text": "2004至今"
+                        }
+                    },
+                    "events": [
+                        {
+                            "start_date": { "year": "2004", "month": "2" },
+                            "end_date": { "year": "2004", "month": "3" },
+                            "text": {
+                                "headline": "发明多电压阈值(MVT)采样法",
+                                "text": "发明多电压阈值（MVT）采样法，解决了高速闪烁脉冲源头数字化的世界难题"
+                            },
+                            "group": "科学发现"
+                        },
+                        {
+                            "start_date": { "year": "2005" },
+                            "text": {
+                                "headline": "基于MVT方法提出全数字PET系统架构",
+                                "text": "基于MVT方法首创性提出全数字PET系统架构"
+                            },
+                            "group": "技术发明"
+                        },
+                        {
+                            "start_date": { "year": "2008" },
+                            "text": {
+                                "headline": "首次完成全数字PET探测器的模块化集成",
+                                "text": "首次完成全数字PET探测器的模块化集成。"
+                            },
+                            "group": "技术发明"
+                        },
+                        {
+                            "start_date": { "year": "2010" },
+                            "text": {
+                                "headline": "首次基于MVT和1:1:1探测技术",
+                                "text": "首次基于MVT和1:1:1探测技术实现了实际空间分辨率与内秉空间分辨率一致。"
+                            },
+                            "group": "技术发明"
+                        },
+                        {
+                            "start_date": { "year": "2010" },
+                            "text": {
+                                "headline": "首台动物全数字PET科学仪器",
+                                "text": " 完成首台动物全数字PET科学仪器，基于该设备迭代系列产品，与国内外多家知名高校、科研院所、教学科研型医院在脑疾病、肿瘤、心血管、代谢等领域的疾病研究及新药开发开展应用合作，相关成发表于行业内权威学术期刊。"
+                            },
+                            "group": "产业发展"
+                        },
+                        {
+                            "start_date": { "year": "2015" },
+                            "text": {
+                                "headline": "首台临床全数字PET/CT医疗设备",
+                                "text": " 完成首台临床全数字PET/CT医疗设备，空间分辨率、时间分辨率、灵敏度等关键指标全面领先，拥有全套自主知识产权。"
+                            },
+                            "group": "产业发展"
+                        },
+                        {
+                            "start_date": { "year": "2017" },
+                            "text": {
+                                "headline": "首台面向质子治疗监测的专用数字PET样机",
+                                "text": " 研发成功首台面向质子治疗监测的专用数字PET样机，验证了全数字PET技术在质子治疗在线在束监测中的可行性。"
+                            },
+                            "group": "技术发明"
+                        },
+                        {
+                            "start_date": { "year": "2017", "month": "4" },
+                            "end_date": { "year": "2017", "month": "6" },
+                            "text": {
+                                "headline": "首次利用平板全数字PET监测",
+                                "text": " 首次利用平板全数字PET监测到质子束辐照生物组织产生的氧15，对破解质子束在线在束监测的世界难题意义重大。"
+                            },
+                            "group": "科学发现"
+                        },
+                        {
+                            "start_date": { "year": "2017", "month": "9" },
+                            "end_date": { "year": "2017", "month": "12" },
+                            "text": {
+                                "headline": "基于MVT数字化方法首次实现SiPM",
+                                "text": " 基于MVT数字化方法首次实现SiPM 全数字化数据读出，直接获取闪烁事件的能量、时间等信息，解决了SiPM读出通道密度大、数据获取困难的问题。"
+                            },
+                            "group": "科学发现"
+                        },
+                        {
+                            "start_date": { "year": "2018" },
+                            "text": {
+                                "headline": "全数字PET/CT获得国家创新医疗器械特别审批"
+                            },
+                            "group": "产业发展"
+                        },
+                        {
+                            "start_date": { "year": "2018", "month": "2" },
+                            "text": {
+                                "headline": "首个标准CMOS SiPM研发成功"
+                            },
+                            "group": "技术发明"
+                        },
+                        {
+                            "start_date": { "year": "2018", "month": "9" },
+                            "text": {
+                                "headline": "研发成功首台脑部专用全数字PET样机",
+                                "text": " 研发成功首台脑部专用全数字PET样机，实现了16.7 kcps/Mbq的系统灵敏度和平均2.0 mm的空间分辨率指标。"
+                            },
+                            "group": "技术发明"
+                        },
+                        {
+                            "start_date": { "year": "2019" },
+                            "text": {
+                                "headline": "兼具快衰减和高均一的大尺寸LYSO晶体研发成功",
+                            },
+                            "group": "技术发明"
+                        },
+                        {
+                            "start_date": { "year": "2019", "month": "2" },
+                            "end_date": { "year": "2019", "month": "8" },
+                            "text": {
+                                "headline": "围绕全数字PET关键材料新需求",
+                                "text": " 围绕全数字PET关键材料新需求，揭示基于共掺杂和氧平衡的闪烁晶体可编程规律，实现大尺寸、快衰减LYSO全结晶生长，为全数字TOF-PET发展奠定基础。"
+                            },
+                            "group": "科学发现"
+                        },
+                        {
+                            "start_date": { "year": "2019", "month": "3" },
+                            "text": {
+                                "headline": "临床全数字PET/CT获得国家医疗器械注册证",
+                                "text": " 临床全数字PET/CT（DPET100）获得国家医疗器械注册证，正式获得市场准入资质，表明数字PET全新技术路线的全线贯通。"
+                            },
+                            "group": "产业发展"
+                        },
+                        {
+                            "start_date": { "year": "2019", "month": "9" },
+                            "end_date": { "year": "2019", "month": "11" },
+                            "text": {
+                                "headline": "脑部专用全数字PET原型机应用",
+                                "text": " 利用脑部专用全数字PET原型机研究了包括脑肿瘤、帕金森、AD等12种脑部疾病，首次刻画出了纹状体等亚核团结构。"
+                            },
+                            "group": "科学发现"
+                        },
+                        {
+                            "start_date": { "year": "2019", "month": "12" },
+                            "text": {
+                                "headline": "牵头承担国家重点研发计划“全数字PET技术标准和规范”",
+                                "text": " 牵头承担国家重点研发计划“全数字PET技术标准和规范”，并且在该项目支持下制定了全数字PET行业标准和两项产品注册指导原则。"
+                            },
+                            "group": "科学发现"
+                        },
+                        {
+                            "start_date": { "year": "2023" },
+                            "text": {
+                                "headline": "首台商用脑部专用全数字PET获得国家医疗器械注册证",
+                                "text": "首台商用脑部专用全数字PET（DigitMI i30）获得国家医疗器械注册证，实现了当前最高帧率40FPS（每秒传输帧数）的高频动态观测，毫秒级地捕捉脑部代变化、神经元放电等生理过程。"
+                            },
+                            "group": "产业发展"
+                        },
+                        {
+                            "start_date": { "year": "2024" },
+                            "text": {
+                                "headline": "实现适用于运动状态下的脑部成像技术",
+                                "text": "在首款头盔全数字PET系统的研发中，通过紧凑、微型化的系统设计，实现了适用于运动状态下的脑部动态成像技术。"
+                            },
+                            "group": "技术发明"
+                        },
+                        {
+                            "start_date": { "year": "2024" },
+                            "text": {
+                                "headline": "全数字PET产品接受习总书记检阅",
+                                "text": "全数字PET产品接受习总书记检阅，数字PETer向习总书记当面汇报工作。"
+                            },
+                            "group": "产业发展"
+                        },
+                        {
+                            "start_date": { "year": "2024", "month": "2" },
+                            "end_date": { "year": "2024", "month": "9" },
+                            "text": {
+                                "headline": "基于全数字PET技术研究DOI信息提取方法",
+                                "text": "基于全数字PET技术研究DOI信息提取方法，突破了空间分辨率瓶颈，首次提出适配半球形结构算法，成像质量大幅提升。"
+                            },
+                            "group": "科学发现"
+                        },
+                        {
+                            "start_date": { "year": "2025" },
+                            "text": {
+                                "headline": "首台质子束在生物组织内的能量输运观测装置",
+                                "text": "研发成功首台质子束在生物组织内的能量输运观测装置。首次实现了质子束诱导产生的正电子核素的三维动态分布和质子束射程的亚毫米在线监测技术。"
+                            },
+                            "group": "技术发明"
+                        },
+                        {
+                            "start_date": { "year": "2025" },
+                            "text": {
+                                "headline": "临床全数字PET/CT通过FDA注册认证",
+                                "text": "临床全数字PET/CT（DigitMI）通过FDA（美国食品药品监督管理局）注册认证。"
+                            },
+                            "group": "产业发展"
+                        },
+                        {
+                            "start_date": { "year": "2025", "month": "2" },
+                            "end_date": { "year": "2025", "month": "3" },
+                            "text": {
+                                "headline": "探索质子治疗中的糖代谢变化过程",
+                                "text": "利用质子束在生物组织内的能量输运观测装置探索了质子治疗中的糖代谢变化过程，分析了质子束在生物体内的生物冲刷效应，对质子放射治疗中剂量引导和生物引导、治疗评估和设备质控起到关键作用。"
+                            },
+                            "group": "科学发现"
+                        }
+                    ]
+                };
+
+                // 自动渲染时间轴 ✅
+                window.timeline = new TL.Timeline('timeline-embed', data);
+            </script>
+        </section>
+
+
+
+
+
+
+        <!-- Interests -->
+        <div class="mitll-ll-pub-nav mitll-ll-pub-nav-chapters about-explore-section">
+      <div class="mitll-ll-pub-nav-chapters-inner">
+        <h3>探索您感兴趣的内容</h3>
+        <ul class="mitll-ll-pub-bottom-nav about-explore-nav">
+          <li class="ll-ot">
+            <a href="About-about-cn.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/root/media/2-3.jpg" alt="关于我们" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">关于我们</div>
+              </div>
+            </a>
+          </li>
+          <li class="ll-ot">
+            <a href="About-mission-cn.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/about/explore-nav/mission-v3.jpg" alt="使命愿景" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">使命愿景</div>
+              </div>
+            </a>
+          </li>
+          <li class="ll-ot">
+            <a href="About-impact-cn.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/about/explore-nav/impact-v2.jpg" alt="学术影响" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">学术影响</div>
+              </div>
+            </a>
+          </li>
+          <li class="ll-current-chapter">
+            <a href="About-history-cn.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/about/explore-nav/history.jpg" alt="发展历程" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">发展历程</div>
+              </div>
+            </a>
+          </li>
+          <li class="ll-ot">
+            <a href="About-leadership-cn.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/about/explore-nav/leadership-v2.jpg" alt="领导团队" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">领导团队</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
+    </main>
+    <div data-component="footer"></div>
+</body>

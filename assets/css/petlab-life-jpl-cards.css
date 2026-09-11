@@ -1,0 +1,108 @@
+/* JPL TopicDetailMore-inspired cards, scoped to the Life page awards section. */
+.ll-pub-section.ll-accent-red.ll-background-light-blue .field--name-field-p-ll-pub-pars.field__items {
+  display: grid;
+  /* TopicDetailMore uses two equal cards across the desktop BaseGrid. */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.ll-pub-section.ll-accent-red.ll-background-light-blue
+  .field--name-field-p-ll-pub-pars.field__items > .field__item:not(:has(.ll-image-w-title)) {
+  grid-column: 1 / -1;
+}
+
+.ll-pub-section.ll-accent-red.ll-background-light-blue
+  .field--name-field-p-ll-pub-pars.field__items > .field__item:has(.ll-image-w-title) {
+  min-width: 0;
+  margin: 0;
+  background: #fff;
+  box-shadow: 0 0.35rem 1rem rgba(31, 31, 31, 0.14);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ll-pub-section.ll-accent-red.ll-background-light-blue
+  .field--name-field-p-ll-pub-pars.field__items > .field__item:has(.ll-image-w-title):hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.7rem 1.4rem rgba(31, 31, 31, 0.2);
+}
+
+.ll-pub-section.ll-accent-red.ll-background-light-blue .ll-image-w-title {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+}
+
+.ll-pub-section.ll-accent-red.ll-background-light-blue .ll-image-w-title > .field--name-field-p-side-image {
+  min-width: 0;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: #1f1f1f;
+}
+
+.ll-pub-section.ll-accent-red.ll-background-light-blue .ll-image-w-title > .field--name-field-p-side-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.ll-pub-section.ll-accent-red.ll-background-light-blue
+  .field--name-field-p-ll-pub-pars.field__items > .field__item:has(.ll-image-w-title):hover img {
+  transform: scale(1.04);
+}
+
+.ll-pub-section.ll-accent-red.ll-background-light-blue .ll-image-w-title .ll-text-side {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  margin: 0;
+  padding: 1rem 1.75rem 1.5rem;
+  color: #1f1f1f;
+}
+
+.ll-pub-section.ll-accent-red.ll-background-light-blue .ll-image-w-title .ll-text-side h4 {
+  margin: 0 0 0.8rem;
+  color: #1f1f1f;
+  font-size: clamp(1.15rem, 1.6vw, 1.55rem);
+  line-height: 1.15;
+}
+
+/* The Life cards use h5 headings. Reset the browser's large default h5
+   margins; otherwise changing h4 to h5 creates an artificial gap below the
+   image. */
+.ll-pub-section.ll-accent-red.ll-background-light-blue .ll-image-w-title .ll-text-side h5 {
+  margin: 0;
+  color: #1f1f1f;
+  font-size: clamp(1.15rem, 1.6vw, 1.55rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.ll-pub-section.ll-accent-red.ll-background-light-blue .ll-image-w-title .ll-text-side p {
+  margin: 0;
+  color: #4a4a4a;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .ll-pub-section.ll-accent-red.ll-background-light-blue .field--name-field-p-ll-pub-pars.field__items {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .ll-pub-section.ll-accent-red.ll-background-light-blue .field--name-field-p-ll-pub-pars.field__items {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .ll-pub-section.ll-accent-red.ll-background-light-blue .ll-image-w-title .ll-text-side {
+    padding: 1.25rem;
+  }
+}

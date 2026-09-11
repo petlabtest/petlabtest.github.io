@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="apple-touch-icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="manifest" href="../assets/data/favicons/site.webmanifest">
+  <link rel="shortcut icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1" type="image/png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PETLab Main Content Style Atlas | Digital PET Laboratory</title>
+  <style>
+    :root { --ink:#122c3b; --blue:#0d558c; --navy:#123c54; --orange:#f15a38; --mist:#edf3f5; --line:#cfdbdf; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:#f5f7f7; font-family:Arial, Helvetica, sans-serif; }
+    button { font:inherit; }
+    .atlas-header { padding:64px max(32px, calc((100% - 1180px) / 2)); background:var(--navy); color:#fff; }
+    .atlas-kicker { margin:0 0 12px; color:#8cd1f4; font-size:13px; font-weight:700; letter-spacing:1.4px; text-transform:uppercase; }
+    h1 { max-width:850px; margin:0; font-size:clamp(38px, 5vw, 68px); line-height:1; letter-spacing:0; }
+    .atlas-header p { max-width:720px; margin:20px 0 0; color:#dceaf0; font-size:18px; line-height:1.55; }
+    .atlas-tools { position:sticky; top:0; z-index:5; display:flex; align-items:center; gap:10px; min-height:68px; padding:12px max(32px, calc((100% - 1180px) / 2)); background:rgba(255,255,255,.97); border-bottom:1px solid var(--line); backdrop-filter:blur(8px); }
+    .atlas-tools span { margin-right:8px; font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; }
+    .atlas-filter { padding:8px 12px; border:1px solid #b8c6cc; border-radius:0; background:#fff; color:#244759; cursor:pointer; font-size:13px; font-weight:700; }
+    .atlas-filter[aria-pressed="true"] { border-color:var(--blue); background:var(--blue); color:#fff; }
+    .atlas { width:min(1180px, calc(100% - 64px)); margin:52px auto 100px; }
+    .atlas-group { margin:0 0 70px; }
+    .atlas-group__heading { display:flex; align-items:baseline; justify-content:space-between; gap:24px; margin:0 0 22px; padding-bottom:14px; border-bottom:2px solid var(--navy); }
+    .atlas-group__heading h2 { margin:0; font-size:26px; line-height:1; }
+    .atlas-group__heading p { margin:0; color:#57717d; font-size:14px; }
+    .style-card { overflow:hidden; margin:0 0 28px; border:1px solid var(--line); background:#fff; box-shadow:0 9px 25px rgba(15,49,65,.06); }
+    .style-card__meta { display:grid; grid-template-columns:minmax(0, 1fr) auto; gap:24px; padding:18px 22px; border-bottom:1px solid var(--line); }
+    .style-card__meta h3 { margin:0 0 5px; font-size:18px; }
+    .style-card__meta p { margin:0; color:#5b707b; font-size:14px; line-height:1.45; }
+    .style-card__source { align-self:center; color:var(--blue); font-size:13px; font-weight:700; text-align:right; text-decoration:none; }
+    .style-card__source:hover { text-decoration:underline; }
+    .style-card__sample { min-height:270px; overflow:hidden; }
+    .eyebrow { font-size:12px; font-weight:700; letter-spacing:1.1px; text-transform:uppercase; }
+    .sample-hero { position:relative; display:flex; align-items:end; min-height:390px; padding:42px; color:#fff; background:linear-gradient(90deg, rgba(5,35,57,.86), rgba(5,35,57,.15)), url('../assets/pic/School/jianzhu28.jpg') center/cover; }
+    .sample-hero h4 { max-width:660px; margin:0; font-size:clamp(34px,5vw,65px); line-height:1; }
+    .sample-hero p { max-width:560px; margin:16px 0 0; font-size:17px; line-height:1.5; }
+    .sample-slope { position:relative; min-height:310px; padding:58px 12%; overflow:hidden; background:var(--blue); color:#fff; }
+    .sample-slope::after { position:absolute; right:-4%; bottom:-62px; left:-4%; height:130px; transform:rotate(-3deg); background:#fff; content:""; }
+    .sample-slope h4 { max-width:680px; margin:0; font-size:46px; line-height:1.03; }
+    .sample-slope p { max-width:650px; margin:18px 0 0; color:#e0edf2; font-size:17px; line-height:1.55; }
+    .sample-rdhero { display:grid; grid-template-columns:1fr .96fr; min-height:330px; background:#e7eff2; }
+    .sample-rdhero__title { display:flex; flex-direction:column; justify-content:center; padding:48px; background:#fff; }
+    .sample-rdhero__title h4 { margin:0; color:#102f43; font-size:46px; line-height:1.02; }
+    .sample-rdhero__title p { max-width:420px; margin:18px 0 0; color:#536e7b; font-size:16px; line-height:1.6; }
+    .sample-rdhero__links { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:#fff; }
+    .sample-rdhero__links span { display:flex; align-items:end; min-height:150px; padding:22px; background:#0d558c; color:#fff; font-size:20px; font-weight:700; line-height:1.15; }
+    .sample-rdhero__links span:nth-child(2) { background:#173b50; } .sample-rdhero__links span:nth-child(3) { background:#1d6d9d; } .sample-rdhero__links span:nth-child(4) { background:#f15a38; }
+    .sample-split { display:grid; grid-template-columns:1.15fr .85fr; min-height:330px; }
+    .sample-split img { width:100%; height:100%; object-fit:cover; }
+    .sample-split__copy { display:flex; flex-direction:column; justify-content:center; padding:46px; background:#eaf0f2; }
+    .sample-split__copy h4 { margin:0 0 16px; font-size:32px; line-height:1.08; }
+    .sample-split__copy p { margin:0; font-size:16px; line-height:1.65; }
+    .sample-overlap { position:relative; display:grid; grid-template-columns:1.25fr .75fr; align-items:center; min-height:360px; padding:32px 7%; background:#eef2f3; }
+    .sample-overlap img { width:100%; height:290px; object-fit:cover; }
+    .sample-overlap__copy { z-index:1; margin-left:-54px; padding:42px; background:#2c3540; color:#fff; }
+    .sample-overlap__copy h4 { margin:0 0 16px; font-size:29px; }
+    .sample-overlap__copy p { margin:0; font-size:16px; line-height:1.65; }
+    .sample-grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; padding:6px; background:#fff; }
+    .sample-grid__item { position:relative; display:flex; align-items:center; justify-content:center; min-height:190px; overflow:hidden; color:#fff; text-align:center; }
+    .sample-grid__item::after { position:absolute; inset:0; background:rgba(9,59,101,.7); content:""; }
+    .sample-grid__item:nth-child(2)::after { background:rgba(20,36,48,.75); }
+    .sample-grid__item:nth-child(3)::after { background:rgba(20,77,125,.7); }
+    .sample-grid__item:nth-child(4)::after { background:rgba(52,36,41,.7); }
+    .sample-grid__item img { position:absolute; width:100%; height:100%; object-fit:cover; }
+    .sample-grid__item span { z-index:1; padding:20px; font-size:23px; font-weight:700; line-height:1.13; }
+    .sample-news { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; padding:36px; }
+    .sample-news article { border-top:6px solid var(--blue); background:#f0f4f5; }
+    .sample-news img { display:block; width:100%; height:150px; object-fit:cover; }
+    .sample-news__copy { padding:20px; }
+    .sample-news time { color:var(--blue); font-size:12px; font-weight:700; letter-spacing:.8px; }
+    .sample-news h4 { margin:10px 0; font-size:23px; line-height:1.15; }
+    .sample-news p { margin:0; font-size:14px; line-height:1.55; }
+    .sample-lab-carousel { display:grid; grid-template-columns:1.08fr .92fr; min-height:340px; background:#0f3c58; color:#fff; }
+    .sample-lab-carousel__media { position:relative; overflow:hidden; } .sample-lab-carousel__media img { width:100%; height:100%; object-fit:cover; }
+    .sample-lab-carousel__media::after { position:absolute; inset:0; background:linear-gradient(90deg,transparent,rgba(5,38,58,.42)); content:""; }
+    .sample-lab-carousel__copy { display:flex; flex-direction:column; justify-content:center; padding:48px; }
+    .sample-lab-carousel__copy h4 { margin:0 0 16px; font-size:34px; line-height:1.05; } .sample-lab-carousel__copy p { margin:0 0 24px; color:#dbeaf1; font-size:16px; line-height:1.6; }
+    .sample-lab-carousel__pager { display:flex; gap:9px; margin-top:auto; } .sample-lab-carousel__pager i { width:9px; height:9px; border-radius:50%; background:#7fa5bb; } .sample-lab-carousel__pager i:first-child { background:#f15a38; }
+    .sample-masonry { display:grid; grid-template-columns:1.15fr .85fr .85fr; grid-template-rows:170px 170px; gap:8px; padding:8px; background:#e8eeef; }
+    .sample-masonry figure { position:relative; display:flex; align-items:end; min-width:0; margin:0; overflow:hidden; background:#123c54; }
+    .sample-masonry figure:first-child { grid-row:span 2; }
+    .sample-masonry figure:last-child { grid-column:span 2; }
+    .sample-masonry img { width:100%; height:100%; object-fit:cover; opacity:.72; }
+    .sample-masonry figcaption { position:absolute; right:0; bottom:0; left:0; padding:16px; color:#fff; font-size:19px; font-weight:700; background:linear-gradient(transparent,rgba(0,0,0,.75)); }
+    .sample-timeline { position:relative; display:flex; flex-direction:column; gap:0; padding:42px 11%; background:#f7fafb; }
+    .sample-timeline::before { position:absolute; top:34px; bottom:34px; left:50%; width:2px; background:#7fa1b5; content:""; }
+    .timeline-row { position:relative; display:grid; grid-template-columns:1fr 82px 1fr; align-items:center; min-height:145px; }
+    .timeline-year { grid-column:2; z-index:1; width:58px; height:58px; margin:auto; padding-top:18px; border:3px solid var(--blue); border-radius:50%; background:#fff; color:var(--blue); font-size:14px; font-weight:700; text-align:center; }
+    .timeline-card { grid-column:1; padding:21px 24px; background:#fff; border-top:4px solid var(--blue); box-shadow:0 5px 16px rgba(14,48,63,.08); }
+    .timeline-row:nth-child(odd) .timeline-card { grid-column:3; }
+    .timeline-card strong { display:block; margin-bottom:7px; font-size:18px; }
+    .timeline-card span { color:#526b78; font-size:14px; line-height:1.45; }
+    .sample-people { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; padding:36px; background:#eaf0f2; }
+    .person-card { background:#fff; }
+    .person-card img { display:block; width:100%; height:190px; object-fit:cover; filter:saturate(.7); }
+    .person-card div { padding:16px; border-bottom:5px solid var(--orange); }
+    .person-card strong { display:block; font-size:19px; }
+    .person-card span { display:block; margin-top:6px; color:#58707b; font-size:13px; }
+    .sample-publications { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; padding:36px; background:#fff; }
+    .publication { min-height:205px; padding:24px; border:1px solid #ccd7dc; border-top:7px solid #123c54; }
+    .publication small { color:var(--blue); font-weight:700; letter-spacing:.8px; }
+    .publication h4 { margin:14px 0; font-size:21px; line-height:1.2; }
+    .publication a { color:var(--blue); font-size:14px; font-weight:700; text-decoration:none; }
+    .sample-impact { display:grid; grid-template-columns:repeat(4,1fr); background:#123c54; color:#fff; }
+    .impact-item { min-height:220px; padding:36px; border-right:1px solid rgba(255,255,255,.3); }
+    .impact-item:last-child { border:0; }
+    .impact-item strong { display:block; color:#81d0f4; font-size:48px; line-height:1; }
+    .impact-item span { display:block; margin-top:14px; font-size:17px; line-height:1.35; }
+    .sample-filter { display:grid; grid-template-columns:245px 1fr; min-height:290px; background:#f2f5f6; }
+    .filter-panel { padding:30px; background:#173b50; color:#fff; }
+    .filter-panel strong { display:block; margin-bottom:20px; font-size:21px; }
+    .filter-option { display:block; padding:12px 0; border-bottom:1px solid rgba(255,255,255,.25); color:#d9ebf3; font-size:14px; }
+    .result-panel { padding:30px 36px; }
+    .result-panel article { display:grid; grid-template-columns:110px 1fr; gap:18px; padding:16px 0; border-bottom:1px solid #c9d5d9; }
+    .result-panel time { color:var(--orange); font-size:18px; font-weight:700; }
+    .result-panel strong { display:block; font-size:19px; }
+    .result-panel span { display:block; margin-top:6px; color:#5b707b; font-size:14px; }
+    .sample-contact { display:grid; grid-template-columns:.8fr 1.2fr; min-height:300px; }
+    .sample-contact__lead { padding:44px; background:var(--blue); color:#fff; }
+    .sample-contact__lead h4 { margin:0; font-size:38px; line-height:1.05; }
+    .sample-contact__lead p { margin:16px 0 0; color:#e2f0f5; line-height:1.55; }
+    .sample-contact form { display:grid; grid-template-columns:1fr 1fr; gap:14px; padding:42px; background:#eaf0f2; }
+    .sample-contact input, .sample-contact textarea { width:100%; padding:12px 0; border:0; border-bottom:1px solid #768f9b; background:transparent; color:#16384f; font:inherit; }
+    .sample-contact textarea { grid-column:span 2; height:58px; resize:none; }
+    .sample-contact button { width:max-content; padding:12px 20px; border:0; background:var(--orange); color:#fff; font-weight:700; }
+    .sample-alert { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:22px; min-height:96px; padding:20px 42px; border-left:9px solid var(--orange); background:#173b50; color:#fff; }
+    .sample-alert strong { color:#8ed5f4; font-size:13px; letter-spacing:1px; text-transform:uppercase; } .sample-alert span { font-size:17px; line-height:1.4; } .sample-alert a { color:#fff; font-size:14px; font-weight:700; text-decoration:none; white-space:nowrap; }
+    .style-card[hidden] { display:none; }
+    @media (max-width:760px) {
+      .atlas-header { padding:46px 24px; } .atlas-tools { overflow:auto; padding:12px 16px; } .atlas-tools span { display:none; } .atlas { width:calc(100% - 32px); margin-top:32px; }
+      .style-card__meta { grid-template-columns:1fr; gap:8px; } .style-card__source { text-align:left; } .sample-hero,.sample-slope { padding:30px 24px; min-height:300px; } .sample-slope h4 { font-size:36px; }
+      .sample-split,.sample-overlap,.sample-filter,.sample-contact,.sample-rdhero,.sample-lab-carousel { grid-template-columns:1fr; } .sample-split img { min-height:220px; } .sample-overlap { padding:24px; } .sample-overlap__copy { margin:-36px 0 0 26px; } .sample-grid,.sample-people,.sample-impact { grid-template-columns:repeat(2,1fr); } .sample-news,.sample-publications { grid-template-columns:1fr; } .sample-masonry { grid-template-columns:1fr 1fr; } .sample-masonry figure:first-child { grid-column:span 2; grid-row:auto; } .sample-masonry figure:last-child { grid-column:span 2; } .sample-rdhero__title,.sample-lab-carousel__copy { padding:30px 26px; } .sample-rdhero__links span { min-height:120px; } .sample-alert { grid-template-columns:1fr; gap:8px; padding:24px; }
+      .sample-timeline { padding:26px 20px 26px 58px; } .sample-timeline::before { left:29px; } .timeline-row { display:block; min-height:0; margin:0 0 18px; } .timeline-year { position:absolute; top:18px; left:-58px; } .timeline-card,.timeline-row:nth-child(odd) .timeline-card { grid-column:auto; } .sample-contact form { padding:30px; } .sample-contact textarea { grid-column:auto; }
+    }
+  </style>
+</head>
+<body>
+  <header class="atlas-header">
+    <p class="atlas-kicker">Website component reference</p>
+    <h1>Main Content Style Atlas</h1>
+    <p>A visual index of the distinct layout patterns used across PETLab website main content. Repeated plain-text treatments are intentionally grouped rather than duplicated.</p>
+  </header>
+  <nav class="atlas-tools" aria-label="Style categories">
+    <span>Show</span><button class="atlas-filter" aria-pressed="true" data-filter="all">All</button><button class="atlas-filter" aria-pressed="false" data-filter="hero">Hero &amp; framing</button><button class="atlas-filter" aria-pressed="false" data-filter="editorial">Editorial content</button><button class="atlas-filter" aria-pressed="false" data-filter="collections">Collections</button><button class="atlas-filter" aria-pressed="false" data-filter="data">Data &amp; tools</button>
+  </nav>
+  <main class="atlas">
+    <section class="atlas-group" data-group="hero">
+      <div class="atlas-group__heading"><h2>Hero &amp; Framing</h2><p>High-level entry points and transition bands.</p></div>
+      <article class="style-card" data-style="hero"><div class="style-card__meta"><div><h3>Immersive Image Hero</h3><p>Full-bleed image, dark directional overlay, and bottom-aligned heading.</p></div><a class="style-card__source" href="../index.html">Source: index.html</a></div><div class="style-card__sample sample-hero"><div><span class="eyebrow">Digital PET Laboratory</span><h4>Research that makes the invisible visible</h4><p>A page-opening pattern for broad research areas, campaigns, and institutional storytelling.</p></div></div></article>
+      <article class="style-card" data-style="hero"><div class="style-card__meta"><div><h3>Sloped Full-Width Statement</h3><p>Branded color field with a diagonal exit into the following section.</p></div><a class="style-card__source" href="../About/About-about-en.html">Source: About-about-en.html</a></div><div class="style-card__sample sample-slope"><span class="eyebrow">Our mission</span><h4>Origin of all-digital PET</h4><p>Use this for a concise institutional proposition before transitioning into detailed white-background content.</p></div></article>
+      <article class="style-card" data-style="hero"><div class="style-card__meta"><div><h3>Research-Area Navigation Hero</h3><p>Lead proposition paired with a compact, color-coded entry grid for research groups.</p></div><a class="style-card__source" href="../Research/Research-ov-en.html">Source: Research-ov-en.html, p-rdhero</a></div><div class="style-card__sample sample-rdhero"><div class="sample-rdhero__title"><span class="eyebrow">Research</span><h4>Explore the research landscape</h4><p>Combines page orientation with immediate routes into a small set of major research areas.</p></div><div class="sample-rdhero__links"><span>Discovery Science</span><span>Engineering Systems</span><span>Clinical Translation</span><span>Research Platforms</span></div></div></article>
+    </section>
+
+    <section class="atlas-group" data-group="editorial">
+      <div class="atlas-group__heading"><h2>Editorial Content</h2><p>Structured narrative sections that combine imagery and explanatory copy.</p></div>
+      <article class="style-card" data-style="editorial"><div class="style-card__meta"><div><h3>Balanced Split Image and Copy</h3><p>Stable two-column composition for facilities, platforms, and explanatory sections.</p></div><a class="style-card__source" href="../Research/Research-ov-en.html">Source: Research-ov-en.html, p-twoone</a></div><div class="style-card__sample sample-split"><img src="../assets/pic/Research/tech2/well.jpg" alt="Instrument detail"><div class="sample-split__copy"><span class="eyebrow">Platform</span><h4>Designed for measurable progress</h4><p>A calm, legible layout for content where the image and body text have equal importance.</p></div></div></article>
+      <article class="style-card" data-style="editorial"><div class="style-card__meta"><div><h3>Offset Image with Editorial Overlay</h3><p>Image-led narrative with a text panel that crosses the image boundary.</p></div><a class="style-card__source" href="../Research/Research-Tech-Chips-en.html">Source: Research-Tech-Chips-en, application concept</a></div><div class="style-card__sample sample-overlap"><img src="../assets/pic/Research/tech2/sky.jpg" alt="Satellite in orbit"><div class="sample-overlap__copy"><h4>Remote Sensing Satellites</h4><p>The overlapped panel strengthens hierarchy and works well for a small number of high-value use cases.</p></div></div></article>
+    </section>
+
+    <section class="atlas-group" data-group="collections">
+      <div class="atlas-group__heading"><h2>Collections &amp; Discoverability</h2><p>Repeated content cards for projects, news, people, and publications.</p></div>
+      <article class="style-card" data-style="collections"><div class="style-card__meta"><div><h3>Image Overlay Project Grid</h3><p>Four-up visual navigation, using transparent color overlays and centered white labels.</p></div><a class="style-card__source" href="../Research/Research-Tech-Detectors-en.html">Source: Research-Tech-Detectors-en, p-project-carousel</a></div><div class="style-card__sample sample-grid"><div class="sample-grid__item"><img src="../assets/pic/Research/tech2/4.jpg" alt="Detector"><span>Photon Counting CT</span></div><div class="sample-grid__item"><img src="../assets/pic/Research/tech2/sky.jpg" alt="Sky"><span>Lightning Detection</span></div><div class="sample-grid__item"><img src="../assets/pic/Research/tech2/m1.jpg" alt="Laboratory"><span>Neutron Diagnostics</span></div><div class="sample-grid__item"><img src="../assets/pic/Research/tech2/ocean.jpg" alt="Ocean"><span>Underwater Imaging</span></div></div></article>
+      <article class="style-card" data-style="collections"><div class="style-card__meta"><div><h3>Laboratory Image Carousel</h3><p>One focused image paired with concise supporting copy and explicit slide state.</p></div><a class="style-card__source" href="../Research/Research-Medical-en.html">Source: Research-Medical-en.html, p-lab-carousel</a></div><div class="style-card__sample sample-lab-carousel"><div class="sample-lab-carousel__media"><img src="../assets/pic/Research/tech2/m1.jpg" alt="Laboratory platform"></div><div class="sample-lab-carousel__copy"><span class="eyebrow">Laboratory platform</span><h4>One instrument, many measurements</h4><p>Use for image-led content where a carousel's focus and compact copy support the same story.</p><div class="sample-lab-carousel__pager" aria-label="Carousel indicators"><i></i><i></i><i></i></div></div></div></article>
+      <article class="style-card" data-style="collections"><div class="style-card__meta"><div><h3>Three-Up News Cards</h3><p>Equal-width cards with image, date, headline, and compact synopsis.</p></div><a class="style-card__source" href="../Research/Research-Medical-en.html">Source: Research-Medical-en.html, p-news3up</a></div><div class="style-card__sample sample-news"><article><img src="../assets/pic/Research/tech2/m1.jpg" alt="Lab"><div class="sample-news__copy"><time>06.18.2026</time><h4>New detection methods extend reach</h4><p>Short editorial copy supports fast scanning.</p></div></article><article><img src="../assets/pic/Research/tech2/sky.jpg" alt="Satellite"><div class="sample-news__copy"><time>05.23.2026</time><h4>Data platform reaches orbit</h4><p>Clear hierarchy keeps the grid useful at a glance.</p></div></article><article><img src="../assets/pic/Research/tech2/ocean.jpg" alt="Ocean"><div class="sample-news__copy"><time>04.10.2026</time><h4>Optical links under water</h4><p>Use for a curated latest-news section.</p></div></article></div></article>
+      <article class="style-card" data-style="collections"><div class="style-card__meta"><div><h3>Asymmetric Masonry Feature Grid</h3><p>Mixed tile spans, image-led captions, and a more editorial browsing rhythm.</p></div><a class="style-card__source" href="../Capabilities/Capabilities-ov-en.html">Source: Capabilities overview, p-masonry-facility</a></div><div class="style-card__sample sample-masonry"><figure><img src="../assets/pic/School/jianzhu28.jpg" alt="Building"><figcaption>Integrated facilities</figcaption></figure><figure><img src="../assets/pic/Research/tech2/m1.jpg" alt="Lab"><figcaption>Research instruments</figcaption></figure><figure><img src="../assets/pic/Research/tech2/sky.jpg" alt="Sky"><figcaption>Application platforms</figcaption></figure></div></article>
+      <article class="style-card" data-style="collections"><div class="style-card__meta"><div><h3>People Profile Grid</h3><p>Portrait-led staff cards with name, role, and an accent footer.</p></div><a class="style-card__source" href="../People/People-ov-en.html">Source: People overview, p-masonry-staff</a></div><div class="style-card__sample sample-people"><div class="person-card"><img src="../assets/pic/Research/tech2/m1.jpg" alt="Researcher"><div><strong>Research Lead</strong><span>Detector Systems</span></div></div><div class="person-card"><img src="../assets/pic/Research/tech2/4.jpg" alt="Researcher"><div><strong>Principal Engineer</strong><span>Instrumentation</span></div></div><div class="person-card"><img src="../assets/pic/Research/tech2/sky.jpg" alt="Researcher"><div><strong>Faculty Partner</strong><span>Biomedical Imaging</span></div></div><div class="person-card"><img src="../assets/pic/Research/tech2/well.jpg" alt="Researcher"><div><strong>Research Fellow</strong><span>Data Science</span></div></div></div></article>
+      <article class="style-card" data-style="collections"><div class="style-card__meta"><div><h3>Publication Reference Cards</h3><p>Text-forward three-column set for papers, reports, and formal outputs.</p></div><a class="style-card__source" href="../Research/Research-Publication-en.html">Source: Research-Publication-en, p-masonry-pub</a></div><div class="style-card__sample sample-publications"><article class="publication"><small>JOURNAL ARTICLE</small><h4>High-resolution temporal imaging with digital detectors</h4><a href="#">Read publication</a></article><article class="publication"><small>TECHNICAL REPORT</small><h4>Platform design for multi-channel data acquisition</h4><a href="#">Read report</a></article><article class="publication"><small>CONFERENCE PAPER</small><h4>New approaches to weak-signal reconstruction</h4><a href="#">Read paper</a></article></div></article>
+    </section>
+
+    <section class="atlas-group" data-group="data">
+      <div class="atlas-group__heading"><h2>Data, Progress &amp; Action</h2><p>Patterns for chronological information, metrics, discovery tools, and response.</p></div>
+      <article class="style-card" data-style="data"><div class="style-card__meta"><div><h3>Alternating Development Timeline</h3><p>Year markers on a central rule, with milestones alternating left and right.</p></div><a class="style-card__source" href="../Research/Research-Tech-Chips-en.html">Source: Research-Tech-Chips-en, chip-progress-timeline</a></div><div class="style-card__sample sample-timeline"><div class="timeline-row"><div class="timeline-card"><strong>Initial Prototype</strong><span>First standardized device architecture established.</span></div><time class="timeline-year">2017</time></div><div class="timeline-row"><div class="timeline-card"><strong>Efficiency Milestone</strong><span>Performance benchmark achieved in testing.</span></div><time class="timeline-year">2019</time></div><div class="timeline-row"><div class="timeline-card"><strong>Digital Platform</strong><span>Core technologies verified in a new prototype.</span></div><time class="timeline-year">2022</time></div></div></article>
+      <article class="style-card" data-style="data"><div class="style-card__meta"><div><h3>Impact Metric Band</h3><p>Large numerals in a high-contrast band for quantified institutional outcomes.</p></div><a class="style-card__source" href="../People/People-Life-en.html">Source: People-Life-en, p-impact-interactive</a></div><div class="style-card__sample sample-impact"><div class="impact-item"><strong>25+</strong><span>research programs</span></div><div class="impact-item"><strong>80</strong><span>active collaborators</span></div><div class="impact-item"><strong>12</strong><span>shared platforms</span></div><div class="impact-item"><strong>1M+</strong><span>measurements analyzed</span></div></div></article>
+      <article class="style-card" data-style="data"><div class="style-card__meta"><div><h3>Filter and Result Tool</h3><p>Persistent category filter beside a clean, date-led result list.</p></div><a class="style-card__source" href="../Research/Research-Project-en.html">Source: Research project listing, p-rdtool / p-filter</a></div><div class="style-card__sample sample-filter"><aside class="filter-panel"><strong>Explore projects</strong><span class="filter-option">All programs</span><span class="filter-option">Detector technology</span><span class="filter-option">Clinical systems</span><span class="filter-option">Data platforms</span></aside><div class="result-panel"><article><time>2026</time><div><strong>Digital imaging systems</strong><span>Platform research and application validation.</span></div></article><article><time>2025</time><div><strong>Advanced detector architectures</strong><span>New approaches to timing and spatial resolution.</span></div></article><article><time>2024</time><div><strong>Biomedical data methods</strong><span>Algorithms for high-throughput studies.</span></div></article></div></div></article>
+      <article class="style-card" data-style="data"><div class="style-card__meta"><div><h3>Contact Callout with Form</h3><p>Strong call-to-action panel paired with a restrained inquiry form.</p></div><a class="style-card__source" href="../Engage/Engage-ov-en.html">Source: Engage-ov-en, p-contact-box</a></div><div class="style-card__sample sample-contact"><div class="sample-contact__lead"><span class="eyebrow">Engage with PETLab</span><h4>Start a research conversation</h4><p>Use at the end of high-intent content pages.</p></div><form><input aria-label="Name" placeholder="Name"><input aria-label="Email" placeholder="Email"><textarea aria-label="Message" placeholder="How can we collaborate?"></textarea><button type="button">Send inquiry</button></form></div></article>
+      <article class="style-card" data-style="data"><div class="style-card__meta"><div><h3>Announcement / Alert Strip</h3><p>Short high-contrast operational message with a direct action link.</p></div><a class="style-card__source" href="../Research/Research-Medical-en.html">Source: Research-Medical-en.html, p-alert</a></div><div class="style-card__sample sample-alert"><strong>Notice</strong><span>Applications for the shared imaging platform are now open for the autumn research cycle.</span><a href="#">View details &rarr;</a></div></article>
+    </section>
+  </main>
+  <script>
+    (function () {
+      var buttons = document.querySelectorAll('[data-filter]');
+      var groups = document.querySelectorAll('[data-group]');
+      buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          var filter = button.getAttribute('data-filter');
+          buttons.forEach(function (item) { item.setAttribute('aria-pressed', String(item === button)); });
+          groups.forEach(function (group) { group.hidden = filter !== 'all' && group.getAttribute('data-group') !== filter; });
+        });
+      });
+    }());
+  </script>
+</body>
+</html>

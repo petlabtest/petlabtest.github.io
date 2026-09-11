@@ -1,0 +1,3212 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <link rel="icon" type="image/png" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+    <link rel="apple-touch-icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+    <link rel="manifest" href="../assets/data/favicons/site.webmanifest">
+    <link rel="shortcut icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>学术影响 | 数字PET实验室</title>
+    <meta name="description"
+        content="Academic impact of the Digital PET Laboratory, from fundamental exploration to translational innovation.">
+    <link rel="stylesheet" href="../assets/css/site.css?v=20260908-wide1">
+    <script src="../assets/js/site.js?v=20260830-2" defer></script>
+    <style>
+        :root {
+            --impact-navy: #003c62;
+            --impact-blue: #0067a7;
+            --impact-cyan: #46c6d7;
+            --impact-paper: #f2f2f2;
+            --impact-dark: #2a2a2a;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--impact-paper);
+            color: #171717;
+            font-family: Arial, "Helvetica Neue", sans-serif;
+            line-height: 1.6;
+        }
+
+        [data-component="header"] {
+            position: relative;
+            z-index: 999;
+            overflow: visible;
+            transform: none;
+            isolation: auto;
+            opacity: 1;
+        }
+
+        [data-component="header"] .site-header {
+            position: relative;
+            z-index: 999;
+            overflow: visible;
+            transform: none;
+            isolation: auto;
+            opacity: 1;
+        }
+
+        @media (min-width:1101px) {
+
+            [data-component="header"] .header-shell,
+            [data-component="header"] .desktop-navigation,
+            [data-component="header"] .header-top-row,
+            [data-component="header"] .primary-nav,
+            [data-component="header"] .primary-nav>.nav-group {
+                overflow: visible;
+            }
+
+            [data-component="header"] .mega-menu {
+                position: absolute;
+                z-index: 1000;
+            }
+        }
+
+        .impact-hero {
+            position: relative;
+            min-height: min(78vh, 820px);
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            color: #fff;
+            background: #003360;
+        }
+
+        .impact-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, .76), transparent 54%), linear-gradient(90deg, rgba(0, 20, 34, .18), transparent 70%);
+        }
+
+        .impact-hero__inner {
+            position: relative;
+            z-index: 1;
+            width: min(calc(100% - 116px), 1280px);
+            margin: 0 auto;
+            padding: 0 18px 52px;
+        }
+
+        .impact-hero h1 {
+            margin: 0;
+            font-size: clamp(3rem, 6vw, 5.2rem);
+            line-height: 1;
+            font-weight: 600;
+            letter-spacing: .02em;
+        }
+
+        .impact-hero p {
+            max-width: 760px;
+            margin: 1.5rem 0 0;
+            color: #e3eef6;
+            font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+            line-height: 1.6;
+        }
+
+        /* Shared About-page hero styling. */
+        .about-hero-wrap {
+            position: relative;
+            min-height: min(78vh, 820px);
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            color: #fff;
+            background-color: #00305c;
+        }
+
+        .about-hero-wrap::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, .76), transparent 54%), linear-gradient(90deg, rgba(0, 20, 34, .18), transparent 70%);
+        }
+
+        .about-hero-inner {
+            position: relative;
+            z-index: 1;
+            width: min(calc(100% - 116px), 1280px);
+            margin: 0 auto;
+            padding-left: 18px;
+            padding-bottom: 52px;
+        }
+
+        .about-hero-title {
+            margin: 0;
+            font-size: clamp(3rem, 6vw, 5.2rem);
+            line-height: 1;
+            font-weight: 600;
+            letter-spacing: .02em;
+        }
+
+        @media (max-width: 1100px) {
+            .about-hero-wrap {
+                min-height: min(78vh, 820px);
+            }
+
+            .about-hero-inner {
+                width: calc(100% - 36px);
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        .impact-index {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: #fff;
+            border-bottom: 1px solid #d7dce0;
+        }
+
+        .impact-index__inner {
+            display: flex;
+            gap: 1.6rem;
+            overflow: auto;
+            padding: 1rem 0;
+        }
+
+        .impact-index a {
+            color: #42515d;
+            font-size: .8rem;
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .impact-index a:hover {
+            color: var(--impact-blue);
+        }
+
+        .impact-section {
+            position: relative;
+            padding: clamp(4rem, 7vw, 7rem) 0;
+            overflow: visible;
+        }
+
+        .impact-section img,
+        .contact-section img {
+            max-width: 100vw;
+        }
+
+        .about-section {
+            position: relative;
+            margin: 0;
+            overflow: visible;
+        }
+
+        .about-sec-white {
+            background: #fff;
+            color: #171717;
+        }
+
+        .about-sec-navy {
+            background: #003c62;
+            color: #fff;
+        }
+
+        .about-sec-blue {
+            background: #0067a7;
+            color: #fff;
+        }
+
+        .about-sec-gray {
+            background: #e4e4e4;
+            color: #171717;
+        }
+
+        .impact-shell {
+            width: min(calc(100% - 116px), 1280px);
+            margin: 0 auto;
+        }
+
+        .impact-section__heading {
+            margin: 0 0 3rem;
+            color: #171717;
+            font-size: clamp(2.4rem, 4.4vw, 4.6rem);
+            line-height: 1;
+            letter-spacing: -.035em;
+        }
+
+        .impact-section__lede {
+            max-width: 880px;
+            margin: 0 0 3rem;
+            color: #34414b;
+            font-size: 1.18rem;
+            line-height: 1.7;
+        }
+
+        .academic-section {
+            background: #fff;
+        }
+
+        .academic-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 3rem 2rem;
+        }
+
+        .academic-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-width: 0;
+        }
+
+        .academic-card img {
+            width: 100%;
+            height: 12rem;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            transition: transform .35s ease;
+        }
+
+        .academic-card:hover img {
+            transform: scale(1.025);
+        }
+
+        .academic-card h3 {
+            margin: 0 0 .5rem;
+            font-size: 1.35rem;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .impact-cta {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            margin-top: .5rem;
+            padding: .45rem 0 .45rem 1.1rem;
+            color: #171717;
+            font-size: .95rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: padding-left .2s ease;
+        }
+
+        .impact-cta::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 5px;
+            height: 1.3rem;
+            background: #f45a2b;
+            transform: translateY(-50%);
+            transition: width .2s ease;
+        }
+
+        .impact-cta::after {
+            content: "›";
+            margin-left: .45rem;
+            font-size: 1.35rem;
+            line-height: 1;
+        }
+
+        .impact-cta:hover {
+            padding-left: 1.45rem;
+        }
+
+        .impact-cta:hover::before {
+            width: 10px;
+        }
+
+        .ip-section {
+            color: #fff;
+            background: linear-gradient(90deg, #003c62 0 71%, #0067a7 71%);
+        }
+
+        .ip-section .impact-section__heading {
+            color: #fff;
+        }
+
+        .ip-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            aspect-ratio: 4/2;
+            background: var(--impact-dark);
+            color: #fff;
+        }
+
+        .ip-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-width: 0;
+            aspect-ratio: 1/1;
+            padding: 1rem;
+            text-align: center;
+            background: var(--impact-dark);
+        }
+
+        .ip-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 0;
+        }
+
+        .ip-item--light {
+            background: #c5d2db;
+            color: #333;
+        }
+
+        .ip-item--blue {
+            background: #0067a7;
+            color: #fff;
+        }
+
+        .ip-item strong {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 400;
+            line-height: 1.1;
+        }
+
+        .ip-item h3 {
+            margin: 0;
+            font-size: 1.15rem;
+            line-height: 1.35;
+        }
+
+        .ip-item p {
+            margin: .8rem 0 0;
+            font-size: .95rem;
+            line-height: 1.35;
+        }
+
+        .social-section {
+            color: #fff;
+            background: linear-gradient(90deg, #003c62 0 62%, #0067a7 62%);
+        }
+
+        .social-section .impact-section__heading {
+            color: #fff;
+        }
+
+        .social-feature {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 27rem;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .social-title h3 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.1;
+            font-weight: 400;
+        }
+
+        .social-title p {
+            margin: .7rem 0 0;
+            font-size: 1.2rem;
+        }
+
+        .social-cert {
+            min-height: 18rem;
+            background: #fff center/cover no-repeat;
+        }
+
+        .social-awards {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+            min-height: 10rem;
+            margin-top: 4rem;
+            padding-right: 9rem;
+        }
+
+        .social-awards img {
+            width: auto;
+            height: 8rem;
+            max-width: 15rem;
+            object-fit: cover;
+            background: #fff;
+            cursor: pointer;
+            transition: transform .2s ease;
+        }
+
+        .social-awards img:hover {
+            transform: translateY(-.35rem);
+        }
+
+        .award-button {
+            position: absolute;
+            top: 1.25rem;
+            width: 4rem;
+            height: 6rem;
+            border: 0;
+            color: #fff;
+            font-size: 3rem;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .award-button--next {
+            right: 0;
+            background: #0067a7;
+        }
+
+        .award-button--prev {
+            right: 4rem;
+            background: #ddd;
+            color: #222;
+        }
+
+        .media-section {
+            min-height: 37rem;
+            color: #fff;
+            background: #003c62;
+            overflow: hidden;
+        }
+
+        .media-section__title {
+            position: absolute;
+            left: max(32px, calc((100vw - min(calc(100vw - 116px), 1280px))/2));
+            top: 3rem;
+            z-index: 2;
+            color: #46c6d7;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 600;
+        }
+
+        .media-section__list {
+            position: absolute;
+            left: max(32px, calc((100vw - min(calc(100vw - 116px), 1280px))/2));
+            top: 12rem;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 1.35rem;
+        }
+
+        .media-section__image {
+            position: absolute;
+            left: 28%;
+            top: 3rem;
+            width: 67%;
+            height: 35rem;
+            object-fit: cover;
+            box-shadow: 0 .125rem .5rem rgba(0, 0, 0, .2);
+        }
+
+        .contact-section {
+            position: relative;
+            min-height: 28rem;
+            padding: 8rem 0 5rem;
+            background: #f2f2f2;
+            overflow: hidden;
+        }
+
+        .contact-section__inner {
+            position: relative;
+            width: min(calc(100% - 116px), 1280px);
+            min-height: 20rem;
+            margin: 0 auto;
+        }
+
+        .contact-section__image {
+            position: absolute;
+            left: 5%;
+            top: 0;
+            z-index: 1;
+            width: 50%;
+            height: 22rem;
+            object-fit: cover;
+        }
+
+        .contact-section__copy {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 60%;
+            min-height: 20rem;
+            padding: 2.5rem 3rem 2rem 35%;
+            color: #fff;
+            background: #0067a7;
+        }
+
+        .contact-section__copy h2 {
+            margin: 0 0 1rem;
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            line-height: 1.1;
+        }
+
+        .contact-section__copy p {
+            margin: 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .contact-section__copy .impact-cta {
+            margin-top: 1.5rem;
+            color: #fff;
+        }
+
+        @media (max-width:800px) {
+
+            .impact-hero__inner,
+            .impact-shell,
+            .contact-section__inner {
+                width: calc(100% - 36px);
+            }
+
+            .impact-hero {
+                min-height: 560px;
+            }
+
+            .impact-hero__inner {
+                padding: 0 0 3rem;
+            }
+
+            .academic-grid,
+            .ip-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .ip-grid {
+                aspect-ratio: auto;
+            }
+
+            .ip-item {
+                aspect-ratio: 1/1;
+            }
+
+            .social-feature {
+                grid-template-columns: 1fr;
+            }
+
+            .social-cert {
+                min-height: 16rem;
+            }
+
+            .social-awards {
+                padding-right: 0;
+                flex-wrap: wrap;
+            }
+
+            .award-button {
+                position: relative;
+                top: auto;
+                right: auto;
+            }
+
+            .media-section {
+                min-height: 42rem;
+            }
+
+            .media-section__title,
+            .media-section__list {
+                left: 18px;
+            }
+
+            .media-section__image {
+                left: 18px;
+                top: 19rem;
+                width: calc(100% - 36px);
+                height: 20rem;
+            }
+
+            .contact-section {
+                padding: 4rem 0;
+            }
+
+            .contact-section__inner {
+                min-height: 34rem;
+            }
+
+            .contact-section__image {
+                position: relative;
+                left: auto;
+                top: auto;
+                width: 100%;
+                height: 15rem;
+            }
+
+            .contact-section__copy {
+                position: relative;
+                width: 100%;
+                min-height: 19rem;
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width:560px) {
+
+            .academic-grid,
+            .ip-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ip-item {
+                aspect-ratio: 1/1;
+            }
+
+            .social-awards img {
+                max-width: calc(50% - .5rem);
+                height: auto;
+                aspect-ratio: 1.45/1;
+            }
+
+            .media-section__list {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (prefers-reduced-motion:reduce) {
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+
+        /* Chapter navigation styles. */
+        .page-impact #main-content>.mitll-ll-pub-nav-chapters {
+            width: 100%;
+            margin: 0;
+            padding: 30px;
+            box-sizing: border-box;
+            background: rgba(0, 25, 41, .95);
+            color: #fff;
+        }
+
+        .page-impact .mitll-ll-pub-nav-chapters-inner {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .page-impact .mitll-ll-pub-nav-chapters h3 {
+            margin: 0 0 40px;
+            color: #fff;
+            font-size: 30px;
+            line-height: 1.25;
+            text-transform: uppercase;
+        }
+
+        .page-impact .mitll-ll-pub-bottom-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .page-impact .mitll-ll-pub-bottom-nav>li {
+            position: relative;
+            flex: 0 0 100%;
+            min-width: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .page-impact .ll-section-nav {
+            position: relative;
+            display: block;
+            height: 100%;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .page-impact .ll-pub-bottom-nav-img {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            background: #00305c;
+        }
+
+        .page-impact .ll-pub-bottom-nav-img::after {
+            position: absolute;
+            inset: 0;
+            background: #008eff;
+            content: "";
+            opacity: .7;
+            transition: opacity .8s ease;
+        }
+
+        .page-impact .ll-pub-bottom-nav-img img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1.25s ease;
+        }
+
+        .page-impact .ll-nav-text-side {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .page-impact .ll-nav-title {
+            width: 100%;
+            margin: 0;
+            padding: 7px;
+            box-sizing: border-box;
+            color: #fff;
+            background: rgba(0, 48, 92, .7);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 38px;
+            line-height: 1.25;
+            font-weight: 700;
+        }
+
+        .page-impact .ll-current-chapter .ll-pub-bottom-nav-img::after,
+        .page-impact .ll-current-chapter .ll-nav-title {
+            background: rgba(255, 255, 255, .7);
+            color: #00305c;
+        }
+
+        .page-impact .ll-section-nav:hover .ll-pub-bottom-nav-img::after {
+            opacity: 0;
+        }
+
+        .page-impact .ll-section-nav:hover .ll-pub-bottom-nav-img img {
+            transform: scale(1.15);
+        }
+
+        .page-impact .ll-section-nav:hover .ll-nav-title {
+            padding-bottom: 15px;
+        }
+
+        @media (min-width: 700px) {
+            .page-impact #main-content>.mitll-ll-pub-nav-chapters {
+                padding: 45px 30px 50px;
+            }
+
+            .page-impact .mitll-ll-pub-bottom-nav>li {
+                flex-basis: calc(50% - 5px);
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .page-impact #main-content>.mitll-ll-pub-nav-chapters {
+                padding-top: 60px;
+                padding-bottom: 80px;
+            }
+
+            .page-impact .mitll-ll-pub-bottom-nav>li {
+                flex-basis: calc(20% - 8px);
+            }
+        }
+
+        /*
+         * Visual parity with Backup/About/about_impact.html.
+         * The original impact page uses the industry02 layout: the academic
+         * cards are a separate 68% grid, while the following three sections
+         * use a fixed 82vw canvas with deliberately positioned color planes.
+         * Keep these rules scoped to this page so the shared site styles are
+         * not changed for other About pages.
+         */
+        @media (min-width: 801px) {
+            html {
+                overflow-x: hidden;
+            }
+
+            .page-impact {
+                --theme-color1: #0f4c81;
+                --theme-color2: #343434;
+                overflow-x: hidden;
+            }
+
+            .page-impact #main-content>.academic-section {
+                width: 68vw;
+                max-width: none;
+                margin: 5vw auto 6vw;
+                padding: 0;
+                background: transparent;
+            }
+
+            .page-impact #main-content>.academic-section>.impact-shell {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+            }
+
+            .page-impact .academic-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 3vw 2vw;
+            }
+
+            .page-impact .academic-card img {
+                height: 12vw;
+                margin-bottom: 1vw;
+                border-radius: 6px;
+            }
+
+            .page-impact .academic-card h3 {
+                margin: 0 0 .5vw;
+                font-size: 1.5vw;
+                font-weight: 600;
+                line-height: 1.2;
+            }
+
+            .page-impact .academic-card .impact-cta {
+                margin-top: .5vw;
+                padding-top: .45vw;
+                padding-bottom: .45vw;
+                font-size: .95vw;
+                font-weight: 400;
+            }
+
+            .page-impact #main-content>.ip-section,
+            .page-impact #main-content>.social-section {
+                width: 82vw;
+                max-width: none;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 2vw 0;
+            }
+
+            .page-impact #main-content>.ip-section {
+                margin-top: 0;
+                margin-bottom: 0;
+                background: transparent;
+            }
+
+            .page-impact #main-content>.ip-section>div:first-child {
+                width: 71vw !important;
+                height: 28.8vw !important;
+                left: 0 !important;
+            }
+
+            .page-impact #main-content>.ip-section>div:nth-child(2) {
+                width: 29vw !important;
+                height: 28.8vw !important;
+                right: 0 !important;
+            }
+
+            .page-impact .ip-section>.impact-shell,
+            .page-impact .social-section>.impact-shell {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+            }
+
+            .page-impact .ip-section>.impact-shell>p,
+            .page-impact .social-section>.impact-shell>p {
+                margin-top: 0 !important;
+                color: #fff;
+                font-size: 2.5vw !important;
+                line-height: 1.2;
+            }
+
+            .page-impact .ip-section>.impact-shell>p {
+                margin-bottom: 2vw !important;
+            }
+
+            .page-impact .ip-grid {
+                width: 100%;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                aspect-ratio: 4 / 2;
+                background: #2a2a2a;
+            }
+
+            .page-impact .ip-item {
+                min-width: 0;
+                aspect-ratio: 1 / 1;
+                padding: 0;
+                font-size: 1.2vw;
+                background: #2a2a2a;
+            }
+
+            .page-impact .ip-item--light {
+                background: #c5d2db !important;
+                color: #333;
+            }
+
+            .page-impact .ip-item--blue {
+                background: #0067a7 !important;
+                color: #fff;
+            }
+
+            .page-impact .ip-item h3 {
+                margin: 0 0 .5vw;
+                font-size: 1.5em;
+                line-height: 1.2;
+            }
+
+            .page-impact .ip-item p {
+                margin: .8vw 0 0;
+                font-size: 1.1em;
+                line-height: 1.35;
+            }
+
+            .page-impact .ip-item strong {
+                font-size: 2.5em;
+                line-height: 1.1;
+                font-weight: 400;
+            }
+
+            .page-impact #main-content>.social-section {
+                margin-bottom: 4vw !important;
+                background: transparent;
+            }
+
+            .page-impact #main-content>.social-section>div:first-child {
+                width: 100vw !important;
+                height: 15.5vw !important;
+                right: -12vw !important;
+            }
+
+            .page-impact #main-content>.social-section>div:nth-child(2) {
+                width: 70vw !important;
+                height: 24vw !important;
+                left: -12vw !important;
+                top: 10vw !important;
+            }
+
+            .page-impact .social-section>.impact-shell>p {
+                margin-bottom: 6vw !important;
+            }
+
+            .page-impact .social-feature {
+                display: block;
+                position: relative;
+                min-height: 18vw;
+            }
+
+            .page-impact .social-title h3 {
+                margin: 0 0 .5vw;
+                font-size: 2.8vw;
+                line-height: 1.1;
+                font-weight: 400;
+            }
+
+            .page-impact .social-title p {
+                margin: 0;
+                min-height: 2vw;
+                font-size: 1.5vw !important;
+                line-height: 1.35;
+            }
+
+            .page-impact .social-cert {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 26.5vw;
+                height: 18vw;
+                min-height: 0;
+                background: #fff center / cover no-repeat;
+            }
+
+            .page-impact .social-awards {
+                position: relative;
+                display: block;
+                min-height: 8vw;
+                margin-top: 5vw;
+                padding: 0;
+            }
+
+            .page-impact .social-awards img {
+                display: inline-block;
+                width: auto;
+                height: 8vw;
+                max-width: none;
+                margin: .5vw;
+                object-fit: cover;
+            }
+
+            .page-impact .social-awards img:nth-of-type(1) {
+                width: 11.8vw;
+            }
+
+            .page-impact .social-awards img:nth-of-type(2) {
+                width: 10.5vw;
+            }
+
+            .page-impact .social-awards img:nth-of-type(3) {
+                width: 11.2vw;
+            }
+
+            .page-impact .social-awards img:nth-of-type(4) {
+                width: 14.7vw;
+            }
+
+            .page-impact .social-awards .award-button {
+                top: 1.25vw;
+                width: 4vw;
+                height: 6vw;
+            }
+
+            .page-impact .social-awards .award-button--next {
+                right: auto;
+                left: 74vw;
+                background: #003c62;
+            }
+
+            .page-impact .social-awards .award-button--prev {
+                right: auto;
+                left: 70vw;
+                background: #ddd;
+                color: #222;
+            }
+
+            .page-impact #main-content>.media-section {
+                width: 100%;
+                height: 37vw;
+                min-height: 0;
+                margin-top: 8vw;
+                padding: 0;
+                background: #0067a7;
+                overflow: hidden;
+            }
+
+            .page-impact .media-section__title {
+                left: 10vw;
+                top: -5vw;
+                color: #fff;
+                font-size: 2.5vw;
+                font-weight: 400;
+                line-height: 1.2;
+            }
+
+            .page-impact .media-section__list {
+                left: 10vw;
+                top: 12vw;
+                gap: 1.5vw;
+                font-size: 1.8vw;
+                line-height: 1.3;
+            }
+
+            .page-impact .media-section__image {
+                left: 30vw;
+                top: 3vw;
+                width: 67vw;
+                height: 35vw;
+                object-fit: cover;
+            }
+        }
+
+        @media (max-width: 800px) {
+
+            .page-impact #main-content>.academic-section,
+            .page-impact #main-content>.ip-section,
+            .page-impact #main-content>.social-section {
+                width: calc(100% - 36px);
+                max-width: none;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .page-impact #main-content>.ip-section,
+            .page-impact #main-content>.social-section {
+                padding: 2rem 0;
+                background: transparent;
+            }
+
+            .page-impact #main-content>.media-section {
+                height: 42rem;
+                min-height: 0;
+                margin-top: 4rem;
+            }
+        }
+
+        /* Layout parity for the four modules copied from Template-Impact.html. */
+        .page-impact #main-content>.industry02-section,
+        .page-impact #main-content>.media-section-new {
+            position: relative;
+            box-sizing: border-box;
+            overflow: visible;
+            z-index: 0;
+            isolation: isolate;
+        }
+
+        @media (min-width: 801px) {
+
+            .page-impact #main-content>.ip-section,
+            .page-impact #main-content>.social-section {
+                width: 82vw !important;
+                max-width: none !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                padding: 2vw 0 !important;
+                background: transparent !important;
+            }
+
+            .page-impact #main-content>.ip-section {
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
+            }
+
+            .page-impact #main-content>.ip-section>div:first-child {
+                width: 71vw !important;
+                height: 28.8vw !important;
+                left: 0 !important;
+                z-index: -1;
+            }
+
+            .page-impact #main-content>.ip-section>div:nth-child(2) {
+                width: 29vw !important;
+                height: 28.8vw !important;
+                right: 0 !important;
+                z-index: -1;
+            }
+
+            .page-impact #main-content>.ip-section>p,
+            .page-impact #main-content>.social-section>p {
+                margin-top: 0 !important;
+                color: #fff !important;
+                font-size: 2.5vw !important;
+                line-height: 1.2 !important;
+            }
+
+            .page-impact #main-content>.ip-section>p {
+                margin-bottom: 2vw !important;
+            }
+
+            .page-impact .ip-section .ip-grid {
+                width: 100% !important;
+                grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+                grid-auto-rows: 1fr;
+                aspect-ratio: 4 / 2 !important;
+                background: #2a2a2a !important;
+            }
+
+            .page-impact .ip-section .ip-item {
+                min-width: 0;
+                aspect-ratio: 1 / 1 !important;
+                padding: 0 !important;
+                font-size: 1.2vw !important;
+            }
+
+            .page-impact .ip-section .ip-item h3 {
+                margin: 0 0 .5vw !important;
+                padding-left: 2vw !important;
+                padding-right: 2vw !important;
+                font-size: 1.5em !important;
+                line-height: 1.2 !important;
+            }
+
+            .page-impact .ip-section .ip-item p {
+                margin: .8vw 0 0 !important;
+                padding-left: 2vw !important;
+                padding-right: 2vw !important;
+                font-size: 1.1em !important;
+                line-height: 1.35 !important;
+            }
+
+            .page-impact .ip-section .ip-china p {
+                margin-left: -1.1vw !important;
+            }
+
+            .page-impact .ip-section .ip-item span {
+                margin-top: 5vw !important;
+                min-height: 5vw;
+                padding-left: 2vw !important;
+                font-size: 2.5em !important;
+                line-height: 1.1;
+            }
+
+            .page-impact #main-content>.social-section {
+                margin-bottom: 4vw !important;
+            }
+
+            .page-impact #main-content>.social-section>div:first-child {
+                width: 100vw !important;
+                height: 15.5vw !important;
+                right: -12vw !important;
+                z-index: -1;
+            }
+
+            .page-impact #main-content>.social-section>div:nth-child(2) {
+                width: 70vw !important;
+                height: 24vw !important;
+                left: -12vw !important;
+                top: 10vw !important;
+                z-index: -1;
+            }
+
+            .page-impact #main-content>.social-section>p {
+                margin-bottom: 6vw !important;
+            }
+
+            .page-impact .social-title h2 {
+                width: 50vw;
+                min-height: 5vw;
+                margin: 0 0 .5vw !important;
+                font-size: 1.65vw !important;
+                line-height: 1.2;
+                font-weight: 400;
+            }
+
+            .page-impact .social-title p {
+                width: 55vw;
+                margin-top: 2vw !important;
+                min-height: 4vw !important;
+                font-size: 1.25vw !important;
+                line-height: 1.35;
+            }
+
+            .page-impact .social-cert {
+                position: absolute;
+                right: 0;
+                top: 6vw;
+                width: 26.5vw;
+                height: 18vw;
+                min-height: 0;
+            }
+
+            .page-impact .social-cert>div {
+                position: absolute !important;
+                inset: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                right: auto !important;
+                top: auto !important;
+            }
+
+            .page-impact .social-awards {
+                position: relative !important;
+                display: block !important;
+                min-height: 8vw;
+                margin-top: 5vw !important;
+                padding: 0 !important;
+            }
+
+            .page-impact .social-awards img {
+                display: inline-block;
+                height: 8vw !important;
+                max-width: none !important;
+                margin: .5vw !important;
+            }
+
+            .page-impact .social-awards img:nth-of-type(1) {
+                width: 11.8vw !important;
+            }
+
+            .page-impact .social-awards img:nth-of-type(2) {
+                width: 10.5vw !important;
+            }
+
+            .page-impact .social-awards img:nth-of-type(3) {
+                width: 11.2vw !important;
+            }
+
+            .page-impact .social-awards img:nth-of-type(4) {
+                width: 14.7vw !important;
+            }
+
+            .page-impact .social-awards .btn-right,
+            .page-impact .social-awards .btn-left {
+                top: 1.25vw !important;
+                width: 4vw !important;
+                height: 6vw !important;
+                line-height: 6vw !important;
+            }
+
+            .page-impact .social-awards .btn-right {
+                left: 74vw !important;
+            }
+
+            .page-impact .social-awards .btn-left {
+                left: 70vw !important;
+            }
+
+            .page-impact #main-content>.media-section-new {
+                width: 100% !important;
+                height: 37vw !important;
+                min-height: 0 !important;
+                margin-top: 8vw !important;
+                padding: 0 !important;
+                background: #0067a7 !important;
+                overflow: hidden !important;
+            }
+
+            .page-impact .media-section-new .media-title {
+                left: 10vw !important;
+                top: -5vw !important;
+            }
+
+            .page-impact .media-section-new .media-title h2 {
+                margin: 0 !important;
+                color: #0b62b3 !important;
+                font-size: 2.5vw !important;
+                font-weight: 400 !important;
+                line-height: 1.2;
+            }
+
+            .page-impact .media-section-new .media-vertical-texts {
+                position: absolute !important;
+                left: 8vw !important;
+                top: 8vw !important;
+                gap: 1.5vw !important;
+                width: 21vw !important;
+            }
+
+            .page-impact .media-section-new .media-vertical-texts p {
+                margin: 0 !important;
+                font-size: 1.35vw !important;
+                line-height: 1.4;
+            }
+
+            .page-impact .media-section-new .media-images-row {
+                left: 30vw !important;
+                top: 3vw !important;
+            }
+
+            .page-impact .media-section-new .media-images-row img {
+                left: 1.2vw !important;
+                top: -1.2vw !important;
+                width: 67vw !important;
+                height: 35vw !important;
+                object-fit: cover;
+            }
+        }
+
+        @media (max-width: 800px) {
+
+            .page-impact #main-content>.ip-section,
+            .page-impact #main-content>.social-section {
+                width: calc(100% - 36px) !important;
+                max-width: none !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                padding: 2rem 0 !important;
+            }
+
+            .page-impact #main-content>.ip-section>div:first-child,
+            .page-impact #main-content>.ip-section>div:nth-child(2),
+            .page-impact #main-content>.social-section>div:first-child,
+            .page-impact #main-content>.social-section>div:nth-child(2) {
+                z-index: -1;
+            }
+
+            .page-impact .ip-section .ip-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+                aspect-ratio: auto !important;
+            }
+
+            .page-impact .ip-section .ip-item {
+                aspect-ratio: 1 / 1 !important;
+            }
+
+            .page-impact .social-feature {
+                grid-template-columns: 1fr !important;
+            }
+
+            .page-impact .social-cert {
+                position: relative !important;
+                inset: auto !important;
+                width: 100% !important;
+                height: 16rem !important;
+            }
+
+            .page-impact .social-cert>div {
+                position: absolute !important;
+                inset: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+            }
+
+            .page-impact .social-awards {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                min-height: 0 !important;
+                margin-top: 2rem !important;
+            }
+
+            .page-impact .social-awards .btn-right,
+            .page-impact .social-awards .btn-left {
+                position: relative !important;
+                left: auto !important;
+                top: auto !important;
+            }
+
+            .page-impact #main-content>.media-section-new {
+                height: 42rem !important;
+                min-height: 0 !important;
+                margin-top: 4rem !important;
+            }
+
+            .page-impact .media-section-new .media-title {
+                left: 18px !important;
+                top: 2rem !important;
+            }
+
+            .page-impact .media-section-new .media-title h2 {
+                font-size: 2rem !important;
+            }
+
+            .page-impact .media-section-new .media-vertical-texts {
+                left: 18px !important;
+                top: 8rem !important;
+                width: calc(100% - 36px) !important;
+                gap: 1rem !important;
+            }
+
+            .page-impact .media-section-new .media-vertical-texts p {
+                font-size: 1.1rem !important;
+            }
+
+            .page-impact .media-section-new .media-images-row {
+                position: absolute !important;
+                left: 18px !important;
+                top: 19rem !important;
+                width: calc(100% - 36px) !important;
+            }
+
+            .page-impact .media-section-new .media-images-row img {
+                left: 0 !important;
+                top: 0 !important;
+                width: 100% !important;
+                height: 20rem !important;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .page-impact .ip-section .ip-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .page-impact .social-awards img {
+                max-width: calc(50% - 1rem) !important;
+                height: auto !important;
+            }
+        }
+
+        /* Match the copied Template-Impact modules while keeping the shared
+         * page root at 16px: source rem measurements become viewport units. */
+        @media (min-width: 801px) {
+
+            /* The source template lets the IP color planes use the viewport as
+             * their containing block. The generic page rule above made every
+             * industry section a positioned/isolation context, shifting those
+             * planes inward by the 82vw shell width. Keep the media module
+             * positioned, but restore the template behavior for these two. */
+            .page-impact #main-content>.ip-section {
+                position: static !important;
+                isolation: auto !important;
+                z-index: auto !important;
+            }
+
+            .page-impact #main-content>.social-section {
+                position: relative !important;
+                isolation: auto !important;
+                z-index: auto !important;
+            }
+
+            .page-impact #main-content>.ip-section>div:first-child,
+            .page-impact #main-content>.ip-section>div:nth-child(2),
+            .page-impact #main-content>.social-section>div:first-child,
+            .page-impact #main-content>.social-section>div:nth-child(2) {
+                z-index: -1 !important;
+            }
+
+            /* In this page the IP section is intentionally not a stacking
+             * context. Its viewport-wide color planes must sit above the
+             * page background, while the shell content stays above the planes. */
+            .page-impact #main-content>.ip-section>div:first-child,
+            .page-impact #main-content>.ip-section>div:nth-child(2) {
+                z-index: 0 !important;
+            }
+
+            .page-impact #main-content>.ip-section>p,
+            .page-impact #main-content>.ip-section>.ip-grid {
+                position: relative;
+                z-index: 1;
+            }
+
+            /* The social module has the same two-plane composition. Because
+             * this page has a different body/background stacking environment
+             * from industry02.htm, keep the planes above the page background
+             * and raise each real content node above them. */
+            .page-impact #main-content>.social-section>div:first-child,
+            .page-impact #main-content>.social-section>div:nth-child(2) {
+                z-index: 0 !important;
+            }
+
+            .page-impact #main-content>.social-section>p,
+            .page-impact #main-content>.social-section>.social-title,
+            .page-impact #main-content>.social-section>.social-awards {
+                position: relative;
+                z-index: 1;
+            }
+
+            .page-impact #main-content>.social-section>.social-cert>div {
+                position: absolute !important;
+                inset: auto !important;
+                right: 0 !important;
+                top: 6vw !important;
+                width: 26.5vw !important;
+                height: 18vw !important;
+                z-index: 1 !important;
+            }
+
+            .page-impact #main-content>.ip-section>p,
+            .page-impact #main-content>.social-section>p {
+                margin-top: 2.5vw !important;
+                line-height: normal !important;
+            }
+
+            .page-impact #main-content>.ip-section>p {
+                margin-bottom: 2.5vw !important;
+            }
+
+            .page-impact .social-title h2 {
+                margin-top: .83em !important;
+            }
+
+            .page-impact .social-title p {
+                margin: 2vw 0 1.25vw !important;
+            }
+
+            .page-impact .social-cert {
+                position: static !important;
+                width: auto !important;
+                height: 0 !important;
+                min-height: 0 !important;
+            }
+
+            .page-impact .social-awards {
+                min-height: 0 !important;
+                line-height: normal !important;
+                height: 9.234vw !important;
+            }
+
+            .page-impact .ip-section .ip-item h3 {
+                margin: 1em 0 0 !important;
+                padding: 0 2vw !important;
+                font-size: 1em !important;
+                line-height: normal !important;
+            }
+
+            .page-impact .ip-section .ip-grid {
+                background: var(--theme-color2) !important;
+            }
+
+            .page-impact .ip-section .ip-item p {
+                padding-left: 2vw !important;
+                padding-right: 2vw !important;
+                line-height: normal !important;
+            }
+
+            .page-impact .ip-section .ip-award p,
+            .page-impact .ip-section .ip-china p {
+                font-size: .9em !important;
+            }
+
+            .page-impact #main-content>.media-section-new {
+                height: 39vw !important;
+                padding-bottom: 2vw !important;
+                background: var(--theme-color1) !important;
+            }
+
+            .page-impact .media-section-new .media-title {
+                position: absolute !important;
+                left: 10vw !important;
+                top: -5vw !important;
+                z-index: 2;
+            }
+
+            .page-impact .media-section-new .media-title h2 {
+                margin: 0 !important;
+                font-size: 2.5vw !important;
+                font-weight: 400 !important;
+                line-height: normal !important;
+            }
+
+            .page-impact .media-section-new .media-vertical-texts {
+                position: absolute !important;
+                left: 8vw !important;
+                top: 8vw !important;
+                width: 21vw !important;
+                gap: 1.5vw !important;
+            }
+
+            .page-impact .media-section-new .media-vertical-texts p {
+                margin: 0 !important;
+                font-size: 1.35vw !important;
+                line-height: 1.4 !important;
+            }
+
+            .page-impact .media-section-new .media-images-row {
+                position: absolute !important;
+                left: 30vw !important;
+                top: 3vw !important;
+                width: auto !important;
+                height: auto !important;
+            }
+
+            .page-impact .media-section-new .media-images-row img {
+                position: absolute !important;
+                left: 1.2vw !important;
+                top: -1.2vw !important;
+                width: 67vw !important;
+                height: 35vw !important;
+                max-width: none !important;
+                object-fit: cover !important;
+            }
+        }
+    </style>
+    <style>
+        /* Image-free sloped title hero, matching Engage-Research-en.html. */
+        .about-hero-wrap {
+            position: relative;
+            isolation: isolate;
+            min-height: clamp(225px, 27.1vw, 390px) !important;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            color: #fff;
+            background: none !important;
+        }
+
+        .about-hero-wrap::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: #00305c;
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - clamp(42px, 10.85vw, 156px)), 0 100%);
+        }
+
+        .about-hero-inner {
+            position: relative;
+            z-index: 1;
+            width: min(calc(100% - 100px), 1000px);
+            margin: 0 auto;
+            padding: 24px 0 72px !important;
+        }
+
+        .about-hero-title {
+            margin: 0;
+            color: #fff;
+            font-size: clamp(2.5rem, 5vw, 4.0625rem);
+            font-weight: 600;
+            line-height: 1.1;
+            letter-spacing: 0;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 699px) {
+            .about-hero-wrap {
+                min-height: 225px !important;
+            }
+
+            .about-hero-inner {
+                width: calc(100% - 30px);
+                padding: 14px 0 52px !important;
+            }
+        }
+    </style>
+    <style>
+        /* Local replica of the publication template's professional-society section. */
+        @font-face {
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 300;
+            src: url("../assets/fonts/root/media/r024.woff2") format("woff2");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 400;
+            src: url("../assets/fonts/root/media/r025.woff2") format("woff2");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 500;
+            src: url("../assets/fonts/root/media/r026.woff2") format("woff2");
+            font-display: swap;
+        }
+
+        .page-impact {
+            --ll-pub-accent-blue: #0073cf;
+            --ll-pub-blue: #00305c;
+            --ll-pub-white: #fff;
+        }
+
+        .page-impact>#main-content {
+            background: #fff;
+        }
+
+        .page-impact>#main-content>.ll-pub-section {
+            position: relative;
+            width: 100%;
+            margin: 0;
+            background: #fff;
+            color: #000;
+            font-family: "Poppins", sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 35px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .ll-pub-section-inner {
+            position: relative;
+            z-index: 1;
+            width: min(1180px, calc(100% - 30px));
+            margin: 0 auto;
+            padding: 50px 15px;
+            clear: both;
+            background: #fff;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .ll-pub-section-inner::before {
+            display: none;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.js-animate .ll-pub-section-inner::before {
+            display: none;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .field__items,
+        .page-impact>#main-content>.ll-pub-section .field__item {
+            margin: 0;
+            padding: 0;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .ll-num-text-section {
+            display: flex;
+            flex-direction: row;
+            margin: 50px 0 0;
+            padding: 0 0 30px;
+            border-bottom: 2px solid var(--ll-pub-accent-blue);
+        }
+
+        .page-impact>#main-content>.ll-pub-section .num-section {
+            flex: 0 0 auto;
+            min-width: 140px;
+            margin: 0 50px 0 20px;
+            color: var(--ll-pub-accent-blue);
+            font-size: 96px;
+            font-weight: 300;
+            line-height: 1;
+            text-align: right;
+            opacity: 1;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .ll-num-text {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .ll-num-text h3 {
+            margin: 0 0 5px;
+            padding-top: 5px;
+            color: #000;
+            font-size: 46px;
+            font-weight: 600;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .ll-image-w-title {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin: 30px 0;
+            font-family: "Poppins", sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 35px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .field--name-field-p-side-image {
+            flex: 0 0 320px;
+            width: 320px;
+            min-width: 320px;
+            height: auto;
+            overflow: hidden;
+            background: transparent;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .field--name-field-p-side-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .ll-text-side {
+            flex: 1 1 auto;
+            min-width: 0;
+            min-height: 250px;
+            margin: 0 0 0 30px;
+            padding-top: 15px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .ll-text-side h4 {
+            margin: 0 0 20px;
+            color: #000;
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .ll-text-side p {
+            margin: 0;
+            color: #000;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 35px;
+        }
+
+        @media (min-width: 550px) {
+            .page-impact>#main-content>.ll-pub-section .num-section {
+                min-width: 100px;
+                font-size: 86px;
+            }
+
+            .page-impact>#main-content>.ll-pub-section .ll-image-w-title {
+                flex-direction: row;
+                align-items: stretch;
+                gap: 0;
+            }
+        }
+
+        @media (min-width: 700px) {
+            .page-impact>#main-content>.ll-pub-section .ll-pub-section-inner {
+                padding: 100px 40px;
+            }
+
+            .page-impact>#main-content>.ll-pub-section .num-section {
+                min-width: 120px;
+            }
+
+            .page-impact>#main-content>.ll-pub-section .ll-text-side {
+                padding-top: 15px;
+            }
+        }
+
+        @media (min-width: 1225px) {
+            .page-impact>#main-content>.ll-pub-section .num-section {
+                min-width: 140px;
+                font-size: 96px;
+            }
+        }
+
+        @media (max-width: 549px) {
+            .page-impact>#main-content>.ll-pub-section .ll-num-text-section {
+                flex-direction: column;
+            }
+
+            .page-impact>#main-content>.ll-pub-section .ll-text-side {
+                min-height: 0;
+                margin-left: 0;
+            }
+
+            .page-impact>#main-content>.ll-pub-section .num-section {
+                min-width: 0;
+                margin: 0 0 12px;
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 549px) {
+            .page-impact>#main-content>.ll-pub-section .field--name-field-p-side-image {
+                width: min(320px, 100%);
+                min-width: 0;
+                height: auto;
+            }
+
+            .page-impact>#main-content>.ll-pub-section .field--name-field-p-side-image img {
+                height: auto;
+            }
+        }
+
+        /* Award module: restore the source page's grey panel and red-accent layout. */
+        .page-impact>#main-content>.ll-pub-section.award-transfer {
+            background: #ededed;
+            color: #000;
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.25;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer>.ll-pub-section-inner {
+            width: min(1060px, calc(100% - 30px));
+            margin: 0 auto;
+            padding: 50px 15px;
+            background: #ededed;
+            overflow: visible;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer>.ll-pub-section-inner::before,
+        .page-impact>#main-content>.ll-pub-section.award-transfer.js-animate>.ll-pub-section-inner::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            z-index: 2;
+            display: block;
+            top: -15px;
+            width: 600px;
+            max-width: calc(100% - 30px);
+            height: 20px;
+            background: #a71930;
+            clip-path: polygon(0 0, 0 100%, 100% 100%, calc(100% - 20px) 0);
+            transition: all .75s ease-in;
+        }
+
+        /* Exact source-page offsets for the transfer award module. */
+        .page-impact>#main-content>.ll-pub-section.award-transfer>.ll-pub-section-inner::before {
+            left: 60px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer.js-animate>.ll-pub-section-inner::before {
+            left: 60px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer figure.embedded-entity {
+            margin: 70px 0 30px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .wysiwyg p {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue {
+            padding: 0 20px;
+            font-family: "Poppins", sans-serif;
+            font-size: 25px;
+            line-height: 25px;
+            transition: padding-left .2s ease, padding-right .2s ease;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue::before {
+            width: 4px;
+            height: 18.5px;
+            transition: width .2s ease;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue::after {
+            content: none;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .ll-num-text-section {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin: 50px 0 0;
+            padding: 0 0 30px;
+            border-bottom: 2px solid #a71930;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .num-section {
+            flex: 0 0 auto;
+            min-width: 140px;
+            margin: 0 50px 0 20px;
+            color: #a71930;
+            font-size: 96px;
+            font-weight: 300;
+            line-height: 1;
+            text-align: right;
+            opacity: 1;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .ordinal-suffix {
+            font-size: .4em;
+            vertical-align: super;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .ll-num-text {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .ll-num-text h3 {
+            margin: 0 0 5px;
+            padding-top: 5px;
+            color: #000;
+            font-size: 38px;
+            font-weight: 600;
+            line-height: 1.1;
+            text-transform: uppercase;
+            font-synthesis: weight;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .paragraph--type-wysiwyg {
+            width: 100%;
+            margin: 0;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .wysiwyg {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer figure.embedded-entity {
+            width: 100%;
+            margin: 30px 0 35px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .wysiwyg-image,
+        .page-impact>#main-content>.ll-pub-section.award-transfer .wysiwyg-image .field__item,
+        .page-impact>#main-content>.ll-pub-section.award-transfer picture {
+            display: block;
+            width: 100%;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .wysiwyg-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .wysiwyg p {
+            margin: 0 0 24px;
+            color: #000;
+            font-family: "Poppins", Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 35px;
+            letter-spacing: 0;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .wysiwyg p:last-child {
+            margin-top: 30px;
+            margin-bottom: 0;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue {
+            position: relative;
+            display: inline-block;
+            padding: 0 0 0 18px;
+            color: #000;
+            font-family: "Poppins", Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.25;
+            letter-spacing: 0;
+            font-synthesis: weight;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 8px;
+            height: 24px;
+            background: #0073cf;
+            transform: translateY(-50%);
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue::after {
+            content: "›";
+            margin-left: 8px;
+            font-size: 22px;
+            line-height: 0;
+        }
+
+        @media (min-width: 700px) {
+            .page-impact>#main-content>.ll-pub-section.award-transfer>.ll-pub-section-inner {
+                padding: 100px 60px;
+            }
+
+            .page-impact>#main-content>.ll-pub-section.award-transfer .num-section {
+                min-width: 120px;
+                font-size: 86px;
+            }
+        }
+
+        @media (min-width: 1225px) {
+            .page-impact>#main-content>.ll-pub-section.award-transfer .num-section {
+                min-width: 140px;
+                font-size: 96px;
+            }
+        }
+
+        @media (max-width: 549px) {
+            .page-impact>#main-content>.ll-pub-section.award-transfer .ll-num-text-section {
+                flex-direction: column;
+            }
+
+            .page-impact>#main-content>.ll-pub-section.award-transfer .num-section {
+                min-width: 0;
+                margin: 0 0 12px;
+                text-align: left;
+            }
+
+            .page-impact>#main-content>.ll-pub-section.award-transfer .ll-num-text h3 {
+                font-size: 30px;
+            }
+        }
+
+        /* Keep the three imported award modules aligned with the source report page. */
+        .page-impact>#main-content>.ll-pub-section.award-transfer,
+        .page-impact>#main-content>.ll-content-gr.num-col-2,
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue {
+            font-family: "Poppins", sans-serif;
+            font-size: 20px;
+            line-height: 35px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer,
+        .page-impact>#main-content>.ll-content-gr.num-col-2,
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue {
+            margin-left: 50px;
+            margin-right: 50px;
+            width: auto;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer>.ll-pub-section-inner {
+            width: 1060px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 100px 60px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .ll-num-text h3,
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-num-text h3,
+        .page-impact>#main-content>.ll-content-gr.num-col-2 .ll-num-text h3 {
+            font-family: "Poppins", sans-serif;
+            font-size: 38px;
+            line-height: 1.1;
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2>div {
+            display: grid;
+            max-width: 1400px;
+            margin: 0 auto 50px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2>div>.field__item {
+            padding: 30px 50px 50px;
+            border-bottom: 2px solid var(--impact-blue);
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2>div>.field__item:nth-child(odd) {
+            border-left: none;
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2>div>.field__item:nth-child(even) {
+            border-left: 2px solid var(--impact-blue);
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2 .paragraph--type-wysiwyg {
+            max-width: 100%;
+            padding: 0 40px;
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2 .ll-num-text-section,
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-num-text-section {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            border-bottom: 2px solid var(--impact-blue);
+            padding-bottom: 30px;
+            margin-top: 50px;
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2 .num-section,
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .num-section {
+            flex: 0 0 auto;
+            min-width: 140px;
+            margin: 0 50px 0 20px;
+            color: var(--impact-blue);
+            font-size: 96px;
+            font-weight: 300;
+            line-height: 1;
+            text-align: right;
+            opacity: 1;
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2 .ordinal-suffix,
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ordinal-suffix {
+            font-size: .4em;
+            vertical-align: super;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue>.ll-pub-section-inner {
+            width: 1060px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 100px 60px;
+            background: #fff;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue>.ll-pub-section-inner::before {
+            content: "";
+            position: absolute;
+            top: -15px;
+            left: 60px;
+            z-index: 2;
+            display: block;
+            width: 600px;
+            max-width: calc(100% - 30px);
+            height: 20px;
+            background: #a71930;
+            clip-path: polygon(0 0, 0 100%, 100% 100%, calc(100% - 20px) 0);
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .paragraph--type-wysiwyg {
+            width: 100%;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .wysiwyg {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-image-w-title {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin: 30px 0;
+            font-family: "Poppins", sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 35px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .field--name-field-p-side-image {
+            flex: 0 0 350px;
+            width: 350px;
+            min-width: 350px;
+            height: 235px;
+            overflow: hidden;
+            background-color: #ededed;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .field--name-field-p-side-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-text-side {
+            flex: 1 1 auto;
+            min-width: 0;
+            min-height: 235px;
+            margin: 0 0 0 30px;
+            padding-top: 22px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-text-side h4,
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-text-side h2 {
+            margin: 0 0 10px;
+            font-family: "Poppins", sans-serif;
+            font-size: 26px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-text-side p {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 26px;
+        }
+
+        @media (min-width: 550px) {
+            .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-image-w-title {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .page-impact>#main-content>.ll-content-gr.num-col-2>div {
+                grid-template-columns: 1fr;
+            }
+
+            .page-impact>#main-content>.ll-content-gr.num-col-2>div>.field__item:nth-child(even) {
+                border-left: none;
+            }
+        }
+
+        @media (max-width: 549px) {
+
+            .page-impact>#main-content>.ll-pub-section.award-transfer,
+            .page-impact>#main-content>.ll-content-gr.num-col-2,
+            .page-impact>#main-content>.ll-pub-section.ll-background-light-blue {
+                margin-left: 13px;
+                margin-right: 13px;
+            }
+
+            .page-impact>#main-content>.ll-pub-section.award-transfer>.ll-pub-section-inner,
+            .page-impact>#main-content>.ll-pub-section.ll-background-light-blue>.ll-pub-section-inner {
+                width: 100%;
+                padding: 50px 15px;
+            }
+
+            .page-impact>#main-content>.ll-content-gr.num-col-2 .ll-num-text-section,
+            .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-num-text-section {
+                flex-direction: column;
+            }
+
+            .page-impact>#main-content>.ll-content-gr.num-col-2 .num-section,
+            .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .num-section {
+                min-width: 0;
+                margin: 0 0 12px;
+                text-align: left;
+            }
+
+            .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-text-side {
+                min-height: 0;
+                margin-left: 0;
+            }
+        }
+
+        /* Final source-page overrides: keep these after the shared impact rules. */
+        .page-impact>#main-content>.ll-pub-section.award-transfer>.ll-pub-section-inner::before {
+            left: 60px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer.js-animate>.ll-pub-section-inner::before {
+            left: 60px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer figure.embedded-entity {
+            margin: 70px 0 30px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .wysiwyg p {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue {
+            padding: 0 20px;
+            font-family: "Poppins", sans-serif;
+            font-size: 25px;
+            line-height: 25px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue::before {
+            width: 4px;
+            height: 18.5px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue::after {
+            content: none;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue .last-word::after {
+            content: "\e905";
+            display: inline-block;
+            position: relative;
+            top: -3px;
+            margin-left: 10px;
+            font-size: 12px;
+            line-height: 1;
+            font-family: "icomoon" !important;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue:hover,
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue:focus-visible {
+            padding-left: 36px;
+            padding-right: 0;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue:hover::before,
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue:focus-visible::before {
+            width: 20px;
+        }
+
+        @font-face {
+            font-family: "icomoon";
+            src: url("../assets/fonts/root/media/r029.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Source-page typography and spacing for the lower award modules. */
+        .page-impact>#main-content>.ll-content-gr.num-col-2 {
+            font-weight: 300;
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2 .ll-num-text h3 {
+            margin: 0 0 5px;
+            padding-top: 5px;
+            font-weight: 600;
+            font-synthesis: weight;
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2 .wysiwyg p {
+            margin: 30px 0 0;
+            font-weight: 300;
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2>div>.field__item {
+            padding-bottom: 80px;
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2>div>.field__item:nth-child(2) .ll-num-text h3 {
+            max-width: 250px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue {
+            background: transparent;
+            font-weight: 300;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue>.ll-pub-section-inner {
+            background: #ededed;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-num-text {
+            flex: 0 0 auto;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .wysiwyg p {
+            margin: 0 0 24px;
+            font-weight: 300;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .wysiwyg p:last-child {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .wysiwyg>p:first-child {
+            margin-top: 30px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-image-w-title {
+            margin-top: 30px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .field--name-field-p-ll-pub-pars>.field__item:nth-child(3) .ll-image-w-title {
+            margin-top: 60px;
+        }
+
+        /* Restore the source report's fixed scrolling background layer. */
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue>.ll-static-background {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 20px;
+            bottom: 20px;
+            z-index: 0;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            pointer-events: none;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue>.ll-pub-section-inner {
+            z-index: 1;
+        }
+
+        /* Video caption — light grey, matching News page .video__caption */
+        .video__caption {
+            margin: 8px 0 0;
+            color: #525252;
+            font-size: 14px;
+        }
+
+        @media (min-width: 1025px) {
+            .video__caption {
+                font-size: 16px;
+                margin: 20px 0 0;
+            }
+        }
+
+        /* Section subtitle under h3 — descriptive lede, referencing News .ifde-page__intro */
+        .page-impact .ll-num-text p {
+            margin: 8px 0 0;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.6;
+            color: #5E6167;
+        }
+
+        @media (min-width: 700px) {
+            .page-impact .ll-num-text p {
+                font-size: 20px;
+            }
+        }
+
+        /* Floated right image — referencing People-UPOP / r015.css media.floated_right */
+        .page-impact>#main-content>.ll-pub-section.award-transfer figure.embedded-entity.align-right {
+            float: right;
+            margin: 8px 0 20px 24px;
+            width: 200px;
+        }
+
+        .award-transfer .wysiwyg-image--floated {
+            width: 100%;
+        }
+
+        .award-transfer .wysiwyg-image--floated img {
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+            display: block;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .wysiwyg-image--floated .field--name-field-caption {
+            padding: 18px 10px 10px;
+            margin: 0;
+            font-size: 14px;
+            font-weight: 300;
+            color: #5E6167;
+            line-height: 1.75;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* Clearfix so floated image does not overflow the wysiwyg container */
+        .award-transfer .wysiwyg>div::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (min-width: 700px) {
+            .page-impact>#main-content>.ll-pub-section.award-transfer figure.embedded-entity.align-right {
+                width: 300px;
+                margin: 8px 0 30px 40px;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .page-impact>#main-content>.ll-pub-section.award-transfer figure.embedded-entity.align-right {
+                width: 350px;
+            }
+        }
+
+        /* 仅本页"更多 创新"按钮：移除共享 CTA 三角符号，不影响其他按钮 */
+        .page-impact #main-content a.cta--button.cta--button-blue::after {
+            content: none !important;
+            display: none !important;
+            width: 0 !important;
+            height: 0 !important;
+            margin: 0 !important;
+            border: 0 !important;
+        }
+    </style>
+    <link rel="stylesheet" href="../assets/css/archive-consistency.css?v=20260908-wide1">
+    <link rel="stylesheet" href="../assets/css/about-explore-nav.css?v=20260911-4">
+    <link rel="stylesheet" href="../assets/css/page-canvas.css?v=20260911-1">
+</head>
+
+
+
+<body class="page-impact page-about-wide" id="top">
+    <div data-component="header"></div>
+    <main id="main-content">
+
+        <section class="about-hero-wrap">
+            <div class="about-hero-inner">
+                <h1 class="about-hero-title">学术影响</h1>
+            </div>
+        </section>
+
+
+        <!-- 创新成就影响力 -->
+        <div class="ll-pub-section ll-accent-light_blue ll-background-none js-animate">
+            <div class="ll-pub-section-inner">
+                <div class="ll-pub-section-content">
+                    <div
+                        class="field field--name-field-p-ll-pub-pars field--type-entity-reference field--label-hidden field__items">
+                        <div class="field__item">
+                            <div class="ll-num-text-section accent-light_blue js-animate">
+                                <div data-component-id="mitll_theme:num_text" class="ll-num-text ll-num-title">
+                                    <h3>创新驱动影响</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field__item">
+                            <div class="ll-image-w-title">
+                                <div
+                                    class="field field--name-field-p-side-image field--type-entity-reference field--label-hidden field__item">
+                                    <img loading="lazy" src="../assets/pic/About/impact/pic1.png" width="250"
+                                        height="250" alt="拓展核心理论" typeof="foaf:Image" class="image-style-list">
+                                </div>
+                                <div class="ll-text-side">
+                                    <h4>拓展核心理论</h4>
+                                    <div>
+                                        <p>基于幅度域采样并融合信号先验知识，MVT方法仅用少数电压阈值比较器即可精确数字化来自海量通道的高速信号。 </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field__item">
+                            <div class="ll-image-w-title">
+                                <div
+                                    class="field field--name-field-p-side-image field--type-entity-reference field--label-hidden field__item">
+                                    <img loading="lazy" src="../assets/pic/About/impact/pic2.png" width="250"
+                                        height="250" alt="强化基础材料" typeof="foaf:Image" class="image-style-list">
+                                </div>
+                                <div class="ll-text-side">
+                                    <h4>强化基础材料</h4>
+                                    <div>
+                                        <p> 聚焦稀土元素4f-4f和4f-5d能级跃迁特性、低维钙钛矿结构自陷态发射机制等前沿问题。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field__item">
+                            <div class="ll-image-w-title">
+                                <div
+                                    class="field field--name-field-p-side-image field--type-entity-reference field--label-hidden field__item">
+                                    <img loading="lazy" src="../assets/pic/About/impact/pic3.png" width="250"
+                                        height="250" alt="突破核心器件" typeof="foaf:Image" class="image-style-list">
+                                </div>
+                                <div class="ll-text-side">
+                                    <h4>突破核心器件</h4>
+                                    <div>
+                                        <p>实现通用脉冲采集和波形数字化，同时保持数据轻量化，并通过高精度物理信息重建突破时间、能量、位置等多参数测量的精度极限。 </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field__item">
+                            <div class="ll-image-w-title">
+                                <div
+                                    class="field field--name-field-p-side-image field--type-entity-reference field--label-hidden field__item">
+                                    <img loading="lazy" src="../assets/pic/About/impact/pic4.png" width="250"
+                                        height="250" alt="推进关键部件" typeof="foaf:Image" class="image-style-list">
+                                </div>
+                                <div class="ll-text-side">
+                                    <h4>推进关键部件</h4>
+                                    <div>
+                                        <p>实现通用脉冲采集和波形数字化，同时保持数据轻量化，并通过高精度物理信息重建突破时间、能量、位置等多参数测量的精度极限。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field__item">
+                            <div class="ll-image-w-title">
+                                <div
+                                    class="field field--name-field-p-side-image field--type-entity-reference field--label-hidden field__item">
+                                    <img loading="lazy" src="../assets/pic/About/impact/pic5.png" width="250"
+                                        height="250" alt="集成完整系统" typeof="foaf:Image" class="image-style-list">
+                                </div>
+                                <div class="ll-text-side">
+                                    <h4>集成完整系统</h4>
+                                    <div>
+                                        <p>用户可根据成像需求自由选择和配置不同性能的探测器模块，实现质子治疗PET、头盔PET等多种成像系统的快速组装。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field__item">
+                            <div class="ll-image-w-title">
+                                <div
+                                    class="field field--name-field-p-side-image field--type-entity-reference field--label-hidden field__item">
+                                    <img loading="lazy" src="../assets/pic/About/impact/pic6.png" width="250"
+                                        height="250" alt="Steven Vitale 正式肖像  " typeof="foaf:Image"
+                                        class="image-style-list">
+                                </div>
+                                <div class="ll-text-side">
+                                    <h4>探索前沿科学</h4>
+                                    <div>
+                                        <p>针对传统PET系统变异性大、数据-算法耦合刚性、跨平台一致性弱等局限，该框架提供从信号采集到生理定量的端到端标准化、可复现工作流。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p><a class="cta--button cta--button-blue" href="../Research/Research-ov-cn.html">更多 创新</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Award for Excellence in Technology Transfer -->
+        <div class="ll-pub-section ll-accent-red ll-background-grey js-animate award-transfer">
+            <div class="ll-pub-section-inner">
+                <div class="ll-pub-section-content">
+                    <div class="ll-pub-section-content">
+                        <div class="ll-eyebrow"></div>
+                    </div>
+                </div>
+                <div class="ll-pub-section-content">
+                    <div
+                        class="field field--name-field-p-ll-pub-pars field--type-entity-reference field--label-hidden field__items">
+                        <div class="field__item">
+                            <div class="ll-num-text-section accent-red js-animate">
+                                <div data-component-id="mitll_theme:num_text" class="ll-num-text ll-num-title">
+                                    <h3>世界知识产权组织WIPO首届全球奖</h3>
+                                    <p>全球五个获奖项目之一</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field__item">
+                            <div class="paragraph paragraph--type-wysiwyg paragraph--view-mode-full">
+                                <div class="wysiwyg">
+                                    <div>
+                                        <figure data-embed-button="media_video"
+                                            data-entity-embed-display="view_mode:media.wysiwyg__full"
+                                            data-entity-embed-display-settings="[]" data-entity-type="media"
+                                            data-entity-uuid="38e11548-7863-453f-a5ec-5809f41e1149" data-langcode="en"
+                                            class="embedded-entity">
+                                            <div class="video wysiwyg-video wysiwyg-video--full video--inline clearfix">
+                                                <div class="video__wrapper">
+                                                    <video controls preload="metadata" playsinline
+                                                        poster="../assets/pic/video/raycan_2022globalawardwinner_845.jpg"
+                                                        style="display:block; width:100%; height:auto; border-radius:4px;">
+                                                        <source
+                                                            src="../assets/video/raycan_2022globalawardwinner-720p.mp4"
+                                                            type="video/mp4">
+                                                        您的浏览器不支持视频标签。
+                                                    </video>
+                                                </div>
+                                                <div class="video__caption">
+                                                    <div
+                                                        class="field field--name-field-caption field--type-string field--label-hidden field__item">
+                                                        视频：WIPO 2022全球奖</div>
+                                                </div>
+                                            </div>
+                                        </figure>
+                                        <p>WIPO全球奖是世界知识产权组织推出的一项全球奖励计划，旨在表彰全球范围内通过运用知识产权对国内外经济、社会和文化进步产生积极影响的企业和个人。
+                                        </p>
+                                        <p>研究团队自主研发的多电压阈值（MVT）采样技术，解决了超高速正电子发射断层扫描（PET）脉冲精确采样这一长期存在的全球性难题。在这一基础突破之上，团队开创了全数字PET成像，构建了从基础理论、核心技术到关键部件和全系统集成的完整创新链——这一成就堪称PET技术的真正"重塑"。团队随后研发并推出了一系列里程碑式的世界首创成果，包括全球首套全数字辐射探测系统、全球首台全数字临床前动物PET扫描仪和全球首台全数字临床PET系统。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ll-pub-section-content" style="margin-top: 100px;">
+                    <div
+                        class="field field--name-field-p-ll-pub-pars field--type-entity-reference field--label-hidden field__items">
+                        <div class="field__item">
+                            <div class="ll-num-text-section accent-red js-animate">
+                                <div data-component-id="mitll_theme:num_text" class="ll-num-text ll-num-title">
+                                    <h3>中国发明专利金奖</h3>
+                                    <p>PET领域唯一</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field__item">
+                            <div class="paragraph paragraph--type-wysiwyg paragraph--view-mode-full"
+                                style="margin-top: 36px;">
+                                <div class="wysiwyg">
+                                    <div>
+                                        <figure data-embed-button="media_image"
+                                            data-entity-embed-display="view_mode:media.floated_right"
+                                            data-entity-embed-display-settings="[]" data-entity-type="media"
+                                            data-entity-uuid="cn-patent-gold-award-img" data-langcode="en"
+                                            class="embedded-entity align-right">
+                                            <div class="media media--type-image media--view-mode-floated-right">
+                                                <div class="embedded-entity align-right">
+                                                    <div class="image wysiwyg-image wysiwyg-image--floated">
+                                                        <div
+                                                            class="field field--name-field-image field--type-image field--label-hidden field__item">
+                                                            <img loading="eager" src="../assets/pic/root/media/3-2.jpg"
+                                                                width="350" height="350" alt="中国国家发明专利金奖"
+                                                                typeof="foaf:Image"
+                                                                class="image-style-ifde-wysiwyg__floated">
+                                                        </div>
+                                                        <div
+                                                            class="field field--name-field-caption field--type-string field--label-hidden field__item">
+                                                            中国发明专利金奖奖牌</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </figure>
+                                        <p>中国专利奖由国家知识产权局与世界知识产权组织（WIPO）共同评选，是中国唯一的专门对授予专利权的发明创造给予奖励的政府部门奖，也是中国专利领域的最高荣誉。
+                                        </p>
+                                        <p>获奖专利突破了关键技术壁垒，开启了全数字PET时代。通过解决超高速闪烁脉冲信号精确采样这一长期存在的全球性难题，该技术有效地推动PET从"胶片相机时代"进入"数码相机时代"，在PET成像和辐射探测领域发挥着行业引领作用。
+                                        </p>
+                                        <p>数字化使PET系统摆脱了封闭系统架构，推动了专用脑部PET扫描仪、质子治疗PET系统、内窥镜PET系统等专用区域PET设备的发展。这一系列专用PET仪器将成为临床研究的有力支撑，推进脑部疾病和恶性肿瘤等重大疾病的生理、病理、诊断和临床管理等前沿基础研究。
+                                        </p>
+                                        <p>此外，该专利技术展现出强大的技术通用性，应用范围从医疗领域延伸至核辐射探测、石油勘探、安检CT系统等广泛领域。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- AWARD1 -->
+        <div class="ll-content-gr num-col-2">
+            <div
+                class="field field--name-field-p-paragraph-section field--type-entity-reference-revisions field--label-hidden field__items">
+
+                <div class="field__item">
+                    <div class="paragraph paragraph--type--p-sub-component-item paragraph--view-mode--full">
+                        <div
+                            class="field field--name-field-p-paragraph-section field--type-entity-reference-revisions field--label-hidden field__items">
+                            <div class="field__item">
+                                <div class="ll-num-text-section accent-light_blue js-animate">
+                                    <div class="num-section num-ordinal animated">850<span
+                                            class="ordinal-suffix">+</span></div>
+                                    <div data-component-id="mitll_theme:num_text" class="ll-num-text ll-num-title">
+                                        <h3>专利申请</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field__item">
+                                <div class="paragraph paragraph--type-wysiwyg paragraph--view-mode-full">
+                                    <div class="wysiwyg">
+                                        <p>团队已提交超过850项专利申请，其中70%以上为发明专利，在全数字PET领域位居全球第一。专利布局覆盖从关键材料、核心部件到系统集成和应用的完整创新链，从根本上消除了知识产权风险，为国产高端医疗设备打破国外技术垄断、走向全球提供了坚实支撑。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field__item">
+                    <div class="paragraph paragraph--type--p-sub-component-item paragraph--view-mode--full">
+                        <div
+                            class="field field--name-field-p-paragraph-section field--type-entity-reference-revisions field--label-hidden field__items">
+                            <div class="field__item">
+                                <div class="ll-num-text-section accent-light_blue js-animate">
+                                    <div class="num-section num-ordinal animated">14</div>
+                                    <div data-component-id="mitll_theme:num_text" class="ll-num-text ll-num-title">
+                                        <h3>国家和地区专利覆盖</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field__item">
+                                <div class="paragraph paragraph--type-wysiwyg paragraph--view-mode-full">
+                                    <div class="wysiwyg">
+                                        <p>全数字PET核心技术的专利保护现已覆盖全球14个国家和地区，涵盖中国、美国、日本、欧盟及其主要成员国等主要经济体。这一全球布局保障了全数字PET系统的国际市场拓展，在世界舞台上展现了中国原始创新的实力。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- AWARD2 -->
+        <div class="ll-pub-section ll-accent-red ll-background-light-blue js-animate">
+            <div class="ll-pub-section-inner">
+                <div class="ll-pub-section-content">
+                    <div class="ll-pub-section-content">
+                        <div class="ll-eyebrow"></div>
+                    </div>
+                </div>
+                <div class="ll-pub-section-content">
+                    <div
+                        class="field field--name-field-p-ll-pub-pars field--type-entity-reference field--label-hidden field__items">
+                        <div class="field__item">
+                            <div class="ll-num-text-section accent-light_blue js-animate">
+                                <div data-component-id="mitll_theme:num_text" class="ll-num-text ll-num-title">
+                                    <h3 style="font-size: 56px;">学术影响力</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field__item">
+                            <div class="paragraph paragraph--type-wysiwyg paragraph--view-mode-full">
+                                <div class="wysiwyg">
+                                    <p>面向世界科技前沿
+                                        <br>
+                                        面向经济主战场
+                                        <br>
+                                        面向国家重大需求
+                                        <br>
+                                        面向人民生命健康
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field__item">
+                            <div class="ll-image-w-title">
+                                <div
+                                    class="field field--name-field-p-side-image field--type-entity-reference field--label-hidden field__item">
+                                    <img loading="lazy" src="../assets/pic/About/impact/4.jpg" width="350" height="350"
+                                        alt="这张光学图像展示了一块带有16个光罩（即在材料上图案化集成电路的光刻引导）的大面积AI优化织物。  " typeof="foaf:Image"
+                                        class="image-style-list">
+                                </div>
+                                <div class="ll-text-side">
+                                    <h2>中国十大科技进展</h2>
+                                    <div>
+                                        <p style="font-size: 1.25rem; min-height: 4rem;">中国科学院和中国工程院院士评选</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field__item">
+                            <div class="ll-image-w-title">
+                                <div
+                                    class="field field--name-field-p-side-image field--type-entity-reference field--label-hidden field__item">
+                                    <img loading="lazy" src="../assets/pic/About/impact/5.jpg" width="350" height="350"
+                                        alt="一幅描绘一名服务人员手持带有波形签名的平板电脑的插图。他站在城市中心，周围有蓝色和红色圆圈，表示无线信号。 " typeof="foaf:Image"
+                                        class="image-style-list">
+                                </div>
+                                <div class="ll-text-side">
+                                    <h2>黄家驷生物医学工程技术发明一等奖</h2>
+                                    <div>
+                                        <p style="font-size: 1.25rem; min-height: 4rem;">生物医学工程领域最高奖</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field__item">
+                            <div class="ll-image-w-title">
+                                <div
+                                    class="field field--name-field-p-side-image field--type-entity-reference field--label-hidden field__item">
+                                    <img loading="lazy" src="../assets/pic/About/impact/extra.jpg" width="350"
+                                        height="350" alt="两名男子在三脚架上调整一个约12×18英寸的金属天线单元。" typeof="foaf:Image"
+                                        class="image-style-list">
+                                </div>
+                                <div class="ll-text-side">
+                                    <h4>省级技术发明奖一等奖（两次）</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field__item">
+                            <div class="ll-image-w-title">
+                                <div
+                                    class="field field--name-field-p-side-image field--type-entity-reference field--label-hidden field__item">
+                                    <img loading="lazy" src="../assets/pic/About/impact/6.jpg" width="350" height="350"
+                                        alt="MASCOT设备特写。" typeof="foaf:Image" class="image-style-list">
+                                </div>
+                                <div class="ll-text-side">
+                                    <h2>中国医学重大进展</h2>
+                                    <div>
+                                        <p style="font-size: 1.25rem; min-height: 4rem;">医学研究与临床转化突破</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field__item">
+                            <div class="ll-image-w-title">
+                                <div
+                                    class="field field--name-field-p-side-image field--type-entity-reference field--label-hidden field__item">
+                                    <img loading="lazy" src="../assets/pic/About/impact/7.jpg" width="350" height="350"
+                                        alt="一幅展示PATS KMS概念的插图：集线器连接卫星，卫星连接地面上的各种通信单元。 " typeof="foaf:Image"
+                                        class="image-style-list">
+                                </div>
+                                <div class="ll-text-side">
+                                    <h2>CCTV科技盛典十大科技创新人物</h2>
+                                    <div>
+                                        <p style="font-size: 1.25rem; min-height: 4rem;">中央电视台、科技部</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field__item">
+                            <div class="ll-image-w-title">
+                                <div
+                                    class="field field--name-field-p-side-image field--type-entity-reference field--label-hidden field__item">
+                                    <img loading="lazy" src="../assets/pic/About/impact/extra2.jpg" width="350"
+                                        height="350" alt="一个3D打印的棒球大小的球体被画面外穿着迷彩夹克的人抛向空中。 " typeof="foaf:Image"
+                                        class="image-style-list">
+                                </div>
+                                <div class="ll-text-side">
+                                    <h2>创新医疗器械特别审批</h2>
+                                    <div>
+                                        <p style="font-size: 1.25rem; min-height: 4rem;">数字PET领域首个</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field__item">
+                            <div class="ll-image-w-title">
+                                <div
+                                    class="field field--name-field-p-side-image field--type-entity-reference field--label-hidden field__item">
+                                    <img loading="lazy"
+                                        src="../assets/pic/webarchive_research_achievements/images/team/team-achievements/1.jpg"
+                                        width="350" height="350" alt="两名男子在三脚架上调整一个约12×18英寸的金属天线单元。" typeof="foaf:Image"
+                                        class="image-style-list">
+                                </div>
+                                <div class="ll-text-side">
+                                    <h4>世界知识产权组织WIPO首届全球奖</h4>
+                                    <div>
+                                        <p>全球五个项目之一</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field__item">
+                            <div class="ll-image-w-title">
+                                <div
+                                    class="field field--name-field-p-side-image field--type-entity-reference field--label-hidden field__item">
+                                    <img loading="lazy" src="../assets/pic/root/media/3-2.jpg" width="350" height="350"
+                                        alt="展示了一个黄铜金属仪器和板，放大的部分显示嵌入板中的一个小芯片。整个设备是低温显微镜。" typeof="foaf:Image"
+                                        class="image-style-list">
+                                </div>
+                                <div class="ll-text-side">
+                                    <h4>中国发明专利金奖</h4>
+                                    <div>
+                                        <p>PET领域唯一</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <img src="../assets/pic/webarchive_research_achievements/images/team/team-achievements/bg.jpg"
+                                alt="新闻" style="width: 67rem;height: 35rem;object-fit:cover;left: 1.2rem;top: -1.2rem;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ll-static-background"
+                style="background-image:url('../assets/pic/webarchive_recognizing-excellence/051.jpg')">
+            </div>
+        </div>
+
+
+
+        <!-- Interests -->
+        <div class="mitll-ll-pub-nav mitll-ll-pub-nav-chapters about-explore-section">
+            <div class="mitll-ll-pub-nav-chapters-inner">
+                <h3>探索您感兴趣的内容</h3>
+                <ul class="mitll-ll-pub-bottom-nav about-explore-nav">
+                    <li class="ll-ot">
+                        <a href="About-about-cn.html" class="ll-section-nav">
+                            <div class="ll-pub-bottom-nav-img">
+                                <img src="../assets/pic/root/media/2-3.jpg" alt="关于我们" loading="lazy">
+                            </div>
+                            <div class="ll-nav-text-side">
+                                <div class="ll-nav-title">关于我们</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="ll-ot">
+                        <a href="About-mission-cn.html" class="ll-section-nav">
+                            <div class="ll-pub-bottom-nav-img">
+                                <img src="../assets/pic/about/explore-nav/mission-v3.jpg" alt="使命愿景" loading="lazy">
+                            </div>
+                            <div class="ll-nav-text-side">
+                                <div class="ll-nav-title">使命愿景</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="ll-current-chapter">
+                        <a href="About-impact-cn.html" class="ll-section-nav">
+                            <div class="ll-pub-bottom-nav-img">
+                                <img src="../assets/pic/about/explore-nav/impact-v2.jpg" alt="学术影响" loading="lazy">
+                            </div>
+                            <div class="ll-nav-text-side">
+                                <div class="ll-nav-title">学术影响</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="ll-ot">
+                        <a href="About-history-cn.html" class="ll-section-nav">
+                            <div class="ll-pub-bottom-nav-img">
+                                <img src="../assets/pic/about/explore-nav/history.jpg" alt="发展历程" loading="lazy">
+                            </div>
+                            <div class="ll-nav-text-side">
+                                <div class="ll-nav-title">发展历程</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="ll-ot">
+                        <a href="About-leadership-cn.html" class="ll-section-nav">
+                            <div class="ll-pub-bottom-nav-img">
+                                <img src="../assets/pic/about/explore-nav/leadership-v2.jpg" alt="领导团队" loading="lazy">
+                            </div>
+                            <div class="ll-nav-text-side">
+                                <div class="ll-nav-title">领导团队</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+
+
+    <div data-component="footer"></div>
+    <script>
+        (function () {
+            const awards = [
+                { src: '../assets/pic/About/impact/4.jpg', title: '中国十大科技进展', desc: '中国科学院和中国工程院院士评选' },
+                { src: '../assets/pic/About/impact/5.jpg', title: 'Huang Jiasi First Prize in Biomedical Engineering', desc: '' },
+                { src: '../assets/pic/About/impact/6.jpg', title: '中医药重大进展', desc: '' },
+                { src: '../assets/pic/About/impact/7.jpg', title: 'CCTV十大科技创新人物', desc: 'China Central Television and the Ministry of Science and Technology' },
+                { src: '../assets/pic/About/impact/extra.jpg', title: 'Provincial First Prize for Technological Invention (twice)', desc: '' },
+                { src: '../assets/pic/About/impact/extra2.jpg', title: '创新医疗器械特别审批', desc: 'First in the digital PET field' }
+            ];
+            const gallery = [...document.querySelectorAll('.social-awards img')];
+            const title = document.querySelector('.social-title h2');
+            const description = document.querySelector('.social-title p');
+            const certificate = document.querySelector('.social-cert > div');
+            const previous = document.querySelector('.social-awards .btn-left');
+            const next = document.querySelector('.social-awards .btn-right');
+            let index = 0;
+
+            if (!title || !description || !certificate || !previous || !next) return;
+
+            function selectAward(award) {
+                title.textContent = award.title;
+                description.textContent = award.desc;
+                certificate.style.backgroundImage = `url("${award.src}")`;
+            }
+
+            function render() {
+                gallery.forEach((image, offset) => {
+                    const award = awards[(index + offset) % awards.length];
+                    image.src = award.src;
+                    image.alt = award.title;
+                    image.title = award.title;
+                    image.onclick = () => selectAward(award);
+                });
+                selectAward(awards[index]);
+            }
+
+            previous.addEventListener('click', () => {
+                index = (index + awards.length - 1) % awards.length;
+                render();
+            });
+
+            next.addEventListener('click', () => {
+                index = (index + 1) % awards.length;
+                render();
+            });
+
+            render();
+        }());
+    </script>
+</body>
+
+</html>

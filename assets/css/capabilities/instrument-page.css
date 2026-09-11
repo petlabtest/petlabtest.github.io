@@ -1,0 +1,15 @@
+/* Keep the archived title banner above the centered widescreen page canvas. */
+body.capabilities-instrument-page #block-petlab-theme-page-title {
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+}
+
+body.capabilities-instrument-page #block-petlab-theme-page-title > * {
+  position: relative;
+  z-index: 1;
+}
+
+body.capabilities-instrument-page #block-petlab-theme-page-title::after {
+  z-index: 0;
+}

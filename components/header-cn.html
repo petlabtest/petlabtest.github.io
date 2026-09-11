@@ -1,0 +1,306 @@
+<style data-research-menu-layout>
+  /* Force hide skip-link by default, show only on keyboard focus */
+  a.skip-link {
+    position: fixed !important;
+    top: 0 !important;
+    left: 1rem !important;
+    z-index: 9999 !important;
+    transform: translateY(-200%) !important;
+    background: #fff !important;
+    padding: .75rem 1rem !important;
+    text-decoration: none !important;
+    color: #000 !important;
+    transition: transform .2s ease !important;
+  }
+
+  a.skip-link:focus,
+  a.skip-link:focus-visible {
+    transform: translateY(0) !important;
+  }
+
+  @media (min-width:1101px) {
+    .lbl-header .header-shell {
+      width: min(calc(100% - 96px), 1600px) !important;
+    }
+
+    .lbl-header .header-top-row {
+      gap: 24px !important;
+    }
+
+    .lbl-header .utility-links a,
+    .lbl-header .utility-links button,
+    .lbl-header .header-search input,
+    .lbl-header .search-label {
+      font-size: 15px !important;
+    }
+
+    .lbl-header .primary-nav {
+      gap: 26px !important;
+    }
+
+    .lbl-header .primary-nav>.nav-group>.nav-trigger {
+      font-size: 22px !important;
+      transform: translateY(7px);
+    }
+
+    .lbl-header .mega-menu--research {
+      height: 460px !important;
+      min-height: 460px !important;
+    }
+
+    .lbl-header .mega-menu--research .research-menu__column--core {
+      transform: translateX(clamp(24px, 2.5vw, 40px));
+    }
+
+    .lbl-header .mega-menu--research .mega-menu__groups a {
+      font-size: 14px !important;
+      padding-right: 1.5rem !important;
+    }
+
+    .lbl-header .mega-menu--feature .mega-menu__groups a::before {
+      top: 50% !important;
+      transform: translateY(-50%);
+    }
+  }
+
+  @media (min-width:1251px) {
+    .lbl-header .mega-menu--research {
+      grid-template-columns: minmax(320px, .78fr) minmax(0, 2.22fr) !important;
+      gap: clamp(2rem, 3vw, 4rem) !important;
+    }
+
+    .lbl-header .mega-menu--research .mega-menu__groups--three {
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      column-gap: clamp(1.5rem, 2vw, 2.5rem) !important;
+      row-gap: 0 !important;
+    }
+
+    .lbl-header .mega-menu--research .research-menu__catalog,
+    .lbl-header .mega-menu--research .research-menu__capabilities {
+      margin-top: 0 !important;
+    }
+
+    .lbl-header .mega-menu--research .research-menu__catalog h2,
+    .lbl-header .mega-menu--research .research-menu__capabilities h2 {
+      margin-bottom: 1.4rem !important;
+      transform: translateY(.55rem);
+    }
+
+    .lbl-header .mega-menu--research .research-menu__column,
+    .lbl-header .mega-menu--research .research-menu__column h2,
+    .lbl-header .mega-menu--research .research-menu__column a {
+      min-width: 0;
+      white-space: nowrap !important;
+    }
+  }
+
+  @media (min-width:1101px) and (max-width:1250px) {
+    .lbl-header .mega-menu--research {
+      grid-template-columns: 245px minmax(0, 1fr) !important;
+      gap: 2rem !important;
+    }
+
+    .lbl-header .mega-menu--research .mega-menu__groups--three {
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      column-gap: 1.25rem !important;
+      row-gap: 0 !important;
+    }
+
+    .lbl-header .mega-menu--research .research-menu__catalog,
+    .lbl-header .mega-menu--research .research-menu__capabilities {
+      margin-top: 0 !important;
+    }
+
+    .lbl-header .mega-menu--research .research-menu__catalog h2,
+    .lbl-header .mega-menu--research .research-menu__capabilities h2 {
+      margin-bottom: 1.4rem !important;
+      transform: translateY(.55rem);
+    }
+
+    .lbl-header .mega-menu--research .research-menu__column,
+    .lbl-header .mega-menu--research .research-menu__column h2,
+    .lbl-header .mega-menu--research .research-menu__column a {
+      min-width: 0;
+      white-space: nowrap !important;
+    }
+  }
+
+  /* Slightly larger type for the Chinese desktop mega menus only. */
+  @media (min-width:1101px) {
+    .lbl-header .mega-menu--feature .mega-menu__headline {
+      font-size: clamp(31px, 2.2vw, 42px) !important;
+    }
+
+    .lbl-header .mega-menu--feature.mega-menu--research .mega-menu__headline {
+      font-size: clamp(33px, 2.35vw, 45px) !important;
+    }
+
+    .lbl-header .mega-menu--feature .mega-menu__overview {
+      font-size: 19px !important;
+    }
+
+    .lbl-header .mega-menu--feature .mega-menu__groups h2 {
+      font-size: 18px !important;
+    }
+
+    .lbl-header .mega-menu--feature .mega-menu__groups a {
+      font-size: 18px !important;
+    }
+  }
+</style>
+<a class="skip-link" href="#main-content"
+  style="position:fixed;top:0;left:1rem;z-index:9999;transform:translateY(-200%);background:#fff;padding:.75rem 1rem;text-decoration:none;color:#000;transition:transform .2s ease"
+  onfocus="this.style.transform='translateY(0)'" onblur="this.style.transform='translateY(-200%)'">Skip to main
+  content</a>
+<header class="site-header lbl-header" data-site-header>
+  <div class="header-shell">
+    <a class="brand" href="index-cn.html" aria-label="Digital PET Laboratory home">
+      <img src="assets/pic/main/PETLAB.png" alt="Digital PET Laboratory">
+    </a>
+
+    <div class="desktop-navigation">
+      <div class="header-top-row">
+        <nav class="utility-links" aria-label="Utility navigation">
+          <a href="News/News-ov-cn.html">新闻 & 活动</a>
+          <a href="Giving/Giving-giving-cn.html">捐赠</a>
+          <button class="language-toggle" type="button" data-language-toggle aria-label="Switch to English"
+            onclick="var p=window.location.pathname;p=/\/index-cn\.html$/i.test(p)?p.replace(/index-cn\.html$/i,'index.html'):/-cn\.html$/i.test(p)?p.replace(/-cn\.html$/i,'-en.html'):p;window.location.assign(p+window.location.search+window.location.hash)">EN</button>
+        </nav>
+        <form class="header-search" action="search.html" method="get" role="search">
+          <label class="sr-only" for="header-search-input">搜索</label>
+          <input id="header-search-input" name="q" type="search" placeholder="Search" autocomplete="off" required>
+          <button type="submit" aria-label="Submit search"><span class="search-icon" aria-hidden="true"></span></button>
+        </form>
+      </div>
+
+      <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
+
+        <div class="nav-group">
+          <button type="button" class="nav-trigger" aria-expanded="false">关于我们</button>
+          <div class="mega-menu mega-menu--feature mega-menu--about">
+            <button class="mega-menu__close" type="button" data-menu-close aria-label="Close About menu"></button>
+            <div class="mega-menu__visual"><img src="assets/pic/School/zuopin13.jpg"
+                alt="Digital PET Laboratory research team"></div>
+            <div class="mega-menu__content">
+              <p class="mega-menu__headline">全数字PET发源地。</p>
+              <a class="mega-menu__overview" href="About/About-about-cn.html">实验室概况<span>→</span></a>
+              <div class="mega-menu__groups">
+                <div>
+                  <h2>数字PET实验室</h2>
+                  <a href="About/About-mission-cn.html">使命愿景</a>
+                  <a href="About/About-impact-cn.html">学术影响</a>
+                  <a href="About/About-history-cn.html">发展历程</a>
+                </div>
+                <div>
+                  <h2>组织架构</h2>
+                  <a href="About/About-leadership-cn.html">领导团队</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="nav-group nav-group--wide nav-group--research">
+          <button type="button" class="nav-trigger" aria-expanded="false">科学研究</button>
+          <div class="mega-menu mega-menu--feature mega-menu--research">
+            <button class="mega-menu__close" type="button" data-menu-close aria-label="Close Research menu"></button>
+            <div class="research-menu__intro">
+              <p class="mega-menu__headline">立足基础研究，<br>突破认知边界。
+              </p>
+              <a class="mega-menu__overview" href="Research/Research-ov-cn.html">研究概况<span>→</span></a>
+            </div>
+            <div class="mega-menu__groups mega-menu__groups--three">
+              <div class="research-menu__column research-menu__column--core">
+                <h2>研究核心</h2>
+                <a href="Research/Research-Core-cn.html">多电压阈值技术</a>
+                <div class="research-menu__catalog">
+                  <h2>重点专项</h2>
+                  <a href="Research/Research-Initiatives-cn.html">质子治疗监测</a>
+                </div>
+                <div class="research-menu__catalog">
+                  <h2>研究库</h2><a href="Research/Research-Project-cn.html">研究项目</a><a
+                    href="Research/Research-Publication-cn.html">研究论文</a><a
+                    href="Capabilities/Capabilities-Instrument-cn.html">科学仪器</a>
+                </div>
+              </div>
+              <div class="research-menu__column research-menu__column--advanced">
+                <h2>先进技术</h2>
+                <a href="Research/Research-Tech-Crystals-cn.html">闪烁晶体</a><a
+                  href="Research/Research-Tech-Chips-cn.html">极弱光探测芯片</a><a
+                  href="Research/Research-Tech-Detectors-cn.html">粒子探测模块</a><a
+                  href="Research/Research-Tech-PnI-cn.html">Plug-n-Image</a><a
+                  href="Research/Research-Tech-Imaging-cn.html">图像重建</a><a
+                  href="Research/Research-Tech-Instruments-cn.html">新仪器与新系统</a>
+              </div>
+              <div class="research-menu__column research-menu__column--discovery">
+                <h2>科学发现</h2><a href="Research/Research-Physics-cn.html">物理科学</a><a
+                  href="Research/Research-Medical-cn.html">医学科学</a>
+                <a href="Research/Research-Nuclear-cn.html">核科学</a><a
+                  href="Research/Research-Pharmaceutical-cn.html">核药科学</a>
+                <div class="research-menu__capabilities">
+                  <h2>核心能力</h2><a href="Capabilities/Capabilities-ov-cn.html">设施与平台</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-group">
+          <button type="button" class="nav-trigger" aria-expanded="false">科研人员</button>
+          <div class="mega-menu mega-menu--feature">
+            <button class="mega-menu__close" type="button" data-menu-close
+              aria-label="Close Talent Development menu"></button>
+            <div class="mega-menu__visual"><img src="assets/pic/People/Philosophy/team.jpg"
+                alt="PETLab students and researchers"></div>
+            <div class="mega-menu__content">
+              <p class="mega-menu__headline">汇聚多学科科研力量，<br>培育新一代学术领军人才。</p>
+              <a class="mega-menu__overview" href="People/People-ov-cn.html">人员概况
+                <span>→</span></a>
+              <div class="mega-menu__groups">
+                <div>
+                  <h2>人才培养</h2><a href="People/People-Stewardship-cn.html">发展理念</a><a
+                    href="People/People-Group-cn.html">研究小组</a><a href="People/People-Life-cn.html">PETLab生活</a>
+                </div>
+                <div>
+                  <h2>加入我们</h2><a href="People/People-UPOP-cn.html">本科实践项目</a><a
+                    href="People/People-Student-cn.html">学生教育</a><a href="People/People-Career-cn.html">职业发展</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-group">
+          <button type="button" class="nav-trigger" aria-expanded="false">科研协作</button>
+          <div class="mega-menu mega-menu--feature">
+            <button class="mega-menu__close" type="button" data-menu-close aria-label="Close Engage menu"></button>
+            <div class="mega-menu__visual"><img src="assets/pic/School/jianzhu32.jpg"
+                alt="International PETLab collaboration"></div>
+            <div class="mega-menu__content">
+              <p class="mega-menu__headline">广开科研共享之基，深耕交叉协同之学。</p>
+              <a class="mega-menu__overview" href="Engage/Engage-ov-cn.html">合作概况<span>→</span></a>
+              <div class="mega-menu__groups">
+                <div>
+                  <h2>科研共建</h2>
+                  <a href="Engage/Engage-Research-cn.html">研究合作</a>
+                  <a href="Engage/Engage-Project-cn.html">项目合作</a>
+                  <a href="Engage/Engage-Support-cn.html">技术支持</a>
+                </div>
+                <div>
+                  <h2>交流访问</h2><a href="Engage/Engage-Visit-cn.html">访问我们</a><a
+                    href="Engage/Engage-Contact-cn.html">联系我们</a><a href="Engage/Engage-Inquiry-cn.html">综合咨询</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="mobile-actions">
+      <a class="mobile-search-link" href="search.html" aria-label="Search"><span class="search-icon"
+          aria-hidden="true"></span></a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false"
+        aria-controls="primary-navigation"><span>菜单</span><i aria-hidden="true"></i></button>
+    </div>
+  </div>
+</header>

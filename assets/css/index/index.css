@@ -1,0 +1,135 @@
+/* index 页面专属样式（原内联于 index.html / index-cn.html，提取至此） */
+
+    /* Match the archived MIT LL homepage typography with local Poppins subsets. */
+    @font-face {
+      font-family: "Poppins Local";
+      src: url("../../fonts/root/media/r024.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Poppins Local";
+      src: url("../../fonts/root/media/r025.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Poppins Local";
+      src: url("../../fonts/root/media/r026.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+    }
+
+    body.home,
+    body.home button,
+    body.home input,
+    body.home select,
+    body.home textarea {
+      font-family: "Poppins Local", Arial, sans-serif;
+    }
+
+    body.home {
+      font-weight: 300;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body.home h1,
+    body.home h2,
+    body.home h3,
+    body.home h4,
+    body.home h5,
+    body.home h6 {
+      font-family: "Poppins Local", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+
+    @media (min-width: 1025px) {
+
+      body.home .home-carousel__wrapper:first-child .home-carousel__super-title,
+      body.home .home-carousel__wrapper .home-carousel__super-title {
+        font-size: 25px;
+        line-height: 1.25;
+        letter-spacing: 6px;
+      }
+
+      body.home .home-carousel__wrapper:first-child .home-carousel__title,
+      body.home .home-carousel__wrapper .home-carousel__title {
+        font-size: 90px;
+        line-height: .967;
+        letter-spacing: 0;
+      }
+
+      body.home .home-fullwidth__panel h2,
+      body.home .p-home-news__header,
+      body.home .home-programs__collaboration-head h2,
+      body.home .home-impact h2,
+      body.home .research-cards__head h2 {
+        font-size: 50px;
+        line-height: 1.1;
+        letter-spacing: 0;
+      }
+
+      body.home .home-programs h2 {
+        font-size: 50px;
+        line-height: 1.1;
+        letter-spacing: 0;
+      }
+
+      body.home .research-cards__head>p:last-child,
+      body.home .home-impact p,
+      body.home .home-programs__collaboration-head>p,
+      body.home .home-programs__engage-copy>p:not(.eyebrow),
+      body.home .home-programs__events-copy>p:not(.eyebrow) {
+        font-size: 20px;
+        line-height: 1.75;
+      }
+
+      body.home .research-card__content h3 {
+        font-size: 25px;
+        line-height: 1.32;
+      }
+
+      body.home .research-card__content>p:not(.eyebrow) {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      body.home .home-programs__collaboration-links strong {
+        font-size: 30px;
+        line-height: 1.2;
+      }
+
+      body.home .home-programs__collaboration-links span {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    }
+
+    /* Research cards: fixed dark-blue research-tool background treatment. */
+    .research-cards {
+      background-color: #00305c;
+      background-image: url("../../pic/root/media/09-bg_rd-tool-2964bfbf.png");
+      background-attachment: fixed;
+      background-position: top center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-blend-mode: multiply;
+    }
+
+    .research-cards::before {
+      background: transparent;
+    }
+
+    @media (max-width: 700px) {
+      .research-cards {
+        background-attachment: scroll;
+      }
+    }
+  

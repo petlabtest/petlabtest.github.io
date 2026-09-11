@@ -1,0 +1,427 @@
+<style data-research-menu-layout>
+  /*
+   * Keep the shared English header independent from each page's typography.
+   * Several archived pages use Poppins/system fonts on body and some mount this
+   * component in a shadow root; inherited font metrics otherwise shift both
+   * navigation rows even though the header geometry is shared.
+   */
+  .lbl-header {
+    font-family: Arial, "Helvetica Neue", sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  .lbl-header button,
+  .lbl-header input {
+    font-family: inherit !important;
+  }
+
+  @media (max-width:1100px) {
+    .lbl-header .header-shell {
+      gap: 16px !important;
+    }
+
+    .lbl-header .mobile-actions {
+      gap: 8.8px !important;
+    }
+
+    .lbl-header .mobile-actions>.menu-toggle {
+      gap: 9.6px !important;
+    }
+
+    .lbl-header.menu-active .desktop-navigation {
+      padding: 0 24px 48px !important;
+    }
+
+    .lbl-header .primary-nav {
+      padding: 16px 0 !important;
+    }
+
+    .lbl-header .primary-nav .nav-trigger {
+      padding: 12.8px 0 !important;
+      font-size: 16px !important;
+      line-height: 25.6px !important;
+    }
+
+    .lbl-header .header-top-row {
+      padding-top: 16px !important;
+    }
+
+    .lbl-header .utility-links {
+      column-gap: 24px !important;
+    }
+
+    .lbl-header .utility-links>a,
+    .lbl-header .utility-links>.nav-group,
+    .lbl-header .utility-links>.language-toggle {
+      padding: 12.8px 0 !important;
+    }
+
+    .lbl-header .utility-links a,
+    .lbl-header .utility-links button {
+      font-size: 13.12px !important;
+      line-height: 15.744px !important;
+    }
+  }
+
+  @media (max-width:700px) {
+    .lbl-header.menu-active .desktop-navigation {
+      padding-right: 16px !important;
+      padding-left: 16px !important;
+    }
+  }
+
+  /* Force hide skip-link by default, show only on keyboard focus */
+  a.skip-link {
+    position: fixed !important;
+    top: 0 !important;
+    left: 1rem !important;
+    z-index: 9999 !important;
+    transform: translateY(-200%) !important;
+    background: #fff !important;
+    padding: .75rem 1rem !important;
+    text-decoration: none !important;
+    color: #000 !important;
+    transition: transform .2s ease !important;
+  }
+
+  a.skip-link:focus,
+  a.skip-link:focus-visible {
+    transform: translateY(0) !important;
+  }
+
+  @media (min-width:1101px) {
+    .lbl-header .header-shell {
+      width: min(calc(100% - 96px), 1600px) !important;
+    }
+
+    .lbl-header .header-top-row {
+      gap: 24px !important;
+    }
+
+    .lbl-header .utility-links a,
+    .lbl-header .utility-links button,
+    .lbl-header .header-search input,
+    .lbl-header .search-label {
+      font-size: 15px !important;
+    }
+
+    .lbl-header .utility-links>a,
+    .lbl-header .utility-links>.nav-group,
+    .lbl-header .utility-links>.language-toggle {
+      padding-right: 16.8px !important;
+      padding-left: 16.8px !important;
+    }
+
+    .lbl-header .utility-links> :first-child {
+      padding-left: 0 !important;
+    }
+
+    .lbl-header .header-search input {
+      padding: 0 11.2px 0 0 !important;
+    }
+
+    .lbl-header .primary-nav {
+      gap: 26px !important;
+    }
+
+    .lbl-header .primary-nav>.nav-group>.nav-trigger {
+      font-size: 22px !important;
+      transform: translateY(7px);
+    }
+
+    .lbl-header .primary-nav>.nav-group>.nav-trigger::after {
+      margin-left: 13.6px !important;
+    }
+
+    .lbl-header .mega-menu--research {
+      height: 460px !important;
+      min-height: 460px !important;
+    }
+
+    .lbl-header .mega-menu--research .research-menu__column--core {
+      transform: translateX(clamp(24px, 2.5vw, 40px));
+    }
+
+    .lbl-header .mega-menu--research .mega-menu__groups a {
+      font-size: 14px !important;
+      padding-right: 1.5rem !important;
+    }
+
+    .lbl-header .mega-menu--feature .mega-menu__groups a::before {
+      top: 50% !important;
+      transform: translateY(-50%);
+    }
+  }
+
+  @media (min-width:1251px) {
+    .lbl-header .primary-nav>.nav-group>.nav-trigger {
+      padding-right: 16px !important;
+      padding-left: 16px !important;
+    }
+
+    .lbl-header .primary-nav>.nav-group:last-child>.nav-trigger {
+      padding-right: 0 !important;
+    }
+
+    .lbl-header .primary-nav>.nav-group>.nav-trigger::before {
+      left: 16px !important;
+    }
+
+    .lbl-header .primary-nav>.nav-group:hover>.nav-trigger::before,
+    .lbl-header .primary-nav>.nav-group:focus-within>.nav-trigger::before,
+    .lbl-header .primary-nav>.nav-group.open>.nav-trigger::before {
+      right: 16px !important;
+    }
+
+    .lbl-header .primary-nav>.nav-group:last-child:hover>.nav-trigger::before,
+    .lbl-header .primary-nav>.nav-group:last-child:focus-within>.nav-trigger::before,
+    .lbl-header .primary-nav>.nav-group:last-child.open>.nav-trigger::before {
+      right: 0 !important;
+    }
+
+    .lbl-header .mega-menu--research {
+      grid-template-columns: minmax(320px, .78fr) minmax(0, 2.22fr) !important;
+      gap: clamp(2rem, 3vw, 4rem) !important;
+    }
+
+    .lbl-header .mega-menu--research .mega-menu__groups--three {
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      column-gap: clamp(1.5rem, 2vw, 2.5rem) !important;
+      row-gap: 0 !important;
+    }
+
+    .lbl-header .mega-menu--research .research-menu__catalog,
+    .lbl-header .mega-menu--research .research-menu__capabilities {
+      margin-top: 0 !important;
+    }
+
+    .lbl-header .mega-menu--research .research-menu__catalog h2,
+    .lbl-header .mega-menu--research .research-menu__capabilities h2 {
+      margin-bottom: 1.4rem !important;
+      transform: translateY(.55rem);
+    }
+
+    .lbl-header .mega-menu--research .research-menu__column,
+    .lbl-header .mega-menu--research .research-menu__column h2,
+    .lbl-header .mega-menu--research .research-menu__column a {
+      min-width: 0;
+      white-space: nowrap !important;
+    }
+  }
+
+  @media (min-width:1101px) and (max-width:1250px) {
+    .lbl-header .header-shell {
+      gap: 32px !important;
+    }
+
+    .lbl-header .utility-links>a,
+    .lbl-header .utility-links>.nav-group,
+    .lbl-header .utility-links>.language-toggle {
+      padding-right: 11.2px !important;
+      padding-left: 11.2px !important;
+    }
+
+    .lbl-header .utility-links> :first-child {
+      padding-left: 0 !important;
+    }
+
+    .lbl-header .primary-nav>.nav-group>.nav-trigger {
+      padding-right: 10.4px !important;
+      padding-left: 10.4px !important;
+    }
+
+    .lbl-header .mega-menu--research {
+      grid-template-columns: 245px minmax(0, 1fr) !important;
+      gap: 2rem !important;
+    }
+
+    .lbl-header .mega-menu--research .mega-menu__groups--three {
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      column-gap: 1.25rem !important;
+      row-gap: 0 !important;
+    }
+
+    .lbl-header .mega-menu--research .research-menu__catalog,
+    .lbl-header .mega-menu--research .research-menu__capabilities {
+      margin-top: 0 !important;
+    }
+
+    .lbl-header .mega-menu--research .research-menu__catalog h2,
+    .lbl-header .mega-menu--research .research-menu__capabilities h2 {
+      margin-bottom: 1.4rem !important;
+      transform: translateY(.55rem);
+    }
+
+    .lbl-header .mega-menu--research .research-menu__column,
+    .lbl-header .mega-menu--research .research-menu__column h2,
+    .lbl-header .mega-menu--research .research-menu__column a {
+      min-width: 0;
+      white-space: nowrap !important;
+    }
+  }
+</style>
+<a class="skip-link" href="#main-content"
+  style="position:fixed;top:0;left:1rem;z-index:9999;transform:translateY(-200%);background:#fff;padding:.75rem 1rem;text-decoration:none;color:#000;transition:transform .2s ease"
+  onfocus="this.style.transform='translateY(0)'" onblur="this.style.transform='translateY(-200%)'">Skip to main
+  content</a>
+<header class="site-header lbl-header" data-site-header>
+  <div class="header-shell">
+    <a class="brand" href="index.html" aria-label="Digital PET Laboratory home">
+      <img src="assets/pic/main/PETLAB.png" alt="Digital PET Laboratory">
+    </a>
+
+    <div class="desktop-navigation">
+      <div class="header-top-row">
+        <nav class="utility-links" aria-label="Utility navigation">
+          <a href="News/News-ov-en.html">News & Events</a>
+          <a href="Giving/Giving-giving-en.html">Donate</a>
+          <button class="language-toggle" type="button" data-language-toggle aria-label="Switch to Chinese"
+            onclick="var p=window.location.pathname;p=/-cn\.html$/i.test(p)?p.replace(/-cn\.html$/i,'-en.html'):/-en\.html$/i.test(p)?p.replace(/-en\.html$/i,'-cn.html'):/\/index\.html$/i.test(p)?p.replace(/index\.html$/i,'index-cn.html'):p;window.location.assign(p+window.location.search+window.location.hash)">中文</button>
+        </nav>
+        <form class="header-search" action="search.html" method="get" role="search">
+          <label class="sr-only" for="header-search-input">Search</label>
+          <input id="header-search-input" name="q" type="search" placeholder="Search" autocomplete="off" required>
+          <button type="submit" aria-label="Submit search"><span class="search-icon" aria-hidden="true"></span></button>
+        </form>
+      </div>
+
+      <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
+
+        <div class="nav-group">
+          <button type="button" class="nav-trigger" aria-expanded="false">About</button>
+          <div class="mega-menu mega-menu--feature mega-menu--about">
+            <button class="mega-menu__close" type="button" data-menu-close aria-label="Close About menu"></button>
+            <div class="mega-menu__visual"><img src="assets/pic/School/zuopin13.jpg"
+                alt="Digital PET Laboratory research team"></div>
+            <div class="mega-menu__content">
+              <p class="mega-menu__headline">Birthplace of Digital PET Technology.</p>
+              <a class="mega-menu__overview" href="About/About-about-en.html">About PETLab <span>→</span></a>
+              <div class="mega-menu__groups">
+                <div>
+                  <h2>Laboratory</h2>
+                  <a href="About/About-mission-en.html">Our Mission</a>
+                  <a href="About/About-impact-en.html">Our Impact</a>
+                  <a href="About/About-history-en.html">Our History</a>
+                </div>
+                <div>
+                  <h2>Organization</h2>
+                  <a href="About/About-leadership-en.html">Our Leadership</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="nav-group nav-group--wide nav-group--research">
+          <button type="button" class="nav-trigger" aria-expanded="false">Research</button>
+          <div class="mega-menu mega-menu--feature mega-menu--research">
+            <button class="mega-menu__close" type="button" data-menu-close aria-label="Close Research menu"></button>
+            <div class="research-menu__intro">
+              <p class="mega-menu__headline">Pushing the Limits of Scientific Understanding Through Foundational
+                Research.
+              </p>
+              <a class="mega-menu__overview" href="Research/Research-ov-en.html">Research Overview <span>→</span></a>
+            </div>
+            <div class="mega-menu__groups mega-menu__groups--three">
+              <div class="research-menu__column research-menu__column--core">
+                <h2>Research Core</h2>
+                <a href="Research/Research-Core-en.html">Multi-Voltage Threshold</a>
+                <div class="research-menu__catalog">
+                  <h2>Key Initiatives</h2>
+                  <a href="Research/Research-Initiatives-en.html">Proton Therapy Monitoring</a>
+                </div>
+                <div class="research-menu__catalog">
+                  <h2>Library</h2><a href="Research/Research-Project-en.html">Project</a><a
+                    href="Research/Research-Publication-en.html">Publication</a><a
+                    href="Capabilities/Capabilities-Instrument-en.html">Instrumentation</a>
+                </div>
+              </div>
+              <div class="research-menu__column research-menu__column--advanced">
+                <h2>Advanced Technology</h2>
+                <a href="Research/Research-Tech-Crystals-en.html">Scintillation Crystals</a><a
+                  href="Research/Research-Tech-Chips-en.html">Ultra-Weak Light Detection Chips</a><a
+                  href="Research/Research-Tech-Detectors-en.html">Particle Detectors</a><a
+                  href="Research/Research-Tech-PnI-en.html">Plug-n-Image</a><a
+                  href="Research/Research-Tech-Imaging-en.html">Image Reconstruction</a><a
+                  href="Research/Research-Tech-Instruments-en.html">Novel
+                  Instruments and Systems</a>
+              </div>
+              <div class="research-menu__column research-menu__column--discovery">
+                <h2>Discovery Science</h2><a href="Research/Research-Physics-en.html">Physical Science</a><a
+                  href="Research/Research-Medical-en.html">Medical Science</a><a
+                  href="Research/Research-Nuclear-en.html">Nuclear Science</a><a
+                  href="Research/Research-Pharmaceutical-en.html">Radiopharmaceutical Science</a>
+                <div class="research-menu__capabilities">
+                  <h2>Capabilities</h2><a href="Capabilities/Capabilities-ov-en.html">Facilities and Platforms</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-group">
+          <button type="button" class="nav-trigger" aria-expanded="false">People</button>
+          <div class="mega-menu mega-menu--feature">
+            <button class="mega-menu__close" type="button" data-menu-close
+              aria-label="Close Talent Development menu"></button>
+            <div class="mega-menu__visual"><img src="assets/pic/People/Philosophy/team.jpg"
+                alt="PETLab students and researchers">
+            </div>
+            <div class="mega-menu__content">
+              <p class="mega-menu__headline">Multidisciplinary Community, Next-Gen Research Leaders.</p>
+              <a class="mega-menu__overview" href="People/People-ov-en.html">People Overview
+                <span>→</span></a>
+              <div class="mega-menu__groups">
+                <div>
+                  <h2>Talent Development</h2><a href="People/People-Stewardship-en.html">Development Philosophy</a><a
+                    href="People/People-Group-en.html">Research Group</a><a href="People/People-Life-en.html">PETLab
+                    Life</a>
+                </div>
+                <div>
+                  <h2>Join PETLab</h2><a href="People/People-UPOP-en.html">Undergraduate Practice</a><a
+                    href="People/People-Student-en.html">Education Opportunities</a><a
+                    href="People/People-Career-en.html">Career Opportunities</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-group">
+          <button type="button" class="nav-trigger" aria-expanded="false">Engage</button>
+          <div class="mega-menu mega-menu--feature">
+            <button class="mega-menu__close" type="button" data-menu-close aria-label="Close Engage menu"></button>
+            <div class="mega-menu__visual"><img src="assets/pic/School/jianzhu32.jpg"
+                alt="International PETLab collaboration"></div>
+            <div class="mega-menu__content">
+              <p class="mega-menu__headline">Open Resources, Collaborative Science.</p>
+              <a class="mega-menu__overview" href="Engage/Engage-ov-en.html">Engage
+                Overview<span>→</span></a>
+              <div class="mega-menu__groups">
+                <div>
+                  <h2>Partner with Us</h2>
+                  <a href="Engage/Engage-Research-en.html">Research Collaboration</a>
+                  <a href="Engage/Engage-Project-en.html">Project Collaboration</a>
+                  <a href="Engage/Engage-Support-en.html">Technical Support</a>
+                </div>
+                <div>
+                  <h2>Visit and Connect</h2><a href="Engage/Engage-Visit-en.html">Visit PETLab</a><a
+                    href="Engage/Engage-Contact-en.html">Contact
+                    PETLab</a><a href="Engage/Engage-Inquiry-en.html">General Inquiry</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="mobile-actions">
+      <a class="mobile-search-link" href="search.html" aria-label="Search"><span class="search-icon"
+          aria-hidden="true"></span></a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false"
+        aria-controls="primary-navigation"><span>Menu</span><i aria-hidden="true"></i></button>
+    </div>
+  </div>
+</header>

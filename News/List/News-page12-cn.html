@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="用若干电压阈值而非高速均匀时钟采样闪烁脉冲：了解MVT数字化的原理、硬件、优势和边界。">
+  <link rel="canonical" href="https://petlab.hust.edu.cn/News/List/News-page12-cn.html"><link rel="alternate" hreflang="en" href="https://petlab.hust.edu.cn/News/News-page12-en.html"><link rel="image_src" href="../../assets/pic/news/kepu5/hero-mvt-digitization-lab.png"><link rel="icon" type="image/png" href="../../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <title>不用追着时间狂奔：多电压阈值如何数字化高速闪烁脉冲 | 数字PET实验室</title>
+  <link rel="stylesheet" media="all" href="../../assets/css/news/flexible-robot/r008.css"><link rel="stylesheet" media="all" href="../../assets/css/root/009.css"><link rel="stylesheet" media="all" href="../../assets/css/news/flexible-robot/r010.css"><link rel="stylesheet" media="all" href="../../assets/css/news/flexible-robot/r015.css"><link rel="stylesheet" media="all" href="../../assets/css/root/008.css"><link rel="stylesheet" media="all" href="../../assets/css/research/counter-cwmd/15.css"><link rel="stylesheet" media="all" href="../../assets/css/news/kepu-article.css?v=20260906-1"><link rel="stylesheet" media="all" href="../../assets/css/news/news-metadata.css"><link rel="stylesheet" href="../../assets/css/archive-consistency.css?v=20260911-news1">
+  <link rel="stylesheet" href="../../assets/css/page-canvas.css?v=20260911-1">
+</head>
+<body class="path-node page-node-type-news has-section-nav production js-alert"><a href="#main-content" class="visually-hidden focusable skip-link">跳过主要内容</a><div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas><div class="overlay"></div><div class="layout-container"><div id="petlab-header" class="petlab-component-host"></div>
+<main role="main"><a id="main-content" tabindex="-1"></a><div class="layout-content"><div class="region region-content"><div class="block block-system block-system-main-block"><article class="node node--type-news node--view-mode-full page clearfix"><div class="page__inner">
+  <div class="page__header"><div class="hero hero--small-image"><div class="hero__image"><picture><img loading="eager" fetchpriority="high" src="../../assets/pic/news/kepu5/hero-mvt-digitization-lab.png" alt="示波器上的高速脉冲和实验室多阈值数字化电子学"></picture></div><div class="hero__title-wrapper"><h1 class="hero__page-title">不用追着时间狂奔：多电压阈值如何数字化高速闪烁脉冲</h1></div></div></div>
+  <div class="page__intro"><div class="ifde-page__intro">传统采样按固定时刻询问信号“现在有多高”；MVT反过来记录信号“何时到达这个高度”。坐标轴一换，高速脉冲有了另一种数字化路径。</div></div>
+  <div class="page__content"><div role="region" aria-label="日期和来源" class="news-full__meta meta"><div class="news-full__date">2024年7月</div><div class="news-full__author">数字PET实验室</div></div>
+    <div class="news-full__body wysiwyg">
+      <p>PET中的闪烁脉冲上升极快、持续时间很短。要用传统模数转换器（ADC）忠实记录它，最直接的方法是把采样时钟提得足够高。但一台PET可能有成千上万个通道：高速ADC一旦铺开，成本、功耗、散热和数据带宽都会快速增长。</p>
+      <p>工程上常用模拟整形把脉冲“拉宽”，让较慢的电路也能测量。然而整形同时改变了原始波形，可能牺牲时间信息。多电压阈值（Multi-Voltage Threshold，MVT）数字化提出了另一条路线：不按均匀时间间隔量电压，而是在若干电压水平上记录信号穿越它们的时刻。</p>
+      <div class="science-note"><strong>可以把MVT想成地图等高线</strong>普通ADC像沿时间轴等距离拍摄山峰高度；MVT先画几条水平等高线，再记录山坡何时穿过每条线。若知道山峰大致形状，有限交点也能帮助还原轮廓。</div>
+
+      <h2 class="news-article-subheading">从时间域的网格，转向值域的网格</h2>
+      <figure class="embedded-entity paper-figure paper-figure--floated align-right"><img loading="lazy" src="../../assets/pic/news/kepu5/mvt-sampling-principle.png" alt="闪烁脉冲上升和下降时穿越多条电压阈值的示意图"><figcaption>每条阈值通常在脉冲上升沿和下降沿各产生一个过阈时刻。</figcaption></figure>
+      <p>对一个先上升后下降的脉冲，每条阈值通常得到两个交点。把这些过阈时间与脉冲先验模型结合，就能估计幅度、起始时间等参数。阈值数量由硬件预先设定，并不会因为信号上升得更快而自动增加；这使MVT特别适合变化速度高的信号。</p>
+      <p>这种“自适应”也有明确边界。信号若从未达到某条阈值，就不会留下相应采样点；若模型不能描述真实脉冲，拟合仍会偏离。MVT节省的是规则高速采样所需的硬件与数据量，并不是在没有先验知识时凭空恢复全部波形。</p>
+
+      <h2 class="news-article-subheading">比较器、TDC和DAC怎样配合</h2>
+      <figure class="embedded-entity paper-figure"><img loading="lazy" src="../../assets/pic/news/kepu5/mvt-electronics-architecture.png" alt="由多路比较器、DAC和时间数字转换器组成的MVT电子学结构"><figcaption>比较器判定过阈，TDC测量时刻，DAC提供可编程阈值。</figcaption></figure>
+      <ol class="application-list" aria-label="MVT硬件的三个核心环节">
+        <li><strong>DAC：</strong>产生若干可编程参考电压，决定值域采样的位置；</li>
+        <li><strong>比较器：</strong>在信号越过参考电压时翻转输出，把模拟交点变成数字边沿；</li>
+        <li><strong>TDC：</strong>精确测量数字边沿发生的时间，并把多通道结果汇总给上位机。</li>
+      </ol>
+      <p>当没有脉冲触发比较器时，这套事件驱动电路几乎不需要持续高速采样，因此有机会降低功耗。真正精度由整条链共同决定：电源和DAC噪声影响阈值位置，比较器的失调与延迟影响交点，TDC的分辨率和非线性影响时间标记。</p>
+      <p>早期方案可在FPGA中集成TDC和控制逻辑，便于快速迭代；面向高通道数系统，专用集成电路可进一步减少冗余器件。论文介绍的MVT ASIC采用TSMC 55 nm工艺，面积约2,524 μm × 2,280 μm，并实现8通道采样，计划用于后续全数字PET。</p>
+
+      <h2 class="news-article-subheading">阈值不只是越多越好</h2>
+      <p>阈值太少，脉冲形状约束不足；阈值太多，则比较器、TDC资源和数据量随之增加。对大脉冲，固定阈值还会让采样点集中在较低电压区域，引起能量响应非线性。阈值应围绕任务优化：时间测量更关心上升沿，能量估计则需要足够覆盖脉冲幅度和衰减段。</p>
+      <p>另一个挑战是脉冲堆积。前一个事件尚未衰减，后一个脉冲已经到来，交点序列就可能互相混合；信号低于最低阈值时还会形成“盲区”。校准、基线跟踪、脉冲分离和更可靠的统计模型，都是MVT走向更高计数率系统不可回避的部分。</p>
+
+      <h2 class="news-article-subheading">从模拟SiPM到计数阶梯</h2>
+      <figure class="embedded-entity paper-figure"><img loading="lazy" src="../../assets/pic/news/kepu5/mt-sipm-architecture.png" alt="将SiPM微单元计数阶梯送入多阈值比较器和TDC的MT-SiPM结构"><figcaption>MT-SiPM把多个微单元输出汇总成计数阶梯，再对阶梯进行阈值采样。</figcaption></figure>
+      <p>MVT还可以与SiPM读出直接结合。各微单元触发后形成阶跃，求和网络得到随时间增长的计数信号；多个计数阈值记录它跨越不同台阶的时刻，再结合微单元与入射光子的统计关系推断光子时间序列。这样有望在不让数字电路挤占大量光敏面积的情况下实现高集成读出。</p>
+      <p>但计数阈值方案比模拟脉冲MVT更依赖闪烁光产生、传输和探测过程的先验模型。微单元暗计数、串扰和饱和都会改变阶梯含义。它更像一种“有物理知识约束的压缩测量”，而不是单纯把比较器数量减少。</p>
+
+      <h2 class="news-article-subheading">一种方法，多个辐射测量场景</h2>
+      <p>MVT已经被用于全数字PET、X射线安检和辐射剂量监测，并在中子石油测井、质子治疗监测和核聚变中子观测等方向进行应用验证。这些场景的共同点，是通道多、脉冲快，且希望以较低功耗保留关键时间和能量信息。</p>
+      <p>未来的关键不只是做出更快的板卡或芯片，还要建立值域采样的系统理论：什么样的脉冲可以由哪些阈值稳定恢复，阈值怎样随噪声和任务改变，先验模型错误会带来多大偏差。回答这些问题，才能把MVT从有效的工程技巧推进为可预测、可比较的测量方法。</p>
+      <p>原文刊载于《CT理论与应用研究（中英文）》2024年第33卷第4期，页393–403，DOI：<a href="https://doi.org/10.15953/j.ctta.2024.011">10.15953/j.ctta.2024.011</a>。</p>
+    </div>
+    <div role="region" aria-label="元数据">
+      <div class="news-full__info info">
+        <div class="tagged-as">
+          <div class="tagged-as__label">相关链接</div>
+          <div class="tagged-as__tags">
+            <ul>
+              <li><a href="../../Research/Research-ov-cn.html">科学研究</a></li>
+              <li><a href="../../Research/Research-Core-cn.html">多电压阈值技术</a></li>
+              <li><a href="../../Research/Research-Tech-Detectors-cn.html">粒子探测模块</a></li>
+              <li><a href="../../Engage/Engage-ov-cn.html">科研合作</a></li>
+              <li><a href="../News-ov-cn.html">新闻报道</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></article></div></div></div></div></main><div id="petlab-footer" class="petlab-component-host"></div></div></div><script src="../../assets/js/root/r001.js"></script><script src="../../assets/js/root/script-05.js"></script><script src="../../assets/js/root/r038.js"></script><script src="../../assets/js/root/r039.js"></script><script src="../../assets/js/root/r040.js"></script><script src="../../assets/js/archive-components.js?v=20260830-1"></script></body></html>

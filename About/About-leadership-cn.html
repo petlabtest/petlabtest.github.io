@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <link rel="icon" type="image/png" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="apple-touch-icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="manifest" href="../assets/data/favicons/site.webmanifest">
+  <link rel="shortcut icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1" type="image/png">
+  <meta charset="UTF-8">
+  <title>领导团队 | 数字PET实验室</title>
+  <link rel="stylesheet" href="../assets/css/root/02-root-3a274de5.css">
+  <link rel="stylesheet" href="../assets/css/about/research-team-archive/team-intro.css">
+  <style>
+    /* Keep the four feature biographies readable without overflowing their cards. */
+    .industry-list>.industry-item .industry-item-info p {
+      font-family: "Poppins", Arial, sans-serif;
+      font-size: 16px !important;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    /* Match the light-grey Research Core callout while preserving the
+       alternating leadership composition. */
+    .industry-list .industry-item-info-dark {
+      background: #E2E2E2 !important;
+      color: #000 !important;
+    }
+
+    .industry-list .industry-item-info-dark .more-icon2 {
+      filter: brightness(0);
+    }
+
+    .industry-list h2 a,
+    .industry-list h2 a:visited,
+    .industry-list h2 a:hover,
+    .industry-list h2 a:focus {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    @font-face {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 300;
+      src: url("../assets/fonts/root/media/r024.woff2") format("woff2");
+    }
+
+    @font-face {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      src: url("../assets/fonts/root/media/r025.woff2") format("woff2");
+    }
+
+    @font-face {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      src: url("../assets/fonts/root/media/r026.woff2") format("woff2");
+    }
+
+    /* Match People-Page1-t.html's page-title styling without changing title sizes. */
+    .industry-list h2,
+    .industry-list h3 {
+      color: inherit;
+      font-family: "Poppins", Arial, sans-serif;
+      font-weight: 600;
+      line-height: 1.2;
+      text-transform: none;
+    }
+
+    .industry-item:first-child .industry-item-info h2 {
+      position: relative;
+      top: 0.5rem;
+    }
+
+    /* Align the image edge with the blue information panel on the two
+       left-aligned leadership rows. */
+    .industry-list>.industry-item:not(.industry-item-alt)>.industry-item-img {
+      left: 6rem !important;
+    }
+
+    /* Keep biographies readable as the viewport changes. */
+    .industry-list>.industry-item .industry-item-info p {
+      font-size: clamp(17px, 1.05vw, 19px) !important;
+      line-height: 1.6;
+    }
+
+    .team-card p {
+      font-size: clamp(14px, 0.95vw, 17px) !important;
+      line-height: 1.75;
+    }
+
+    .team-card p.detailed-intro {
+      font-size: clamp(14px, 0.9vw, 16px) !important;
+      line-height: 1.75;
+    }
+
+    /* Shared About-page hero styling. */
+    .about-hero-wrap {
+      position: relative;
+      min-height: min(78vh, 820px);
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      color: #fff;
+      background-color: #00305c;
+    }
+
+    .about-hero-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, .76), transparent 54%), linear-gradient(90deg, rgba(0, 20, 34, .18), transparent 70%);
+    }
+
+    .about-hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(calc(100% - 116px), 1280px);
+      margin: 0 auto;
+      padding-left: 18px;
+      padding-bottom: 52px;
+    }
+
+    .about-hero-title {
+      margin: 0;
+      font-size: clamp(3rem, 6vw, 5.2rem);
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+
+    .about-hero-wrap+.industry-main {
+      margin-top: 0;
+      padding-top: 40px;
+    }
+
+    @media (max-width: 1100px) {
+      .about-hero-wrap {
+        min-height: min(78vh, 820px);
+      }
+
+      .about-hero-inner {
+        width: calc(100% - 36px);
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    /* Chapter navigation styles. */
+    .industry-main>.mitll-ll-pub-nav-chapters {
+      width: 100%;
+      margin: 0;
+      padding: 30px;
+      box-sizing: border-box;
+      background: rgba(0, 25, 41, .95);
+      color: #fff;
+    }
+
+    .industry-main .mitll-ll-pub-nav-chapters-inner {
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .industry-main .mitll-ll-pub-nav-chapters h3 {
+      margin: 0 0 40px;
+      color: #fff;
+      font-size: 30px;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    .industry-main .mitll-ll-pub-bottom-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .industry-main .mitll-ll-pub-bottom-nav>li {
+      position: relative;
+      flex: 0 0 100%;
+      min-width: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .industry-main .ll-section-nav {
+      position: relative;
+      display: block;
+      height: 100%;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .industry-main .ll-pub-bottom-nav-img {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      background: #00305c;
+    }
+
+    .industry-main .ll-pub-bottom-nav-img::after {
+      position: absolute;
+      inset: 0;
+      background: #008eff;
+      content: "";
+      opacity: .7;
+      transition: opacity .8s ease;
+    }
+
+    .industry-main .ll-pub-bottom-nav-img img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1.25s ease;
+    }
+
+    .industry-main .ll-nav-text-side {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .industry-main .ll-nav-title {
+      width: 100%;
+      margin: 0;
+      padding: 7px;
+      box-sizing: border-box;
+      color: #fff;
+      background: rgba(0, 48, 92, .7);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 38px;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    .industry-main .ll-current-chapter .ll-pub-bottom-nav-img::after,
+    .industry-main .ll-current-chapter .ll-nav-title {
+      background: rgba(255, 255, 255, .7);
+      color: #00305c;
+    }
+
+    .industry-main .ll-section-nav:hover .ll-pub-bottom-nav-img::after {
+      opacity: 0;
+    }
+
+    .industry-main .ll-section-nav:hover .ll-pub-bottom-nav-img img {
+      transform: scale(1.15);
+    }
+
+    .industry-main .ll-section-nav:hover .ll-nav-title {
+      padding-bottom: 15px;
+    }
+
+    @media (min-width: 700px) {
+      .industry-main>.mitll-ll-pub-nav-chapters {
+        padding: 45px 30px 50px;
+      }
+
+      .industry-main .mitll-ll-pub-bottom-nav>li {
+        flex-basis: calc(50% - 5px);
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .industry-main>.mitll-ll-pub-nav-chapters {
+        padding-top: 60px;
+        padding-bottom: 80px;
+      }
+
+      .industry-main .mitll-ll-pub-bottom-nav>li {
+        flex-basis: calc(20% - 8px);
+      }
+    }
+  </style>
+  <style>
+    /* Image-free sloped title hero, matching Engage-Research-en.html. */
+    .about-hero-wrap {
+      position: relative;
+      isolation: isolate;
+      min-height: clamp(225px, 27.1vw, 390px) !important;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      color: #fff;
+      background: none !important;
+    }
+
+    .about-hero-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: #00305c;
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - clamp(42px, 10.85vw, 156px)), 0 100%);
+    }
+
+    .about-hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(calc(100% - 100px), 1000px);
+      margin: 0 auto;
+      padding: 24px 0 72px !important;
+    }
+
+    .about-hero-title {
+      margin: 0;
+      color: #fff;
+      font-family: "Arial", "Helvetica Neue", sans-serif;
+      font-size: clamp(40px, 5vw, 65px);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 699px) {
+      .about-hero-wrap {
+        min-height: 225px !important;
+      }
+
+      .about-hero-inner {
+        width: calc(100% - 30px);
+        padding: 14px 0 52px !important;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../assets/css/archive-consistency.css?v=20260908-wide1">
+  <link rel="stylesheet" href="../assets/css/about-explore-nav.css?v=20260911-4">
+  <link rel="stylesheet" href="../assets/css/page-canvas.css?v=20260911-1">
+</head>
+
+<body class="page-about-leadership page-about-wide">
+  <div id="petlab-header" class="petlab-component-host"></div>
+  <section class="about-hero-wrap">
+    <div class="about-hero-inner">
+      <h1 class="about-hero-title">领导团队</h1>
+    </div>
+  </section>
+  <main class="industry-main">
+    <section class="industry-list">
+      <!-- 谢庆国 -->
+      <div class="industry-item">
+        <div class="industry-item-img" style="
+              background-image: url('../assets/pic/root/media/08-1-2289e8d5.jpg');
+              width: 42rem;
+              height: 35rem;
+              left: 8rem;
+              background-size: cover; /* 图片覆盖整个区域 */
+              background-repeat: no-repeat; /* 防止图片重复 */
+              background-position: center; /* 图片居中显示 */
+            "></div>
+        <div class="industry-item-info industry-item-info-blue" style="
+              position: absolute;
+              left: 6rem;
+              top: 8rem;
+              width: 86rem;
+              height: 27rem;
+              background: var(--theme-color1);
+              color: #fff;
+              padding: 2.5rem 3rem 4.5rem 48rem;
+            ">
+          <h2><a href="./About-QingguoXie-cn.html">谢庆国</a></h2>
+          <p>
+            中国国籍，武汉光电国家实验室及华中科技大学博士生导师，武汉光电国家研究中心、华中科技大学教授，博士生导师，全数字PET发明人。专注于正电子发射断层成像（Positron Emission
+            Tomography，简称PET）方法研究和仪器研制。2001年在华中科技大学创立数字PET实验室，历经理论创新、技术突破和系统创制的三个阶段，开辟了全数字PET这一新方向，完成了脉冲数字化方法、探测器技术、成像系统三个层面的创新，实现了从概念到系统、从原理到应用的跨越。
+          </p>
+          <a href="./About-QingguoXie-cn.html" style="
+                color: inherit;
+                text-decoration: none;
+                position: absolute;
+                right: 6rem;
+                bottom: 3rem;
+              "><img src="../assets/pic/about/research-team-archive/more2.svg" alt="了解更多" class="more-icon2"></a>
+
+        </div>
+      </div>
+      <!-- 肖鹏 -->
+      <div class="industry-item industry-item-alt">
+        <div class="industry-item-img" style="
+              background-image: url('../assets/pic/root/media/08-2-6a3706b1.jpg');
+              width: 42rem;
+              height: 35rem;
+              left: 50rem;
+              background-size: cover; /* 图片覆盖整个区域 */
+              background-repeat: no-repeat; /* 防止图片重复 */
+              background-position: center; /* 图片居中显示 */
+            "></div>
+        <div class="industry-item-info industry-item-info-dark" style="
+              position: absolute;
+              left: 6rem;
+              top: 8rem;
+              width: 86rem;
+              height: 27rem;
+              background: var(--theme-color2);
+              color: #fff;
+              padding: 2.5rem 46rem 4.5rem 4rem;
+            ">
+          <h2><a href="./About-PengXiao-cn.html">肖鹏</a></h2>
+          <p>
+            中国国籍，华中科技大学生命科学与技术学院教授，博士生导师。专注于正电子发射断层成像（PET）数据流处理和图像重建以及智能化适应性PET系统设计。提出基于列表模式数据的规则松弛有序子集算法（LMROS），解决了稀疏数据重建难题，在低计数率及截断数据条件下实现高质量图像重建。面向新兴实际应用，开发了一系列灵活开放的全数字PET成像系统，实现了针对多样化应用场景的高性能定制化和适应性成像。
+          </p>
+          <a href="./About-PengXiao-cn.html" style="
+                color: inherit;
+                text-decoration: none;
+                position: absolute;
+                left: 38rem;
+                bottom: 3rem;
+              "><img src="../assets/pic/about/research-team-archive/more2.svg" alt="了解更多" class="more-icon2"></a>
+        </div>
+      </div>
+      <!-- Nicola D' Ascenzo -->
+      <div class="industry-item">
+        <div class="industry-item-img" style="
+              background-image: url('../assets/pic/About/People/3-1.jpg');
+              width: 42rem;
+              height: 35rem;
+              left: 8rem;
+              background-size: cover; /* 图片覆盖整个区域 */
+              background-repeat: no-repeat; /* 防止图片重复 */
+              background-position: center; /* 图片居中显示 */
+            "></div>
+        <div class="industry-item-info industry-item-info-blue" style="
+              position: absolute;
+              left: 6rem;
+              top: 8rem;
+              width: 86rem;
+              height: 27rem;
+              background: var(--theme-color1);
+              color: #fff;
+              padding: 2.5rem 4rem 4.5rem 48rem;
+            ">
+          <h2><a href="./About-Nicola-cn.html">Nicola D' Ascenzo</a></h2>
+          <p>
+            意大利国籍，华中科技大学生命科学与技术学院教授，博士生导师。专注于单光子检测芯片中的光子响应机制及信号处理方法以及新型正电子发射断层成像（PET）系统设计与成像技术研究（包括头盔式PET和农业用PET）。致力于全数字硅光电倍增管（SiPM）和便携式PET成像设备的研发。
+          </p>
+          <a href="./About-Nicola-cn.html" style="
+                color: inherit;
+                text-decoration: none;
+                position: absolute;
+                right: 6rem;
+                bottom: 3rem;
+              "><img src="../assets/pic/about/research-team-archive/more2.svg" alt="了解更多" class="more-icon2"></a>
+        </div>
+      </div>
+      <!-- 郑睿 -->
+      <div class="industry-item industry-item-alt">
+        <div class="industry-item-img" style="
+              background-image: url('../assets/pic/About/People/4-1.jpg');
+              width: 42rem;
+              height: 35rem;
+              left: 50rem;
+              background-size: cover; /* 图片覆盖整个区域 */
+              background-repeat: no-repeat; /* 防止图片重复 */
+              background-position: center; /* 图片居中显示 */
+            "></div>
+        <div class="industry-item-info industry-item-info-dark" style="
+              position: absolute;
+              left: 6rem;
+              top: 8rem;
+              width: 86rem;
+              height: 27rem;
+              background: var(--theme-color2);
+              color: #fff;
+              padding: 2.5rem 46rem 4.5rem 4rem;
+            ">
+          <h2><a href="./About-LinWan-cn.html">万琳</a></h2>
+          <p>
+            中国国籍，华中科技大学软件学院教授，博士生导师。专注于建立Plug-n-Image技术体系以促进检测及成像系统的快速开发与创新应用。围绕该系统构建，探索标准化、模块化的核心操作方法以及从检测到成像的全计算流程接入机制，并采用人工智能（AI）方法进行医学影像特征提取和临床认知获取。
+          </p>
+          <a href="./About-LinWan-cn.html" style="
+                color: inherit;
+                text-decoration: none;
+                position: absolute;
+                left: 38rem;
+                bottom: 3rem;
+              "><img src="../assets/pic/about/research-team-archive/more2.svg" alt="了解更多" class="more-icon2"></a>
+        </div>
+      </div>
+      <!-- 其他成员 -->
+      <section class="team-section">
+        <div class="team-container">
+          <!-- 成员卡片1 -->
+
+          <!-- 成员卡片2 -->
+          <div class="team-card">
+            <img src="../assets/pic/root/media/team-4.jpg" alt="郑睿">
+            <h3>郑睿</h3>
+            <p style="text-align: center; font-size: 1rem; margin-top: 0rem;">中国国籍，博士</p>
+            <p>
+              中国科学技术大学信息科学技术学院电子工程与信息科学系（6系）特任副研究员。</p>
+            <p class="detailed-intro" style="font-size: 0.75rem;">
+              专注于单光子辐射探测的新材料及新方法研究。致力于开发性能卓越的新型闪烁发光机制和闪烁晶体材料。
+            </p>
+          </div>
+          <!-- 成员卡片3 -->
+          <div class="team-card">
+            <img src="../assets/pic/about/research-team-archive/team-6.jpg" alt="李炳轩">
+            <h3>李炳轩</h3>
+            <p style="text-align: center; font-size: 1rem; margin-top: 0rem;">中国国籍，博士</p>
+            <p>
+              合肥综合性国家科学中心人工智能研究院副研究员
+            </p>
+            <p class="detailed-intro" style="font-size: 0.75rem;">
+              国家重点研发计划项目首席科学家，中国数字PET行业标准主要起草人之一。专注于新型PET成像系统设计和医学图像重建。
+            </p>
+          </div>
+          <!-- 成员卡片4 -->
+          <div class="team-card">
+            <img src="../assets/pic/about/research-team-archive/team-7.jpg" alt="奚道明">
+            <h3>奚道明</h3>
+            <p style="text-align: center; font-size: 1rem; margin-top: 0rem;">中国国籍，博士</p>
+            <p>
+              合肥综合性国家科学中心人工智能研究院副研究员
+            </p>
+            <p class="detailed-intro" style="font-size: 0.75rem;">
+              专注于光子计数X射线探测器的设计与成像系统的研制，提出了FPGA-only MVT digitizer技术方案并设计了相应的电路系统。
+            </p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+
+
+    <!-- Interests -->
+    <div class="mitll-ll-pub-nav mitll-ll-pub-nav-chapters about-explore-section">
+      <div class="mitll-ll-pub-nav-chapters-inner">
+        <h3>探索您感兴趣的内容</h3>
+        <ul class="mitll-ll-pub-bottom-nav about-explore-nav">
+          <li class="ll-ot">
+            <a href="About-about-cn.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/root/media/2-3.jpg" alt="关于我们" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">关于我们</div>
+              </div>
+            </a>
+          </li>
+          <li class="ll-ot">
+            <a href="About-mission-cn.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/about/explore-nav/mission-v3.jpg" alt="使命愿景" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">使命愿景</div>
+              </div>
+            </a>
+          </li>
+          <li class="ll-ot">
+            <a href="About-impact-cn.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/about/explore-nav/impact-v2.jpg" alt="学术影响" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">学术影响</div>
+              </div>
+            </a>
+          </li>
+          <li class="ll-ot">
+            <a href="About-history-cn.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/about/explore-nav/history.jpg" alt="发展历程" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">发展历程</div>
+              </div>
+            </a>
+          </li>
+          <li class="ll-current-chapter">
+            <a href="About-leadership-cn.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/about/explore-nav/leadership-v2.jpg" alt="领导团队" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">领导团队</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
+
+  </main>
+  <!-- 底部版权 -->
+  <div class="footer-container">
+    <div class="footer-main">
+      <div class="footer-info-cols">
+        <div class="footer-contact">
+          <div>petlab@ustc.edu.cn</div>
+          <div>中国科学技术大学高科技园区新知楼九层</div>
+          <div><br></div>
+        </div>
+        <div class="footer-links">
+          <div><a href="http://www.raysolution.com">RAYSOLUTION: www.raysolution.com</a></div>
+          <div><a href="http://www.ray-can.com">RAYCAN: www.ray-can.com</a></div>
+          <div><a href="http://www.ray-quant.com">RAYQUANT: www.ray-quant.com</a></div>
+        </div>
+      </div>
+      <div class="footer-qrcode-wrap">
+        <img src="../assets/pic/root/media/09-qrcode-7418dd1f.png" alt="二维码" class="footer-qrcode">
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>版权所有：智能检测与成像实验室，中国科学技术大学</span>
+    </div>
+  </div>
+  <div id="petlab-footer" class="petlab-component-host"></div>
+  <style>
+    .header-container,
+    .header-spacer,
+    .footer-container {
+      display: none !important
+    }
+
+    .petlab-component-host {
+      display: block;
+      position: relative;
+      width: 100%
+    }
+
+    #petlab-header {
+      z-index: 999;
+      overflow: visible
+    }
+
+    #petlab-footer {
+      z-index: 1
+    }
+  </style>
+  <script src="../assets/js/about/team-page-components.js?v=20260830-1"></script>
+
+
+</body>
+
+</html>

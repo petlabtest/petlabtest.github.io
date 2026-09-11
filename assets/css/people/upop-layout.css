@@ -1,0 +1,33 @@
+/* Widescreen corrections for the archived UPOP page layout. */
+@media (min-width: 1800px) {
+  body.page-people-upop .hero--small-image .hero__image {
+    overflow: hidden !important;
+  }
+
+  body.page-people-upop .hero--small-image .hero__image img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  body.page-people-upop .hero--small-image .hero__title-wrapper {
+    width: calc(100% - ((100% - 990px) / 2)) !important;
+    max-width: calc(100% - ((100% - 990px) / 2)) !important;
+  }
+
+  body.page-people-upop .ifde-page__paragraphs > .ll-pub-section {
+    left: auto !important;
+    right: auto !important;
+    width: min(100%, 1600px) !important;
+    max-width: 1600px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    transform: none !important;
+  }
+
+  body.page-people-upop .ifde-page__paragraphs > .ll-accent-light_blue.ll-background-none {
+    background-color: #fff !important;
+  }
+}

@@ -1,0 +1,170 @@
+/* Final layout layer for bilingual researcher detail pages. */
+body.team-profile-page {
+  --profile-shell: 1600px;
+  --profile-copy: 1200px;
+}
+
+body.team-profile-page .team-detail-main {
+  width: min(100%, var(--profile-shell)) !important;
+  max-width: var(--profile-shell) !important;
+  margin-inline: auto !important;
+  overflow: visible;
+}
+
+/* Profile header: four explicit layers, independent from the body and CTA. */
+body.team-profile-page .team-detail-top {
+  position: relative !important;
+  isolation: isolate;
+  display: grid !important;
+  grid-template-columns: minmax(360px, 42%) minmax(0, 1fr);
+  align-items: center !important;
+  width: 100% !important;
+  min-height: 520px;
+  margin: 170px 0 0 !important;
+  padding: 0 90px 36px !important;
+  box-sizing: border-box;
+  color: #fff;
+  background: transparent !important;
+  overflow: visible;
+}
+
+body.team-profile-page .team-detail-top::before {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 130px;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background: var(--theme-color1, #0f4c81);
+}
+
+body.team-profile-page .team-detail-top > div:first-child {
+  position: absolute !important;
+  z-index: 0 !important;
+  top: -170px !important;
+  right: 0 !important;
+  bottom: auto !important;
+  left: auto !important;
+  width: calc(100% - 250px) !important;
+  height: 570px !important;
+  margin: 0 !important;
+}
+
+body.team-profile-page .team-detail-photo {
+  position: relative !important;
+  z-index: 2 !important;
+  grid-column: 1;
+  width: min(100%, 520px) !important;
+  height: 560px !important;
+  margin: -100px 0 0 0 !important;
+  box-sizing: border-box;
+}
+
+body.team-profile-page .team-detail-info {
+  position: relative !important;
+  z-index: 2 !important;
+  top: 0 !important;
+  grid-column: 2;
+  min-width: 0;
+  margin: 20px 70px 0 42px !important;
+}
+
+body.team-profile-page .team-detail-info .lab-full__body p {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+/* Biography: a readable column on the white page canvas. */
+body.team-profile-page .team-detail-block {
+  width: min(var(--profile-copy), calc(100% - 80px)) !important;
+  max-width: var(--profile-copy) !important;
+  margin: 0 auto !important;
+  padding: 0 0 60px 40px !important;
+  box-sizing: border-box;
+  background: #fff !important;
+}
+
+/* CTA: full shell width, independent from the narrower biography column. */
+body.team-profile-page .team-detail-main > .paragraph--type-p-fullwidth:last-child {
+  width: 100% !important;
+  max-width: var(--profile-shell) !important;
+  margin: 20px 0 0 !important;
+  box-sizing: border-box;
+}
+
+body.team-profile-page .team-detail-main > .paragraph--type-p-fullwidth:last-child .p-fullwidth__content {
+  width: min(var(--profile-copy), calc(100% - 80px)) !important;
+  max-width: var(--profile-copy) !important;
+  margin-inline: auto !important;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1100px) {
+  body.team-profile-page .team-detail-top {
+    grid-template-columns: minmax(280px, 40%) minmax(0, 1fr);
+    min-height: 440px;
+    margin-top: 120px !important;
+    padding: 0 36px 30px !important;
+  }
+
+  body.team-profile-page .team-detail-top::before {
+    right: 60px;
+  }
+
+  body.team-profile-page .team-detail-top > div:first-child {
+    top: -120px !important;
+    width: calc(100% - 130px) !important;
+    height: 480px !important;
+  }
+
+  body.team-profile-page .team-detail-photo {
+    height: 430px !important;
+    margin-top: -70px !important;
+  }
+
+  body.team-profile-page .team-detail-info {
+    margin: 12px 36px 0 30px !important;
+  }
+}
+
+@media (max-width: 699px) {
+  body.team-profile-page .team-detail-main {
+    width: 100% !important;
+  }
+
+  body.team-profile-page .team-detail-top {
+    display: block !important;
+    min-height: 0;
+    margin-top: 0 !important;
+    padding: 20px 15px 36px !important;
+    background: var(--theme-color1, #0f4c81) !important;
+  }
+
+  body.team-profile-page .team-detail-top::before,
+  body.team-profile-page .team-detail-top > div:first-child {
+    display: none !important;
+  }
+
+  body.team-profile-page .team-detail-photo {
+    width: 100% !important;
+    height: min(112vw, 480px) !important;
+    margin: 0 !important;
+  }
+
+  body.team-profile-page .team-detail-info {
+    margin: 24px 0 0 !important;
+  }
+
+  body.team-profile-page .team-detail-block {
+    width: calc(100% - 30px) !important;
+    padding: 0 0 40px !important;
+    border-left: 0;
+  }
+
+  body.team-profile-page .team-detail-main > .paragraph--type-p-fullwidth:last-child .p-fullwidth__content {
+    width: calc(100% - 30px) !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}

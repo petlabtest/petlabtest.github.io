@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/png" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="apple-touch-icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="manifest" href="../assets/data/favicons/site.webmanifest">
+  <link rel="shortcut icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1" type="image/png">
+  <meta charset="UTF-8">
+  <title>Leadership | Digital PET Laboratory</title>
+  <link rel="stylesheet" href="../assets/css/root/02-root-3a274de5.css">
+  <link rel="stylesheet" href="../assets/css/about/research-team-archive/team-intro.css">
+  <style>
+    /* Keep the longer English biographies at the original card scale. */
+    .industry-list>.industry-item .industry-item-info p {
+      font-family: "Poppins", Arial, sans-serif;
+      font-size: 0.9rem !important;
+      font-weight: 100;
+      line-height: 2;
+    }
+
+    /* Match the light-grey Research Core callout while preserving the
+       alternating leadership composition. */
+    .industry-list .industry-item-info-dark {
+      background: #E2E2E2 !important;
+      color: #000 !important;
+    }
+
+    .industry-list .industry-item-info-dark .more-icon2 {
+      filter: brightness(0);
+    }
+
+    .industry-list h2 a,
+    .industry-list h2 a:visited,
+    .industry-list h2 a:hover,
+    .industry-list h2 a:focus {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    @font-face {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 300;
+      src: url("../assets/fonts/root/media/r024.woff2") format("woff2");
+    }
+
+    @font-face {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      src: url("../assets/fonts/root/media/r025.woff2") format("woff2");
+    }
+
+    @font-face {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      src: url("../assets/fonts/root/media/r026.woff2") format("woff2");
+    }
+
+    /* Match People-Page1-t.html's page-title styling without changing title sizes. */
+    .industry-list h2,
+    .industry-list h3 {
+      color: inherit;
+      font-family: "Poppins", Arial, sans-serif;
+      font-weight: 600;
+      line-height: 1.2;
+      text-transform: none;
+    }
+
+    .industry-item:first-child .industry-item-info h2 {
+      position: relative;
+      top: 0.5rem;
+    }
+
+    /* Shared About-page hero styling. */
+    .about-hero-wrap {
+      position: relative;
+      min-height: min(78vh, 820px);
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      color: #fff;
+      background-color: #00305c;
+    }
+
+    .about-hero-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, .76), transparent 54%), linear-gradient(90deg, rgba(0, 20, 34, .18), transparent 70%);
+    }
+
+    .about-hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(calc(100% - 116px), 1280px);
+      margin: 0 auto;
+      padding-left: 18px;
+      padding-bottom: 52px;
+    }
+
+    .about-hero-title {
+      margin: 0;
+      font-size: clamp(3rem, 6vw, 5.2rem);
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+
+    .about-hero-wrap+.industry-main {
+      margin-top: 0;
+      padding-top: 40px;
+    }
+
+    @media (max-width: 1100px) {
+      .about-hero-wrap {
+        min-height: min(78vh, 820px);
+      }
+
+      .about-hero-inner {
+        width: calc(100% - 36px);
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    /* Chapter navigation styles. */
+    .industry-main>.mitll-ll-pub-nav-chapters {
+      width: 100%;
+      margin: 0;
+      padding: 30px;
+      box-sizing: border-box;
+      background: rgba(0, 25, 41, .95);
+      color: #fff;
+    }
+
+    .industry-main .mitll-ll-pub-nav-chapters-inner {
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .industry-main .mitll-ll-pub-nav-chapters h3 {
+      margin: 0 0 40px;
+      color: #fff;
+      font-size: 30px;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    .industry-main .mitll-ll-pub-bottom-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .industry-main .mitll-ll-pub-bottom-nav>li {
+      position: relative;
+      flex: 0 0 100%;
+      min-width: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .industry-main .ll-section-nav {
+      position: relative;
+      display: block;
+      height: 100%;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .industry-main .ll-pub-bottom-nav-img {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      background: #00305c;
+    }
+
+    .industry-main .ll-pub-bottom-nav-img::after {
+      position: absolute;
+      inset: 0;
+      background: #008eff;
+      content: "";
+      opacity: .7;
+      transition: opacity .8s ease;
+    }
+
+    .industry-main .ll-pub-bottom-nav-img img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1.25s ease;
+    }
+
+    .industry-main .ll-nav-text-side {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .industry-main .ll-nav-title {
+      width: 100%;
+      margin: 0;
+      padding: 7px;
+      box-sizing: border-box;
+      color: #fff;
+      background: rgba(0, 48, 92, .7);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 38px;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    .industry-main .ll-current-chapter .ll-pub-bottom-nav-img::after,
+    .industry-main .ll-current-chapter .ll-nav-title {
+      background: rgba(255, 255, 255, .7);
+      color: #00305c;
+    }
+
+    .industry-main .ll-section-nav:hover .ll-pub-bottom-nav-img::after {
+      opacity: 0;
+    }
+
+    .industry-main .ll-section-nav:hover .ll-pub-bottom-nav-img img {
+      transform: scale(1.15);
+    }
+
+    .industry-main .ll-section-nav:hover .ll-nav-title {
+      padding-bottom: 15px;
+    }
+
+    @media (min-width: 700px) {
+      .industry-main>.mitll-ll-pub-nav-chapters {
+        padding: 45px 30px 50px;
+      }
+
+      .industry-main .mitll-ll-pub-bottom-nav>li {
+        flex-basis: calc(50% - 5px);
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .industry-main>.mitll-ll-pub-nav-chapters {
+        padding-top: 60px;
+        padding-bottom: 80px;
+      }
+
+      .industry-main .mitll-ll-pub-bottom-nav>li {
+        flex-basis: calc(20% - 8px);
+      }
+    }
+  </style>
+  <style>
+    /* Image-free sloped title hero, matching Engage-Research-en.html. */
+    .about-hero-wrap {
+      position: relative;
+      isolation: isolate;
+      min-height: clamp(225px, 27.1vw, 390px) !important;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      color: #fff;
+      background: none !important;
+    }
+
+    .about-hero-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: #00305c;
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - clamp(42px, 10.85vw, 156px)), 0 100%);
+    }
+
+    .about-hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(calc(100% - 100px), 1000px);
+      margin: 0 auto;
+      padding: 24px 0 72px !important;
+    }
+
+    .about-hero-title {
+      margin: 0;
+      color: #fff;
+      font-family: "Arial", "Helvetica Neue", sans-serif;
+      font-size: clamp(40px, 5vw, 65px);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 699px) {
+      .about-hero-wrap {
+        min-height: 225px !important;
+      }
+
+      .about-hero-inner {
+        width: calc(100% - 30px);
+        padding: 14px 0 52px !important;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../assets/css/archive-consistency.css?v=20260908-wide1">
+  <link rel="stylesheet" href="../assets/css/about-explore-nav.css?v=20260911-4">
+  <link rel="stylesheet" href="../assets/css/page-canvas.css?v=20260911-1">
+</head>
+
+<body class="page-about-leadership page-about-wide">
+  <div id="petlab-header" class="petlab-component-host"></div>
+  <section class="about-hero-wrap">
+    <div class="about-hero-inner">
+      <h1 class="about-hero-title">Our Leadership</h1>
+    </div>
+  </section>
+  <main class="industry-main">
+    <section class="industry-list">
+      <!-- 谢庆国 -->
+      <div class="industry-item">
+        <div class="industry-item-img" style="
+              background-image: url('../assets/pic/root/media/08-1-2289e8d5.jpg');
+              width: 42rem;
+              height: 35rem;
+              left: 8rem;
+              background-size: cover; /* 图片覆盖整个区域 */
+              background-repeat: no-repeat; /* 防止图片重复 */
+              background-position: center; /* 图片居中显示 */
+            "></div>
+        <div class="industry-item-info industry-item-info-blue" style="
+              position: absolute;
+              left: 6rem;
+              top: 8rem;
+              width: 86rem;
+              height: 27rem;
+              background: var(--theme-color1);
+              color: #fff;
+              padding: 2.5rem 3rem 4.5rem 48rem;
+            ">
+          <h2><a href="./About-QingguoXie-en.html">Qingguo Xie</a></h2>
+          <p>
+            Chinese national, Ph.D. Professor and doctoral supervisor of Wuhan National Laboratory for Optoelectronics
+            and Huazhong University of Science and Technology, as well as the inventor of all-digital PET technology.
+            His research focuses on methodological exploration and instrument development for Positron Emission
+            Tomography (PET). In 2001, he established the Digital PET Laboratory at Huazhong University of Science and
+            Technology. He has achieved systematic innovations in pulse digitization methodologies, detector
+            technologies, and imaging system architectures, accomplishing a comprehensive technological leap from
+            conceptual proposition and fundamental principles to mature system implementation and practical application.
+          </p>
+          <a href="./About-QingguoXie-en.html" style="
+                color: inherit;
+                text-decoration: none;
+                position: absolute;
+                right: 6rem;
+                bottom: 3rem;
+              "><img src="../assets/pic/about/research-team-archive/more2.svg" alt="了解更多" class="more-icon2"></a>
+
+        </div>
+      </div>
+      <!-- 肖鹏 -->
+      <div class="industry-item industry-item-alt">
+        <div class="industry-item-img" style="
+              background-image: url('../assets/pic/root/media/08-2-6a3706b1.jpg');
+              width: 42rem;
+              height: 35rem;
+              left: 50rem;
+              background-size: cover; /* 图片覆盖整个区域 */
+              background-repeat: no-repeat; /* 防止图片重复 */
+              background-position: center; /* 图片居中显示 */
+            "></div>
+        <div class="industry-item-info industry-item-info-dark" style="
+              position: absolute;
+              left: 6rem;
+              top: 8rem;
+              width: 86rem;
+              height: 27rem;
+              background: var(--theme-color2);
+              color: #fff;
+              padding: 2.5rem 46rem 4.5rem 4rem;
+            ">
+          <h2><a href="./About-PengXiao-en.html">Peng Xiao</a></h2>
+          <p>
+            Chinese national, Ph.D. Professor and doctoral supervisor of Huazhong University of Science and Technology.
+            Focuses on signal processing and image reconstruction oriented to PET data flow, as well as the design of
+            intelligently adaptive PET systems. A list-mode-data-based regularized relaxed ordered subsets (LMROS)
+            algorithm is proposed to address the challenge of sparse-data reconstruction, which enables high-quality
+            image reconstruction under low-count and truncated-data conditions. Targeted at emerging practical
+            applications, he has developed a series of flexible and open all digital PET systems, achieving
+            high-performance imaging customized and adaptable for diverse application scenarios.
+          </p>
+          <a href="./About-PengXiao-en.html" style="
+                color: inherit;
+                text-decoration: none;
+                position: absolute;
+                left: 38rem;
+                bottom: 3rem;
+              "><img src="../assets/pic/about/research-team-archive/more2.svg" alt="了解更多" class="more-icon2"></a>
+        </div>
+      </div>
+      <!-- Nicola D' Ascenzo -->
+      <div class="industry-item">
+        <div class="industry-item-img" style="
+              background-image: url('../assets/pic/About/People/3-1.jpg');
+              width: 42rem;
+              height: 35rem;
+              left: 8rem;
+              background-size: cover; /* 图片覆盖整个区域 */
+              background-repeat: no-repeat; /* 防止图片重复 */
+              background-position: center; /* 图片居中显示 */
+            "></div>
+        <div class="industry-item-info industry-item-info-blue" style="
+              position: absolute;
+              left: 6rem;
+              top: 8rem;
+              width: 86rem;
+              height: 27rem;
+              background: var(--theme-color1);
+              color: #fff;
+              padding: 2.5rem 4rem 4.5rem 48rem;
+            ">
+          <h2><a href="./About-Nicola-en.html">Nicola D' Ascenzo</a></h2>
+          <p>
+            Italian national, Ph.D. Professor and doctoral supervisor of Huazhong University of Science and Technology.
+            Focuses on photon response mechanisms and signal processing methods in single-photon detection chips, as
+            well as novel PET system design and imaging methodologies (including helmet PET and Agri-PET). Dedicated to
+            the development of all-digital silicon photomultipliers (SiPM) and portable PET imaging equipment.
+          </p>
+          <a href="./About-Nicola-en.html" style="
+                color: inherit;
+                text-decoration: none;
+                position: absolute;
+                right: 6rem;
+                bottom: 3rem;
+              "><img src="../assets/pic/about/research-team-archive/more2.svg" alt="了解更多" class="more-icon2"></a>
+        </div>
+      </div>
+      <!-- 郑睿 -->
+      <div class="industry-item industry-item-alt">
+        <div class="industry-item-img" style="
+              background-image: url('../assets/pic/About/People/4-1.jpg');
+              width: 42rem;
+              height: 35rem;
+              left: 50rem;
+              background-size: cover; /* 图片覆盖整个区域 */
+              background-repeat: no-repeat; /* 防止图片重复 */
+              background-position: center; /* 图片居中显示 */
+            "></div>
+        <div class="industry-item-info industry-item-info-dark" style="
+              position: absolute;
+              left: 6rem;
+              top: 8rem;
+              width: 86rem;
+              height: 27rem;
+              background: var(--theme-color2);
+              color: #fff;
+              padding: 2.5rem 46rem 4.5rem 4rem;
+            ">
+          <h2><a href="./About-LinWan-en.html">Lin Wan</a></h2>
+          <p>
+            Chinese national, Ph.D. Professor and doctoral supervisor of Huazhong University of Science and Technology.
+            Focuses on establishing the Plug-n-Image technical system to facilitate the rapid development and innovative
+            application of detection and imaging systems. Centering on the construction of this system, exploring
+            standardized and modular core operators as well as access mechanisms for full-process computation ranging
+            from detection to imaging, alongside AI-enabled methods for medical imaging feature extraction and clinical
+            cognition acquisition.
+          </p>
+          <a href="./About-LinWan-en.html" style="
+                color: inherit;
+                text-decoration: none;
+                position: absolute;
+                left: 38rem;
+                bottom: 3rem;
+              "><img src="../assets/pic/about/research-team-archive/more2.svg" alt="了解更多" class="more-icon2"></a>
+        </div>
+      </div>
+      <!-- 其他成员 -->
+      <section class="team-section">
+        <div class="team-container">
+          <!-- 成员卡片1 -->
+
+          <!-- 成员卡片2 -->
+          <div class="team-card">
+            <img src="../assets/pic/root/media/team-4.jpg" alt="郑睿">
+            <h3>Rui Zheng</h3>
+            <p style="text-align: center; font-size: 1rem; margin-top: 0rem;">Chinese national, Ph.D.</p>
+            <p>
+              Associate Researcher, School of Information Science and Technology, University of Science and Technology
+              of China.</p>
+            <p class="detailed-intro" style="font-size: 0.75rem;">
+              Focuses on novel materials and methods for single-photon radiation detection. Concentrating on the
+              development of new scintillation luminescence mechanisms and scintillation crystal materials with ultimate
+              performance.
+            </p>
+          </div>
+          <!-- 成员卡片3 -->
+          <div class="team-card">
+            <img src="../assets/pic/about/research-team-archive/team-6.jpg" alt="李炳轩">
+            <h3>Bingxuan Li</h3>
+            <p style="text-align: center; font-size: 1rem; margin-top: 0rem;">Chinese national, Ph.D.</p>
+            <p>
+              Associate Researcher, Artificial Intelligence Research Institute, Hefei Comprehensive National Science
+              Center.
+            </p>
+            <p class="detailed-intro" style="font-size: 0.75rem;">
+              Chief Scientist of National Key R&amp;D Program of China; One of the main drafters of China's digital PET
+              industry standards. Focuses on novel PET imaging system design and medical image reconstruction.
+            </p>
+          </div>
+          <!-- 成员卡片4 -->
+          <div class="team-card">
+            <img src="../assets/pic/about/research-team-archive/team-7.jpg" alt="奚道明">
+            <h3>Daoming Xi</h3>
+            <p style="text-align: center; font-size: 1rem; margin-top: 0rem;">Chinese national, Ph.D.</p>
+            <p>
+              Associate Researcher, Artificial Intelligence Research Institute, Hefei Comprehensive National Science
+              Center.
+            </p>
+            <p class="detailed-intro" style="font-size: 0.75rem;">
+              Focuses on the design of photon-counting X-ray detectors and the development of imaging systems. Proposed
+              the FPGA-only MVT digitizer technical solution and designed the corresponding circuit system.
+            </p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+
+
+    <div class="mitll-ll-pub-nav mitll-ll-pub-nav-chapters about-explore-section">
+      <div class="mitll-ll-pub-nav-chapters-inner">
+        <h3>Explore What Interests You</h3>
+        <ul class="mitll-ll-pub-bottom-nav about-explore-nav">
+          <li class="ll-ot">
+            <a href="About-about-en.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/root/media/2-3.jpg" alt="About Us" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">About Us</div>
+              </div>
+            </a>
+          </li>
+          <li class="ll-ot">
+            <a href="About-mission-en.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/about/explore-nav/mission-v3.jpg" alt="Our Mission" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">Our Mission</div>
+              </div>
+            </a>
+          </li>
+          <li class="ll-ot">
+            <a href="About-impact-en.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/about/explore-nav/impact-v2.jpg" alt="Our Impact" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">Our Impact</div>
+              </div>
+            </a>
+          </li>
+          <li class="ll-ot">
+            <a href="About-history-en.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/about/explore-nav/history.jpg" alt="Our History" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">Our History</div>
+              </div>
+            </a>
+          </li>
+          <li class="ll-current-chapter">
+            <a href="About-leadership-en.html" class="ll-section-nav">
+              <div class="ll-pub-bottom-nav-img">
+                <img src="../assets/pic/about/explore-nav/leadership-v2.jpg" alt="Leadership" loading="lazy">
+              </div>
+              <div class="ll-nav-text-side">
+                <div class="ll-nav-title">Leadership</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
+
+  </main>
+  <!-- 底部版权 -->
+  <div class="footer-container">
+    <div class="footer-main">
+      <div class="footer-info-cols">
+        <div class="footer-contact">
+          <div>petlab@ustc.edu.cn</div>
+          <div>9th Floor, Xinzhi Building, High-Tech Campus, University of Science and Technology of China</div>
+          <div><br></div>
+        </div>
+        <div class="footer-links">
+          <div><a href="http://www.raysolution.com">RAYSOLUTION: www.raysolution.com</a></div>
+          <div><a href="http://www.ray-can.com">RAYCAN: www.ray-can.com</a></div>
+          <div><a href="http://www.ray-quant.com">RAYQUANT: www.ray-quant.com</a></div>
+        </div>
+      </div>
+      <div class="footer-qrcode-wrap">
+        <img src="../assets/pic/main/qrcode.jpg" alt="QR code" class="footer-qrcode">
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>All Rights Reserved: Intelligent Detection and Imaging Laboratory, University of Science and Technology of
+        China</span>
+    </div>
+  </div>
+  <div id="petlab-footer" class="petlab-component-host"></div>
+  <style>
+    .header-container,
+    .header-spacer,
+    .footer-container {
+      display: none !important
+    }
+
+    .petlab-component-host {
+      display: block;
+      position: relative;
+      width: 100%
+    }
+
+    #petlab-header {
+      z-index: 999;
+      overflow: visible
+    }
+
+    #petlab-footer {
+      z-index: 1
+    }
+  </style>
+  <script src="../assets/js/about/team-page-components.js"></script>
+
+
+</body>
+
+</html>

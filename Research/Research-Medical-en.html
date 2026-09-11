@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/png" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="apple-touch-icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="manifest" href="../assets/data/favicons/site.webmanifest">
+  <link rel="shortcut icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1" type="image/png">
+  <meta charset="utf-8">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Medical Science | Digital PET Laboratory</title>
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" media="all"
+    href="../assets/css/root/008.css">
+  <link rel="stylesheet" media="all"
+    href="../assets/css/root/009.css">
+  <link rel="stylesheet" media="all" href="../assets/css/research/counter-cwmd/11.css">
+  <link rel="stylesheet" media="all" href="../assets/css/research/counter-cwmd/15.css">
+
+  <script type="text/javascript" async=""
+    src="https://www.googletagmanager.com/gtag/js?id=G-3LJEJLEBYR&amp;cx=c&amp;gtm=4e68a1"></script>
+  <script type="application/json"
+    data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/51","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJxdj0EOwyAMBD-E8JOQExygsgFhaJO-vmkjNU0vq9nZiz0zqm4woZKZDxZSxUBq5sKlTWUFTwsO7l_huKCHS9u3RpBLE-T0JBNKCUyuY4Cwx3-3eMP1KsWkxZNDptbhRCOpM7seSQgEUzY5OE4h9vdlP2wqNgwNa1TwbVRkexo7ch0TJ43kjW7aSY6f74keCp-0UvxgegFD42rH","theme":"dpet_theme","theme_token":null},"ajaxTrustedUrl":{"\/search":true},"gtag":{"tagId":"","consentMode":false,"otherIds":[],"events":[],"additionalConfigInfo":[]},"gtm":{"tagId":null,"settings":{"data_layer":"dataLayer","include_classes":false,"allowlist_classes":"","blocklist_classes":"","include_environment":false,"environment_id":"","environment_token":""},"tagIds":["GTM-5GH3LHPD"]},"colorbox":{"transition":"elastic","speed":350,"opacity":0.84999999999999998,"slideshow":false,"slideshowAuto":true,"slideshowSpeed":2500,"slideshowStart":"start slideshow","slideshowStop":"stop slideshow","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","overlayClose":true,"returnFocus":true,"maxWidth":"100%","maxHeight":"75%","initialWidth":"300","initialHeight":"250","fixed":true,"scrolling":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"field_group":{"html_element":{"mode":"full","context":"view","settings":{"label":"Content","classes":"alert__content","id":"","element":"div","show_label":false,"label_element":"h3","attributes":"","effect":"none","speed":"fast"}},"link":{"mode":"carousel","context":"view","settings":{"label":"Link","classes":"","id":"","target":"entity","custom_uri":"","target_attribute":"default"}}},"user":{"uid":0,"permissionsHash":"1d136f02b0b8fc270164cf17be579b4b2d9060c8507bfa01c5d1b31d9b147e99"}}</script>
+  <script
+    src="../assets/js/root/r001.js"></script>
+  <script src="../assets/js/root/003.js"></script>
+  <script src="../assets/js/root/010.js"></script>
+  <script async="" src="../assets/js/research/discovery-science/26-gtm-894260fb.js" type="text/javascript"></script>
+  <style>
+    /* Keep the sloped Engage section aligned with the research reference pages
+       instead of leaving the masonry block's full inline height as a gap. */
+    @media (min-width: 1025px) {
+      .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate {
+        margin-top: -300px !important;
+      }
+    }
+
+    /* petlab-research-Medical-ov: 增大tab列表字号，与Research-Physics一致 */
+    .p-rdgroups__tablist li {
+      font-size: 24px !important;
+      line-height: 1.5 !important;
+    }
+
+    .p-rdgroups__tablist .position {
+      width: auto !important;
+      display: inline-block !important;
+      background: transparent !important;
+      position: relative;
+    }
+
+    /* 隐藏原始的横线和小球 */
+    .p-rdgroups__tablist .contain::after,
+    .p-rdgroups__tablist .contain::before {
+      display: none !important;
+    }
+
+    /* 只有 active tab 显示横线和小球 */
+    .p-rdgroups__tablist li[aria-selected="true"] .contain {
+      position: relative;
+    }
+
+    /* 横线：右端对齐小球左边缘，左端由 JS 动态设置 */
+    .p-rdgroups__tablist li[aria-selected="true"] .contain::after {
+      content: "";
+      display: block !important;
+      position: absolute;
+      top: 50%;
+      right: 9px;
+      left: var(--line-left, 100%);
+      width: auto !important;
+      height: 1px;
+      background: #000;
+      transform: translateY(-50%);
+    }
+
+    /* 小球：完全在横线右侧，左边缘接触横线右端 */
+    .p-rdgroups__tablist li[aria-selected="true"] .contain::before {
+      content: "" !important;
+      display: block !important;
+      position: absolute !important;
+      top: 50% !important;
+      right: 0 !important;
+      left: auto !important;
+      bottom: auto !important;
+      width: 9px !important;
+      height: 9px !important;
+      border-radius: 50% !important;
+      background: #F45A2B !important;
+      transform: translateY(-50%) !important;
+      z-index: 1 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      float: none !important;
+    }
+
+    /* 右侧文字line-height与Research-Physics一致 */
+    .p-rdgroups__summary {
+      font-size: 20px !important;
+      line-height: 1.7 !important;
+      font-weight: 300 !important;
+    }
+
+    /* Featured Projects 卡片高度一致 */
+    .p-project-carousel__content .project-carousel__content {
+      min-height: 510px !important;
+    }
+  </style>
+  <link rel="stylesheet" href="../assets/css/archive-consistency.css?v=20260908-wide1">
+  <link rel="stylesheet" href="../assets/css/research-latest-news.css?v=20260911-3">
+  <link rel="stylesheet" href="../assets/css/page-canvas.css?v=20260911-1">
+</head>
+
+<body class="node-51 path-node page-node-type-rdarea has-section-nav has-section-toggle production js-alert">
+  <a href="#main-content" class="visually-hidden focusable skip-link">
+    Skip to main content
+  </a>
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+    <div class="overlay"></div>
+    <div class="layout-container">
+
+
+      <div id="petlab-header" class="petlab-component-host"></div>
+
+
+      <main role="main">
+        <a id="main-content" tabindex="-1"></a>
+        <div class="layout-content">
+          <div class="region region-content">
+            <div id="block-dpet-theme-content" class="block block-system block-system-main-block">
+              <div class="node node--type-rdarea node--view-mode-full">
+
+
+                <div class="hero hero--large-image">
+                  <div class="hero__image">
+                    <picture>
+                      <source
+                        srcset="../assets/pic/webarchive_biotechnology-and-human-systems/medical-hero-v4.png 1x"
+                        media="(min-width: 1025px)" type="image/png" width="1600" height="774">
+                      <source
+                        srcset="../assets/pic/webarchive_biotechnology-and-human-systems/medical-hero-v4.png 1x"
+                        media="(min-width: 700px)" type="image/png" width="1024" height="642">
+                      <source
+                        srcset="../assets/pic/webarchive_biotechnology-and-human-systems/medical-hero-v4.png 1x"
+                        type="image/png" width="700" height="536">
+                      <img loading="eager" width="1600" height="774"
+                        src="../assets/pic/webarchive_biotechnology-and-human-systems/medical-hero-v4.png"
+                        alt="Chinese researchers preparing a patient for a PET molecular imaging scan"
+                        typeof="foaf:Image">
+                    </picture>
+                  </div>
+                  <div class="hero__title-wrapper">
+                    <h1 class="hero__page-title">Medical Science</h1>
+                  </div>
+                </div>
+
+
+                <div class="rdarea__body">
+                  <div
+                    class="paragraph paragraph--type-p-fullwidth paragraph--view-mode-full background--light-blue slope--neg js-animate">
+                    <div class="p-fullwidth__content">
+                      <h2 class="p-fullwidth__header">Inventing the Foundational Building Blocks of Precision Disease
+                        Care Through Molecular Nuclear Imaging </h2>
+                      <div class="p-fullwidth__body">
+                        <p>Research in medical science, centered on positron emission tomography (PET) and nuclear
+                          medicine paradigms, is dedicated to decoding the in vivo molecular pathology of human diseases
+                          and translating molecular-level insights into actionable clinical solutions. Unlike anatomical
+                          imaging modalities that depict structural changes, PET visualizes and quantifies dynamic
+                          biological processes at the cellular and molecular level, enabling disease detection before
+                          irreversible anatomical damage occurs, objective stratification of pathological subtypes, and
+                          real-time evaluation of therapeutic efficacy. We advance discovery across multiple disease
+                          domains — from oncology and neurodegeneration to cardiovascular disorders, infectious diseases
+                          and beyond — pushing the frontiers of molecular imaging to address unmet clinical needs and
+                          redefine standards of precision patient care.</p>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <!-- Researchch Groups -->
+                  <div class="paragraph paragraph--type-p-rdgroups paragraph--view-mode-full slope--pos">
+                    <div class="p-rdgroups__content">
+                      <div class="p-rdgroups__image">
+                        <article class="media media--type-image media--view-mode-rd-group-list">
+                          <div class="field field--name-field-image field--type-image field--label-hidden field__item">
+                            <picture>
+                              <source
+                                srcset="../assets/pic/webarchive_biotechnology-and-human-systems/medical-areas-v4.png 1x"
+                                media="(min-width: 1025px)" type="image/png" width="1600" height="774">
+                              <source
+                                srcset="../assets/pic/webarchive_biotechnology-and-human-systems/medical-areas-v4.png 1x"
+                                media="(min-width: 700px)" type="image/png" width="1024" height="451">
+                              <source
+                                srcset="../assets/pic/webarchive_biotechnology-and-human-systems/medical-areas-v4.png 1x"
+                                type="image/png" width="699" height="328">
+                              <img loading="eager" width="1600" height="774"
+                                src="../assets/pic/webarchive_biotechnology-and-human-systems/medical-areas-v4.png"
+                                alt="Clinical PET scan monitored from a lead-glass-separated control room" typeof="foaf:Image">
+                            </picture>
+                          </div>
+                        </article>
+                      </div>
+                      <h2 class="p-rdgroups__header">Medical Science Areas</h2>
+                    </div>
+
+                    <div class="p-rdgroups__list">
+                      <div class="views-element-container">
+                        <div
+                          class="view view-r-d-group-blocks view-id-r_d_group_blocks view-display-id-rdgroups js-view-dom-id-4f14091f44c2170736f8a8cee65018a31b27eeac2c752ea6dcce505473267b52">
+                          <div class="attachment attachment-before">
+                            <div class="views-element-container">
+                              <div
+                                class="view view-r-d-group-blocks view-id-r_d_group_blocks view-display-id-attachment_tabs js-view-dom-id-7d865c9c0b207953e106e56c3686adf6f901d51f99fa6de4527f4764fe097977">
+                                <div class="view-content">
+                                  <div class="p-rdgroups__tabs">
+                                    <ul class="p-rdgroups__tablist">
+                                      <li class="tab" id="tab-1" role="tab" aria-controls="panel-1" aria-selected="true"
+                                        tabindex="0"><span class="contain"><span class="position"
+                                            style="width: 340px;">Oncological Nuclear Medicine</span></span></li>
+                                      <li class="tab" id="tab-2" role="tab" aria-controls="panel-2"
+                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position"
+                                            style="width: 440px;">Neurodegenerative Disease Imaging</span></span></li>
+                                      <li class="tab" id="tab-3" role="tab" aria-controls="panel-3"
+                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position"
+                                            style="width: 327px;">Cardiovascular Nuclear Medicine</span></span></li>
+                                      <li class="tab" id="tab-4" role="tab" aria-controls="panel-4"
+                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position"
+                                            style="width: 400px;">Infectious and Inflammatory Disease
+                                            Imaging</span></span></li>
+                                      <li class="tab" id="tab-5" role="tab" aria-controls="panel-5"
+                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position"
+                                            style="width: 406px;">Psychiatric Disorder Molecular Imaging</span></span>
+                                      </li>
+                                      <li class="tab" id="tab-6" role="tab" aria-controls="panel-6"
+                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position"
+                                            style="width: 406px;">Immuno-Oncology Imaging</span></span>
+                                      </li>
+                                      <li class="tab" id="tab-7" role="tab" aria-controls="panel-7"
+                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position"
+                                            style="width: 406px;">Rare Metabolic and Genetic Disease
+                                            Imaging</span></span>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="view-content">
+                            <div class="p-rdgroups__panel tab views-row" id="panel-1" role="tabpanel"
+                              aria-labeledby="tab-1" aria-hidden="false" style="height: 375px;">
+                              <div class="field-content p-rdgroups__summary">Tumor biological heterogeneity and early
+                                micrometastasis remain core barriers to effective cancer control, while conventional
+                                structural imaging fails to detect early-stage disease and distinguish aggressive
+                                subtypes. Our group pioneers novel molecular imaging and theranostic approaches to
+                                advance the precision of cancer diagnosis, prognostication and targeted therapy.</div>
+                              <div class="field-content p-rdgroups__cta"><a href="Research-Medical-Page1-en.html"
+                                  class="cta--button" hreflang="en">More</a></div>
+                            </div>
+
+                            <div class="p-rdgroups__panel tab views-row" id="panel-2" role="tabpanel"
+                              aria-labeledby="tab-2" aria-hidden="true" style="height: 375px;">
+                              <div class="field-content p-rdgroups__summary">Molecular pathological cascades of
+                                neurodegenerative disorders initiate years before symptomatic onset, and clinical
+                                diagnosis often identifies disease at largely irreversible advanced stages. Our research
+                                advances PET imaging paradigms to enable earlier, more accurate diagnosis and support
+                                the development of disease-modifying therapies for brain disorders.</div>
+                              <div class="field-content p-rdgroups__cta"><a href="Research-Medical-Page2-en.html"
+                                  class="cta--button" hreflang="en">More</a></div>
+                            </div>
+
+                            <div class="p-rdgroups__panel tab views-row" id="panel-3" role="tabpanel"
+                              aria-labeledby="tab-3" aria-hidden="true" style="height: 375px;">
+                              <div class="field-content p-rdgroups__summary">Many life-threatening cardiovascular
+                                pathologies develop without early structural abnormalities, and conventional anatomical
+                                imaging fails to identify patients at highest risk of acute events. Our group develops
+                                and translates quantitative PET imaging methods to address unmet needs in cardiovascular
+                                risk assessment, disease characterization and therapeutic monitoring.</div>
+                              <div class="field-content p-rdgroups__cta"><a href="Research-Medical-Page3-en.html"
+                                  class="cta--button" hreflang="en">More</a></div>
+                            </div>
+
+                            <div class="p-rdgroups__panel tab views-row" id="panel-4" role="tabpanel"
+                              aria-labeledby="tab-4" aria-hidden="true" style="height: 375px;">
+                              <div class="field-content p-rdgroups__summary">Localizing and differentiating active
+                                infectious or inflammatory foci remain major clinical challenges, as conventional tests
+                                often provide only localized information and cannot distinguish active disease from
+                                scarring. Our research develops targeted imaging strategies to advance precision
+                                diagnosis and management of infectious and immune-mediated diseases.</div>
+                              <div class="field-content p-rdgroups__cta"><a href="Research-Medical-Page4-en.html"
+                                  class="cta--button" hreflang="en">More</a></div>
+                            </div>
+
+                            <div class="p-rdgroups__panel tab views-row" id="panel-5" role="tabpanel"
+                              aria-labeledby="tab-5" aria-hidden="true" style="height: 375px;">
+                              <div class="field-content p-rdgroups__summary">Psychiatric disorder diagnosis relies
+                                almost entirely on subjective symptomatic assessment with no validated objective
+                                biomarkers, and structural brain imaging cannot detect underlying molecular
+                                pathophysiology. Our group advances PET imaging paradigms to decipher the molecular
+                                basis of psychiatric conditions and support the development of targeted, mechanism-based
+                                treatments.</div>
+                              <div class="field-content p-rdgroups__cta"><a href="Research-Medical-Page5-en.html"
+                                  class="cta--button" hreflang="en">More</a></div>
+                            </div>
+
+                            <div class="p-rdgroups__panel tab views-row" id="panel-6" role="tabpanel"
+                              aria-labeledby="tab-6" aria-hidden="true" style="height: 375px;">
+                              <div class="field-content p-rdgroups__summary">Characterizing the tumor immune
+                                microenvironment and assessing immunotherapy response remain critical challenges, as
+                                conventional imaging cannot reliably distinguish pseudoprogression from viable tumor.
+                                Our group develops molecular imaging strategies to visualize immune-tumor interactions
+                                and guide precision immuno-oncology treatment development.</div>
+                              <div class="field-content p-rdgroups__cta"><a href="Research-Medical-Page6-en.html"
+                                  class="cta--button" hreflang="en">More</a></div>
+                            </div>
+
+                            <div class="p-rdgroups__panel tab views-row" id="panel-7" role="tabpanel"
+                              aria-labeledby="tab-7" aria-hidden="true" style="height: 375px;">
+                              <div class="field-content p-rdgroups__summary">Rare metabolic and genetic diseases feature
+                                complex phenotypes and limited diagnostic tools, often resulting in delayed diagnosis
+                                and a lack of targeted therapeutic monitoring methods. Our group develops dedicated
+                                molecular imaging approaches to enable early detection and support precision management
+                                of rare metabolic and genetic disorders.</div>
+                              <div class="field-content p-rdgroups__cta"><a href="Research-Medical-Page7-en.html"
+                                  class="cta--button" hreflang="en">More</a></div>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <!-- Latest News -->
+                  <div class="paragraph paragraph--type-p-news3up paragraph--view-mode-full research-latest-news js-animate">
+                    <h2 class="p-news3up__header">Latest News</h2>
+                    <div class="p-news3up__content">
+                      <div class="views-element-container">
+                        <div class="view view-news-blocks view-id-news_blocks view-display-id-3up_rdgroup">
+                          <div class="view-content">
+                            <div class="views-row">
+                              <div class="node node--type-news node--view-mode-_-up">
+                                <div class="field field--name-field-news-er-image field--type-entity-reference field--label-hidden field__item">
+                                  <article class="media media--type-image media--view-mode-news-3-up">
+                                    <div class="field field--name-field-image field--type-image field--label-hidden field__item">
+                                      <a href="../News/List/News-page3-en.html" hreflang="en">
+                                        <img loading="lazy" src="../assets/pic/news/content/3.jpg" width="320" height="320" alt="All-Digital PET Welcomes New Flagship with 135-cm Axial Length, Enabling Single-Bed Whole-Body Scanning" typeof="foaf:Image" class="image-style-news-3-up">
+                                      </a>
+                                    </div>
+                                  </article>
+                                </div>
+                                <div class="field field--name-node-title field--type-ds field--label-hidden field__item">
+                                  <h3 class="link--animated" data-once="append-span">
+                                    <a href="../News/List/News-page3-en.html" hreflang="en">All-Digital PET Welcomes New Flagship with 135-cm Axial Length, Enabling Single-Bed Whole-Body Scanning<span></span></a><span></span>
+                                  </h3>
+                                </div>
+                                <div class="group-info">
+                                  <div class="field field--name-field-news-date field--type-datetime field--label-hidden field__item">May 19</div>
+                                  <div class="news-source">Digital PET Laboratory</div>
+                                </div>
+                                <div class="field field--name-mitll-news-featured-summary field--type-ds field--label-hidden field__item">
+                                  <p>has achieved new progress...</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="views-row">
+                              <div class="node node--type-news node--view-mode-_-up">
+                                <div class="field field--name-field-news-er-image field--type-entity-reference field--label-hidden field__item">
+                                  <article class="media media--type-image media--view-mode-news-3-up">
+                                    <div class="field field--name-field-image field--type-image field--label-hidden field__item">
+                                      <a href="../News/List/News-page14-en.html" hreflang="en">
+                                        <img loading="lazy" src="../assets/data/pic/news/localized/1452/image-01-c20f60ea16.bin" width="320" height="320" alt="World's First Head-Only All-Digital PET Entry Granted" typeof="foaf:Image" class="image-style-news-3-up">
+                                      </a>
+                                    </div>
+                                  </article>
+                                </div>
+                                <div class="field field--name-node-title field--type-ds field--label-hidden field__item">
+                                  <h3 class="link--animated" data-once="append-span">
+                                    <a href="../News/List/News-page14-en.html" hreflang="en">World's First Head-Only All-Digital PET Entry Granted<span></span></a><span></span>
+                                  </h3>
+                                </div>
+                                <div class="group-info">
+                                  <div class="field field--name-field-news-date field--type-datetime field--label-hidden field__item">September 5</div>
+                                  <div class="news-source">Science and Technology Daily</div>
+                                </div>
+                                <div class="field field--name-mitll-news-featured-summary field--type-ds field--label-hidden field__item">
+                                  <p>the reporter learned from the official website of the State Drug Administration that the
+                              first domestic all-digital PET for brain (ie, DigitMI i30) has been approved for three
+                              types of me...</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="views-row">
+                              <div class="node node--type-news node--view-mode-_-up">
+                                <div class="field field--name-field-news-er-image field--type-entity-reference field--label-hidden field__item">
+                                  <article class="media media--type-image media--view-mode-news-3-up">
+                                    <div class="field field--name-field-image field--type-image field--label-hidden field__item">
+                                      <a href="../News/List/News-page5-en.html" hreflang="en">
+                                        <img loading="lazy" src="../assets/pic/news/news2.jpg" width="320" height="320" alt="New medical imaging equipment frequently leaves the laboratory in Wuhan" typeof="foaf:Image" class="image-style-news-3-up">
+                                      </a>
+                                    </div>
+                                  </article>
+                                </div>
+                                <div class="field field--name-node-title field--type-ds field--label-hidden field__item">
+                                  <h3 class="link--animated" data-once="append-span">
+                                    <a href="../News/List/News-page5-en.html" hreflang="en">New medical imaging equipment frequently leaves the laboratory in Wuhan<span></span></a><span></span>
+                                  </h3>
+                                </div>
+                                <div class="group-info">
+                                  <div class="field field--name-field-news-date field--type-datetime field--label-hidden field__item">July 10</div>
+                                  <div class="news-source">Yangtze River Daily</div>
+                                </div>
+                                <div class="field field--name-mitll-news-featured-summary field--type-ds field--label-hidden field__item">
+                                  <p>world's first musculoskeletal ultrasound system will enter clinical use, while a breast
+                              ultrasound system that has just completed clinical trials will also be launched soon...</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider-wrapper"><div class="slider-content"></div></div>
+                    <div class="p-news3up__cta"><a href="../News/News-list-en.html" class="cta--button">More News</a></div>
+                  </div>
+
+
+                  <!-- Featured Projects -->
+                  <div class="paragraph paragraph--type-p-project-carousel paragraph--view-mode-full">
+                    <h2 class="p-project-carousel__header">
+                      Featured Projects
+                    </h2>
+                    <div class="p-project-carousel__content">
+                      <div class="views-element-container">
+                        <div
+                          class="view view-projects-blocks view-id-projects_blocks view-display-id-project_carousel_rdarea js-view-dom-id-0cb597ab4cca5e49c5611efe5d40910ee3cdcf182333757d1ecfeb2eea8a24e9">
+                          <div class="view-content">
+
+                            <div class="lab-carousel views-row">
+                              <div class="node node--type-project node--view-mode-carousel">
+                                <div class="project-carousel__image-wrapper">
+                                  <a class="field-group-link" hreflang="en">
+                                    <div class="project-carousel__image">
+                                      <picture>
+                                        <source srcset="../assets/pic/Illustration/1.png 1x" media="(min-width: 1025px)"
+                                          type="image/jpeg" width="1600" height="900">
+                                        <source srcset="../assets/pic/Illustration/1.png 1x" type="image/jpeg"
+                                          width="700" height="410">
+                                        <img loading="eager" width="1600" height="900"
+                                          src="../assets/pic/Illustration/1.png"
+                                          alt="An illustration of a machine transforming &quot;C&quot; icons into &quot;Rust&quot; icons."
+                                          typeof="foaf:Image">
+                                      </picture>
+                                    </div>
+                                  </a>
+                                </div>
+
+                                <div class="project-carousel__content">
+                                  <div class="project-carousel__tag">NSFC Fund for Distinguished Young Scholars</div>
+                                  <h3 class="project-carousel__title">
+                                    <a>Digital PET Imaging</a>
+                                  </h3>
+                                  <div class="project-carousel__summary">
+                                    <p>Digital PET imaging platforms deliver precise digitization for massive parallel
+                                      channels and high-speed scintillation signal streams to achieve high-fidelity
+                                      quantitative molecular measurement for nuclear medicine and particle physics
+                                      experiments.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="lab-carousel views-row">
+                              <div class="node node--type-project node--view-mode-carousel">
+                                <div class="project-carousel__image-wrapper">
+                                  <a class="field-group-link" hreflang="en">
+                                    <div class="project-carousel__image">
+                                      <picture>
+                                        <source srcset="../assets/pic/Illustration/2.png 1x" media="(min-width: 1025px)"
+                                          type="image/jpeg" width="1600" height="900">
+                                        <source srcset="../assets/pic/Illustration/2.png 1x" type="image/jpeg"
+                                          width="700" height="410">
+                                        <img loading="eager" width="1600" height="900"
+                                          src="../assets/pic/Illustration/2.png"
+                                          alt="A photo of a service member preparing a small autonomous robot. "
+                                          typeof="foaf:Image">
+                                      </picture>
+                                    </div>
+                                  </a>
+                                </div>
+
+                                <div class="project-carousel__content">
+                                  <div class="project-carousel__tag">NSFC Original Exploration Program Project</div>
+                                  <h3 class="project-carousel__title">
+                                    <a>All-Digital Silicon Photomultiplier with High Sensitivity and High Count Rate</a>
+                                  </h3>
+                                  <div class="project-carousel__summary">
+                                    <p>High-sensitivity, high-throughput all-digital SiPM integrated circuits resolve
+                                      overlapping scintillation signals under intense irradiation for high-rate PET and
+                                      radiation detection environments.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="lab-carousel views-row">
+                              <div class="node node--type-project node--view-mode-carousel">
+                                <div class="project-carousel__image-wrapper">
+                                  <a class="field-group-link" hreflang="en">
+                                    <div class="project-carousel__image">
+                                      <picture>
+                                        <source srcset="../assets/pic/Illustration/3.png 1x" media="(min-width: 1025px)"
+                                          type="image/png" width="1600" height="900">
+                                        <source srcset="../assets/pic/Illustration/3.png 1x" type="image/png"
+                                          width="700" height="410">
+                                        <img loading="eager" width="1600" height="900"
+                                          src="../assets/pic/Illustration/3.png"
+                                          alt="A magnified view of superconducting circuits. " typeof="foaf:Image">
+                                      </picture>
+                                    </div>
+                                  </a>
+                                </div>
+                                <div class="project-carousel__content">
+                                  <div class="project-carousel__tag">NSFC National Major Scientific Research Instrument
+                                    Development Project</div>
+                                  <h3 class="project-carousel__title">
+                                    <a>Observation Device for Energy Transport of Proton Beams in Biological Tissues</a>
+                                  </h3>
+                                  <div class="project-carousel__summary">
+                                    <p>Custom proton beam measurement instruments quantify beam energy deposition within
+                                      biological tissues to enable real-time dosimetry monitoring and optimized proton
+                                      therapy treatment planning.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="lab-carousel views-row">
+                              <div class="node node--type-project node--view-mode-carousel">
+                                <div class="project-carousel__image-wrapper">
+                                  <a class="field-group-link" hreflang="en">
+                                    <div class="project-carousel__image">
+                                      <picture>
+                                        <source srcset="../assets/pic/Illustration/4.png 1x" media="(min-width: 1025px)"
+                                          type="image/png" width="1600" height="900">
+                                        <source srcset="../assets/pic/Illustration/4.png 1x" type="image/png"
+                                          width="700" height="410">
+                                        <img loading="eager" width="1600" height="900"
+                                          src="../assets/pic/Illustration/4.png"
+                                          alt="Graphic showing a military servicemember on the left and a full hospital scenario on the right. "
+                                          typeof="foaf:Image">
+                                      </picture>
+                                    </div>
+                                  </a>
+                                </div>
+
+                                <div class="project-carousel__content">
+                                  <div class="project-carousel__tag">NSFC Major International (Regional) Joint Research
+                                    Project</div>
+                                  <h3 class="project-carousel__title">
+                                    <a>Flat-panel PET Imaging</a>
+                                  </h3>
+                                  <div class="project-carousel__summary">
+                                    <p>Flat-panel PET detection hardware expands molecular imaging workflows for
+                                      intraoperative, preclinical small-animal and portable bedside scanning unavailable
+                                      to conventional ring PET systems. </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="p-project-carousel__cta"><a href="Research-Project-en.html" class="cta--button">More Projects</a></div>
+                  </div>
+
+
+                  <!-- Laboratory Stories -->
+                  <div class="paragraph paragraph--type-p-lab-carousel paragraph--view-mode-full">
+                    <h2 class="p-lab-carousel__header">
+                      Laboratory Stories
+                    </h2>
+                    <div class="p-lab-carousel__content">
+                      <div class="views-element-container">
+                        <div
+                          class="view view-laboratory-story-blocks view-id-laboratory_story_blocks view-display-id-lab_carousel_rdgroup js-view-dom-id-d08b6d1c90529b1967563aca44db7eae47d81ac1105fbda6cbc67c781a80f92a">
+                          <div class="view-content slick-initialized slick-slider slick-dotted">
+                            <div class="slick-list">
+                              <div class="slick-track" style="opacity: 1; width: 1512px;">
+                                <div class="lab-carousel views-row slick-slide slick-current slick-active"
+                                  data-slick-index="0" aria-hidden="false"
+                                  style="width: 1512px; position: relative; left: 0px; top: 0px; z-index: 199; opacity: 1;">
+                                  <div class="lab-carousel__left">
+                                    <div class="lab-carousel__quote">Our responsibility is to create an environment
+                                      where great science can thrive, one that supports our people, fosters creativity
+                                      and innovation, and strengthens the facilities and infrastructure that allow
+                                      PET Laboratory to serve the nation.
+                                    </div>
+                                    <h3 class="lab-carousel__display-name link--animated" data-once="append-span">
+                                      <a href="../About/About-QingguoXie-en.html" hreflang="en">Qingguo
+                                        Xie<span></span></a>
+                                      <span></span>
+                                    </h3>
+                                    <div class="lab-carousel__job-title">Principal Investigator</div>
+                                    <div class="lab-carousel__rdarea">Digitalization detection and instrument
+                                      development.</div>
+                                    <div class="lab-carousel__rdgroup">Proton Therapy Monitoring</div>
+                                  </div>
+                                  <div class="lab-carousel__right">
+                                    <a href="../About/About-QingguoXie-en.html"
+                                      class="field-group-link lab-carousel__image" hreflang="en">
+                                      <img loading="lazy" src="../assets/pic/About/People/1-1.jpg" width="500"
+                                        height="500" alt="Rafael Jaimes" typeof="foaf:Image"
+                                        class="image-style-featured">
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="p-lab-carousel__cta"><a href="../About/About-leadership-en.html"
+                        class="cta--button">More Stories</a></div>
+                  </div>
+
+
+                  <!-- Advancing Our Research -->
+                  <div class="paragraph paragraph--type-p-masonry paragraph--view-mode-full">
+                    <h2 class="p-masonry__header">Advancing Our Research</h2>
+                    <div class="p-masonry__grid" style="position: relative; height: 1496.265625px;">
+                      <div class="p-masonry__item js-animate"
+                        style="position: absolute; left: 0px; top: 0px; transition-delay: 0s;">
+                        <div
+                          class="paragraph paragraph--type-p-masonry-generic paragraph--view-mode-full p-masonry-generic--no-image background--">
+                          <div class="p-masonry-generic__content">
+                            <h3 class="p-masonry-generic__title">Research</h3>
+                            <div class="p-masonry-generic__body">Discover more of our active research work.</div>
+                            <div class="p-masonry-generic__cta"><a href="Research-ov-en.html" class="cta--button">Learn More</a></div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+                      <div class="p-masonry__item js-animate"
+                        style="position: absolute; left: 558px; top: 0px; transition-delay: 0.2s;">
+                        <div class="paragraph paragraph--type-p-masonry-pub paragraph--view-mode-full">
+                          <h3 class="p-masonry-pub__header">Featured Publications</h3>
+                          <div class="p-masonry-pub__content">
+                            <div class="views-element-container">
+                              <div
+                                class="view view-publication-blocks view-id-publication_blocks view-display-id-block_grid_rdgroup js-view-dom-id-e66323e97bba17f75c406801c91076ed33575d468150ae54fd2b43a50b53fb01">
+                                <div class="view-content">
+                                  <div class="views-row" style="transition-delay: 0.2s;">
+                                    <div class="node node--type-publication node--view-mode-grid">
+                                      <h4 class="publication-grid__title">
+                                        <a href="https://doi.org/10.1016/j.bspc.2024.106853"
+                                          class="publication__link publication__external-link">A novel
+                                          iterative iso-transmission line empirical material decomposition algorithm for
+                                          multi-energy photon-counting CT<span
+                                            class="icon icon--external-link"></span></a>
+                                      </h4>
+                                      <div class="publication-grid__content">
+                                        <div class="publication-grid__date">Jan 01</div>
+                                        <div class="publication-grid__source">Biomedical Signal Processing and Control,
+                                          99, 2025, 106853. doi:10.1016/j.bspc.2024.106853.</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="views-row" style="transition-delay: 0.3s;">
+                                    <div class="node node--type-publication node--view-mode-grid">
+                                      <h4 class="publication-grid__title">
+                                        <a href="https://doi.org/10.1109/TRPMS.2025.3526659"
+                                          class="publication__link publication__external-link"
+>Performance Evaluation of New PET/CT DigitMI 930<span
+                                            class="icon icon--external-link"></span></a>
+                                      </h4>
+                                      <div class="publication-grid__content">
+                                        <div class="publication-grid__date">Jan 09</div>
+                                        <div class="publication-grid__source">IEEE Transactions on Radiation and Plasma
+                                          Medical Sciences, vol. 9, no. 5, pp. 578-585, May 2025, doi:
+                                          10.1109/TRPMS.2025.3526659.</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="views-row" style="transition-delay: 0.4s;">
+                                    <div class="node node--type-publication node--view-mode-grid">
+                                      <h4 class="publication-grid__title">
+                                        <a href="https://doi.org/10.1109/TRPMS.2025.3584122"
+                                          class="publication__link publication__external-link"
+>Investigation of a Dual-Panel In-Beam PET Based on Digital
+                                          Detectors for Proton Therapy Monitoring With Different Monitoring Strategies:
+                                          A Simulation Study <span class="icon icon--external-link"></span></a>
+                                      </h4>
+                                      <div class="publication-grid__content">
+                                        <div class="publication-grid__date">Jan 30</div>
+                                        <div class="publication-grid__source">IEEE Transactions on Radiation and Plasma
+                                          Medical Sciences, vol. 10, no. 4, pp. 582-592, April 2026, doi:
+                                          10.1109/TRPMS.2025.3584122.</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-masonry-pub__cta"><a href="Research-Publication-en.html"
+                              class="cta--button">More Publications</a></div>
+                        </div>
+                      </div>
+
+                      <div class="p-masonry__item js-animate"
+                        style="position: absolute; left: 0px; top: 371px; transition-delay: 0.4s;">
+                        <div class="paragraph paragraph--type-p-masonry-facility paragraph--view-mode-full">
+                          <h3 class="p-masonry-facility__header">Featured Capabilities</h3>
+                          <div class="p-masonry-facility__content">
+                            <div class="views-element-container">
+                              <div
+                                class="view view-facility-blocks view-id-facility_blocks view-display-id-masonry_manual js-view-dom-id-dbb4682a7e718dd6214a353b6056a8f5eed988ac9fabde6d6924a16305d5a6ff">
+                                <div class="view-content">
+                                  <div class="views-row" style="transition-delay: 0.4s;">
+                                    <div class="node node--type-facility node--view-mode-grid">
+                                      <div class="facility-grid__image">
+                                        <img loading="lazy"
+                                          src="../assets/pic/root/media/capabilities1.png" width="420"
+                                          height="240"
+                                          alt="A staff member holds up a test tube filled with orange liquid"
+                                          typeof="foaf:Image" class="image-style-facility-list">
+                                      </div>
+                                      <h4 class="facility-grid__title">
+                                        <a hreflang="en">Advance Biomedical Image Facility</a>
+                                      </h4>
+                                    </div>
+                                  </div>
+                                  <div class="views-row" style="transition-delay: 0.5s;">
+                                    <div class="node node--type-facility node--view-mode-grid">
+                                      <div class="facility-grid__image">
+                                        <img loading="lazy" src="../assets/pic/Infrastructure/facility/f2-1.png"
+                                          width="420" height="240"
+                                          alt="Digital PET Laboratory is conducting health and performance research in its Computer Assisted Rehabilitation Environment (CAREN) dome in the new Sensorimotor Technology Realization in Immersive Virtual Environments (STRIVE) Center."
+                                          typeof="foaf:Image" class="image-style-facility-list">
+                                      </div>
+                                      <h4 class="facility-grid__title">
+                                        <a hreflang="en">Digital PET Imaging Center</a>
+                                      </h4>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-masonry-facility__cta"><a href="../Capabilities/Capabilities-ov-en.html"
+                              class="cta--button">Learn More</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <!-- Research Collaboration -->
+                  <div
+                    class="paragraph paragraph--type-p-fullwidth paragraph--view-mode-full background--grey slope--pos js-animate">
+                    <div class="p-fullwidth__content">
+                      <h2 class="p-fullwidth__header">Research Collaboration</h2>
+                      <div class="p-fullwidth__body">
+                        <p><span>Discover the exciting and challenging research with us.</span></p>
+                      </div>
+                      <div class="p-fullwidth__cta"><a href="../Engage/Engage-ov-en.html" class="cta--button">Learn more</a></div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div id="petlab-footer" class="petlab-component-host"></div>
+
+    </div>
+  </div>
+
+
+  <!-- petlab-research-Medical-ov: 添加jQuery和必要的JS文件 -->
+  <script src="../assets/js/template8/r001.js"></script>
+  <script src="../assets/js/template8/r004.js"></script>
+  <script src="../assets/js/root/001.js"></script>
+  <script src="../assets/js/root/r038.js"></script>
+  <script src="../assets/js/root/r039.js"></script>
+  <script src="../assets/js/root/r040.js"></script>
+  <script src="../assets/js/root/002.js"></script>
+
+  <script
+    src="../assets/js/root/001.js"></script>
+  <script src="../assets/js/root/r038.js"></script>
+  <script src="../assets/js/root/r039.js"></script>
+  <script src="../assets/js/root/r040.js"></script>
+  <script
+    src="../assets/js/root/002.js"></script>
+
+
+
+
+  <div id="drupal-live-announce" class="visually-hidden" aria-live="polite" aria-busy="false"></div>
+  <div id="cboxOverlay" style="display: none;"></div>
+  <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">
+    <div id="cboxWrapper">
+      <div>
+        <div id="cboxTopLeft" style="float: left;"></div>
+        <div id="cboxTopCenter" style="float: left;"></div>
+        <div id="cboxTopRight" style="float: left;"></div>
+      </div>
+      <div style="clear: left;">
+        <div id="cboxMiddleLeft" style="float: left;"></div>
+        <div id="cboxContent" style="float: left;">
+          <div id="cboxTitle" style="float: left;"></div>
+          <div id="cboxCurrent" style="float: left;"></div>
+          <div id="cboxLoadingOverlay" style="float: left;"></div>
+          <div id="cboxLoadingGraphic" style="float: left;"></div>
+        </div>
+        <div id="cboxMiddleRight" style="float: left;"></div>
+      </div>
+      <div style="clear: left;">
+        <div id="cboxBottomLeft" style="float: left;"></div>
+        <div id="cboxBottomCenter" style="float: left;"></div>
+        <div id="cboxBottomRight" style="float: left;"></div>
+      </div>
+    </div>
+    <div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div>
+  </div>
+  <style>
+    .petlab-component-host {
+      display: block;
+      position: relative;
+      width: 100%;
+    }
+
+    #petlab-header {
+      z-index: 999;
+      overflow: visible;
+    }
+
+    #petlab-footer {
+      z-index: 1;
+    }
+
+    .layout-container>header[role="banner"],
+    .layout-container>footer[role="contentinfo"] {
+      display: none !important;
+    }
+
+    /* Keep this research-area hero clear of the PETLab header. The source
+       theme applies a -122px overlap for its original header stack, while
+       this page uses the injected PETLab header without that stack. */
+    @media (min-width: 1025px) {
+      body.path-node.page-node-type-rdarea .hero.hero--large-image {
+        margin-top: -50px;
+      }
+    }
+  </style>
+  <script>
+    (function () {
+      var siteRoot = new URL('../', window.location.href);
+      var cssUrl = new URL('assets/css/site.css?v=20260908-wide1', siteRoot);
+
+      function rewriteComponentUrls(shadow) {
+        shadow.querySelectorAll('[src], [href]').forEach(function (node) {
+          ['src', 'href'].forEach(function (attribute) {
+            var value = node.getAttribute(attribute);
+            if (!value || /^(?:#|https?:|mailto:|tel:|javascript:|\/)/i.test(value)) return;
+            node.setAttribute(attribute, new URL(value, siteRoot).href);
+          });
+        });
+      }
+
+      function initHeader(shadow) {
+        var header = shadow.querySelector('[data-site-header]');
+        if (!header) return;
+        var primaryGroups = shadow.querySelectorAll('.primary-nav > .nav-group');
+        function setPrimaryGroupVisual(group, active) {
+          if (!group || !group.matches('.primary-nav > .nav-group')) return;
+          var color = active ? '#edf5fc' : '#fff';
+          group.style.setProperty('background-color', color, 'important');
+          var trigger = group.querySelector(':scope > .nav-trigger');
+          trigger?.style.setProperty('background-color', color, 'important');
+        }
+        function setPrimaryNavigationVisual(active) {
+          var color = active ? '#edf5fc' : '#fff';
+          primaryGroups.forEach(function (group) { setPrimaryGroupVisual(group, active); });
+          shadow.querySelectorAll('.lbl-header, .lbl-header .header-shell, .lbl-header .desktop-navigation, .lbl-header .header-top-row, .lbl-header .primary-nav').forEach(function (node) {
+            node.style.setProperty('background-color', color, 'important');
+          });
+        }
+        setPrimaryNavigationVisual(false);
+        var closeTimers = new WeakMap();
+        var openGroup = function (group) {
+          if (!group) return;
+          var timer = closeTimers.get(group);
+          if (timer) window.clearTimeout(timer);
+          group.classList.add('open');
+          group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'true');
+        };
+        var closeGroup = function (group) {
+          if (!group) return;
+          var timer = window.setTimeout(function () {
+            if (group.matches(':hover') || group.matches(':focus-within')) return;
+            group.classList.remove('open');
+            group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+          }, 180);
+          closeTimers.set(group, timer);
+        };
+        var closeAllGroups = function () {
+          shadow.querySelectorAll('.nav-group.open').forEach(function (group) {
+            var timer = closeTimers.get(group);
+            if (timer) window.clearTimeout(timer);
+            group.classList.remove('open');
+            group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+          });
+          setPrimaryNavigationVisual(false);
+          var activeElement = shadow.activeElement;
+          if (activeElement && activeElement.matches('.primary-nav .nav-trigger, .primary-nav .mega-menu__close')) activeElement.blur();
+        };
+        var host = shadow.host;
+        header.addEventListener('mouseleave', closeAllGroups);
+        host?.addEventListener('mouseleave', closeAllGroups);
+        header.addEventListener('mouseleave', function () {
+          shadow.querySelectorAll('.nav-group.open, .nav-group.dismissed').forEach(function (group) {
+            group.classList.remove('open', 'dismissed');
+            group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+          });
+          setPrimaryNavigationVisual(false);
+        });
+        shadow.querySelectorAll('.nav-group').forEach(function (group) {
+          group.addEventListener('mouseenter', function () {
+            var timer = closeTimers.get(group);
+            if (timer) clearTimeout(timer);
+            group.classList.remove('dismissed');
+            shadow.querySelectorAll('.nav-group.open').forEach(function (item) {
+              if (item !== group) {
+                item.classList.remove('open', 'dismissed');
+                item.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+                setPrimaryGroupVisual(item, true);
+              }
+            });
+            group.classList.add('open');
+            group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'true');
+            if (group.matches('.primary-nav > .nav-group')) setPrimaryNavigationVisual(true);
+          });
+          group.addEventListener('mouseleave', function () {
+            var timer = setTimeout(function () {
+              group.classList.remove('open');
+              group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+              if (group.matches('.primary-nav > .nav-group') && !header.matches(':hover')) setPrimaryNavigationVisual(false);
+              var activeElement = shadow.activeElement;
+              if (activeElement && group.contains(activeElement)) activeElement.blur();
+            }, 220);
+            closeTimers.set(group, timer);
+          });
+        });
+        shadow.querySelectorAll('.nav-trigger').forEach(function (trigger) {
+          trigger.addEventListener('click', function () {
+            var group = trigger.closest('.nav-group');
+            var open = group && group.classList.contains('open');
+            shadow.querySelectorAll('.nav-group.open').forEach(function (item) {
+              item.classList.remove('open', 'dismissed');
+              item.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+              setPrimaryGroupVisual(item, false);
+            });
+            if (group && !open) {
+              group.classList.add('open');
+              trigger.setAttribute('aria-expanded', 'true');
+              setPrimaryNavigationVisual(true);
+            } else if (group && open) {
+              setPrimaryNavigationVisual(false);
+            }
+          });
+        });
+        shadow.querySelectorAll('[data-menu-close]').forEach(function (button) {
+          button.addEventListener('click', function () {
+            var group = button.closest('.nav-group');
+            group?.classList.remove('open');
+            group?.classList.add('dismissed');
+            group?.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+            setPrimaryNavigationVisual(false);
+            if (shadow.activeElement && group?.contains(shadow.activeElement)) shadow.activeElement.blur();
+          });
+        });
+        var menuToggle = shadow.querySelector('[data-menu-toggle]');
+        menuToggle?.addEventListener('click', function () {
+          var active = header.classList.toggle('menu-active');
+          menuToggle.setAttribute('aria-expanded', String(active));
+        });
+      }
+
+      async function mount(hostId, componentPath, isHeader) {
+        var host = document.getElementById(hostId);
+        if (!host) return;
+        try {
+          var response = await fetch(new URL(componentPath, siteRoot));
+          var cssResponse = await fetch(cssUrl);
+          if (!response.ok || !cssResponse.ok) throw new Error('Component load failed');
+          var shadow = host.attachShadow({ mode: 'open' });
+          var style = document.createElement('style');
+          var cssText = await cssResponse.text();
+          cssText = cssText.replace(/url\((['"]?)\.\.\/([^'")]+)\1\)/g, function (_, quote, path) {
+            return 'url(' + quote + new URL('assets/' + path, siteRoot).href + quote + ')';
+          });
+          cssText += '\n@media (min-width: 1101px) {' +
+            '.lbl-header, .lbl-header .header-shell, .lbl-header .desktop-navigation, ' +
+            '.lbl-header .primary-nav, .lbl-header .nav-group { overflow: visible !important; }' +
+            '.lbl-header .nav-group.open > .mega-menu, .lbl-header .nav-group:hover > .mega-menu, ' +
+            '.lbl-header .nav-group:focus-within > .mega-menu { display: grid !important; z-index: 2000 !important; pointer-events: auto; }' +
+            '.lbl-header .nav-group.dismissed > .mega-menu { display: none !important; }' +
+            '.lbl-header .primary-nav > .nav-group { background: #fff !important; }' +
+            '.lbl-header .primary-nav > .nav-group:hover, .lbl-header .primary-nav > .nav-group.open, ' +
+            '.lbl-header .primary-nav > .nav-group:focus-within { background: #edf5fc !important; }' +
+            '.lbl-header .primary-nav > .nav-group.dismissed { background: #fff !important; }' +
+            '.lbl-header .primary-nav > .nav-group > .nav-trigger { background: #fff !important; color: #062f40 !important; transition: none !important; }' +
+            '.lbl-header .primary-nav > .nav-group:hover > .nav-trigger, .lbl-header .primary-nav > .nav-group.open > .nav-trigger, ' +
+            '.lbl-header .primary-nav > .nav-group:focus-within > .nav-trigger { background: #edf5fc !important; color: #062f40 !important; }' +
+            '.lbl-header .primary-nav > .nav-group.dismissed > .nav-trigger { background: #fff !important; color: #062f40 !important; transition: none !important; }' +
+            '.lbl-header .primary-nav > .nav-group, .lbl-header .primary-nav > .nav-group > .nav-trigger { transition: none !important; }' +
+            '}';
+          style.textContent = cssText.replace(/^:root\s*\{/, ':host {');
+          shadow.appendChild(style);
+          var content = document.createElement('div');
+          content.innerHTML = await response.text();
+          while (content.firstChild) shadow.appendChild(content.firstChild);
+          rewriteComponentUrls(shadow);
+          if (!isHeader) {
+            var year = shadow.querySelector('[data-current-year]');
+            if (year) year.textContent = String(new Date().getFullYear());
+          } else {
+            initHeader(shadow);
+          }
+        } catch (error) {
+          host.textContent = '';
+          console.error('Unable to load PETLab component', error);
+        }
+      }
+
+      var isCN = /-cn\.html/i.test(window.location.pathname) || document.documentElement.lang === 'zh';
+      var headerFile = isCN ? 'components/header-cn.html?v=20260908-wide1' : 'components/header.html?v=20260908-wide1';
+      var footerFile = isCN ? 'components/footer-cn.html?v=20260830-1' : 'components/footer.html?v=20260830-1';
+      Promise.all([
+        mount('petlab-header', headerFile, true),
+        mount('petlab-footer', footerFile, false)
+      ]);
+    }());
+  </script>
+
+<script>
+/* Hide skip-link by default, show on keyboard focus */
+(function(){
+  function fixSkipLink(link){
+    if(link.dataset.skipLinkFixed3) return;
+    link.dataset.skipLinkFixed3 = '1';
+    link.classList.remove('visually-hidden');
+    link.style.setProperty('position','fixed','important');
+    link.style.setProperty('top','0','important');
+    link.style.setProperty('left','1rem','important');
+    link.style.setProperty('z-index','9999','important');
+    link.style.setProperty('transform','translateY(-200%)','important');
+    link.style.setProperty('background','#fff','important');
+    link.style.setProperty('padding','.75rem 1rem','important');
+    link.style.setProperty('text-decoration','none','important');
+    link.style.setProperty('color','#000','important');
+    link.style.setProperty('transition','transform .2s ease','important');
+    link.style.setProperty('clip','auto','important');
+    link.style.setProperty('width','auto','important');
+    link.style.setProperty('height','auto','important');
+    link.style.setProperty('overflow','visible','important');
+    link.addEventListener('focus',function(){link.style.setProperty('transform','translateY(0)','important');});
+    link.addEventListener('blur',function(){link.style.setProperty('transform','translateY(-200%)','important');});
+  }
+  function fixAll(){document.querySelectorAll('.skip-link').forEach(fixSkipLink);}
+  fixAll();
+  var observer = new MutationObserver(fixAll);
+  observer.observe(document.documentElement,{childList:true,subtree:true});
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fixAll);
+  window.addEventListener('load',function(){setTimeout(fixAll,100);});
+})();
+</script>
+
+<!-- petlab-research-Medical-ov: 初始化FEATURED PROJECTS slick轮播 -->
+<script>
+(function() {
+  function initProjectCarousel() {
+    var carousel = document.querySelector('.p-project-carousel__content .view-content');
+    if (!carousel) return;
+    if (carousel.classList.contains('slick-initialized')) return;
+
+    // 检查jQuery和slick是否可用
+    if (typeof jQuery === 'undefined' || !jQuery.fn.slick) {
+      setTimeout(initProjectCarousel, 500);
+      return;
+    }
+
+    jQuery(carousel).slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      arrows: true,
+      autoplay: false,
+      adaptiveHeight: true,
+      infinite: true,
+      speed: 500,
+      fade: false,
+      cssEase: 'linear'
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(initProjectCarousel, 500);
+    });
+  } else {
+    setTimeout(initProjectCarousel, 500);
+  }
+
+  window.addEventListener('load', function() {
+    setTimeout(initProjectCarousel, 1000);
+  });
+})();
+</script>
+
+<!-- petlab-research-Medical-ov: 动态计算线长度（与Research-Physics一致） -->
+<script>
+  (function () {
+    var GAP = 25;
+
+    function updateRdgroupsLines() {
+      var tabs = document.querySelectorAll('.p-rdgroups__tablist li');
+      tabs.forEach(function (tab) {
+        var contain = tab.querySelector('.contain');
+        var position = tab.querySelector('.position');
+        if (!contain || !position) return;
+
+        var containRect = contain.getBoundingClientRect();
+        var textWidth;
+
+        // 创建临时容器和span元素，测量每一行宽度
+        var tempContainer = document.createElement('div');
+        tempContainer.style.width = contain.offsetWidth + 'px';
+        tempContainer.style.position = 'absolute';
+        tempContainer.style.visibility = 'hidden';
+        tempContainer.style.left = '-9999px';
+        tempContainer.style.top = '0';
+        var clone = document.createElement('span');
+        clone.textContent = position.textContent;
+        var posStyle = window.getComputedStyle(position);
+        clone.style.fontFamily = posStyle.fontFamily;
+        clone.style.fontSize = posStyle.fontSize;
+        clone.style.fontWeight = posStyle.fontWeight;
+        clone.style.lineHeight = posStyle.lineHeight;
+        clone.style.letterSpacing = posStyle.letterSpacing;
+        clone.style.textTransform = posStyle.textTransform;
+        clone.style.wordSpacing = posStyle.wordSpacing;
+        clone.style.whiteSpace = posStyle.whiteSpace;
+        clone.style.wordBreak = posStyle.wordBreak;
+        clone.style.overflowWrap = posStyle.overflowWrap;
+        clone.style.display = 'inline';
+        tempContainer.appendChild(clone);
+        document.body.appendChild(tempContainer);
+
+        var rects = clone.getClientRects();
+        var tempRect = tempContainer.getBoundingClientRect();
+
+        if (rects.length > 1) {
+          // 文字换行了，取最后一行的右边缘相对于临时容器的位置
+          var lastRect = rects[rects.length - 1];
+          textWidth = lastRect.right - tempRect.left;
+        } else {
+          // 文字没有换行，使用第一行的右边缘
+          textWidth = rects[0].right - tempRect.left;
+        }
+
+        // 移除临时容器
+        document.body.removeChild(tempContainer);
+
+        // 横线左端 = 文字宽度 + 间隙
+        var leftPos = textWidth + GAP;
+        // 设置横线的 left
+        contain.style.setProperty('--line-left', leftPos + 'px');
+      });
+
+      // 应用到 active tab 的横线上
+      var activeTab = document.querySelector('.p-rdgroups__tablist li[aria-selected="true"]');
+      if (activeTab) {
+        var contain = activeTab.querySelector('.contain');
+        if (contain) {
+          var leftPos = contain.style.getPropertyValue('--line-left');
+          if (leftPos) {
+            contain.style.setProperty('--line-left-applied', leftPos);
+          }
+        }
+      }
+    }
+
+    // 用 CSS 变量控制横线 left
+    var style = document.createElement('style');
+    style.textContent = '.p-rdgroups__tablist li[aria-selected="true"] .contain::after { left: var(--line-left, 100%); }';
+    document.head.appendChild(style);
+
+    // 页面加载后执行
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(updateRdgroupsLines, 100);
+      });
+    } else {
+      setTimeout(updateRdgroupsLines, 100);
+    }
+
+    // 监听 tab 切换
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('.p-rdgroups__tablist li')) {
+        setTimeout(updateRdgroupsLines, 50);
+      }
+    });
+
+    // 窗口大小变化时重新计算
+    window.addEventListener('resize', function () {
+      setTimeout(updateRdgroupsLines, 100);
+    });
+  })();
+</script>
+
+</body>
+
+</html>

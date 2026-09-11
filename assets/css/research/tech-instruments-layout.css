@@ -1,0 +1,10 @@
+/* Keep both instrument card collections on the same responsive grid. */
+@media (min-width: 700px) {
+  body.page-research-tech-instruments .core-technologies-showcase,
+  body.page-research-tech-instruments .imported-capabilities {
+    width: min(calc(100vw - 100px), 1400px) !important;
+    max-width: 1400px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+}

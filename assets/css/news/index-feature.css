@@ -1,0 +1,204 @@
+.feature-article {
+  --feature-ink: #142029;
+  --feature-muted: #52616c;
+  --feature-rule: #d7dee3;
+  --feature-accent: #c8102e;
+  color: var(--feature-ink);
+}
+
+.feature-article .article-deck {
+  margin: 0 0 2rem;
+  padding: 1.15rem 1.3rem;
+  border-left: 5px solid var(--feature-accent);
+  background: #f3f6f8;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.feature-article .article-toc {
+  margin: 2rem 0 3rem;
+  padding: 1.4rem 1.5rem 1.2rem;
+  border: 1px solid var(--feature-rule);
+  background: #fff;
+}
+
+.feature-article .article-toc strong {
+  display: block;
+  margin-bottom: .65rem;
+  letter-spacing: .06em;
+}
+
+.feature-article .article-toc ol {
+  margin: 0;
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.feature-article .article-toc li {
+  break-inside: avoid;
+  margin: .35rem 0;
+}
+
+.feature-article .article-toc a {
+  color: inherit;
+  text-decoration-color: #a8b4bc;
+  text-underline-offset: .18em;
+}
+
+.feature-article .news-article-subheading {
+  margin-top: 3.6rem;
+  padding-top: .8rem;
+  border-top: 1px solid var(--feature-rule);
+}
+
+.feature-article h3 {
+  margin-top: 2.1rem;
+  font-size: 1.35rem;
+  line-height: 1.45;
+}
+
+.feature-article p,
+.feature-article li {
+  line-height: 1.92;
+}
+
+.feature-article .fact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.feature-article .fact-card {
+  padding: 1.15rem;
+  border-top: 4px solid var(--feature-accent);
+  background: #f3f6f8;
+}
+
+.feature-article .fact-card strong {
+  display: block;
+  margin-bottom: .4rem;
+  font-size: 1.05rem;
+}
+
+.feature-article .science-note,
+.feature-article .quote-highlight,
+.feature-article .future-note {
+  margin: 2rem 0;
+  padding: 1.35rem 1.5rem;
+  background: #eef3f6;
+  border-left: 5px solid #607d8b;
+}
+
+.feature-article .quote-highlight {
+  background: #f7f3f4;
+  border-left-color: var(--feature-accent);
+  font-size: 1.08rem;
+}
+
+.feature-article .quote-highlight cite {
+  display: block;
+  margin-top: .6rem;
+  color: var(--feature-muted);
+  font-size: .9rem;
+  font-style: normal;
+}
+
+.feature-article .future-note {
+  background: #f3f6f8;
+  border-left-color: #1a6f8a;
+}
+
+.feature-article .paper-figure {
+  margin: 2.4rem 0;
+}
+
+.feature-article .paper-figure img,
+.feature-article .paper-figure video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.feature-article figcaption {
+    margin-top: .65rem;
+    color: var(--feature-muted);
+    font-size: .9rem;
+    line-height: 1.65;
+    font-style: normal;
+}
+
+.feature-article .milestone-list,
+.feature-article .application-list {
+    margin: 1.5rem 0 2rem;
+    padding: 1.1rem 1.2rem 1.1rem 2.3rem;
+    background: #f7f9fa;
+}
+
+.feature-article .milestone-list {
+    list-style: none;
+    padding-left: 1.2rem;
+}
+
+.feature-article .comparison-table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  margin: 2rem 0;
+  border-collapse: collapse;
+}
+
+.feature-article .comparison-table th,
+.feature-article .comparison-table td {
+  min-width: 10rem;
+  padding: .8rem;
+  border: 1px solid var(--feature-rule);
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.65;
+}
+
+.feature-article .comparison-table th {
+  background: #eaf0f3;
+}
+
+.feature-article .reference-list {
+  padding-left: 1.35rem;
+  font-size: .92rem;
+}
+
+.feature-article .reference-list a {
+  overflow-wrap: anywhere;
+}
+
+.feature-article .source-disclosure {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--feature-rule);
+  color: var(--feature-muted);
+  font-size: .9rem;
+}
+
+.feature-article .video-frame {
+  margin: 2.4rem 0;
+  background: #0b1115;
+}
+
+.feature-article .video-frame video {
+  max-height: 640px;
+  object-fit: cover;
+}
+
+@media (max-width: 760px) {
+  .feature-article .article-toc ol { columns: 1; }
+  .feature-article .fact-grid { grid-template-columns: 1fr; }
+  .feature-article .article-deck,
+  .feature-article .science-note,
+  .feature-article .quote-highlight,
+  .feature-article .future-note { padding: 1rem; }
+}
+
+@media print {
+  .feature-article .article-toc a { text-decoration: none; }
+  .feature-article .video-frame { display: none; }
+}

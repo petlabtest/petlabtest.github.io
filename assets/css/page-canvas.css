@@ -1,0 +1,19 @@
+/* Keep the 1600px page canvas white and color only the outer widescreen gutters. */
+@media (min-width: 1601px) {
+  html {
+    background-color: #f5f4f0 !important;
+  }
+
+  body {
+    background-color: #fff !important;
+    background-image: linear-gradient(
+      to right,
+      #f5f4f0 0,
+      #f5f4f0 calc((100% - 1600px) / 2),
+      #fff calc((100% - 1600px) / 2),
+      #fff calc((100% + 1600px) / 2),
+      #f5f4f0 calc((100% + 1600px) / 2),
+      #f5f4f0 100%
+    ) !important;
+  }
+}

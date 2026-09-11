@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <link rel="icon" type="image/png" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="apple-touch-icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
+  <link rel="manifest" href="../assets/data/favicons/site.webmanifest">
+  <link rel="shortcut icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>肖鹏 | 数字PET实验室</title>
+  <link rel="stylesheet" href="../assets/css/root/02-root-3a274de5.css">
+  <link rel="stylesheet" href="../assets/css/root/05-team-detail-ecf0032c.css">
+  <link rel="stylesheet" href="../assets/css/about/team-page-standard.css">
+  <style media="not all">
+    @font-face {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 300;
+      src: url("../assets/fonts/root/media/r024.woff2") format("woff2");
+    }
+
+    @font-face {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      src: url("../assets/fonts/root/media/r025.woff2") format("woff2");
+    }
+
+    @font-face {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      src: url("../assets/fonts/root/media/r026.woff2") format("woff2");
+    }
+
+    .team-detail-info h1.page-title {
+      margin: 0 0 40px;
+      color: inherit;
+      font-family: "Poppins", Arial, sans-serif;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 1.2;
+      text-transform: none;
+    }
+
+    .team-detail-info .lab-full__body {
+      max-width: 1000px;
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.75;
+    }
+
+    .team-detail-info .lab-full__body p {
+      margin: 0 0 1.2em;
+    }
+
+    .team-detail-info .lab-full__body,
+    .team-detail-info>ul {
+      position: relative;
+      top: -.75rem;
+    }
+
+    .team-detail-info {
+      position: relative;
+      top: 2.5rem;
+    }
+
+    .team-detail-info>ul,
+    .team-detail-info>ul>li {
+      font-family: "Poppins", Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.75;
+    }
+
+    .team-detail-desc>h3,
+    .team-detail-edu>h3,
+    .team-detail-admission>h3,
+    .team-detail-tab-btns .tab-btn {
+      margin: 17px 0 18px;
+      font-family: "Poppins", Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.556;
+      letter-spacing: normal;
+    }
+
+    .team-detail-tab-btns .tab-btn {
+      margin: 0;
+    }
+
+    .team-detail-desc-full {
+      font-family: "Poppins", Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.75;
+    }
+
+    .team-detail-desc-full p {
+      margin: 0 0 1.2em;
+    }
+
+    .team-detail-edu>p,
+    .team-detail-admission>p,
+    .team-detail-tab-content .tab-panel li {
+      font-family: "Poppins", Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.75;
+    }
+
+    .team-detail-tabs .team-detail-tab-btns {
+      width: min(45rem, 100%);
+      height: auto;
+      min-height: 4.25rem;
+    }
+
+    .team-detail-tabs .team-detail-tab-btns .tab-btn {
+      flex: 1 1 0;
+      width: 0;
+      min-width: 0;
+      padding: .7rem .75rem;
+      font-size: 20px;
+      line-height: 1.3;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .team-detail-main>.paragraph--type-p-fullwidth:last-child {
+      position: relative;
+      z-index: 2;
+      clear: both;
+      overflow: hidden;
+      width: 100vw;
+      margin: 20px 0 0 calc(50% - 50vw);
+      padding: 0;
+      background: transparent;
+      font-family: "Poppins", Arial, sans-serif;
+      isolation: isolate;
+    }
+
+    .team-detail-main>.paragraph--type-p-fullwidth:last-child::after {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      left: auto;
+      width: 150%;
+      height: 100%;
+      content: "";
+      background: #e2e2e2;
+      transform: rotate(-7.5deg);
+      transform-origin: 100% 0;
+    }
+
+    .team-detail-main>.paragraph--type-p-fullwidth:last-child .p-fullwidth__content {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 230px 30px 80px;
+      opacity: 1;
+      transform: translateY(0);
+      position: relative;
+      z-index: 1;
+    }
+
+    .team-detail-main>.paragraph--type-p-fullwidth:last-child .p-fullwidth__content>* {
+      background: transparent;
+    }
+
+    .team-detail-main>.paragraph--type-p-fullwidth:last-child .p-fullwidth__header {
+      margin: 0 0 18px;
+      font-size: 37px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .team-detail-main>.paragraph--type-p-fullwidth:last-child .p-fullwidth__body {
+      margin-bottom: 18px;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    .team-detail-main>.paragraph--type-p-fullwidth:last-child .p-fullwidth__cta {
+      margin-bottom: 20px;
+    }
+
+    .team-detail-main>.paragraph--type-p-fullwidth:last-child .cta--button {
+      position: relative;
+      display: inline-block;
+      padding: 0 15px 0 11px;
+      color: #000;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.5;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: padding .2s ease;
+    }
+
+    .team-detail-main>.paragraph--type-p-fullwidth:last-child .cta--button .last-word {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .team-detail-main>.paragraph--type-p-fullwidth:last-child .cta--button .last-word::after {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin: 0 0 2px 12px;
+      content: "";
+      border-top: 2px solid currentColor;
+      border-right: 2px solid currentColor;
+      transform: rotate(45deg);
+      transition: transform .2s ease;
+    }
+
+    .team-detail-main>.paragraph--type-p-fullwidth:last-child .cta--button::before {
+      position: absolute;
+      top: 48%;
+      left: 0;
+      width: 4px;
+      height: 74%;
+      content: "";
+      background: #f45a2b;
+      transform: translateY(-50%);
+      transition: width .2s ease;
+    }
+
+    .team-detail-main>.paragraph--type-p-fullwidth:last-child .cta--button:hover {
+      padding-left: 36px;
+      padding-right: 0;
+    }
+
+    .team-detail-main>.paragraph--type-p-fullwidth:last-child .cta--button:hover::before {
+      width: 20px;
+    }
+
+    .team-detail-main>.paragraph--type-p-fullwidth:last-child .cta--button:hover .last-word::after {
+      transform: translateX(3px) rotate(45deg);
+    }
+
+    @media (min-width: 700px) {
+      .team-detail-info h1.page-title {
+        font-size: 45px;
+        line-height: 1.15;
+      }
+
+      .team-detail-info .lab-full__body {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .team-detail-desc>h3,
+      .team-detail-edu>h3,
+      .team-detail-admission>h3,
+      .team-detail-tab-btns .tab-btn {
+        margin: 13px 0 25px;
+        font-size: 20px;
+      }
+
+      .team-detail-tab-btns .tab-btn {
+        margin: 0;
+      }
+
+      .team-detail-desc-full,
+      .team-detail-edu>p,
+      .team-detail-admission>p,
+      .team-detail-tab-content .tab-panel li {
+        line-height: 1.5;
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .team-detail-info h1.page-title {
+        font-size: 65px;
+        line-height: 1.2;
+      }
+
+      .team-detail-info .lab-full__body {
+        font-size: 16px;
+        line-height: 1.75;
+      }
+
+      .team-detail-info>ul,
+      .team-detail-info>ul>li {
+        font-size: 13px;
+        line-height: 1.75;
+      }
+
+      .team-detail-desc>h3,
+      .team-detail-edu>h3,
+      .team-detail-admission>h3,
+      .team-detail-tab-btns .tab-btn {
+        margin: 40px 0 37px;
+        font-size: 30px;
+      }
+
+      .team-detail-tab-btns .tab-btn {
+        margin: 0;
+      }
+
+      .team-detail-desc-full,
+      .team-detail-edu>p,
+      .team-detail-admission>p,
+      .team-detail-tab-content .tab-panel li {
+        font-size: 20px;
+        line-height: 1.75;
+      }
+
+      .team-detail-main>.paragraph--type-p-fullwidth:last-child .p-fullwidth__content {
+        padding: 230px 50px 80px 100px;
+      }
+
+      .team-detail-main>.paragraph--type-p-fullwidth:last-child .p-fullwidth__header {
+        font-size: 50px;
+        letter-spacing: 1.3px;
+      }
+
+      .team-detail-main>.paragraph--type-p-fullwidth:last-child .p-fullwidth__body {
+        margin-bottom: 46px;
+        line-height: 1.8;
+      }
+
+      .team-detail-main>.paragraph--type-p-fullwidth:last-child .p-fullwidth__cta {
+        margin-bottom: 40px;
+      }
+    }
+
+    @media (max-width: 699px) {
+      .team-detail-info {
+        top: 1.5rem;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../assets/css/archive-consistency.css?v=20260908-wide1">
+  <link rel="stylesheet" href="../assets/css/page-canvas.css?v=20260911-1">
+  <link rel="stylesheet" href="../assets/css/about/team-detail-layout.css?v=20260911-3">
+</head>
+
+
+
+
+
+<body class="team-profile-page">
+  <div id="petlab-header" class="petlab-component-host"></div>
+
+  <main class="team-detail-main">
+    <section class="team-detail-top" style="margin: 12rem 9rem 0 0; padding: 0 0 3rem 0">
+      <div style="
+            float: left;
+            position: absolute;
+             background: url(../assets/pic/root/media/07-bg-81ac28d2.jpg) center/cover;
+            height: 41.75rem;
+            width: 78rem;
+            right: 0;
+            z-index: -1;
+            top: 6rem;
+          "></div>
+      <div class="team-detail-photo" style="
+            margin: -8rem 0rem 0 9rem;
+            flex: 0 0 36rem;
+            background: url(../assets/pic/root/media/08-2-6a3706b1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            height: 35rem;
+          "></div>
+      <div class="team-detail-info" style="margin: 0 2.5rem 0 2.5rem; font-size: 0.8rem">
+        <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">肖鹏</span>
+        </h1>
+        <div class="lab-full__body">
+          <p>
+            华中科技大学生命科学与技术学院生物医学工程系教授；武汉光电国家实验室研究员。
+          </p>
+        </div>
+        <ul>
+          <li>单位：华中科技大学生命科学与技术学院生物医学工程系</li>
+          <li>地址：湖北省武汉市珞喻路1037号华中科技大学恩明楼409室</li>
+          <li>邮箱：xiaopeng@hust.edu.cn</li>
+        </ul>
+      </div>
+    </section>
+    <div class="team-detail-block">
+      <section class="team-detail-desc">
+        <h3>专注于智能成像方法研究与仪器研制。</h3>
+
+        <div class="team-detail-desc-full">
+          <p>
+            围绕“面向PET（Positron Emission
+            Tomography，正电子发射断层成像）数据流的信号处理及图像重建”、“智能化应用适应性PET系统设计”两方面开展工作，实现“双动态成像PET”、“放疗导航PET”等一系列“人无我有、人有我优”创新系统及其创新应用。所在团队以智能探测与成像为主线，研究方向覆盖从闪烁晶体关键材料、光电核心器件到智能成像系统与应用研究，从高能粒子信号探测、信号处理到图像重建、图像处理整个智能化创新链，形成了集人才培养、技术创新和产业支撑为一体的全球顶尖产学研用平台。
+          </p>
+          <p>
+            先后主持国家自然科学基金青年基金项目、应急管理项目、面上项目、国家重大科研仪器研制项目各一项，国家重点研发计划项目、课题各一项。在IEEE Transactions on Radiation and Plasma
+            Medical Sciences，Physics in Medicine and Biology，IEEE Nuclear Science Symposium and Medical Imaging
+            Conference（NSS/MIC）等相关领域期刊和会议上发表论文70余篇，申请国内外专利合计85项，已获授权34项。相关工作及成果获得湖北省技术发明一等奖2项（2013，2024，第2完成人），黄家驷生物医学工程奖一等奖1项（2019，第2完成人）。团队相关成果入选“2019中国十大科技进展新闻”、“2019年度中国医学重大进展”。
+          </p>
+        </div>
+      </section>
+      <section class="team-detail-edu">
+        <h3>教育经历</h3>
+        <p>1993.9~1997.7 湖南大学 本科/学士学位<br>
+          1997.9~2000.1 湖南大学 硕士研究生/硕士学位<br>
+          2000.5~2006.2 新加坡国立大学 博士研究生/博士学位</p>
+      </section>
+
+      <section class="team-detail-admission">
+        <h3>招生信息</h3>
+        <p>
+          基于以上研究方向，每年招收博士生1名，硕士生2名，本科生3名。希望学生有扎实的数理基础与编程能力，具有数学建模、软硬件协同开发或医学影像处理经验者优先。将为学生提供一流的科研环境和平台条件。
+        </p>
+        <p>科研项目介绍：<br>
+          1、PET图像重建与处理算法研究<br>
+          2、多模态PET系统研发（异质可变结构/开窗平板/双动态成像）<br>
+        </p>
+      </section>
+      <section class="team-detail-tabs">
+        <div class="team-detail-tab-btns">
+          <button class="tab-btn active" data-tab="0">代表性项目</button>
+          <button class="tab-btn" data-tab="1">代表性专利</button>
+          <button class="tab-btn" data-tab="2">近期代表性论文</button>
+        </div>
+        <div class="team-detail-tab-content">
+          <div class="tab-panel" style="display: block">
+            <ul>
+              <li>
+                国家自然科学基金重大科研仪器研制项目，面向清醒活动目标的双动态成像小动物PET仪器（62027808），2021.01-2025.12。
+              </li>
+              <li>
+                中华人民共和国科学技术部国家重点研发计划科技助力经济2020重点专项，小型高灵敏度低能射线细胞病理检测仪（020YFF01014900ZL），2020.07-2022.06。
+              </li>
+              <li>
+                国家自然科学基金常规面上项目，少数PET成像方法研究（61671215），2017.01-2020.12。
+              </li>
+              <li>
+                国家自然科学基金应急管理项目，基于先验信息的欠采样PET图像重建方法研究（61540041），2016.01-2016.12。
+              </li>
+              <li>
+                国家国际科技合作专项，肝肿瘤综合手术规划及导航系统的合作研究（2012DFG31970），2012.06-2015.06。
+              </li>
+            </ul>
+          </div>
+          <div class="tab-panel" style="display: none">
+            <ul>
+              <li>刘炜；郑睿；谢庆国；<b>肖鹏；</b> SOFT X-RAY LIGHT SOURCE，2023-09-05，美国，US 11,751,318B2</li>
+              <li>李炳轩；<b>肖鹏；</b> 郭彦彬；谢庆国；一种具有窗口的平板PET成像装置，2023-08-22，中国，ZL201511019068.5</li>
+              <li><b>肖鹏；</b> 谢庆国；徐浩；王浩；计算电信号的能量的方法、装置和计算机存储介质，2023-06-06，中国，ZL201910153366.5</li>
+              <li>谢庆国；<b>肖鹏；</b> 王希；李娜；陈源宝；刘伟；METHOD AND DEVICE FOR OBTAINING SCINTILLATION PULSE
+                INFORMATION；2023-03-08，欧洲，EP2700360B1</li>
+              <li>黎静；李震；邓胡川；褚倩；谢庆国；<b>肖鹏；</b>张智；高杰临；杨仪；医療用画像四次元可視化の方法及び装置，2022-06-01，日本，特许第7083047号</li>
+              <li>程冉；李鑫宇；吕旭东；<b>肖鹏；</b> 谢庆国；胡道焱；图像重建方法及训练方法、装置、设备及存储介质，2022-05-27，中国，ZL202210057274.9</li>
+              <li>李昂；张祥松；<b>肖鹏；</b> 谢庆国；散射校正方法、装置、成像系统及计算机可读存储介质，2021-12-03，中国，ZL202111060795.1</li>
+              <li>李昂；谢庆国；<b>肖鹏；</b> CT图像中环形伪影的校正方法、装置及计算机存储介质，2021-10-08，中国，ZL201911392508.X</li>
+              <li>牛明；花城；姜浩；<b>肖鹏；</b> 谢庆国；复合探测装置，2021-02-26，中国，ZL201811541860.0 (专利)</li>
+              <li>郑睿；谢庆国；<b>肖鹏；</b> 张博；一种辐射探测测量和成像方法及变结构PET设备，2020-03-20，中国，ZL201610374975.X</li>
+
+            </ul>
+          </div>
+          <div class="tab-panel" style="display: none">
+            <ul>
+              <li>Zhang D, Wu B, Xi D, 等. A novel iterative iso-transmission line empirical material decomposition
+                algorithm for multi-energy photon-counting CT[J]. BIOMEDICAL SIGNAL PROCESSING AND CONTROL, 2025, 99.
+                doi: 10.1016/j.bspc.2024.106853.</li>
+              <li>Wang L, Zheng R, Chen Y, 等. Comprehensive property engineering of YGdAP:Ce scintillation crystals by
+                optimizing the Y/Gd ratio[J]. CRYSTENGCOMM, 2025, 27(34): 5702-5713. doi: 10.1039/d5ce00502g.</li>
+              <li>Wang A, Zhu Y N, Setianegara J, 等. New energy layer reduction method for rapid intensity-modulated
+                proton therapy (IMPT) using a ridge filter[J]. MEDICAL PHYSICS, 2025, 52(8). doi: 10.1002/mp.18031.</li>
+              <li>Wang A, Zhu Y N, Setianegara J, 等. Development and experimental validation of an in-house treatment
+                planning system with greedy energy layer optimization for fast IMPT[J]. MEDICAL PHYSICS, 2025, 52(7).
+                doi: 10.1002/mp.17941.</li>
+              <li>Li A, Li B, Fang L, 等. Enhancing Energy-Based Scatter Estimation Using Energy Spectra Modification in
+                PET[J]. IEEE TRANSACTIONS ON RADIATION AND PLASMA MEDICAL SCIENCES, 2025, 9(3): 347-361. doi:
+                10.1109/TRPMS.2024.3495219.</li>
+              <li>Zhang R, Mu D, Ma Q, et al. Proton spot dose estimation based on positron activity distributions with
+                neural network[J]. Medical Physics, 2024, 51(10): 7226-7239. doi: 10.1002/mp.17297.</li>
+              <li>Zhang D, Wu B, Xi D, 等. Feasibility study of photon-counting CT for material identification based on
+                YSO/SiPM detector: A proof of concept[J]. MEDICAL PHYSICS, 2024, 51(11): 8151-8167. doi:
+                10.1002/mp.17341.</li>
+              <li>Li A, Zhang X, Zhou X, 等. Timing offset calibration for TOF PET using stationary line source scans at
+                multiple positions[J]. PHYSICS IN MEDICINE AND BIOLOGY, 2024, 69(17). doi: 10.1088/1361-6560/ad6edb.
+              </li>
+              <li>Cheng R, Sun M, Wang F, 等. Dual-Ended Readout PET Detector Based on Multivoltage Threshold Sampling
+                Combined With Convolutional Neural Network for Energy Calculation[J]. IEEE TRANSACTIONS ON RADIATION AND
+                PLASMA MEDICAL SCIENCES, 2024, 8(7): 709-717. doi: 10.1109/TRPMS.2024.3393235.</li>
+              <li>Fang L, Zhang B, Li B, et al. Development and evaluation of a new high-TOF-resolution all-digital
+                brain PET system[J]. Physics in Medicine &amp; Biology, 2024, 69(2): 025019. doi:
+                10.1088/1361-6560/ad164d.</li>
+            </ul>
+          </div>
+        </div>
+        <script src="../assets/js/root/01-team-detail-433aa147.js"></script>
+      </section>
+    </div>
+    <div class="paragraph paragraph--type-p-fullwidth paragraph--view-mode-full background--grey slope--pos js-animate">
+      <div class="p-fullwidth__content">
+        <h2 class="p-fullwidth__header">认识我们的研究员</h2>
+        <div class="p-fullwidth__body">
+          <p><span>参与我们令人兴奋且充满挑战的研究</span></p>
+        </div>
+        <div class="p-fullwidth__cta"><a href="../Engage/Engage-Contact-cn.html" class="cta--button">联系我们</a></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 页脚版权 -->
+  <div class="footer-container">
+    <div class="footer-main">
+      <div class="footer-info-cols">
+        <div class="footer-contact">
+          <div>petlab@ustc.edu.cn</div>
+          <div>中国科学技术大学高科技园区新知楼九层</div>
+          <div><br></div>
+        </div>
+        <div class="footer-links">
+          <div><a href="http://www.raysolution.com">RAYSOLUTION: www.raysolution.com</a></div>
+          <div><a href="http://www.ray-can.com">RAYCAN: www.ray-can.com</a></div>
+          <div><a href="http://www.ray-quant.com">RAYQUANT: www.ray-quant.com</a></div>
+        </div>
+      </div>
+      <div class="footer-qrcode-wrap">
+        <img src="../assets/pic/root/media/09-qrcode-7418dd1f.png" alt="二维码" class="footer-qrcode">
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>版权所有：智能检测与成像实验室，中国科学技术大学</span>
+    </div>
+  </div>
+  <div id="petlab-footer" class="petlab-component-host"></div>
+  <style>
+    .header-container,
+    .header-spacer,
+    .footer-container {
+      display: none !important;
+    }
+
+    .petlab-component-host {
+      display: block;
+      position: relative;
+      width: 100%;
+    }
+
+    #petlab-header {
+      z-index: 999;
+      overflow: visible;
+    }
+
+    #petlab-footer {
+      z-index: 1;
+    }
+  </style>
+  <script>
+    (function () {
+      var siteRoot = new URL('../', window.location.href);
+      var cssUrl = new URL('assets/css/site.css?v=20260908-wide1', siteRoot);
+      function rewriteUrls(root) {
+        root.querySelectorAll('[src], [href]').forEach(function (node) {
+          ['src', 'href'].forEach(function (attr) {
+            var value = node.getAttribute(attr);
+            if (!value || /^(?:#|https?:|mailto:|tel:|javascript:|\/)/i.test(value)) return;
+            node.setAttribute(attr, new URL(value, siteRoot).href);
+          });
+        });
+      }
+      function initHeader(shadow) {
+        var header = shadow.querySelector('[data-site-header]');
+        if (!header) return;
+        var groups = shadow.querySelectorAll('.primary-nav > .nav-group');
+        function navBg(active) {
+          var color = active ? '#edf5fc' : '#fff';
+          groups.forEach(function (group) { group.style.setProperty('background-color', color, 'important'); group.querySelector(':scope > .nav-trigger')?.style.setProperty('background-color', color, 'important'); });
+          shadow.querySelectorAll('.lbl-header, .lbl-header .header-shell, .lbl-header .desktop-navigation, .lbl-header .header-top-row, .lbl-header .primary-nav').forEach(function (node) { node.style.setProperty('background-color', color, 'important'); });
+        }
+        function closeAll() { shadow.querySelectorAll('.nav-group.open, .nav-group.dismissed').forEach(function (g) { g.classList.remove('open', 'dismissed'); g.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false'); }); navBg(false); }
+        navBg(false); header.addEventListener('mouseleave', closeAll); shadow.host?.addEventListener('mouseleave', closeAll);
+        shadow.querySelectorAll('.nav-group').forEach(function (group) {
+          group.addEventListener('mouseenter', function () { shadow.querySelectorAll('.nav-group.open').forEach(function (other) { if (other !== group) { other.classList.remove('open', 'dismissed'); other.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false'); } }); group.classList.remove('dismissed'); group.classList.add('open'); group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'true'); if (group.matches('.primary-nav > .nav-group')) navBg(true); });
+          group.addEventListener('mouseleave', function () { setTimeout(function () { if (!group.matches(':hover') && !group.matches(':focus-within')) { group.classList.remove('open'); group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false'); if (group.matches('.primary-nav > .nav-group') && !header.matches(':hover')) navBg(false); } }, 220); });
+        });
+        shadow.querySelectorAll('.nav-trigger').forEach(function (trigger) { trigger.addEventListener('click', function () { var group = trigger.closest('.nav-group'), open = group?.classList.contains('open'); shadow.querySelectorAll('.nav-group.open').forEach(function (g) { g.classList.remove('open', 'dismissed'); g.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false'); }); if (group && !open) { group.classList.add('open'); trigger.setAttribute('aria-expanded', 'true'); navBg(true); } else navBg(false); }); });
+        shadow.querySelectorAll('[data-menu-close]').forEach(function (button) { button.addEventListener('click', function () { var group = button.closest('.nav-group'); group?.classList.remove('open'); group?.classList.add('dismissed'); group?.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false'); navBg(false); }); });
+        shadow.querySelector('[data-menu-toggle]')?.addEventListener('click', function (event) { var menu = shadow.querySelector('[data-site-header]'); var active = menu.classList.toggle('menu-active'); event.currentTarget.setAttribute('aria-expanded', String(active)); });
+      }
+      async function mount(id, path, isHeader) {
+        var host = document.getElementById(id); if (!host) return;
+        var response = await fetch(new URL(path, siteRoot)); var cssResponse = await fetch(cssUrl); if (!response.ok || !cssResponse.ok) return;
+        var shadow = host.attachShadow({ mode: 'open' }); var style = document.createElement('style'); var cssText = await cssResponse.text();
+        cssText = cssText.replace(/url\((['"]?)\.\.\/([^'")]+)\1\)/g, function (_, quote, path) { return 'url(' + quote + new URL('assets/' + path, siteRoot).href + quote + ')'; });
+        cssText = cssText.replace(/(-?\d*\.?\d+)rem\b/g, function (_, value) { return (parseFloat(value) * 16) + 'px'; });
+        cssText += '@media (min-width:1101px){.lbl-header,.lbl-header .header-shell,.lbl-header .desktop-navigation,.lbl-header .primary-nav,.lbl-header .nav-group{overflow:visible!important}.lbl-header .nav-group.open>.mega-menu,.lbl-header .nav-group:hover>.mega-menu,.lbl-header .nav-group:focus-within>.mega-menu{display:grid!important;z-index:2000!important;pointer-events:auto}.lbl-header .nav-group.dismissed>.mega-menu{display:none!important}.lbl-header .primary-nav>.nav-group{background:#fff!important}.lbl-header .primary-nav>.nav-group:hover,.lbl-header .primary-nav>.nav-group.open,.lbl-header .primary-nav>.nav-group:focus-within{background:#edf5fc!important}.lbl-header .primary-nav>.nav-group.dismissed{background:#fff!important}.lbl-header .primary-nav>.nav-group>.nav-trigger{background:#fff!important;color:#062f40!important;transition:none!important}.lbl-header .primary-nav>.nav-group:hover>.nav-trigger,.lbl-header .primary-nav>.nav-group.open>.nav-trigger,.lbl-header .primary-nav>.nav-group:focus-within>.nav-trigger{background:#edf5fc!important;color:#062f40!important}.lbl-header .primary-nav>.nav-group.dismissed>.nav-trigger{background:#fff!important;color:#062f40!important;transition:none!important}.lbl-header .primary-nav>.nav-group,.lbl-header .primary-nav>.nav-group>.nav-trigger{transition:none!important}}';
+        style.textContent = cssText.replace(/^:root\s*\{/, ':host {'); shadow.appendChild(style); var content = document.createElement('div'); content.innerHTML = await response.text(); while (content.firstChild) shadow.appendChild(content.firstChild); rewriteUrls(shadow); if (isHeader) initHeader(shadow); else shadow.querySelector('[data-current-year]')?.replaceChildren(String(new Date().getFullYear()));
+      }
+      Promise.all([mount('petlab-header', 'components/header-cn.html?v=20260908-wide1', true), mount('petlab-footer', 'components/footer-cn.html?v=20260811-119', false)]);
+    }());
+  </script>
+
+
+</body>
+
+</html>
