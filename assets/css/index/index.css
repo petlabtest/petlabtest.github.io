@@ -1,6 +1,6 @@
 /* index 页面专属样式（原内联于 index.html / index-cn.html，提取至此） */
 
-    /* Match the archived MIT LL homepage typography with local Poppins subsets. */
+    /* Match the archived DPET homepage typography with local Poppins subsets. */
     @font-face {
       font-family: "Poppins Local";
       src: url("../../fonts/root/media/r024.woff2") format("woff2");
@@ -132,4 +132,3 @@
         background-attachment: scroll;
       }
     }
-  

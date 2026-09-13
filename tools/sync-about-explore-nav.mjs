@@ -70,10 +70,10 @@ function renderNav(language, current) {
           </li>`;
   }).join("\n");
 
-  return `<div class="mitll-ll-pub-nav mitll-ll-pub-nav-chapters about-explore-section">
-      <div class="mitll-ll-pub-nav-chapters-inner">
+  return `<div class="dpet-ll-pub-nav dpet-ll-pub-nav-chapters about-explore-section">
+      <div class="dpet-ll-pub-nav-chapters-inner">
         <h3>${heading}</h3>
-        <ul class="mitll-ll-pub-bottom-nav about-explore-nav">
+        <ul class="dpet-ll-pub-bottom-nav about-explore-nav">
 ${items}
         </ul>
       </div>
@@ -87,7 +87,7 @@ for (const chapter of chapters) {
     let source = await readFile(filePath, "utf8");
     const heading = language === "cn" ? "探索您感兴趣的内容" : "Explore What Interests You";
     const headingAt = source.indexOf(heading);
-    const navStart = source.lastIndexOf('<div class="mitll-ll-pub-nav mitll-ll-pub-nav-chapters', headingAt);
+    const navStart = source.lastIndexOf('<div class="dpet-ll-pub-nav dpet-ll-pub-nav-chapters', headingAt);
     if (headingAt === -1 || navStart === -1) throw new Error(`Missing explore navigation in ${filePath}`);
     const navEnd = findMatchingDivEnd(source, navStart);
     source = source.slice(0, navStart) + renderNav(language, chapter.key) + source.slice(navEnd);

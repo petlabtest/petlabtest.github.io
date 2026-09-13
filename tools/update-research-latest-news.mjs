@@ -107,7 +107,7 @@ function extractNewsCatalog(source, language) {
       source: requireMatch(section, /<div class="news-source">([\s\S]*?)<\/div>/, `${key} source`),
       summary: requireMatch(
         section,
-        /field--name-mitll-news-featured-summary[\s\S]*?<p>([\s\S]*?)<\/p>/,
+        /field--name-dpet-news-featured-summary[\s\S]*?<p>([\s\S]*?)<\/p>/,
         `${key} summary`,
       ).trim(),
     });
@@ -154,7 +154,7 @@ function renderCard(item, language) {
                                   <div class="field field--name-field-news-date field--type-datetime field--label-hidden field__item">${withoutYear(item.date, language)}</div>
                                   <div class="news-source">${item.source}</div>
                                 </div>
-                                <div class="field field--name-mitll-news-featured-summary field--type-ds field--label-hidden field__item">
+                                <div class="field field--name-dpet-news-featured-summary field--type-ds field--label-hidden field__item">
                                   <p>${item.summary}</p>
                                 </div>
                               </div>

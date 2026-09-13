@@ -169,6 +169,19 @@ function initHero() {
   if (slides.length < 2 || !dotsHost || !previous || !next) return;
   let index = Math.max(0, slides.findIndex(slide => slide.classList.contains('active')));
   let timer;
+  const playActiveVideo = () => {
+    slides.forEach((slide, slideIndex) => {
+      slide.querySelectorAll('video').forEach(video => {
+        if (slideIndex !== index) {
+          video.pause();
+          return;
+        }
+        if (video.readyState === HTMLMediaElement.HAVE_NOTHING) video.load();
+        const playback = video.play();
+        if (playback) playback.catch(() => {});
+      });
+    });
+  };
   slides.forEach((slide, slideIndex) => {
     slide.setAttribute('aria-hidden', String(slideIndex !== index));
     const dot = document.createElement('button');
@@ -190,6 +203,7 @@ function initHero() {
     slides[index].setAttribute('aria-hidden','false');
     dots[index].classList.add('active');
     dots[index].setAttribute('aria-selected','true');
+    playActiveVideo();
   };
   const restart = () => {
     clearInterval(timer);
@@ -213,7 +227,15 @@ function initHero() {
   };
   window.addEventListener('scroll', requestVisibilityUpdate, { passive:true });
   window.addEventListener('resize', requestVisibilityUpdate);
+  window.addEventListener('pageshow', playActiveVideo);
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) playActiveVideo();
+  });
+  ['pointerdown','keydown','touchstart'].forEach(eventName => {
+    document.addEventListener(eventName, playActiveVideo, { once:true, passive:true });
+  });
   updateControlVisibility();
+  playActiveVideo();
   restart();
 }
 

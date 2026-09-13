@@ -3,6 +3,10 @@ declare(strict_types=1);
 
 // This endpoint is intended to run on the PETLab web server, not in a browser.
 const RECIPIENT = 'petlab@hust.edu.cn';
+const SENDER = 'petlab@hust.edu.cn';
+
+header('Content-Type: text/plain; charset=UTF-8');
+header('X-Content-Type-Options: nosniff');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
@@ -23,9 +27,21 @@ $title = trim((string)($_POST['title'] ?? ''));
 $phone = trim((string)($_POST['phone'] ?? ''));
 $details = trim((string)($_POST['inquiry_details'] ?? ''));
 
-if ($name === '' || $details === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+if (
+    $name === ''
+    || $details === ''
+    || preg_match('/[\r\n]/', $name) === 1
+    || preg_match('/[\r\n]/', $email) === 1
+    || !filter_var($email, FILTER_VALIDATE_EMAIL)
+    || strlen($name) > 300
+    || strlen($email) > 254
+    || strlen($organization) > 600
+    || strlen($title) > 300
+    || strlen($phone) > 100
+    || strlen($details) > 30000
+) {
     http_response_code(400);
-    exit('Please provide a valid name, email address, and inquiry.');
+    exit('Please provide valid contact details and an inquiry within the allowed length.');
 }
 
 $subject = 'New PETLab inquiry';
@@ -42,9 +58,10 @@ $message = implode("\n", [
     $details,
 ]);
 
-// Use the visitor's email as the sender so replies go directly to them.
+// Keep the sender on this domain for SPF/DMARC alignment; replies still go to the visitor.
 $headers = implode("\r\n", [
-    'From: ' . $name . ' <' . $email . '>',
+    'From: PETLab Website <' . SENDER . '>',
+    'Reply-To: ' . $email,
     'Content-Type: text/plain; charset=UTF-8',
 ]);
 
@@ -53,7 +70,7 @@ if (!mail(RECIPIENT, $subject, $message, $headers)) {
     exit('Unable to send the inquiry.');
 }
 
-// Determine redirect target based on referring page language
+// Determine redirect target based on the referring page language.
 $referer = $_SERVER['HTTP_REFERER'] ?? '';
 $redirectPage = (strpos($referer, '-cn.html') !== false) ? 'Engage-inquiry-cn.html' : 'Engage-inquiry-en.html';
 

@@ -69,7 +69,7 @@
 }
 
 @font-face {
-  font-family: "mitll-icomoon";
+  font-family: "dpet-icomoon";
   src: url("../fonts/root/media/r030.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
@@ -306,7 +306,7 @@ html[lang^="en"] .page-node-type-news .node--type-news.node--view-mode-full .her
   .page-capabilities-overview .capabilities-hero,
   .page-news-overview .people-style-hero-wrap,
   .page-news-overview .people-style-hero,
-  .page-people-people-stewardship-cn .mitll-hero {
+  .page-people-people-stewardship-cn .dpet-hero {
     width: min(100%, 1600px) !important;
     max-width: 1600px !important;
     margin-right: auto !important;
@@ -325,15 +325,15 @@ html[lang^="en"] .page-node-type-news .node--type-news.node--view-mode-full .her
   }
 
   /* Stewardship: constrain the image, mask, subtitle band and opening block. */
-  .page-people-people-stewardship-cn .mitll-hero-inner,
-  .page-people-people-stewardship-cn .mitll-hero-inner img,
-  .page-people-people-stewardship-cn .mitll-hero-title,
-  .page-people-people-stewardship-cn .mitll-hero-intro {
+  .page-people-people-stewardship-cn .dpet-hero-inner,
+  .page-people-people-stewardship-cn .dpet-hero-inner img,
+  .page-people-people-stewardship-cn .dpet-hero-title,
+  .page-people-people-stewardship-cn .dpet-hero-intro {
     width: 100% !important;
     max-width: 1600px !important;
   }
 
-  .page-people-people-stewardship-cn .mitll-hero-inner img {
+  .page-people-people-stewardship-cn .dpet-hero-inner img {
     margin-inline: auto !important;
   }
 
