@@ -1127,7 +1127,7 @@ main{min-height:60vh}.page-hero{position:relative;min-height:clamp(430px,58vw,70
   }
 }
 
-/* ReplicateMIT homepage page_header treatment. */
+/* Homepage page_header treatment. */
 .home .page_header.home-carousel{
   --hero-approved-height:max(620px,min(51.25vw,820px,calc(100svh - 130px)));
   --hero-extended-height:max(calc(100dvh + 105px),820px,min(60vw,1080px,calc(100svh + 60px)));
