@@ -164,12 +164,12 @@
           <a href="News/News-ov-cn.html">新闻 & 活动</a>
           <a href="Giving/Giving-giving-cn.html">捐赠</a>
           <button class="language-toggle" type="button" data-language-toggle aria-label="Switch to English"
-            onclick="var p=window.location.pathname;p=/\/index-cn\.html$/i.test(p)?p.replace(/index-cn\.html$/i,'index.html'):/-cn\.html$/i.test(p)?p.replace(/-cn\.html$/i,'-en.html'):p;window.location.assign(p+window.location.search+window.location.hash)">EN</button>
+            onclick="var p=window.location.pathname;p=/\/search-cn\.html$/i.test(p)?p.replace(/search-cn\.html$/i,'search.html'):/\/index-cn\.html$/i.test(p)?p.replace(/index-cn\.html$/i,'index.html'):/-cn\.html$/i.test(p)?p.replace(/-cn\.html$/i,'-en.html'):p;window.location.assign(p+window.location.search+window.location.hash)">EN</button>
         </nav>
-        <form class="header-search" action="search.html" method="get" role="search">
+        <form class="header-search" action="search-cn.html" method="get" role="search">
           <label class="sr-only" for="header-search-input">搜索</label>
-          <input id="header-search-input" name="q" type="search" placeholder="Search" autocomplete="off" required>
-          <button type="submit" aria-label="Submit search"><span class="search-icon" aria-hidden="true"></span></button>
+          <input id="header-search-input" name="q" type="search" placeholder="搜索" autocomplete="off" required>
+          <button type="submit" aria-label="提交搜索"><span class="search-icon" aria-hidden="true"></span></button>
         </form>
       </div>
 
@@ -297,7 +297,7 @@
     </div>
 
     <div class="mobile-actions">
-      <a class="mobile-search-link" href="search.html" aria-label="Search"><span class="search-icon"
+      <a class="mobile-search-link" href="search-cn.html" aria-label="搜索"><span class="search-icon"
           aria-hidden="true"></span></a>
       <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false"
         aria-controls="primary-navigation"><span>菜单</span><i aria-hidden="true"></i></button>

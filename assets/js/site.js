@@ -1,10 +1,42 @@
-const PAGE_INDEX = [
-  ['About','about.html'],['Mission','mission.html'],['Impact','impact.html'],['History','history.html'],['Leadership','leadership.html'],['Partners','partners.html'],
-  ['Research','research.html'],['Kernel Method','kernel-methods.html'],['Key Initiatives','key-initiatives.html'],['Research Roadmap','research-roadmap.html'],['Scintillation Crystals','scintillation-crystals.html'],['Ultra-Weak Light Detection Chips','ultra-weak-light-chips.html'],['Modularized Particle Detectors','particle-detectors.html'],['Plug-n-Image','plug-n-image.html'],['Novel Instruments and Systems','instruments-systems.html'],['Nuclear Science','nuclear-science.html'],['Life Science','life-science.html'],['Drug Development','drug-development.html'],['Cutting-Edge Applications','cutting-edge-applications.html'],['Collaboration','collaboration.html'],['Publication','publication.html'],
-  ['Infrastructure','infrastructure.html'],['Facility','facility.html'],['Platform','platform.html'],['Instrumentation','instrumentation.html'],['Access','access.html'],['Talent Development','talent-development.html'],['Educational Opportunities','education.html'],['Career Opportunities','careers.html'],['Laboratory Life','laboratory-life.html'],['News and Events','news-events.html'],['Giving','giving.html'],['Contact','contact.html'],['Visit','visit.html']
-];
-
 const SITE_ROOT_URL = new URL('../../', document.currentScript.src);
+let searchIndexPromise;
+
+function getPageLanguage() {
+  return /-cn\.html$/i.test(window.location.pathname) || document.documentElement.lang.toLowerCase().startsWith('zh') ? 'zh' : 'en';
+}
+
+function loadSearchIndex() {
+  if (!searchIndexPromise) {
+    searchIndexPromise = fetch(new URL('assets/data/search-index.json', SITE_ROOT_URL))
+      .then(response => {
+        if (!response.ok) throw new Error(`Search index: ${response.status}`);
+        return response.json();
+      })
+      .catch(() => []);
+  }
+  return searchIndexPromise;
+}
+
+function escapeHTML(value) {
+  return String(value).replace(/[&<>"']/g, character => ({
+    '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
+  })[character]);
+}
+
+function findPages(index, query, language, limit = Infinity) {
+  const terms = query.toLocaleLowerCase(language === 'zh' ? 'zh-CN' : 'en').split(/\s+/).filter(Boolean);
+  if (!terms.length) return [];
+  return index
+    .filter(item => item.lang === language && terms.every(term => item.text.toLocaleLowerCase().includes(term)))
+    .map(item => {
+      const title = item.title.toLocaleLowerCase();
+      const score = terms.reduce((total, term) => total + (title.startsWith(term) ? 3 : title.includes(term) ? 2 : 0), 0);
+      return { item, score };
+    })
+    .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title, language === 'zh' ? 'zh-CN' : 'en'))
+    .slice(0, limit)
+    .map(result => result.item);
+}
 
 // Inject skip-link style to hide it by default
 (function() {
@@ -40,6 +72,10 @@ async function loadComponent(selector, path) {
     host.querySelectorAll('[src]').forEach(node => {
       const value = node.getAttribute('src');
       if (value && !/^(?:[a-z]+:|\/|#)/i.test(value)) node.src = new URL(value, SITE_ROOT_URL).href;
+    });
+    host.querySelectorAll('form[action]').forEach(form => {
+      const value = form.getAttribute('action');
+      if (value && !/^(?:[a-z]+:|\/|#)/i.test(value)) form.action = new URL(value, SITE_ROOT_URL).href;
     });
     host.addEventListener('click', event => {
       const link = event.target.closest('a[href]');
@@ -124,10 +160,14 @@ function initHeader() {
     document.body.classList.toggle('search-open', open);
     if (open) setTimeout(() => searchInput?.focus(), 50);
   }));
-  const runSearch = () => {
+  const runSearch = async () => {
     const query = searchInput.value.trim().toLowerCase();
-    const matches = query ? PAGE_INDEX.filter(([label]) => label.toLowerCase().includes(query)).slice(0,9) : [];
-    results.innerHTML = query && !matches.length ? '<p>No matching pages found.</p>' : matches.map(([label,url]) => `<a href="${url}">${label} →</a>`).join('');
+    const language = getPageLanguage();
+    const matches = query ? findPages(await loadSearchIndex(), query, language, 9) : [];
+    const emptyMessage = language === 'zh' ? '没有找到匹配的页面。' : 'No matching pages found.';
+    results.innerHTML = query && !matches.length
+      ? `<p>${emptyMessage}</p>`
+      : matches.map(item => `<a href="${new URL(item.url, SITE_ROOT_URL).href}">${escapeHTML(item.title)} →</a>`).join('');
   };
   searchInput?.addEventListener('input', runSearch);
   document.querySelector('[data-search-submit]')?.addEventListener('click', runSearch);
@@ -142,21 +182,30 @@ function initHeader() {
   document.querySelectorAll(`a[href="${current}"]`).forEach(link => link.setAttribute('aria-current','page'));
 }
 
-function initSearchPage() {
+async function initSearchPage() {
   const host = document.querySelector('[data-search-page-results]');
   if (!host) return;
   const query = new URLSearchParams(location.search).get('q')?.trim() || '';
   const input = document.querySelector('#search-page-input');
   if (input) input.value = query;
+  const language = getPageLanguage();
   if (!query) {
-    host.innerHTML = '<p>Enter a research area, facility, opportunity, or other topic above.</p>';
+    host.innerHTML = language === 'zh'
+      ? '<p>请在上方输入研究方向、科研平台、合作机会或其他关键词。</p>'
+      : '<p>Enter a research area, facility, opportunity, or other topic above.</p>';
     return;
   }
-  const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
-  const matches = PAGE_INDEX.filter(([label]) => terms.every(term => label.toLowerCase().includes(term)));
-  host.innerHTML = matches.length
-    ? `<p>${matches.length} result${matches.length === 1 ? '' : 's'} for “${query.replace(/[<>&"]/g,'')}”</p>${matches.map(([label,url]) => `<a class="search-result" href="${url}"><h2>${label}</h2><span>View page →</span></a>`).join('')}`
-    : `<p>No pages matched “${query.replace(/[<>&"]/g,'')}”. Try a broader term such as “research”, “facility”, or “career”.</p>`;
+  const matches = findPages(await loadSearchIndex(), query, language);
+  const safeQuery = escapeHTML(query);
+  if (language === 'zh') {
+    host.innerHTML = matches.length
+      ? `<p>找到 ${matches.length} 个与“${safeQuery}”相关的结果</p>${matches.map(item => `<a class="search-result" href="${new URL(item.url, SITE_ROOT_URL).href}"><h2>${escapeHTML(item.title)}</h2><span>查看页面 →</span></a>`).join('')}`
+      : `<p>没有找到与“${safeQuery}”匹配的页面。请尝试“研究”“平台”或“招生”等更宽泛的关键词。</p>`;
+  } else {
+    host.innerHTML = matches.length
+      ? `<p>${matches.length} result${matches.length === 1 ? '' : 's'} for “${safeQuery}”</p>${matches.map(item => `<a class="search-result" href="${new URL(item.url, SITE_ROOT_URL).href}"><h2>${escapeHTML(item.title)}</h2><span>View page →</span></a>`).join('')}`
+      : `<p>No pages matched “${safeQuery}”. Try a broader term such as “research”, “facility”, or “career”.</p>`;
+  }
 }
 
 function initHero() {
@@ -273,7 +322,7 @@ function initHomeCollaboration() {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const isCN = /-cn\.html/i.test(window.location.pathname) || document.documentElement.lang === 'zh';
+  const isCN = getPageLanguage() === 'zh';
   const headerFile = isCN ? 'components/header-cn.html?v=20260908-wide1' : 'components/header.html?v=20260908-wide1';
   const footerFile = isCN ? 'components/footer-cn.html?v=20260804-118' : 'components/footer.html?v=20260804-118';
   await Promise.all([loadComponent('[data-component="header"]', headerFile), loadComponent('[data-component="footer"]', footerFile)]);
