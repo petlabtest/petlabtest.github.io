@@ -1159,12 +1159,6 @@
   },
   {
     "lang": "zh",
-    "title": "加入我们",
-    "url": "Engage/Engage-ov-cn.html",
-    "text": "加入我们 加入我们"
-  },
-  {
-    "lang": "zh",
     "title": "加速基础科学进程",
     "url": "News/List/News-index2-cn.html",
     "text": "加速基础科学进程 加速基础科学进程 系统讨论PET的科学价值、前沿研究对成像仪器的新需求，以及全数字PET如何以高保真事件数据、模块化系统和开放软件支持生命科学、医学、药学与粒子探测研究。"
@@ -1210,6 +1204,12 @@
     "title": "科研合作",
     "url": "Engage/Engage-Research-cn.html",
     "text": "科研合作 研究合作"
+  },
+  {
+    "lang": "zh",
+    "title": "科研协作",
+    "url": "Engage/Engage-ov-cn.html",
+    "text": "科研协作 科研协作"
   },
   {
     "lang": "zh",

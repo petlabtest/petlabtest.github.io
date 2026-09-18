@@ -9,24 +9,43 @@
   var mascotUrl = new URL('../pic/main/PETLAB_Mascot-v3.png', script.src).href;
   var isChinese = /-cn\.html$/i.test(location.pathname) || document.documentElement.lang.toLowerCase().startsWith('zh');
   var copy = isChinese ? {
-    nav: 'PETLab 快捷导航',
-    trigger: '打开 PETLab 快捷导航',
-    close: '关闭 PETLab 快捷导航',
-    hint: '快捷导航',
-    top: '返回顶部',
-    contact: '联系我们',
-    engage: '加入我们',
-    giving: '捐赠我们'
+    nav: '探索 PETLab',
+    trigger: '打开 PETLab 对话气泡',
+    close: '关闭 PETLab 对话气泡',
+    hint: '一起探索科学',
+    inspiration: '科学 · 灵感',
+    research: '了解研究',
+    giving: '支持研究',
+    engage: '参与研究',
+    people: '加入团队'
   } : {
-    nav: 'PETLab quick navigation',
-    trigger: 'Open PETLab quick navigation',
-    close: 'Close PETLab quick navigation',
-    hint: 'Quick links',
-    top: 'Back to top',
-    contact: 'Contact us',
-    engage: 'Join us',
-    giving: 'Donate'
+    nav: 'Explore PETLab',
+    trigger: 'Open PETLab conversation bubble',
+    close: 'Close PETLab conversation bubble',
+    hint: 'Explore science together',
+    inspiration: 'SCIENCE · INSPIRATION',
+    research: 'Research',
+    giving: 'Donate',
+    engage: 'Engage',
+    people: 'Join'
   };
+  var quotes = isChinese ? [
+    { quote: '如果说我看得更远，那是因为我站在巨人的肩膀上。', scientist: '艾萨克·牛顿', years: '1643–1727', portrait: 'Isaac-Newton-1689.jpg', cite: 'https://en.wikiquote.org/wiki/Isaac_Newton' },
+    { quote: '生活中没有什么可怕的东西，只有需要理解的东西。', scientist: '玛丽·居里', years: '1867–1934', portrait: 'Marie-Curie-1903.jpg', cite: 'https://en.wikiquote.org/wiki/Marie_Curie' },
+    { quote: '你无法教会一个人任何东西，你只能帮助他在自己内心找到它。', scientist: '伽利略·伽利莱', years: '1564–1642', portrait: 'Galileo-Galilei-1636.jpg', cite: 'https://en.wikiquote.org/wiki/Galileo_Galilei' },
+    { quote: '能够生存下来的物种，并非最强或最聪明，而是对变化反应最快的。', scientist: '查尔斯·达尔文', years: '1809–1882', portrait: 'Charles-Darwin-1881.jpg', cite: 'https://en.wikiquote.org/wiki/Charles_Darwin' },
+    { quote: '未来属于那些属于美好梦想家的人。', scientist: '尼古拉·特斯拉', years: '1856–1943', portrait: 'Nikola-Tesla-1890.jpg', cite: 'https://en.wikiquote.org/wiki/Nikola_Tesla' },
+    { quote: '我们只能看到前方不远的路，但那里有太多值得去做的事。', scientist: '艾伦·图灵', years: '1912–1954', portrait: 'Alan-Turing-1951.jpg', cite: 'https://en.wikiquote.org/wiki/Alan_Turing' },
+    { quote: '想象力比知识更重要。', scientist: '阿尔伯特·爱因斯坦', years: '1879–1955', portrait: 'Albert-Einstein-1921.jpg', cite: 'https://www.saturdayeveningpost.com/wp-content/uploads/satevepost/what_life_means_to_einstein.pdf' }
+  ] : [
+    { quote: 'If I have seen further, it is by standing on the shoulders of giants.', scientist: 'Isaac Newton', years: '1643–1727', portrait: 'Isaac-Newton-1689.jpg', cite: 'https://en.wikiquote.org/wiki/Isaac_Newton' },
+    { quote: 'Nothing in life is to be feared, it is only to be understood.', scientist: 'Marie Curie', years: '1867–1934', portrait: 'Marie-Curie-1903.jpg', cite: 'https://en.wikiquote.org/wiki/Marie_Curie' },
+    { quote: 'You cannot teach a man anything; you can only help him find it within himself.', scientist: 'Galileo Galilei', years: '1564–1642', portrait: 'Galileo-Galilei-1636.jpg', cite: 'https://en.wikiquote.org/wiki/Galileo_Galilei' },
+    { quote: 'It is not the strongest of the species that survives, nor the most intelligent, but the one most responsive to change.', scientist: 'Charles Darwin', years: '1809–1882', portrait: 'Charles-Darwin-1881.jpg', cite: 'https://en.wikiquote.org/wiki/Charles_Darwin' },
+    { quote: 'The future belongs to those who belong to the beautiful dreamers.', scientist: 'Nikola Tesla', years: '1856–1943', portrait: 'Nikola-Tesla-1890.jpg', cite: 'https://en.wikiquote.org/wiki/Nikola_Tesla' },
+    { quote: 'We can only see a short distance ahead, but we can see plenty there that needs to be done.', scientist: 'Alan Turing', years: '1912–1954', portrait: 'Alan-Turing-1951.jpg', cite: 'https://en.wikiquote.org/wiki/Alan_Turing' },
+    { quote: 'Imagination is more important than knowledge.', scientist: 'Albert Einstein', years: '1879–1955', portrait: 'Albert-Einstein-1921.jpg', cite: 'https://www.saturdayeveningpost.com/wp-content/uploads/satevepost/what_life_means_to_einstein.pdf' }
+  ];
   var suffix = isChinese ? 'cn' : 'en';
 
   var style = document.createElement('style');
@@ -45,23 +64,30 @@
     '.petlab-assistant__trigger:hover .petlab-assistant__mascot,.petlab-assistant__trigger:focus-visible .petlab-assistant__mascot{filter:drop-shadow(0 13px 10px rgba(0,45,80,.28)) brightness(1.035)}',
     '.petlab-assistant__trigger:active .petlab-assistant__mascot{scale:.96}',
     '.petlab-assistant__trigger:focus-visible{outline:3px solid #f45a2b;outline-offset:2px;border-radius:60px}',
-    '.petlab-assistant__menu{position:absolute;inset:0;margin:0;padding:0;list-style:none;pointer-events:none}',
-    '.petlab-assistant__item{position:absolute;right:var(--right);bottom:var(--bottom);margin:0;padding:0;opacity:0;visibility:hidden;transform:translate(22px,22px) scale(.78);transform-origin:right bottom;transition:opacity .2s ease,transform .3s cubic-bezier(.2,.85,.25,1.25),visibility .2s;transition-delay:0s}',
-    '.petlab-assistant.is-open .petlab-assistant__item{opacity:1;visibility:visible;transform:translate(0,0) scale(1);pointer-events:auto;transition-delay:var(--delay)}',
-    '.petlab-assistant__action{all:unset;position:relative;box-sizing:border-box!important;display:flex!important;align-items:center!important;gap:9px!important;min-width:max-content!important;padding:10px 15px 10px 10px!important;border-radius:26px!important;background:#fff!important;color:#00305c!important;box-shadow:0 8px 24px rgba(0,40,72,.2)!important;cursor:pointer!important;font:600 14px/1.15 Arial,"Microsoft YaHei",sans-serif!important;text-decoration:none!important;white-space:nowrap!important;transition:color .18s ease,background .18s ease,transform .18s ease!important}',
-    '.petlab-assistant__action::after{content:"";position:absolute;right:-5px;bottom:9px;width:12px;height:12px;background:inherit;transform:rotate(45deg);z-index:-1}',
-    '.petlab-assistant__action:hover,.petlab-assistant__action:focus-visible{background:#00305c!important;color:#fff!important;transform:translateX(-4px)!important}',
-    '.petlab-assistant__action:focus-visible{outline:3px solid #f45a2b!important;outline-offset:3px!important}',
-    '.petlab-assistant__icon{display:grid!important;place-items:center!important;flex:0 0 30px!important;width:30px!important;height:30px!important;border-radius:50%!important;background:#f45a2b!important;color:#fff!important;font:700 17px/1 Arial,sans-serif!important}',
-    '.petlab-assistant__item--top{--right:61px;--bottom:230px;--delay:.02s}',
-    '.petlab-assistant__item--contact{--right:166px;--bottom:169px;--delay:.07s}',
-    '.petlab-assistant__item--engage{--right:202px;--bottom:101px;--delay:.12s}',
-    '.petlab-assistant__item--giving{--right:212px;--bottom:31px;--delay:.17s}',
+    '.petlab-assistant__bubble{position:absolute;right:28px;bottom:184px;width:min(460px,calc(100vw - 56px));border:1px solid #dce5eb;border-radius:20px;background:#fff;color:#00305c;box-shadow:0 16px 48px rgba(0,40,72,.18);opacity:0;visibility:hidden;transform:translateY(12px) scale(.97);transform-origin:88% 100%;transition:opacity .2s ease,transform .25s ease,visibility .2s;pointer-events:none;text-align:left}',
+    '.petlab-assistant__bubble::after{content:"";position:absolute;right:36px;bottom:-9px;width:17px;height:17px;background:#fff;border-right:1px solid #dce5eb;border-bottom:1px solid #dce5eb;transform:rotate(45deg)}',
+    '.petlab-assistant.is-open .petlab-assistant__bubble{opacity:1;visibility:visible;transform:none;pointer-events:auto}',
+    '.petlab-assistant__bubble-inner{padding:25px 22px 20px;max-height:calc(100vh - 230px);max-height:calc(100dvh - 230px);overflow-y:auto;overscroll-behavior:contain;border-radius:20px}',
+    '.petlab-assistant__close{all:unset;position:absolute;right:8px;top:7px;width:30px;height:30px;display:grid;place-items:center;border-radius:50%;cursor:pointer;color:#536c7a;font:400 23px/1 Arial,sans-serif}',
+    '.petlab-assistant__close:hover{background:#edf3f7;color:#00305c}',
+    '.petlab-assistant__quote-row{display:grid;grid-template-columns:76px minmax(0,1fr);gap:18px;align-items:center;padding:4px 9px 20px 0}',
+    '.petlab-assistant__portrait{display:block!important;width:76px!important;height:94px!important;max-width:none!important;object-fit:cover;object-position:50% 18%;border-radius:12px;margin:0!important;border:1px solid #e1e8ed}',
+    '.petlab-assistant__eyebrow{display:block;color:#637e8d;font:600 10px/1.5 Arial,"Microsoft YaHei",sans-serif;letter-spacing:1.4px;margin:0 0 8px}',
+    '.petlab-assistant__quote{padding:0!important;margin:0 0 12px!important;border:0!important;background:none!important;color:#00305c!important;font:500 19px/1.55 Georgia,"Songti SC","SimSun",serif!important;quotes:none}',
+    '.petlab-assistant__quote::before,.petlab-assistant__quote::after{content:none!important}',
+    '.petlab-assistant__scientist{display:block;color:#00305c;font:600 12px/1.5 Arial,"Microsoft YaHei",sans-serif}',
+    '.petlab-assistant__years{display:block;margin-top:3px;color:#718390;font:400 11px/1.5 Arial,sans-serif;letter-spacing:1px}',
+    '.petlab-assistant__links{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;padding-top:18px;border-top:1px solid #e3eaf0}',
+    '.petlab-assistant__links::before{content:"";position:absolute;top:-2px;left:0;width:28px;height:3px;background:#f45a2b;border-radius:2px}',
+    '.petlab-assistant__action{all:unset;box-sizing:border-box!important;display:flex!important;align-items:center!important;justify-content:center!important;min-width:0!important;min-height:46px!important;padding:9px 5px!important;border-radius:8px!important;background:#eef4f8!important;color:#00305c!important;cursor:pointer!important;font:600 12px/1.4 Arial,"Microsoft YaHei",sans-serif!important;text-align:center!important;text-decoration:none!important;transition:color .18s ease,background .18s ease!important}',
+    '.petlab-assistant__action::before,.petlab-assistant__action::after{content:none!important}',
+    '.petlab-assistant__action:hover,.petlab-assistant__action:focus-visible{background:#00305c!important;color:#fff!important}',
+    '.petlab-assistant__action:focus-visible,.petlab-assistant__close:focus-visible{outline:2px solid #f45a2b!important;outline-offset:3px!important}',
     '.petlab-assistant.is-open .petlab-assistant__mascot{animation-name:petlab-assistant-float,petlab-assistant-greet;animation-duration:3.4s,.55s;animation-iteration-count:infinite,1}',
     '@keyframes petlab-assistant-float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-2px) rotate(-.6deg)}}',
     '@keyframes petlab-assistant-greet{0%,100%{rotate:0deg}35%{rotate:-5deg}70%{rotate:3deg}}',
-    '@media(max-width:700px){.petlab-assistant{right:max(10px,env(safe-area-inset-right));bottom:max(10px,env(safe-area-inset-bottom));width:310px;height:340px}.petlab-assistant__trigger{width:132px;height:142px}.petlab-assistant__detector-ring{left:-7px;width:146px;height:63.48px}.petlab-assistant__mascot{left:20px;bottom:14px;width:94px;height:94px}.petlab-assistant__hint{display:none}.petlab-assistant__item{right:130px;bottom:calc(8px + var(--mobile-index)*52px)}.petlab-assistant__item--giving{--mobile-index:0}.petlab-assistant__item--engage{--mobile-index:1}.petlab-assistant__item--contact{--mobile-index:2}.petlab-assistant__item--top{--mobile-index:3}.petlab-assistant__action{padding:8px 12px 8px 8px!important;font-size:12px!important}.petlab-assistant__icon{flex-basis:26px!important;width:26px!important;height:26px!important}}',
-    '@media(prefers-reduced-motion:reduce){.petlab-assistant__mascot{animation:none!important;transition:none}.petlab-assistant__item,.petlab-assistant__action,.petlab-assistant__detector-ring{transition:none!important}}',
+    '@media(max-width:700px){.petlab-assistant{right:max(10px,env(safe-area-inset-right));bottom:max(10px,env(safe-area-inset-bottom));width:310px;height:340px}.petlab-assistant__trigger{width:132px;height:142px}.petlab-assistant__detector-ring{left:-7px;width:146px;height:63.48px}.petlab-assistant__mascot{left:20px;bottom:14px;width:94px;height:94px}.petlab-assistant__hint{display:none}.petlab-assistant__bubble{right:4px;bottom:150px;width:min(420px,calc(100vw - 28px))}.petlab-assistant__bubble-inner{padding:24px 14px 16px;max-height:calc(100vh - 190px);max-height:calc(100dvh - 190px)}.petlab-assistant__quote-row{grid-template-columns:60px minmax(0,1fr);gap:12px}.petlab-assistant__portrait{width:60px!important;height:80px!important}.petlab-assistant__quote{font-size:17px!important}.petlab-assistant__links{gap:5px}.petlab-assistant__action{font-size:11px!important;padding:8px 3px!important}}',
+    '@media(prefers-reduced-motion:reduce){.petlab-assistant__mascot{animation:none!important;transition:none}.petlab-assistant__bubble,.petlab-assistant__action,.petlab-assistant__detector-ring{transition:none!important}}',
     '@media print{.petlab-assistant{display:none!important}}'
   ].join('');
   document.head.appendChild(style);
@@ -115,17 +141,26 @@
 
   function mount() {
     if (document.querySelector('.petlab-assistant')) return;
-    var assistant = document.createElement('nav');
+    var assistant = document.createElement('div');
     var menuId = 'petlab-assistant-menu';
     assistant.className = 'petlab-assistant';
     assistant.setAttribute('aria-label', copy.nav);
+    var day = new Date().getDay();
+    var quote = quotes[(day + 6) % 7];
     assistant.innerHTML = [
-      '<ul class="petlab-assistant__menu" id="' + menuId + '">',
-      '<li class="petlab-assistant__item petlab-assistant__item--top"><button class="petlab-assistant__action" type="button" data-petlab-top><span class="petlab-assistant__icon" aria-hidden="true">↑</span>' + copy.top + '</button></li>',
-      '<li class="petlab-assistant__item petlab-assistant__item--contact"><a class="petlab-assistant__action" href="' + new URL('Engage/Engage-Contact-' + suffix + '.html', siteRoot).href + '"><span class="petlab-assistant__icon" aria-hidden="true">✉</span>' + copy.contact + '</a></li>',
-      '<li class="petlab-assistant__item petlab-assistant__item--engage"><a class="petlab-assistant__action" href="' + new URL('Engage/Engage-ov-' + suffix + '.html', siteRoot).href + '"><span class="petlab-assistant__icon" aria-hidden="true">＋</span>' + copy.engage + '</a></li>',
-      '<li class="petlab-assistant__item petlab-assistant__item--giving"><a class="petlab-assistant__action" href="' + new URL('Giving/Giving-giving-' + suffix + '.html', siteRoot).href + '"><span class="petlab-assistant__icon" aria-hidden="true">♥</span>' + copy.giving + '</a></li>',
-      '</ul>',
+      '<section class="petlab-assistant__bubble" id="' + menuId + '" role="dialog" aria-label="' + copy.nav + '" aria-hidden="true" inert>',
+      '<button class="petlab-assistant__close" type="button" aria-label="' + copy.close + '">×</button>',
+      '<div class="petlab-assistant__bubble-inner"><div class="petlab-assistant__quote-row">',
+      '<img class="petlab-assistant__portrait" src="' + new URL('../pic/main/' + quote.portrait, script.src).href + '" alt="' + quote.scientist + '" width="76" height="94" loading="lazy">',
+      '<div><span class="petlab-assistant__eyebrow">' + copy.inspiration + '</span>',
+      '<blockquote class="petlab-assistant__quote" cite="' + quote.cite + '">“' + quote.quote + '”</blockquote>',
+      '<span class="petlab-assistant__scientist">' + quote.scientist + '</span><span class="petlab-assistant__years">' + quote.years + '</span></div></div>',
+      '<nav class="petlab-assistant__links" aria-label="' + copy.nav + '">',
+      '<a class="petlab-assistant__action" href="' + new URL('Research/Research-ov-' + suffix + '.html', siteRoot).href + '">' + copy.research + '</a>',
+      '<a class="petlab-assistant__action" href="' + new URL('Giving/Giving-giving-' + suffix + '.html', siteRoot).href + '">' + copy.giving + '</a>',
+      '<a class="petlab-assistant__action" href="' + new URL('Engage/Engage-ov-' + suffix + '.html', siteRoot).href + '">' + copy.engage + '</a>',
+      '<a class="petlab-assistant__action" href="' + new URL('People/People-ov-' + suffix + '.html', siteRoot).href + '">' + copy.people + '</a>',
+      '</nav></div></section>',
       '<button class="petlab-assistant__trigger" type="button" aria-expanded="false" aria-controls="' + menuId + '" aria-label="' + copy.trigger + '">',
       detectorRing(false),
       '<img class="petlab-assistant__mascot" src="' + mascotUrl + '" alt="" width="118" height="118">',
@@ -136,14 +171,20 @@
     document.body.appendChild(assistant);
 
     var trigger = assistant.querySelector('.petlab-assistant__trigger');
-    var topButton = assistant.querySelector('[data-petlab-top]');
+    var bubble = assistant.querySelector('.petlab-assistant__bubble');
+    var closeButton = assistant.querySelector('.petlab-assistant__close');
     var frame = 0;
 
     function setOpen(open, returnFocus) {
+      if (!open && (returnFocus || bubble.contains(document.activeElement))) trigger.focus();
       assistant.classList.toggle('is-open', open);
+      bubble.inert = !open;
+      bubble.setAttribute('aria-hidden', String(!open));
       trigger.setAttribute('aria-expanded', String(open));
       trigger.setAttribute('aria-label', open ? copy.close : copy.trigger);
-      if (!open && returnFocus) trigger.focus();
+      if (open) requestAnimationFrame(function () {
+        if (assistant.classList.contains('is-open')) closeButton.focus({ preventScroll: true });
+      });
     }
 
     function update() {
@@ -164,10 +205,13 @@
     trigger.addEventListener('click', function () {
       setOpen(!assistant.classList.contains('is-open'));
     });
-    topButton.addEventListener('click', function () {
-      setOpen(false);
-      window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    trigger.addEventListener('keydown', function (event) {
+      if (event.key === 'Tab' && !event.shiftKey && assistant.classList.contains('is-open')) {
+        event.preventDefault();
+        closeButton.focus();
+      }
     });
+    closeButton.addEventListener('click', function () { setOpen(false, true); });
     document.addEventListener('click', function (event) {
       if (assistant.classList.contains('is-open') && !assistant.contains(event.target)) setOpen(false);
     });

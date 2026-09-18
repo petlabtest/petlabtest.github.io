@@ -324,7 +324,7 @@ function initHomeCollaboration() {
 document.addEventListener('DOMContentLoaded', async () => {
   const isCN = getPageLanguage() === 'zh';
   const headerFile = isCN ? 'components/header-cn.html?v=20260908-wide1' : 'components/header.html?v=20260908-wide1';
-  const footerFile = isCN ? 'components/footer-cn.html?v=20260804-118' : 'components/footer.html?v=20260804-118';
+  const footerFile = isCN ? 'components/footer-cn.html?v=20260918-collaboration' : 'components/footer.html?v=20260918-collaboration';
   await Promise.all([loadComponent('[data-component="header"]', headerFile), loadComponent('[data-component="footer"]', footerFile)]);
   initHeader(); initHero(); initHomeNews(); initHomeCollaboration(); initSearchPage();
   document.querySelectorAll('[data-current-year]').forEach(el => el.textContent = new Date().getFullYear());

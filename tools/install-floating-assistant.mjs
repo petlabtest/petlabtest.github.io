@@ -20,7 +20,7 @@ for (const file of await collect(siteRoot)) {
   let html = await readFile(file, 'utf8');
   if (!/<body\b/i.test(html) || /floating-assistant\.js/i.test(html)) continue;
   const source = relative(dirname(file), scriptPath).split(sep).join('/');
-  const tag = `  <script src="${source}?v=20260918-9" defer></script>\n`;
+  const tag = `  <script src="${source}?v=20260918-11" defer></script>\n`;
   if (/<\/body>/i.test(html)) html = html.replace(/<\/body>/i, `${tag}</body>`);
   else html += `\n${tag}`;
   await writeFile(file, html);
