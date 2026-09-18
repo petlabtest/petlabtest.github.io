@@ -1,0 +1,8 @@
+[
+	{ "src": "/textures/kv_cop.webp", "pc": { "x": 265, "y": 0, "z": -83, "scale": 0.23 }, "sp": { "x": 175, "y": 0, "z": 30, "scale": 0.2 } },
+	{ "src": "/textures/kv_donut.webp", "pc": { "x": 225, "y": 0, "z": 60, "scale": 0.2 }, "sp": { "x": 100, "y": 0, "z": 155, "scale": 0.22 } },
+	{ "src": "/textures/kv_notehukusuu.webp", "pc": { "x": -225, "y": 0, "z": 20, "scale": 0.2 }, "sp": { "x": -110, "y": 0, "z": 180, "scale": 0.2 } },
+	{ "src": "/textures/kv_photo.webp", "pc": { "x": 200, "y": 0, "z": -245, "scale": 0.27 }, "sp": { "x": 180, "y": 0, "z": -140, "scale": 0.24 } },
+	{ "src": "/textures/kv_plant.webp", "pc": { "x": -250, "y": 0, "z": -250, "scale": 0.25 }, "sp": { "x": -210, "y": 0, "z": -200, "scale": 0.25 } },
+	{ "src": "/textures/kv_apple.webp", "pc": { "x": -50, "y": 0, "z": -340, "scale": 0.3 }, "sp": { "x": 200, "y": 0, "z": -380, "scale": 0.3 } }
+]

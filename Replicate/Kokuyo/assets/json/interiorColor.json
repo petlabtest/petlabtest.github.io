@@ -1,0 +1,10 @@
+[
+	{ "pageFront": "#FFBF00", "pageBack": "#B5F80F", "frame": "#B5F80F", "desk": "#D6E0A8", "wall": "#dfe6cb" },
+	{ "pageFront": "#F5EF36", "pageBack": "#00B4FD", "frame": "#00B4FD", "desk": "#B4D9EA", "wall": "#c8ebfd" },
+	{ "pageFront": "#F9C920", "pageBack": "#0CB479", "frame": "#0CB479", "desk": "#CFDFB8", "wall": "#dcedc6" },
+	{ "pageFront": "#DC83FF", "pageBack": "#FF5FD4", "frame": "#FF5FD4", "desk": "#DAC4D2", "wall": "#ece1e9" },
+	{ "pageFront": "#FF993A", "pageBack": "#7898FB", "frame": "#7898FB", "desk": "#B1BEDD", "wall": "#c0ceee" },
+	{ "pageFront": "#FFE828", "pageBack": "#BBA07B", "frame": "#BBA07B", "desk": "#EAD4BC", "wall": "#f0e4d9" },
+	{ "pageFront": "#46FFB9", "pageBack": "#007447", "frame": "#46FFB9", "desk": "#A8DDC5", "wall": "#d8fff0", "sky": "#80c8e5" },
+	{ "pageFront": "#ff78b9", "pageBack": "#45d7ff", "frame": "#FF4B5A", "desk": "#F0C7C1", "wall": "#ffe5e1", "sky": "#ffe5e1" }
+]

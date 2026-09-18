@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "HelveticaNowText";
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url('HelveticaNow/HelveticaNowText_normal_normal_500.woff2') format('woff2'), url('HelveticaNow/HelveticaNowText_normal_normal_500.woff') format('woff');
+}
+@font-face {
+  font-family: "HelveticaNowText";
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url('HelveticaNow/HelveticaNowText_normal_normal_400.woff2') format('woff2'), url('HelveticaNow/HelveticaNowText_normal_normal_400.woff') format('woff');
+}
+@font-face {
+  font-family: "HelveticaNowText";
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url('HelveticaNow/HelveticaNowText_normal_normal_700.woff2') format('woff2'), url('HelveticaNow/HelveticaNowText_normal_normal_700.woff') format('woff');
+}
