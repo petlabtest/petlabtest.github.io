@@ -303,6 +303,9 @@ function initHomeNews() {
 function initHomeCollaboration() {
   const section = document.querySelector('.home-programs__collaboration');
   if (!section) return;
+  // The Chinese homepage uses the unified, section-level motion sequence.
+  // Keep this legacy reveal for pages that have not opted into that system.
+  if (document.body.classList.contains('home-motion')) return;
   const targets = [...section.querySelectorAll('[data-collab-reveal]')];
   if (!targets.length) return;
   section.classList.add('js-collab-animate');

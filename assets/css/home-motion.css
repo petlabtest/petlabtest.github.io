@@ -1,0 +1,198 @@
+/* Chinese homepage editorial motion system.
+   Hidden states only apply after JavaScript has mapped every sequence, so
+   content remains fully available when scripts are disabled. */
+.home.home-motion-ready [data-home-reveal] {
+  --home-delay: calc(var(--home-order, 0) * 105ms);
+  opacity: 0;
+  transform: translate3d(0, 30px, 0);
+  transition:
+    opacity 440ms cubic-bezier(.22, 1, .36, 1) var(--home-delay),
+    transform 500ms cubic-bezier(.22, 1, .36, 1) var(--home-delay),
+    clip-path 560ms cubic-bezier(.65, 0, .35, 1) var(--home-delay);
+  will-change: opacity, transform, clip-path;
+}
+
+.home.home-motion-ready [data-home-effect="fade-left"] {
+  transform: translate3d(42px, 0, 0);
+}
+
+.home.home-motion-ready [data-home-effect="fade-right"] {
+  transform: translate3d(-42px, 0, 0);
+}
+
+.home.home-motion-ready [data-home-effect="soft-scale"] {
+  transform: translate3d(0, 24px, 0) scale(.965);
+}
+
+.home.home-motion-ready [data-home-effect="content-group"] {
+  transform: translate3d(0, 22px, 0);
+}
+
+.home.home-motion-ready [data-home-effect="news-row"] {
+  transform: translate3d(-46px, 0, 0);
+  transition-duration: 360ms, 400ms, 0ms;
+}
+
+.home.home-motion-ready [data-home-effect="card-fade"] {
+  transform: translate3d(0, 14px, 0);
+  transition-duration: 360ms, 420ms, 0ms;
+}
+
+.home.home-motion-ready [data-home-effect="wipe-left"],
+.home.home-motion-ready [data-home-effect="wipe-right"] {
+  opacity: 1;
+  transform: none;
+  overflow: hidden;
+}
+
+.home.home-motion-ready [data-home-effect="wipe-left"] {
+  clip-path: inset(0 100% 0 0);
+}
+
+.home.home-motion-ready [data-home-effect="wipe-right"] {
+  clip-path: inset(0 0 0 100%);
+}
+
+.home.home-motion-ready [data-home-effect^="background-"] {
+  --home-panel-color: transparent;
+  opacity: 1;
+  transform: none;
+  clip-path: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  will-change: auto;
+}
+
+.home.home-motion-ready [data-home-effect^="background-"]::after {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  content: "";
+  background: var(--home-panel-color);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 500ms cubic-bezier(.65, 0, .35, 1) var(--home-delay);
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Keep the animated colour layer behind the real content without creating an
+   isolated stacking context. This lets overlaid photographs extend across
+   neighbouring sections as the original composition requires. */
+.home.home-motion-ready [data-home-effect^="background-"] > * {
+  z-index: 1;
+}
+
+.home.home-motion-ready [data-home-effect^="background-"] > :not(.group-content__media) {
+  position: relative;
+}
+
+.home.home-motion-ready [data-home-effect="background-mission"] {
+  --home-panel-color: #064f83;
+}
+
+.home.home-motion-ready [data-home-effect="background-grey"] {
+  --home-panel-color: #e5e5e5;
+}
+
+.home.home-motion-ready [data-home-effect="background-events"] {
+  --home-panel-color: #0076c8;
+}
+
+.home.home-motion-ready [data-home-effect="background-collaboration"] {
+  --home-panel-color: #003c62;
+  clip-path: polygon(0 0, 100% 18%, 100% 100%, 0 100%) !important;
+}
+
+.home.home-motion-ready [data-home-effect="background-mission"]::after {
+  transition-duration: 400ms;
+}
+
+.home.home-motion-ready [data-home-effect="background-collaboration"]::after {
+  transition-duration: 460ms;
+}
+
+/* These sections contain a narrower coloured frame. Their outer canvas must
+   stay white, otherwise the frame wash is invisible against an identical
+   parent background and the intended image overlap is visually lost. */
+.home.home-motion-ready .home-engage-fullwidth,
+.home.home-motion-ready .home-events-fullwidth {
+  background: #fff !important;
+}
+
+.home.home-motion-ready [data-home-reveal].is-home-revealed {
+  opacity: 1;
+  transform: none;
+  clip-path: inset(0 0 0 0);
+}
+
+.home.home-motion-ready [data-home-effect^="background-"].is-home-revealed {
+  clip-path: none !important;
+}
+
+.home.home-motion-ready [data-home-effect="background-collaboration"].is-home-revealed {
+  clip-path: polygon(0 0, 100% 18%, 100% 100%, 0 100%) !important;
+}
+
+.home.home-motion-ready .group-content--team .group-content__media {
+  z-index: 3 !important;
+}
+
+.home.home-motion-ready [data-home-effect^="background-"].is-home-revealed::after {
+  transform: scaleX(1);
+}
+
+.home.home-motion-ready [data-home-reveal].is-home-reveal-complete {
+  will-change: auto;
+}
+
+/* Images feel more physical when the mask and image settle independently. */
+.home.home-motion-ready [data-home-effect="wipe-left"] > img,
+.home.home-motion-ready [data-home-effect="wipe-right"] > img,
+.home.home-motion-ready [data-home-effect="wipe-left"] > a > img,
+.home.home-motion-ready [data-home-effect="wipe-right"] > a > img {
+  transform: scale(1.055);
+  transition: transform 720ms cubic-bezier(.22, 1, .36, 1) var(--home-delay);
+}
+
+.home.home-motion-ready [data-home-effect="wipe-left"].is-home-revealed > img,
+.home.home-motion-ready [data-home-effect="wipe-right"].is-home-revealed > img,
+.home.home-motion-ready [data-home-effect="wipe-left"].is-home-revealed > a > img,
+.home.home-motion-ready [data-home-effect="wipe-right"].is-home-revealed > a > img {
+  transform: none;
+}
+
+/* Preserve clipping for the three cards while they rise into place. */
+.home.home-motion-ready .research-card[data-home-reveal] {
+  overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  .home.home-motion-ready [data-home-reveal] {
+    --home-delay: calc(var(--home-order, 0) * 72ms);
+    transform: translate3d(0, 20px, 0);
+    transition-duration: 400ms, 460ms, 520ms;
+  }
+
+  .home.home-motion-ready [data-home-effect="fade-left"],
+  .home.home-motion-ready [data-home-effect="fade-right"] {
+    transform: translate3d(24px, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home.home-motion-ready [data-home-reveal],
+  .home.home-motion-ready [data-home-effect^="background-"]::after,
+  .home.home-motion-ready [data-home-effect] > img,
+  .home.home-motion-ready [data-home-effect] > a > img {
+    opacity: 1;
+    transform: none;
+    clip-path: none;
+    transition: none;
+    will-change: auto;
+  }
+
+  .home.home-motion-ready [data-home-effect^="background-"]::after {
+    transform: scaleX(1);
+  }
+}
