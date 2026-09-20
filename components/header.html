@@ -261,6 +261,179 @@
       white-space: nowrap !important;
     }
   }
+
+  /* PETLab + program-mark lockup. Each emblem keeps an independent link. */
+  .lbl-header .header-branding {
+    display: flex;
+    align-items: center;
+    justify-self: start;
+    min-width: 0;
+    line-height: 0;
+  }
+
+  .lbl-header .upop-brand,
+  .lbl-header .donate-brand {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    margin-left: 18px;
+    padding-left: 18px;
+    border-radius: 4px;
+    transition: opacity .2s ease, transform .2s ease;
+  }
+
+  .lbl-header .upop-brand::before,
+  .lbl-header .donate-brand::before {
+    position: absolute;
+    top: 12%;
+    bottom: 12%;
+    left: 0;
+    width: 1px;
+    background: #c9d4da;
+    content: "";
+  }
+
+  .lbl-header .upop-brand img,
+  .lbl-header .donate-brand img {
+    display: block;
+    width: 68px;
+    max-width: none;
+    height: auto;
+    max-height: 68px;
+    object-fit: contain;
+  }
+
+  .lbl-header .upop-brand:hover,
+  .lbl-header .donate-brand:hover {
+    opacity: .82;
+    transform: translateY(-2px);
+  }
+
+  .lbl-header .upop-brand:focus-visible,
+  .lbl-header .donate-brand:focus-visible {
+    outline: 2px solid #0878be;
+    outline-offset: 5px;
+  }
+
+  @media (min-width:1251px) {
+    .lbl-header .header-shell {
+      grid-template-columns: minmax(458px, 1fr) minmax(680px, 850px) !important;
+      gap: clamp(1.5rem, 3vw, 4rem) !important;
+    }
+  }
+
+  @media (min-width:1251px) and (max-width:1320px) {
+    .lbl-header .header-branding .brand,
+    .lbl-header .header-branding .brand img {
+      width: 235px !important;
+      max-height: 68px !important;
+    }
+
+    .lbl-header .header-shell {
+      grid-template-columns: 415px minmax(0, 1fr) !important;
+      gap: 24px !important;
+    }
+
+    .lbl-header .upop-brand,
+    .lbl-header .donate-brand {
+      margin-left: 14px;
+      padding-left: 14px;
+    }
+
+    .lbl-header .upop-brand img,
+    .lbl-header .donate-brand img {
+      width: 62px;
+      max-height: 62px;
+    }
+  }
+
+  @media (min-width:1101px) and (max-width:1250px) {
+    .lbl-header .header-shell {
+      grid-template-columns: 295px minmax(0, 1fr) !important;
+      gap: 24px !important;
+    }
+
+    .lbl-header .header-branding .brand,
+    .lbl-header .header-branding .brand img {
+      width: 190px !important;
+      max-height: 56px !important;
+    }
+
+    .lbl-header .upop-brand,
+    .lbl-header .donate-brand {
+      margin-left: 10px;
+      padding-left: 10px;
+    }
+
+    .lbl-header .upop-brand img,
+    .lbl-header .donate-brand img {
+      width: 56px;
+      max-height: 56px;
+    }
+  }
+
+  @media (max-width:1100px) {
+    .lbl-header .upop-brand,
+    .lbl-header .donate-brand {
+      margin-left: 12px;
+      padding-left: 12px;
+    }
+
+    .lbl-header .upop-brand img,
+    .lbl-header .donate-brand img {
+      width: 56px;
+      max-height: 56px;
+    }
+  }
+
+  @media (max-width:700px) {
+    .lbl-header .header-branding .brand,
+    .lbl-header .header-branding .brand img {
+      width: 146px !important;
+      max-height: 44px !important;
+    }
+
+    .lbl-header .upop-brand,
+    .lbl-header .donate-brand {
+      margin-left: 7px;
+      padding-left: 7px;
+    }
+
+    .lbl-header .upop-brand img,
+    .lbl-header .donate-brand img {
+      width: 48px;
+      max-height: 48px;
+    }
+  }
+
+  @media (max-width:360px) {
+    .lbl-header .header-branding .brand,
+    .lbl-header .header-branding .brand img {
+      width: 126px !important;
+    }
+
+    .lbl-header .upop-brand,
+    .lbl-header .donate-brand {
+      margin-left: 5px;
+      padding-left: 0;
+    }
+
+    .lbl-header .upop-brand::before,
+    .lbl-header .donate-brand::before {
+      display: none;
+    }
+
+    .lbl-header .upop-brand img,
+    .lbl-header .donate-brand img {
+      width: 36px;
+    }
+
+    .lbl-header .header-branding .brand,
+    .lbl-header .header-branding .brand img {
+      width: 110px !important;
+    }
+  }
 </style>
 <a class="skip-link" href="#main-content"
   style="position:fixed;top:0;left:1rem;z-index:9999;transform:translateY(-200%);background:#fff;padding:.75rem 1rem;text-decoration:none;color:#000;transition:transform .2s ease"
@@ -268,9 +441,17 @@
   content</a>
 <header class="site-header lbl-header" data-site-header>
   <div class="header-shell">
-    <a class="brand" href="index.html" aria-label="Digital PET Laboratory home">
-      <img src="assets/pic/main/PETLAB.png" alt="Digital PET Laboratory">
-    </a>
+    <div class="header-branding">
+      <a class="brand" href="index.html" aria-label="Digital PET Laboratory home">
+        <img src="assets/pic/main/PETLAB.png" alt="Digital PET Laboratory">
+      </a>
+      <a class="upop-brand" href="People/People-UPOP-en.html" aria-label="Undergraduate Practice Opportunities Program">
+        <img src="assets/pic/main/UPOP_LOGO.png?v=20260920-4" alt="UPOP">
+      </a>
+      <a class="donate-brand" href="Giving/Giving-giving-en.html" aria-label="Support Digital PET Laboratory research">
+        <img src="assets/pic/main/DONATE_LOGO.png?v=20260920-1" alt="Donate to Digital PET Laboratory">
+      </a>
+    </div>
 
     <div class="desktop-navigation">
       <div class="header-top-row">

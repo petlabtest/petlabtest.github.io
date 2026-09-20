@@ -149,8 +149,8 @@
   }
 
   var headerComponent = /-cn\.html$/i.test(location.pathname) || /\/index-cn\.html$/i.test(location.pathname)
-    ? 'components/header-cn.html?v=20260908-wide1'
-    : 'components/header.html?v=20260908-wide1';
+    ? 'components/header-cn.html?v=20260920-programs1'
+    : 'components/header.html?v=20260920-programs1';
   var footerComponent = /-cn\.html$/i.test(location.pathname) || /\/index-cn\.html$/i.test(location.pathname)
     ? 'components/footer-cn.html?v=20260830-1'
     : 'components/footer.html?v=20260830-1';
