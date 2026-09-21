@@ -12,6 +12,90 @@ body.home {
   background: #f5f4f0;
 }
 
+/* The opening film introduces its story before any editorial copy appears. */
+.home .home-carousel__wrapper--video-intro .home-carousel__copy > * {
+  transition: opacity .55s ease, transform .7s cubic-bezier(.2, .7, .2, 1);
+}
+
+.home .home-carousel__wrapper--video-intro.is-video-pending .home-carousel__copy > * {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(24px);
+}
+
+.home .home-carousel__wrapper--video-intro.is-video-complete .home-carousel__copy > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.home .home-carousel__wrapper--video-intro.is-video-complete .home-carousel__title-row {
+  transition-delay: .1s;
+}
+
+.home .home-carousel__wrapper--video-intro.is-video-complete .home-carousel__cta {
+  transition-delay: .22s;
+}
+
+.home .page_header.home-carousel.is-video-intro-pending .caption,
+.home .page_header.home-carousel.is-video-intro-pending.controls-visible .caption {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(10px) !important;
+}
+
+.home .home-carousel__replay {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 28px;
+  padding: 8px 0;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .75);
+  color: #fff;
+  background: transparent;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: .05em;
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color .2s ease, color .2s ease;
+}
+
+.home .home-carousel__replay span {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: .7;
+}
+
+.home .home-carousel__replay:hover,
+.home .home-carousel__replay:focus-visible {
+  border-color: #ff5a2f;
+  color: #ffb49f;
+}
+
+/* The replay control sits directly after the hero title text, bottom-aligned
+   with it, and is decoupled from the Learn more CTA so hovering either
+   control never moves the other. */
+.home .home-carousel__title-row {
+  display: block;
+  /* Neutralise the whitespace between the inline title and the replay so the
+     margin-left below is the only gap between them. */
+  font-size: 0;
+}
+
+.home .home-carousel__title-row .home-carousel__title {
+  display: inline;
+}
+
+.home .home-carousel__title-row .home-carousel__replay {
+  margin-left: 16px;
+  vertical-align: bottom;
+  white-space: nowrap;
+}
+
 .home main,
 .home .page_content {
   width: 100%;
@@ -50,6 +134,13 @@ body.home {
     height: 100%;
     object-fit: cover;
     object-position: center center;
+  }
+
+  /* Raise the team portrait so faces clear the overlaid headline. */
+  .home .home-carousel__wrapper--team .home-carousel__media img {
+    position: relative;
+    top: -16%;
+    height: 116%;
   }
 
   .home .home-carousel__copy {
@@ -399,6 +490,17 @@ body.home {
   .home .research-card-grid {
     position: static;
     transform: none;
+  }
+
+  .home .home-carousel__replay {
+    border-bottom-color: rgba(0, 60, 98, .65);
+    color: var(--blue-dark);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home .home-carousel__wrapper--video-intro .home-carousel__copy > * {
+    transition-duration: .01ms;
   }
 }
 

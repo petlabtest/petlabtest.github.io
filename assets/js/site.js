@@ -217,7 +217,36 @@ function initHero() {
   const next = carousel.querySelector('.carousel-arrow.next');
   if (slides.length < 2 || !dotsHost || !previous || !next) return;
   let index = Math.max(0, slides.findIndex(slide => slide.classList.contains('active')));
+  const videoHero = slides.find(slide => slide.hasAttribute('data-video-hero'));
+  const introVideo = videoHero?.querySelector('video');
+  const replay = videoHero?.querySelector('[data-hero-replay]');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let timer;
+  let pointerInside = false;
+
+  const stopTimer = () => {
+    window.clearTimeout(timer);
+    timer = undefined;
+  };
+  const introIsPlaying = () => Boolean(
+    videoHero &&
+    introVideo &&
+    slides[index] === videoHero &&
+    !videoHero.classList.contains('is-video-complete')
+  );
+  const scheduleAdvance = () => {
+    stopTimer();
+    if (pointerInside || reducedMotion.matches || introIsPlaying()) return;
+    timer = window.setTimeout(() => show(index + 1), 5500);
+  };
+  const revealVideoHero = () => {
+    if (!videoHero) return;
+    videoHero.classList.remove('is-video-pending');
+    videoHero.classList.add('is-video-complete');
+    carousel.classList.remove('is-video-intro-pending');
+    carousel.classList.add('is-video-intro-complete');
+    scheduleAdvance();
+  };
   const playActiveVideo = () => {
     slides.forEach((slide, slideIndex) => {
       slide.querySelectorAll('video').forEach(video => {
@@ -225,9 +254,12 @@ function initHero() {
           video.pause();
           return;
         }
+        if (slide === videoHero && slide.classList.contains('is-video-complete')) return;
         if (video.readyState === HTMLMediaElement.HAVE_NOTHING) video.load();
         const playback = video.play();
-        if (playback) playback.catch(() => {});
+        if (playback) playback.catch(() => {
+          if (slide === videoHero) revealVideoHero();
+        });
       });
     });
   };
@@ -238,7 +270,7 @@ function initHero() {
     dot.className = 'carousel-dot';
     dot.setAttribute('role','tab');
     dot.setAttribute('aria-label', `Show featured story ${slideIndex + 1}`);
-    dot.addEventListener('click', () => { show(slideIndex); restart(); });
+    dot.addEventListener('click', () => show(slideIndex));
     dotsHost.append(dot);
   });
   const dots = [...dotsHost.querySelectorAll('.carousel-dot')];
@@ -253,17 +285,40 @@ function initHero() {
     dots[index].classList.add('active');
     dots[index].setAttribute('aria-selected','true');
     playActiveVideo();
+    scheduleAdvance();
   };
-  const restart = () => {
-    clearInterval(timer);
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(() => show(index + 1),5500);
-  };
-  previous.addEventListener('click', () => { show(index - 1); restart(); });
-  next.addEventListener('click', () => { show(index + 1); restart(); });
+  previous.addEventListener('click', () => show(index - 1));
+  next.addEventListener('click', () => show(index + 1));
   dots[index].classList.add('active');
   dots[index].setAttribute('aria-selected','true');
-  carousel.addEventListener('mouseenter', () => clearInterval(timer));
-  carousel.addEventListener('mouseleave', restart);
+  carousel.addEventListener('mouseenter', () => {
+    pointerInside = true;
+    stopTimer();
+  });
+  carousel.addEventListener('mouseleave', () => {
+    pointerInside = false;
+    scheduleAdvance();
+  });
+
+  if (introVideo && videoHero) {
+    introVideo.loop = false;
+    introVideo.addEventListener('ended', revealVideoHero);
+    introVideo.addEventListener('error', revealVideoHero);
+    if (introVideo.ended) revealVideoHero();
+  } else {
+    revealVideoHero();
+  }
+  replay?.addEventListener('click', () => {
+    if (!introVideo || !videoHero) return;
+    stopTimer();
+    videoHero.classList.remove('is-video-complete');
+    videoHero.classList.add('is-video-pending');
+    carousel.classList.remove('is-video-intro-complete');
+    carousel.classList.add('is-video-intro-pending');
+    introVideo.currentTime = 0;
+    const playback = introVideo.play();
+    if (playback) playback.catch(revealVideoHero);
+  });
 
   let visibilityFrame = 0;
   const updateControlVisibility = () => {
@@ -285,7 +340,7 @@ function initHero() {
   });
   updateControlVisibility();
   playActiveVideo();
-  restart();
+  scheduleAdvance();
 }
 
 function initHomeNews() {
