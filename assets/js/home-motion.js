@@ -34,10 +34,10 @@
   var mission = one('.home-fullwidth__panel');
   sequence(mission, mission ? [
     { element: mission, effect: 'background-mission', order: 0 },
-    { element: one('.home-fullwidth__eyebrow', mission), delay: 280 },
-    { element: one('h2', mission), delay: 350 },
-    { element: one('p:not(.home-fullwidth__eyebrow)', mission), delay: 430 },
-    { element: one('.home-fullwidth__cta', mission), effect: 'fade-right', delay: 510 }
+    { element: one('.home-fullwidth__eyebrow', mission), delay: 620 },
+    { element: one('h2', mission), delay: 820 },
+    { element: one('p:not(.home-fullwidth__eyebrow)', mission), delay: 1060 },
+    { element: one('.home-fullwidth__cta', mission), effect: 'fade-right', delay: 1320 }
   ] : [], mission, 0.74);
 
   var news = one('.home-news');
@@ -63,10 +63,13 @@
 
   var impact = one('.home-impact');
   var impactFrame = impact && one('.group-content', impact);
+  var impactBody = impact && one('.group-content__body', impact);
   sequence(impact, impact ? [
-    { element: impactFrame, effect: 'background-grey', delay: 0 },
-    { element: one('.group-content__media', impact), effect: 'wipe-left', delay: 210 },
-    { element: one('.group-content__body', impact), effect: 'content-group', delay: 500 }
+    { element: one('.group-content__media', impact), effect: 'wipe-left', delay: 0 },
+    { element: impactFrame, effect: 'background-grey', delay: 650 },
+    { element: one('h2', impactBody), effect: 'content-group', delay: 1280 },
+    { element: one('p', impactBody), effect: 'content-group', delay: 1510 },
+    { element: one('.group-content__cta', impactBody), effect: 'fade-right', delay: 1770 }
   ] : [], impactFrame, 0.86);
 
   var research = one('.research-cards');

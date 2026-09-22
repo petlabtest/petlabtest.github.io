@@ -146,6 +146,58 @@
   will-change: auto;
 }
 
+/* Keep editorial CTA labels fixed during hover. The former padding animation
+   changed the inline layout every frame, which could stutter inside panels. */
+.home .home-fullwidth__cta.cta--button,
+.home .home-programs__initiative-copy .cta--button {
+  padding-left: 18px;
+}
+
+.home .home-fullwidth__cta.cta--button::before,
+.home .home-programs__initiative-copy .cta--button::before {
+  width: 8px;
+  transform: translateY(-50%) scaleX(1);
+  transform-origin: left center;
+  transition: transform .2s ease;
+  will-change: transform;
+}
+
+.home .home-fullwidth__cta.cta--button:hover,
+.home .home-fullwidth__cta.cta--button:focus-visible,
+.home .home-programs__initiative-copy .cta--button:hover,
+.home .home-programs__initiative-copy .cta--button:focus-visible {
+  padding-left: 18px;
+}
+
+.home .home-fullwidth__cta.cta--button:hover::before,
+.home .home-fullwidth__cta.cta--button:focus-visible::before,
+.home .home-programs__initiative-copy .cta--button:hover::before,
+.home .home-programs__initiative-copy .cta--button:focus-visible::before {
+  width: 8px;
+  transform: translateY(-50%) scaleX(2);
+}
+
+.home .home-fullwidth__cta.cta--button .cta--label,
+.home .home-programs__initiative-copy .cta--button .cta--label,
+.home .home-fullwidth__cta.cta--button::after,
+.home .home-programs__initiative-copy .cta--button::after {
+  display: inline-block;
+  transform: translateX(0);
+  transition: transform .2s cubic-bezier(.22, 1, .36, 1);
+  will-change: transform;
+}
+
+.home .home-fullwidth__cta.cta--button:hover .cta--label,
+.home .home-fullwidth__cta.cta--button:focus-visible .cta--label,
+.home .home-programs__initiative-copy .cta--button:hover .cta--label,
+.home .home-programs__initiative-copy .cta--button:focus-visible .cta--label,
+.home .home-fullwidth__cta.cta--button:hover::after,
+.home .home-fullwidth__cta.cta--button:focus-visible::after,
+.home .home-programs__initiative-copy .cta--button:hover::after,
+.home .home-programs__initiative-copy .cta--button:focus-visible::after {
+  transform: translateX(10px);
+}
+
 /* Images feel more physical when the mask and image settle independently. */
 .home.home-motion-ready [data-home-effect="wipe-left"] > img,
 .home.home-motion-ready [data-home-effect="wipe-right"] > img,
@@ -194,5 +246,14 @@
 
   .home.home-motion-ready [data-home-effect^="background-"]::after {
     transform: scaleX(1);
+  }
+
+  .home .home-fullwidth__cta.cta--button::before,
+  .home .home-programs__initiative-copy .cta--button::before,
+  .home .home-fullwidth__cta.cta--button .cta--label,
+  .home .home-programs__initiative-copy .cta--button .cta--label,
+  .home .home-fullwidth__cta.cta--button::after,
+  .home .home-programs__initiative-copy .cta--button::after {
+    transition: none;
   }
 }

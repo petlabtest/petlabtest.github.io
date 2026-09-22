@@ -136,13 +136,6 @@ body.home {
     object-position: center center;
   }
 
-  /* Raise the team portrait so faces clear the overlaid headline. */
-  .home .home-carousel__wrapper--team .home-carousel__media img {
-    position: relative;
-    top: -16%;
-    height: 116%;
-  }
-
   .home .home-carousel__copy {
     left: clamp(64px, 7.5%, 120px);
     right: clamp(64px, 7.5%, 120px);
