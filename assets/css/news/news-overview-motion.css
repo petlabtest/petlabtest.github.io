@@ -1,0 +1,26 @@
+/* Shared entry motion for the three-card news overview component. */
+@media (min-width: 961px) {
+  .paragraph--type-p-news3up .views-row {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .paragraph--type-p-news3up.js-animate .views-row {
+    opacity: 1;
+  }
+
+  .paragraph--type-p-news3up.js-animate .views-row:nth-child(2) {
+    transition-delay: 0.3s;
+  }
+
+  .paragraph--type-p-news3up.js-animate .views-row:nth-child(3) {
+    transition-delay: 0.5s;
+  }
+}
+
+@media (min-width: 961px) and (prefers-reduced-motion: reduce) {
+  .paragraph--type-p-news3up .views-row {
+    opacity: 1;
+    transition: none;
+  }
+}

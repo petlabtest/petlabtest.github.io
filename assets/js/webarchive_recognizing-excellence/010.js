@@ -40,7 +40,87 @@ Drupal.debounce=function(func,wait,immediate){let timeout;let result;return func
 /* @license GPL-2.0-or-later https://www.drupal.org/licensing/faq */
 (function($){'use strict';Drupal.AjaxCommands.prototype.colorboxLoadOpen=function(ajax,response){$.colorbox($.extend({},drupalSettings.colorbox,{html:response.data,width:'90%',height:'90%'}));Drupal.attachBehaviors();};})(jQuery);;
 ((Drupal)=>{Drupal.behaviors.ll_pub_section={attach:function(context){jQuery('.ll-pub-section').each(waypoint);}};function waypoint(){const waypointDown=new Waypoint({element:jQuery(this),handler(direction){if(direction==='down')this.element.addClass('js-animate');},offset:'10%'});}})(Drupal);;
-((Drupal)=>{Drupal.behaviors.num_text={attach:function(context){const numSections=jQuery('.ll-num-text-section .num-section',context);const prefersReducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;numSections.each(function(){const numSection=jQuery(this);if(numSection.data('num-initialized'))return;const targetText=numSection.text().trim();const targetNumber=parseFloat(targetText.replace(/,/g,''));if(!isNaN(targetNumber)){numSection.data('target-number',targetNumber);numSection.data('num-initialized',true);const isOrdinal=numSection.hasClass('num-ordinal');const isPercentage=numSection.hasClass('num-percentage');numSection.data('is-ordinal',isOrdinal);numSection.data('is-percentage',isPercentage);if(!prefersReducedMotion)if(isOrdinal)numSection.html('0<span class="ordinal-suffix">th</span>');else if(isPercentage)numSection.html('0<span class="percentage-symbol">%</span>');else numSection.text('0');}});jQuery('.ll-num-text-section',context).each(function(){const element=jQuery(this);if(element.data('waypoint-initialized'))return;element.data('waypoint-initialized',true);waypoint.call(this);});}};function waypoint(){const element=jQuery(this);const waypointDown=new Waypoint({element,handler(direction){if(direction==='down'){this.element.addClass('js-animate');animateNumber(element);}},offset:'50%'});}function getOrdinalSuffix(num){const lastDigit=num%10;const lastTwoDigits=num%100;if(lastTwoDigits>=11&&lastTwoDigits<=13)return 'th';switch(lastDigit){case 1:return 'st';case 2:return 'nd';case 3:return 'rd';default:return 'th';}}function animateNumber(container){const numSection=container.find('.num-section');const targetNumber=numSection.data('target-number');if(!targetNumber||isNaN(targetNumber))return;if(numSection.hasClass('animated'))return;numSection.addClass('animated');const isOrdinal=numSection.data('is-ordinal');const isPercentage=numSection.data('is-percentage');let duration;if(targetNumber<=150)duration=500+(targetNumber/150)*500;else duration=1000;const steps=60;const stepDuration=duration/steps;const increment=targetNumber/steps;let current=0;const timer=setInterval(()=>{current+=increment;if(current>=targetNumber){const finalNumber=Math.round(targetNumber);const formattedNumber=finalNumber.toLocaleString();if(isOrdinal)numSection.html(formattedNumber+'<span class="ordinal-suffix">'+getOrdinalSuffix(finalNumber)+'</span>');else if(isPercentage)numSection.html(formattedNumber+'<span class="percentage-symbol">%</span>');else numSection.text(formattedNumber);clearInterval(timer);}else{const currentNumber=Math.round(current);const formattedNumber=currentNumber.toLocaleString();if(isOrdinal)numSection.html(formattedNumber+'<span class="ordinal-suffix">'+getOrdinalSuffix(currentNumber)+'</span>');else if(isPercentage)numSection.html(formattedNumber+'<span class="percentage-symbol">%</span>');else numSection.text(formattedNumber);}},stepDuration);}})(Drupal);;
+((Drupal)=>{
+  const motionQuery=window.matchMedia('(prefers-reduced-motion: reduce)');
+  Drupal.behaviors.num_text={attach:function(context){
+    const numSections=jQuery('.ll-num-text-section .num-section',context);
+    if(!numSections.length)return;
+    numSections.each(function(){
+      const numSection=jQuery(this);
+      if(numSection.data('num-initialized'))return;
+      const targetText=numSection.text().trim();
+      const targetNumber=parseFloat(targetText.replace(/,/g,''));
+      if(!Number.isFinite(targetNumber))return;
+      numSection.data('target-number',targetNumber);
+      numSection.data('num-initialized',true);
+      numSection.data('is-ordinal',numSection.hasClass('num-ordinal'));
+      numSection.data('is-percentage',numSection.hasClass('num-percentage'));
+      if(!motionQuery.matches)renderNumber(numSection,0);
+    });
+    jQuery('.ll-num-text-section',context).each(function(){
+      const element=jQuery(this);
+      if(element.data('waypoint-initialized'))return;
+      element.data('waypoint-initialized',true);
+      waypoint.call(this);
+    });
+    if(!window.PETLAB_NUM_TEXT_MOTION_LISTENER){
+      const finishForReducedMotion=function(event){
+        if(!event.matches)return;
+        jQuery('.ll-num-text-section .num-section').each(function(){
+          const numSection=jQuery(this);
+          const targetNumber=numSection.data('target-number');
+          if(Number.isFinite(targetNumber))finishNumber(numSection,targetNumber);
+        });
+      };
+      if(motionQuery.addEventListener)motionQuery.addEventListener('change',finishForReducedMotion);
+      else motionQuery.addListener(finishForReducedMotion);
+      window.PETLAB_NUM_TEXT_MOTION_LISTENER=true;
+    }
+  }};
+  function waypoint(){
+    const element=jQuery(this);
+    new Waypoint({element,handler(direction){
+      if(direction==='down'){
+        this.element.addClass('js-animate');
+        animateNumber(element);
+      }
+    },offset:'50%'});
+  }
+  function getOrdinalSuffix(num){
+    const lastDigit=num%10,lastTwoDigits=num%100;
+    if(lastTwoDigits>=11&&lastTwoDigits<=13)return 'th';
+    switch(lastDigit){case 1:return 'st';case 2:return 'nd';case 3:return 'rd';default:return 'th';}
+  }
+  function renderNumber(numSection,value){
+    const number=Math.round(value),formatted=number.toLocaleString();
+    if(numSection.data('is-ordinal'))numSection.html(formatted+'<span class="ordinal-suffix">'+getOrdinalSuffix(number)+'</span>');
+    else if(numSection.data('is-percentage'))numSection.html(formatted+'<span class="percentage-symbol">%</span>');
+    else numSection.text(formatted);
+  }
+  function finishNumber(numSection,targetNumber){
+    const timer=numSection.data('num-text-timer');
+    if(timer)clearInterval(timer);
+    numSection.data('num-text-timer',null).addClass('animated');
+    renderNumber(numSection,targetNumber);
+  }
+  function animateNumber(container){
+    const numSection=container.find('.num-section');
+    const targetNumber=numSection.data('target-number');
+    if(!Number.isFinite(targetNumber)||numSection.hasClass('animated'))return;
+    if(motionQuery.matches){finishNumber(numSection,targetNumber);return;}
+    numSection.addClass('animated');
+    const duration=targetNumber<=150?500+(targetNumber/150)*500:1000;
+    const steps=60,stepDuration=duration/steps,increment=targetNumber/steps;
+    let current=0;
+    const timer=setInterval(()=>{
+      if(motionQuery.matches){finishNumber(numSection,targetNumber);return;}
+      current+=increment;
+      if(current>=targetNumber){finishNumber(numSection,targetNumber);return;}
+      renderNumber(numSection,current);
+    },stepDuration);
+    numSection.data('num-text-timer',timer);
+  }
+})(Drupal);;
 (function(Drupal){Drupal.AjaxCommands.prototype.gtagEvent=function(ajax,response){gtag('event',response.event_name,response.data);};})(Drupal);;
 ;
 !function(e){var n=!1;if("function"==typeof define&&define.amd&&(define(e),n=!0),"object"==typeof exports&&(module.exports=e(),n=!0),!n){var o=window.Cookies,t=window.Cookies=e();t.noConflict=function(){return window.Cookies=o,t;};}}(function(){function e(){for(var e=0,n={};e<arguments.length;e++){var o=arguments[e];for(var t in o)n[t]=o[t];}return n;}function n(o){function t(n,r,i){var c;if("undefined"!=typeof document){if(arguments.length>1){if("number"==typeof (i=e({path:"/"},t.defaults,i)).expires){var a=new Date();a.setMilliseconds(a.getMilliseconds()+864e5*i.expires),i.expires=a;}i.expires=i.expires?i.expires.toUTCString():"";try{c=JSON.stringify(r),/^[\{\[]/.test(c)&&(r=c);}catch(e){}r=o.write?o.write(r,n):encodeURIComponent(String(r)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,decodeURIComponent),n=(n=(n=encodeURIComponent(String(n))).replace(/%(23|24|26|2B|5E|60|7C)/g,decodeURIComponent)).replace(/[\(\)]/g,escape);var s="";for(var f in i)i[f]&&(s+="; "+f,!0!==i[f]&&(s+="="+i[f]));return document.cookie=n+"="+r+s;}n||(c={});for(var p=document.cookie?document.cookie.split("; "):[],d=/(%[0-9A-Z]{2})+/g,u=0;u<p.length;u++){var l=p[u].split("="),C=l.slice(1).join("=");this.json||'"'!==C.charAt(0)||(C=C.slice(1,-1));try{var g=l[0].replace(d,decodeURIComponent);if(C=o.read?o.read(C,g):o(C,g)||C.replace(d,decodeURIComponent),this.json)try{C=JSON.parse(C);}catch(e){}if(n===g){c=C;break;}n||(c[g]=C);}catch(e){}}return c;}}return t.set=t,t.get=function(e){return t.call(t,e);},t.getJSON=function(){return t.apply({json:!0},[].slice.call(arguments));},t.defaults={},t.remove=function(n,o){t(n,"",e(o,{expires:-1}));},t.withConverter=n,t;}return n(function(){});});;

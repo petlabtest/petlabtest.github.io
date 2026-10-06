@@ -1,0 +1,21 @@
+.page-node-type-rdgroup a.cta--button {
+      position: relative;
+      display: inline-block;
+    }
+
+    .page-node-type-rdgroup a.cta--button::after {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin: 0 0 2px 8px;
+      content: "";
+      border-top: 2px solid currentColor;
+      border-right: 2px solid currentColor;
+      transform: rotate(45deg);
+      transition: transform .2s ease;
+      vertical-align: middle;
+    }
+
+    .page-node-type-rdgroup a.cta--button:hover::after {
+      transform: translateX(3px) rotate(45deg);
+    }

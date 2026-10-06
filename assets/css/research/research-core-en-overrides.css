@@ -1,0 +1,90 @@
+@font-face {
+      font-family: "icomoon";
+      src: url("../../fonts/root/media/r029.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    /* Keep the engage CTA from inheriting the generic site link styling. */
+    .paragraph--type-p-fullwidth .p-fullwidth__cta .cta--button {
+      position: relative;
+      display: inline-block;
+      padding: 0 15px 0 11px;
+      color: #000;
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.25;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: padding-left .2s ease, padding-right .2s ease;
+    }
+
+    .paragraph--type-p-fullwidth .p-fullwidth__cta .cta--button::before {
+      content: "";
+      position: absolute;
+      top: 44%;
+      left: 0;
+      width: 3px;
+      height: 74%;
+      background: #f45a2b;
+      transform: translateY(-50%);
+      transition: width .2s ease;
+    }
+
+    .paragraph--type-p-fullwidth .p-fullwidth__cta .cta--button .last-word::after {
+      content: "\e905";
+      position: relative;
+      top: -1px;
+      margin-left: 10px;
+      font-family: "icomoon" !important;
+      font-size: 10px;
+      line-height: 1;
+    }
+
+    .paragraph--type-p-fullwidth .p-fullwidth__cta .cta--button:hover,
+    .paragraph--type-p-fullwidth .p-fullwidth__cta .cta--button:focus-visible {
+      padding-left: 19px;
+      padding-right: 0;
+    }
+
+    .paragraph--type-p-fullwidth .p-fullwidth__cta .cta--button:hover::before,
+    .paragraph--type-p-fullwidth .p-fullwidth__cta .cta--button:focus-visible::before {
+      width: 12px;
+    }
+
+    @media (min-width: 1025px) {
+
+      /* Match the reference research pages: pull the sloped Engage section
+         up over the masonry section to avoid the oversized blank gap. */
+      .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate {
+        margin-top: -300px;
+      }
+
+      .paragraph--type-p-fullwidth .p-fullwidth__cta .cta--button {
+        padding: 0 20px;
+        font-size: 25px;
+        line-height: 25px;
+      }
+
+      .paragraph--type-p-fullwidth .p-fullwidth__cta .cta--button::before {
+        top: 48%;
+        width: 4px;
+      }
+
+      .paragraph--type-p-fullwidth .p-fullwidth__cta .cta--button .last-word::after {
+        top: -3px;
+        font-size: 12px;
+      }
+
+      .paragraph--type-p-fullwidth .p-fullwidth__cta .cta--button:hover,
+      .paragraph--type-p-fullwidth .p-fullwidth__cta .cta--button:focus-visible {
+        padding-left: 36px;
+      }
+
+      .paragraph--type-p-fullwidth .p-fullwidth__cta .cta--button:hover::before,
+      .paragraph--type-p-fullwidth .p-fullwidth__cta .cta--button:focus-visible::before {
+        width: 20px;
+      }
+    }
+

@@ -1,0 +1,21 @@
+/* Shared People overview hero and AppShell layer. */
+.hero--large-image .hero__image img {
+  width: 100% !important;
+  height: calc(100% + 60px) !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  top: 0 !important;
+}
+
+@media (min-width: 1025px) {
+  .hero--large-image .hero__image {
+    height: 48.303vw;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 1600px) {
+  .hero--large-image .hero__image {
+    height: 772px;
+  }
+}

@@ -1,0 +1,146 @@
+/* Keep this research-area hero clear of the PETLab header. The source
+       theme applies a -122px overlap for its original header stack, while
+       this page uses the injected PETLab header without that stack. */
+    @media (min-width: 1025px) {
+      body.path-node.page-node-type-rdarea .hero.hero--large-image {
+        margin-top: -50px;
+      }
+    }
+
+    /* The rdtool paragraph was removed from this page.  The following
+       fullwidth block is now the first paragraph, so the source theme's
+       :first-child rule would otherwise paint its text children white. */
+    .ifde-page__paragraphs>.paragraph--type-p-fullwidth.background--grey:first-child .p-fullwidth__content>.p-fullwidth__header,
+    .ifde-page__paragraphs>.paragraph--type-p-fullwidth.background--grey:first-child .p-fullwidth__content>.p-fullwidth__body,
+    .ifde-page__paragraphs>.paragraph--type-p-fullwidth.background--grey:first-child .p-fullwidth__content>.p-fullwidth__cta {
+      background-color: #e2e2e2 !important;
+    }
+
+    /* The facilities block is reused outside its original masonry grid;
+       remove the source component's horizontal separator rules here. */
+    .paragraph--type-p-masonry-instrument {
+      border-top: 0 !important;
+      border-bottom: 0 !important;
+    }
+
+    /* Align the Facilities heading with the adjacent Featured Publications
+       heading; the masonry component's original top inset is not needed in
+       this two-column layout. */
+    .p-twoone__dataset>.paragraph--type-p-masonry-instrument {
+      padding-top: 0 !important;
+    }
+
+    /* Keep the two instrumentation images inside the same 420x240 frame
+       used by the facility hover overlay, so the animated title layer spans
+       the complete image rather than stopping at the intrinsic image edge. */
+    .p-twoone__dataset>.paragraph--type-p-masonry-instrument .instrument-grid__image {
+      width: 100%;
+      height: 240px;
+      overflow: hidden;
+    }
+
+    .p-twoone__dataset>.paragraph--type-p-masonry-instrument .instrument-grid__image img.image-style-instrument-list {
+      display: block;
+      width: 100%;
+      height: 240px;
+      max-width: none;
+      object-fit: cover;
+    }
+
+    /* Match the Physics page relationship: Platform is a separate light
+       card above Publications, while Publications keeps its framed panel. */
+    .p-twoone__pub {
+      display: flex;
+      flex-direction: column;
+      row-gap: 80px;
+    }
+
+    .p-twoone__pub>.p-masonry-platform {
+      width: 100%;
+      margin: 0;
+      background: #ebebeb;
+      padding: 40px 0 48px;
+    }
+
+    .p-twoone__pub>.p-masonry-platform .p-masonry-platform__content {
+      width: 100%;
+      height: 100%;
+      padding: 0 40px;
+    }
+
+    .p-twoone__pub>.paragraph--type-p-twoone-pub {
+      border: 1px solid #c2c0bf !important;
+      padding: 41px 41px 52px !important;
+    }
+
+    .p-twoone__pub>.paragraph--type-p-twoone-pub .p-twoone-pub__header {
+      margin: 0 0 29px;
+    }
+
+    /* The source item came from an absolute-positioned masonry grid. In this
+       two-column overview it must participate in normal flow below the
+       Instruments block and use the full available width. */
+    .paragraph--type-p-twoone>.p-masonry__item {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 0 43px !important;
+    }
+
+    .paragraph--type-p-twoone>.p-masonry__item>.paragraph--type-p-masonry-engage {
+      width: 100%;
+      max-width: none;
+      box-sizing: border-box;
+    }
+
+    .p-twoone__dataset>.paragraph--type-p-masonry-engage {
+      width: 100%;
+      margin-top: 43px;
+      background: #0073cf;
+      color: #ffffff;
+      box-sizing: border-box;
+    }
+
+    /* Match the left capabilities image ratio (1738:1080) so both cards
+       occupy the same height at every column width. */
+    .p-twoone__facility .view-display-id-twoone_manual .facility-grid__image {
+      aspect-ratio: 1738 / 1080;
+      overflow: hidden;
+    }
+
+    .p-twoone__facility .view-display-id-twoone_manual .facility-grid__image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 699px) {
+      .p-twoone__pub {
+        row-gap: 48px;
+      }
+
+      .p-twoone__pub>.p-masonry-platform {
+        margin-bottom: 0;
+        padding: 25px 0 35px;
+      }
+
+      .p-twoone__pub>.p-masonry-platform .p-masonry-platform__content {
+        padding: 0 15px;
+      }
+
+      .p-twoone__pub>.paragraph--type-p-twoone-pub {
+        padding: 24px 20px 36px 30px !important;
+      }
+
+      .paragraph--type-p-twoone>.p-masonry__item {
+        margin-bottom: 24px !important;
+      }
+
+      .p-twoone__dataset>.paragraph--type-p-masonry-engage {
+        margin-top: 24px;
+      }
+    }

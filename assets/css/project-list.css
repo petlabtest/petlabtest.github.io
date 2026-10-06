@@ -1,0 +1,107 @@
+/* Shared project-list card layout used by research pages and related views. */
+.p-project-list__header {
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.project-list__left {
+  float: left;
+  width: 80px;
+  margin: 0 0 15px;
+}
+
+.project-list__right {
+  float: left;
+  width: calc(100% - 80px);
+  padding: 0 16px;
+}
+
+.project-list__tag {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.project-list__tag a {
+  display: inline;
+}
+
+.project-list__tag a:not(:last-of-type)::after {
+  margin: 0 2px 0 6px;
+  content: "|";
+}
+
+.project-list__title {
+  min-height: 46px;
+  margin: 4px 0;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: none;
+}
+
+.project-list__title a {
+  line-height: 1.375;
+}
+
+.project-list__summary {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .p-project-list__header {
+    margin-bottom: 15px;
+  }
+
+  .project-list__left {
+    width: 110px;
+    margin: 0;
+  }
+
+  .project-list__right {
+    width: calc(100% - 110px);
+    padding-left: 32px;
+  }
+
+  .project-list__title {
+    min-height: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .project-list__summary {
+    display: block;
+  }
+}
+
+@media (min-width: 1025px) {
+  .p-project-list__header {
+    margin-bottom: 48px;
+  }
+
+  .project-list__left {
+    width: 250px;
+  }
+
+  .project-list__right {
+    width: calc(100% - 250px);
+    padding: 22px 0 0 48px;
+  }
+
+  .project-list__tag {
+    margin-bottom: 7px;
+  }
+
+  .project-list__tag a:not(:last-of-type)::after {
+    margin: 0 6px 0 10px;
+  }
+
+  .project-list__title {
+    margin-bottom: 10px;
+  }
+
+  .project-list__summary {
+    font-size: 16px;
+    line-height: 1.625;
+  }
+}

@@ -1,0 +1,121 @@
+/* Shared controls for the project carousel; Slick supplies the control nodes. */
+.paragraph--type-p-project-carousel .slider-content {
+  position: absolute;
+  z-index: 200;
+  bottom: 65px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 15px;
+  line-height: 1;
+}
+
+.paragraph--type-p-project-carousel .slider-content > * {
+  flex-basis: auto;
+}
+
+.paragraph--type-p-project-carousel .slider-content .slick-prev,
+.paragraph--type-p-project-carousel .slider-content .slick-next,
+.paragraph--type-p-project-carousel .slider-content .slick-dots button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  color: transparent;
+  background: transparent;
+  font: 0/0 a;
+  text-indent: 100%;
+  text-shadow: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.paragraph--type-p-project-carousel .slider-content .slick-prev,
+.paragraph--type-p-project-carousel .slider-content .slick-next {
+  background-color: transparent;
+}
+
+.paragraph--type-p-project-carousel .slider-content .slick-prev::before,
+.paragraph--type-p-project-carousel .slider-content .slick-next::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 2.5px 2.5px 0 0;
+  content: "";
+}
+
+.paragraph--type-p-project-carousel .slider-content .slick-prev { order: 1; }
+.paragraph--type-p-project-carousel .slider-content .slick-prev::before {
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+.paragraph--type-p-project-carousel .slider-content .slick-next { order: 3; }
+.paragraph--type-p-project-carousel .slider-content .slick-next::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.paragraph--type-p-project-carousel .slider-content .slick-dots {
+  order: 2;
+  margin: 0;
+  padding: 0;
+}
+
+.paragraph--type-p-project-carousel .slider-content .slick-dots li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.paragraph--type-p-project-carousel .slider-content .slick-dots li::before {
+  display: none;
+}
+
+.paragraph--type-p-project-carousel .slider-content .slick-dots li.slick-active button::before {
+  background-color: #008eff;
+}
+
+.paragraph--type-p-project-carousel .slider-content .slick-dots button::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #fff;
+  content: "";
+  transform: translate(-50%, -50%);
+  transition: 0.2s ease;
+}
+
+.paragraph--type-p-project-carousel .slider-content .slick-dots button:hover::before {
+  background-color: #008eff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .paragraph--type-p-project-carousel .slider-content .slick-dots button::before {
+    transition: none;
+  }
+}
+
+@media (min-width: 700px) {
+  .paragraph--type-p-project-carousel .slider-content {
+    bottom: 40px;
+  }
+
+  .paragraph--type-p-project-carousel .slider-content .slick-dots {
+    margin: 0 18px;
+  }
+
+  .paragraph--type-p-project-carousel .slider-content .slick-dots button:hover::before {
+    background-color: #fff;
+  }
+}
+
+@media (min-width: 1025px) {
+  .paragraph--type-p-project-carousel .slider-content {
+    padding-left: 30px;
+  }
+}

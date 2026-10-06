@@ -1,0 +1,5 @@
+@media (min-width: 1025px) {
+  body.path-node.page-node-type-rdarea .hero.hero--large-image {
+    margin-top: -50px;
+  }
+}

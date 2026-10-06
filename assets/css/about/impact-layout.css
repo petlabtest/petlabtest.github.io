@@ -1,0 +1,1521 @@
+:root {
+            --impact-navy: #003c62;
+            --impact-blue: #0067a7;
+            --impact-cyan: #46c6d7;
+            --impact-paper: #f2f2f2;
+            --impact-dark: #2a2a2a;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--impact-paper);
+            color: #171717;
+            font-family: var(--font-family-sans);
+            line-height: 1.6;
+        }
+
+[data-component="header"] {
+            transform: none;
+            isolation: auto;
+            opacity: 1;
+        }
+
+        .impact-index {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: #fff;
+            border-bottom: 1px solid #d7dce0;
+        }
+
+        .impact-index__inner {
+            display: flex;
+            gap: 1.6rem;
+            overflow: auto;
+            padding: 1rem 0;
+        }
+
+        .impact-index a {
+            color: #42515d;
+            font-size: .8rem;
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .impact-index a:hover {
+            color: var(--impact-blue);
+        }
+
+        .impact-section {
+            position: relative;
+            padding: clamp(4rem, 7vw, 7rem) 0;
+            overflow: visible;
+        }
+
+        .impact-section img,
+        .contact-section img {
+            max-width: 100vw;
+        }
+
+        .about-section {
+            position: relative;
+            margin: 0;
+            overflow: visible;
+        }
+
+        .about-sec-white {
+            background: #fff;
+            color: #171717;
+        }
+
+        .about-sec-navy {
+            background: #003c62;
+            color: #fff;
+        }
+
+        .about-sec-blue {
+            background: #0067a7;
+            color: #fff;
+        }
+
+        .about-sec-gray {
+            background: #e4e4e4;
+            color: #171717;
+        }
+
+        .impact-shell {
+            width: min(calc(100% - 116px), 1280px);
+            margin: 0 auto;
+        }
+
+        .impact-section__heading {
+            margin: 0 0 3rem;
+            color: #171717;
+            font-size: clamp(2.4rem, 4.4vw, 4.6rem);
+            line-height: 1;
+            letter-spacing: -.035em;
+        }
+
+        .impact-section__lede {
+            max-width: 880px;
+            margin: 0 0 3rem;
+            color: #34414b;
+            font-size: 1.18rem;
+            line-height: 1.7;
+        }
+
+        .academic-section {
+            background: #fff;
+        }
+
+        .academic-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 3rem 2rem;
+        }
+
+        .academic-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-width: 0;
+        }
+
+        .academic-card img {
+            width: 100%;
+            height: 12rem;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            transition: transform .35s ease;
+        }
+
+        .academic-card:hover img {
+            transform: scale(1.025);
+        }
+
+        .academic-card h3 {
+            margin: 0 0 .5rem;
+            font-size: 1.35rem;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .impact-cta {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            margin-top: .5rem;
+            padding: .45rem 0 .45rem 1.1rem;
+            color: #171717;
+            font-size: .95rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: padding-left .2s ease;
+        }
+
+        .impact-cta::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 5px;
+            height: 1.3rem;
+            background: #f45a2b;
+            transform: translateY(-50%);
+            transition: width .2s ease;
+        }
+
+        .impact-cta::after {
+            content: "›";
+            margin-left: .45rem;
+            font-size: 1.35rem;
+            line-height: 1;
+        }
+
+        .impact-cta:hover {
+            padding-left: 1.45rem;
+        }
+
+        .impact-cta:hover::before {
+            width: 10px;
+        }
+
+        .ip-section {
+            color: #fff;
+            background: linear-gradient(90deg, #003c62 0 71%, #0067a7 71%);
+        }
+
+        .ip-section .impact-section__heading {
+            color: #fff;
+        }
+
+        .ip-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            aspect-ratio: 4/2;
+            background: var(--impact-dark);
+            color: #fff;
+        }
+
+        .ip-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-width: 0;
+            aspect-ratio: 1/1;
+            padding: 1rem;
+            text-align: center;
+            background: var(--impact-dark);
+        }
+
+        .ip-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 0;
+        }
+
+        .ip-item--light {
+            background: #c5d2db;
+            color: #333;
+        }
+
+        .ip-item--blue {
+            background: #0067a7;
+            color: #fff;
+        }
+
+        .ip-item strong {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 400;
+            line-height: 1.1;
+        }
+
+        .ip-item h3 {
+            margin: 0;
+            font-size: 1.15rem;
+            line-height: 1.35;
+        }
+
+        .ip-item p {
+            margin: .8rem 0 0;
+            font-size: .95rem;
+            line-height: 1.35;
+        }
+
+        .social-section {
+            color: #fff;
+            background: linear-gradient(90deg, #003c62 0 62%, #0067a7 62%);
+        }
+
+        .social-section .impact-section__heading {
+            color: #fff;
+        }
+
+        .social-feature {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 27rem;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .social-title h3 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.1;
+            font-weight: 400;
+        }
+
+        .social-title p {
+            margin: .7rem 0 0;
+            font-size: 1.2rem;
+        }
+
+        .social-cert {
+            min-height: 18rem;
+            background: #fff center/cover no-repeat;
+        }
+
+        .social-awards {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+            min-height: 10rem;
+            margin-top: 4rem;
+            padding-right: 9rem;
+        }
+
+        .social-awards img {
+            width: auto;
+            height: 8rem;
+            max-width: 15rem;
+            object-fit: cover;
+            background: #fff;
+            cursor: pointer;
+            transition: transform .2s ease;
+        }
+
+        .social-awards img:hover {
+            transform: translateY(-.35rem);
+        }
+
+        .award-button {
+            position: absolute;
+            top: 1.25rem;
+            width: 4rem;
+            height: 6rem;
+            border: 0;
+            color: #fff;
+            font-size: 3rem;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .award-button--next {
+            right: 0;
+            background: #0067a7;
+        }
+
+        .award-button--prev {
+            right: 4rem;
+            background: #ddd;
+            color: #222;
+        }
+
+        .media-section {
+            min-height: 37rem;
+            color: #fff;
+            background: #003c62;
+            overflow: hidden;
+        }
+
+        .media-section__title {
+            position: absolute;
+            left: max(32px, calc((100vw - min(calc(100vw - 116px), 1280px))/2));
+            top: 3rem;
+            z-index: 2;
+            color: #46c6d7;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 600;
+        }
+
+        .media-section__list {
+            position: absolute;
+            left: max(32px, calc((100vw - min(calc(100vw - 116px), 1280px))/2));
+            top: 12rem;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 1.35rem;
+        }
+
+        .media-section__image {
+            position: absolute;
+            left: 28%;
+            top: 3rem;
+            width: 67%;
+            height: 35rem;
+            object-fit: cover;
+            box-shadow: 0 .125rem .5rem rgba(0, 0, 0, .2);
+        }
+
+        .contact-section {
+            position: relative;
+            min-height: 28rem;
+            padding: 8rem 0 5rem;
+            background: #f2f2f2;
+            overflow: hidden;
+        }
+
+        .contact-section__inner {
+            position: relative;
+            width: min(calc(100% - 116px), 1280px);
+            min-height: 20rem;
+            margin: 0 auto;
+        }
+
+        .contact-section__image {
+            position: absolute;
+            left: 5%;
+            top: 0;
+            z-index: 1;
+            width: 50%;
+            height: 22rem;
+            object-fit: cover;
+        }
+
+        .contact-section__copy {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 60%;
+            min-height: 20rem;
+            padding: 2.5rem 3rem 2rem 35%;
+            color: #fff;
+            background: #0067a7;
+        }
+
+        .contact-section__copy h2 {
+            margin: 0 0 1rem;
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            line-height: 1.1;
+        }
+
+        .contact-section__copy p {
+            margin: 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .contact-section__copy .impact-cta {
+            margin-top: 1.5rem;
+            color: #fff;
+        }
+
+        @media (max-width:800px) {
+
+            .impact-shell,
+            .contact-section__inner {
+                width: calc(100% - 36px);
+            }
+
+            .academic-grid,
+            .ip-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .ip-grid {
+                aspect-ratio: auto;
+            }
+
+            .ip-item {
+                aspect-ratio: 1/1;
+            }
+
+            .social-feature {
+                grid-template-columns: 1fr;
+            }
+
+            .social-cert {
+                min-height: 16rem;
+            }
+
+            .social-awards {
+                padding-right: 0;
+                flex-wrap: wrap;
+            }
+
+            .award-button {
+                position: relative;
+                top: auto;
+                right: auto;
+            }
+
+            .media-section {
+                min-height: 42rem;
+            }
+
+            .media-section__title,
+            .media-section__list {
+                left: 18px;
+            }
+
+            .media-section__image {
+                left: 18px;
+                top: 19rem;
+                width: calc(100% - 36px);
+                height: 20rem;
+            }
+
+            .contact-section {
+                padding: 4rem 0;
+            }
+
+            .contact-section__inner {
+                min-height: 34rem;
+            }
+
+            .contact-section__image {
+                position: relative;
+                left: auto;
+                top: auto;
+                width: 100%;
+                height: 15rem;
+            }
+
+            .contact-section__copy {
+                position: relative;
+                width: 100%;
+                min-height: 19rem;
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width:560px) {
+
+            .academic-grid,
+            .ip-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ip-item {
+                aspect-ratio: 1/1;
+            }
+
+            .social-awards img {
+                max-width: calc(50% - .5rem);
+                height: auto;
+                aspect-ratio: 1.45/1;
+            }
+
+            .media-section__list {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (prefers-reduced-motion:reduce) {
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+
+        /* Chapter navigation styles. */
+        .page-impact #main-content>.dpet-ll-pub-nav-chapters {
+            width: 100%;
+            margin: 0;
+            padding: 30px;
+            box-sizing: border-box;
+            background: rgba(0, 25, 41, .95);
+            color: #fff;
+        }
+
+        .page-impact .dpet-ll-pub-nav-chapters-inner {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .page-impact .dpet-ll-pub-nav-chapters h3 {
+            margin: 0 0 40px;
+            color: #fff;
+            font-size: 30px;
+            line-height: 1.25;
+            text-transform: uppercase;
+        }
+
+        .page-impact .dpet-ll-pub-bottom-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .page-impact .dpet-ll-pub-bottom-nav>li {
+            position: relative;
+            flex: 0 0 100%;
+            min-width: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .page-impact .ll-section-nav {
+            position: relative;
+            display: block;
+            height: 100%;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .page-impact .ll-pub-bottom-nav-img {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            background: #00305c;
+        }
+
+        .page-impact .ll-pub-bottom-nav-img::after {
+            position: absolute;
+            inset: 0;
+            background: #008eff;
+            content: "";
+            opacity: .7;
+            transition: opacity .8s ease;
+        }
+
+        .page-impact .ll-pub-bottom-nav-img img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1.25s ease;
+        }
+
+        .page-impact .ll-nav-text-side {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .page-impact .ll-nav-title {
+            width: 100%;
+            margin: 0;
+            padding: 7px;
+            box-sizing: border-box;
+            color: #fff;
+            background: rgba(0, 48, 92, .7);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 38px;
+            line-height: 1.25;
+            font-weight: 700;
+        }
+
+        .page-impact .ll-current-chapter .ll-pub-bottom-nav-img::after,
+        .page-impact .ll-current-chapter .ll-nav-title {
+            background: rgba(255, 255, 255, .7);
+            color: #00305c;
+        }
+
+        .page-impact .ll-section-nav:hover .ll-pub-bottom-nav-img::after {
+            opacity: 0;
+        }
+
+        .page-impact .ll-section-nav:hover .ll-pub-bottom-nav-img img {
+            transform: scale(1.15);
+        }
+
+        .page-impact .ll-section-nav:hover .ll-nav-title {
+            padding-bottom: 15px;
+        }
+
+        @media (min-width: 700px) {
+            .page-impact #main-content>.dpet-ll-pub-nav-chapters {
+                padding: 45px 30px 50px;
+            }
+
+            .page-impact .dpet-ll-pub-bottom-nav>li {
+                flex-basis: calc(50% - 5px);
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .page-impact #main-content>.dpet-ll-pub-nav-chapters {
+                padding-top: 60px;
+                padding-bottom: 80px;
+            }
+
+            .page-impact .dpet-ll-pub-bottom-nav>li {
+                flex-basis: calc(20% - 8px);
+            }
+        }
+
+        /*
+         * Visual parity with Backup/About/about_impact.html.
+         * The original impact page uses the industry02 layout: the academic
+         * cards are a separate 68% grid, while the following three sections
+         * use a fixed 82vw canvas with deliberately positioned color planes.
+         * Keep these rules scoped to this page so the shared site styles are
+         * not changed for other About pages.
+         */
+        @media (min-width: 801px) {
+            html {
+                overflow-x: hidden;
+            }
+
+            .page-impact {
+                --theme-color1: #0f4c81;
+                --theme-color2: #343434;
+                overflow-x: hidden;
+            }
+
+            .page-impact #main-content>.academic-section {
+                width: 68vw;
+                max-width: none;
+                margin: 5vw auto 6vw;
+                padding: 0;
+                background: transparent;
+            }
+
+            .page-impact #main-content>.academic-section>.impact-shell {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+            }
+
+            .page-impact .academic-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 3vw 2vw;
+            }
+
+            .page-impact .academic-card img {
+                height: 12vw;
+                margin-bottom: 1vw;
+                border-radius: 6px;
+            }
+
+            .page-impact .academic-card h3 {
+                margin: 0 0 .5vw;
+                font-size: 1.5vw;
+                font-weight: 600;
+                line-height: 1.2;
+            }
+
+            .page-impact .academic-card .impact-cta {
+                margin-top: .5vw;
+                padding-top: .45vw;
+                padding-bottom: .45vw;
+                font-size: .95vw;
+                font-weight: 400;
+            }
+
+            .page-impact #main-content>.ip-section,
+            .page-impact #main-content>.social-section {
+                width: 82vw;
+                max-width: none;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 2vw 0;
+            }
+
+            .page-impact #main-content>.ip-section {
+                margin-top: 0;
+                margin-bottom: 0;
+                background: transparent;
+            }
+
+            .page-impact #main-content>.ip-section>div:first-child {
+                width: 71vw !important;
+                height: 28.8vw !important;
+                left: 0 !important;
+            }
+
+            .page-impact #main-content>.ip-section>div:nth-child(2) {
+                width: 29vw !important;
+                height: 28.8vw !important;
+                right: 0 !important;
+            }
+
+            .page-impact .ip-section>.impact-shell,
+            .page-impact .social-section>.impact-shell {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+            }
+
+            .page-impact .ip-section>.impact-shell>p,
+            .page-impact .social-section>.impact-shell>p {
+                margin-top: 0 !important;
+                color: #fff;
+                font-size: 2.5vw !important;
+                line-height: 1.2;
+            }
+
+            .page-impact .ip-section>.impact-shell>p {
+                margin-bottom: 2vw !important;
+            }
+
+            .page-impact .ip-grid {
+                width: 100%;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                aspect-ratio: 4 / 2;
+                background: #2a2a2a;
+            }
+
+            .page-impact .ip-item {
+                min-width: 0;
+                aspect-ratio: 1 / 1;
+                padding: 0;
+                font-size: 1.2vw;
+                background: #2a2a2a;
+            }
+
+            .page-impact .ip-item--light {
+                background: #c5d2db !important;
+                color: #333;
+            }
+
+            .page-impact .ip-item--blue {
+                background: #0067a7 !important;
+                color: #fff;
+            }
+
+            .page-impact .ip-item h3 {
+                margin: 0 0 .5vw;
+                font-size: 1.5em;
+                line-height: 1.2;
+            }
+
+            .page-impact .ip-item p {
+                margin: .8vw 0 0;
+                font-size: 1.1em;
+                line-height: 1.35;
+            }
+
+            .page-impact .ip-item strong {
+                font-size: 2.5em;
+                line-height: 1.1;
+                font-weight: 400;
+            }
+
+            .page-impact #main-content>.social-section {
+                margin-bottom: 4vw !important;
+                background: transparent;
+            }
+
+            .page-impact #main-content>.social-section>div:first-child {
+                width: 100vw !important;
+                height: 15.5vw !important;
+                right: -12vw !important;
+            }
+
+            .page-impact #main-content>.social-section>div:nth-child(2) {
+                width: 70vw !important;
+                height: 24vw !important;
+                left: -12vw !important;
+                top: 10vw !important;
+            }
+
+            .page-impact .social-section>.impact-shell>p {
+                margin-bottom: 6vw !important;
+            }
+
+            .page-impact .social-feature {
+                display: block;
+                position: relative;
+                min-height: 18vw;
+            }
+
+            .page-impact .social-title h3 {
+                margin: 0 0 .5vw;
+                font-size: 2.8vw;
+                line-height: 1.1;
+                font-weight: 400;
+            }
+
+            .page-impact .social-title p {
+                margin: 0;
+                min-height: 2vw;
+                font-size: 1.5vw !important;
+                line-height: 1.35;
+            }
+
+            .page-impact .social-cert {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 26.5vw;
+                height: 18vw;
+                min-height: 0;
+                background: #fff center / cover no-repeat;
+            }
+
+            .page-impact .social-awards {
+                position: relative;
+                display: block;
+                min-height: 8vw;
+                margin-top: 5vw;
+                padding: 0;
+            }
+
+            .page-impact .social-awards img {
+                display: inline-block;
+                width: auto;
+                height: 8vw;
+                max-width: none;
+                margin: .5vw;
+                object-fit: cover;
+            }
+
+            .page-impact .social-awards img:nth-of-type(1) {
+                width: 11.8vw;
+            }
+
+            .page-impact .social-awards img:nth-of-type(2) {
+                width: 10.5vw;
+            }
+
+            .page-impact .social-awards img:nth-of-type(3) {
+                width: 11.2vw;
+            }
+
+            .page-impact .social-awards img:nth-of-type(4) {
+                width: 14.7vw;
+            }
+
+            .page-impact .social-awards .award-button {
+                top: 1.25vw;
+                width: 4vw;
+                height: 6vw;
+            }
+
+            .page-impact .social-awards .award-button--next {
+                right: auto;
+                left: 74vw;
+                background: #003c62;
+            }
+
+            .page-impact .social-awards .award-button--prev {
+                right: auto;
+                left: 70vw;
+                background: #ddd;
+                color: #222;
+            }
+
+            .page-impact #main-content>.media-section {
+                width: 100%;
+                height: 37vw;
+                min-height: 0;
+                margin-top: 8vw;
+                padding: 0;
+                background: #0067a7;
+                overflow: hidden;
+            }
+
+            .page-impact .media-section__title {
+                left: 10vw;
+                top: -5vw;
+                color: #fff;
+                font-size: 2.5vw;
+                font-weight: 400;
+                line-height: 1.2;
+            }
+
+            .page-impact .media-section__list {
+                left: 10vw;
+                top: 12vw;
+                gap: 1.5vw;
+                font-size: 1.8vw;
+                line-height: 1.3;
+            }
+
+            .page-impact .media-section__image {
+                left: 30vw;
+                top: 3vw;
+                width: 67vw;
+                height: 35vw;
+                object-fit: cover;
+            }
+        }
+
+        @media (max-width: 800px) {
+
+            .page-impact #main-content>.academic-section,
+            .page-impact #main-content>.ip-section,
+            .page-impact #main-content>.social-section {
+                width: calc(100% - 36px);
+                max-width: none;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .page-impact #main-content>.ip-section,
+            .page-impact #main-content>.social-section {
+                padding: 2rem 0;
+                background: transparent;
+            }
+
+            .page-impact #main-content>.media-section {
+                height: 42rem;
+                min-height: 0;
+                margin-top: 4rem;
+            }
+        }
+
+        /* Layout parity for the four modules copied from Template-Impact.html. */
+        .page-impact #main-content>.industry02-section,
+        .page-impact #main-content>.media-section-new {
+            position: relative;
+            box-sizing: border-box;
+            overflow: visible;
+            z-index: 0;
+            isolation: isolate;
+        }
+
+        @media (min-width: 801px) {
+
+            .page-impact #main-content>.ip-section,
+            .page-impact #main-content>.social-section {
+                width: 82vw !important;
+                max-width: none !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                padding: 2vw 0 !important;
+                background: transparent !important;
+            }
+
+            .page-impact #main-content>.ip-section {
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
+            }
+
+            .page-impact #main-content>.ip-section>div:first-child {
+                width: 71vw !important;
+                height: 28.8vw !important;
+                left: 0 !important;
+                z-index: -1;
+            }
+
+            .page-impact #main-content>.ip-section>div:nth-child(2) {
+                width: 29vw !important;
+                height: 28.8vw !important;
+                right: 0 !important;
+                z-index: -1;
+            }
+
+            .page-impact #main-content>.ip-section>p,
+            .page-impact #main-content>.social-section>p {
+                margin-top: 0 !important;
+                color: #fff !important;
+                font-size: 2.5vw !important;
+                line-height: 1.2 !important;
+            }
+
+            .page-impact #main-content>.ip-section>p {
+                margin-bottom: 2vw !important;
+            }
+
+            .page-impact .ip-section .ip-grid {
+                width: 100% !important;
+                grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+                grid-auto-rows: 1fr;
+                aspect-ratio: 4 / 2 !important;
+                background: #2a2a2a !important;
+            }
+
+            .page-impact .ip-section .ip-item {
+                min-width: 0;
+                aspect-ratio: 1 / 1 !important;
+                padding: 0 !important;
+                font-size: 1.2vw !important;
+            }
+
+            .page-impact .ip-section .ip-item h3 {
+                margin: 0 0 .5vw !important;
+                padding-left: 2vw !important;
+                padding-right: 2vw !important;
+                font-size: 1.5em !important;
+                line-height: 1.2 !important;
+            }
+
+            .page-impact .ip-section .ip-item p {
+                margin: .8vw 0 0 !important;
+                padding-left: 2vw !important;
+                padding-right: 2vw !important;
+                font-size: 1.1em !important;
+                line-height: 1.35 !important;
+            }
+
+            .page-impact .ip-section .ip-china p {
+                margin-left: -1.1vw !important;
+            }
+
+            .page-impact .ip-section .ip-item span {
+                margin-top: 5vw !important;
+                min-height: 5vw;
+                padding-left: 2vw !important;
+                font-size: 2.5em !important;
+                line-height: 1.1;
+            }
+
+            .page-impact #main-content>.social-section {
+                margin-bottom: 4vw !important;
+            }
+
+            .page-impact #main-content>.social-section>div:first-child {
+                width: 100vw !important;
+                height: 15.5vw !important;
+                right: -12vw !important;
+                z-index: -1;
+            }
+
+            .page-impact #main-content>.social-section>div:nth-child(2) {
+                width: 70vw !important;
+                height: 24vw !important;
+                left: -12vw !important;
+                top: 10vw !important;
+                z-index: -1;
+            }
+
+            .page-impact #main-content>.social-section>p {
+                margin-bottom: 6vw !important;
+            }
+
+            .page-impact .social-title h2 {
+                width: 50vw;
+                min-height: 5vw;
+                margin: 0 0 .5vw !important;
+                font-size: 1.65vw !important;
+                line-height: 1.2;
+                font-weight: 400;
+            }
+
+            .page-impact .social-title p {
+                width: 55vw;
+                margin-top: 2vw !important;
+                min-height: 4vw !important;
+                font-size: 1.25vw !important;
+                line-height: 1.35;
+            }
+
+            .page-impact .social-cert {
+                position: absolute;
+                right: 0;
+                top: 6vw;
+                width: 26.5vw;
+                height: 18vw;
+                min-height: 0;
+            }
+
+            .page-impact .social-cert>div {
+                position: absolute !important;
+                inset: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                right: auto !important;
+                top: auto !important;
+            }
+
+            .page-impact .social-awards {
+                position: relative !important;
+                display: block !important;
+                min-height: 8vw;
+                margin-top: 5vw !important;
+                padding: 0 !important;
+            }
+
+            .page-impact .social-awards img {
+                display: inline-block;
+                height: 8vw !important;
+                max-width: none !important;
+                margin: .5vw !important;
+            }
+
+            .page-impact .social-awards img:nth-of-type(1) {
+                width: 11.8vw !important;
+            }
+
+            .page-impact .social-awards img:nth-of-type(2) {
+                width: 10.5vw !important;
+            }
+
+            .page-impact .social-awards img:nth-of-type(3) {
+                width: 11.2vw !important;
+            }
+
+            .page-impact .social-awards img:nth-of-type(4) {
+                width: 14.7vw !important;
+            }
+
+            .page-impact .social-awards .btn-right,
+            .page-impact .social-awards .btn-left {
+                top: 1.25vw !important;
+                width: 4vw !important;
+                height: 6vw !important;
+                line-height: 6vw !important;
+            }
+
+            .page-impact .social-awards .btn-right {
+                left: 74vw !important;
+            }
+
+            .page-impact .social-awards .btn-left {
+                left: 70vw !important;
+            }
+
+            .page-impact #main-content>.media-section-new {
+                width: 100% !important;
+                height: 37vw !important;
+                min-height: 0 !important;
+                margin-top: 8vw !important;
+                padding: 0 !important;
+                background: #0067a7 !important;
+                overflow: hidden !important;
+            }
+
+            .page-impact .media-section-new .media-title {
+                left: 10vw !important;
+                top: -5vw !important;
+            }
+
+            .page-impact .media-section-new .media-title h2 {
+                margin: 0 !important;
+                color: #0b62b3 !important;
+                font-size: 2.5vw !important;
+                font-weight: 400 !important;
+                line-height: 1.2;
+            }
+
+            .page-impact .media-section-new .media-vertical-texts {
+                position: absolute !important;
+                left: 8vw !important;
+                top: 8vw !important;
+                gap: 1.5vw !important;
+                width: 21vw !important;
+            }
+
+            .page-impact .media-section-new .media-vertical-texts p {
+                margin: 0 !important;
+                font-size: 1.35vw !important;
+                line-height: 1.4;
+            }
+
+            .page-impact .media-section-new .media-images-row {
+                left: 30vw !important;
+                top: 3vw !important;
+            }
+
+            .page-impact .media-section-new .media-images-row img {
+                left: 1.2vw !important;
+                top: -1.2vw !important;
+                width: 67vw !important;
+                height: 35vw !important;
+                object-fit: cover;
+            }
+        }
+
+        @media (max-width: 800px) {
+
+            .page-impact #main-content>.ip-section,
+            .page-impact #main-content>.social-section {
+                width: calc(100% - 36px) !important;
+                max-width: none !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                padding: 2rem 0 !important;
+            }
+
+            .page-impact #main-content>.ip-section>div:first-child,
+            .page-impact #main-content>.ip-section>div:nth-child(2),
+            .page-impact #main-content>.social-section>div:first-child,
+            .page-impact #main-content>.social-section>div:nth-child(2) {
+                z-index: -1;
+            }
+
+            .page-impact .ip-section .ip-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+                aspect-ratio: auto !important;
+            }
+
+            .page-impact .ip-section .ip-item {
+                aspect-ratio: 1 / 1 !important;
+            }
+
+            .page-impact .social-feature {
+                grid-template-columns: 1fr !important;
+            }
+
+            .page-impact .social-cert {
+                position: relative !important;
+                inset: auto !important;
+                width: 100% !important;
+                height: 16rem !important;
+            }
+
+            .page-impact .social-cert>div {
+                position: absolute !important;
+                inset: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+            }
+
+            .page-impact .social-awards {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                min-height: 0 !important;
+                margin-top: 2rem !important;
+            }
+
+            .page-impact .social-awards .btn-right,
+            .page-impact .social-awards .btn-left {
+                position: relative !important;
+                left: auto !important;
+                top: auto !important;
+            }
+
+            .page-impact #main-content>.media-section-new {
+                height: 42rem !important;
+                min-height: 0 !important;
+                margin-top: 4rem !important;
+            }
+
+            .page-impact .media-section-new .media-title {
+                left: 18px !important;
+                top: 2rem !important;
+            }
+
+            .page-impact .media-section-new .media-title h2 {
+                font-size: 2rem !important;
+            }
+
+            .page-impact .media-section-new .media-vertical-texts {
+                left: 18px !important;
+                top: 8rem !important;
+                width: calc(100% - 36px) !important;
+                gap: 1rem !important;
+            }
+
+            .page-impact .media-section-new .media-vertical-texts p {
+                font-size: 1.1rem !important;
+            }
+
+            .page-impact .media-section-new .media-images-row {
+                position: absolute !important;
+                left: 18px !important;
+                top: 19rem !important;
+                width: calc(100% - 36px) !important;
+            }
+
+            .page-impact .media-section-new .media-images-row img {
+                left: 0 !important;
+                top: 0 !important;
+                width: 100% !important;
+                height: 20rem !important;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .page-impact .ip-section .ip-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .page-impact .social-awards img {
+                max-width: calc(50% - 1rem) !important;
+                height: auto !important;
+            }
+        }
+
+        /* Match the copied Template-Impact modules while keeping the shared
+         * page root at 16px: source rem measurements become viewport units. */
+        @media (min-width: 801px) {
+
+            /* The source template lets the IP color planes use the viewport as
+             * their containing block. The generic page rule above made every
+             * industry section a positioned/isolation context, shifting those
+             * planes inward by the 82vw shell width. Keep the media module
+             * positioned, but restore the template behavior for these two. */
+            .page-impact #main-content>.ip-section {
+                position: static !important;
+                isolation: auto !important;
+                z-index: auto !important;
+            }
+
+            .page-impact #main-content>.social-section {
+                position: relative !important;
+                isolation: auto !important;
+                z-index: auto !important;
+            }
+
+            .page-impact #main-content>.ip-section>div:first-child,
+            .page-impact #main-content>.ip-section>div:nth-child(2),
+            .page-impact #main-content>.social-section>div:first-child,
+            .page-impact #main-content>.social-section>div:nth-child(2) {
+                z-index: -1 !important;
+            }
+
+            /* In this page the IP section is intentionally not a stacking
+             * context. Its viewport-wide color planes must sit above the
+             * page background, while the shell content stays above the planes. */
+            .page-impact #main-content>.ip-section>div:first-child,
+            .page-impact #main-content>.ip-section>div:nth-child(2) {
+                z-index: 0 !important;
+            }
+
+            .page-impact #main-content>.ip-section>p,
+            .page-impact #main-content>.ip-section>.ip-grid {
+                position: relative;
+                z-index: 1;
+            }
+
+            /* The social module has the same two-plane composition. Because
+             * this page has a different body/background stacking environment
+             * from industry02.htm, keep the planes above the page background
+             * and raise each real content node above them. */
+            .page-impact #main-content>.social-section>div:first-child,
+            .page-impact #main-content>.social-section>div:nth-child(2) {
+                z-index: 0 !important;
+            }
+
+            .page-impact #main-content>.social-section>p,
+            .page-impact #main-content>.social-section>.social-title,
+            .page-impact #main-content>.social-section>.social-awards {
+                position: relative;
+                z-index: 1;
+            }
+
+            .page-impact #main-content>.social-section>.social-cert>div {
+                position: absolute !important;
+                inset: auto !important;
+                right: 0 !important;
+                top: 6vw !important;
+                width: 26.5vw !important;
+                height: 18vw !important;
+                z-index: 1 !important;
+            }
+
+            .page-impact #main-content>.ip-section>p,
+            .page-impact #main-content>.social-section>p {
+                margin-top: 2.5vw !important;
+                line-height: normal !important;
+            }
+
+            .page-impact #main-content>.ip-section>p {
+                margin-bottom: 2.5vw !important;
+            }
+
+            .page-impact .social-title h2 {
+                margin-top: .83em !important;
+            }
+
+            .page-impact .social-title p {
+                margin: 2vw 0 1.25vw !important;
+            }
+
+            .page-impact .social-cert {
+                position: static !important;
+                width: auto !important;
+                height: 0 !important;
+                min-height: 0 !important;
+            }
+
+            .page-impact .social-awards {
+                min-height: 0 !important;
+                line-height: normal !important;
+                height: 9.234vw !important;
+            }
+
+            .page-impact .ip-section .ip-item h3 {
+                margin: 1em 0 0 !important;
+                padding: 0 2vw !important;
+                font-size: 1em !important;
+                line-height: normal !important;
+            }
+
+            .page-impact .ip-section .ip-grid {
+                background: var(--theme-color2) !important;
+            }
+
+            .page-impact .ip-section .ip-item p {
+                padding-left: 2vw !important;
+                padding-right: 2vw !important;
+                line-height: normal !important;
+            }
+
+            .page-impact .ip-section .ip-award p,
+            .page-impact .ip-section .ip-china p {
+                font-size: .9em !important;
+            }
+
+            .page-impact #main-content>.media-section-new {
+                height: 39vw !important;
+                padding-bottom: 2vw !important;
+                background: var(--theme-color1) !important;
+            }
+
+            .page-impact .media-section-new .media-title {
+                position: absolute !important;
+                left: 10vw !important;
+                top: -5vw !important;
+                z-index: 2;
+            }
+
+            .page-impact .media-section-new .media-title h2 {
+                margin: 0 !important;
+                font-size: 2.5vw !important;
+                font-weight: 400 !important;
+                line-height: normal !important;
+            }
+
+            .page-impact .media-section-new .media-vertical-texts {
+                position: absolute !important;
+                left: 8vw !important;
+                top: 8vw !important;
+                width: 21vw !important;
+                gap: 1.5vw !important;
+            }
+
+            .page-impact .media-section-new .media-vertical-texts p {
+                margin: 0 !important;
+                font-size: 1.35vw !important;
+                line-height: 1.4 !important;
+            }
+
+            .page-impact .media-section-new .media-images-row {
+                position: absolute !important;
+                left: 30vw !important;
+                top: 3vw !important;
+                width: auto !important;
+                height: auto !important;
+            }
+
+            .page-impact .media-section-new .media-images-row img {
+                position: absolute !important;
+                left: 1.2vw !important;
+                top: -1.2vw !important;
+                width: 67vw !important;
+                height: 35vw !important;
+                max-width: none !important;
+                object-fit: cover !important;
+            }
+        }

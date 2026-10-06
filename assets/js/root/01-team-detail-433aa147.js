@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.addEventListener('click', function () {
       btns.forEach(function (b, i) {
         b.classList.toggle('active', i === idx);
-        panels[i].style.display = (i === idx) ? 'block' : 'none';
+        panels[i].classList.toggle('is-active', i === idx);
       });
     });
   });

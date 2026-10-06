@@ -1,0 +1,13 @@
+/* Shared Engage Overview callout background. URLs are relative to this file. */
+.paragraph--type-figure-callout-section {
+  background-color: #FFFFFF !important;
+  background-image: url('../../pic/root/media/r010.jpg') !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  background-position: center top !important;
+  z-index: auto;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+}

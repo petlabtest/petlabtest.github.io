@@ -1,0 +1,73 @@
+.petlab-research-Tech-Crystals-frontier .p-project-list__content .project-list__left {
+  flex: 0 0 480px !important;
+  max-width: 480px !important;
+  width: 480px !important;
+}
+
+.petlab-research-Tech-Crystals-frontier .p-project-list__content .project-list__image {
+  width: 480px !important;
+  height: 366px !important;
+  background: #ffffff !important;
+}
+
+.petlab-research-Tech-Crystals-frontier .p-project-list__content .project-list__right {
+  width: calc(100% - 480px) !important;
+  top: 0 !important;
+  margin-left: 30px !important;
+  flex: 1 !important;
+}
+
+.petlab-research-Tech-Crystals-frontier .p-project-list__content .node--type-project.node--view-mode-rdgroup {
+  display: flex !important;
+  align-items: flex-start !important;
+}
+
+.petlab-research-Tech-Crystals-frontier .p-project-list__content .project-list__title {
+  font-size: 1.5rem !important;
+  margin-top: 0 !important;
+}
+
+.petlab-research-Tech-Crystals-frontier .p-project-list__content .project-list__summary {
+  font-size: 1.125rem !important;
+  line-height: 1.8 !important;
+}
+
+@media (max-width: 1024px) {
+  .petlab-research-Tech-Crystals-frontier .p-project-list__content .project-list__left {
+    flex-basis: 400px !important;
+    max-width: 400px !important;
+    width: 400px !important;
+  }
+
+  .petlab-research-Tech-Crystals-frontier .p-project-list__content .project-list__image {
+    width: 400px !important;
+    height: 305px !important;
+  }
+
+  .petlab-research-Tech-Crystals-frontier .p-project-list__content .project-list__right {
+    width: calc(100% - 400px) !important;
+  }
+}
+
+@media (max-width: 699px) {
+  .petlab-research-Tech-Crystals-frontier .p-project-list__content .node--type-project.node--view-mode-rdgroup {
+    display: block !important;
+  }
+
+  .petlab-research-Tech-Crystals-frontier .p-project-list__content .project-list__left {
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .petlab-research-Tech-Crystals-frontier .p-project-list__content .project-list__image {
+    width: min(100%, 480px) !important;
+    height: 305px !important;
+  }
+
+  .petlab-research-Tech-Crystals-frontier .p-project-list__content .project-list__right {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 18px !important;
+  }
+}

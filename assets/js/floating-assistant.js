@@ -51,7 +51,7 @@
   var style = document.createElement('style');
   style.setAttribute('data-petlab-floating-assistant', '');
   style.textContent = [
-    '.petlab-assistant{--petlab-scan-y:10px;position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:2147482000;width:410px;height:400px;pointer-events:none;isolation:isolate;font:600 14px/1.2 Arial,"Microsoft YaHei",sans-serif}',
+    '.petlab-assistant{--petlab-scan-y:10px;position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:2147482000;width:410px;height:400px;pointer-events:none;isolation:isolate;font:600 14px/1.2 var(--font-family-sans)}',
     '.petlab-assistant,.petlab-assistant *{box-sizing:border-box}',
     '.petlab-assistant__trigger{position:absolute;right:0;bottom:0;width:168px;height:178px;border:0;padding:0;background:transparent;cursor:pointer;pointer-events:auto;-webkit-tap-highlight-color:transparent}',
     '.petlab-assistant__detector-ring{position:absolute;left:-8px;top:var(--petlab-scan-y);width:184px;height:80px;overflow:visible;pointer-events:none;transition:top .12s linear}',
@@ -72,21 +72,21 @@
     '.petlab-assistant__close:hover{background:#edf3f7;color:#00305c}',
     '.petlab-assistant__quote-row{display:grid;grid-template-columns:76px minmax(0,1fr);gap:18px;align-items:center;padding:4px 9px 20px 0}',
     '.petlab-assistant__portrait{display:block!important;width:76px!important;height:94px!important;max-width:none!important;object-fit:cover;object-position:50% 18%;border-radius:12px;margin:0!important;border:1px solid #e1e8ed}',
-    '.petlab-assistant__eyebrow{display:block;color:#637e8d;font:600 10px/1.5 Arial,"Microsoft YaHei",sans-serif;letter-spacing:1.4px;margin:0 0 8px}',
-    '.petlab-assistant__quote{padding:0!important;margin:0 0 12px!important;border:0!important;background:none!important;color:#00305c!important;font:500 19px/1.55 Georgia,"Songti SC","SimSun",serif!important;quotes:none}',
+    '.petlab-assistant__eyebrow{display:block;color:#637e8d;font:600 10px/1.5 var(--font-family-sans);letter-spacing:1.4px;margin:0 0 8px}',
+    '.petlab-assistant__quote{padding:0!important;margin:0 0 12px!important;border:0!important;background:none!important;color:#00305c!important;font:500 19px/1.55 Georgia,"DPET Noto Sans SC",serif!important;quotes:none}',
     '.petlab-assistant__quote::before,.petlab-assistant__quote::after{content:none!important}',
-    '.petlab-assistant__scientist{display:block;color:#00305c;font:600 12px/1.5 Arial,"Microsoft YaHei",sans-serif}',
+    '.petlab-assistant__scientist{display:block;color:#00305c;font:600 12px/1.5 var(--font-family-sans)}',
     '.petlab-assistant__years{display:block;margin-top:3px;color:#718390;font:400 11px/1.5 Arial,sans-serif;letter-spacing:1px}',
     '.petlab-assistant__links{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;padding-top:18px;border-top:1px solid #e3eaf0}',
     '.petlab-assistant__links::before{content:"";position:absolute;top:-2px;left:0;width:28px;height:3px;background:#f45a2b;border-radius:2px}',
-    '.petlab-assistant__action{all:unset;box-sizing:border-box!important;display:flex!important;align-items:center!important;justify-content:center!important;min-width:0!important;min-height:46px!important;padding:9px 5px!important;border-radius:8px!important;background:#eef4f8!important;color:#00305c!important;cursor:pointer!important;font:600 12px/1.4 Arial,"Microsoft YaHei",sans-serif!important;text-align:center!important;text-decoration:none!important;transition:color .18s ease,background .18s ease!important}',
+    '.petlab-assistant__action{all:unset;box-sizing:border-box!important;display:flex!important;align-items:center!important;justify-content:center!important;min-width:0!important;min-height:46px!important;padding:9px 5px!important;border-radius:8px!important;background:#eef4f8!important;color:#00305c!important;cursor:pointer!important;font:600 12px/1.4 var(--font-family-sans)!important;text-align:center!important;text-decoration:none!important;transition:color .18s ease,background .18s ease!important}',
     '.petlab-assistant__action::before,.petlab-assistant__action::after{content:none!important}',
     '.petlab-assistant__action:hover,.petlab-assistant__action:focus-visible{background:#00305c!important;color:#fff!important}',
     '.petlab-assistant__action:focus-visible,.petlab-assistant__close:focus-visible{outline:2px solid #f45a2b!important;outline-offset:3px!important}',
     '.petlab-assistant.is-open .petlab-assistant__mascot{animation-name:petlab-assistant-float,petlab-assistant-greet;animation-duration:3.4s,.55s;animation-iteration-count:infinite,1}',
     '@keyframes petlab-assistant-float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-2px) rotate(-.6deg)}}',
     '@keyframes petlab-assistant-greet{0%,100%{rotate:0deg}35%{rotate:-5deg}70%{rotate:3deg}}',
-    '@media(max-width:700px){.petlab-assistant{right:max(10px,env(safe-area-inset-right));bottom:max(10px,env(safe-area-inset-bottom));width:310px;height:340px}.petlab-assistant__trigger{width:132px;height:142px}.petlab-assistant__detector-ring{left:-7px;width:146px;height:63.48px}.petlab-assistant__mascot{left:20px;bottom:14px;width:94px;height:94px}.petlab-assistant__hint{display:none}.petlab-assistant__bubble{right:4px;bottom:150px;width:min(420px,calc(100vw - 28px))}.petlab-assistant__bubble-inner{padding:24px 14px 16px;max-height:calc(100vh - 190px);max-height:calc(100dvh - 190px)}.petlab-assistant__quote-row{grid-template-columns:60px minmax(0,1fr);gap:12px}.petlab-assistant__portrait{width:60px!important;height:80px!important}.petlab-assistant__quote{font-size:17px!important}.petlab-assistant__links{gap:5px}.petlab-assistant__action{font-size:11px!important;padding:8px 3px!important}}',
+    '@media(max-width:700px){.petlab-assistant{position:relative;right:auto;bottom:auto;margin:0 10px 16px auto;width:90px;height:110px}.petlab-assistant__trigger{width:56px;height:60px}.petlab-assistant__detector-ring{left:-3px;width:62px;height:26.97px}.petlab-assistant__mascot{left:8px;bottom:8px;width:40px;height:40px}.petlab-assistant__hint{display:none}.petlab-assistant__bubble{right:4px;bottom:68px;width:min(420px,calc(100vw - 28px))}.petlab-assistant__bubble-inner{padding:24px 14px 16px;max-height:calc(100vh - 190px);max-height:calc(100dvh - 190px)}.petlab-assistant__quote-row{grid-template-columns:60px minmax(0,1fr);gap:12px}.petlab-assistant__portrait{width:60px!important;height:80px!important}.petlab-assistant__quote{font-size:17px!important}.petlab-assistant__links{gap:5px}.petlab-assistant__action{font-size:11px!important;padding:8px 3px!important}}',
     '@media(prefers-reduced-motion:reduce){.petlab-assistant__mascot{animation:none!important;transition:none}.petlab-assistant__bubble,.petlab-assistant__action,.petlab-assistant__detector-ring{transition:none!important}}',
     '@media print{.petlab-assistant{display:none!important}}'
   ].join('');

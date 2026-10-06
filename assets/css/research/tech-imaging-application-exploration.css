@@ -1,0 +1,120 @@
+
+    /* Match the Application Exploration geometry used on Research-Tech-Chips. */
+    .page-node-type-rdgroup .application-exploration {
+      width: 1040px !important;
+      max-width: calc(100% - 140px) !important;
+      margin: 50px auto 90px !important;
+    }
+
+    .page-node-type-rdgroup .application-exploration>.p-project-carousel__header {
+      width: calc(100% - 60px) !important;
+      margin: 0 30px 50px !important;
+    }
+
+    .page-node-type-rdgroup .application-exploration>.paragraph--type-wysiwyg {
+      width: calc(100% - 60px) !important;
+      margin: 0 30px 30px !important;
+    }
+
+    .page-node-type-rdgroup .application-exploration>.p-project-carousel__content,
+    .page-node-type-rdgroup .application-exploration>.p-project-carousel__content .view-content {
+      width: 100% !important;
+      max-width: none !important;
+    }
+
+    .page-node-type-rdgroup .application-exploration>.p-project-carousel__content .view-content {
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+
+    .page-node-type-rdgroup .application-exploration .project-carousel__title,
+    .page-node-type-rdgroup .application-exploration .project-carousel__title a {
+      line-height: 1.5 !important;
+    }
+
+    .page-node-type-rdgroup .application-exploration .project-carousel__image,
+    .page-node-type-rdgroup .application-exploration .project-carousel__image picture {
+      height: 240px !important;
+      aspect-ratio: auto !important;
+      background: #fff !important;
+    }
+
+    .page-node-type-rdgroup .application-exploration .project-carousel__image img {
+      object-fit: contain !important;
+      background: #fff !important;
+    }
+
+    /* End-to-end Data Correction: two full-width rows with intrinsic image ratios. */
+    .page-node-type-rdgroup .data-correction>.p-project-carousel__content {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 32px !important;
+      width: 100% !important;
+    }
+
+    .page-node-type-rdgroup .data-correction>.p-project-carousel__content>.views-element-container,
+    .page-node-type-rdgroup .data-correction>.p-project-carousel__content>.views-element-container .view,
+    .page-node-type-rdgroup .data-correction>.p-project-carousel__content>.views-element-container .view-content,
+    .page-node-type-rdgroup .data-correction>.p-project-carousel__content .views-row,
+    .page-node-type-rdgroup .data-correction>.p-project-carousel__content .node--view-mode-carousel,
+    .page-node-type-rdgroup .data-correction>.p-project-carousel__content .project-carousel__image-wrapper {
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0 !important;
+    }
+
+    .page-node-type-rdgroup .data-correction>.p-project-carousel__content>.views-element-container .view-content {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 0 !important;
+    }
+
+    .page-node-type-rdgroup .data-correction .project-carousel__image,
+    .page-node-type-rdgroup .data-correction .project-carousel__image picture {
+      height: auto !important;
+      min-height: 0 !important;
+      aspect-ratio: auto !important;
+      overflow: visible !important;
+      background: #fff !important;
+    }
+
+    .page-node-type-rdgroup .data-correction .project-carousel__image img {
+      display: block !important;
+      width: 100% !important;
+      height: auto !important;
+      aspect-ratio: auto !important;
+      object-fit: contain !important;
+      background: #fff !important;
+    }
+
+    @media (max-width: 1100px) {
+      .page-node-type-rdgroup .application-exploration {
+        width: calc(100% - 60px) !important;
+        max-width: none !important;
+      }
+
+      .page-node-type-rdgroup .application-exploration>.p-project-carousel__content .view-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+    }
+
+    @media (max-width: 699px) {
+      .page-node-type-rdgroup .application-exploration {
+        width: calc(100% - 32px) !important;
+        margin: 48px auto 70px !important;
+      }
+
+      .page-node-type-rdgroup .application-exploration>.p-project-carousel__header,
+      .page-node-type-rdgroup .application-exploration>.paragraph--type-wysiwyg {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      .page-node-type-rdgroup .application-exploration>.p-project-carousel__content .view-content {
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+      }
+    }
+
+
+    

@@ -13,3 +13,25 @@ body.engage-detail-page #block-petlab-theme-page-title > * {
 body.engage-detail-page #block-petlab-theme-page-title::after {
   z-index: 0;
 }
+
+/* Shared title-banner spacing for all Engage detail-page forms. */
+@media (min-width: 700px) and (max-width: 1024px) {
+  body.engage-detail-page #block-petlab-theme-page-title {
+    padding-top: 85px !important;
+    padding-bottom: 190px !important;
+  }
+
+  body.engage-detail-page #block-petlab-theme-page-title h1.page-title {
+    transform: translateY(24px);
+  }
+}
+
+@media (min-width: 1025px) {
+  body.engage-detail-page #block-petlab-theme-page-title {
+    padding-bottom: 260px !important;
+  }
+
+  body.engage-detail-page #block-petlab-theme-page-title h1.page-title {
+    transform: translateY(30px);
+  }
+}

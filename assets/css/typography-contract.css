@@ -1,0 +1,137 @@
+/*
+ * Digital PET Laboratory typography contract.
+ *
+ * This file owns font resources and shared font-family tokens only. Page and
+ * component sizes remain in their template stylesheets so they can be
+ * migrated and regression-tested one family at a time.
+ */
+
+@font-face {
+  font-family: "Poppins Local";
+  src: url("../fonts/root/media/r024.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins Local";
+  src: url("../fonts/root/media/r025.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins Local";
+  src: url("../fonts/root/media/r026.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DPET Noto Sans SC";
+  src: url("../fonts/noto-sans-sc/NotoSansSC-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 500;
+  font-display: swap;
+}
+
+/* Archived themes still name this family directly. */
+@font-face {
+  font-family: "Noto Sans SC";
+  src: url("../fonts/noto-sans-sc/NotoSansSC-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans SC";
+  src: url("../fonts/noto-sans-sc/NotoSansSC-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../fonts/root/media/r027.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Preserve deterministic rendering for legacy Cardo references. */
+@font-face {
+  font-family: "Cardo";
+  src: url("../fonts/root/media/r026.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DPET Noto Sans SC";
+  src: url("../fonts/noto-sans-sc/NotoSansSC-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600 900;
+  font-display: swap;
+}
+
+:root {
+  --font-family-latin: "Poppins Local", "Poppins";
+  --font-family-cjk: "DPET Noto Sans SC";
+  --font-family-sans: var(--font-family-latin), var(--font-family-cjk), sans-serif;
+  --font-family-serif: Georgia, "Times New Roman", serif;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
+/*
+ * Give Chinese documents one deterministic inherited stack immediately.
+ * More specific legacy rules are intentionally left intact for the About and
+ * News migration phases; this baseline does not use !important.
+ */
+html:lang(zh) body,
+html:lang(zh) button,
+html:lang(zh) input,
+html:lang(zh) select,
+html:lang(zh) textarea {
+  font-family: var(--font-family-sans);
+}
+
+/* About statistics and Impact templates retain nested legacy Poppins/Arial
+   declarations on otherwise semantic text. Keep these roles deterministic. */
+:is(body.page-about, body.page-about-mission, body.page-impact) .dpet-stat__label {
+  font-family: var(--font-family-sans) !important;
+}
+
+body.page-impact :where(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  li,
+  button,
+  input,
+  select,
+  textarea,
+  figcaption,
+  blockquote,
+  dt,
+  dd,
+  th,
+  td
+) {
+  font-family: var(--font-family-sans) !important;
+}

@@ -1,0 +1,53 @@
+/* Shared active-tab line and dot treatment across Research area pages. */
+.p-rdgroups__tablist li {
+  font-size: 24px !important;
+  line-height: 1.5 !important;
+}
+
+.p-rdgroups__tablist .position {
+  width: auto !important;
+  display: inline-block !important;
+  background: transparent !important;
+  position: relative;
+}
+
+.p-rdgroups__tablist .contain::after,
+.p-rdgroups__tablist .contain::before {
+  display: none !important;
+}
+
+.p-rdgroups__tablist li[aria-selected="true"] .contain {
+  position: relative;
+}
+
+.p-rdgroups__tablist li[aria-selected="true"] .contain::after {
+  content: "";
+  display: block !important;
+  position: absolute;
+  top: 50%;
+  right: 9px;
+  left: var(--line-left, 100%);
+  width: auto !important;
+  height: 1px;
+  background: #000;
+  transform: translateY(-50%);
+}
+
+.p-rdgroups__tablist li[aria-selected="true"] .contain::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  top: 50% !important;
+  right: 0 !important;
+  left: auto !important;
+  bottom: auto !important;
+  width: 9px !important;
+  height: 9px !important;
+  border-radius: 50% !important;
+  background: #F45A2B !important;
+  transform: translateY(-50%) !important;
+  z-index: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+}

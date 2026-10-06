@@ -1,0 +1,72 @@
+/* Research Tech Chips - application and exploration panels. */
+.page-node-type-rdgroup .petlab-research-Tech-Chips-application .project-list__title {
+  font-size: 32px !important;
+}
+
+.page-node-type-rdgroup .petlab-research-Tech-Chips-application .project-list__summary {
+  font-size: 19px !important;
+  line-height: 1.9 !important;
+}
+
+@media (max-width: 699px) {
+  .page-node-type-rdgroup .petlab-research-Tech-Chips-application .project-list__title {
+    font-size: 26px !important;
+  }
+
+  .page-node-type-rdgroup .petlab-research-Tech-Chips-application .project-list__summary {
+    font-size: 17px !important;
+  }
+}
+
+.page-node-type-rdgroup .petlab-research-Tech-Chips-exploration .project-carousel__title {
+  font-size: 20px !important;
+}
+
+@media (max-width: 699px) {
+  .page-node-type-rdgroup .petlab-research-Tech-Chips-exploration .project-carousel__title {
+    font-size: 18px !important;
+  }
+}
+
+/* Research Tech Detectors - frontier image and scenarios carousel. */
+.page-node-type-rdgroup .petlab-research-Tech-Detectors-frontier ~ .paragraph--type-wysiwyg .wysiwyg-image--floated {
+  margin-top: -30px !important;
+}
+
+@media (max-width: 699px) {
+  .page-node-type-rdgroup .petlab-research-Tech-Detectors-frontier ~ .paragraph--type-wysiwyg .wysiwyg-image--floated {
+    margin-top: 0 !important;
+  }
+}
+
+.page-node-type-rdgroup .petlab-research-Tech-Detectors-scenarios .project-carousel__title {
+  font-size: clamp(24px, 2vw, 34px) !important;
+}
+
+@media (max-width: 699px) {
+  .page-node-type-rdgroup .petlab-research-Tech-Detectors-scenarios .project-carousel__title {
+    font-size: clamp(20px, 5vw, 26px) !important;
+  }
+}
+
+/* Research Tech Imaging - sampling and correction carousel titles. */
+.page-node-type-rdgroup .petlab-research-Tech-Imaging-sampling .project-carousel__title,
+.page-node-type-rdgroup .petlab-research-Tech-Imaging-correction .project-carousel__title {
+  font-size: 20px !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 1024px) {
+  .page-node-type-rdgroup .petlab-research-Tech-Imaging-sampling .project-carousel__title,
+  .page-node-type-rdgroup .petlab-research-Tech-Imaging-correction .project-carousel__title {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 699px) {
+  .page-node-type-rdgroup .petlab-research-Tech-Imaging-sampling .project-carousel__title,
+  .page-node-type-rdgroup .petlab-research-Tech-Imaging-correction .project-carousel__title {
+    font-size: 16px !important;
+    white-space: normal !important;
+  }
+}

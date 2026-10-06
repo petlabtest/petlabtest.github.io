@@ -1,0 +1,219 @@
+/* Shared CTA geometry for English Research subdetails and Tech detail pages. */
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate {
+      position: relative;
+      z-index: 2;
+      clear: both;
+      overflow: hidden;
+      width: 100vw;
+      margin: 20px 0 0 calc(50% - 50vw);
+      padding: 0;
+      background: transparent !important;
+      color: #000;
+      font-family: "Poppins", Arial, sans-serif;
+      isolation: isolate;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate::after {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      left: auto;
+      width: 150%;
+      height: 100%;
+      content: "";
+      background: #e2e2e2;
+      transform: rotate(-7.5deg);
+      transform-origin: 100% 0;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__content {
+      position: relative;
+      z-index: 1;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 230px 30px 80px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__content,
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__header,
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__body,
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta {
+      background: transparent !important;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__header {
+      margin: 0 0 18px;
+      color: #000;
+      font-family: "Poppins", Arial, sans-serif;
+      font-size: 37px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__body {
+      margin-bottom: 18px;
+      color: #000;
+      font-family: "Poppins", Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__body p {
+      margin: 0 0 1.2em;
+      color: #000;
+      font: inherit;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta {
+      margin-bottom: 20px;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      border: 0;
+      background: transparent !important;
+      color: #000 !important;
+      cursor: pointer;
+      font-family: "Poppins", Arial, sans-serif;
+      font-weight: 600;
+      line-height: 1.5;
+      text-decoration: none !important;
+      text-transform: uppercase;
+      transition: padding .2s ease;
+    }
+
+    /* The page's generic region-content link rules add a gradient underline on
+       hover.  The fullwidth CTA has its own bar-and-arrow treatment, so clear
+       those link decorations in every interactive state. */
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button:link,
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button:visited,
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button:hover,
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button:focus,
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button:active {
+      background: none !important;
+      background-image: none !important;
+      border: 0 !important;
+      box-shadow: none !important;
+      color: #000 !important;
+      outline: none;
+      text-decoration: none !important;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button::before {
+      position: absolute;
+      top: 48%;
+      left: 0;
+      width: 4px;
+      height: 74%;
+      content: "";
+      background: #f45a2b;
+      transform: translateY(-50%);
+      transition: width .2s ease;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button .last-word {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button .last-word::after {
+      display: inline-block;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button:hover::before {
+      width: 20px;
+    }
+
+    @media (min-width: 1025px) {
+      .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__content {
+        padding: 230px 50px 80px 100px;
+      }
+
+      .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__header {
+        font-size: 50px;
+        letter-spacing: 1.3px;
+      }
+
+      .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__body {
+        margin-bottom: 46px;
+        line-height: 1.8;
+      }
+
+      .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta {
+        margin-bottom: 40px;
+      }
+    }
+
+    @media (max-width: 699px) {
+      .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__content {
+        padding: 150px 20px 60px;
+      }
+
+      .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__header {
+        font-size: 30px;
+      }
+
+      .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__body,
+      .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button {
+        font-size: 16px;
+      }
+    }
+
+    /* Match the CTA treatment used by the working facility cards.  The shared
+       stylesheet uses the local icomoon glyph for the arrow (rather than a
+       border-drawn arrow), with the same sizing and hover offset. */
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button {
+      padding: 0 20px;
+      font-size: 16px;
+      letter-spacing: normal;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button .last-word::after {
+      width: auto;
+      height: auto;
+      margin: 0 0 0 10px;
+      border: 0;
+      font-family: "icomoon" !important;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      content: "\e905";
+      position: relative;
+      top: -1px;
+      transform: none;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button:hover {
+      padding-right: 0;
+      padding-left: 19px;
+    }
+
+    @media (min-width: 1025px) {
+      .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button {
+        padding: 0 20px;
+        font-size: 25px;
+      }
+
+      .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button .last-word::after {
+        top: -3px;
+        font-size: 12px;
+      }
+
+      .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button:hover {
+        padding-left: 36px;
+      }
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button:focus-visible {
+      outline: 2px solid #00305c;
+      outline-offset: 4px;
+    }

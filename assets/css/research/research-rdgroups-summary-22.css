@@ -1,0 +1,6 @@
+/* Shared 22px summary treatment for pages using the larger R&D-group text. */
+.p-rdgroups__summary {
+  font-size: 22px !important;
+  line-height: 1.7 !important;
+  font-weight: 300 !important;
+}

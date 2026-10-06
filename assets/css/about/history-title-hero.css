@@ -1,0 +1,13 @@
+
+        /* History-specific title typography; geometry lives in the shared layer. */
+        .about-hero-title {
+            margin: 0;
+            color: #fff;
+            font-size: clamp(3rem, 6vw, 5.2rem);
+            line-height: 1;
+            font-weight: 700;
+            letter-spacing: 0;
+            text-transform: uppercase;
+        }
+
+    

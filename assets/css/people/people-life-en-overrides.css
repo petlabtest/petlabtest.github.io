@@ -1,0 +1,63 @@
+/* English People Life icons and card treatments. */
+@font-face {
+  font-family: "StoryIcomoon";
+  src: url("../../fonts/root/media/r029.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.cta--button .last-word::after {
+  content: "\e905" !important;
+  font-family: "StoryIcomoon" !important;
+  display: inline-block;
+}
+
+.paragraph--type-p-masonry .p-masonry-generic__cta .cta--button::after,
+.paragraph--type-p-masonry .p-masonry-statement__cta .cta--button::after {
+  content: "\e905" !important;
+  display: inline-block;
+  position: relative;
+  top: -3px;
+  margin-left: 10px;
+  font-family: "StoryIcomoon" !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 1024px) {
+  .paragraph--type-p-masonry .p-masonry__item:nth-child(2) {
+    position: absolute;
+    left: calc(50% + 38px);
+    right: auto;
+    top: 110px;
+  }
+
+  .paragraph--type-p-masonry .p-masonry__item:nth-child(1) .p-masonry-statement,
+  .paragraph--type-p-masonry .p-masonry__item:nth-child(1) .p-masonry-generic--no-image {
+    background: #0073CF !important;
+    color: #FFFFFF !important;
+  }
+
+  .paragraph--type-p-masonry .p-masonry__item:nth-child(1) .p-masonry-statement a,
+  .paragraph--type-p-masonry .p-masonry__item:nth-child(1) .p-masonry-statement .cta--button,
+  .paragraph--type-p-masonry .p-masonry__item:nth-child(1) .p-masonry-generic--no-image a,
+  .paragraph--type-p-masonry .p-masonry__item:nth-child(1) .p-masonry-generic--no-image .cta--button {
+    color: #FFFFFF !important;
+  }
+
+  .paragraph--type-p-masonry .p-masonry__item:nth-child(4) .p-masonry-generic--no-image {
+    background: #00305C !important;
+    color: #FFFFFF !important;
+  }
+
+  .paragraph--type-p-masonry .p-masonry__item:nth-child(4) .p-masonry-generic--no-image h3,
+  .paragraph--type-p-masonry .p-masonry__item:nth-child(4) .p-masonry-generic--no-image a,
+  .paragraph--type-p-masonry .p-masonry__item:nth-child(4) .p-masonry-generic--no-image .cta--button {
+    color: #FFFFFF !important;
+  }
+}

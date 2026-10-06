@@ -1,3 +1,5 @@
+@import url("./typography-contract.css");
+
 /* Keep the 1600px page canvas white and color only the outer widescreen gutters. */
 @media (min-width: 1601px) {
   html {

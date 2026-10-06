@@ -1,0 +1,210 @@
+
+    /* Keep the longer English biographies at the original card scale. */
+    .industry-list>.industry-item .industry-item-info p {
+      font-family: "Poppins", Arial, sans-serif;
+      font-size: 0.9rem !important;
+      font-weight: 100;
+      line-height: 2;
+    }
+
+    .team-card .team-card-credential {
+      margin-top: 0;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    /* Match the light-grey Research Core callout while preserving the
+       alternating leadership composition. */
+    .industry-list .industry-item-info-dark {
+      background: #E2E2E2 !important;
+      color: #000 !important;
+    }
+
+    .industry-list .industry-item-info-dark .more-icon2 {
+      filter: brightness(0);
+    }
+
+    .industry-list h2 a,
+    .industry-list h2 a:visited,
+    .industry-list h2 a:hover,
+    .industry-list h2 a:focus {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    @font-face {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 300;
+      src: url("../../fonts/root/media/r024.woff2") format("woff2");
+    }
+
+    @font-face {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      src: url("../../fonts/root/media/r025.woff2") format("woff2");
+    }
+
+    @font-face {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      src: url("../../fonts/root/media/r026.woff2") format("woff2");
+    }
+
+    /* Match People-Page1-t.html's page-title styling without changing title sizes. */
+    .industry-list h2,
+    .industry-list h3 {
+      color: inherit;
+      font-family: "Poppins", Arial, sans-serif;
+      font-weight: 600;
+      line-height: 1.2;
+      text-transform: none;
+    }
+
+    .industry-item:first-child .industry-item-info h2 {
+      position: relative;
+      top: 0.5rem;
+    }
+
+    .about-hero-wrap+.industry-main {
+      margin-top: 0;
+      padding-top: 40px;
+    }
+
+    /* Chapter navigation styles. */
+    .industry-main>.dpet-ll-pub-nav-chapters {
+      width: 100%;
+      margin: 0;
+      padding: 30px;
+      box-sizing: border-box;
+      background: rgba(0, 25, 41, .95);
+      color: #fff;
+    }
+
+    .industry-main .dpet-ll-pub-nav-chapters-inner {
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .industry-main .dpet-ll-pub-nav-chapters h3 {
+      margin: 0 0 40px;
+      color: #fff;
+      font-size: 30px;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    .industry-main .dpet-ll-pub-bottom-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .industry-main .dpet-ll-pub-bottom-nav>li {
+      position: relative;
+      flex: 0 0 100%;
+      min-width: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .industry-main .ll-pub-bottom-nav-img img {
+      display: block;
+    }
+
+    .industry-main .ll-nav-title {
+      box-sizing: border-box;
+    }
+
+    @media (min-width: 700px) {
+      .industry-main>.dpet-ll-pub-nav-chapters {
+        padding: 45px 30px 50px;
+      }
+
+      .industry-main .dpet-ll-pub-bottom-nav>li {
+        flex-basis: calc(50% - 5px);
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .industry-main>.dpet-ll-pub-nav-chapters {
+        padding-top: 60px;
+        padding-bottom: 80px;
+      }
+
+      .industry-main .dpet-ll-pub-bottom-nav>li {
+        flex-basis: calc(20% - 8px);
+      }
+    }
+
+.page-about-leadership .industry-list .industry-item-info > .leadership-card-more {
+  position: absolute;
+  bottom: 3rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-about-leadership .industry-list .industry-item:not(.industry-item-alt) .leadership-card-more {
+  right: 6rem;
+}
+
+.page-about-leadership .industry-list .industry-item-alt .leadership-card-more {
+  left: 38rem;
+}
+
+.page-about-leadership .industry-list .leadership-card-image {
+  width: 42rem;
+  height: 35rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.page-about-leadership .industry-list .industry-item-info.leadership-card-info {
+  position: absolute;
+  left: 6rem;
+  top: 8rem;
+  width: 86rem;
+  height: 27rem;
+}
+
+.page-about-leadership .industry-list .industry-item-info-blue.leadership-card-info {
+  padding: 2.5rem 3rem 4.5rem 48rem;
+}
+
+.page-about-leadership .industry-list .industry-item-info-dark.leadership-card-info {
+  padding: 2.5rem 46rem 4.5rem 4rem;
+}
+
+.page-about-leadership .industry-list .leadership-card-info--wide-copy-gutter {
+  padding-right: 4rem;
+}
+
+body.page-about-leadership:lang(en) .industry-list > .industry-item:not(.industry-item-alt) > .leadership-card-image {
+  left: 8rem;
+}
+
+.page-about-leadership .industry-list .industry-item-alt .leadership-card-image {
+  left: 50rem;
+}
+
+.page-about-leadership .leadership-card-image--qingguo {
+  background-image: url("../../pic/root/media/08-1-2289e8d5.jpg");
+}
+
+.page-about-leadership .leadership-card-image--peng {
+  background-image: url("../../pic/root/media/08-2-6a3706b1.jpg");
+}
+
+.page-about-leadership .leadership-card-image--nicola {
+  background-image: url("../../pic/About/People/3-1.jpg");
+}
+
+.page-about-leadership .leadership-card-image--lin {
+  background-image: url("../../pic/About/People/4-1.jpg");
+}

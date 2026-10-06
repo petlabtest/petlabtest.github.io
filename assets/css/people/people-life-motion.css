@@ -1,0 +1,6 @@
+@media (prefers-reduced-motion: reduce) {
+  .ll-num-text-section .num-section {
+    opacity: 1;
+    transition: none;
+  }
+}

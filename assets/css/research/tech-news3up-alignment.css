@@ -1,0 +1,20 @@
+/* Align Research technology Latest News image frames and title baselines. */
+@media (min-width: 700px) {
+  .page-node-type-rdgroup .paragraph--type-p-news3up .field--name-field-news-er-image {
+    height: 240px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .page-node-type-rdgroup .paragraph--type-p-news3up .field--name-field-news-er-image img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+  }
+
+  .page-node-type-rdgroup .paragraph--type-p-news3up .field--name-node-title {
+    align-self: flex-start;
+    margin-top: 0;
+  }
+}

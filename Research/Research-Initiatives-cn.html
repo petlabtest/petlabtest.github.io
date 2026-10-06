@@ -2,173 +2,62 @@
 <html lang="zh-CN" dir="ltr">
 
 <head>
-  <link rel="icon" type="image/png" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
-  <link rel="apple-touch-icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
-  <link rel="manifest" href="../assets/data/favicons/site.webmanifest">
-  <link rel="shortcut icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1" type="image/png">
+  <!-- PETLAB:HEAD:START -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cyber Security and Information Sciences">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#003c62">
+  <meta name="robots" content="index, follow">
+  <meta name="petlab-head-version" content="20260926-1">
   <title>重点专项 | 数字PET实验室</title>
-  <link rel="stylesheet" media="all" href="../assets/css/research/dpet.css">
-  <style>
-    .petlab-component-host {
-      display: block;
-      position: relative;
-      width: 100%;
-    }
-
-    #petlab-header {
-      position: relative;
-      z-index: 1000;
-      overflow: visible;
-    }
-
-    #petlab-footer {
-      position: relative;
-      z-index: 1;
-    }
-
-    .layout-container>header[role="banner"],
-    .layout-container>footer[role="contentinfo"] {
-      display: none !important;
-    }
-
-    @media (min-width:1025px) {
-      body.path-node.page-node-type-rdarea .hero.hero--large-image {
-        margin-top: -50px;
-      }
-    }
-
-    /* Keep the custom Bilibili cover locked to the same 16:9 frame as the player. */
-    .paragraph--type-wysiwyg .video.wysiwyg-video--full .video__cover {
-      overflow: hidden;
-    }
-
-    .paragraph--type-wysiwyg .video.wysiwyg-video--full .video__cover>img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    /* Keep every Featured Projects slide on the original 16:9 media frame. */
-    .paragraph--type-p-project-carousel .project-carousel__image-wrapper {
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-    }
-
-    .paragraph--type-p-project-carousel .project-carousel__image,
-    .paragraph--type-p-project-carousel .project-carousel__image picture {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-
-    .paragraph--type-p-project-carousel .project-carousel__image-wrapper>a,
-    .paragraph--type-p-project-carousel .project-carousel__image-wrapper .field-group-link {
-      display: block;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    .paragraph--type-p-project-carousel .project-carousel__image-wrapper img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-  </style>
-  <style>
-    /* Align the sloped Engage section with the other research pages and
-       remove the oversized gap after the masonry content. */
-    @media (min-width: 1025px) {
-      .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate {
-        margin-top: -300px !important;
-      }
-    }
-
-    /* p-rdgroups 样式调整 */
-    .p-rdgroups__tablist li {
-      font-size: 24px !important;
-      line-height: 1.5 !important;
-    }
-
-    .p-rdgroups__tablist .position {
-      width: auto !important;
-      display: inline-block !important;
-      background: transparent !important;
-      position: relative;
-    }
-
-    /* 隐藏原始的横线和小球 */
-    .p-rdgroups__tablist .contain::after,
-    .p-rdgroups__tablist .contain::before {
-      display: none !important;
-    }
-
-    /* 只有 active tab 显示横线和小球 */
-    /* 横线：右端固定对齐 contain 右边缘，左端由 JS 动态设置 */
-    .p-rdgroups__tablist li[aria-selected="true"] .contain {
-      position: relative;
-    }
-
-    .p-rdgroups__tablist li[aria-selected="true"] .contain::after {
-      content: "";
-      display: block !important;
-      position: absolute;
-      top: 50%;
-      right: 9px;
-      left: var(--line-left, 100%);
-      width: auto !important;
-      height: 1px;
-      background: #000;
-      transform: translateY(-50%);
-    }
-
-    /* 小球：固定在 contain 右边缘，中心对齐横线右端，垂直对齐文字中线 */
-    .p-rdgroups__tablist li[aria-selected="true"] .contain::before {
-      content: "" !important;
-      display: block !important;
-      position: absolute !important;
-      top: 50% !important;
-      right: 0 !important;
-      left: auto !important;
-      bottom: auto !important;
-      width: 9px !important;
-      height: 9px !important;
-      border-radius: 50% !important;
-      background: #F45A2B !important;
-      transform: translateY(-50%) !important;
-      z-index: 1 !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      float: none !important;
-    }
-
-    .p-rdgroups__summary {
-      font-size: 22px !important;
-      line-height: 1.7 !important;
-      font-weight: 300 !important;
-    }
-  </style>
+  <meta name="description" content="了解实验室在质子治疗监测、数字PET成像与医学影像转化方面的重点专项与科研基础。">
+  <link rel="canonical" href="https://petlab.hust.edu.cn/Research/Research-Initiatives-cn.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://petlab.hust.edu.cn/Research/Research-Initiatives-cn.html">
+  <link rel="alternate" hreflang="en" href="https://petlab.hust.edu.cn/Research/Research-Initiatives-en.html">
+  <link rel="alternate" hreflang="x-default" href="https://petlab.hust.edu.cn/Research/Research-Initiatives-en.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Digital PET Laboratory">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="重点专项 | 数字PET实验室">
+  <meta property="og:description" content="了解实验室在质子治疗监测、数字PET成像与医学影像转化方面的重点专项与科研基础。">
+  <meta property="og:url" content="https://petlab.hust.edu.cn/Research/Research-Initiatives-cn.html">
+  <meta property="og:image" content="https://petlab.hust.edu.cn/assets/pic/main/PETLAB_LOGO_Pure.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="重点专项 | 数字PET实验室">
+  <meta name="twitter:description" content="了解实验室在质子治疗监测、数字PET成像与医学影像转化方面的重点专项与科研基础。">
+  <meta name="twitter:image" content="https://petlab.hust.edu.cn/assets/pic/main/PETLAB_LOGO_Pure.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/petlab-logo-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/petlab-logo-16.png">
+  <link rel="apple-touch-icon" href="../assets/favicons/petlab-logo-180.png">
+  <link rel="manifest" href="../assets/data/favicons/site.webmanifest">
+  <link rel="stylesheet" href="../assets/css/app-shell.css?v=20260926-1">
+  <script src="../assets/js/app-shell.js?v=20260929-external-header-css1"></script>
+  <!-- PETLAB:HEAD:END -->
+  <link rel="stylesheet" href="../assets/css/research/dpet-prelude.css?v=20261003-themebase1">
+  <link rel="stylesheet" media="all" href="../assets/css/research/dpet.css?v=20261003-themebase1">
+  <link rel="stylesheet" href="../assets/css/news/news-overview-components.css?v=20260924-1">
+  <link rel="stylesheet" href="../assets/css/research/research-initiatives-components.css?v=20261003-shell2">
+  <link rel="stylesheet" href="../assets/css/app-shell-header-layer.css?v=20260929-1">
+  <link rel="stylesheet" href="../assets/css/research/research-slope-spacing.css?v=20260929-1">
+  <link rel="stylesheet" href="../assets/css/research/research-rdgroups-tabs.css?v=20260929-1">
+  <link rel="stylesheet" href="../assets/css/research/research-rdgroups-summary-22.css?v=20260929-1">
   <link rel="stylesheet" href="../assets/css/cn-link-label.css?v=20260904-2">
   <link rel="stylesheet" href="../assets/css/archive-consistency.css?v=20260908-wide1">
-  <link rel="stylesheet" href="../assets/css/research-latest-news.css?v=20260911-3">
+  <link rel="stylesheet" href="../assets/css/research-latest-news.css?v=20260929-mobile-carousel1">
   <link rel="stylesheet" href="../assets/css/page-canvas.css?v=20260911-1">
+  <link rel="stylesheet" href="../assets/css/research/research-typography.css?v=20261003-shared1">
+  <link rel="stylesheet" href="../assets/css/news/news-overview-motion.css?v=20260924-1">
+  <link rel="stylesheet" href="../assets/css/news/masonry-motion.css?v=20260924-1">
+  <link rel="stylesheet" href="../assets/css/p-fullwidth-motion.css?v=20260924-1">
+  <link rel="stylesheet" href="../assets/css/research/rdgroups-motion.css?v=20260924-1">
+  <link rel="stylesheet" href="../assets/css/project-carousel-controls.css?v=20260924-1">
+  <link rel="stylesheet" href="../assets/css/research/lab-carousel.css?v=20260924-1">
 </head>
 
 
 
 
 <body class="node-63 path-node page-node-type-rdarea has-section-nav has-section-toggle production js-alert">
-  <a href="#main-content" class="visually-hidden focusable skip-link">Skip to main content</a>
+
   <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
     <div class="overlay"></div>
     <div class="layout-container">
@@ -193,7 +82,7 @@
                         height="536">
                       <img loading="eager" width="1600" height="774"
                         src="../assets/pic/Research/research-asset-23.jpg?h=7fa92598&amp;itok=0kZj0cOV"
-                        alt="Cyber Security and Information Sciences - Creating new tools for cyber defense and human language processing"
+                        alt="粒子径迹与探测平面示意图，用于展示质子治疗监测。"
                         typeof="foaf:Image">
                     </picture>
                   </div>
@@ -233,7 +122,7 @@
                               <source srcset="../assets/pic/root/media/2-2.jpg 1x" type="image/jpeg" width="699"
                                 height="328">
                               <img loading="eager" width="1600" height="774" src="../assets/pic/root/media/2-2.jpg"
-                                alt="Cyber Security and Information Sciences - Creating new tools for cyber defense and human language processing"
+                                alt="研究人员与实验室探测器设备合影。"
                                 typeof="foaf:Image">
                             </picture>
                           </div>
@@ -254,28 +143,21 @@
                                   <div class="p-rdgroups__tabs">
                                     <ul class="p-rdgroups__tablist">
                                       <li class="tab" id="tab-0" role="tab" aria-controls="panel-0" aria-selected="true"
-                                        tabindex="0"><span class="contain"><span class="position"
-                                            style="width: 435px;">多电压阈值技术</span></span></li>
+                                        tabindex="0"><span class="contain"><span class="position">多电压阈值技术</span></span></li>
                                       <li class="tab" id="tab-1" role="tab" aria-controls="panel-1" aria-selected="false"
-                                        tabindex="0"><span class="contain"><span class="position"
-                                            style="width: 435px;">闪烁晶体</span></span></li>
+                                        tabindex="0"><span class="contain"><span class="position">闪烁晶体</span></span></li>
                                       <li class="tab" id="tab-2" role="tab" aria-controls="panel-2"
-                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position"
-                                            style="width: 348px;">极弱光探测芯片</span></span>
+                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position">极弱光探测芯片</span></span>
                                       </li>
                                       <li class="tab" id="tab-3" role="tab" aria-controls="panel-3"
-                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position"
-                                            style="width: 298px;">粒子探测模块</span></span></li>
+                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position">粒子探测模块</span></span></li>
                                       <li class="tab" id="tab-4" role="tab" aria-controls="panel-4"
-                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position"
-                                            style="width: 272px;">Plug-n-Image</span></span></li>
+                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position">Plug-n-Image</span></span></li>
                                       <li class="tab" id="tab-5" role="tab" aria-controls="panel-5"
-                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position"
-                                            style="width: 415px;">图像重建</span></span>
+                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position">图像重建</span></span>
                                       </li>
                                       <li class="tab" id="tab-6" role="tab" aria-controls="panel-6"
-                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position"
-                                            style="width: 461px;">新仪器与新系统</span></span>
+                                        aria-selected="false" tabindex="0"><span class="contain"><span class="position">新仪器与新系统</span></span>
                                       </li>
                                     </ul>
                                   </div>
@@ -287,35 +169,35 @@
 
                           <div class="view-content">
                             <div class="p-rdgroups__panel tab views-row" id="panel-0" role="tabpanel"
-                              aria-labeledby="tab-0" aria-hidden="false" tabindex="-1" style="height: 315px;">
+                              aria-labelledby="tab-0" aria-hidden="false" tabindex="-1">
                               <div class="field-content p-rdgroups__summary">基于值域采样，结合信号先验信息，以若干阈值比较器即可简洁地完成海量通道高速信号的精确数字化。</div>
                               <div class="field-content p-rdgroups__cta"><a href="Research-Core-cn.html"
                                   class="cta--button" hreflang="en">
                                   了解更多</a></div>
                             </div>
                             <div class="p-rdgroups__panel tab views-row" id="panel-1" role="tabpanel"
-                              aria-labeledby="tab-1" aria-hidden="true" tabindex="-1" style="height: 315px;">
+                              aria-labelledby="tab-1" aria-hidden="true" tabindex="-1">
                               <div class="field-content p-rdgroups__summary">研发可编程新型闪烁晶体，为前沿探测与成像系统提供极致闪烁性能。</div>
                               <div class="field-content p-rdgroups__cta"><a href="Research-Tech-Crystals-cn.html"
                                   class="cta--button" hreflang="en">
                                   了解更多</a></div>
                             </div>
                             <div class="p-rdgroups__panel tab views-row" id="panel-2" role="tabpanel"
-                              aria-labeledby="tab-2" aria-hidden="true" tabindex="-1" style="height: 315px;">
+                              aria-labelledby="tab-2" aria-hidden="true" tabindex="-1">
                               <div class="field-content p-rdgroups__summary">研制定制化极弱光探测芯片，实现单光子事件的高精度探测与特征表征。 </div>
                               <div class="field-content p-rdgroups__cta"><a href="Research-Tech-Chips-cn.html"
                                   class="cta--button" hreflang="en">
                                   了解更多</a></div>
                             </div>
                             <div class="p-rdgroups__panel tab views-row" id="panel-3" role="tabpanel"
-                              aria-labeledby="tab-3" aria-hidden="true" tabindex="-1" style="height: 315px;">
+                              aria-labelledby="tab-3" aria-hidden="true" tabindex="-1">
                               <div class="field-content p-rdgroups__summary">搭建全数字化一体化模块化粒子探测器，具备超高事例计数能力。</div>
                               <div class="field-content p-rdgroups__cta"><a href="Research-Tech-Detectors-cn.html"
                                   class="cta--button" hreflang="en">
                                   了解更多</a></div>
                             </div>
                             <div class="p-rdgroups__panel tab views-row" id="panel-4" role="tabpanel"
-                              aria-labeledby="tab-4" aria-hidden="true" tabindex="-1" style="height: 315px;">
+                              aria-labelledby="tab-4" aria-hidden="true" tabindex="-1">
                               <div class="field-content p-rdgroups__summary">构建即插成像基础探测成像框架，作为智能成像体系的底层支撑。
                               </div>
                               <div class="field-content p-rdgroups__cta"><a href="Research-Tech-PnI-cn.html"
@@ -323,7 +205,7 @@
                                   了解更多</a></div>
                             </div>
                             <div class="p-rdgroups__panel tab views-row" id="panel-5" role="tabpanel"
-                              aria-labeledby="tab-5" aria-hidden="true" tabindex="-1" style="height: 315px;">
+                              aria-labelledby="tab-5" aria-hidden="true" tabindex="-1">
                               <div class="field-content p-rdgroups__summary">面向专用场景开发端到端数据流驱动的图像重建算法，实现高保真定量成像。
                               </div>
                               <div class="field-content p-rdgroups__cta"><a href="Research-Tech-Imaging-cn.html"
@@ -331,7 +213,7 @@
                                   了解更多</a></div>
                             </div>
                             <div class="p-rdgroups__panel tab views-row" id="panel-6" role="tabpanel"
-                              aria-labeledby="tab-6" aria-hidden="true" tabindex="-1" style="height: 315px;">
+                              aria-labelledby="tab-6" aria-hidden="true" tabindex="-1">
                               <div class="field-content p-rdgroups__summary">研发搭载乐高式即插成像架构的新型探测仪器与整机系统，部署灵活且可扩展性强。
                               </div>
                               <div class="field-content p-rdgroups__cta"><a href="Research-Tech-Instruments-cn.html"
@@ -422,14 +304,14 @@
                                   <article class="media media--type-image media--view-mode-news-3-up">
                                     <div class="field field--name-field-image field--type-image field--label-hidden field__item">
                                       <a href="../News/List/News-page4-cn.html" hreflang="zh-CN">
-                                        <img loading="lazy" src="../assets/pic/news/content/4.jpg" width="320" height="320" alt="能“看见”质子束的数字PET装置来了！" typeof="foaf:Image" class="image-style-news-3-up">
+                                        <img loading="lazy" src="../assets/pic/news/content/4.jpg" width="320" height="320" alt="能“看清”质子束的数字PET装置，来了！" typeof="foaf:Image" class="image-style-news-3-up">
                                       </a>
                                     </div>
                                   </article>
                                 </div>
                                 <div class="field field--name-node-title field--type-ds field--label-hidden field__item">
                                   <h3 class="link--animated" data-once="append-span">
-                                    <a href="../News/List/News-page4-cn.html" hreflang="zh-CN">能“看见”质子束的数字PET装置来了！<span></span></a><span></span>
+                                    <a href="../News/List/News-page4-cn.html" hreflang="zh-CN">能“看清”质子束的数字PET装置，来了！<span></span></a><span></span>
                                   </h3>
                                 </div>
                                 <div class="group-info">
@@ -471,7 +353,6 @@
                         </div>
                       </div>
                     </div>
-                    <div class="slider-wrapper"><div class="slider-content"></div></div>
                     <div class="p-news3up__cta"><a href="../News/News-list-cn.html" class="cta--button">更多新闻</a></div>
                   </div>
 
@@ -629,12 +510,8 @@
                       <div class="views-element-container">
                         <div
                           class="view view-laboratory-story-blocks view-id-laboratory_story_blocks view-display-id-lab_carousel_rdgroup js-view-dom-id-d08b6d1c90529b1967563aca44db7eae47d81ac1105fbda6cbc67c781a80f92a">
-                          <div class="view-content slick-initialized slick-slider slick-dotted">
-                            <div class="slick-list">
-                              <div class="slick-track" style="opacity: 1; width: 1512px;">
-                                <div class="lab-carousel views-row slick-slide slick-current slick-active"
-                                  data-slick-index="0" aria-hidden="false"
-                                  style="width: 1512px; position: relative; left: 0px; top: 0px; z-index: 199; opacity: 1;">
+                          <div class="view-content">
+                            <div class="lab-carousel views-row">
                                   <div class="lab-carousel__left">
                                     <div class="lab-carousel__quote">
                                       我们的使命是打造一片适宜顶尖科学蓬勃发展的科研环境：保障科研人员发展、孕育创意与创新、完善硬件平台与基础设施，支撑 PET 实验室肩负服务国家的使命。
@@ -655,8 +532,6 @@
                                         class="image-style-featured">
                                     </a>
                                   </div>
-                                </div>
-                              </div>
                             </div>
                           </div>
                         </div>
@@ -837,194 +712,7 @@
   <script src="../assets/js/root/r038.js"></script>
   <script src="../assets/js/root/r039.js"></script>
   <script src="../assets/js/root/r040.js"></script>
-  <script src="../assets/js/root/002.js"></script>
-  <script>
-    (function () {
-      var siteRoot = new URL('../', window.location.href);
-      var cssUrl = new URL('assets/css/site.css?v=20260908-wide1', siteRoot);
-
-      function rewriteComponentUrls(shadow) {
-        shadow.querySelectorAll('[src], [href]').forEach(function (node) {
-          ['src', 'href'].forEach(function (attribute) {
-            var value = node.getAttribute(attribute);
-            if (!value || /^(?:#|https?:|mailto:|tel:|javascript:|\/)/i.test(value)) return;
-            node.setAttribute(attribute, new URL(value, siteRoot).href);
-          });
-        });
-      }
-
-      function initHeader(shadow) {
-        var header = shadow.querySelector('[data-site-header]');
-        if (!header) return;
-        var primaryGroups = shadow.querySelectorAll('.primary-nav > .nav-group');
-        function setPrimaryGroupVisual(group, active) {
-          if (!group || !group.matches('.primary-nav > .nav-group')) return;
-          var color = active ? '#edf5fc' : '#fff';
-          group.style.setProperty('background-color', color, 'important');
-          var trigger = group.querySelector(':scope > .nav-trigger');
-          trigger?.style.setProperty('background-color', color, 'important');
-        }
-        function setPrimaryNavigationVisual(active) {
-          var color = active ? '#edf5fc' : '#fff';
-          primaryGroups.forEach(function (group) { setPrimaryGroupVisual(group, active); });
-          shadow.querySelectorAll('.lbl-header, .lbl-header .header-shell, .lbl-header .desktop-navigation, .lbl-header .header-top-row, .lbl-header .primary-nav').forEach(function (node) {
-            node.style.setProperty('background-color', color, 'important');
-          });
-        }
-        setPrimaryNavigationVisual(false);
-        var closeTimers = new WeakMap();
-        var openGroup = function (group) {
-          if (!group) return;
-          var timer = closeTimers.get(group);
-          if (timer) window.clearTimeout(timer);
-          group.classList.add('open');
-          group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'true');
-        };
-        var closeGroup = function (group) {
-          if (!group) return;
-          var timer = window.setTimeout(function () {
-            if (group.matches(':hover') || group.matches(':focus-within')) return;
-            group.classList.remove('open');
-            group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
-          }, 180);
-          closeTimers.set(group, timer);
-        };
-        var closeAllGroups = function () {
-          shadow.querySelectorAll('.nav-group.open').forEach(function (group) {
-            var timer = closeTimers.get(group);
-            if (timer) window.clearTimeout(timer);
-            group.classList.remove('open');
-            group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
-          });
-          setPrimaryNavigationVisual(false);
-          var activeElement = shadow.activeElement;
-          if (activeElement && activeElement.matches('.primary-nav .nav-trigger, .primary-nav .mega-menu__close')) activeElement.blur();
-        };
-        var host = shadow.host;
-        header.addEventListener('mouseleave', closeAllGroups);
-        host?.addEventListener('mouseleave', closeAllGroups);
-        header.addEventListener('mouseleave', function () {
-          shadow.querySelectorAll('.nav-group.open, .nav-group.dismissed').forEach(function (group) {
-            group.classList.remove('open', 'dismissed');
-            group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
-          });
-          setPrimaryNavigationVisual(false);
-        });
-        shadow.querySelectorAll('.nav-group').forEach(function (group) {
-          group.addEventListener('mouseenter', function () {
-            var timer = closeTimers.get(group);
-            if (timer) clearTimeout(timer);
-            group.classList.remove('dismissed');
-            shadow.querySelectorAll('.nav-group.open').forEach(function (item) {
-              if (item !== group) {
-                item.classList.remove('open', 'dismissed');
-                item.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
-                setPrimaryGroupVisual(item, true);
-              }
-            });
-            group.classList.add('open');
-            group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'true');
-            if (group.matches('.primary-nav > .nav-group')) setPrimaryNavigationVisual(true);
-          });
-          group.addEventListener('mouseleave', function () {
-            var timer = setTimeout(function () {
-              group.classList.remove('open');
-              group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
-              if (group.matches('.primary-nav > .nav-group') && !header.matches(':hover')) setPrimaryNavigationVisual(false);
-              var activeElement = shadow.activeElement;
-              if (activeElement && group.contains(activeElement)) activeElement.blur();
-            }, 220);
-            closeTimers.set(group, timer);
-          });
-        });
-        shadow.querySelectorAll('.nav-trigger').forEach(function (trigger) {
-          trigger.addEventListener('click', function () {
-            var group = trigger.closest('.nav-group');
-            var open = group && group.classList.contains('open');
-            shadow.querySelectorAll('.nav-group.open').forEach(function (item) {
-              item.classList.remove('open', 'dismissed');
-              item.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
-              setPrimaryGroupVisual(item, false);
-            });
-            if (group && !open) {
-              group.classList.add('open');
-              trigger.setAttribute('aria-expanded', 'true');
-              setPrimaryNavigationVisual(true);
-            } else if (group && open) {
-              setPrimaryNavigationVisual(false);
-            }
-          });
-        });
-        shadow.querySelectorAll('[data-menu-close]').forEach(function (button) {
-          button.addEventListener('click', function () {
-            var group = button.closest('.nav-group');
-            group?.classList.remove('open');
-            group?.classList.add('dismissed');
-            group?.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
-            setPrimaryNavigationVisual(false);
-            if (shadow.activeElement && group?.contains(shadow.activeElement)) shadow.activeElement.blur();
-          });
-        });
-        var menuToggle = shadow.querySelector('[data-menu-toggle]');
-        menuToggle?.addEventListener('click', function () {
-          var active = header.classList.toggle('menu-active');
-          menuToggle.setAttribute('aria-expanded', String(active));
-        });
-      }
-
-      async function mount(hostId, componentPath, isHeader) {
-        var host = document.getElementById(hostId);
-        if (!host) return;
-        try {
-          var response = await fetch(new URL(componentPath, siteRoot));
-          var cssResponse = await fetch(cssUrl);
-          if (!response.ok || !cssResponse.ok) throw new Error('Component load failed');
-          var shadow = host.attachShadow({ mode: 'open' });
-          var style = document.createElement('style');
-          var cssText = await cssResponse.text();
-          cssText = cssText.replace(/url\((['"]?)\.\.\/([^'")]+)\1\)/g, function (_, quote, path) {
-            return 'url(' + quote + new URL('assets/' + path, siteRoot).href + quote + ')';
-          });
-          cssText += '\n@media (min-width: 1101px) {' +
-            '.lbl-header, .lbl-header .header-shell, .lbl-header .desktop-navigation, ' +
-            '.lbl-header .primary-nav, .lbl-header .nav-group { overflow: visible !important; }' +
-            '.lbl-header .nav-group.open > .mega-menu, .lbl-header .nav-group:hover > .mega-menu, ' +
-            '.lbl-header .nav-group:focus-within > .mega-menu { display: grid !important; z-index: 2000 !important; pointer-events: auto; }' +
-            '.lbl-header .nav-group.dismissed > .mega-menu { display: none !important; }' +
-            '.lbl-header .primary-nav > .nav-group { background: #fff !important; }' +
-            '.lbl-header .primary-nav > .nav-group:hover, .lbl-header .primary-nav > .nav-group.open, ' +
-            '.lbl-header .primary-nav > .nav-group:focus-within { background: #edf5fc !important; }' +
-            '.lbl-header .primary-nav > .nav-group.dismissed { background: #fff !important; }' +
-            '.lbl-header .primary-nav > .nav-group > .nav-trigger { background: #fff !important; color: #062f40 !important; transition: none !important; }' +
-            '.lbl-header .primary-nav > .nav-group:hover > .nav-trigger, .lbl-header .primary-nav > .nav-group.open > .nav-trigger, ' +
-            '.lbl-header .primary-nav > .nav-group:focus-within > .nav-trigger { background: #edf5fc !important; color: #062f40 !important; }' +
-            '.lbl-header .primary-nav > .nav-group.dismissed > .nav-trigger { background: #fff !important; color: #062f40 !important; transition: none !important; }' +
-            '.lbl-header .primary-nav > .nav-group, .lbl-header .primary-nav > .nav-group > .nav-trigger { transition: none !important; }' +
-            '}';
-          style.textContent = cssText.replace(/^:root\s*\{/, ':host {');
-          shadow.appendChild(style);
-          var content = document.createElement('div');
-          content.innerHTML = await response.text();
-          while (content.firstChild) shadow.appendChild(content.firstChild);
-          rewriteComponentUrls(shadow);
-          if (!isHeader) {
-            var year = shadow.querySelector('[data-current-year]');
-            if (year) year.textContent = String(new Date().getFullYear());
-          } else {
-            initHeader(shadow);
-          }
-        } catch (error) {
-          host.textContent = '';
-          console.error('Unable to load PETLab component', error);
-        }
-      }
-
-      Promise.all([
-        mount('petlab-header', 'components/header-cn.html?v=20260920-programs1', true),
-        mount('petlab-footer', 'components/footer-cn.html?v=20260811-119', false)
-      ]);
-    }());
-  </script>
+  <script src="../assets/js/root/002.js?v=20260926-project-carousel-exclusion1"></script>
 
   <script>
     // p-rdgroups 横线动态计算：右端固定对齐，左端随文字宽度变化
@@ -1120,7 +808,8 @@
     })();
   </script>
 
-  <script src="../assets/js/floating-assistant.js?v=20260918-11" defer></script>
+  <script src="../assets/js/floating-assistant.js?v=20260924-1" defer></script>
+  <script src="../assets/js/research/rdgroups-motion.js?v=20260927-1"></script>
 </body>
 
 </html>

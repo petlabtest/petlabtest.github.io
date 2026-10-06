@@ -1,0 +1,15 @@
+.p-fullwidth__body a.professor-link {
+  display: inline;
+  color: #000;
+  text-decoration: none;
+  background: linear-gradient(transparent, transparent 80%, #008eff 80%, #008eff 87%, transparent 87%) no-repeat 0 0;
+}
+
+.p-fullwidth__body a.professor-link:hover,
+.p-fullwidth__body a.professor-link:focus-visible {
+  background: linear-gradient(transparent 0%, transparent 80%, #00305c 80%, #00305c 87%, transparent 87%) no-repeat 0 0;
+}
+
+.student-admissions-emphasis {
+  text-decoration: underline;
+}

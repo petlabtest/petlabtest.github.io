@@ -1,0 +1,282 @@
+
+    /* Homepage engage-card treatment, scoped to CORE TECHNOLOGIES only. */
+    .core-technologies-showcase .p-project-carousel__content,
+    .core-technologies-showcase .views-element-container,
+    .core-technologies-showcase .view,
+    .core-technologies-showcase .view-content,
+    .core-technologies-showcase .slick-list,
+    .core-technologies-showcase .slick-track {
+      width: 100% !important;
+      max-width: none !important;
+      min-width: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      float: none !important;
+      transform: none !important;
+    }
+
+    .core-technologies-showcase .view-content {
+      display: grid !important;
+      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+      gap: clamp(.65rem, 1vw, 1rem) !important;
+      overflow: visible !important;
+    }
+
+    .core-technologies-showcase .slick-list,
+    .core-technologies-showcase .slick-track {
+      display: contents !important;
+      height: auto !important;
+    }
+
+    .core-technologies-showcase .views-row,
+    .core-technologies-showcase .slick-slide,
+    .core-technologies-showcase .slick-cloned {
+      display: block !important;
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+      width: auto !important;
+      height: auto !important;
+      min-width: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      float: none !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    .core-technologies-showcase .slick-arrow,
+    .core-technologies-showcase .slick-dots,
+    .core-technologies-showcase .slick-cloned {
+      display: none !important;
+    }
+
+    .core-technologies-showcase .node--view-mode-carousel {
+      position: relative;
+      isolation: isolate;
+      aspect-ratio: 1.22 / 1 !important;
+      overflow: hidden;
+      background: #00305c;
+      height: auto !important;
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity .65s ease, transform .65s cubic-bezier(.22, .61, .36, 1);
+      will-change: opacity, transform;
+    }
+
+    .core-technologies-showcase .node--view-mode-carousel.core-card-pending {
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+
+    .core-technologies-showcase .node--view-mode-carousel.core-card-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .core-technologies-showcase .project-carousel__image-wrapper {
+      position: absolute !important;
+      inset: 0;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .core-technologies-showcase .project-carousel__image-wrapper::after {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      content: "";
+      background: linear-gradient(180deg, rgba(0, 48, 92, .08), rgba(0, 48, 92, .62));
+      pointer-events: none;
+      transition: background-color .28s ease;
+    }
+
+    .core-technologies-showcase .field-group-link,
+    .core-technologies-showcase .project-carousel__image,
+    .core-technologies-showcase .project-carousel__image picture {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .core-technologies-showcase .project-carousel__image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .55s cubic-bezier(.22, .61, .36, 1);
+      will-change: transform;
+    }
+
+    .core-technologies-showcase .project-carousel__content {
+      position: absolute !important;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      display: flex !important;
+      flex-direction: column;
+      align-items: flex-start;
+      height: clamp(4.5rem, 5vw, 5.8rem) !important;
+      margin: 0 !important;
+      padding: clamp(.65rem, 1vw, 1rem) clamp(.6rem, 1vw, 1.05rem) !important;
+      overflow: hidden;
+      color: #fff;
+      background: rgba(0, 48, 92, .84) !important;
+      transition: height .28s ease, background-color .28s ease, padding-top .28s ease;
+    }
+
+    .core-technologies-showcase .project-carousel__title {
+      min-height: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      color: #fff !important;
+      font-size: clamp(1rem, 1.35vw, 1.4rem) !important;
+      font-weight: 500;
+      line-height: 1.65 !important;
+      text-transform: uppercase;
+      background: transparent !important;
+    }
+
+    .core-technologies-showcase .project-carousel__title a,
+    .core-technologies-showcase .project-carousel__content>p,
+    .core-technologies-showcase .project-carousel__content>a {
+      color: #fff !important;
+    }
+
+    /* The title link has its own line-height in the shared carousel styles.
+       Set it explicitly so wrapped titles use the intended spacing. */
+    .core-technologies-showcase .view-projects-blocks .views-row .node--view-mode-carousel .project-carousel__title a {
+      display: inline-block !important;
+      line-height: 1.4 !important;
+    }
+
+    .core-technologies-showcase .project-carousel__content>p,
+    .core-technologies-showcase .project-carousel__content>a {
+      max-width: 42rem;
+      margin: clamp(1rem, 2vw, 1.8rem) 0 0;
+      font-size: clamp(.95rem, 1.15vw, 1.25rem);
+      line-height: 1.45;
+      opacity: 0;
+      transform: translateY(1rem);
+      transition: opacity .2s ease .04s, transform .28s ease .04s;
+    }
+
+    .core-technologies-showcase .node--view-mode-carousel:hover .project-carousel__content,
+    .core-technologies-showcase .node--view-mode-carousel:focus-within .project-carousel__content {
+      height: 100% !important;
+      padding-top: clamp(2rem, 4vw, 4rem) !important;
+      background: rgba(0, 48, 92, .86) !important;
+    }
+
+    .core-technologies-showcase .node--view-mode-carousel:hover .project-carousel__content>p,
+    .core-technologies-showcase .node--view-mode-carousel:hover .project-carousel__content>a,
+    .core-technologies-showcase .node--view-mode-carousel:focus-within .project-carousel__content>p,
+    .core-technologies-showcase .node--view-mode-carousel:focus-within .project-carousel__content>a {
+      opacity: 1;
+      transform: none;
+    }
+
+    .core-technologies-showcase .node--view-mode-carousel:hover .project-carousel__image img,
+    .core-technologies-showcase .node--view-mode-carousel:focus-within .project-carousel__image img {
+      transform: scale(1.035);
+    }
+
+    /* Override the page's legacy static-card compatibility rules. */
+    .core-technologies-showcase .view-projects-blocks>.view-content {
+      display: grid !important;
+      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+      gap: clamp(.65rem, 1vw, 1rem) !important;
+    }
+
+    .core-technologies-showcase .view-projects-blocks .node--view-mode-carousel {
+      position: relative !important;
+      height: auto !important;
+      aspect-ratio: 1.22 / 1 !important;
+      overflow: hidden !important;
+      background: #00305c !important;
+    }
+
+    .core-technologies-showcase .view-projects-blocks .node--view-mode-carousel .project-carousel__image-wrapper {
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      padding: 0 !important;
+      background: transparent !important;
+    }
+
+    .core-technologies-showcase .view-projects-blocks .node--view-mode-carousel .project-carousel__content {
+      position: absolute !important;
+      inset: auto 0 0 !important;
+      width: 100% !important;
+      height: clamp(4.5rem, 5vw, 5.8rem) !important;
+      padding: clamp(.65rem, 1vw, 1rem) clamp(.6rem, 1vw, 1.05rem) !important;
+      background: rgba(0, 48, 92, .84) !important;
+    }
+
+    .core-technologies-showcase .view-projects-blocks .node--view-mode-carousel:hover .project-carousel__content,
+    .core-technologies-showcase .view-projects-blocks .node--view-mode-carousel:focus-within .project-carousel__content {
+      height: 100% !important;
+      padding-top: clamp(2rem, 4vw, 4rem) !important;
+      background: rgba(0, 48, 92, .86) !important;
+    }
+
+    .core-technologies-showcase .view-projects-blocks .views-row .node--view-mode-carousel .project-carousel__title {
+      display: block !important;
+      width: 100% !important;
+      height: auto !important;
+      min-height: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: transparent !important;
+      color: #fff !important;
+      line-height: 1.65 !important;
+    }
+
+    @media (max-width: 1100px) {
+
+      .core-technologies-showcase .view-content,
+      .core-technologies-showcase .view-projects-blocks>.view-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+    }
+
+    @media (max-width: 699px) {
+      .core-technologies-showcase .view-content,
+      .core-technologies-showcase .view-projects-blocks>.view-content {
+        grid-template-columns: 1fr !important;
+      }
+
+      .core-technologies-showcase .project-carousel__content,
+      .core-technologies-showcase .view-projects-blocks .node--view-mode-carousel .project-carousel__content {
+        position: absolute !important;
+        height: max-content !important;
+        min-height: 5.2rem;
+      }
+
+      .core-technologies-showcase .project-carousel__content>p,
+      .core-technologies-showcase .project-carousel__content>a {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .core-technologies-showcase .node--view-mode-carousel,
+      .core-technologies-showcase .project-carousel__content,
+      .core-technologies-showcase .project-carousel__content>p,
+      .core-technologies-showcase .project-carousel__content>a,
+      .core-technologies-showcase .project-carousel__image img {
+        transition: none !important;
+      }
+    }
+
+    
+
+/* The English title link keeps its own spacing while CN uses the shared title line-height. */
+html[lang="en"] .core-technologies-showcase .view-projects-blocks .views-row .node--view-mode-carousel .project-carousel__title a {
+  line-height: 1.65 !important;
+}

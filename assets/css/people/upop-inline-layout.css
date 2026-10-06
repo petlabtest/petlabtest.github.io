@@ -1,0 +1,37 @@
+body {
+      background: #fff !important
+    }
+
+
+
+
+    /* 014.css was archived with a site-root-relative quote path. Keep the
+       carousel's quote mark local when this page is served from Website/ */
+    .paragraph--type-p-lab-carousel .lab-carousel__quote::before {
+      background-image: url("../../pic/root/media/quote.svg");
+    }
+
+    /* The archived stylesheet points icomoon at the original site root.
+       Use the bundled local font so CTA arrows render as icons instead of
+       missing-glyph squares in the standalone page. */
+    @font-face {
+      font-family: "icomoon";
+      src: url("../../fonts/root/media/r029.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    /* Keep the copied light-blue publication section's warm-paper outer field.
+   The red publication section below intentionally keeps its separate
+   neutral-grey background. */
+    .ll-pub-section.ll-accent-light_blue.ll-background-none {
+      background-color: #f5f4f0 !important;
+    }
+
+    .ll-pub-section.ll-accent-light_blue.ll-background-none .ll-pub-section-inner {
+      background-color: #fff !important;
+    }
+
+    .ll-pub-section.ll-accent-light_blue.ll-background-none .ll-pub-section-inner::before {
+      background-color: #008eff !important;
+    }

@@ -1,0 +1,18 @@
+@import url("../content-typography-base.css?v=20261003-1");
+
+/* News metadata and feature modules sometimes use text-only div elements. */
+body :where(
+  .group-info,
+  .news-source,
+  .pub-dateline,
+  .info__label,
+  .info__value,
+  .field--name-field-news-date,
+  .field--name-field-news-kicker,
+  .field--name-dpet-news-featured-summary,
+  .focus-news-title,
+  .tc-pt-b-title,
+  .news-join-us
+) {
+  font-family: var(--font-family-sans) !important;
+}

@@ -1,0 +1,6 @@
+/* Keep archived header/footer wrappers hidden when the shared AppShell is mounted. */
+.header-container,
+.header-spacer,
+.footer-container {
+  display: none !important;
+}

@@ -1,0 +1,30 @@
+/* One motion contract for the Mission, History, and Leadership chapter cards. */
+#main > .dpet-ll-pub-nav-chapters .ll-pub-bottom-nav-img::after,
+.history-main > .dpet-ll-pub-nav-chapters .ll-pub-bottom-nav-img::after,
+.industry-main .ll-pub-bottom-nav-img::after {
+  transition: opacity .8s ease;
+}
+
+#main > .dpet-ll-pub-nav-chapters .ll-pub-bottom-nav-img img,
+.history-main > .dpet-ll-pub-nav-chapters .ll-pub-bottom-nav-img img,
+.industry-main .ll-pub-bottom-nav-img img {
+  transition: transform 1.25s ease;
+}
+
+#main > .dpet-ll-pub-nav-chapters .ll-section-nav:hover .ll-pub-bottom-nav-img::after,
+.history-main > .dpet-ll-pub-nav-chapters .ll-section-nav:hover .ll-pub-bottom-nav-img::after,
+.industry-main .ll-section-nav:hover .ll-pub-bottom-nav-img::after {
+  opacity: 0;
+}
+
+#main > .dpet-ll-pub-nav-chapters .ll-section-nav:hover .ll-pub-bottom-nav-img img,
+.history-main > .dpet-ll-pub-nav-chapters .ll-section-nav:hover .ll-pub-bottom-nav-img img,
+.industry-main .ll-section-nav:hover .ll-pub-bottom-nav-img img {
+  transform: scale(1.15);
+}
+
+#main > .dpet-ll-pub-nav-chapters .ll-section-nav:hover .ll-nav-title,
+.history-main > .dpet-ll-pub-nav-chapters .ll-section-nav:hover .ll-nav-title,
+.industry-main .ll-section-nav:hover .ll-nav-title {
+  padding-bottom: 15px;
+}

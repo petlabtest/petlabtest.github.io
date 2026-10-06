@@ -5,7 +5,7 @@ html {
 }
 .industry-main {
   min-height: 100vh;
-  font-family: var(--font-family, "Microsoft YaHei", Arial, sans-serif);
+  font-family: var(--font-family-sans);
 }
 .industry-list {
   margin: 0rem auto 0 auto;

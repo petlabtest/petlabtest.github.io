@@ -1,0 +1,9 @@
+@import url("../content-typography-base.css?v=20261003-1");
+
+/*
+ * Research pages were assembled from several archived themes whose class
+ * selectors outrank inherited body styles. This stylesheet is deliberately
+ * loaded last, and this single scoped override replaces only text families.
+ * Sizes, weights, line heights and spacing stay owned by each template.
+ * Spans and pseudo-elements are excluded so the icon fonts remain intact.
+ */

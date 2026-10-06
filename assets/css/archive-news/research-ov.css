@@ -9,7 +9,7 @@ body {
     margin: 0 !important;
     padding: 0 !important;
     background: #f2f2f2;
-    font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+    font-family: var(--font-family-sans);
 }
 
 @font-face {

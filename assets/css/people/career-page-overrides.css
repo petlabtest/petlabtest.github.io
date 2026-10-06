@@ -1,0 +1,19 @@
+
+
+    /* Keep this CTA arrow independent of the archived icon-font paths. */
+    .paragraph--type-p-fullwidth.background--grey.slope--pos .p-fullwidth__cta .cta--button .last-word::after {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin: 0 0 2px 10px;
+      border-top: 2px solid currentColor;
+      border-right: 2px solid currentColor;
+      transform: rotate(45deg);
+      transition: transform .2s ease;
+    }
+
+    .paragraph--type-p-fullwidth.background--grey.slope--pos .p-fullwidth__cta .cta--button:hover .last-word::after,
+    .paragraph--type-p-fullwidth.background--grey.slope--pos .p-fullwidth__cta .cta--button:focus-visible .last-word::after {
+      transform: translateX(3px) rotate(45deg);
+    }

@@ -1,0 +1,21 @@
+/* Shared callout treatment for the bilingual Technical Support pages. */
+.technical-support-panel::after,
+.technical-support-panel .p-fullwidth__content>* {
+  background-color: #3171c8 !important;
+}
+
+.technical-support-panel {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+.technical-support-panel .p-fullwidth__header,
+.technical-support-panel .p-fullwidth__body,
+.technical-support-panel .p-fullwidth__body p,
+.region-content .technical-support-panel .p-fullwidth__cta a.cta--button {
+  color: #fff !important;
+}
+
+.technical-support-panel .midnight-slope-overlay {
+  background: transparent !important;
+}

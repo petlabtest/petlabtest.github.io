@@ -1,0 +1,20 @@
+/* Shared text-font baseline for archived content page families. */
+body {
+  --font: var(--font-family-sans);
+  --font-poppins: var(--font-family-sans);
+  --font-roboto-con: var(--font-family-sans);
+  font-family: var(--font-family-sans);
+  font-synthesis: none;
+}
+
+/* Preserve template scales and icon fonts while replacing text families. */
+body :where(
+  h1, h2, h3, h4, h5, h6,
+  p, a, li,
+  button, input, select, textarea,
+  label, legend, summary,
+  figcaption, blockquote,
+  dt, dd, th, td
+) {
+  font-family: var(--font-family-sans) !important;
+}

@@ -1,0 +1,40 @@
+/* Shared geometry for image-free sloped title heroes across About pages. */
+.about-hero-wrap {
+  position: relative;
+  isolation: isolate;
+  min-height: clamp(225px, 27.1vw, 390px) !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+  background: none !important;
+}
+
+.about-hero-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: #00305c;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - clamp(42px, 10.85vw, 156px)), 0 100%);
+}
+
+.about-hero-inner {
+  position: relative;
+  z-index: 1;
+  width: min(calc(100% - 100px), 1000px);
+  margin: 0 auto;
+  padding: 24px 0 72px !important;
+}
+
+@media (max-width: 699px) {
+  .about-hero-wrap {
+    min-height: 225px !important;
+  }
+
+  .about-hero-inner {
+    width: calc(100% - 30px);
+    padding: 14px 0 52px !important;
+  }
+}

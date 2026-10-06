@@ -1,0 +1,6 @@
+/* Shared desktop clearance for the Research masonry-to-Engage slope. */
+@media (min-width: 1025px) {
+  .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate {
+    margin-top: -300px !important;
+  }
+}

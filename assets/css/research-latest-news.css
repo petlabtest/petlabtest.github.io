@@ -9,6 +9,14 @@
   flex-direction: column;
 }
 
+.research-latest-news .slick-track > .views-row {
+  float: left;
+}
+
+.research-latest-news .slick-track {
+  display: flow-root;
+}
+
 .research-latest-news .node--view-mode-_-up {
   width: 100%;
   height: 100%;

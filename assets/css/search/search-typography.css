@@ -1,0 +1,15 @@
+/* Keep the bilingual search utility pages on the same local font contract. */
+body.page-search,
+body.page-search :where(h1, h2, p, a, input, button, label, span) {
+  font-family: var(--font-family-sans);
+}
+
+@media (max-width: 700px) {
+  body.page-search .search-page h1 {
+    font-size: clamp(2.5rem, 10vw, 3rem);
+  }
+
+  body.page-search .search-page .eyebrow {
+    font-size: 14px;
+  }
+}

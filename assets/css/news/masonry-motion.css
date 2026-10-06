@@ -1,0 +1,37 @@
+/* Shared desktop entry motion for legacy masonry content groups. */
+@media (min-width: 1025px) {
+  .paragraph--type-p-masonry.paragraph--view-mode-full .p-masonry__item {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .paragraph--type-p-masonry.paragraph--view-mode-full .p-masonry__item.js-animate {
+    opacity: 1;
+  }
+
+  .paragraph--type-p-masonry.paragraph--view-mode-full .p-masonry__item .paragraph--type-p-masonry-dataset .views-row,
+  .paragraph--type-p-masonry.paragraph--view-mode-full .p-masonry__item .paragraph--type-p-masonry-pub .views-row,
+  .paragraph--type-p-masonry.paragraph--view-mode-full .p-masonry__item .paragraph--type-p-masonry-facility .views-row,
+  .paragraph--type-p-masonry.paragraph--view-mode-full .p-masonry__item .paragraph--type-p-masonry-instrument .views-row {
+    opacity: 0;
+    transition: opacity 0.1s ease;
+  }
+
+  .paragraph--type-p-masonry.paragraph--view-mode-full .p-masonry__item.js-animate .paragraph--type-p-masonry-dataset .views-row,
+  .paragraph--type-p-masonry.paragraph--view-mode-full .p-masonry__item.js-animate .paragraph--type-p-masonry-pub .views-row,
+  .paragraph--type-p-masonry.paragraph--view-mode-full .p-masonry__item.js-animate .paragraph--type-p-masonry-facility .views-row,
+  .paragraph--type-p-masonry.paragraph--view-mode-full .p-masonry__item.js-animate .paragraph--type-p-masonry-instrument .views-row {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1025px) and (prefers-reduced-motion: reduce) {
+  .paragraph--type-p-masonry.paragraph--view-mode-full .p-masonry__item,
+  .paragraph--type-p-masonry.paragraph--view-mode-full .p-masonry__item .paragraph--type-p-masonry-dataset .views-row,
+  .paragraph--type-p-masonry.paragraph--view-mode-full .p-masonry__item .paragraph--type-p-masonry-pub .views-row,
+  .paragraph--type-p-masonry.paragraph--view-mode-full .p-masonry__item .paragraph--type-p-masonry-facility .views-row,
+  .paragraph--type-p-masonry.paragraph--view-mode-full .p-masonry__item .paragraph--type-p-masonry-instrument .views-row {
+    opacity: 1;
+    transition: none;
+  }
+}

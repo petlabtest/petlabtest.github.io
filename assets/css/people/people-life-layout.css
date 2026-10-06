@@ -1,0 +1,35 @@
+/* Shared People Life AppShell and workplace masonry composition. */
+body.page-people-people-life-cn .ll-static-background,
+body.page-people-people-life-en .ll-static-background {
+  background-image: url("../../pic/About/impact/semiconductor-wafer.jpg");
+}
+
+@media (min-width: 700px) {
+  .people-life-work-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "upop workplace"
+      "education workplace"
+      "career workplace";
+    align-items: start;
+    column-gap: 7.3%;
+    row-gap: 43px;
+    height: auto !important;
+  }
+
+  .people-life-work-grid > .p-masonry__item {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    width: auto !important;
+    height: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+  }
+
+  .people-life-work-grid > .p-masonry__item:nth-child(1) { grid-area: upop; }
+  .people-life-work-grid > .p-masonry__item:nth-child(2) { grid-area: workplace; }
+  .people-life-work-grid > .p-masonry__item:nth-child(3) { grid-area: education; }
+  .people-life-work-grid > .p-masonry__item:nth-child(4) { grid-area: career; }
+}

@@ -1,0 +1,105 @@
+/* Normalize the imported Instruments capabilities carousel into the source four-column card grid. */
+div.paragraph.paragraph--type-p-project-carousel.imported-capabilities {
+  width: 100% !important;
+  max-width: 1400px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.imported-capabilities .p-project-carousel__content,
+.imported-capabilities .view-r-d-area-blocks {
+  width: 100% !important;
+  max-width: 1400px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.imported-capabilities .view-r-d-area-blocks .view-content {
+  display: flex !important;
+  flex-flow: row wrap !important;
+  justify-content: space-between !important;
+  gap: 0 !important;
+  width: 100% !important;
+  max-width: 1400px !important;
+  height: auto !important;
+  margin: 35px auto 58px !important;
+  overflow: visible !important;
+  background: none !important;
+  transform: none !important;
+}
+
+.imported-capabilities .view-r-d-area-blocks .view-content::after {
+  display: none !important;
+}
+
+.imported-capabilities .view-r-d-area-blocks .views-row {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  display: block !important;
+  flex: 0 0 calc(25% - 10px) !important;
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  margin: 0 0 10px !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  background: transparent !important;
+}
+
+.imported-capabilities .view-r-d-area-blocks .paragraph--type-p-link-grid-link {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1 !important;
+  overflow: hidden !important;
+  background: #00305c !important;
+}
+
+.imported-capabilities .view-r-d-area-blocks picture,
+.imported-capabilities .view-r-d-area-blocks picture > div,
+.imported-capabilities .view-r-d-area-blocks .field--name-field-rdarea-er-image,
+.imported-capabilities .view-r-d-area-blocks .field--name-field-rdarea-er-image > div {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.imported-capabilities .view-r-d-area-blocks img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.imported-capabilities .view-r-d-area-blocks .slick-list,
+.imported-capabilities .view-r-d-area-blocks .slick-track {
+  display: contents !important;
+  width: auto !important;
+  height: auto !important;
+  transform: none !important;
+}
+
+@media (max-width: 1024px) {
+  .imported-capabilities .view-r-d-area-blocks .view-content {
+    margin: 54px auto 36px !important;
+  }
+
+  .imported-capabilities .view-r-d-area-blocks .views-row {
+    flex-basis: calc(50% - 2px) !important;
+  }
+}
+
+@media (max-width: 699px) {
+  .imported-capabilities .view-r-d-area-blocks .view-content {
+    margin: 40px auto 16px !important;
+  }
+
+  .imported-capabilities .view-r-d-area-blocks .views-row {
+    flex-basis: 100% !important;
+  }
+}

@@ -1,0 +1,600 @@
+@import url("./tech-featured-strengths-grid.css?v=20261003-staticgrid1");
+@import url("./tech-carousel-static-guard.css?v=20261006-carouselguard2");
+
+
+    /* Keep the two project images in a consistent frame across every row. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Vertical development timeline for the chip research milestones. */
+    .page-node-type-rdgroup .chip-progress-block {
+      width: 100%;
+      max-width: 1040px;
+      margin: 70px auto 105px;
+    }
+
+    .page-node-type-rdgroup .chip-progress-block .p-project-list__header {
+      margin-bottom: 52px;
+    }
+
+    .page-node-type-rdgroup .chip-progress-block .p-project-list__content,
+    .page-node-type-rdgroup .chip-progress-block .views-element-container {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .chip-progress-timeline {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none !important;
+    }
+
+    .chip-progress-timeline::before {
+      position: absolute;
+      top: 38px;
+      bottom: 38px;
+      left: 50%;
+      width: 2px;
+      background: #b7c2ca;
+      content: "";
+      transform: translateX(-50%);
+    }
+
+    .chip-progress-timeline__item {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 96px minmax(0, 1fr);
+      align-items: center;
+      min-width: 0;
+      margin: 0 !important;
+      padding: 0;
+      list-style: none !important;
+    }
+
+    /* Keep each milestone intact while drawing the alternating rows closer together. */
+    .chip-progress-timeline__item+.chip-progress-timeline__item {
+      margin-top: -86px !important;
+    }
+
+    .chip-progress-timeline__item::before,
+    .chip-progress-timeline__item::marker {
+      display: none !important;
+      content: none !important;
+    }
+
+    .chip-progress-timeline__year {
+      position: relative;
+      z-index: 2;
+      display: inline-flex;
+      grid-column: 2;
+      grid-row: 1;
+      width: 76px;
+      height: 76px;
+      align-items: center;
+      justify-content: center;
+      justify-self: center;
+      box-sizing: border-box;
+      border: 2px solid #0d558c;
+      border-radius: 50%;
+      background: #fff;
+      color: #0d558c;
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .chip-progress-timeline__item:last-child .chip-progress-timeline__year {
+      border-color: #f15a38;
+      color: #f15a38;
+    }
+
+    .chip-progress-timeline__content {
+      position: relative;
+      grid-column: 1;
+      grid-row: 1;
+      overflow: visible;
+      border-top: 5px solid #0d558c;
+      background: #eef2f4;
+      box-sizing: border-box;
+    }
+
+    .chip-progress-timeline__item:nth-child(even) .chip-progress-timeline__content {
+      grid-column: 3;
+    }
+
+    .chip-progress-timeline__content::after {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      width: 48px;
+      height: 2px;
+      background: #b7c2ca;
+      content: "";
+    }
+
+    .chip-progress-timeline__item:nth-child(even) .chip-progress-timeline__content::after {
+      right: 100%;
+      left: auto;
+    }
+
+    .chip-progress-timeline__item:last-child .chip-progress-timeline__content {
+      border-top-color: #f15a38;
+    }
+
+    .chip-progress-timeline__media {
+      display: flex;
+      width: 100%;
+      aspect-ratio: 16 / 8.6;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .chip-progress-timeline__media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .chip-progress-timeline__copy {
+      min-height: 164px;
+      padding: 25px 28px 27px;
+      box-sizing: border-box;
+    }
+
+    .chip-progress-timeline__copy h3 {
+      margin: 0 0 14px;
+      color: #102f43;
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 1.3;
+      text-transform: none;
+    }
+
+    .chip-progress-timeline__copy p {
+      margin: 0;
+      color: #344652;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 1100px) {
+      .page-node-type-rdgroup .chip-progress-block {
+        width: calc(100% - 72px);
+      }
+
+      .chip-progress-timeline__item {
+        grid-template-columns: minmax(0, 1fr) 82px minmax(0, 1fr);
+      }
+
+      .chip-progress-timeline__item+.chip-progress-timeline__item {
+        margin-top: -62px !important;
+      }
+
+      .chip-progress-timeline__copy {
+        min-height: 182px;
+        padding: 22px 22px 24px;
+      }
+    }
+
+    @media (max-width: 699px) {
+      .page-node-type-rdgroup .chip-progress-block {
+        width: calc(100% - 32px);
+        margin: 50px auto 70px;
+      }
+
+      .page-node-type-rdgroup .chip-progress-block .p-project-list__header {
+        margin-bottom: 36px;
+      }
+
+      .chip-progress-timeline {
+        gap: 8px;
+        padding-left: 58px;
+      }
+
+      .chip-progress-timeline::before {
+        top: 0;
+        bottom: 0;
+        left: 25px;
+        transform: none;
+      }
+
+      .chip-progress-timeline__item {
+        display: block;
+      }
+
+      .chip-progress-timeline__item+.chip-progress-timeline__item {
+        margin-top: 0 !important;
+      }
+
+      .chip-progress-timeline__year {
+        position: absolute;
+        top: 18px;
+        left: 0;
+        width: 52px;
+        height: 52px;
+        font-size: 17px;
+      }
+
+      .chip-progress-timeline__content {
+        width: 100%;
+        border-top-width: 0;
+        border-left: 5px solid #0d558c;
+      }
+
+      .chip-progress-timeline__content::after {
+        display: none;
+      }
+
+      .chip-progress-timeline__item:last-child .chip-progress-timeline__content {
+        border-left-color: #f15a38;
+      }
+
+      .chip-progress-timeline__copy {
+        min-height: 0;
+        padding: 22px 20px 24px;
+      }
+
+      .chip-progress-timeline__copy h3 {
+        font-size: 19px;
+      }
+    }
+
+    /* Application implementation: alternating image-and-copy panels. */
+    .page-node-type-rdgroup .chip-application-block {
+      width: 100%;
+      max-width: 1040px;
+      margin: 60px auto 90px;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .p-project-list__content,
+    .page-node-type-rdgroup .chip-application-block .views-element-container,
+    .page-node-type-rdgroup .chip-application-block .view,
+    .page-node-type-rdgroup .chip-application-block .view-content {
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .view-content {
+      display: flex !important;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .views-row {
+      display: grid !important;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      width: 100% !important;
+      min-height: 360px;
+      margin: 0 !important;
+      padding: 0 !important;
+      position: static !important;
+      transform: none !important;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .node {
+      display: contents !important;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .project-list__left {
+      grid-column: 1;
+      grid-row: 1;
+      width: 100% !important;
+      max-width: none !important;
+      min-width: 0;
+      height: 360px;
+      flex: none !important;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .project-list__right {
+      grid-column: 2;
+      grid-row: 1;
+      display: flex;
+      width: auto !important;
+      height: 360px;
+      min-width: 0;
+      flex-direction: column;
+      justify-content: center;
+      box-sizing: border-box;
+      padding: 48px 54px;
+      position: static !important;
+      background: #333436;
+      color: #fff;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .views-row:nth-child(even) .project-list__left {
+      grid-column: 2;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .views-row:nth-child(even) .project-list__right {
+      grid-column: 1;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .project-list__image {
+      display: block;
+      width: 100% !important;
+      height: 360px !important;
+      max-width: none !important;
+      background: #dfe5e9;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .project-list__image img {
+      display: block;
+      width: 100% !important;
+      height: 100% !important;
+      max-width: none !important;
+      max-height: none !important;
+      object-fit: cover;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .project-list__title {
+      margin: 0 0 28px;
+      color: #fff;
+      font-size: 25px;
+      font-weight: 500;
+      line-height: 1.2;
+      text-transform: none;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .project-list__title a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .project-list__summary {
+      color: #fff;
+      font-size: 15px;
+      line-height: 1.85;
+    }
+
+    @media (max-width: 699px) {
+      .page-node-type-rdgroup .chip-application-block {
+        width: calc(100% - 32px);
+        margin: 48px auto 70px;
+      }
+
+      .page-node-type-rdgroup .chip-application-block .views-row {
+        display: flex !important;
+        flex-direction: column;
+        min-height: 0;
+      }
+
+      .page-node-type-rdgroup .chip-application-block .project-list__left,
+      .page-node-type-rdgroup .chip-application-block .project-list__right {
+        width: 100% !important;
+        height: auto;
+        min-height: 0;
+      }
+
+      .page-node-type-rdgroup .chip-application-block .project-list__image {
+        height: auto !important;
+        aspect-ratio: 16 / 10;
+      }
+
+      .page-node-type-rdgroup .chip-application-block .project-list__right {
+        padding: 30px 26px 34px;
+      }
+
+      .page-node-type-rdgroup .chip-application-block .project-list__title {
+        margin-bottom: 16px;
+        font-size: 22px;
+      }
+    }
+
+    /* Application implementation: selected A Color Block treatment from the layout study. */
+    .page-node-type-rdgroup .chip-application-block {
+      width: min(1200px, calc(100% - 64px));
+      max-width: none;
+      margin: 72px auto 96px;
+    }
+
+    .page-node-type-rdgroup .chip-application-block>.p-project-list__header {
+      margin: 0 0 36px !important;
+      color: #111 !important;
+      font-size: clamp(34px, 4vw, 54px) !important;
+      line-height: 1.05 !important;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .view-content {
+      display: flex !important;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .views-row,
+    .page-node-type-rdgroup .chip-application-block .node {
+      position: relative;
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .views-row {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      height: 360px;
+      min-height: 360px;
+      gap: 0 !important;
+      overflow: hidden;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .node {
+      display: contents !important;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .project-list__left,
+    .page-node-type-rdgroup .chip-application-block .project-list__right {
+      grid-row: 1;
+      height: 360px !important;
+      min-height: 360px;
+      margin: 0 !important;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .project-list__left {
+      grid-column: 1;
+      width: 100% !important;
+      padding: 0 !important;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .project-list__right {
+      grid-column: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: auto !important;
+      padding: 52px 58px;
+      background: #0d558c;
+      color: #fff;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .views-row:nth-child(even) .project-list__left {
+      grid-column: 2;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .views-row:nth-child(even) .project-list__right {
+      grid-column: 1;
+      background: #16384f;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .project-list__image,
+    .page-node-type-rdgroup .chip-application-block .project-list__image img {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .project-list__image {
+      display: block;
+      overflow: hidden;
+      background: #dfe5e9;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .project-list__image img {
+      display: block;
+      max-width: none !important;
+      max-height: none !important;
+      object-fit: cover;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .project-list__title {
+      margin: 0 0 20px !important;
+      color: #fff !important;
+      font-size: 31px !important;
+      line-height: 1.12 !important;
+      text-transform: none !important;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .project-list__title a {
+      color: inherit !important;
+      text-decoration: none;
+    }
+
+    .page-node-type-rdgroup .chip-application-block .project-list__summary {
+      margin: 0 !important;
+      color: #e6f0f5 !important;
+      font-size: 16px !important;
+      line-height: 1.7 !important;
+    }
+
+    @media (max-width: 760px) {
+      .page-node-type-rdgroup .chip-application-block {
+        width: calc(100% - 32px);
+        margin: 48px auto 68px;
+      }
+
+      .page-node-type-rdgroup .chip-application-block>.p-project-list__header {
+        margin-bottom: 26px !important;
+      }
+
+      .page-node-type-rdgroup .chip-application-block .views-row {
+        display: flex !important;
+        flex-direction: column;
+        height: auto;
+        min-height: 0;
+        overflow: visible;
+      }
+
+      .page-node-type-rdgroup .chip-application-block .project-list__left,
+      .page-node-type-rdgroup .chip-application-block .project-list__right {
+        width: 100% !important;
+        min-height: 0 !important;
+      }
+
+      .page-node-type-rdgroup .chip-application-block .project-list__left {
+        height: auto !important;
+        aspect-ratio: 16 / 10;
+      }
+
+      .page-node-type-rdgroup .chip-application-block .project-list__right {
+        padding: 30px 26px 34px !important;
+      }
+
+      .page-node-type-rdgroup .chip-application-block .project-list__title {
+        font-size: 24px !important;
+      }
+    }
+
+    /* Chips keeps its narrower three-card grid; shared card behavior is imported above. */
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel {
+      width: 100% !important;
+      max-width: 1040px !important;
+      margin: 50px auto 90px !important;
+    }
+
+    /* Keep the introductory SiPM paragraph on the same horizontal grid as
+       the carousel heading instead of the narrower generic WYSIWYG width. */
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel>.paragraph--type-wysiwyg {
+      width: min(1600px, calc(100% - 60px)) !important;
+      max-width: none !important;
+      margin: 0 auto 30px !important;
+      padding: 0 !important;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel>.paragraph--type-wysiwyg .wysiwyg {
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .view-content {
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+
+    @media (max-width: 1100px) {
+      .page-node-type-rdgroup .paragraph--type-p-project-carousel .view-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+    }
+
+    @media (max-width: 699px) {
+      .page-node-type-rdgroup .paragraph--type-p-project-carousel>.paragraph--type-wysiwyg {
+        width: calc(100% - 30px) !important;
+      }
+
+      .page-node-type-rdgroup .paragraph--type-p-project-carousel .view-content {
+        grid-template-columns: 1fr !important;
+      }
+    }

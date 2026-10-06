@@ -1,0 +1,4 @@
+/* Shared static hero background for the bilingual Research Overview pages. */
+.paragraph--type-p-rdhero.paragraph--view-mode-full {
+  background-image: url('../../pic/School/xsclg.jpg');
+}

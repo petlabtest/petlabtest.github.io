@@ -1,0 +1,158 @@
+
+        .history-main {
+            background: #f5f4f0;
+            color: #111820;
+        }
+
+        .history-hero {
+            position: relative;
+            min-height: 360px;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            color: #fff;
+            background: #003360;
+        }
+
+        .history-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(0, 24, 40, .9), rgba(0, 31, 52, .32) 72%), linear-gradient(0deg, rgba(0, 18, 29, .64), transparent 58%);
+        }
+
+        .history-hero__content {
+            position: relative;
+            z-index: 1;
+            width: min(calc(100% - 64px), 1440px);
+            margin: 0 auto;
+            padding: 4.5rem 0 4rem;
+        }
+
+        .history-hero__content p {
+            margin: 0 0 .85rem;
+            font-size: .76rem;
+            font-weight: 700;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+        }
+
+        .history-hero h1 {
+            max-width: 760px;
+            margin: 0;
+            font-size: clamp(3rem, 7vw, 6.3rem);
+            line-height: .95;
+            letter-spacing: -.045em;
+        }
+
+        .history-hero__lede {
+            max-width: 680px;
+            margin: 1.5rem 0 0 !important;
+            font-size: clamp(1rem, 1.8vw, 1.3rem) !important;
+            font-weight: 400 !important;
+            line-height: 1.5;
+            letter-spacing: 0 !important;
+            text-transform: none !important;
+        }
+
+        .history-timeline {
+            width: min(calc(100% - 64px), 1440px);
+            margin: 0 auto;
+            padding: clamp(3rem, 7vw, 7rem) 0 clamp(4rem, 8vw, 8rem);
+        }
+
+        .history-timeline__heading {
+            display: grid;
+            grid-template-columns: minmax(220px, .75fr) minmax(0, 2fr);
+            gap: clamp(2rem, 7vw, 8rem);
+            align-items: start;
+            margin-bottom: 2.5rem;
+        }
+
+        .history-timeline__heading h2 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 4.4rem);
+            line-height: 1.04;
+            letter-spacing: -.04em;
+        }
+
+        .history-timeline__heading p {
+            max-width: 740px;
+            margin: .35rem 0 0;
+            color: #34414b;
+            font-size: 1.15rem;
+            line-height: 1.6;
+        }
+
+        #timeline-embed {
+            width: 100%;
+            height: clamp(620px, 57vw, 820px);
+            overflow: hidden;
+            background: #fff !important;
+            border: 1px solid #d7dce0;
+            box-shadow: 0 18px 50px rgba(0, 31, 54, .12);
+        }
+
+        #timeline-embed .tl-slide-content {
+            padding: 1.4rem !important;
+        }
+
+        #timeline-embed .tl-headline h2 {
+            color: #111820 !important;
+            font-size: clamp(1.6rem, 2.8vw, 2.5rem) !important;
+            line-height: 1.1 !important;
+        }
+
+        #timeline-embed .tl-time {
+            color: #0067a7 !important;
+            font-size: 1rem !important;
+            font-weight: 700;
+        }
+
+        #timeline-embed .tl-slide-title h3 {
+            color: #222 !important;
+            font-size: clamp(1.1rem, 1.7vw, 1.5rem) !important;
+            line-height: 1.25 !important;
+        }
+
+        #timeline-embed .tl-slide-text p {
+            color: #34414b !important;
+            font-size: 1rem !important;
+            line-height: 1.65 !important;
+        }
+
+        #timeline-embed .tl-slides {
+            background: #f7f7f7 !important;
+        }
+
+        @media (max-width: 700px) {
+            .history-hero {
+                min-height: 410px;
+            }
+
+            .history-hero__content,
+            .history-timeline {
+                width: min(calc(100% - 32px), 1440px);
+            }
+
+            .history-hero__content {
+                padding: 3.5rem 0 3rem;
+            }
+
+            .history-timeline__heading {
+                display: block;
+            }
+
+            .history-timeline__heading h2 {
+                margin-bottom: 1rem;
+            }
+
+            .history-timeline__heading p {
+                font-size: 1rem;
+            }
+
+            #timeline-embed {
+                height: 650px;
+            }
+        }
+    

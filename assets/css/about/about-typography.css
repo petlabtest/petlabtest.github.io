@@ -1,0 +1,155 @@
+/* Shared typography layer for the five About templates and team profiles. */
+:is(
+  body.page-about,
+  body.page-history,
+  body.page-impact,
+  body.page-about-leadership,
+  body.page-about-mission,
+  body.team-profile-page
+) {
+  --font: var(--font-family-sans);
+  font-family: var(--font-family-sans);
+  font-synthesis: none;
+}
+
+/*
+ * Normalize text roles without flattening the template-specific size scale.
+ * Icon spans retain their own font declarations because spans are not part of
+ * this selector.
+ */
+:is(
+  body.page-about,
+  body.page-history,
+  body.page-impact,
+  body.page-about-leadership,
+  body.page-about-mission,
+  body.team-profile-page
+) :where(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  li,
+  button,
+  input,
+  select,
+  textarea,
+  figcaption,
+  blockquote,
+  dt,
+  dd,
+  th,
+  td
+) {
+  font-family: var(--font-family-sans);
+}
+
+/* Leadership biographies retain an inline archived Poppins/Arial rule. */
+body.page-about-leadership .industry-list > .industry-item .industry-item-info p {
+  font-family: var(--font-family-sans) !important;
+}
+
+/* The shared chapter-navigation tiles have a legacy serif declaration that
+   otherwise selects each operating system's default Chinese serif. */
+:is(body.page-about, body.page-impact, body.page-about-leadership, body.page-history, body.page-about-mission) .ll-nav-title {
+  font-family: var(--font-family-sans) !important;
+}
+
+body.page-history #timeline-embed .tl-headline,
+body.page-history #timeline-embed .tl-headline h2,
+body.page-history #timeline-embed .tl-timegroup-message,
+body.page-history #timeline-embed .tl-slidenav-title {
+  font-family: "PT Sans Narrow", var(--font-family-cjk), sans-serif !important;
+}
+
+body.page-history #timeline-embed .tl-text p {
+  font-family: "PT Serif", var(--font-family-cjk), serif !important;
+}
+
+body.page-about-mission .intro .story p,
+body.page-about-mission #main > .ll-pub-section .wysiwyg {
+  font-family: var(--font-family-sans) !important;
+}
+
+body.page-impact video {
+  font-family: var(--font-family-sans) !important;
+}
+
+body.page-impact .field--name-field-caption {
+  font-family: var(--font-family-sans) !important;
+}
+
+@media (min-width: 700px) {
+  body.page-about-leadership:lang(en) .industry-list > .industry-item .industry-item-info p {
+    font-size: clamp(16px, 1.05vw, 19px) !important;
+    font-weight: 400;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 699px) {
+  /* The archived template uses 1vw as its rem root; reflow this template's
+     content so its text does not collapse to 3–8px on phones. */
+  body.page-about-leadership .industry-list > .industry-item {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 28px;
+  }
+
+  body.page-about-leadership .industry-list > .industry-item > .industry-item-img {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    height: 240px !important;
+  }
+
+  body.page-about-leadership .industry-list > .industry-item > .industry-item-info {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0;
+    padding: 24px !important;
+  }
+
+  body.page-about-leadership .industry-item-info h2,
+  body.page-about-leadership .team-card h3 {
+    font-size: 24px !important;
+  }
+
+  body.page-about-leadership .industry-list > .industry-item .industry-item-info p,
+  body.page-about-leadership .team-card p,
+  body.page-about-leadership .team-card p.detailed-intro {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.6;
+  }
+
+  body.page-about-leadership .industry-item-info > a {
+    position: static !important;
+    align-self: flex-end;
+    margin-top: 14px;
+  }
+
+  body.page-about-leadership .team-section {
+    padding: 48px 20px;
+  }
+
+  body.page-about-leadership .team-card {
+    width: 100%;
+    margin: 0 0 32px;
+    padding: 0;
+  }
+
+  body.page-about-leadership .team-card img {
+    width: 144px;
+    height: 150px;
+  }
+}

@@ -1,0 +1,4 @@
+/* Keep the bilingual Research Overview hero overlay at the same opacity. */
+.paragraph--type-p-rdhero.paragraph--view-mode-full::after {
+  background-color: rgba(0, 115, 207, 0.8);
+}

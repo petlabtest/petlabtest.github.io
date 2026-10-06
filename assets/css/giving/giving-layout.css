@@ -1,0 +1,67 @@
+
+
+    /* Match the hero geometry to the replacement image so it is never cropped. */
+    .page__header .hero--large-image {
+      height: auto !important;
+      margin-top: 0 !important;
+    }
+
+    .page__header .hero--large-image .hero__image {
+      height: auto !important;
+      padding-top: 37.7138% !important;
+    }
+
+    .page__header .hero--large-image .hero__image img {
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+      object-position: center center !important;
+    }
+
+    /* Preserve title contrast without creating a solid dark band below the image. */
+    .page__header .hero--large-image .hero__image::after {
+      background: linear-gradient(to bottom, transparent 55%, rgba(0, 0, 0, .42) 100%) !important;
+    }
+
+    @font-face {
+      font-family: "petlab-cta-icons";
+      src: url("../../fonts/root/media/r029.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+      font-display: block;
+    }
+
+    /* Match the arrow glyph and alignment used by the site's other CTAs. */
+    .page__content .cta--button::after {
+      display: inline-block !important;
+      width: auto !important;
+      height: auto !important;
+      margin-left: 10px !important;
+      content: "\e905" !important;
+      border: 0 !important;
+      font-family: "petlab-cta-icons" !important;
+      font-size: 12px !important;
+      font-style: normal !important;
+      font-weight: normal !important;
+      font-variant: normal !important;
+      line-height: 1 !important;
+      text-transform: none !important;
+      vertical-align: baseline !important;
+      position: relative !important;
+      top: -3px !important;
+      transform: none !important;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .page__content .cta--button .last-word::after {
+      content: none !important;
+    }
+
+    @media (max-width: 1024px) {
+      .page__content .cta--button::after {
+        top: -1px !important;
+        font-size: 10px !important;
+      }
+    }

@@ -1,0 +1,4 @@
+/* Tech detail pages share the CTA treatment; only their overlap differs. */
+.page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate {
+  margin-top: -300px;
+}

@@ -1,0 +1,11 @@
+/* Shared spacing for the bilingual Engage Inquiry form groups. */
+.engage-detail-page [data-drupal-selector="edit-top-contact"],
+.engage-detail-page [data-drupal-selector="edit-contact-side"],
+.engage-detail-page [data-drupal-selector="edit-contact-side-2"] {
+  margin: 0 !important;
+}
+
+.engage-detail-page #edit-contact-side .form-item-name,
+.engage-detail-page #edit-contact-side .form-item-title {
+  margin-bottom: 0 !important;
+}

@@ -1,0 +1,36 @@
+/* The archived shell remains in the source for fallback, but the shared
+       PETLab components are the only visible header and footer. */
+
+    /* Match the Datasets WebArchive title treatment. */
+    #block-dpet-theme-page-title {
+      position: relative;
+      z-index: 0;
+      min-height: 400px;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 138px 30px 160px;
+      overflow: hidden;
+      background: #00305c;
+      clip-path: polygon(0 0, 100% 0, 100% 68%, 0 100%);
+    }
+
+    #block-dpet-theme-page-title::after {
+      display: none;
+    }
+
+    #block-dpet-theme-page-title .page-title {
+      position: relative;
+      z-index: 1;
+      max-width: 1000px;
+      margin: 0 auto;
+      color: #fff;
+      line-height: 1.1;
+    }
+
+    @media (max-width: 700px) {
+      #block-dpet-theme-page-title {
+        min-height: 260px;
+        padding: 84px 20px 104px;
+        clip-path: polygon(0 0, 100% 0, 100% 72%, 0 100%);
+      }
+    }

@@ -1,0 +1,950 @@
+
+        /* Local replica of the publication template's professional-society section. */
+        @font-face {
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 300;
+            src: url("../../fonts/root/media/r024.woff2") format("woff2");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 400;
+            src: url("../../fonts/root/media/r025.woff2") format("woff2");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 500;
+            src: url("../../fonts/root/media/r026.woff2") format("woff2");
+            font-display: swap;
+        }
+
+        .page-impact {
+            --ll-pub-accent-blue: #0073cf;
+            --ll-pub-blue: #00305c;
+            --ll-pub-white: #fff;
+        }
+
+        .page-impact>#main-content {
+            background: #fff;
+        }
+
+        .page-impact>#main-content>.ll-pub-section {
+            position: relative;
+            width: 100%;
+            margin: 0;
+            background: #fff;
+            color: #000;
+            font-family: "Poppins", sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 35px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .ll-pub-section-inner {
+            position: relative;
+            z-index: 1;
+            width: min(1180px, calc(100% - 30px));
+            margin: 0 auto;
+            padding: 50px 15px;
+            clear: both;
+            background: #fff;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .ll-pub-section-inner::before {
+            display: none;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.js-animate .ll-pub-section-inner::before {
+            display: none;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .field__items,
+        .page-impact>#main-content>.ll-pub-section .field__item {
+            margin: 0;
+            padding: 0;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .ll-num-text-section {
+            display: flex;
+            flex-direction: row;
+            margin: 50px 0 0;
+            padding: 0 0 30px;
+            border-bottom: 2px solid var(--ll-pub-accent-blue);
+        }
+
+        .page-impact>#main-content>.ll-pub-section .num-section {
+            flex: 0 0 auto;
+            min-width: 140px;
+            margin: 0 50px 0 20px;
+            color: var(--ll-pub-accent-blue);
+            font-size: 96px;
+            font-weight: 300;
+            line-height: 1;
+            text-align: right;
+            opacity: 1;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .ll-num-text {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .ll-num-text h3 {
+            margin: 0 0 5px;
+            padding-top: 5px;
+            color: #000;
+            font-size: 46px;
+            font-weight: 600;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .ll-image-w-title {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin: 30px 0;
+            font-family: "Poppins", sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 35px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .field--name-field-p-side-image {
+            flex: 0 0 320px;
+            width: 320px;
+            min-width: 320px;
+            height: auto;
+            overflow: hidden;
+            background: transparent;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .field--name-field-p-side-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .ll-text-side {
+            flex: 1 1 auto;
+            min-width: 0;
+            min-height: 250px;
+            margin: 0 0 0 30px;
+            padding-top: 15px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .ll-text-side h4 {
+            margin: 0 0 20px;
+            color: #000;
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .page-impact>#main-content>.ll-pub-section .ll-text-side p {
+            margin: 0;
+            color: #000;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 35px;
+        }
+
+        @media (min-width: 550px) {
+            .page-impact>#main-content>.ll-pub-section .num-section {
+                min-width: 100px;
+                font-size: 86px;
+            }
+
+            .page-impact>#main-content>.ll-pub-section .ll-image-w-title {
+                flex-direction: row;
+                align-items: stretch;
+                gap: 0;
+            }
+        }
+
+        @media (min-width: 700px) {
+            .page-impact>#main-content>.ll-pub-section .ll-pub-section-inner {
+                padding: 100px 40px;
+            }
+
+            .page-impact>#main-content>.ll-pub-section .num-section {
+                min-width: 120px;
+            }
+
+            .page-impact>#main-content>.ll-pub-section .ll-text-side {
+                padding-top: 15px;
+            }
+        }
+
+        @media (min-width: 1225px) {
+            .page-impact>#main-content>.ll-pub-section .num-section {
+                min-width: 140px;
+                font-size: 96px;
+            }
+        }
+
+        @media (max-width: 549px) {
+            .page-impact>#main-content>.ll-pub-section .ll-num-text-section {
+                flex-direction: column;
+            }
+
+            .page-impact>#main-content>.ll-pub-section .ll-text-side {
+                min-height: 0;
+                margin-left: 0;
+            }
+
+            .page-impact>#main-content>.ll-pub-section .num-section {
+                min-width: 0;
+                margin: 0 0 12px;
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 549px) {
+            .page-impact>#main-content>.ll-pub-section .field--name-field-p-side-image {
+                width: min(320px, 100%);
+                min-width: 0;
+                height: auto;
+            }
+
+            .page-impact>#main-content>.ll-pub-section .field--name-field-p-side-image img {
+                height: auto;
+            }
+        }
+
+        /* Award module: restore the source page's grey panel and red-accent layout. */
+        .page-impact>#main-content>.ll-pub-section.award-transfer {
+            background: #ededed;
+            color: #000;
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.25;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer>.ll-pub-section-inner {
+            width: min(1060px, calc(100% - 30px));
+            margin: 0 auto;
+            padding: 50px 15px;
+            background: #ededed;
+            overflow: visible;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer>.ll-pub-section-inner::before,
+        .page-impact>#main-content>.ll-pub-section.award-transfer.js-animate>.ll-pub-section-inner::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            z-index: 2;
+            display: block;
+            top: -15px;
+            width: 600px;
+            max-width: calc(100% - 30px);
+            height: 20px;
+            background: #a71930;
+            clip-path: polygon(0 0, 0 100%, 100% 100%, calc(100% - 20px) 0);
+            transition: all .75s ease-in;
+        }
+
+        /* Exact source-page offsets for the transfer award module. */
+        .page-impact>#main-content>.ll-pub-section.award-transfer>.ll-pub-section-inner::before {
+            left: 60px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer.js-animate>.ll-pub-section-inner::before {
+            left: 60px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer figure.embedded-entity {
+            margin: 70px 0 30px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .wysiwyg p {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue {
+            padding: 0 20px;
+            font-family: "Poppins", sans-serif;
+            font-size: 25px;
+            line-height: 25px;
+            transition: padding-left .2s ease, padding-right .2s ease;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue::before {
+            width: 4px;
+            height: 18.5px;
+            transition: width .2s ease;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue::after {
+            content: none;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .ll-num-text-section {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin: 50px 0 0;
+            padding: 0 0 30px;
+            border-bottom: 2px solid #a71930;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .num-section {
+            flex: 0 0 auto;
+            min-width: 140px;
+            margin: 0 50px 0 20px;
+            color: #a71930;
+            font-size: 96px;
+            font-weight: 300;
+            line-height: 1;
+            text-align: right;
+            opacity: 1;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .ordinal-suffix {
+            font-size: .4em;
+            vertical-align: super;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .ll-num-text {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .ll-num-text h3 {
+            margin: 0 0 5px;
+            padding-top: 5px;
+            color: #000;
+            font-size: 38px;
+            font-weight: 600;
+            line-height: 1.1;
+            text-transform: uppercase;
+            font-synthesis: weight;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .paragraph--type-wysiwyg {
+            width: 100%;
+            margin: 0;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .wysiwyg {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer figure.embedded-entity {
+            width: 100%;
+            margin: 30px 0 35px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .wysiwyg-image,
+        .page-impact>#main-content>.ll-pub-section.award-transfer .wysiwyg-image .field__item,
+        .page-impact>#main-content>.ll-pub-section.award-transfer picture {
+            display: block;
+            width: 100%;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .wysiwyg-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .wysiwyg p {
+            margin: 0 0 24px;
+            color: #000;
+            font-family: "Poppins", Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 35px;
+            letter-spacing: 0;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .wysiwyg p:last-child {
+            margin-top: 30px;
+            margin-bottom: 0;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue {
+            position: relative;
+            display: inline-block;
+            padding: 0 0 0 18px;
+            color: #000;
+            font-family: "Poppins", Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.25;
+            letter-spacing: 0;
+            font-synthesis: weight;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 8px;
+            height: 24px;
+            background: #0073cf;
+            transform: translateY(-50%);
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue::after {
+            content: "›";
+            margin-left: 8px;
+            font-size: 22px;
+            line-height: 0;
+        }
+
+        @media (min-width: 700px) {
+            .page-impact>#main-content>.ll-pub-section.award-transfer>.ll-pub-section-inner {
+                padding: 100px 60px;
+            }
+
+            .page-impact>#main-content>.ll-pub-section.award-transfer .num-section {
+                min-width: 120px;
+                font-size: 86px;
+            }
+        }
+
+        @media (min-width: 1225px) {
+            .page-impact>#main-content>.ll-pub-section.award-transfer .num-section {
+                min-width: 140px;
+                font-size: 96px;
+            }
+        }
+
+        @media (max-width: 549px) {
+            .page-impact>#main-content>.ll-pub-section.award-transfer .ll-num-text-section {
+                flex-direction: column;
+            }
+
+            .page-impact>#main-content>.ll-pub-section.award-transfer .num-section {
+                min-width: 0;
+                margin: 0 0 12px;
+                text-align: left;
+            }
+
+            .page-impact>#main-content>.ll-pub-section.award-transfer .ll-num-text h3 {
+                font-size: 30px;
+            }
+        }
+
+        /* Keep the three imported award modules aligned with the source report page. */
+        .page-impact>#main-content>.ll-pub-section.award-transfer,
+        .page-impact>#main-content>.ll-content-gr.num-col-2,
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue {
+            font-family: "Poppins", sans-serif;
+            font-size: 20px;
+            line-height: 35px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer,
+        .page-impact>#main-content>.ll-content-gr.num-col-2,
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue {
+            margin-left: 50px;
+            margin-right: 50px;
+            width: auto;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer>.ll-pub-section-inner {
+            width: 1060px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 100px 60px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .ll-num-text h3,
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-num-text h3,
+        .page-impact>#main-content>.ll-content-gr.num-col-2 .ll-num-text h3 {
+            font-family: "Poppins", sans-serif;
+            font-size: 38px;
+            line-height: 1.1;
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2>div {
+            display: grid;
+            max-width: 1400px;
+            margin: 0 auto 50px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2>div>.field__item {
+            padding: 30px 50px 50px;
+            border-bottom: 2px solid var(--impact-blue);
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2>div>.field__item:nth-child(odd) {
+            border-left: none;
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2>div>.field__item:nth-child(even) {
+            border-left: 2px solid var(--impact-blue);
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2 .paragraph--type-wysiwyg {
+            max-width: 100%;
+            padding: 0 40px;
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2 .ll-num-text-section,
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-num-text-section {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            border-bottom: 2px solid var(--impact-blue);
+            padding-bottom: 30px;
+            margin-top: 50px;
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2 .num-section,
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .num-section {
+            flex: 0 0 auto;
+            min-width: 140px;
+            margin: 0 50px 0 20px;
+            color: var(--impact-blue);
+            font-size: 96px;
+            font-weight: 300;
+            line-height: 1;
+            text-align: right;
+            opacity: 1;
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2 .ordinal-suffix,
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ordinal-suffix {
+            font-size: .4em;
+            vertical-align: super;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue>.ll-pub-section-inner {
+            width: 1060px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 100px 60px;
+            background: #fff;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue>.ll-pub-section-inner::before {
+            content: "";
+            position: absolute;
+            top: -15px;
+            left: 60px;
+            z-index: 2;
+            display: block;
+            width: 600px;
+            max-width: calc(100% - 30px);
+            height: 20px;
+            background: #a71930;
+            clip-path: polygon(0 0, 0 100%, 100% 100%, calc(100% - 20px) 0);
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .paragraph--type-wysiwyg {
+            width: 100%;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .wysiwyg {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-image-w-title {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin: 30px 0;
+            font-family: "Poppins", sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 35px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .field--name-field-p-side-image {
+            flex: 0 0 350px;
+            width: 350px;
+            min-width: 350px;
+            height: 235px;
+            overflow: hidden;
+            background-color: #ededed;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .field--name-field-p-side-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-text-side {
+            flex: 1 1 auto;
+            min-width: 0;
+            min-height: 235px;
+            margin: 0 0 0 30px;
+            padding-top: 22px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-text-side h4,
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-text-side h2 {
+            margin: 0 0 10px;
+            font-family: "Poppins", sans-serif;
+            font-size: 26px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-text-side p {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 26px;
+        }
+
+        @media (min-width: 550px) {
+            .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-image-w-title {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .page-impact>#main-content>.ll-content-gr.num-col-2>div {
+                grid-template-columns: 1fr;
+            }
+
+            .page-impact>#main-content>.ll-content-gr.num-col-2>div>.field__item:nth-child(even) {
+                border-left: none;
+            }
+        }
+
+        @media (max-width: 549px) {
+
+            .page-impact>#main-content>.ll-pub-section.ll-background-light-blue>.ll-pub-section-inner::before {
+                left: 15px;
+            }
+
+            .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .field--name-field-p-side-image {
+                flex-basis: 100%;
+                width: 100%;
+                min-width: 0;
+                height: auto;
+            }
+
+            .page-impact>#main-content>.ll-pub-section.award-transfer,
+            .page-impact>#main-content>.ll-content-gr.num-col-2,
+            .page-impact>#main-content>.ll-pub-section.ll-background-light-blue {
+                margin-left: 13px;
+                margin-right: 13px;
+            }
+
+            .page-impact>#main-content>.ll-content-gr.num-col-2>div>.field__item {
+                min-width: 0;
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+
+            .page-impact>#main-content>.ll-pub-section.award-transfer>.ll-pub-section-inner,
+            .page-impact>#main-content>.ll-pub-section.ll-background-light-blue>.ll-pub-section-inner {
+                width: 100%;
+                padding: 50px 15px;
+            }
+
+            .page-impact>#main-content>.ll-content-gr.num-col-2 .ll-num-text-section,
+            .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-num-text-section {
+                flex-direction: column;
+            }
+
+            .page-impact>#main-content>.ll-content-gr.num-col-2 .num-section,
+            .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .num-section {
+                min-width: 0;
+                margin: 0 0 12px;
+                text-align: left;
+            }
+
+            .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-text-side {
+                min-height: 0;
+                margin-left: 0;
+            }
+        }
+
+        /* Final source-page overrides: keep these after the shared impact rules. */
+        .page-impact>#main-content>.ll-pub-section.award-transfer>.ll-pub-section-inner::before {
+            left: 60px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer.js-animate>.ll-pub-section-inner::before {
+            left: 60px;
+        }
+
+        @media (max-width: 549px) {
+            .page-impact>#main-content>.ll-pub-section.award-transfer>.ll-pub-section-inner::before,
+            .page-impact>#main-content>.ll-pub-section.award-transfer.js-animate>.ll-pub-section-inner::before {
+                left: 15px;
+            }
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer figure.embedded-entity {
+            margin: 70px 0 30px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .wysiwyg p {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue {
+            padding: 0 20px;
+            font-family: "Poppins", sans-serif;
+            font-size: 25px;
+            line-height: 25px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue::before {
+            width: 4px;
+            height: 18.5px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue::after {
+            content: none;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue .last-word::after {
+            content: "\e905";
+            display: inline-block;
+            position: relative;
+            top: -3px;
+            margin-left: 10px;
+            font-size: 12px;
+            line-height: 1;
+            font-family: "icomoon" !important;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue:hover,
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue:focus-visible {
+            padding-left: 36px;
+            padding-right: 0;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue:hover::before,
+        .page-impact>#main-content>.ll-pub-section.award-transfer .cta--button-blue:focus-visible::before {
+            width: 20px;
+        }
+
+        @font-face {
+            font-family: "icomoon";
+            src: url("../../fonts/root/media/r029.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Source-page typography and spacing for the lower award modules. */
+        .page-impact>#main-content>.ll-content-gr.num-col-2 {
+            font-weight: 300;
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2 .ll-num-text h3 {
+            margin: 0 0 5px;
+            padding-top: 5px;
+            font-weight: 600;
+            font-synthesis: weight;
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2 .wysiwyg p {
+            margin: 30px 0 0;
+            font-weight: 300;
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2>div>.field__item {
+            padding-bottom: 80px;
+        }
+
+        .page-impact>#main-content>.ll-content-gr.num-col-2>div>.field__item:nth-child(2) .ll-num-text h3 {
+            max-width: 250px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue {
+            background: transparent;
+            font-weight: 300;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue>.ll-pub-section-inner {
+            background: #ededed;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-num-text {
+            flex: 0 0 auto;
+        }
+
+        @media (max-width: 549px) {
+            .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-num-text {
+                flex: 1 1 auto;
+                min-width: 0;
+            }
+
+            .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-num-text h3 {
+                font-size: 32px !important;
+            }
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .wysiwyg p {
+            margin: 0 0 24px;
+            font-weight: 300;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .wysiwyg p:last-child {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .wysiwyg>p:first-child {
+            margin-top: 30px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-image-w-title {
+            margin-top: 30px;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue .field--name-field-p-ll-pub-pars>.field__item:nth-child(3) .ll-image-w-title {
+            margin-top: 60px;
+        }
+
+        /* Restore the source report's fixed scrolling background layer. */
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue>.ll-static-background {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 20px;
+            bottom: 20px;
+            z-index: 0;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-image: url("../../pic/About/impact/semiconductor-wafer.jpg");
+            pointer-events: none;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.ll-background-light-blue>.ll-pub-section-inner {
+            z-index: 1;
+        }
+
+        /* Video caption — light grey, matching News page .video__caption */
+        .video__caption {
+            margin: 8px 0 0;
+            color: #525252;
+            font-size: 14px;
+        }
+
+.page-impact .video__wrapper > video {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+}
+
+.page-impact .impact-patent-award-content {
+    margin-top: 100px;
+}
+
+.page-impact .impact-patent-award-description {
+    margin-top: 36px;
+}
+
+.page-impact .impact-team-achievements-image {
+    background-image: url("../../pic/About/impact/team-achievements-bg.jpg");
+    width: 67rem;
+    height: 35rem;
+    object-fit: cover;
+    left: 1.2rem;
+    top: -1.2rem;
+}
+
+        @media (min-width: 1025px) {
+            .video__caption {
+                font-size: 16px;
+                margin: 20px 0 0;
+            }
+        }
+
+        /* Section subtitle under h3 — descriptive lede, referencing News .ifde-page__intro */
+        .page-impact .ll-num-text p {
+            margin: 8px 0 0;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.6;
+            color: #5E6167;
+        }
+
+        @media (min-width: 700px) {
+            .page-impact .ll-num-text p {
+                font-size: 20px;
+            }
+        }
+
+        /* Floated right image — referencing People-UPOP / r015.css media.floated_right */
+        .page-impact>#main-content>.ll-pub-section.award-transfer figure.embedded-entity.align-right {
+            float: right;
+            margin: 8px 0 20px 24px;
+            width: 200px;
+        }
+
+        .award-transfer .wysiwyg-image--floated {
+            width: 100%;
+        }
+
+        .award-transfer .wysiwyg-image--floated img {
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+            display: block;
+        }
+
+        .page-impact>#main-content>.ll-pub-section.award-transfer .wysiwyg-image--floated .field--name-field-caption {
+            padding: 18px 10px 10px;
+            margin: 0;
+            font-size: 14px;
+            font-weight: 300;
+            color: #5E6167;
+            line-height: 1.75;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* Clearfix so floated image does not overflow the wysiwyg container */
+        .award-transfer .wysiwyg>div::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (min-width: 700px) {
+            .page-impact>#main-content>.ll-pub-section.award-transfer figure.embedded-entity.align-right {
+                width: 300px;
+                margin: 8px 0 30px 40px;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .page-impact>#main-content>.ll-pub-section.award-transfer figure.embedded-entity.align-right {
+                width: 350px;
+            }
+        }
+
+        /* Shared card-summary treatment formerly duplicated inline on both language pages. */
+        body.page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-image-w-title .ll-text-side p {
+            min-height: 4rem;
+            font-size: 1.25rem;
+        }
+
+        /* The Academic Impact card title shares its desktop value across languages. */
+        body.page-impact>#main-content>.ll-pub-section.ll-background-light-blue .ll-num-title h3 {
+            font-size: 56px;
+        }
+    

@@ -1,0 +1,16 @@
+.view-laboratory-story-list-grid .lab-grid__info h3 {
+  font-size: clamp(17px, 1.8vw, 25px) !important;
+}
+
+.view-laboratory-story-list-grid .lab-grid__wrapper:not(:hover):not(:focus-within) .lab-grid__info {
+  height: 84px !important;
+  min-height: 84px;
+}
+
+.view-laboratory-story-list-grid .lab-grid__wrapper:not(:hover):not(:focus-within) .lab-grid__info h3 {
+  margin: 0 !important;
+}
+
+.view-laboratory-story-list-grid .lab-grid__area {
+  font-size: clamp(15px, 1.2vw, 18px) !important;
+}

@@ -1,3 +1,5 @@
+@import url("./about/about-typography.css?v=20260923-5");
+
 /* Keep the shared About chapter navigation identical across all five pages. */
 .about-explore-section {
   margin-bottom: 30px;
@@ -108,6 +110,18 @@
 
 .about-explore-nav .ll-section-nav:hover .ll-pub-bottom-nav-img img {
   transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-explore-nav .ll-pub-bottom-nav-img::after,
+  .about-explore-nav .ll-pub-bottom-nav-img img {
+    transition: none;
+  }
+
+  .about-explore-nav .ll-pub-bottom-nav-img img,
+  .about-explore-nav .ll-section-nav:hover .ll-pub-bottom-nav-img img {
+    transform: none;
+  }
 }
 
 @media (min-width: 700px) {

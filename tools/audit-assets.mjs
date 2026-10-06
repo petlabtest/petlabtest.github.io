@@ -73,7 +73,10 @@ const allFiles = walk(root);
 const assetFiles = allFiles.filter(file => file.startsWith(`${assetsRoot}${path.sep}`));
 const assetByKey = new Map(assetFiles.map(file => [path.resolve(file).toLowerCase(), file]));
 const sourceRootExtensions = new Set(['.html', '.js', '.mjs', '.json', '.webmanifest']);
-const roots = allFiles.filter(file => !file.startsWith(`${assetsRoot}${path.sep}`) && sourceRootExtensions.has(path.extname(file).toLowerCase()));
+const toolsRoot = path.join(root, 'tools');
+const roots = allFiles.filter(file => !file.startsWith(`${assetsRoot}${path.sep}`)
+  && !file.startsWith(`${toolsRoot}${path.sep}`)
+  && sourceRootExtensions.has(path.extname(file).toLowerCase()));
 const used = new Set();
 const missing = new Map();
 const queue = [...roots];
@@ -127,8 +130,26 @@ function summarizeByTopLevel(files) {
   return Object.fromEntries([...summary].sort(([a], [b]) => a.localeCompare(b)));
 }
 
+function classifyMissingReference({ from, uri }) {
+  if (uri.startsWith('/themes/')) return 'legacyThemeRoot';
+  if (uri.startsWith('/modules/')) return 'legacyModuleRoot';
+  if (from.startsWith('Replicate/') && uri.startsWith('/')) return 'replicatedSubsiteRoot';
+  if (uri.startsWith('/Website/')) return 'workspaceRoot';
+  if (uri.includes('assets/')) return 'assetPath';
+  return 'other';
+}
+
+const missingReferences = [...missing.values()].map(reference => ({
+  ...reference,
+  category: classifyMissingReference(reference),
+}));
+const missingReferenceCategories = Object.fromEntries(
+  [...missingReferences.reduce((counts, reference) => counts.set(reference.category, (counts.get(reference.category) || 0) + 1), new Map())]
+    .sort(([a], [b]) => a.localeCompare(b)),
+);
+
 const report = {
-  htmlRoots: roots.length,
+  sourceRoots: roots.length,
   totalAssets: assetFiles.length,
   referencedAssets: used.size,
   unreferencedAssets: unreferenced.length,
@@ -136,7 +157,8 @@ const report = {
   duplicateGroups: duplicates.length,
   duplicateFiles: duplicates.reduce((sum, group) => sum + group.length, 0),
   duplicateReclaimableBytes: duplicateBytes,
-  missingReferences: [...missing.values()],
+  missingReferences,
+  missingReferenceCategories,
   assetsByTopLevel: summarizeByTopLevel(assetFiles),
   unreferencedByTopLevel: summarizeByTopLevel(unreferenced),
   unreferencedFiles: unreferenced.map(relative).sort(),

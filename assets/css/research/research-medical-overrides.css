@@ -1,0 +1,16 @@
+/* Medical overview differences stay grouped while remaining language-scoped. */
+body.page-research-research-medical-cn .paragraph--type-p-masonry {
+  margin-bottom: 0 !important;
+}
+
+body.page-research-research-medical-cn .paragraph--type-p-masonry + .paragraph--type-p-fullwidth.background--grey.slope--pos {
+  margin-top: 0 !important;
+}
+
+body.page-research-research-medical-cn .p-masonry__grid {
+  height: 1220px !important;
+}
+
+html[lang="en"] body.node-51 .p-project-carousel__content .project-carousel__content {
+  min-height: 510px !important;
+}

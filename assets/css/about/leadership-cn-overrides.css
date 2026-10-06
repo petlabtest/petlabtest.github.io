@@ -1,0 +1,20 @@
+.industry-list > .industry-item:not(.industry-item-alt) > .industry-item-img {
+  left: 6rem !important;
+}
+
+.industry-list > .industry-item .industry-item-info p {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: clamp(17px, 1.05vw, 19px) !important;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.team-card p {
+  font-size: clamp(14px, 0.95vw, 17px) !important;
+  line-height: 1.75;
+}
+
+.team-card p.detailed-intro {
+  font-size: clamp(14px, 0.9vw, 16px) !important;
+  line-height: 1.75;
+}

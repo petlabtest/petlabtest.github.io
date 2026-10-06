@@ -1,0 +1,58 @@
+@import url("./tech-featured-strengths-grid.css?v=20261003-staticgrid1");
+@import url("./tech-carousel-static-guard.css?v=20261003-carouselguard1");
+
+    /* Keep the hero frame fixed while revealing the complete upper row of brain scans. */
+    .hero--imaging-reconstruction .hero__image {
+      background-color: #000;
+    }
+
+    .hero--imaging-reconstruction .hero__image img {
+      top: clamp(24px, 4.5vw, 72px);
+    }
+
+    /* Keep the two project images in a consistent frame across every row. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Keep the Featured Progress introduction aligned with its project list. */
+    .page-node-type-rdgroup .paragraph--type-p-project-list>h4,
+    .page-node-type-rdgroup .paragraph--type-p-project-list>h4+p {
+      width: auto;
+      margin-left: 90px;
+      margin-right: 90px;
+    }
+
+
+
+
+    @media (max-width: 699px) {
+
+
+
+
+
+
+
+
+      .page-node-type-rdgroup .paragraph--type-p-project-list>h4,
+      .page-node-type-rdgroup .paragraph--type-p-project-list>h4+p {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+
+    
+
+    
+  

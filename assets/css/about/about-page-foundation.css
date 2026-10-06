@@ -1,0 +1,47 @@
+/* Shared reset and header containment for the About overview and Mission page families. */
+:root {
+  --navy: #031d31;
+  --deep: #06385f;
+  --blue: #0878c9;
+  --gray: #e4e4e4;
+  --ink: #171717;
+  --line: #d7dce0;
+  --shell: 1280px;
+  --orange: #f45a2b;
+  --font: Arial, "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff !important;
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Keep the shared header in the page stacking context so mega menus clear the hero. */
+[data-component="header"] {
+  transform: none;
+  will-change: auto;
+  isolation: auto;
+  opacity: 1;
+}

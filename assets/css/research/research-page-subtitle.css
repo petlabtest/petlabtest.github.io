@@ -1,0 +1,7 @@
+.hero__title-wrapper .hero__page-subtitle {
+  margin: 0.12em 0 0.9em;
+  color: #003c62;
+  font-size: clamp(1.15rem, 2vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.35;
+}

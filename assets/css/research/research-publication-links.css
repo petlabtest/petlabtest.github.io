@@ -1,0 +1,41 @@
+/* Shared link treatment for publication metadata and author lists. */
+.authors-more__link {
+  color: #000;
+}
+
+.publication-list__primary-tag,
+.publication-list__primary-tag a,
+.info__value--list,
+.info__value--list a {
+  color: #000 !important;
+  text-decoration: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+.flex-column a,
+.flex-column a::before,
+.flex-column a::after,
+.flex-column li {
+  color: #000 !important;
+  text-decoration: none !important;
+  border: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.flex-column a:hover,
+.flex-column a:focus,
+.flex-column a:active,
+.flex-column a:visited {
+  color: #000 !important;
+  text-decoration: none !important;
+  background: none !important;
+  outline: none !important;
+  cursor: text !important;
+}
+
+.flex-column a {
+  pointer-events: auto;
+  cursor: text !important;
+}

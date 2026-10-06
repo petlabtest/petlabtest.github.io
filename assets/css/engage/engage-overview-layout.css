@@ -1,0 +1,136 @@
+/* Shared Engage Overview layout fixes; kept at the original cascade position. */
+.hero-landing-cta-grid > .engage-overview-project-column {
+  padding-right: 15px;
+}
+
+/* Use the generic masonry text treatment inside the social masonry tile,
+   while retaining its original dark-blue panel and white type. */
+.paragraph--type-p-masonry-grid-socials {
+  background-color: #00305C !important;
+  color: #FFFFFF !important;
+}
+
+.paragraph--type-p-masonry-grid-socials>div {
+  width: 100%;
+  height: 100%;
+}
+
+.paragraph--type-p-masonry-grid-socials h3 {
+  margin: 0 0 16px;
+  line-height: 1.2;
+  color: #FFFFFF !important;
+}
+
+@media (min-width: 700px) {
+  .paragraph--type-p-masonry-grid-socials h3 {
+    line-height: 1.3;
+  }
+}
+
+@media (min-width: 1025px) {
+  .paragraph--type-p-masonry-grid-socials h3 {
+    font-size: 40px;
+    line-height: 1.25;
+    margin-bottom: 25px;
+  }
+}
+
+/* Keep the two Visit and Connect tiles on the same text baseline. */
+.paragraph--type-p-masonry.paragraph--view-mode-full .p-masonry__item>.paragraph--type-p-masonry-generic,
+.paragraph--type-p-masonry.paragraph--view-mode-full .p-masonry__item>.paragraph--type-p-masonry-grid-socials {
+  height: auto;
+  box-sizing: border-box;
+}
+
+.paragraph--type-p-masonry.paragraph--view-mode-full .p-masonry-generic__content,
+.paragraph--type-p-masonry.paragraph--view-mode-full .paragraph--type-p-masonry-grid-socials>div {
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.paragraph--type-p-masonry.paragraph--view-mode-full .p-masonry__item {
+  height: auto !important;
+  box-sizing: border-box;
+}
+
+.paragraph--type-p-masonry.paragraph--view-mode-full .p-masonry-generic__cta {
+  margin-top: 0;
+}
+
+.paragraph--type-p-masonry.paragraph--view-mode-full .paragraph--type-p-masonry-grid-socials .p-masonry-generic__body {
+  margin-bottom: 13px;
+}
+
+@media (min-width: 700px) {
+  .paragraph--type-p-masonry.paragraph--view-mode-full .paragraph--type-p-masonry-grid-socials .p-masonry-generic__body {
+    margin-bottom: 18px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .paragraph--type-p-masonry.paragraph--view-mode-full .paragraph--type-p-masonry-grid-socials .p-masonry-generic__body {
+    margin-bottom: 25px;
+  }
+}
+
+.paragraph--type-p-masonry.paragraph--view-mode-full .paragraph--type-p-masonry-grid-socials .p-masonry-generic__cta .cta--button,
+.paragraph--type-p-masonry.paragraph--view-mode-full .paragraph--type-p-masonry-grid-socials .p-masonry-generic__cta .cta--button * {
+  color: #FFFFFF !important;
+}
+
+/* These overrides must follow the archived stylesheet so its desktop 5-column rule
+   cannot override the requested 4-column layout. */
+.hero--landing-page .cat-grid {
+  background-image: url('../../pic/School/xsclg.jpg') !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+}
+
+.hero--landing-page .cat-grid .views-view-responsive-grid {
+  --views-responsive-grid--column-count: 4 !important;
+  --views-responsive-grid--cell-min-width: 100px;
+  --views-responsive-grid--layout-gap: 0px;
+}
+
+/* Keep all Relative News thumbnails on the same square canvas. The source
+   images have different aspect ratios, so explicitly constrain both the
+   media field and the image after the archived rules have loaded. */
+.paragraph--type-p-news3up .media--view-mode-news-3-up,
+.paragraph--type-p-news3up .field--name-field-news-er-image,
+.paragraph--type-p-news3up .media--view-mode-news-3-up .field--name-field-image,
+.paragraph--type-p-news3up .media--view-mode-news-3-up img {
+  display: block;
+  width: 100% !important;
+  height: 80vw !important;
+  max-height: 80vw !important;
+  overflow: hidden;
+}
+
+.paragraph--type-p-news3up .media--view-mode-news-3-up img {
+  object-fit: cover;
+}
+
+@media (min-width: 700px) {
+  .paragraph--type-p-news3up .media--view-mode-news-3-up,
+  .paragraph--type-p-news3up .field--name-field-news-er-image,
+  .paragraph--type-p-news3up .media--view-mode-news-3-up .field--name-field-image,
+  .paragraph--type-p-news3up .media--view-mode-news-3-up img {
+    height: 41vw !important;
+    max-height: 41vw !important;
+  }
+}
+
+@media (min-width: 961px) {
+  .paragraph--type-p-news3up .media--view-mode-news-3-up,
+  .paragraph--type-p-news3up .field--name-field-news-er-image,
+  .paragraph--type-p-news3up .media--view-mode-news-3-up .field--name-field-image,
+  .paragraph--type-p-news3up .media--view-mode-news-3-up img {
+    height: 320px !important;
+    max-height: 320px !important;
+  }
+}

@@ -1,0 +1,135 @@
+html,
+    body,
+    .layout-container,
+    main[role="main"],
+    .layout-content,
+    .region-content,
+    .petlab-component-host {
+      background: #fff !important
+    }
+
+    .ll-list-hide-head {
+      background: #f0f9ff !important
+    }
+
+    .ll-list-hide .ll-desc {
+      background: #00305c !important;
+      color: #fff !important
+    }
+
+    .ll-list-hide-head {
+      padding-top: 0 !important
+    }
+
+    .ll-list-hide-list .li-title-desc[data-index="0"] h3 {
+      margin-top: 0 !important;
+    }
+
+    .ll-list-hide-list .li-title-desc[data-index="0"] {
+      padding-top: 70px !important;
+    }
+
+    .ll-list-hide-list .li-title-desc[data-index="0"].current-section::before {
+      top: 70px !important;
+    }
+
+    /* Give the six research-platform entries more breathing room while
+       keeping the first item’s existing top offset intact. */
+    .ll-list-hide-list .field__item+.field__item {
+      margin-top: 40px;
+    }
+
+    @media (max-width: 699px) {
+      .ll-list-hide-list .field__item+.field__item {
+        margin-top: 26px;
+      }
+    }
+
+    .ll-list-hide-head>div>h2,
+    .ll-list-hide-head>div>div {
+      transform: translateY(-15px);
+    }
+
+    .ll-list-hide-description .ll-sh-prev::after,
+    .ll-list-hide-description .ll-sh-next::after {
+      content: "" !important;
+      display: block;
+      width: 14px;
+      height: 14px;
+      font-size: 0 !important;
+      border-top: 4px solid #0073cf;
+      border-right: 4px solid #0073cf;
+      border-bottom: 0;
+      border-left: 0;
+      transform-origin: center;
+    }
+
+    .ll-list-hide-description .ll-sh-next::after {
+      transform: rotate(45deg);
+    }
+
+    .ll-list-hide-description .ll-sh-prev::after {
+      transform: rotate(-135deg);
+    }
+
+    .ll-list-hide-description .ll-sh-prev {
+      transform: none !important;
+    }
+
+    .ll-list-hide-description {
+      background: #f0f9ff !important
+    }
+
+    main[role="main"] {
+      padding-top: 0 !important
+    }
+
+    .capabilities-hero {
+      position: relative;
+      min-height: min(78vh, 820px);
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      box-sizing: border-box;
+      overflow: hidden;
+      color: #fff;
+      background-color: #112c40;
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, .76), transparent 54%), linear-gradient(90deg, rgba(0, 20, 34, .18), transparent 70%), url("../../pic/root/media/capabilities1.png");
+      background-size: cover;
+      background-position: center 25%;
+      background-repeat: no-repeat
+    }
+
+    .capabilities-hero__inner {
+      position: relative;
+      z-index: 1;
+      width: min(calc(100% - 116px), var(--shell, 1160px));
+      margin: 0 auto;
+      padding: 0 0 52px 18px;
+      box-sizing: border-box
+    }
+
+    .capabilities-hero h1 {
+      margin: 0;
+      color: #fff;
+      font-size: clamp(3rem, 6vw, 5.2rem);
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: .02em
+    }
+
+    @media(max-width:700px) {
+      .capabilities-hero {
+        min-height: 58vh;
+        background-position: center
+      }
+
+      .capabilities-hero__inner {
+        width: calc(100% - 40px);
+        padding: 0 0 32px
+      }
+
+      .capabilities-hero h1 {
+        font-size: clamp(2.5rem, 12vw, 4rem)
+      }
+    }

@@ -1,0 +1,27 @@
+.news-overview-main {
+  width: min(68vw, 1088px) !important;
+  margin: 0 auto !important;
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  html[lang="en"] #news_event_focus .events-card-title {
+    min-height: 4.2em;
+  }
+}
+
+html[lang="en"] .conference-panel {
+  height: 34rem !important;
+  min-height: 34rem;
+}
+
+html[lang="en"] .conference-panel .conf-card p:last-of-type {
+  font-size: .9rem !important;
+  line-height: 1.5 !important;
+}
+
+@media (max-width: 900px) {
+  html[lang="en"] .conference-panel {
+    height: auto !important;
+    min-height: 0;
+  }
+}

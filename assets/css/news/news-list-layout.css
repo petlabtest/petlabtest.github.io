@@ -1,0 +1,101 @@
+/* Align category labels with the image and keep summaries compact. */
+    .view-news-list .node {
+      align-items: flex-start;
+    }
+
+    .view-news-list .group-left,
+    .view-news-list .group-right {
+      align-self: flex-start;
+    }
+
+    .view-news-list .group-right {
+      padding-top: 12px !important;
+    }
+
+    .view-news-list .field--name-field-news-tr-type {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+
+    .view-news-list .group-info {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      min-height: 26px;
+      margin-bottom: 8px;
+      gap: 0 10px;
+    }
+
+    .view-news-list .group-info .field {
+      float: none !important;
+    }
+
+    .view-news-list .news-source {
+      color: #525252;
+    }
+
+    .view-news-list .field--name-dpet-news-featured-summary {
+      display: block !important;
+      width: 100%;
+      white-space: normal !important;
+    }
+
+    .view-news-list .field--name-dpet-news-featured-summary p {
+      margin-bottom: 0;
+      white-space: normal !important;
+      overflow-wrap: anywhere;
+    }
+
+    @media (min-width: 700px) {
+      .view-news-list .node--view-mode-list .group-left {
+        width: 32% !important;
+      }
+
+      .view-news-list .node--view-mode-list .group-right {
+        width: 64% !important;
+      }
+
+      .view-news-list .field--name-field-news-er-image,
+      .view-news-list .field--name-field-news-er-image .field__item {
+        width: 100% !important;
+      }
+
+      .view-news-list .image-style-list {
+        display: block;
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 5 / 3;
+        max-width: none;
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+
+    /* Match the taller mission/vision-style title banner. */
+    body:not(.path-node):not(.path-user) .block-page-title-block {
+      min-height: 360px;
+      padding-top: 160px;
+      padding-bottom: 150px;
+    }
+
+    @media (min-width: 1025px) {
+      body:not(.path-node):not(.path-user) .block-page-title-block {
+        min-height: 535px;
+        padding-top: 230px;
+        padding-bottom: 210px;
+      }
+    }
+
+    /* Keep the archive title banner above the page background in the static build. */
+    .news-row-hidden {
+      display: none !important;
+    }
+
+    body:not(.path-node):not(.path-user) .block-page-title-block::after {
+      z-index: 0;
+    }
+
+    body:not(.path-node):not(.path-user) .block-page-title-block h1 {
+      position: relative;
+      z-index: 1;
+    }

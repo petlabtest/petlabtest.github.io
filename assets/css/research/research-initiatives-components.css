@@ -1,0 +1,47 @@
+/* Shared Research Initiatives hero, video-cover, and project-carousel layout. */
+@media (min-width: 1025px) {
+  body.path-node.page-node-type-rdarea .hero.hero--large-image {
+    margin-top: -50px;
+  }
+}
+
+.paragraph--type-wysiwyg .video.wysiwyg-video--full .video__cover {
+  overflow: hidden;
+}
+
+.paragraph--type-wysiwyg .video.wysiwyg-video--full .video__cover>img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.paragraph--type-p-project-carousel .project-carousel__image-wrapper {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.paragraph--type-p-project-carousel .project-carousel__image,
+.paragraph--type-p-project-carousel .project-carousel__image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.paragraph--type-p-project-carousel .project-carousel__image-wrapper>a,
+.paragraph--type-p-project-carousel .project-carousel__image-wrapper .field-group-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.paragraph--type-p-project-carousel .project-carousel__image-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

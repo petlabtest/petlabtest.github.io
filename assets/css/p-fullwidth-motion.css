@@ -1,0 +1,20 @@
+/* Shared entrance motion for full-width Drupal paragraph content. */
+.paragraph--type-p-fullwidth .p-fullwidth__content {
+  opacity: 0;
+  transition: opacity 0.3s ease-in, transform 0.4s ease-in;
+  transition-delay: 0.5s;
+  transform: translateY(1em);
+}
+
+.paragraph--type-p-fullwidth.js-animate .p-fullwidth__content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .paragraph--type-p-fullwidth .p-fullwidth__content {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

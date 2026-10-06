@@ -1,0 +1,267 @@
+
+    .intro {
+      margin: 0 auto;
+      color: var(--ink)
+    }
+
+    .story {
+      margin: 0 0 224px
+    }
+
+    .story:last-child {
+      margin-bottom: 0
+    }
+
+    .story p {
+      margin: 0 0 24px
+    }
+
+    /* Match the WYSIWYG body text used by Template-About-OurPurpose. */
+    .intro .story,
+    .intro .story p {
+      font-family: "Poppins", sans-serif;
+      font-weight: 300
+    }
+
+    .intro .story p {
+      font-size: 16px;
+      line-height: 1.75
+    }
+
+    @media (min-width: 1025px) {
+      .intro .story p {
+        font-size: 20px
+      }
+    }
+
+    /* Chapter navigation styles; kept independent from the editable card content. */
+    #main>.dpet-ll-pub-nav-chapters {
+      width: 100%;
+      margin: 0;
+      padding: 30px;
+      background: rgba(0, 25, 41, .95);
+      color: #fff
+    }
+
+    @media (min-width: 1025px) {
+      #main>.dpet-ll-pub-nav-chapters {
+        padding-top: 60px;
+        padding-bottom: 80px
+      }
+    }
+
+    #main>.dpet-ll-pub-nav-chapters .dpet-ll-pub-nav-chapters-inner {
+      max-width: 1600px;
+      margin: 0 auto 50px
+    }
+
+    #main>.dpet-ll-pub-nav-chapters h3 {
+      margin: 0 0 40px;
+      color: #fff;
+      font-size: 30px;
+      line-height: 1.25;
+      text-transform: uppercase
+    }
+
+    #main>.dpet-ll-pub-nav-chapters .dpet-ll-pub-bottom-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none
+    }
+
+    #main>.dpet-ll-pub-nav-chapters .dpet-ll-pub-bottom-nav>li {
+      position: relative;
+      flex: 0 0 100%;
+      min-width: 0;
+      margin: 0;
+      list-style: none
+    }
+
+    @media (min-width: 700px) {
+      #main>.dpet-ll-pub-nav-chapters .dpet-ll-pub-bottom-nav>li {
+        flex-basis: calc(50% - 5px)
+      }
+    }
+
+    @media (min-width: 1025px) {
+      #main>.dpet-ll-pub-nav-chapters .dpet-ll-pub-bottom-nav>li {
+        flex-basis: calc(20% - 8px)
+      }
+    }
+
+    /* Template1 main-content rhythm */
+    .intro {
+      width: 940px;
+      max-width: calc(100% - 40px);
+      padding-top: 40px;
+      padding-bottom: 90px;
+      font-size: 20px;
+      line-height: 35px
+    }
+
+    .story {
+      margin-bottom: 224px
+    }
+
+    /* Recreate the publication-section component copied from Our Purpose. */
+    #main>.ll-pub-section {
+      position: relative;
+      width: 100%;
+      padding: 0;
+      background: #00305c;
+      color: #000
+    }
+
+    #main>.ll-pub-section .ll-pub-section-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 50px 15px;
+      background: #fff
+    }
+
+    #main>.ll-pub-section .ll-pub-section-inner::before {
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: min(600px, calc(100% - 30px));
+      height: 20px;
+      background: #008eff;
+      clip-path: polygon(0 0, 0 100%, 100% 100%, calc(100% - 20px) 0);
+      content: ""
+    }
+
+    #main>.ll-pub-section.ll-accent-red.ll-background-grey {
+      background: #ededed
+    }
+
+    #main>.ll-pub-section.ll-accent-red.ll-background-grey .ll-pub-section-inner {
+      background: #ededed
+    }
+
+    #main>.ll-pub-section.ll-accent-red.ll-background-grey .ll-pub-section-inner::before {
+      background: #a71930
+    }
+
+    #main>.ll-pub-section .ll-pub-section-content {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto
+    }
+
+    #main>.ll-pub-section h2 {
+      margin: 5px 0 30px;
+      font-size: clamp(2rem, 4vw, 3.15rem);
+      line-height: 1.1;
+      font-weight: 600;
+      text-transform: none
+    }
+
+    #main>.ll-pub-section h3.ll-title-bl {
+      margin: 37px 0 30px;
+      color: #008eff;
+      font-size: clamp(1.6rem, 3vw, 2.5rem);
+      line-height: 1.1;
+      font-weight: 600
+    }
+
+    #main>.ll-pub-section .wysiwyg {
+      max-width: 1000px;
+      margin: 0 auto;
+      font-family: "Poppins", sans-serif;
+      font-weight: 300
+    }
+
+    #main>.ll-pub-section .wysiwyg p {
+      margin: 0 0 1.2em;
+      font-size: 16px;
+      line-height: 1.75
+    }
+
+    #main>.ll-pub-section .wysiwyg strong,
+    #main>.ll-pub-section .wysiwyg b {
+      font-weight: 600
+    }
+
+    #main>.ll-pub-section .wysiwyg ul {
+      margin: 0 0 1.2em;
+      padding: 0;
+      list-style: none
+    }
+
+    #main>.ll-pub-section .wysiwyg li {
+      position: relative;
+      margin: 0 0 3px;
+      padding-left: 29px;
+      font-size: 16px;
+      line-height: 1.75
+    }
+
+    #main>.ll-pub-section .wysiwyg li::before {
+      position: absolute;
+      top: .72em;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      background: #008eff;
+      content: ""
+    }
+
+    #main>.ll-pub-section .ll-two-by-callout {
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    #main>.ll-pub-section .ll-two-by-callout>div {
+      flex: 1;
+      padding: 30px;
+      background: #ebebeb
+    }
+
+    #main>.ll-pub-section .ll-two-by-callout h4 {
+      margin: 0 0 14px;
+      font-size: 20px;
+      line-height: 1.3;
+      font-weight: 600
+    }
+
+    @media (min-width: 700px) {
+      #main>.ll-pub-section .ll-pub-section-inner {
+        padding: 100px 60px
+      }
+
+      #main>.ll-pub-section .wysiwyg p,
+      #main>.ll-pub-section .wysiwyg li {
+        font-size: 20px
+      }
+
+      #main>.ll-pub-section .ll-two-by-callout {
+        flex-direction: row
+      }
+
+      #main>.ll-pub-section .ll-two-by-callout h4 {
+        font-size: 25px
+      }
+    }
+
+    @media(max-width:900px) {
+      .intro {
+        width: calc(100% - 40px);
+        max-width: none;
+        padding-top: 65px
+      }
+
+    }
+
+    @media(min-width:901px) {
+      .story {
+        margin-bottom: 311px
+      }
+
+    }
+  

@@ -1,0 +1,16 @@
+/* Shared layout corrections for the bilingual Research Collaboration pages. */
+@media (min-width: 1025px) {
+  .page__inner>.page__intro>.ifde-page__intro {
+    margin-top: 16px !important;
+  }
+}
+
+.page__inner {
+  margin-top: -2rem !important;
+}
+
+@media (max-width: 699px) {
+  .page__inner {
+    margin-top: -1rem !important;
+  }
+}

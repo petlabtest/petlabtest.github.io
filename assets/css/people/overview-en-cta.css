@@ -1,0 +1,26 @@
+/* Keep the archived CTA chevron visible without its icon font. */
+.region-content a.cta--button .last-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.region-content a.cta--button .last-word::after {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 0 2px 12px;
+  content: "";
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform .2s ease;
+}
+
+.region-content a.cta--button:hover .last-word::after,
+.region-content a.cta--button:focus-visible .last-word::after {
+  transform: translateX(3px) rotate(45deg);
+}
+
+.paragraph--type-p-fullwidth.background--dark-blue .p-fullwidth__cta a.cta--button {
+  color: #fff;
+}

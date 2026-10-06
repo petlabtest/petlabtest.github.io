@@ -1,0 +1,115 @@
+/* Typography contract for the bilingual News overview template. */
+body.page-news-overview {
+  font-family: var(--font-family-sans);
+  font-synthesis: none;
+}
+
+/*
+ * The archived overview contains several !important font-family declarations.
+ * This single last-loaded rule replaces those legacy families while leaving
+ * the established title, summary and metadata size hierarchy unchanged.
+ */
+body.page-news-overview :where(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  li,
+  button,
+  input,
+  select,
+  textarea,
+  figcaption,
+  blockquote,
+  dt,
+  dd,
+  th,
+  td
+) {
+  font-family: var(--font-family-sans) !important;
+}
+
+body.page-news-overview .group-info,
+body.page-news-overview .news-source,
+body.page-news-overview .field--name-field-news-date {
+  font-family: var(--font-family-sans) !important;
+  font-weight: var(--font-weight-regular);
+}
+
+/* Archived title spans and metadata divs are outside the semantic text
+   selectors above and had a platform-specific Chinese fallback stack. */
+body.page-news-overview :where(
+  .home-news__title-link > span:first-child,
+  .section-heading-match,
+  .dc-video-title,
+  p > span
+) {
+  font-family: var(--font-family-sans) !important;
+}
+
+body.page-news-overview .field--name-dpet-news-featured-summary,
+body.page-news-overview .updt3-card-title-content {
+  font-weight: var(--font-weight-regular);
+}
+
+body.page-news-overview .people-stories-inner .tc-pt-b-title {
+  font-family: var(--font-family-sans) !important;
+}
+
+/* Legacy rem sizes are based on a 1vw root and become unreadably small on
+   phones. Keep this correction scoped to the News overview content. */
+@media (max-width: 767px) {
+  body.page-news-overview .news-overview-main :where(p, li, dt, dd, figcaption) {
+    font-size: 15px !important;
+    line-height: 1.55;
+  }
+
+  /* The legacy conference-card rule is more specific and also !important. */
+  body.page-news-overview .conference-panel .conf-card p:last-of-type {
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+  }
+
+  body.page-news-overview .news-overview-main :where(h2, .section-heading-match) {
+    font-size: 26px !important;
+    line-height: 1.25;
+  }
+
+  body.page-news-overview .news-overview-main :where(h3, .events-card-title) {
+    font-size: 18px !important;
+    line-height: 1.4 !important;
+  }
+
+  body.page-news-overview .focus-news-container .primary-story h3 {
+    font-size: 21px !important;
+  }
+
+  body.page-news-overview .focus-news-container .news-item h3 {
+    font-size: 17px !important;
+  }
+
+  body.page-news-overview .focus-news-container .group-info,
+  body.page-news-overview .focus-news-container .group-info :where(span, time),
+  body.page-news-overview .news-source,
+  body.page-news-overview .field--name-field-news-date {
+    font-size: 12px !important;
+    line-height: 1.4;
+  }
+
+  body.page-news-overview .ffootnote-cta-slim {
+    font-size: 18px !important;
+  }
+
+  body.page-news-overview .dc-video-title {
+    font-size: 14px !important;
+    line-height: 1.45;
+  }
+
+  body.page-news-overview #news_event_focus .tc-pt-b-grid-3 {
+    grid-template-columns: 1fr !important;
+  }
+}

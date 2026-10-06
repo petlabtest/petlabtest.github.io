@@ -12,16 +12,8 @@
   will-change: opacity, transform, clip-path;
 }
 
-.home.home-motion-ready [data-home-effect="fade-left"] {
-  transform: translate3d(42px, 0, 0);
-}
-
 .home.home-motion-ready [data-home-effect="fade-right"] {
   transform: translate3d(-42px, 0, 0);
-}
-
-.home.home-motion-ready [data-home-effect="soft-scale"] {
-  transform: translate3d(0, 24px, 0) scale(.965);
 }
 
 .home.home-motion-ready [data-home-effect="content-group"] {
@@ -226,7 +218,6 @@
     transition-duration: 400ms, 460ms, 520ms;
   }
 
-  .home.home-motion-ready [data-home-effect="fade-left"],
   .home.home-motion-ready [data-home-effect="fade-right"] {
     transform: translate3d(24px, 0, 0);
   }

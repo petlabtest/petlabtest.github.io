@@ -1,0 +1,5 @@
+/* Keep the final full-width callout attached to the shared footer. */
+.ifde-page__paragraphs > .paragraph--type-p-fullwidth:last-child,
+.page__content {
+  margin-bottom: 0 !important;
+}

@@ -1,0 +1,102 @@
+/* Shared rules used by research-group detail pages. */
+
+.page-node-type-rdgroup a.cta--button::after {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 0 2px 12px;
+  content: "";
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform .2s ease;
+}
+
+.page-node-type-rdgroup a.cta--button .last-word::after {
+  display: none !important;
+  content: none !important;
+}
+
+.page-node-type-rdgroup a.cta--button:hover::after,
+.page-node-type-rdgroup a.cta--button:focus-visible::after {
+  transform: translateX(3px) rotate(45deg);
+}
+
+.page-node-type-rdgroup .paragraph--type-p-project-list .project-list__right {
+  padding-top: 0 !important;
+}
+
+@media (min-width: 700px) and (max-width: 1024px) {
+  .page-node-type-rdgroup .paragraph--type-p-project-list .project-list__left {
+    width: 140px;
+  }
+
+  .page-node-type-rdgroup .paragraph--type-p-project-list .project-list__right {
+    width: calc(100% - 140px);
+  }
+}
+
+@media (min-width: 1025px) {
+  .page-node-type-rdgroup .paragraph--type-p-project-list .project-list__left {
+    width: 300px;
+  }
+
+  .page-node-type-rdgroup .paragraph--type-p-project-list .project-list__right {
+    width: calc(100% - 300px);
+  }
+
+  html[lang] .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate {
+    margin-top: -300px !important;
+  }
+}
+
+html[lang="zh-CN"] .page-node-type-rdgroup .paragraph--type-p-fullwidth .p-fullwidth__cta a.cta--button,
+html[lang="zh-CN"] .page-node-type-rdgroup .paragraph--type-p-fullwidth .p-fullwidth__cta a.cta--button:link,
+html[lang="zh-CN"] .page-node-type-rdgroup .paragraph--type-p-fullwidth .p-fullwidth__cta a.cta--button:visited {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0 20px;
+  border: 0 !important;
+  background: none !important;
+  color: #000 !important;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-decoration: none !important;
+  transition: padding .2s ease;
+}
+
+html[lang="zh-CN"] .page-node-type-rdgroup .paragraph--type-p-fullwidth .p-fullwidth__cta a.cta--button:hover,
+html[lang="zh-CN"] .page-node-type-rdgroup .paragraph--type-p-fullwidth .p-fullwidth__cta a.cta--button:focus-visible {
+  padding-right: 0;
+  padding-left: 36px;
+  background: none !important;
+  color: #000 !important;
+  text-decoration: none !important;
+}
+
+html[lang="zh-CN"] .page-node-type-rdgroup .paragraph--type-p-fullwidth .p-fullwidth__cta a.cta--button::before {
+  position: absolute;
+  top: 48%;
+  left: 0;
+  width: 4px;
+  height: 74%;
+  content: "";
+  background: #f45a2b;
+  transform: translateY(-50%);
+  transition: width .2s ease;
+}
+
+html[lang="zh-CN"] .page-node-type-rdgroup .paragraph--type-p-fullwidth .p-fullwidth__cta a.cta--button:hover::before,
+html[lang="zh-CN"] .page-node-type-rdgroup .paragraph--type-p-fullwidth .p-fullwidth__cta a.cta--button:focus-visible::before {
+  width: 20px;
+}
+
+@media (max-width: 699px) {
+  html[lang="zh-CN"] .page-node-type-rdgroup .paragraph--type-p-fullwidth .p-fullwidth__cta a.cta--button {
+    font-size: 16px;
+  }
+}

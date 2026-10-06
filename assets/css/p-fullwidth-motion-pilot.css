@@ -1,0 +1,47 @@
+/* Pilot: separate fullwidth entrance visibility from legacy js-animate styling. */
+html.p-fullwidth-motion-ready .paragraph--type-p-fullwidth.js-animate::after {
+  width: 0;
+}
+
+html.p-fullwidth-motion-ready .paragraph--type-p-fullwidth.is-p-fullwidth-motion-visible::after {
+  width: 200%;
+}
+
+html.p-fullwidth-motion-ready .paragraph--type-p-fullwidth.js-animate .p-fullwidth__content {
+  opacity: 0;
+  transform: translateY(1em);
+}
+
+html.p-fullwidth-motion-ready .paragraph--type-p-fullwidth.is-p-fullwidth-motion-visible .p-fullwidth__content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 700px) {
+  html.p-fullwidth-motion-ready .paragraph--type-p-fullwidth.is-p-fullwidth-motion-visible::after {
+    width: 115%;
+  }
+}
+
+@media (min-width: 1025px) {
+  html.p-fullwidth-motion-ready .paragraph--type-p-fullwidth.is-p-fullwidth-motion-visible::after {
+    width: 150%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .paragraph--type-p-fullwidth::after {
+    transition: none;
+  }
+
+  html.p-fullwidth-motion-ready .paragraph--type-p-fullwidth::after {
+    transition: none;
+    width: 150%;
+  }
+
+  html.p-fullwidth-motion-ready .paragraph--type-p-fullwidth .p-fullwidth__content {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

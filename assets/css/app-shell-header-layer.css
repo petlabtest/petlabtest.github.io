@@ -1,0 +1,4 @@
+/* Keep the shared AppShell header above page-specific legacy content. */
+#petlab-header {
+  z-index: 1000;
+}

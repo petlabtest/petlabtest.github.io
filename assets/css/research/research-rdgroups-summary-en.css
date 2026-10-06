@@ -1,0 +1,6 @@
+/* English R&D-group summary typography. */
+.p-rdgroups__summary {
+  font-size: 20px !important;
+  line-height: 1.7 !important;
+  font-weight: 300 !important;
+}

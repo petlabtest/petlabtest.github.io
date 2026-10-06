@@ -1,0 +1,15 @@
+/* Physics-specific CTA sizing; shared detail CSS owns geometry and states. */
+.page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button {
+  font-size: 16px;
+}
+
+.page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button .last-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@media (min-width: 1025px) {
+  .page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate .p-fullwidth__cta a.cta--button {
+    font-size: 25px;
+  }
+}

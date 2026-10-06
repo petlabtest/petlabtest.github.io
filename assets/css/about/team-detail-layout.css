@@ -39,7 +39,7 @@ body.team-profile-page .team-detail-top::before {
   background: var(--theme-color1, #0f4c81);
 }
 
-body.team-profile-page .team-detail-top > div:first-child {
+body.team-profile-page .team-detail-top > .team-detail-backdrop {
   position: absolute !important;
   z-index: 0 !important;
   top: -170px !important;
@@ -51,14 +51,54 @@ body.team-profile-page .team-detail-top > div:first-child {
   margin: 0 !important;
 }
 
+body.team-profile-page .team-detail-backdrop {
+  background: url("../../pic/root/media/07-bg-81ac28d2.jpg") center / cover;
+}
+
 body.team-profile-page .team-detail-photo {
   position: relative !important;
   z-index: 2 !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   grid-column: 1;
   width: min(100%, 520px) !important;
   height: 560px !important;
   margin: -100px 0 0 0 !important;
   box-sizing: border-box;
+}
+
+/* Profile-specific portrait assets are content variants of the shared frame. */
+body.team-profile--lin-wan .team-detail-photo {
+  background-image: url("../../pic/About/People/4-1.jpg");
+}
+
+body.team-profile--nicola .team-detail-photo {
+  background-image: url("../../pic/About/People/3-1.jpg");
+}
+
+body.team-profile--nicola-cn .team-detail-photo {
+  background-image: url("../../pic/root/media/1-2.jpg");
+}
+
+body.team-profile--peng-xiao .team-detail-photo {
+  background-image: url("../../pic/root/media/08-2-6a3706b1.jpg");
+}
+
+body.team-profile--qingguo-xie .team-detail-photo {
+  background-image: url("../../pic/root/media/08-1-2289e8d5.jpg");
+}
+
+body.team-profile--rui-zheng .team-detail-photo {
+  background-image: url("../../pic/root/media/team-4.jpg");
+}
+
+body.team-profile-page #base-path {
+  display: none;
+}
+
+body.team-profile-page .team-detail-desc h3.team-detail-highlight {
+  font-size: 1.9rem;
 }
 
 body.team-profile-page .team-detail-info {
@@ -71,8 +111,91 @@ body.team-profile-page .team-detail-info {
 }
 
 body.team-profile-page .team-detail-info .lab-full__body p {
-  font-size: inherit !important;
-  line-height: inherit !important;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* The Peng Xiao and Qingguo Xie pages share this Poppins profile type variant. */
+body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-info h1.page-title {
+  margin: 0 0 40px;
+  color: inherit;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: none;
+}
+
+body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-info .lab-full__body {
+  max-width: 1000px;
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-info .lab-full__body,
+body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-info>ul {
+  position: relative;
+  top: -.75rem;
+}
+
+body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-info>ul,
+body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-info>ul>li {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-desc>h3,
+body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-edu>h3,
+body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-admission>h3 {
+  margin: 17px 0 18px;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.556;
+  letter-spacing: normal;
+}
+
+body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-tab-btns .tab-btn {
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-desc-full {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-edu>p,
+body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-admission>p,
+body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-tab-content .tab-panel li {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-main>.paragraph--type-p-fullwidth:last-child {
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* These two profile variants reset the tab buttons' grouped heading margin. */
+body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-tab-btns .tab-btn {
+  margin: 0;
+}
+
+/* Researcher tabs use one shared state class for initial and clicked panels. */
+body.team-profile-page .team-detail-tab-content .tab-panel {
+  display: none;
+}
+
+body.team-profile-page .team-detail-tab-content .tab-panel.is-active {
+  display: block;
 }
 
 /* Biography: a readable column on the white page canvas. */
@@ -112,7 +235,7 @@ body.team-profile-page .team-detail-main > .paragraph--type-p-fullwidth:last-chi
     right: 60px;
   }
 
-  body.team-profile-page .team-detail-top > div:first-child {
+  body.team-profile-page .team-detail-top > .team-detail-backdrop {
     top: -120px !important;
     width: calc(100% - 130px) !important;
     height: 480px !important;
@@ -142,7 +265,7 @@ body.team-profile-page .team-detail-main > .paragraph--type-p-fullwidth:last-chi
   }
 
   body.team-profile-page .team-detail-top::before,
-  body.team-profile-page .team-detail-top > div:first-child {
+  body.team-profile-page .team-detail-top > .team-detail-backdrop {
     display: none !important;
   }
 
@@ -166,5 +289,63 @@ body.team-profile-page .team-detail-main > .paragraph--type-p-fullwidth:last-chi
     width: calc(100% - 30px) !important;
     padding-right: 0 !important;
     padding-left: 0 !important;
+  }
+}
+
+@media (min-width: 700px) {
+  body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-info h1.page-title {
+    font-size: 45px;
+    line-height: 1.15;
+  }
+
+  body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-info .lab-full__body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-desc>h3,
+  body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-edu>h3,
+  body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-admission>h3 {
+    margin: 13px 0 25px;
+    font-size: 20px;
+  }
+
+  body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-desc-full,
+  body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-edu>p,
+  body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-admission>p,
+  body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-tab-content .tab-panel li {
+    line-height: 1.5;
+  }
+
+  body.team-profile--qingguo-xie .team-detail-info>ul,
+  body.team-profile--qingguo-xie .team-detail-info>ul>li {
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 1025px) {
+  body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-info h1.page-title {
+    font-size: 65px;
+    line-height: 1.2;
+  }
+
+  body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-info .lab-full__body {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-desc>h3,
+  body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-edu>h3,
+  body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-admission>h3 {
+    margin: 40px 0 37px;
+    font-size: 30px;
+  }
+
+  body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-desc-full,
+  body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-edu>p,
+  body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-admission>p,
+  body:is(.team-profile--peng-xiao, .team-profile--qingguo-xie) .team-detail-tab-content .tab-panel li {
+    font-size: 20px;
+    line-height: 1.75;
   }
 }

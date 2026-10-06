@@ -33,11 +33,7 @@
 
   var mission = one('.home-fullwidth__panel');
   sequence(mission, mission ? [
-    { element: mission, effect: 'background-mission', order: 0 },
-    { element: one('.home-fullwidth__eyebrow', mission), delay: 620 },
-    { element: one('h2', mission), delay: 820 },
-    { element: one('p:not(.home-fullwidth__eyebrow)', mission), delay: 1060 },
-    { element: one('.home-fullwidth__cta', mission), effect: 'fade-right', delay: 1320 }
+    { element: mission, effect: 'background-mission', order: 0 }
   ] : [], mission, 0.74);
 
   var news = one('.home-news');
@@ -85,14 +81,6 @@
     return { element: card, effect: 'card-fade', delay: index * 100 };
   }) : [], researchGrid, 0.58);
 
-  var initiative = one('.home-programs__initiative');
-  sequence(initiative, initiative ? [
-    { element: one('h2', initiative), delay: 0 },
-    { element: one('.home-programs__initiative-copy > p', initiative), delay: 90 },
-    { element: one('.cta--button', initiative), effect: 'fade-right', delay: 180 },
-    { element: one('.home-programs__initiative-accent', initiative), effect: 'card-fade', delay: 120 }
-  ] : [], initiative && one('.home-programs__initiative-copy', initiative), 0.42);
-
   var collaboration = one('.home-programs__collaboration');
   var collaborationLinks = collaboration ? all('.home-programs__collaboration-links > a', collaboration) : [];
   sequence(collaboration, collaboration ? [
@@ -120,6 +108,8 @@
   ] : [], eventsFrame, 0.86);
 
   var groups = all('[data-home-sequence]');
+  var motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var pending = groups.slice();
   document.body.classList.add('home-motion-ready');
 
   function reveal(group) {
@@ -137,12 +127,24 @@
     }, 2200);
   }
 
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  function handleMotionPreferenceChange(event) {
+    if (!event.matches) return;
+    pending.forEach(reveal);
+    pending = [];
+    window.removeEventListener('scroll', requestCheck);
+    window.removeEventListener('resize', requestCheck);
+  }
+  if (motionPreference.addEventListener) {
+    motionPreference.addEventListener('change', handleMotionPreferenceChange);
+  } else if (motionPreference.addListener) {
+    motionPreference.addListener(handleMotionPreferenceChange);
+  }
+
+  if (motionPreference.matches) {
     groups.forEach(reveal);
     return;
   }
 
-  var pending = groups.slice();
   var frame = 0;
 
   function checkGroups() {

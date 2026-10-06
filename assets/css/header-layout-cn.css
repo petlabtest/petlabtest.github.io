@@ -1,0 +1,151 @@
+
+  /* Force hide skip-link by default, show only on keyboard focus */
+  a.skip-link {
+    position: fixed !important;
+    top: 0 !important;
+    left: 1rem !important;
+    z-index: 9999 !important;
+    transform: translateY(-200%) !important;
+    background: #fff !important;
+    padding: .75rem 1rem !important;
+    text-decoration: none !important;
+    color: #000 !important;
+    transition: transform .2s ease !important;
+  }
+
+  a.skip-link:focus,
+  a.skip-link:focus-visible {
+    transform: translateY(0) !important;
+  }
+
+  @media (min-width:1101px) {
+    .lbl-header .header-shell {
+      width: min(calc(100% - 96px), 1600px) !important;
+    }
+
+    .lbl-header .header-top-row {
+      gap: 24px !important;
+    }
+
+    .lbl-header .utility-links a,
+    .lbl-header .utility-links button,
+    .lbl-header .header-search input,
+    .lbl-header .search-label {
+      font-size: 15px !important;
+    }
+
+    .lbl-header .primary-nav {
+      gap: 26px !important;
+    }
+
+    .lbl-header .primary-nav>.nav-group>.nav-trigger {
+      font-size: 22px !important;
+      transform: translateY(7px);
+    }
+
+    .lbl-header .mega-menu--research {
+      height: 460px !important;
+      min-height: 460px !important;
+    }
+
+    .lbl-header .mega-menu--research .research-menu__column--core {
+      transform: translateX(clamp(24px, 2.5vw, 40px));
+    }
+
+    .lbl-header .mega-menu--research .mega-menu__groups a {
+      font-size: 14px !important;
+      padding-right: 1.5rem !important;
+    }
+
+    .lbl-header .mega-menu--feature .mega-menu__groups a::before {
+      top: 50% !important;
+      transform: translateY(-50%);
+    }
+  }
+
+  @media (min-width:1251px) {
+    .lbl-header .mega-menu--research {
+      grid-template-columns: minmax(320px, .78fr) minmax(0, 2.22fr) !important;
+      gap: clamp(2rem, 3vw, 4rem) !important;
+    }
+
+    .lbl-header .mega-menu--research .mega-menu__groups--three {
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      column-gap: clamp(1.5rem, 2vw, 2.5rem) !important;
+      row-gap: 0 !important;
+    }
+
+    .lbl-header .mega-menu--research .research-menu__catalog,
+    .lbl-header .mega-menu--research .research-menu__capabilities {
+      margin-top: 0 !important;
+    }
+
+    .lbl-header .mega-menu--research .research-menu__catalog h2,
+    .lbl-header .mega-menu--research .research-menu__capabilities h2 {
+      margin-bottom: 1.4rem !important;
+      transform: translateY(.55rem);
+    }
+
+    .lbl-header .mega-menu--research .research-menu__column,
+    .lbl-header .mega-menu--research .research-menu__column h2,
+    .lbl-header .mega-menu--research .research-menu__column a {
+      min-width: 0;
+      white-space: nowrap !important;
+    }
+  }
+
+  @media (min-width:1101px) and (max-width:1250px) {
+    .lbl-header .mega-menu--research {
+      grid-template-columns: 245px minmax(0, 1fr) !important;
+      gap: 2rem !important;
+    }
+
+    .lbl-header .mega-menu--research .mega-menu__groups--three {
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      column-gap: 1.25rem !important;
+      row-gap: 0 !important;
+    }
+
+    .lbl-header .mega-menu--research .research-menu__catalog,
+    .lbl-header .mega-menu--research .research-menu__capabilities {
+      margin-top: 0 !important;
+    }
+
+    .lbl-header .mega-menu--research .research-menu__catalog h2,
+    .lbl-header .mega-menu--research .research-menu__capabilities h2 {
+      margin-bottom: 1.4rem !important;
+      transform: translateY(.55rem);
+    }
+
+    .lbl-header .mega-menu--research .research-menu__column,
+    .lbl-header .mega-menu--research .research-menu__column h2,
+    .lbl-header .mega-menu--research .research-menu__column a {
+      min-width: 0;
+      white-space: nowrap !important;
+    }
+  }
+
+  /* Slightly larger type for the Chinese desktop mega menus only. */
+  @media (min-width:1101px) {
+    .lbl-header .mega-menu--feature .mega-menu__headline {
+      font-size: clamp(31px, 2.2vw, 42px) !important;
+    }
+
+    .lbl-header .mega-menu--feature.mega-menu--research .mega-menu__headline {
+      font-size: clamp(33px, 2.35vw, 45px) !important;
+    }
+
+    .lbl-header .mega-menu--feature .mega-menu__overview {
+      font-size: 19px !important;
+    }
+
+    .lbl-header .mega-menu--feature .mega-menu__groups h2 {
+      font-size: 18px !important;
+    }
+
+    .lbl-header .mega-menu--feature .mega-menu__groups a {
+      font-size: 18px !important;
+    }
+  }
+
+  /* PETLAB:HEADER_LAYOUT_SHARED */

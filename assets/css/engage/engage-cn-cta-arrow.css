@@ -1,0 +1,20 @@
+/* Share the replacement chevron between the Chinese contact and visit CTAs. */
+.wysiwyg a.cta--button .last-word::after,
+.p-fullwidth__cta a.cta--button .last-word::after {
+  content: "" !important;
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-left: 10px;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-1px);
+  transform-origin: center;
+  vertical-align: middle;
+  font: 0/0 a;
+}
+
+.wysiwyg a.cta--button::after,
+.p-fullwidth__cta a.cta--button::after {
+  content: none !important;
+}

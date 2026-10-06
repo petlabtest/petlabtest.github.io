@@ -1,0 +1,178 @@
+@import url("./tech-resource-platform-shared.css?v=20261003-resource1");
+
+    /* Static 4 x 2 application grid. These rules also neutralize any Slick
+       carousel state added by the archived DPET scripts. */
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel {
+      width: 100%;
+      max-width: 1600px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: 24px;
+      padding-left: 24px;
+      box-sizing: border-box;
+    }
+
+    /* Align this heading with the standard content column used by Latest News
+       while allowing the application grid below it to remain full width. */
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .p-project-carousel__header {
+      width: 100%;
+      max-width: 1040px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .p-project-carousel__content,
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .views-element-container,
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .view {
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0 !important;
+      overflow: visible !important;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .application-grid,
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .slick-list,
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .slick-track {
+      display: grid !important;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px 12px;
+      width: 100% !important;
+      height: auto !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      transform: none !important;
+      overflow: visible !important;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .slick-list,
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .slick-track {
+      display: contents !important;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .lab-carousel.views-row {
+      display: block !important;
+      position: relative !important;
+      inset: auto !important;
+      float: none !important;
+      width: auto !important;
+      min-width: 0 !important;
+      height: auto !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      transform: none !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .slick-cloned,
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .slick-arrow,
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .slick-dots {
+      display: none !important;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .node--view-mode-carousel {
+      position: relative;
+      width: 100% !important;
+      aspect-ratio: 1.44 / 1;
+      min-height: 0 !important;
+      overflow: hidden;
+      background: #073f6f;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .project-carousel__image-wrapper,
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .field-group-link,
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .project-carousel__image,
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel picture {
+      display: block !important;
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .project-carousel__image img {
+      display: block;
+      width: 100% !important;
+      height: 100% !important;
+      max-width: none !important;
+      object-fit: cover;
+      object-position: center;
+      transition: transform .35s ease;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .project-carousel__content {
+      display: flex !important;
+      position: absolute !important;
+      z-index: 2;
+      inset: 0 !important;
+      align-items: center;
+      justify-content: center;
+      width: 100% !important;
+      height: 100% !important;
+      margin: 0 !important;
+      padding: 22px !important;
+      box-sizing: border-box;
+      background: rgba(0, 62, 112, .58);
+      text-align: center;
+      transition: background-color .25s ease;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .project-carousel__title {
+      width: 100%;
+      margin: 0 !important;
+      padding: 0 !important;
+      color: #fff !important;
+      font-size: clamp(20px, 1.55vw, 29px) !important;
+      font-weight: 500;
+      line-height: 1.18;
+      letter-spacing: 0;
+      text-align: center;
+      text-transform: none;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .project-carousel__title a {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .node--view-mode-carousel:hover .project-carousel__image img,
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .node--view-mode-carousel:focus-within .project-carousel__image img {
+      transform: scale(1.035);
+    }
+
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .node--view-mode-carousel:hover .project-carousel__content,
+    .page-node-type-rdgroup .paragraph--type-p-project-carousel .node--view-mode-carousel:focus-within .project-carousel__content {
+      background: rgba(0, 62, 112, .7);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .page-node-type-rdgroup .paragraph--type-p-project-carousel .project-carousel__image img,
+      .page-node-type-rdgroup .paragraph--type-p-project-carousel .project-carousel__content {
+        transition: none;
+      }
+
+      .page-node-type-rdgroup .paragraph--type-p-project-carousel .node--view-mode-carousel:hover .project-carousel__image img,
+      .page-node-type-rdgroup .paragraph--type-p-project-carousel .node--view-mode-carousel:focus-within .project-carousel__image img {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .page-node-type-rdgroup .paragraph--type-p-project-carousel .application-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 599px) {
+      .page-node-type-rdgroup .paragraph--type-p-project-carousel {
+        padding-right: 16px;
+        padding-left: 16px;
+      }
+
+      .page-node-type-rdgroup .paragraph--type-p-project-carousel .application-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  

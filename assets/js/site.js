@@ -62,126 +62,6 @@ function findPages(index, query, language, limit = Infinity) {
   document.head.appendChild(style);
 })();
 
-async function loadComponent(selector, path) {
-  const host = document.querySelector(selector);
-  if (!host) return;
-  try {
-    const response = await fetch(new URL(path, SITE_ROOT_URL));
-    if (!response.ok) throw new Error(String(response.status));
-    host.innerHTML = await response.text();
-    host.querySelectorAll('[src]').forEach(node => {
-      const value = node.getAttribute('src');
-      if (value && !/^(?:[a-z]+:|\/|#)/i.test(value)) node.src = new URL(value, SITE_ROOT_URL).href;
-    });
-    host.querySelectorAll('form[action]').forEach(form => {
-      const value = form.getAttribute('action');
-      if (value && !/^(?:[a-z]+:|\/|#)/i.test(value)) form.action = new URL(value, SITE_ROOT_URL).href;
-    });
-    host.addEventListener('click', event => {
-      const link = event.target.closest('a[href]');
-      if (!link) return;
-      const value = link.getAttribute('href');
-      if (!value || /^(?:[a-z]+:|\/|#)/i.test(value)) return;
-      event.preventDefault();
-      window.location.href = new URL(value, SITE_ROOT_URL).href;
-    });
-  } catch (error) {
-    host.innerHTML = `<p class="component-error">Open this website through a local web server to load shared navigation.</p>`;
-  }
-}
-
-function closeNavigation() {
-  document.querySelectorAll('.nav-group.open').forEach(group => {
-    group.classList.remove('open');
-    group.querySelector('.nav-trigger')?.setAttribute('aria-expanded','false');
-  });
-  document.querySelector('[data-site-header]')?.classList.remove('primary-menu-active');
-}
-
-function initHeader() {
-  const header = document.querySelector('[data-site-header]');
-  const menuButton = document.querySelector('[data-menu-toggle]');
-  const searchButtons = [...document.querySelectorAll('[data-search-toggle]')];
-  const searchPanel = document.querySelector('[data-search-panel]');
-  const searchInput = document.querySelector('#site-search-input');
-  const results = document.querySelector('[data-search-results]');
-  document.querySelectorAll('.nav-trigger').forEach(button => button.addEventListener('click', event => {
-    event.stopPropagation();
-    const group = button.closest('.nav-group');
-    const willOpen = !group.classList.contains('open');
-    closeNavigation();
-    group.classList.remove('dismissed');
-    group.classList.toggle('open', willOpen);
-    button.setAttribute('aria-expanded', String(willOpen));
-    header.classList.toggle('primary-menu-active', Boolean(willOpen && group.closest('.primary-nav')));
-  }));
-  document.querySelectorAll('.nav-group').forEach(group => {
-    let closeTimer;
-    group.addEventListener('mouseenter', () => {
-      if (!window.matchMedia('(min-width: 1101px)').matches) return;
-      if (group.classList.contains('dismissed')) return;
-      clearTimeout(closeTimer);
-      closeNavigation();
-      group.classList.add('open');
-      group.querySelector(':scope > .nav-trigger')?.setAttribute('aria-expanded','true');
-      header.classList.toggle('primary-menu-active', Boolean(group.closest('.primary-nav')));
-    });
-    group.addEventListener('mouseleave', () => {
-      if (!window.matchMedia('(min-width: 1101px)').matches) return;
-      closeTimer = setTimeout(() => {
-        group.classList.remove('open');
-        group.querySelector(':scope > .nav-trigger')?.setAttribute('aria-expanded','false');
-        group.classList.remove('dismissed');
-        if (group.closest('.primary-nav') && !header.querySelector('.primary-nav > .nav-group.open')) {
-          header.classList.remove('primary-menu-active');
-        }
-      }, 120);
-    });
-  });
-  document.querySelectorAll('[data-menu-close]').forEach(button => button.addEventListener('click', event => {
-    event.preventDefault();
-    event.stopPropagation();
-    const group = button.closest('.nav-group');
-    group?.classList.add('dismissed');
-    group?.classList.remove('open');
-    group?.querySelector(':scope > .nav-trigger')?.setAttribute('aria-expanded','false');
-    header.classList.remove('primary-menu-active');
-  }));
-  document.addEventListener('click', event => { if (!event.target.closest('.nav-group')) closeNavigation(); });
-  menuButton?.addEventListener('click', () => {
-    const open = header.classList.toggle('menu-active');
-    menuButton.setAttribute('aria-expanded', String(open));
-    document.body.classList.toggle('menu-open', open);
-  });
-  searchButtons.forEach(searchButton => searchButton.addEventListener('click', () => {
-    const open = searchPanel.hasAttribute('hidden');
-    searchPanel.toggleAttribute('hidden', !open);
-    searchButtons.forEach(button => button.setAttribute('aria-expanded', String(open)));
-    document.body.classList.toggle('search-open', open);
-    if (open) setTimeout(() => searchInput?.focus(), 50);
-  }));
-  const runSearch = async () => {
-    const query = searchInput.value.trim().toLowerCase();
-    const language = getPageLanguage();
-    const matches = query ? findPages(await loadSearchIndex(), query, language, 9) : [];
-    const emptyMessage = language === 'zh' ? '没有找到匹配的页面。' : 'No matching pages found.';
-    results.innerHTML = query && !matches.length
-      ? `<p>${emptyMessage}</p>`
-      : matches.map(item => `<a href="${new URL(item.url, SITE_ROOT_URL).href}">${escapeHTML(item.title)} →</a>`).join('');
-  };
-  searchInput?.addEventListener('input', runSearch);
-  document.querySelector('[data-search-submit]')?.addEventListener('click', runSearch);
-  document.querySelector('[data-language-toggle]')?.addEventListener('click', () => {
-    const note = document.createElement('div');
-    note.className = 'language-note';
-    note.textContent = '中文版本正在准备中。';
-    Object.assign(note.style,{position:'fixed',right:'20px',top:'36px',zIndex:'9999',background:'#fff',color:'#111820',padding:'12px 16px',boxShadow:'0 8px 30px rgba(0,0,0,.18)'});
-    document.body.append(note); setTimeout(() => note.remove(),2500);
-  });
-  const current = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll(`a[href="${current}"]`).forEach(link => link.setAttribute('aria-current','page'));
-}
-
 async function initSearchPage() {
   const host = document.querySelector('[data-search-page-results]');
   if (!host) return;
@@ -254,6 +134,11 @@ function initHero() {
           video.pause();
           return;
         }
+        if (reducedMotion.matches) {
+          video.pause();
+          if (slide === videoHero) revealVideoHero();
+          return;
+        }
         if (slide === videoHero && slide.classList.contains('is-video-complete')) return;
         if (video.readyState === HTMLMediaElement.HAVE_NOTHING) video.load();
         const playback = video.play();
@@ -263,13 +148,29 @@ function initHero() {
       });
     });
   };
+  const handleReducedMotionChange = () => {
+    if (reducedMotion.matches) {
+      stopTimer();
+      introVideo?.pause();
+      revealVideoHero();
+      return;
+    }
+    playActiveVideo();
+    scheduleAdvance();
+  };
+  if (reducedMotion.addEventListener) {
+    reducedMotion.addEventListener('change', handleReducedMotionChange);
+  } else if (reducedMotion.addListener) {
+    reducedMotion.addListener(handleReducedMotionChange);
+  }
   slides.forEach((slide, slideIndex) => {
     slide.setAttribute('aria-hidden', String(slideIndex !== index));
     const dot = document.createElement('button');
     dot.type = 'button';
     dot.className = 'carousel-dot';
-    dot.setAttribute('role','tab');
-    dot.setAttribute('aria-label', `Show featured story ${slideIndex + 1}`);
+    dot.setAttribute('aria-label', document.documentElement.lang.toLowerCase().startsWith('zh')
+      ? `显示首页故事 ${slideIndex + 1}`
+      : `Show featured story ${slideIndex + 1}`);
     dot.addEventListener('click', () => show(slideIndex));
     dotsHost.append(dot);
   });
@@ -278,19 +179,19 @@ function initHero() {
     slides[index].classList.remove('active');
     slides[index].setAttribute('aria-hidden','true');
     dots[index].classList.remove('active');
-    dots[index].setAttribute('aria-selected','false');
+    dots[index].removeAttribute('aria-current');
     index = (nextIndex + slides.length) % slides.length;
     slides[index].classList.add('active');
     slides[index].setAttribute('aria-hidden','false');
     dots[index].classList.add('active');
-    dots[index].setAttribute('aria-selected','true');
+    dots[index].setAttribute('aria-current','true');
     playActiveVideo();
     scheduleAdvance();
   };
   previous.addEventListener('click', () => show(index - 1));
   next.addEventListener('click', () => show(index + 1));
   dots[index].classList.add('active');
-  dots[index].setAttribute('aria-selected','true');
+  dots[index].setAttribute('aria-current','true');
   carousel.addEventListener('mouseenter', () => {
     pointerInside = true;
     stopTimer();
@@ -355,36 +256,10 @@ function initHomeNews() {
   });
 }
 
-function initHomeCollaboration() {
-  const section = document.querySelector('.home-programs__collaboration');
-  if (!section) return;
-  // The Chinese homepage uses the unified, section-level motion sequence.
-  // Keep this legacy reveal for pages that have not opted into that system.
-  if (document.body.classList.contains('home-motion')) return;
-  const targets = [...section.querySelectorAll('[data-collab-reveal]')];
-  if (!targets.length) return;
-  section.classList.add('js-collab-animate');
-  const revealAll = () => targets.forEach(target => target.classList.add('is-visible'));
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
-    revealAll();
-    return;
-  }
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('is-visible');
-      observer.unobserve(entry.target);
-    });
-  }, {rootMargin:'0px 0px -12% 0px',threshold:.12});
-  targets.forEach(target => observer.observe(target));
-}
-
 document.addEventListener('DOMContentLoaded', async () => {
-  const isCN = getPageLanguage() === 'zh';
-  const headerFile = isCN ? 'components/header-cn.html?v=20260920-programs1' : 'components/header.html?v=20260920-programs1';
-  const footerFile = isCN ? 'components/footer-cn.html?v=20260918-collaboration' : 'components/footer.html?v=20260918-collaboration';
-  await Promise.all([loadComponent('[data-component="header"]', headerFile), loadComponent('[data-component="footer"]', footerFile)]);
-  initHeader(); initHero(); initHomeNews(); initHomeCollaboration(); initSearchPage();
+  // Shared navigation and footer are mounted by app-shell.js on every page.
+  // This file now owns page behavior only.
+  initHero(); initHomeNews(); initSearchPage();
   document.querySelectorAll('[data-current-year]').forEach(el => el.textContent = new Date().getFullYear());
 });
 

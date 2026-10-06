@@ -2,16 +2,36 @@
 <html lang="zh-CN" dir="ltr">
 
 <head>
-  <link rel="icon" type="image/png" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
-  <link rel="apple-touch-icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1">
-  <link rel="manifest" href="../assets/data/favicons/site.webmanifest">
-  <link rel="shortcut icon" href="../assets/pic/main/PETLAB_LOGO_Pure.png?v=20260904-1" type="image/png">
+  <!-- PETLAB:HEAD:START -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="人才与文化 | 数字PET实验室">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#003c62">
+  <meta name="robots" content="index, follow">
+  <meta name="petlab-head-version" content="20260926-1">
   <title>PETLab生活 | 数字PET实验室</title>
+  <meta name="description" content="人才与文化 | 数字PET实验室">
+  <link rel="canonical" href="https://petlab.hust.edu.cn/People/People-Life-cn.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://petlab.hust.edu.cn/People/People-Life-cn.html">
+  <link rel="alternate" hreflang="en" href="https://petlab.hust.edu.cn/People/People-Life-en.html">
+  <link rel="alternate" hreflang="x-default" href="https://petlab.hust.edu.cn/People/People-Life-en.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Digital PET Laboratory">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="PETLab生活 | 数字PET实验室">
+  <meta property="og:description" content="人才与文化 | 数字PET实验室">
+  <meta property="og:url" content="https://petlab.hust.edu.cn/People/People-Life-cn.html">
+  <meta property="og:image" content="https://petlab.hust.edu.cn/assets/pic/main/PETLAB_LOGO_Pure.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PETLab生活 | 数字PET实验室">
+  <meta name="twitter:description" content="人才与文化 | 数字PET实验室">
+  <meta name="twitter:image" content="https://petlab.hust.edu.cn/assets/pic/main/PETLAB_LOGO_Pure.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/petlab-logo-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/petlab-logo-16.png">
+  <link rel="apple-touch-icon" href="../assets/favicons/petlab-logo-180.png">
+  <link rel="manifest" href="../assets/data/favicons/site.webmanifest">
+  <link rel="stylesheet" href="../assets/css/app-shell.css?v=20260926-1">
+  <script src="../assets/js/app-shell.js?v=20260929-external-header-css1"></script>
+  <!-- PETLAB:HEAD:END -->
   <link rel="stylesheet" href="../assets/css/site.css">
   <link rel="stylesheet" media="all" href="../assets/css/root/008-2.css">
   <link rel="stylesheet" media="all" href="../assets/css/root/009.css">
@@ -21,71 +41,21 @@
        original archive keeps these rules in a separate stylesheet bundle. -->
   <link rel="stylesheet" media="all" href="../assets/css/webarchive_recognizing-excellence/021.css">
   <link rel="stylesheet" media="all" href="../assets/css/webarchive_recognizing-excellence/023.css">
+  <link rel="stylesheet" href="../assets/css/people/people-life-motion.css?v=20260925-1">
   <link rel="stylesheet" media="all" href="../assets/css/webarchive_recognizing-excellence/024.css">
   <link rel="stylesheet" media="all" href="../assets/css/webarchive_recognizing-excellence/029.css">
   <link rel="stylesheet" media="all" href="../assets/css/petlab-life-jpl-cards.css">
-<style>
-    .petlab-component-host {
-      display: block;
-      position: relative;
-      width: 100%
-    }
-
-    #petlab-header {
-      position: relative;
-      z-index: 1000;
-      overflow: visible
-    }
-
-    #petlab-footer {
-      position: relative;
-      z-index: 1
-    }
-
-    .layout-container>header[role="banner"],
-    .layout-container>footer[role="contentinfo"] {
-      display: none !important
-    }
-
-    /* Match the reference masonry composition: three compact cards on the
-       left and the square workplace card anchored at the upper right. */
-    @media (min-width: 700px) {
-      .people-life-work-grid {
-        display: grid !important;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-template-areas:
-          "upop workplace"
-          "education workplace"
-          "career workplace";
-        align-items: start;
-        column-gap: 7.3%;
-        row-gap: 43px;
-        height: auto !important;
-      }
-
-      .people-life-work-grid>.p-masonry__item {
-        position: static !important;
-        top: auto !important;
-        left: auto !important;
-        width: auto !important;
-        height: auto !important;
-        transform: none !important;
-        margin: 0 !important;
-      }
-
-      .people-life-work-grid>.p-masonry__item:nth-child(1) { grid-area: upop; }
-      .people-life-work-grid>.p-masonry__item:nth-child(2) { grid-area: workplace; }
-      .people-life-work-grid>.p-masonry__item:nth-child(3) { grid-area: education; }
-      .people-life-work-grid>.p-masonry__item:nth-child(4) { grid-area: career; }
-    }
-
-  </style>
+<link rel="stylesheet" href="../assets/css/people/people-life-layout.css?v=20261003-shell2">
+<link rel="stylesheet" href="../assets/css/app-shell-header-layer.css?v=20260929-1">
   <link rel="stylesheet" href="../assets/css/archive-consistency.css?v=20260908-wide1">
   <link rel="stylesheet" href="../assets/css/page-canvas.css?v=20260911-1">
+  <link rel="stylesheet" href="../assets/css/people/people-typography.css?v=20261003-shared1">
+  <link rel="stylesheet" href="../assets/css/news/masonry-motion.css?v=20260924-1">
+  <link rel="stylesheet" href="../assets/css/p-fullwidth-motion.css?v=20260924-1">
 </head>
 
 <body class="node-16 path-node page-node-type-page has-section-nav has-section-toggle production js-alert page-people-people-life-cn">
-  <a href="#main-content" class="visually-hidden focusable skip-link">跳过主要内容</a>
+  
   <div class="dialog-off-canvas-main-canvas">
     <div class="overlay"></div>
     <div class="layout-container">
@@ -309,8 +279,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="ll-static-background"
-                          style="background-image:url('../assets/pic/About/impact/semiconductor-wafer.jpg')"></div>
+                        <div class="ll-static-background"></div>
                       </div>
 
 
@@ -337,7 +306,7 @@
                                   height="1200" alt="华中科技大学武汉光电国家研究中心建筑与周边校园环境" typeof="foaf:Image"
                                   class="image-style-masonry-grid-generic">
                               </div>
-                              <div class="p-masonry-generic__content" style="top: 422px;">
+                              <div class="p-masonry-generic__content">
                                 <h3 class="p-masonry-generic__title"><a href="../Engage/Engage-Visit-cn.html" tabindex="-1">工作环境</a></h3>
                                 <div class="p-masonry-generic__body">数字PET实验室构建了一个以医学影像突破为中心，跨学科、创新驱动的工作场所，并拥有包容性的协作文化。我们的综合设施结合了精确成像测试套件、算法开发工作站、开放讨论区以及专用的静音单人辅导和集中研究空间。</div>
                                 <div class="p-masonry-generic__cta"><a href="../Engage/Engage-Visit-cn.html"
@@ -391,7 +360,6 @@
   <script src="../assets/js/root/001-2.js"></script>
   <script src="../assets/js/root/003.js"></script>
   <script src="../assets/js/root/r001.js"></script>
-  <script src="../assets/js/root/002.js"></script>
   <script src="../assets/js/root/006.js"></script>
   <script src="../assets/js/root/001.js"></script>
   <script src="../assets/js/root/010.js"></script>
@@ -407,194 +375,7 @@
   <!-- Behaviors used by the copied publication section: reveal-on-scroll and
        animated numeric counters. -->
   <script src="../assets/js/root/007.js"></script>
-  <script src="../assets/js/webarchive_recognizing-excellence/010.js"></script>
-  <script>
-    (function () {
-      var siteRoot = new URL('../', window.location.href);
-      var cssUrl = new URL('assets/css/site.css?v=20260908-wide1', siteRoot);
-
-      function rewriteComponentUrls(shadow) {
-        shadow.querySelectorAll('[src], [href]').forEach(function (node) {
-          ['src', 'href'].forEach(function (attribute) {
-            var value = node.getAttribute(attribute);
-            if (!value || /^(?:#|https?:|mailto:|tel:|javascript:|\/)/i.test(value)) return;
-            node.setAttribute(attribute, new URL(value, siteRoot).href);
-          });
-        });
-      }
-
-      function initHeader(shadow) {
-        var header = shadow.querySelector('[data-site-header]');
-        if (!header) return;
-        var primaryGroups = shadow.querySelectorAll('.primary-nav > .nav-group');
-        function setPrimaryGroupVisual(group, active) {
-          if (!group || !group.matches('.primary-nav > .nav-group')) return;
-          var color = active ? '#edf5fc' : '#fff';
-          group.style.setProperty('background-color', color, 'important');
-          var trigger = group.querySelector(':scope > .nav-trigger');
-          trigger?.style.setProperty('background-color', color, 'important');
-        }
-        function setPrimaryNavigationVisual(active) {
-          var color = active ? '#edf5fc' : '#fff';
-          primaryGroups.forEach(function (group) { setPrimaryGroupVisual(group, active); });
-          shadow.querySelectorAll('.lbl-header, .lbl-header .header-shell, .lbl-header .desktop-navigation, .lbl-header .header-top-row, .lbl-header .primary-nav').forEach(function (node) {
-            node.style.setProperty('background-color', color, 'important');
-          });
-        }
-        setPrimaryNavigationVisual(false);
-        var closeTimers = new WeakMap();
-        var openGroup = function (group) {
-          if (!group) return;
-          var timer = closeTimers.get(group);
-          if (timer) window.clearTimeout(timer);
-          group.classList.add('open');
-          group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'true');
-        };
-        var closeGroup = function (group) {
-          if (!group) return;
-          var timer = window.setTimeout(function () {
-            if (group.matches(':hover') || group.matches(':focus-within')) return;
-            group.classList.remove('open');
-            group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
-          }, 180);
-          closeTimers.set(group, timer);
-        };
-        var closeAllGroups = function () {
-          shadow.querySelectorAll('.nav-group.open').forEach(function (group) {
-            var timer = closeTimers.get(group);
-            if (timer) window.clearTimeout(timer);
-            group.classList.remove('open');
-            group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
-          });
-          setPrimaryNavigationVisual(false);
-          var activeElement = shadow.activeElement;
-          if (activeElement && activeElement.matches('.primary-nav .nav-trigger, .primary-nav .mega-menu__close')) activeElement.blur();
-        };
-        var host = shadow.host;
-        header.addEventListener('mouseleave', closeAllGroups);
-        host?.addEventListener('mouseleave', closeAllGroups);
-        header.addEventListener('mouseleave', function () {
-          shadow.querySelectorAll('.nav-group.open, .nav-group.dismissed').forEach(function (group) {
-            group.classList.remove('open', 'dismissed');
-            group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
-          });
-          setPrimaryNavigationVisual(false);
-        });
-        shadow.querySelectorAll('.nav-group').forEach(function (group) {
-          group.addEventListener('mouseenter', function () {
-            var timer = closeTimers.get(group);
-            if (timer) clearTimeout(timer);
-            group.classList.remove('dismissed');
-            shadow.querySelectorAll('.nav-group.open').forEach(function (item) {
-              if (item !== group) {
-                item.classList.remove('open', 'dismissed');
-                item.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
-                setPrimaryGroupVisual(item, true);
-              }
-            });
-            group.classList.add('open');
-            group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'true');
-            if (group.matches('.primary-nav > .nav-group')) setPrimaryNavigationVisual(true);
-          });
-          group.addEventListener('mouseleave', function () {
-            var timer = setTimeout(function () {
-              group.classList.remove('open');
-              group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
-              if (group.matches('.primary-nav > .nav-group') && !header.matches(':hover')) setPrimaryNavigationVisual(false);
-              var activeElement = shadow.activeElement;
-              if (activeElement && group.contains(activeElement)) activeElement.blur();
-            }, 220);
-            closeTimers.set(group, timer);
-          });
-        });
-        shadow.querySelectorAll('.nav-trigger').forEach(function (trigger) {
-          trigger.addEventListener('click', function () {
-            var group = trigger.closest('.nav-group');
-            var open = group && group.classList.contains('open');
-            shadow.querySelectorAll('.nav-group.open').forEach(function (item) {
-              item.classList.remove('open', 'dismissed');
-              item.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
-              setPrimaryGroupVisual(item, false);
-            });
-            if (group && !open) {
-              group.classList.add('open');
-              trigger.setAttribute('aria-expanded', 'true');
-              setPrimaryNavigationVisual(true);
-            } else if (group && open) {
-              setPrimaryNavigationVisual(false);
-            }
-          });
-        });
-        shadow.querySelectorAll('[data-menu-close]').forEach(function (button) {
-          button.addEventListener('click', function () {
-            var group = button.closest('.nav-group');
-            group?.classList.remove('open');
-            group?.classList.add('dismissed');
-            group?.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
-            setPrimaryNavigationVisual(false);
-            if (shadow.activeElement && group?.contains(shadow.activeElement)) shadow.activeElement.blur();
-          });
-        });
-        var menuToggle = shadow.querySelector('[data-menu-toggle]');
-        menuToggle?.addEventListener('click', function () {
-          var active = header.classList.toggle('menu-active');
-          menuToggle.setAttribute('aria-expanded', String(active));
-        });
-      }
-
-      async function mount(hostId, componentPath, isHeader) {
-        var host = document.getElementById(hostId);
-        if (!host) return;
-        try {
-          var response = await fetch(new URL(componentPath, siteRoot));
-          var cssResponse = await fetch(cssUrl);
-          if (!response.ok || !cssResponse.ok) throw new Error('Component load failed');
-          var shadow = host.attachShadow({ mode: 'open' });
-          var style = document.createElement('style');
-          var cssText = await cssResponse.text();
-          cssText = cssText.replace(/url\((['"]?)\.\.\/([^'")]+)\1\)/g, function (_, quote, path) {
-            return 'url(' + quote + new URL('assets/' + path, siteRoot).href + quote + ')';
-          });
-          cssText += '\n@media (min-width: 1101px) {' +
-            '.lbl-header, .lbl-header .header-shell, .lbl-header .desktop-navigation, ' +
-            '.lbl-header .primary-nav, .lbl-header .nav-group { overflow: visible !important; }' +
-            '.lbl-header .nav-group.open > .mega-menu, .lbl-header .nav-group:hover > .mega-menu, ' +
-            '.lbl-header .nav-group:focus-within > .mega-menu { display: grid !important; z-index: 2000 !important; pointer-events: auto; }' +
-            '.lbl-header .nav-group.dismissed > .mega-menu { display: none !important; }' +
-            '.lbl-header .primary-nav > .nav-group { background: #fff !important; }' +
-            '.lbl-header .primary-nav > .nav-group:hover, .lbl-header .primary-nav > .nav-group.open, ' +
-            '.lbl-header .primary-nav > .nav-group:focus-within { background: #edf5fc !important; }' +
-            '.lbl-header .primary-nav > .nav-group.dismissed { background: #fff !important; }' +
-            '.lbl-header .primary-nav > .nav-group > .nav-trigger { background: #fff !important; color: #062f40 !important; transition: none !important; }' +
-            '.lbl-header .primary-nav > .nav-group:hover > .nav-trigger, .lbl-header .primary-nav > .nav-group.open > .nav-trigger, ' +
-            '.lbl-header .primary-nav > .nav-group:focus-within > .nav-trigger { background: #edf5fc !important; color: #062f40 !important; }' +
-            '.lbl-header .primary-nav > .nav-group.dismissed > .nav-trigger { background: #fff !important; color: #062f40 !important; transition: none !important; }' +
-            '.lbl-header .primary-nav > .nav-group, .lbl-header .primary-nav > .nav-group > .nav-trigger { transition: none !important; }' +
-            '}';
-          style.textContent = cssText.replace(/^:root\s*\{/, ':host {');
-          shadow.appendChild(style);
-          var content = document.createElement('div');
-          content.innerHTML = await response.text();
-          while (content.firstChild) shadow.appendChild(content.firstChild);
-          rewriteComponentUrls(shadow);
-          if (!isHeader) {
-            var year = shadow.querySelector('[data-current-year]');
-            if (year) year.textContent = String(new Date().getFullYear());
-          } else {
-            initHeader(shadow);
-          }
-        } catch (error) {
-          host.textContent = '';
-          console.error('Unable to load PETLab component', error);
-        }
-      }
-
-      Promise.all([
-        mount('petlab-header', 'components/header-cn.html?v=20260920-programs1', true),
-        mount('petlab-footer', 'components/footer-cn.html?v=20260811-119', false)
-      ]);
-    }());
-  </script>
+  <script src="../assets/js/webarchive_recognizing-excellence/010.js?v=20260925-2"></script>
 
 <script>
 /* Hide skip-link by default, show on keyboard focus */
@@ -629,7 +410,7 @@
 })();
 </script>
 
-  <script src="../assets/js/floating-assistant.js?v=20260918-11" defer></script>
+  <script src="../assets/js/floating-assistant.js?v=20260924-1" defer></script>
 </body>
 
 </html>

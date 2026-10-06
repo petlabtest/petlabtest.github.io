@@ -1,0 +1,33 @@
+/* Progressive enhancement shared by the homepage mission and About sections. */
+html.editorial-motion-ready [data-editorial-target] {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  transition:
+    opacity 480ms cubic-bezier(.22, 1, .36, 1),
+    transform 560ms cubic-bezier(.22, 1, .36, 1);
+  transition-delay: var(--editorial-delay-ms, calc(var(--editorial-order, 0) * 100ms));
+  will-change: opacity, transform;
+}
+
+html.editorial-motion-ready [data-editorial-target][data-editorial-effect="fade-right"] {
+  transform: translate3d(-42px, 0, 0);
+}
+
+html.editorial-motion-ready [data-editorial-target][data-editorial-effect="card-fade"] {
+  transform: translate3d(0, 14px, 0);
+}
+
+html.editorial-motion-ready [data-editorial-section].is-editorial-visible [data-editorial-target] {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.editorial-motion-ready [data-editorial-target] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+}

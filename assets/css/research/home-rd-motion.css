@@ -1,0 +1,27 @@
+/* Shared staggered entrance for the research-area list on instrument pages. */
+.paragraph--type-p-home-rd .views-row {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.paragraph--type-p-home-rd .js-animate .views-row {
+  opacity: 1;
+}
+
+.paragraph--type-p-home-rd .js-animate .views-row:nth-of-type(1) { transition-delay: 0.1s; }
+.paragraph--type-p-home-rd .js-animate .views-row:nth-of-type(2) { transition-delay: 0.2s; }
+.paragraph--type-p-home-rd .js-animate .views-row:nth-of-type(3) { transition-delay: 0.3s; }
+.paragraph--type-p-home-rd .js-animate .views-row:nth-of-type(4) { transition-delay: 0.4s; }
+.paragraph--type-p-home-rd .js-animate .views-row:nth-of-type(5) { transition-delay: 0.5s; }
+.paragraph--type-p-home-rd .js-animate .views-row:nth-of-type(6) { transition-delay: 0.6s; }
+.paragraph--type-p-home-rd .js-animate .views-row:nth-of-type(7) { transition-delay: 0.7s; }
+.paragraph--type-p-home-rd .js-animate .views-row:nth-of-type(8) { transition-delay: 0.8s; }
+.paragraph--type-p-home-rd .js-animate .views-row:nth-of-type(9) { transition-delay: 0.9s; }
+.paragraph--type-p-home-rd .js-animate .views-row:nth-of-type(10) { transition-delay: 1s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .paragraph--type-p-home-rd .views-row {
+    opacity: 1;
+    transition: none;
+  }
+}

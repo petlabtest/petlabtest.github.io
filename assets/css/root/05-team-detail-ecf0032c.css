@@ -4,7 +4,7 @@ html {
 }
 /* 主体容器 */
 .team-detail-main {
-  font-family: "Microsoft YaHei", Arial, sans-serif;
+  font-family: var(--font-family-sans);
   margin: 0 auto;
 }
 
