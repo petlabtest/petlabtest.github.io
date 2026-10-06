@@ -5,3 +5,10 @@
   font-weight: 500;
   line-height: 1.35;
 }
+
+@media (min-width: 1025px) {
+  .hero--small-image .hero__page-subtitle {
+    position: relative;
+    top: -30px;
+  }
+}

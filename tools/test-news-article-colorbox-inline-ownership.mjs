@@ -29,8 +29,8 @@ for (const file of files) {
   assert.match(runtime, /<div id="cboxOverlay"[\s\S]*?<div id="colorbox"/, `${file}: Colorbox ownership markers are missing`);
 }
 
-assert.equal(files.length, 174, 'news article page inventory changed');
-assert.equal(pagesWithRuntimeStyles, 22, 'Colorbox runtime-style page count changed');
-assert.equal(runtimeStyleCount, 396, 'Colorbox runtime-style attribute count changed');
+assert.equal(files.length, 218, 'news article page inventory changed');
+assert.equal(pagesWithRuntimeStyles, 26, 'Colorbox runtime-style page count changed');
+assert.equal(runtimeStyleCount, 468, 'Colorbox runtime-style attribute count changed');
 
-console.log('PASS: 396 inline style attributes on 22 article pages are limited to the preserved Colorbox runtime set.');
+console.log('PASS: 468 inline style attributes on 26 article pages are limited to the preserved Colorbox runtime set.');

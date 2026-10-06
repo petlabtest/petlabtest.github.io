@@ -55,43 +55,6 @@
       margin: 0 auto 50px
     }
 
-    #main>.dpet-ll-pub-nav-chapters h3 {
-      margin: 0 0 40px;
-      color: #fff;
-      font-size: 30px;
-      line-height: 1.25;
-      text-transform: uppercase
-    }
-
-    #main>.dpet-ll-pub-nav-chapters .dpet-ll-pub-bottom-nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 0;
-      padding: 0;
-      list-style: none
-    }
-
-    #main>.dpet-ll-pub-nav-chapters .dpet-ll-pub-bottom-nav>li {
-      position: relative;
-      flex: 0 0 100%;
-      min-width: 0;
-      margin: 0;
-      list-style: none
-    }
-
-    @media (min-width: 700px) {
-      #main>.dpet-ll-pub-nav-chapters .dpet-ll-pub-bottom-nav>li {
-        flex-basis: calc(50% - 5px)
-      }
-    }
-
-    @media (min-width: 1025px) {
-      #main>.dpet-ll-pub-nav-chapters .dpet-ll-pub-bottom-nav>li {
-        flex-basis: calc(20% - 8px)
-      }
-    }
-
     /* Template1 main-content rhythm */
     .intro {
       width: 940px;
@@ -161,14 +124,6 @@
       text-transform: none
     }
 
-    #main>.ll-pub-section h3.ll-title-bl {
-      margin: 37px 0 30px;
-      color: #008eff;
-      font-size: clamp(1.6rem, 3vw, 2.5rem);
-      line-height: 1.1;
-      font-weight: 600
-    }
-
     #main>.ll-pub-section .wysiwyg {
       max-width: 1000px;
       margin: 0 auto;
@@ -211,25 +166,6 @@
       content: ""
     }
 
-    #main>.ll-pub-section .ll-two-by-callout {
-      display: flex;
-      flex-direction: column;
-      gap: 10px
-    }
-
-    #main>.ll-pub-section .ll-two-by-callout>div {
-      flex: 1;
-      padding: 30px;
-      background: #ebebeb
-    }
-
-    #main>.ll-pub-section .ll-two-by-callout h4 {
-      margin: 0 0 14px;
-      font-size: 20px;
-      line-height: 1.3;
-      font-weight: 600
-    }
-
     @media (min-width: 700px) {
       #main>.ll-pub-section .ll-pub-section-inner {
         padding: 100px 60px
@@ -240,13 +176,6 @@
         font-size: 20px
       }
 
-      #main>.ll-pub-section .ll-two-by-callout {
-        flex-direction: row
-      }
-
-      #main>.ll-pub-section .ll-two-by-callout h4 {
-        font-size: 25px
-      }
     }
 
     @media(max-width:900px) {

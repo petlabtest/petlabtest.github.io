@@ -7,7 +7,6 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const css = relative => fs.readFileSync(path.join(root, relative), 'utf8');
 const excluded = new Set(['.git', 'components', 'Replicate']);
 const hrefs = {
-  engage: '../assets/css/engage/engage-overview-late.css?v=20260930-1',
   people: '../assets/css/people/people-group-cn-overrides.css?v=20260930-1',
   research: '../assets/css/research/research-overview-cn-title.css?v=20260930-1',
 };
@@ -23,16 +22,12 @@ function walk(directory) {
   return files;
 }
 
-assert.match(css('assets/css/engage/engage-overview-late.css').trim(), /^\.ll-figure-box\s*\{\s*opacity:\s*1;\s*\}$/);
 assert.match(css('assets/css/people/people-group-cn-overrides.css'), /\.page-people-people-group-cn \.hero__page-title\s*\{\s*line-height:\s*1\.4;/);
 assert.match(css('assets/css/research/research-overview-cn-title.css'), /\.p-rdhero__item h3 a\s*\{\s*font-size:\s*1\.75rem\s*!important;/);
 
 for (const file of ['Engage/Engage-ov-cn.html', 'Engage/Engage-ov-en.html']) {
   const html = fs.readFileSync(path.join(root, file), 'utf8');
-  const link = html.indexOf(hrefs.engage);
-  assert.equal(html.split(hrefs.engage).length - 1, 1, `${file}: shared late rule should load once`);
-  assert(link > html.indexOf('Learn More') || link > html.indexOf('了解更多'), `${file}: preserve the rule after the intro CTA`);
-  assert(link < html.indexOf('hero__contact_wrapper'), `${file}: preserve the original late content layer`);
+  assert(!html.includes('engage-overview-late.css'), `${file}: removed figure module should not load its retired override`);
   assert.equal((html.match(/<style\b/gi) || []).length, 0, `${file}: remove the inline style block`);
 }
 
@@ -54,8 +49,8 @@ for (const language of ['cn', 'en']) {
 }
 
 const contentPages = walk(root);
-assert.equal(contentPages.length, 310, 'content page inventory changed');
+assert.equal(contentPages.length, 356, 'content page inventory changed');
 const pagesWithStyleBlocks = contentPages.filter(file => /<style\b/i.test(fs.readFileSync(file, 'utf8')));
 assert.deepEqual(pagesWithStyleBlocks, [], 'content-page skin styles should be externalized from HTML');
 
-process.stdout.write(`PASS: four residual page skin blocks are externalized at their original cascade positions; all ${contentPages.length} content pages are free of inline style blocks.\n`);
+process.stdout.write(`PASS: residual page skin blocks are externalized at their original cascade positions; all ${contentPages.length} content pages are free of inline style blocks.\n`);

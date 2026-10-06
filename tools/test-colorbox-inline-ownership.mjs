@@ -43,7 +43,7 @@ for (const { file, html } of pages) {
   runtimeStyleCount += styles.length;
 }
 
-assert.equal(pages.length, 48, 'site Colorbox page inventory changed');
+assert.equal(pages.length, 52, 'site Colorbox page inventory changed');
 assert.equal(researchPageCount, 12, 'Research Colorbox page inventory changed');
-assert.equal(runtimeStyleCount, 864, 'site Colorbox inline style inventory changed');
+assert.equal(runtimeStyleCount, 936, 'site Colorbox inline style inventory changed');
 process.stdout.write(`PASS: ${runtimeStyleCount} plugin-owned inline styles remain scoped to Colorbox markup across ${pages.length} pages, including ${researchPageCount} Research pages.\n`);

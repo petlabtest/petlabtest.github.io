@@ -1,0 +1,12 @@
+body.page-people-student-conference-cn, body.page-people-student-conference-en { color: #263746; }
+.student-conference-hero { padding: clamp(3rem, 8vw, 7rem) max(1.25rem, calc((100% - 1120px) / 2)); background: #003c62; color: #fff; }
+.student-conference-hero h1 { margin: 0 0 .55rem; color: #fff; font-size: clamp(2rem, 4vw, 3.25rem); }
+.student-conference-hero p { margin: 0; color: #dcebf4; font-size: clamp(1.05rem, 2vw, 1.45rem); }
+.student-conference-list { box-sizing: border-box; max-width: 1120px; margin: 0 auto; padding: 2.5rem 150px 5rem 1.25rem; }
+.conference-card { padding: 1.5rem 0 1.75rem 1.5rem; border-left: 3px solid #f45a2b; border-bottom: 1px solid #d8e0e6; }
+.conference-card + .conference-card { margin-top: 1rem; }
+.conference-card h2 { margin: 0 0 .6rem; color: #003c62; font-size: clamp(1.25rem, 2.3vw, 1.75rem); line-height: 1.35; }
+.conference-card p { margin: .5rem 0 0; line-height: 1.75; }
+.conference-card .conference-date { margin: 0 0 .45rem; color: #a64022; font-weight: 700; letter-spacing: .04em; }
+.conference-card .conference-lead { color: #526b7c; font-weight: 600; }
+@media (max-width: 699px) { .student-conference-list { padding: 1.5rem 1.25rem 5rem; } .conference-card { padding-left: 1rem; } }

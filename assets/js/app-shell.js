@@ -3,7 +3,7 @@
 
   var currentScript = document.currentScript;
   var siteRoot = new URL('../../', currentScript.src);
-  var version = '20260929-external-header-css1';
+  var version = '20261006-student-conference1';
   var state = window.PETLAB_APP_SHELL || {};
   state.version = version;
   state.siteRoot = siteRoot.href;

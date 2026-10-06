@@ -5,10 +5,10 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const families = [
-  { stem: 'About/About-history', css: 'about/history-layout.css', inline: 0, version: '20261006-component3' },
+  { stem: 'About/About-history', css: 'about/history-layout.css', inline: 0, version: '20261006-component4' },
   { stem: 'News/News-list', css: 'news/news-list-layout.css', inline: 0 },
   { stem: 'About/About-leadership', css: 'about/leadership-title-hero.css', inline: 0, minimum: 100 },
-  { stem: 'People/People-Career', css: 'people/career-page-overrides.css', inline: 0, version: '20261003-shell2' },
+  { stem: 'People/People-Career', css: 'people/fullwidth-cta-arrow.css', inline: 0, version: '20261006-shared1', minimum: 400 },
 ];
 
 for (const { stem, css, inline, minimum = 500, version = '20260929-shared1' } of families) {

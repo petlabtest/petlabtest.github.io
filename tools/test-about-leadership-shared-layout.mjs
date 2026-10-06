@@ -48,8 +48,8 @@ for (const language of ['cn', 'en']) {
   const file = `About/About-leadership-${language}.html`;
   const html = fs.readFileSync(path.join(root, file), 'utf8');
   const teamIntro = html.indexOf('../assets/css/about/research-team-archive/team-intro.css');
-  const baseLink = html.indexOf(`../${basePath}?v=20261006-component3`);
-  const chapterBase = html.indexOf('../assets/css/about/about-chapter-navigation-base.css?v=20261006-base1');
+  const baseLink = html.indexOf(`../${basePath}?v=20261006-component4`);
+  const chapterBase = html.indexOf('../assets/css/about/about-chapter-navigation-base.css?v=20261006-base2');
   const navigationMotion = html.indexOf('../assets/css/about/about-chapter-navigation-motion.css?v=20261006-motion1');
   const hero = html.indexOf('../assets/css/about/leadership-title-hero.css');
   const sharedHero = html.indexOf('../assets/css/about/about-title-hero-shared.css?v=20261003-2');

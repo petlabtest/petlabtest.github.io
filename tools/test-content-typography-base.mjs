@@ -7,11 +7,11 @@ const basePath = 'assets/css/content-typography-base.css';
 const base = fs.readFileSync(path.join(root, basePath), 'utf8');
 const families = [
   ['engage/engage-typography.css', 14],
-  ['people/people-typography.css', 14],
+  ['people/people-typography.css', 16],
   ['research/research-typography.css', 74],
   ['capabilities/capabilities-typography.css', 4],
   ['giving/giving-typography.css', 2],
-  ['news/news-content-typography.css', 176],
+  ['news/news-content-typography.css', 220],
 ];
 
 assert.match(base, /body\s*\{[^}]*--font:\s*var\(--font-family-sans\);[^}]*--font-poppins:\s*var\(--font-family-sans\);[^}]*--font-roboto-con:\s*var\(--font-family-sans\);[^}]*font-family:\s*var\(--font-family-sans\);[^}]*font-synthesis:\s*none;/s,

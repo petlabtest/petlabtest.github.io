@@ -11,7 +11,7 @@ const summaryHref = '../assets/css/research/research-rdgroups-summary-22.css?v=2
 const css = readFileSync('assets/css/research/research-rdgroups-tabs.css', 'utf8');
 const summaryCss = readFileSync('assets/css/research/research-rdgroups-summary-22.css', 'utf8');
 const pharmaCss = readFileSync('assets/css/research/pharmaceutical-layout.css', 'utf8');
-const cardMasonryHref = '../assets/css/research/research-rdgroups-card-masonry-base.css?v=20261006-base1';
+const cardMasonryHref = '../assets/css/research/research-rdgroups-card-masonry-base.css?v=20261006-base2';
 const cardMasonryCss = readFileSync('assets/css/research/research-rdgroups-card-masonry-base.css', 'utf8');
 const medicalOverrides = readFileSync('assets/css/research/research-medical-overrides.css', 'utf8');
 
@@ -40,7 +40,8 @@ for (const path of paths) {
 const medicalCn = readFileSync(paths[0], 'utf8');
 assert.match(medicalOverrides, /body\.page-research-research-medical-cn \.paragraph--type-p-masonry\s*\{\s*margin-bottom:\s*0\s*!important/);
 assert.match(medicalOverrides, /body\.page-research-research-medical-cn \.p-masonry__grid\s*\{\s*height:\s*1220px\s*!important/);
-assert.match(pharmaCss, /\.paragraph--type-p-masonry\s*\{\s*margin-bottom:\s*0\s*!important/);
+assert.match(cardMasonryCss, /\.paragraph--type-p-masonry\s*\{\s*margin-bottom:\s*0\s*!important/);
+assert.doesNotMatch(pharmaCss, /\.paragraph--type-p-masonry\s*\{\s*margin-bottom:\s*0\s*!important/);
 assert.match(cardMasonryCss, /\.p-masonry__grid\s*\{\s*height:\s*1220px\s*!important/);
 assert.doesNotMatch(pharmaCss, /height:\s*1220px\s*!important/);
 for (const path of paths.slice(1)) {
@@ -51,6 +52,7 @@ for (const path of paths.slice(1)) {
   assert(shared > 0, `${path}: shared card/Masonry base should load`);
   if (path.includes('Nuclear')) assert(shared < local, `${path}: shared base precedes local Nuclear styles`);
   if (path.includes('Pharmaceutical')) assert(shared < pharmaceutical, `${path}: shared base precedes local Pharmaceutical styles`);
+  if (path.includes('Nuclear')) assert.doesNotMatch(readFileSync('assets/css/research/research-nuclear-late-layout.css', 'utf8'), /\.paragraph--type-p-masonry\s*\{\s*margin-bottom:\s*0\s*!important/);
 }
 
 console.log('Research Nuclear/Medical/Pharmaceutical Chinese R&D-groups shared CSS contract passed (3 pages).');

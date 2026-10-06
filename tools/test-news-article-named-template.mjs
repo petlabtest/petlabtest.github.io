@@ -181,15 +181,15 @@ const cohorts = Object.fromEntries(['cn', 'en'].map(language => {
   const shape = [...counts].sort((a, b) => b[1] - a[1])[0][0];
   return [language, allPages.filter(page => page.language === language && page.prefixShape === shape)];
 }));
-assert.equal(cohorts.cn.length, 64, 'Chinese dominant prefix cohort size changed');
-assert.equal(cohorts.en.length, 64, 'English dominant prefix cohort size changed');
+assert.equal(cohorts.cn.length, 79, 'Chinese dominant prefix cohort size changed');
+assert.equal(cohorts.en.length, 79, 'English dominant prefix cohort size changed');
 const pageBySlug = new Map();
 for (const page of [...cohorts.cn, ...cohorts.en]) {
   const group = pageBySlug.get(page.slug) || {};
   group[page.language] = page;
   pageBySlug.set(page.slug, group);
 }
-assert.equal(pageBySlug.size, 64, 'dominant prefix cohort lost bilingual pairing');
+assert.equal(pageBySlug.size, 79, 'dominant prefix cohort lost bilingual pairing');
 for (const [slug, pair] of pageBySlug) assert.ok(pair.cn && pair.en, `${slug}: bilingual counterpart missing`);
 const dominantRecords = [...pageBySlug.values()].flatMap(pair => [pair.cn, pair.en]);
 const records = allPages;

@@ -843,21 +843,6 @@
             font-size: 14px;
         }
 
-.page-impact .video__wrapper > video {
-            display: block;
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-}
-
-.page-impact .impact-patent-award-content {
-    margin-top: 100px;
-}
-
-.page-impact .impact-patent-award-description {
-    margin-top: 36px;
-}
-
 .page-impact .impact-team-achievements-image {
     background-image: url("../../pic/About/impact/team-achievements-bg.jpg");
     width: 67rem;

@@ -1,7 +1,3 @@
-.paragraph--type-p-masonry {
-  margin-bottom: 0 !important;
-}
-
 .paragraph--type-p-masonry + .paragraph--type-p-fullwidth.background--grey.slope--pos {
   margin-top: 0 !important;
 }

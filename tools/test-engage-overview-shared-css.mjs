@@ -8,10 +8,8 @@ const pages = [
 
 const backgroundPath = 'assets/css/engage/engage-overview-background.css';
 const layoutPath = 'assets/css/engage/engage-overview-layout.css';
-const latePath = 'assets/css/engage/engage-overview-late.css';
 const backgroundCss = readFileSync(backgroundPath, 'utf8');
 const layoutCss = readFileSync(layoutPath, 'utf8');
-const lateCss = readFileSync(latePath, 'utf8');
 
 assert(existsSync('assets/pic/root/media/r010.jpg'), 'callout background image exists');
 assert(existsSync('assets/pic/School/xsclg.jpg'), 'category-grid background image exists');
@@ -19,7 +17,6 @@ assert.match(backgroundCss, /url\('\.\.\/\.\.\/pic\/root\/media\/r010\.jpg'\)/);
 assert.match(layoutCss, /url\('\.\.\/\.\.\/pic\/School\/xsclg\.jpg'\)/);
 assert.match(layoutCss, /\.hero--landing-page \.cat-grid \.views-view-responsive-grid\s*\{\s*--views-responsive-grid--column-count:\s*4\s*!important;\s*--views-responsive-grid--cell-min-width:\s*100px;\s*--views-responsive-grid--layout-gap:\s*0px;/);
 assert.match(layoutCss, /height:\s*320px\s*!important/);
-assert.match(lateCss, /\.ll-figure-box\s*\{\s*opacity:\s*1;\s*\}/);
 assert.match(layoutCss, /\.hero-landing-cta-grid > \.engage-overview-project-column\s*\{\s*padding-right:\s*15px;\s*\}/);
 
 for (const { path, html } of pages) {
@@ -36,9 +33,9 @@ for (const { path, html } of pages) {
   }
   assert(!head.includes('.paragraph--type-figure-callout-section {'), `${path}: background rules moved out of HTML`);
   assert(!head.includes('.paragraph--type-p-masonry-grid-socials {'), `${path}: layout rules moved out of HTML`);
-  const lateLink = '../assets/css/engage/engage-overview-late.css?v=20260930-1';
-  assert.equal(html.split(lateLink).length - 1, 1, `${path}: one late figure override stylesheet`);
-  assert(html.indexOf(lateLink) < html.indexOf('paragraph--type-figure-callout-section'), `${path}: late figure override loads before its figure component`);
+  assert(!html.includes('engage-overview-late.css'), `${path}: removed figure module must not load its override stylesheet`);
+  assert(!html.includes('paragraph--type-figure-callout-section'), `${path}: removed statistics strip must not remain in the page`);
+  assert(!html.includes('paragraph--type-p-news3up'), `${path}: removed related-news module must not remain in the page`);
   assert(!/<style\b/i.test(html), `${path}: page skin remains externalized`);
   assert.equal((html.match(/class="engage-overview-project-column"/g) || []).length, 1, `${path}: the project intro column retains its semantic spacing owner`);
   assert.doesNotMatch(html, /style="padding-right:\s*15px;"/, `${path}: project-column spacing should not return inline`);

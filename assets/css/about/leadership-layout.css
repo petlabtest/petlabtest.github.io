@@ -88,31 +88,6 @@
       margin: 0 auto;
     }
 
-    .industry-main .dpet-ll-pub-nav-chapters h3 {
-      margin: 0 0 40px;
-      color: #fff;
-      font-size: 30px;
-      line-height: 1.25;
-      text-transform: uppercase;
-    }
-
-    .industry-main .dpet-ll-pub-bottom-nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .industry-main .dpet-ll-pub-bottom-nav>li {
-      position: relative;
-      flex: 0 0 100%;
-      min-width: 0;
-      margin: 0;
-      list-style: none;
-    }
-
     .industry-main .ll-pub-bottom-nav-img img {
       display: block;
     }
@@ -126,9 +101,6 @@
         padding: 45px 30px 50px;
       }
 
-      .industry-main .dpet-ll-pub-bottom-nav>li {
-        flex-basis: calc(50% - 5px);
-      }
     }
 
     @media (min-width: 1025px) {
@@ -137,9 +109,6 @@
         padding-bottom: 80px;
       }
 
-      .industry-main .dpet-ll-pub-bottom-nav>li {
-        flex-basis: calc(20% - 8px);
-      }
     }
 
 .page-about-leadership .industry-list .industry-item-info > .leadership-card-more {

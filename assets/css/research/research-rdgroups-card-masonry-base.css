@@ -1,4 +1,8 @@
 /* Shared base geometry for R&D-group project cards and Masonry sections. */
+.paragraph--type-p-masonry {
+  margin-bottom: 0 !important;
+}
+
 .p-project-carousel__content .project-carousel__content {
   min-height: 362px !important;
 }

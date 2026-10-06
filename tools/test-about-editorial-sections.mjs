@@ -53,6 +53,7 @@ assert.deepEqual(editorialVariants[0], [
 assert.deepEqual(editorialVariants[1], editorialVariants[0], 'Chinese and English pages should keep matching section variants');
 
 const missionLayoutCss = fs.readFileSync(path.join(root, 'assets/css/about/about-mission-layout.css'), 'utf8');
+const chapterNavigationCss = fs.readFileSync(path.join(root, 'assets/css/about/about-chapter-navigation-base.css'), 'utf8');
 const aboutFoundationCss = fs.readFileSync(path.join(root, 'assets/css/about/about-page-foundation.css'), 'utf8');
 const sharedTitleHeroCss = fs.readFileSync(path.join(root, 'assets/css/about/about-title-hero-shared.css'), 'utf8');
 const editorialHeroTypeCss = fs.readFileSync(path.join(root, 'assets/css/about/about-title-hero-editorial-type.css'), 'utf8');
@@ -67,8 +68,8 @@ for (const { file, page } of missionPages) {
   assert(!page.includes('about-mission-hero.css'), `${file}: do not load the unused image-based hero rules`);
   assert(!page.includes('about-mission-title-hero.css'), `${file}: do not load the retired duplicate title layer`);
   assert.match(page, /<link rel="stylesheet" href="\.\.\/assets\/css\/about\/about-page-foundation\.css\?v=20261003-base1">/);
-  assert.match(page, /<link rel="stylesheet" href="\.\.\/assets\/css\/about\/about-mission-layout\.css\?v=20261006-component3">/);
-  assert.match(page, /<link rel="stylesheet" href="\.\.\/assets\/css\/about\/about-chapter-navigation-base\.css\?v=20261006-base1">/);
+  assert.match(page, /<link rel="stylesheet" href="\.\.\/assets\/css\/about\/about-mission-layout\.css\?v=20261006-component4">/);
+  assert.match(page, /<link rel="stylesheet" href="\.\.\/assets\/css\/about\/about-chapter-navigation-base\.css\?v=20261006-base2">/);
   assert.match(page, /<link rel="stylesheet" href="\.\.\/assets\/css\/about\/about-chapter-navigation-motion\.css\?v=20261006-motion1">/);
   assert.match(page, /<link rel="stylesheet" href="\.\.\/assets\/css\/about\/about-title-hero-shared\.css\?v=20261003-2">/);
   assert.match(page, /<link rel="stylesheet" href="\.\.\/assets\/css\/about\/about-title-hero-editorial-type\.css\?v=20261003-1">/);
@@ -78,7 +79,7 @@ for (const { file, page } of missionPages) {
 }
 assert.match(aboutFoundationCss, /--shell: 1280px/);
 assert(!/:root|\*\s*\{|^html\s*\{|^body\s*\{|^a\s*\{|^img\s*\{/m.test(missionLayoutCss), 'mission page layout should not duplicate the shared foundation');
-assert.match(missionLayoutCss, /#main>\.dpet-ll-pub-nav-chapters[\s\S]*flex-basis: calc\(20% - 8px\)/, 'the active chapter navigation remains styled at desktop widths');
+assert.match(chapterNavigationCss, /#main > \.dpet-ll-pub-nav-chapters \.dpet-ll-pub-bottom-nav > li[\s\S]*flex-basis: calc\(20% - 8px\)/, 'the shared chapter navigation retains its desktop card count');
 assert.equal((css.match(/clip-path: polygon\(0 0, 100% 0, 100% 100%, 0 77%\)/g) ?? []).length, 1, 'blue section geometry should have one desktop rule owner');
 assert(!missionLayoutCss.includes('width: min(calc(100% - 116px), 940px);'), 'overridden intro width should not remain in the initial layer');
 assert(!missionLayoutCss.includes('font-size: clamp(2rem, 3.3vw, 3.35rem);'), 'overridden story heading size should have one owner');

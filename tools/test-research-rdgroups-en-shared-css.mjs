@@ -6,7 +6,7 @@ const baseHref = '../assets/css/research/research-rdgroups-tabs.css?v=20260929-1
 const summaryHref = '../assets/css/research/research-rdgroups-summary-en.css?v=20260929-1';
 const summaryCss = readFileSync('assets/css/research/research-rdgroups-summary-en.css', 'utf8');
 const pharmaCss = readFileSync('assets/css/research/pharmaceutical-layout.css', 'utf8');
-const cardMasonryHref = '../assets/css/research/research-rdgroups-card-masonry-base.css?v=20261006-base1';
+const cardMasonryHref = '../assets/css/research/research-rdgroups-card-masonry-base.css?v=20261006-base2';
 const cardMasonryCss = readFileSync('assets/css/research/research-rdgroups-card-masonry-base.css', 'utf8');
 const pharmaEnCss = readFileSync('assets/css/research/research-carousel-en-height.css', 'utf8');
 const slopeCss = readFileSync('assets/css/research/research-slope-spacing.css', 'utf8');
@@ -32,7 +32,8 @@ for (const path of paths) {
 const medical = readFileSync(paths[0], 'utf8');
 assert.match(slopeCss, /\.paragraph--type-p-fullwidth\.background--grey\.slope--pos\.js-animate\s*\{\s*margin-top:\s*-300px/);
 assert(medical.includes('../assets/css/research/research-slope-spacing.css?v=20260929-1'), 'Medical EN should load the shared slope spacing layer');
-assert.match(pharmaCss, /\.paragraph--type-p-masonry\s*\{\s*margin-bottom:\s*0\s*!important/);
+assert.match(cardMasonryCss, /\.paragraph--type-p-masonry\s*\{\s*margin-bottom:\s*0\s*!important/);
+assert.doesNotMatch(pharmaCss, /\.paragraph--type-p-masonry\s*\{\s*margin-bottom:\s*0\s*!important/);
 assert.match(cardMasonryCss, /\.p-masonry__grid\s*\{\s*height:\s*1220px\s*!important/);
 assert.match(cardMasonryCss, /\.p-project-carousel__content \.project-carousel__content\s*\{\s*min-height:\s*362px/);
 assert.doesNotMatch(pharmaCss, /min-height:\s*362px\s*!important|height:\s*1220px\s*!important/);
@@ -56,6 +57,6 @@ assert.match(nuclearEn, /class="[^"]*p-rdgroups__tablist/);
 assert.match(nuclearEn, /class="[^"]*p-rdgroups__summary/);
 assert(nuclearIndexes[3] < nuclearIndexes[4], 'Nuclear shared card/Masonry base should precede its local late layout');
 assert.match(pharmaEnCss, /\.p-project-carousel__content \.project-carousel__content\s*\{\s*min-height:\s*510px\s*!important/);
-assert.doesNotMatch(readFileSync('assets/css/research/research-nuclear-late-layout.css', 'utf8'), /min-height:\s*362px\s*!important|height:\s*1220px\s*!important/);
+assert.doesNotMatch(readFileSync('assets/css/research/research-nuclear-late-layout.css', 'utf8'), /margin-bottom:\s*0\s*!important|min-height:\s*362px\s*!important|height:\s*1220px\s*!important/);
 
 console.log('Research Medical/Pharmaceutical/Nuclear English shared R&D-groups contract passed (3 pages; late layer order retained).');

@@ -30,7 +30,7 @@
   <link rel="apple-touch-icon" href="../assets/favicons/petlab-logo-180.png">
   <link rel="manifest" href="../assets/data/favicons/site.webmanifest">
   <link rel="stylesheet" href="../assets/css/app-shell.css?v=20260926-1">
-  <script src="../assets/js/app-shell.js?v=20260929-external-header-css1"></script>
+  <script src="../assets/js/app-shell.js?v=20261006-student-conference1"></script>
   <!-- PETLAB:HEAD:END -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
@@ -41,8 +41,8 @@
     <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
     <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline-min.js"></script>
 
-        <link rel="stylesheet" href="../assets/css/about/history-layout.css?v=20261006-component3">
-        <link rel="stylesheet" href="../assets/css/about/about-chapter-navigation-base.css?v=20261006-base1">
+        <link rel="stylesheet" href="../assets/css/about/history-layout.css?v=20261006-component4">
+        <link rel="stylesheet" href="../assets/css/about/about-chapter-navigation-base.css?v=20261006-base2">
         <link rel="stylesheet" href="../assets/css/about/about-chapter-navigation-motion.css?v=20261006-motion1">
 
         <link rel="stylesheet" href="../assets/css/about/history-page-layout.css?v=20261003-hero-clean1">
@@ -66,7 +66,16 @@
             </div>
         </section>
         <section class="history-timeline" aria-labelledby="history-title">
-            <div id="timeline-embed"></div>
+            <div class="history-timeline__heading">
+                <h2 id="history-title">Three Histories One Innovation Path</h2>
+                <p>Explore how scientific discoveries became original technologies and how those technologies developed into research instruments, standards, and medical systems.</p>
+            </div>
+            <div class="history-timeline__tabs" role="tablist" aria-label="Select a history category">
+                <button type="button" role="tab" aria-selected="true" data-history-group="Scientific Discoveries">Scientific Discoveries</button>
+                <button type="button" role="tab" aria-selected="false" data-history-group="Technological Inventions">Technological Inventions</button>
+                <button type="button" role="tab" aria-selected="false" data-history-group="Industrial Expansion">Industrial Development</button>
+            </div>
+            <div id="timeline-embed" role="tabpanel" aria-live="polite"></div>
 
             <script>
                 // 你的数据 👇 把这里换成你自己的所有数据
@@ -263,8 +272,32 @@
                     ]
                 };
 
-                // 自动渲染时间轴 ✅
-                window.timeline = new TL.Timeline('timeline-embed', data);
+                const historyGroups = ["Scientific Discoveries", "Technological Inventions", "Industrial Expansion"];
+
+                function renderHistory(group) {
+                    const container = document.getElementById('timeline-embed');
+                    const labels = {
+                        "Scientific Discoveries": "From new phenomena and scientific principles",
+                        "Technological Inventions": "Turning scientific questions into testable technologies",
+                        "Industrial Expansion": "Building instruments, standards, and applications"
+                    };
+                    const filtered = {
+                        title: { text: { headline: group === "Industrial Expansion" ? "Industrial Development" : group, text: labels[group] } },
+                        events: data.events.filter((event) => event.group === group)
+                    };
+                    container.innerHTML = '';
+                    window.timeline = new TL.Timeline('timeline-embed', filtered);
+                }
+
+                document.querySelectorAll('[data-history-group]').forEach((button) => {
+                    button.addEventListener('click', () => {
+                        document.querySelectorAll('[data-history-group]').forEach((item) => item.setAttribute('aria-selected', 'false'));
+                        button.setAttribute('aria-selected', 'true');
+                        renderHistory(button.dataset.historyGroup);
+                    });
+                });
+
+                renderHistory(historyGroups[0]);
             </script>
         </section>
 
@@ -300,10 +333,10 @@
           <li class="ll-ot">
             <a href="About-impact-en.html" class="ll-section-nav">
               <div class="ll-pub-bottom-nav-img">
-                <img src="../assets/pic/About/explore-nav/impact-v2.jpg" alt="Our Impact" loading="lazy">
+                <img src="../assets/pic/About/explore-nav/impact-v2.jpg" alt="Social Impact" loading="lazy">
               </div>
               <div class="ll-nav-text-side">
-                <div class="ll-nav-title">Our Impact</div>
+                <div class="ll-nav-title">Social Impact</div>
               </div>
             </a>
           </li>

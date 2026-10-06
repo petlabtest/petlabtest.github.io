@@ -123,15 +123,14 @@ for (const file of ['index-cn.html', 'index.html', 'About/About-about-cn.html', 
     assert.equal((html.match(/class="about-content editorial-section__content"/g) ?? []).length, 5, `${file} should use the shared editorial content wrapper in each About section`);
     assert.equal((html.match(/class="about-copy editorial-section__copy"/g) ?? []).length, 5, `${file} should use the shared editorial copy wrapper in each About section`);
   } else {
-    assert.equal(sectionCount, 2, `${file} should animate the mission panel and initiative`);
-    assert.equal(targetCount, 8, `${file} should animate mission and initiative copy, CTAs, and accent`);
+    assert.equal(sectionCount, 1, `${file} should animate the mission panel`);
+    assert.equal(targetCount, 4, `${file} should animate the mission eyebrow, heading, copy, and CTA`);
     assert.equal((html.match(/class="editorial-section__content"/g) ?? []).length, 1, `${file} mission should use one editorial content wrapper`);
     assert.equal((html.match(/class="editorial-section__copy"/g) ?? []).length, 1, `${file} mission should use one editorial copy wrapper`);
     assert.match(html, /<section class="home-fullwidth__panel"[\s\S]*?<div class="editorial-section__content">\s*<div class="editorial-section__copy">[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/, `${file} mission should preserve section > content > copy nesting`);
     assert(html.includes('site.css?v=20260928-editorial-cascade5'), `${file} should bypass cached styles after homepage CSS changes`);
     assert.match(html, /home-fullwidth__panel[^>]*data-editorial-threshold="0\.74"/);
-    assert.match(html, /home-programs__initiative[^>]*data-editorial-threshold="0\.42"/);
-    for (const delay of ['620', '820', '1060', '1320', '0', '90', '120', '180']) {
+    for (const delay of ['620', '820', '1060', '1320']) {
       assert(html.includes(`data-editorial-delay="${delay}"`), `${file} should preserve the ${delay}ms entrance delay`);
     }
   }

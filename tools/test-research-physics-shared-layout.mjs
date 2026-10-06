@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const research = path.join(root, 'Research');
 const basePath = 'assets/css/research/physics-layout.css';
-const cardMasonryHref = '../assets/css/research/research-rdgroups-card-masonry-base.css?v=20261006-base1';
+const cardMasonryHref = '../assets/css/research/research-rdgroups-card-masonry-base.css?v=20261006-base2';
 const tabsHref = '../assets/css/research/research-rdgroups-tabs.css?v=20260929-1';
 const summaryHref = '../assets/css/research/research-rdgroups-summary-22.css?v=20260929-1';
 const enPath = 'assets/css/research/physics-en-overrides.css';
@@ -28,6 +28,8 @@ assert.equal(summaryConsumers.length, 7, 'the shared summary layer should cover 
 const cardMasonry = fs.readFileSync(path.join(root, 'assets/css/research/research-rdgroups-card-masonry-base.css'), 'utf8');
 assert.match(cardMasonry, /min-height:\s*362px\s*!important/);
 assert.match(cardMasonry, /\.p-masonry__grid\s*\{\s*height:\s*1220px\s*!important/s);
+assert.match(cardMasonry, /\.paragraph--type-p-masonry\s*\{\s*margin-bottom:\s*0\s*!important/s);
+assert.doesNotMatch(base, /\.paragraph--type-p-masonry\s*\{\s*margin-bottom:\s*0\s*!important/);
 assert(english.includes('font-size: 20px !important') && english.includes('min-height: 510px !important'), 'English typography and card height should remain explicit overrides');
 
 for (const language of ['cn', 'en']) {

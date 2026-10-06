@@ -2,13 +2,13 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 
 const href = '../assets/css/about/about-chapter-navigation-motion.css?v=20261006-motion1';
-const baseHref = '../assets/css/about/about-chapter-navigation-base.css?v=20261006-base1';
+const baseHref = '../assets/css/about/about-chapter-navigation-base.css?v=20261006-base2';
 const motion = fs.readFileSync('assets/css/about/about-chapter-navigation-motion.css', 'utf8');
 const component = fs.readFileSync('assets/css/about/about-chapter-navigation-base.css', 'utf8');
 const families = [
-  ['mission', 'about-mission-layout.css?v=20261006-component3', 'about-mission-main'],
-  ['history', 'history-layout.css?v=20261006-component3', 'history-main'],
-  ['leadership', 'leadership-layout.css?v=20261006-component3', 'industry-main'],
+  ['mission', 'about-mission-layout.css?v=20261006-component4', 'about-mission-main'],
+  ['history', 'history-layout.css?v=20261006-component4', 'history-main'],
+  ['leadership', 'leadership-layout.css?v=20261006-component4', 'industry-main'],
 ];
 
 for (const [family, layoutHref, rootClass] of families) {
@@ -20,6 +20,10 @@ for (const [family, layoutHref, rootClass] of families) {
     `${family}: shared title positioning should not be duplicated in the local layout`);
   assert.doesNotMatch(layout, /\.ll-nav-title\s*\{[^}]*font-size:\s*38px/,
     `${family}: shared title typography should not be duplicated in the local layout`);
+  assert.doesNotMatch(layout, /\.dpet-ll-pub-nav-chapters h3\s*\{[^}]*font-size:\s*30px/,
+    `${family}: shared chapter heading typography should not be duplicated in the local layout`);
+  assert.doesNotMatch(layout, /\.dpet-ll-pub-bottom-nav\s*\{[^}]*display:\s*flex/,
+    `${family}: shared card-list layout should not be duplicated in the local layout`);
   for (const language of ['cn', 'en']) {
     const file = `About/About-${family}-${language}.html`;
     const html = fs.readFileSync(file, 'utf8');
@@ -35,7 +39,7 @@ for (const [family, layoutHref, rootClass] of families) {
   }
 }
 
-for (const value of ['position: relative', 'background: #008eff', 'aspect-ratio: 1 / 1', 'object-fit: cover', 'font-size: 38px', 'font-weight: 700']) {
+for (const value of ['font-size: 30px', 'display: flex', 'flex-basis: calc(50% - 5px)', 'flex-basis: calc(20% - 8px)', 'position: relative', 'background: #008eff', 'aspect-ratio: 1 / 1', 'object-fit: cover', 'font-size: 38px', 'font-weight: 700']) {
   assert(component.includes(value), `shared chapter-card base should own ${value}`);
 }
 

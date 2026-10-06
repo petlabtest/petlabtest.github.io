@@ -17,7 +17,7 @@ for (const selector of [':root{', '*{', 'h1{', '.ifde-page__intro{', '.region-co
 
 const entries = [
   { css: 'assets/css/engage/r018.css', href: 'assets/css/engage/r018.css', import: '../legacy-theme-foundation.css', pages: 2 },
-  { css: 'assets/css/research/counter-cwmd/15.css', href: 'assets/css/research/counter-cwmd/15.css', import: '../../legacy-theme-foundation.css', pages: 238 },
+  { css: 'assets/css/research/counter-cwmd/15.css', href: 'assets/css/research/counter-cwmd/15.css', import: '../../legacy-theme-foundation.css', pages: 282 },
   { css: 'assets/css/research/dpet.css', href: 'assets/css/research/dpet.css', import: '../legacy-theme-foundation.css', pages: 4, prelude: 'assets/css/research/dpet-prelude.css' },
   { css: 'assets/css/research/overview/dpet-theme.css', href: 'assets/css/research/overview/dpet-theme.css', import: '../../legacy-theme-foundation.css', pages: 2 },
 ];
@@ -58,4 +58,4 @@ for (const entry of entries) {
   }
 }
 
-process.stdout.write('PASS: 246 pages share the path-independent legacy theme foundation; local font assets and Drupal prelude order remain page-family owned.\n');
+process.stdout.write('PASS: 290 pages share the path-independent legacy theme foundation; local font assets and Drupal prelude order remain page-family owned.\n');

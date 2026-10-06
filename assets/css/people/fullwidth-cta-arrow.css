@@ -1,4 +1,4 @@
-/* English Student page CTA arrow, independent of archived icon-font paths. */
+/* Shared full-width CTA arrow for People Career and Student pages. */
 .paragraph--type-p-fullwidth.background--grey.slope--pos .p-fullwidth__cta .cta--button .last-word::after {
   content: "";
   display: inline-block;

@@ -21,8 +21,8 @@ for (const language of ['cn', 'en']) {
   const file = `About/About-history-${language}.html`;
   const html = fs.readFileSync(path.join(root, file), 'utf8');
   const page = html.indexOf(`../${layoutPath}?v=20261003-hero-clean1`);
-  const layoutBase = html.indexOf('../assets/css/about/history-layout.css?v=20261006-component3');
-  const chapterBase = html.indexOf('../assets/css/about/about-chapter-navigation-base.css?v=20261006-base1');
+  const layoutBase = html.indexOf('../assets/css/about/history-layout.css?v=20261006-component4');
+  const chapterBase = html.indexOf('../assets/css/about/about-chapter-navigation-base.css?v=20261006-base2');
   const navigationMotion = html.indexOf('../assets/css/about/about-chapter-navigation-motion.css?v=20261006-motion1');
   const heroIndex = html.indexOf(`../${heroPath}?v=20261003-hero1`);
   const sharedHeroIndex = html.indexOf(`../${sharedHeroPath}?v=20261003-2`);

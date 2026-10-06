@@ -17,9 +17,9 @@ for (const language of ['cn', 'en']) {
   const html = fs.readFileSync(file, 'utf8');
   assert(summaries[language].every((summary) => html.includes(summary)), `${file}: retain five localized award-card summaries`);
   assert.equal((html.match(/<p style="font-size: 1\.25rem; min-height: 4rem;">/g) || []).length, 0, `${file}: repeated summary declarations are externalized`);
-  const heading = language === 'cn' ? '<h3>学术影响力</h3>' : '<h3>Academic Impact</h3>';
-  assert(html.includes(heading), `${file}: preserve the language-specific impact title without inline style`);
-  assert(!html.includes(`${heading.slice(0, 3)} style="font-size: 56px;"`), `${file}: impact title size is owned by shared CSS`);
+  const heading = language === 'cn' ? '<h1 class="about-hero-title">社会影响</h1>' : '<h1 class="about-hero-title">Social Impact</h1>';
+  assert(html.includes(heading), `${file}: preserve the language-specific shared Hero title`);
+  assert(!html.includes(`${heading.slice(0, 3)} style=`), `${file}: impact title should not carry inline presentation`);
   assert.equal(html.split(href).length - 1, 1, `${file}: shared owner loads exactly once`);
   total += summaries[language].length;
 }

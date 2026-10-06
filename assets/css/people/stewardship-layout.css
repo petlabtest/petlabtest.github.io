@@ -1,0 +1,20 @@
+#block-dpet-theme-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#block-dpet-theme-content > .stewardship-development {
+  order: 1;
+}
+
+#block-dpet-theme-content > .stewardship-director {
+  order: 2;
+}
+
+#block-dpet-theme-content > .stewardship-director-copy {
+  order: 3;
+}
+
+#block-dpet-theme-content > .stewardship-director-signature {
+  order: 4;
+}

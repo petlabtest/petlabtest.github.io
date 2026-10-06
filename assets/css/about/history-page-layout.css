@@ -84,6 +84,39 @@
             line-height: 1.6;
         }
 
+        .history-timeline__tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .75rem;
+            margin: 0 0 1.5rem;
+        }
+
+        .history-timeline__tabs button {
+            appearance: none;
+            border: 1px solid #006da8;
+            border-radius: 999px;
+            background: #fff;
+            color: #004b73;
+            cursor: pointer;
+            font: inherit;
+            font-weight: 700;
+            padding: .7rem 1.2rem;
+            transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+        }
+
+        .history-timeline__tabs button:hover,
+        .history-timeline__tabs button:focus-visible,
+        .history-timeline__tabs button[aria-selected="true"] {
+            border-color: #003c62;
+            background: #003c62;
+            color: #fff;
+        }
+
+        .history-timeline__tabs button:focus-visible {
+            outline: 3px solid #f15a24;
+            outline-offset: 3px;
+        }
+
         #timeline-embed {
             width: 100%;
             height: clamp(620px, 57vw, 820px);
