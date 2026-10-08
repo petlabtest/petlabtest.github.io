@@ -20,24 +20,22 @@
 }
 
 #petlab-header {
-  min-height: 130px;
+  min-height: 84px;
 }
 
-@media (max-width: 1250px) and (min-width: 1101px) {
-  #petlab-header {
-    min-height: 120px;
-  }
+body.home :is(#petlab-header, [data-component="header"], [data-app-shell="header"]) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 0;
+  width: 100%;
+  margin-inline: auto;
 }
 
 @media (max-width: 1100px) {
   #petlab-header {
-    min-height: 82px;
-  }
-}
-
-@media (max-width: 700px) {
-  #petlab-header {
-    min-height: 74px;
+    min-height: 72px;
   }
 }
 

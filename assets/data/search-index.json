@@ -757,12 +757,6 @@
   },
   {
     "lang": "en",
-    "title": "RA Development Framework",
-    "url": "People/People-UPOP-en.html",
-    "text": "RA Development Framework RA DEVELOPMENT FRAMEWORK The structure and development direction of the Digital PET Laboratory Research Assistant framework."
-  },
-  {
-    "lang": "en",
     "title": "Radiation Detection and Nuclear Metrology",
     "url": "Research/Research-Nuclear-Page3-en.html",
     "text": "Radiation Detection and Nuclear Metrology Radiation Detection and Nuclear Metrology Ionizing radiation is the primary signature of all nuclear processes, and its precise detection and quantification form the foundation of nuclear science and applications."
@@ -994,6 +988,12 @@
     "title": "Twisted Nuts Oral China | Nikola: China Begins Technical Export, Bringing in Western Talents",
     "url": "News/List/News-page45-en.html",
     "text": "Twisted Nuts Oral China | Nikola: China Begins Technical Export, Bringing in Western Talents Twisted Nuts Oral China | Nikola: China Begins Technical Export, Bringing in Western Talents The surging news of \"My Forty Years\" series \"Experience Forty Years in China\" was authorized to publish [Oral Profile] Nicola (from Italy) was born in 1982..."
+  },
+  {
+    "lang": "en",
+    "title": "UPOP",
+    "url": "People/People-UPOP-en.html",
+    "text": "UPOP UNDERGRADUATE PRACTICE OPPORTUNITIES PROGRAM Professional Development | Digital PET Laboratory"
   },
   {
     "lang": "en",
@@ -2131,14 +2131,14 @@
   },
   {
     "lang": "zh",
-    "title": "RA培养体系",
-    "url": "People/People-UPOP-cn.html",
-    "text": "RA培养体系 RA培养体系 数字PET实验室RA培养体系的信息架构与制度建设方向。"
-  },
-  {
-    "lang": "zh",
     "title": "Reporters&#x27; Diary: Cancer in the crosshairs - CGTN",
     "url": "News/List/News-page51-cn.html",
     "text": "Reporters&#x27; Diary: Cancer in the crosshairs - CGTN Reporters' Diary: Cancer in the crosshairs - CGTN ..."
+  },
+  {
+    "lang": "zh",
+    "title": "UPOP",
+    "url": "People/People-UPOP-cn.html",
+    "text": "UPOP 本科生实践机会项目 数字PET实验室本科生实践机会项目（UPOP）。"
   }
 ]

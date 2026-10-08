@@ -3,7 +3,7 @@
 
   var currentScript = document.currentScript;
   var siteRoot = new URL('../../', currentScript.src);
-  var version = '20261006-student-conference1';
+  var version = '20261008-light-inner7';
   var state = window.PETLAB_APP_SHELL || {};
   state.version = version;
   state.siteRoot = siteRoot.href;
@@ -45,67 +45,147 @@
       .replace(/:root\b/g, ':host');
   }
 
-  function closeNavigation(root, except) {
-    root.querySelectorAll('.nav-group.open, .nav-group.dismissed').forEach(function (group) {
+  var hoverTimer;
+
+  function closeNavigation(root, except, immediate) {
+    clearTimeout(hoverTimer);
+    var animate = !immediate && matchMedia('(min-width: 1101px) and (prefers-reduced-motion: no-preference)').matches;
+    root.querySelectorAll('.nav-group.open, .nav-group.closing, .nav-group.dismissed').forEach(function (group) {
       if (group === except) return;
-      group.classList.remove('open', 'dismissed');
+      clearTimeout(group.closeTimer);
+      var visible = group.classList.contains('open') || group.classList.contains('closing');
+      group.classList.remove('open', 'revealed', 'dismissed');
+      var panel = group.querySelector('.mega-menu');
+      if (panel) { panel.inert = true; panel.setAttribute('aria-hidden', 'true'); }
+      if (visible && animate) {
+        group.classList.add('closing');
+        group.closeTimer = setTimeout(function () { group.classList.remove('closing'); }, 200);
+      } else group.classList.remove('closing');
       var trigger = group.querySelector(':scope > .nav-trigger');
       if (trigger) trigger.setAttribute('aria-expanded', 'false');
     });
+    if (!except) root.querySelector('[data-site-header]').classList.remove('primary-menu-active');
   }
 
   function initHeader(root) {
     var header = root.querySelector('[data-site-header]');
     if (!header) return;
+    var searchToggle = root.querySelector('[data-header-search-toggle]');
+    var searchInput = root.querySelector('.header-search input');
+    function closeSearch() {
+      header.classList.remove('search-active');
+      searchToggle.setAttribute('aria-expanded', 'false');
+    }
+    searchToggle.addEventListener('click', function () {
+      var opening = !header.classList.contains('search-active');
+      closeNavigation(root);
+      header.classList.toggle('search-active', opening);
+      searchToggle.setAttribute('aria-expanded', String(opening));
+      if (opening) searchInput.focus();
+    });
+    root.querySelector('[data-header-search-close]').addEventListener('click', function () {
+      closeSearch();
+      searchToggle.focus();
+    });
 
     root.querySelectorAll('.nav-group').forEach(function (group) {
       var trigger = group.querySelector(':scope > .nav-trigger');
-      var closeTimer;
       function openGroup() {
-        window.clearTimeout(closeTimer);
+        closeSearch();
         closeNavigation(root, group);
-        group.classList.remove('dismissed');
+        clearTimeout(group.closeTimer);
+        group.classList.remove('dismissed', 'closing');
         group.classList.add('open');
+        var panel = group.querySelector('.mega-menu');
+        panel.inert = false;
+        panel.removeAttribute('aria-hidden');
         if (trigger) trigger.setAttribute('aria-expanded', 'true');
         header.classList.toggle('primary-menu-active', Boolean(group.closest('.primary-nav')));
+        header.style.setProperty('--menu-height', panel.getBoundingClientRect().height + 'px');
+        group.classList.add('revealed');
       }
       function closeGroup() {
-        group.classList.remove('open');
-        if (trigger) trigger.setAttribute('aria-expanded', 'false');
-        if (!root.querySelector('.primary-nav > .nav-group.open')) header.classList.remove('primary-menu-active');
+        closeNavigation(root);
+      }
+      function supportsHover() {
+        return matchMedia('(min-width: 1101px) and (hover: hover) and (pointer: fine)').matches;
       }
       group.addEventListener('mouseenter', function () {
-        if (matchMedia('(min-width: 1101px)').matches) openGroup();
+        clearTimeout(hoverTimer);
+        if (!supportsHover() || group.classList.contains('dismissed')) return;
+        hoverTimer = setTimeout(openGroup, 150);
       });
       group.addEventListener('mouseleave', function () {
-        if (!matchMedia('(min-width: 1101px)').matches) return;
-        closeTimer = window.setTimeout(closeGroup, 160);
+        clearTimeout(hoverTimer);
+        if (!supportsHover()) return;
+        hoverTimer = setTimeout(function () { closeNavigation(root); }, 220);
       });
       if (trigger) trigger.addEventListener('click', function (event) {
         event.stopPropagation();
         var opening = !group.classList.contains('open');
-        closeNavigation(root);
         if (opening) openGroup(); else closeGroup();
+      });
+      if (trigger) trigger.addEventListener('keydown', function (event) {
+        if (event.key !== 'ArrowDown') return;
+        event.preventDefault();
+        openGroup();
+        group.querySelector('.mega-menu a').focus();
       });
     });
 
     root.querySelectorAll('[data-menu-close]').forEach(function (button) {
       button.addEventListener('click', function () {
+        clearTimeout(hoverTimer);
         var group = button.closest('.nav-group');
         if (!group) return;
-        group.classList.remove('open');
+        closeNavigation(root);
         group.classList.add('dismissed');
         var trigger = group.querySelector(':scope > .nav-trigger');
         if (trigger) trigger.setAttribute('aria-expanded', 'false');
         header.classList.remove('primary-menu-active');
+        if (trigger) trigger.focus();
       });
     });
 
     var menuToggle = root.querySelector('[data-menu-toggle]');
     if (menuToggle) menuToggle.addEventListener('click', function () {
+      closeSearch();
       var active = header.classList.toggle('menu-active');
+      if (!active) closeNavigation(root);
       menuToggle.setAttribute('aria-expanded', String(active));
       document.body.classList.toggle('menu-open', active);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (event.composedPath().includes(root.host)) return;
+      closeNavigation(root);
+      closeSearch();
+    });
+    root.addEventListener('keydown', function (event) {
+      if (event.key !== 'Escape') return;
+      var group = root.querySelector('.nav-group.open');
+      var target = header.classList.contains('menu-active') ? menuToggle
+        : header.classList.contains('search-active') ? searchToggle
+        : group ? group.querySelector('.nav-trigger') : menuToggle;
+      closeNavigation(root);
+      if (group) group.classList.add('dismissed');
+      closeSearch();
+      header.classList.remove('menu-active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+      if (target) target.focus();
+    });
+    matchMedia('(min-width: 1101px)').addEventListener('change', function () {
+      closeNavigation(root, null, true);
+      closeSearch();
+      header.classList.remove('menu-active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+    });
+
+    window.addEventListener('resize', function () {
+      var panel = root.querySelector('.nav-group.open .mega-menu');
+      if (panel) header.style.setProperty('--menu-height', panel.getBoundingClientRect().height + 'px');
     });
 
     var currentUrl = new URL(location.href);
@@ -122,6 +202,10 @@
   async function mount(kind, componentPath, cssText, headerLayoutCssText) {
     var host = componentHost(kind);
     if (!host) return null;
+    if (kind === 'header') {
+      host.dataset.headerTheme = document.body.classList.contains('home') ? 'hero' : 'light';
+      host.dataset.headerLanguage = isChinesePage() ? 'cn' : 'en';
+    }
     host.setAttribute('data-app-shell', kind);
     host.classList.add('petlab-component-host');
     var response = await fetch(new URL(componentPath, siteRoot));

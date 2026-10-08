@@ -33,9 +33,9 @@ for (const { path, html } of pages) {
   }
   assert(!head.includes('.paragraph--type-figure-callout-section {'), `${path}: background rules moved out of HTML`);
   assert(!head.includes('.paragraph--type-p-masonry-grid-socials {'), `${path}: layout rules moved out of HTML`);
-  assert(!html.includes('engage-overview-late.css'), `${path}: removed figure module must not load its override stylesheet`);
-  assert(!html.includes('paragraph--type-figure-callout-section'), `${path}: removed statistics strip must not remain in the page`);
-  assert(!html.includes('paragraph--type-p-news3up'), `${path}: removed related-news module must not remain in the page`);
+  assert(html.includes('engage-overview-late.css'), `${path}: restored figure module loads its override stylesheet`);
+  assert(html.includes('paragraph--type-figure-callout-section'), `${path}: restored statistics strip remains in the page`);
+  assert(html.includes('paragraph--type-p-news3up'), `${path}: restored related-news module remains in the page`);
   assert(!/<style\b/i.test(html), `${path}: page skin remains externalized`);
   assert.equal((html.match(/class="engage-overview-project-column"/g) || []).length, 1, `${path}: the project intro column retains its semantic spacing owner`);
   assert.doesNotMatch(html, /style="padding-right:\s*15px;"/, `${path}: project-column spacing should not return inline`);

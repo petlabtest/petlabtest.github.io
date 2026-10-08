@@ -2,9 +2,8 @@
  * Homepage responsive composition.
  *
  * The archived reference uses a 1600px editorial canvas on wide displays and
- * lets content determine section height.  Keep all viewport-dependent sizing
- * in this final stylesheet so earlier archive-compatibility rules cannot make
- * the page grow with 100vh/100vw on an external monitor.
+ * lets content determine editorial section height. The hero follows the visible
+ * viewport, with a short extension reserved for the mission panel overlap.
  */
 
 body.home {
@@ -108,10 +107,12 @@ body.home {
   background: #fff;
 }
 
-/* Featured carousel: 16:9-ish at notebook widths, capped on 2K/4K screens. */
+/* Fill the opening viewport; reveal the mission overlap when scrolling. */
 @media (min-width: 901px) {
+  .home { --home-mission-overlap: 72px; }
+
   .home .page_header.home-carousel {
-    --home-hero-height: clamp(600px, 56.25vw, 900px);
+    --home-hero-height: calc(100svh + var(--home-mission-overlap));
     width: min(100%, 1600px);
     max-width: 1600px;
     height: var(--home-hero-height);
@@ -140,7 +141,7 @@ body.home {
     left: clamp(64px, 7.5%, 120px);
     right: clamp(64px, 7.5%, 120px);
     /* Keep the copy and CTA wholly inside the hero, as in the reference. */
-    bottom: 156px;
+    bottom: calc(var(--home-mission-overlap) + 104px);
   }
 
   .home .home-carousel__wrapper:first-child .home-carousel__title,
@@ -162,7 +163,7 @@ body.home {
   .home .caption,
   .home .home-carousel.controls-visible .caption {
     /* These controls belong to the carousel and must remain on its image. */
-    bottom: 115px;
+    bottom: calc(var(--home-mission-overlap) + 56px);
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -183,7 +184,7 @@ body.home {
   }
 
   .home .home-fullwidth__panel {
-    top: -80px;
+    top: calc(-1 * var(--home-mission-overlap));
     left: clamp(60px, 6.25%, 100px);
     right: 0;
     width: auto;
@@ -499,9 +500,9 @@ body.home {
 
 /* Final desktop composition refinements, aligned with the archived homepage. */
 @media (min-width: 901px) {
-  /* Bridge the hero only slightly, leaving its CTA and controls unobstructed. */
   .home .home-fullwidth__panel {
-    top: -96px;
+    /* Cover the hero extension without entering the opening viewport. */
+    top: calc(-1 * var(--home-mission-overlap));
     z-index: 8;
   }
 

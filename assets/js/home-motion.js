@@ -68,18 +68,11 @@
     { element: one('.group-content__cta', impactBody), effect: 'fade-right', delay: 1770 }
   ] : [], impactFrame, 0.86);
 
-  var research = one('.research-cards');
-  var researchHead = research && one('.research-cards__head', research);
-  sequence(research, research ? [
-    { element: one('.research-cards__head .eyebrow', research), order: 0 },
-    { element: one('.research-cards__head h2', research), order: 1 },
-    { element: one('.research-cards__head > p:last-child', research), order: 2 }
-  ] : [], researchHead, 0.62);
-  var researchGrid = research && one('.research-card-grid', research);
-  var researchCards = researchGrid ? all('.research-card', researchGrid) : [];
-  sequence(researchGrid, researchGrid ? researchCards.map(function (card, index) {
-    return { element: card, effect: 'card-fade', delay: index * 100 };
-  }) : [], researchGrid, 0.58);
+  all('.home-research__tile').forEach(function (tile, index) {
+    sequence(tile, [
+      { element: tile, effect: 'research-tile', delay: (index % 6 + 1) * 100 }
+    ], tile, 0.85);
+  });
 
   var collaboration = one('.home-programs__collaboration');
   var collaborationLinks = collaboration ? all('.home-programs__collaboration-links > a', collaboration) : [];

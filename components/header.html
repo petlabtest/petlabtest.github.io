@@ -7,13 +7,14 @@
   <div class="header-shell">
     <div class="header-branding">
       <a class="brand" href="index.html" aria-label="Digital PET Laboratory home">
-        <img src="assets/pic/main/PETLAB.png" alt="Digital PET Laboratory">
+        <img class="brand-light" src="assets/pic/main/PETLAB.png" alt="Digital PET Laboratory">
+        <img class="brand-dark" src="assets/pic/main/PETLAB-dark.svg" alt="Digital PET Laboratory">
       </a>
-      <a class="upop-brand" href="People/People-UPOP-en.html" aria-label="Research Assistant Development Framework">
-        <img src="assets/pic/main/UPOP_LOGO.png?v=20260920-4" alt="UPOP">
+      <a class="upop-brand" href="People/People-UPOP-en.html" aria-label="Undergraduate Practice Program">
+        <img src="assets/pic/main/UPOP_LOGO.png?v=20261008-5" alt="UPOP">
       </a>
       <a class="donate-brand" href="Giving/Giving-giving-en.html" aria-label="Support Digital PET Laboratory research">
-        <img src="assets/pic/main/DONATE_LOGO.png?v=20260920-1" alt="Donate to Digital PET Laboratory">
+        <img src="assets/pic/main/DONATE_LOGO.png?v=20261008-5" alt="Donate to Digital PET Laboratory">
       </a>
     </div>
 
@@ -25,10 +26,13 @@
           <button class="language-toggle" type="button" data-language-toggle aria-label="Switch to Chinese"
             onclick="var p=window.location.pathname;p=/\/search\.html$/i.test(p)?p.replace(/search\.html$/i,'search-cn.html'):/-cn\.html$/i.test(p)?p.replace(/-cn\.html$/i,'-en.html'):/-en\.html$/i.test(p)?p.replace(/-en\.html$/i,'-cn.html'):/\/index\.html$/i.test(p)?p.replace(/index\.html$/i,'index-cn.html'):p;window.location.assign(p+window.location.search+window.location.hash)">中文</button>
         </nav>
-        <form class="header-search" action="search.html" method="get" role="search">
+        <button class="header-search-toggle" type="button" data-header-search-toggle aria-label="Search"
+          aria-expanded="false" aria-controls="header-search-form"><span class="search-icon" aria-hidden="true"></span></button>
+        <form id="header-search-form" class="header-search" action="search.html" method="get" role="search">
           <label class="sr-only" for="header-search-input">Search</label>
           <input id="header-search-input" name="q" type="search" placeholder="Search" autocomplete="off" required>
           <button type="submit" aria-label="Submit search"><span class="search-icon" aria-hidden="true"></span></button>
+          <button class="header-search-close" type="button" data-header-search-close aria-label="Close search">×</button>
         </form>
       </div>
 
@@ -121,11 +125,11 @@
               <div class="mega-menu__groups">
                 <div>
                   <h2>Talent Development</h2><a href="People/People-Stewardship-en.html">Talent Development Philosophy</a><a
-                    href="People/People-Group-en.html">Research Group</a><a href="People/student-conference-en.html">International Conferences</a><a href="People/People-Life-en.html">PETLab
+                    href="People/People-Group-en.html">Research Group</a><a href="People/student-conference-en.html">Global Perspective</a><a href="People/People-Life-en.html">PETLab
                     Life</a>
                 </div>
                 <div>
-                  <h2>Join PETLab</h2><a href="People/People-UPOP-en.html">RA Development Framework</a><a
+                  <h2>Join PETLab</h2><a href="People/People-UPOP-en.html">Undergraduate Practice Program</a><a
                     href="People/People-Student-en.html">Education Opportunities</a><a
                     href="People/People-Career-en.html">Career Opportunities</a>
                 </div>

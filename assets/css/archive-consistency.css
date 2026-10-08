@@ -124,6 +124,14 @@ a.cta--button:not(#archive-consistency-never):focus-visible .last-word::after {
   transform: translateX(2px);
 }
 
+/* Keep the closing Research collaboration panel clear of the masonry cards. */
+html[lang] body.page-node-type-rdgroup .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate,
+html[lang] body.page-node-type-rdarea .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate,
+html[lang] body.page-node-type-key-initiative .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate,
+html[lang] body.path-projects .paragraph--type-p-fullwidth.background--grey.slope--pos.js-animate {
+  margin-top: clamp(64px, 6vw, 104px) !important;
+}
+
 /*
  * Wide-display normalization.
  *

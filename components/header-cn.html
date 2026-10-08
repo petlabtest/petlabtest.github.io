@@ -7,13 +7,14 @@
   <div class="header-shell">
     <div class="header-branding">
       <a class="brand" href="index-cn.html" aria-label="Digital PET Laboratory home">
-        <img src="assets/pic/main/PETLAB.png" alt="Digital PET Laboratory">
+        <img class="brand-light" src="assets/pic/main/PETLAB.png" alt="Digital PET Laboratory">
+        <img class="brand-dark" src="assets/pic/main/PETLAB-dark.svg" alt="Digital PET Laboratory">
       </a>
-      <a class="upop-brand" href="People/People-UPOP-cn.html" aria-label="RA培养体系">
-        <img src="assets/pic/main/UPOP_LOGO.png?v=20260920-4" alt="UPOP">
+      <a class="upop-brand" href="People/People-UPOP-cn.html" aria-label="本科生实践项目">
+        <img src="assets/pic/main/UPOP_LOGO.png?v=20261008-5" alt="UPOP">
       </a>
       <a class="donate-brand" href="Giving/Giving-giving-cn.html" aria-label="支持数字PET实验室科研">
-        <img src="assets/pic/main/DONATE_LOGO.png?v=20260920-1" alt="捐赠支持数字PET实验室">
+        <img src="assets/pic/main/DONATE_LOGO.png?v=20261008-5" alt="捐赠支持数字PET实验室">
       </a>
     </div>
 
@@ -25,10 +26,13 @@
           <button class="language-toggle" type="button" data-language-toggle aria-label="Switch to English"
             onclick="var p=window.location.pathname;p=/\/search-cn\.html$/i.test(p)?p.replace(/search-cn\.html$/i,'search.html'):/\/index-cn\.html$/i.test(p)?p.replace(/index-cn\.html$/i,'index.html'):/-cn\.html$/i.test(p)?p.replace(/-cn\.html$/i,'-en.html'):p;window.location.assign(p+window.location.search+window.location.hash)">EN</button>
         </nav>
-        <form class="header-search" action="search-cn.html" method="get" role="search">
+        <button class="header-search-toggle" type="button" data-header-search-toggle aria-label="搜索"
+          aria-expanded="false" aria-controls="header-search-form"><span class="search-icon" aria-hidden="true"></span></button>
+        <form id="header-search-form" class="header-search" action="search-cn.html" method="get" role="search">
           <label class="sr-only" for="header-search-input">搜索</label>
           <input id="header-search-input" name="q" type="search" placeholder="搜索" autocomplete="off" required>
           <button type="submit" aria-label="提交搜索"><span class="search-icon" aria-hidden="true"></span></button>
+          <button class="header-search-close" type="button" data-header-search-close aria-label="关闭搜索">×</button>
         </form>
       </div>
 
@@ -118,10 +122,10 @@
               <div class="mega-menu__groups">
                 <div>
                   <h2>人才培养</h2><a href="People/People-Stewardship-cn.html">培养理念</a><a
-                    href="People/People-Group-cn.html">研究小组</a><a href="People/student-conference-cn.html">国际会议交流</a><a href="People/People-Life-cn.html">PETLab生活</a>
+                    href="People/People-Group-cn.html">研究小组</a><a href="People/student-conference-cn.html">国际视野</a><a href="People/People-Life-cn.html">PETLab生活</a>
                 </div>
                 <div>
-                  <h2>加入我们</h2><a href="People/People-UPOP-cn.html">RA培养体系</a><a
+                  <h2>加入我们</h2><a href="People/People-UPOP-cn.html">本科生实践项目</a><a
                     href="People/People-Student-cn.html">学生教育</a><a href="People/People-Career-cn.html">职业发展</a>
                 </div>
               </div>

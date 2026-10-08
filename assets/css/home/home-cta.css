@@ -1,0 +1,48 @@
+/* Keep hover motion inside the CTA, independent of its entrance animation. */
+.home .home-cta.cta--button,
+.home .home-cta.cta--button:is(:hover, :focus-visible) {
+  padding-left: 18px;
+  padding-right: 12px;
+}
+.home .home-cta.cta--button::before {
+  width: 8px;
+  height: 24px;
+  top: 50%;
+  transform: translateY(-50%) scaleX(1);
+  transform-origin: left center;
+  transition: transform .2s ease;
+}
+.home .home-cta.cta--button:is(:hover, :focus-visible)::before,
+.home .home-programs__collaboration-links > a:is(:hover, :focus-visible) .home-cta::before {
+  width: 8px;
+  transform: translateY(-50%) scaleX(2);
+}
+.home .home-cta .home-cta__content {
+  position: relative;
+  display: inline-block;
+  top: auto;
+  margin: 0;
+  font-size: inherit;
+  transform: translateX(0);
+  transition: transform .2s ease;
+}
+.home .home-cta:is(:hover, :focus-visible) .home-cta__content,
+.home .home-programs__collaboration-links > a:is(:hover, :focus-visible) .home-cta__content {
+  transform: translateX(10px);
+}
+/* The shared arrow lives inside .last-word; it must not move a second time. */
+.home .home-cta .last-word::after {
+  transform: none !important;
+  transition: none !important;
+}
+.home .home-research__cta.home-cta {
+  font-size: 16px;
+  font-weight: 700;
+}
+@media (min-width: 901px) {
+  .home .home-research__cta.home-cta { font-size: clamp(18px, 1.35vw, 22px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home .home-cta::before,
+  .home .home-cta .home-cta__content { transition: none !important; }
+}

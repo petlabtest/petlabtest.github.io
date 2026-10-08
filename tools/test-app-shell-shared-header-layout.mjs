@@ -12,9 +12,9 @@ assert.match(shell, /header-layout-shared\.css\?v=' \+ version/);
 assert.match(shell, /header-layout-cn\.css\?v=' \+ version[\s\S]*header-layout-en\.css\?v=' \+ version/);
 assert.match(shell, /layoutStyle\.textContent = headerLayoutCssText/);
 assert.match(shared, /\.lbl-header \.header-branding/);
-assert.match(shared, /\.lbl-header \.upop-brand,\s*\.lbl-header \.donate-brand/);
-for (const breakpoint of ['1251px', '1320px', '1101px', '1250px', 'max-width:1100px', 'max-width:700px', 'max-width:360px']) {
-  assert.ok(shared.includes(breakpoint), `shared header layout should preserve ${breakpoint}`);
+assert.match(shared, /\.lbl-header \.upop-brand,\s*:host \.lbl-header \.donate-brand/);
+for (const breakpoint of ['1101px', '1250px', 'max-width:1100px', 'max-width:700px', 'max-width:360px']) {
+  assert.ok(shared.includes(breakpoint), `shared header layout should define ${breakpoint}`);
 }
 
 for (const file of ['components/header.html', 'components/header-cn.html']) {
@@ -30,4 +30,4 @@ for (const language of ['en', 'cn']) {
   assert.ok(!/url\s*\(|:root\b|@font-face/i.test(localized), `${language} CSS should not need resource rebasing`);
 }
 
-process.stdout.write('PASS: bilingual AppShell headers share the brand layout at its original cascade position and preserve all responsive breakpoints.\n');
+process.stdout.write('PASS: bilingual AppShell headers share the brand layout at its original cascade position and define compact responsive breakpoints.\n');
