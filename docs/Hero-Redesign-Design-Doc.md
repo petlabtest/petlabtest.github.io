@@ -1,5 +1,7 @@
 # 数字 PET 实验室首页 Hero 海报改版设计书
 
+> 历史方案提示（2026-10-10）：本文保留早期四幕设计记录。当前采用五幕 Hero；本阶段 Header 与 Hero 的最终方案、迭代及素材版本见 [Header 与 Hero 修改记录](../../Design/Header-Hero-Modification-Record.md)。
+
 > 版本：v1.0 ｜ 日期：2026-09 ｜ 范围：`index.html` / `index-cn.html` 首页四栏轮播 Hero
 
 ---

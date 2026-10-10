@@ -101,8 +101,58 @@ function initHero() {
   const introVideo = videoHero?.querySelector('video');
   const replay = videoHero?.querySelector('[data-hero-replay]');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const playbackControl = carousel.querySelector('.carousel-playback');
+  const road = carousel.querySelector('.journey-road__base');
+  const roadProgress = carousel.querySelector('.journey-road__progress');
+  const roadLight = carousel.querySelector('.journey-road__light');
   let timer;
   let pointerInside = false;
+  let focusInside = false;
+  let autoPaused = false;
+  let pathFrame;
+  let pathPosition = index / (slides.length - 1);
+
+  const pathPoint = position => ({ x:80 + 840 * position, y:107 + 16 * Math.sin(3 * Math.PI * position) });
+  const pathSamples = Array.from({ length:121 }, (_, i) => pathPoint(i / 120));
+  const pathLengths = [0];
+  pathSamples.slice(1).forEach((point, i) => {
+    pathLengths.push(pathLengths[i] + Math.hypot(point.x - pathSamples[i].x, point.y - pathSamples[i].y));
+  });
+  if (road) {
+    const shape = pathSamples.map((point, i) => `${i ? 'L' : 'M'}${point.x} ${point.y}`).join(' ');
+    road.setAttribute('d', shape);
+    roadProgress.setAttribute('d', shape);
+    roadProgress.setAttribute('stroke-dasharray', pathLengths[120]);
+  }
+  const drawPath = position => {
+    pathPosition = position;
+    if (!road) return;
+    const point = pathPoint(position);
+    const sample = Math.min(119, Math.floor(position * 120));
+    const length = pathLengths[sample] + (pathLengths[sample + 1] - pathLengths[sample]) * (position * 120 - sample);
+    roadLight.setAttribute('cx', point.x);
+    roadLight.setAttribute('cy', point.y);
+    roadProgress.setAttribute('stroke-dashoffset', pathLengths[120] - length);
+  };
+  const movePath = (position, instant = false) => {
+    window.cancelAnimationFrame(pathFrame);
+    if (!road || instant) return drawPath(position);
+    const start = pathPosition;
+    const began = performance.now();
+    const frame = now => {
+      const elapsed = Math.min((now - began) / 800, 1);
+      drawPath(start + (position - start) * (1 - Math.pow(1 - elapsed, 3)));
+      if (elapsed < 1) pathFrame = window.requestAnimationFrame(frame);
+    };
+    pathFrame = window.requestAnimationFrame(frame);
+  };
+  const updatePlaybackControl = () => {
+    if (!playbackControl) return;
+    playbackControl.setAttribute('aria-pressed', String(autoPaused));
+    playbackControl.setAttribute('aria-label', getPageLanguage() === 'zh'
+      ? autoPaused ? '继续自动播放' : '暂停自动播放'
+      : autoPaused ? 'Resume automatic playback' : 'Pause automatic playback');
+  };
 
   const stopTimer = () => {
     window.clearTimeout(timer);
@@ -116,8 +166,8 @@ function initHero() {
   );
   const scheduleAdvance = () => {
     stopTimer();
-    if (pointerInside || reducedMotion.matches || introIsPlaying()) return;
-    timer = window.setTimeout(() => show(index + 1), 5500);
+    if (pointerInside || focusInside || autoPaused || document.hidden || reducedMotion.matches || introIsPlaying()) return;
+    timer = window.setTimeout(() => show(index + 1), 8000);
   };
   const revealVideoHero = () => {
     if (!videoHero) return;
@@ -151,6 +201,8 @@ function initHero() {
   const handleReducedMotionChange = () => {
     if (reducedMotion.matches) {
       stopTimer();
+      carousel.getAnimations({ subtree:true }).forEach(animation => animation.cancel());
+      movePath(index / (slides.length - 1), true);
       introVideo?.pause();
       revealVideoHero();
       return;
@@ -165,26 +217,62 @@ function initHero() {
   }
   slides.forEach((slide, slideIndex) => {
     slide.setAttribute('aria-hidden', String(slideIndex !== index));
+    slide.inert = slideIndex !== index;
     const dot = document.createElement('button');
     dot.type = 'button';
     dot.className = 'carousel-dot';
-    dot.setAttribute('aria-label', document.documentElement.lang.toLowerCase().startsWith('zh')
-      ? `显示首页故事 ${slideIndex + 1}`
-      : `Show featured story ${slideIndex + 1}`);
+    const title = (slide.querySelector('.home-carousel__title-text') || slide.querySelector('.home-carousel__title')).textContent.trim();
+    dot.setAttribute('aria-label', getPageLanguage() === 'zh' ? `显示：${title}` : `Show: ${title}`);
+    if (slide.dataset.pendant) {
+      const pendant = document.createElement('img');
+      pendant.className = 'carousel-dot__pendant';
+      pendant.src = slide.dataset.pendant;
+      pendant.alt = '';
+      const node = document.createElement('span');
+      node.className = 'carousel-dot__node';
+      dot.append(pendant, node);
+      const point = pathPoint(slideIndex / (slides.length - 1));
+      dot.style.left = `${point.x / 10}%`;
+      dot.style.top = `${point.y + 4.5}px`;
+    }
     dot.addEventListener('click', () => show(slideIndex));
     dotsHost.append(dot);
   });
   const dots = [...dotsHost.querySelectorAll('.carousel-dot')];
   const show = nextIndex => {
+    const target = (nextIndex + slides.length) % slides.length;
+    if (target === index) return;
+    const outgoing = slides[index];
+    const incoming = slides[target];
+    const wrap = (index === slides.length - 1 && target === 0) || (index === 0 && target === slides.length - 1);
+    carousel.getAnimations({ subtree:true }).forEach(animation => animation.cancel());
     slides[index].classList.remove('active');
     slides[index].setAttribute('aria-hidden','true');
+    slides[index].inert = true;
     dots[index].classList.remove('active');
     dots[index].removeAttribute('aria-current');
-    index = (nextIndex + slides.length) % slides.length;
+    index = target;
     slides[index].classList.add('active');
     slides[index].setAttribute('aria-hidden','false');
+    slides[index].inert = false;
     dots[index].classList.add('active');
     dots[index].setAttribute('aria-current','true');
+    if (!reducedMotion.matches) {
+      const options = { duration:800, easing:'cubic-bezier(.2,.7,.2,1)' };
+      // Keep the complete old image underneath the new one until its fade ends.
+      outgoing.animate([
+        { opacity:1, visibility:'visible', zIndex:1 },
+        { opacity:1, visibility:'visible', zIndex:1 }
+      ], options);
+      incoming.animate([{ opacity:0 }, { opacity:1 }], options);
+      outgoing.querySelector('.home-carousel__copy').animate([
+        { opacity:1 }, { opacity:0 }
+      ], { duration:220, easing:'ease-out', fill:'forwards' });
+      incoming.querySelector('.home-carousel__copy').animate([
+        { opacity:0 }, { opacity:1 }
+      ], { duration:580, delay:120, fill:'backwards', easing:'ease-out' });
+    }
+    movePath(index / (slides.length - 1), reducedMotion.matches || wrap);
     playActiveVideo();
     scheduleAdvance();
   };
@@ -192,6 +280,28 @@ function initHero() {
   next.addEventListener('click', () => show(index + 1));
   dots[index].classList.add('active');
   dots[index].setAttribute('aria-current','true');
+  drawPath(pathPosition);
+  updatePlaybackControl();
+  playbackControl?.addEventListener('click', () => {
+    autoPaused = !autoPaused;
+    updatePlaybackControl();
+    scheduleAdvance();
+  });
+  carousel.addEventListener('focusin', () => {
+    focusInside = true;
+    stopTimer();
+  });
+  carousel.addEventListener('focusout', () => {
+    window.setTimeout(() => {
+      focusInside = carousel.contains(document.activeElement);
+      scheduleAdvance();
+    }, 0);
+  });
+  carousel.addEventListener('keydown', event => {
+    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+    event.preventDefault();
+    show(index + (event.key === 'ArrowRight' ? 1 : -1));
+  });
   carousel.addEventListener('mouseenter', () => {
     pointerInside = true;
     stopTimer();
@@ -235,6 +345,7 @@ function initHero() {
   window.addEventListener('pageshow', playActiveVideo);
   document.addEventListener('visibilitychange', () => {
     if (!document.hidden) playActiveVideo();
+    scheduleAdvance();
   });
   ['pointerdown','keydown','touchstart'].forEach(eventName => {
     document.addEventListener(eventName, playActiveVideo, { once:true, passive:true });

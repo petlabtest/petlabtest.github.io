@@ -34,7 +34,7 @@
   <!-- PETLAB:HEAD:END -->
   <link rel="stylesheet" href="assets/css/site.css?v=20260928-editorial-cascade5">
   <link rel="stylesheet" href="assets/css/home/home-cn-overrides.css?v=20260929-home1">
-  <script src="assets/js/site.js?v=20260927-reduced-motion1" defer></script>
+  <script src="assets/js/site.js?v=20261009-journey2" defer></script>
   <link rel="stylesheet" href="assets/css/archive-consistency.css?v=20260908-wide1">
   <link rel="stylesheet" href="assets/css/homepage-responsive.css?v=20260920-hero-video5">
   <link rel="stylesheet" href="assets/css/page-canvas.css?v=20260911-1">
@@ -43,6 +43,7 @@
   <link rel="stylesheet" href="assets/css/home/home-typography.css?v=20260922-1">
   <link rel="stylesheet" href="assets/css/home/home-research.css?v=20261007-2">
   <link rel="stylesheet" href="assets/css/home/home-cta.css?v=20261008-2">
+  <link rel="stylesheet" href="assets/css/home/home-journey.css?v=20261009-3">
   <script src="assets/js/home-motion.js?v=20261007-research1" defer></script>
   <script src="assets/js/editorial-section-motion.js?v=20260928-p2motion2" defer></script>
 </head>
@@ -50,64 +51,61 @@
 <body class="home home-motion" id="top">
   <div data-component="header"></div>
   <main id="main-content" role="main">
-    <section class="page_header home-carousel" aria-label="Homepage featured carousel">
+    <section class="page_header home-carousel home-carousel--journey" aria-label="Homepage featured carousel">
       <div class="home-carousel__slide">
-        <article class="home-carousel__wrapper active">
-          <div class="home-carousel__media"><img src="assets/pic/main/hero-annihilation.jpg"
-              alt="深空中一对反向飞行的金色光束，象征湮没产生的511 keV光子"></div>
+        <article class="home-carousel__wrapper active" data-pendant="assets/pic/main/journey/pendant-01-annihilation-v4.png">
+          <div class="home-carousel__media"><img src="assets/pic/main/journey/hero-01-origin.png"
+              alt="湮灭事件的概念视觉：金色轨迹从一个光点向两侧延伸"></div>
           <div class="home-carousel__copy">
             <p class="home-carousel__super-title">起源</p>
-            <div class="home-carousel__title-row">
-              <h1 class="home-carousel__title">遇见湮灭之光</h1>
-            </div>
-            <div class="home-carousel__cta"><a class="cta--button" href="./News/List/News-Annihilation-cn.html">了解更多</a>
-            </div>
+            <h1 class="home-carousel__title"><a class="home-carousel__title-link" href="./News/List/News-Annihilation-cn.html"><span class="home-carousel__title-text">一切，从湮灭之光开始</span><span class="home-carousel__title-arrow" aria-hidden="true">↗</span></a></h1>
           </div>
         </article>
-        <article class="home-carousel__wrapper">
-          <div class="home-carousel__media"><img src="assets/pic/main/hero-light-electricity.jpg" alt="冷白光芒与电蓝电流在深空中交汇">
+        <article class="home-carousel__wrapper" data-pendant="assets/pic/main/journey/pendant-02-crystal-sipm-v2.png">
+          <div class="home-carousel__media"><img src="assets/pic/main/journey/hero-02-capture.png"
+              alt="规则闪烁晶体阵列与光电传感器相连，微光转化为电信号">
           </div>
           <div class="home-carousel__copy">
-            <p class="home-carousel__super-title">演进</p>
-            <h1 class="home-carousel__title">光与电的交汇</h1>
-            <div class="home-carousel__cta"><a class="cta--button" href="./News/List/News-Tale-cn.html">了解更多</a></div>
+            <p class="home-carousel__super-title">捕获</p>
+            <h1 class="home-carousel__title"><a class="home-carousel__title-link" href="./News/List/News-Tale-cn.html"><span class="home-carousel__title-text">微光入硅，信号初生</span><span class="home-carousel__title-arrow" aria-hidden="true">↗</span></a></h1>
           </div>
         </article>
-        <article class="home-carousel__wrapper">
-          <div class="home-carousel__media"><img src="assets/pic/main/hero-mvt-moment.png"
-              alt="闪烁光经探测器转化为多阈值采样数据，最终重建为PET脑部图像"></div>
+        <article class="home-carousel__wrapper" data-pendant="assets/pic/main/journey/pendant-03-pet-detector-v2.png">
+          <div class="home-carousel__media"><img src="assets/pic/main/journey/hero-03-decode.png"
+              alt="读出芯片、MVT阈值采样波形与重建图像的概念视觉"></div>
           <div class="home-carousel__copy">
             <p class="home-carousel__super-title">解码</p>
-            <h1 class="home-carousel__title">数据到图像的MVT时刻</h1>
-            <div class="home-carousel__cta"><a class="cta--button" href="./Research/Research-Core-cn.html">了解更多</a>
-            </div>
+            <h1 class="home-carousel__title"><a class="home-carousel__title-link" href="./Research/Research-Core-cn.html"><span class="home-carousel__title-text">数据到图像的MVT时刻</span><span class="home-carousel__title-arrow" aria-hidden="true">↗</span></a></h1>
           </div>
         </article>
-        <article class="home-carousel__wrapper">
-          <div class="home-carousel__media"><img src="assets/pic/main/hero-pet-ring.jpg"
-              alt="全数字PET探测器环实景：冷蓝深空调，中心患者孔透出暖金光">
+        <article class="home-carousel__wrapper" data-pendant="assets/pic/main/journey/pendant-04-pet.png">
+          <div class="home-carousel__media"><img src="assets/pic/main/journey/hero-04-pet.png"
+              alt="深色实验室中的PET仪器，展示部分探测环机械结构">
           </div>
           <div class="home-carousel__copy">
-            <p class="home-carousel__super-title">变革</p>
-            <h1 class="home-carousel__title">全数字PET，再次发明PET</h1>
-            <div class="home-carousel__cta"><a class="cta--button" href="./News/List/News-index1-cn.html">了解更多</a></div>
+            <p class="home-carousel__super-title">成像</p>
+            <h1 class="home-carousel__title"><a class="home-carousel__title-link" href="./News/List/News-index1-cn.html"><span class="home-carousel__title-text">全数字PET，重新发明PET</span><span class="home-carousel__title-arrow" aria-hidden="true">↗</span></a></h1>
           </div>
         </article>
-        <article class="home-carousel__wrapper">
-          <div class="home-carousel__media"><img src="assets/pic/main/hero-believe-light.jpg"
-              alt="A young researcher looking up at the light"></div>
+        <article class="home-carousel__wrapper" data-pendant="assets/pic/main/journey/pendant-05-scientist.png">
+          <div class="home-carousel__media"><img src="assets/pic/main/journey/hero-05-scientist.png"
+              alt="青年研究者在实验台前研究探测模块"></div>
           <div class="home-carousel__copy">
-            <p class="home-carousel__super-title">传承</p>
-            <h1 class="home-carousel__title">少年的追光之旅</h1>
-            <div class="home-carousel__cta"><a class="cta--button"
-                href="./News/List/News-Believe-Light-cn.html">了解更多</a></div>
+            <p class="home-carousel__super-title">探索</p>
+            <h1 class="home-carousel__title"><a class="home-carousel__title-link" href="./News/List/News-Believe-Light-cn.html"><span class="home-carousel__title-text">追光无尽，探索未止</span><span class="home-carousel__title-arrow" aria-hidden="true">↗</span></a></h1>
           </div>
         </article>
       </div>
-      <div class="caption" aria-label="Carousel controls">
-        <button class="carousel-arrow prev" type="button" aria-label="Previous story"></button>
+      <div class="caption caption--journey" aria-label="Carousel controls">
+        <svg class="journey-road" viewBox="0 0 1000 150" preserveAspectRatio="none" aria-hidden="true">
+          <path class="journey-road__base"></path>
+          <path class="journey-road__progress"></path>
+          <circle class="journey-road__light" r="3.7"></circle>
+        </svg>
+        <button class="carousel-arrow prev" type="button" aria-label="上一幕"></button>
         <div class="dots" role="group" aria-label="选择首页故事"></div>
-        <button class="carousel-arrow next" type="button" aria-label="Next story"></button>
+        <button class="carousel-arrow next" type="button" aria-label="下一幕"></button>
+        <button class="carousel-playback" type="button" aria-label="暂停自动播放" aria-pressed="false"></button>
       </div>
     </section>
 
