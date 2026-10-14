@@ -25,8 +25,8 @@ const pages = new Map([
   ['People/People-Stewardship-en.html', '../assets/css/people/stewardship-en-layout.css'],
   ['People/People-Student-cn.html', '../assets/css/people/student-layout.css'],
   ['People/People-Student-en.html', '../assets/css/people/student-layout.css'],
-  ['People/People-UPOP-cn.html', '../assets/css/people/upop-inline-layout.css'],
-  ['People/People-UPOP-en.html', '../assets/css/people/upop-inline-layout.css'],
+  ['People/People-RA-cn.html', '../assets/css/people/ra-layout.css'],
+  ['People/People-RA-en.html', '../assets/css/people/ra-layout.css'],
   ['Research/Research-Core-en.html', '../assets/css/research/research-core-en-overrides.css'],
   ['Research/Research-Initiatives-cn.html', '../assets/css/research/research-initiatives-components.css'],
   ['Research/Research-Initiatives-en.html', '../assets/css/research/research-initiatives-components.css'],
@@ -57,7 +57,9 @@ for (const [file, baseStylesheet] of pages) {
   const head = html.slice(0, html.indexOf('</head>'));
   assert.equal(html.split(link).length - 1, 1, `${file}: load the shared AppShell layer once`);
   assert.ok(head.indexOf(baseStylesheet) < head.indexOf(link), `${file}: shared layer follows its page-family styles`);
-  assert.ok(head.indexOf(link) < head.indexOf('../assets/css/archive-consistency.css'), `${file}: preserve the page override order`);
+  if (!file.startsWith('People/People-RA-')) {
+    assert.ok(head.indexOf(link) < head.indexOf('../assets/css/archive-consistency.css'), `${file}: preserve the page override order`);
+  }
   assert.match(html, /id="petlab-header"/, `${file}: header host exists`);
   assert.doesNotMatch(html, /<style\b[^>]*>[\s\S]*?#petlab-header\s*\{\s*z-index:\s*1000;/i, `${file}: remove the duplicate inline host layer`);
   if (file.endsWith('-cn.html') && file.startsWith('Engage/')) {

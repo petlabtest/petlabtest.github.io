@@ -65,17 +65,9 @@
                 <h1 class="about-hero-title">Our History</h1>
             </div>
         </section>
-        <section class="history-timeline" aria-labelledby="history-title">
-            <div class="history-timeline__heading">
-                <h2 id="history-title">Three Histories One Innovation Path</h2>
-                <p>Explore how scientific discoveries became original technologies and how those technologies developed into research instruments, standards, and medical systems.</p>
-            </div>
-            <div class="history-timeline__tabs" role="tablist" aria-label="Select a history category">
-                <button type="button" role="tab" aria-selected="true" data-history-group="Scientific Discoveries">Scientific Discoveries</button>
-                <button type="button" role="tab" aria-selected="false" data-history-group="Technological Inventions">Technological Inventions</button>
-                <button type="button" role="tab" aria-selected="false" data-history-group="Industrial Expansion">Industrial Development</button>
-            </div>
-            <div id="timeline-embed" role="tabpanel" aria-live="polite"></div>
+        <section class="history-timeline" aria-label="Our history">
+            <div id="timeline-embed"></div>
+
 
             <script>
                 // 你的数据 👇 把这里换成你自己的所有数据
@@ -272,32 +264,7 @@
                     ]
                 };
 
-                const historyGroups = ["Scientific Discoveries", "Technological Inventions", "Industrial Expansion"];
-
-                function renderHistory(group) {
-                    const container = document.getElementById('timeline-embed');
-                    const labels = {
-                        "Scientific Discoveries": "From new phenomena and scientific principles",
-                        "Technological Inventions": "Turning scientific questions into testable technologies",
-                        "Industrial Expansion": "Building instruments, standards, and applications"
-                    };
-                    const filtered = {
-                        title: { text: { headline: group === "Industrial Expansion" ? "Industrial Development" : group, text: labels[group] } },
-                        events: data.events.filter((event) => event.group === group)
-                    };
-                    container.innerHTML = '';
-                    window.timeline = new TL.Timeline('timeline-embed', filtered);
-                }
-
-                document.querySelectorAll('[data-history-group]').forEach((button) => {
-                    button.addEventListener('click', () => {
-                        document.querySelectorAll('[data-history-group]').forEach((item) => item.setAttribute('aria-selected', 'false'));
-                        button.setAttribute('aria-selected', 'true');
-                        renderHistory(button.dataset.historyGroup);
-                    });
-                });
-
-                renderHistory(historyGroups[0]);
+                window.timeline = new TL.Timeline('timeline-embed', data);
             </script>
         </section>
 

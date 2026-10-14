@@ -11,3 +11,9 @@
   -moz-background-size: cover !important;
   -o-background-size: cover !important;
 }
+
+/* These static figures are not inside the legacy animation trigger field. */
+.paragraph--type-figure-callout-section .ll-figure-box {
+  opacity: 1;
+  transform: none;
+}

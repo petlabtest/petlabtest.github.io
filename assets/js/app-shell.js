@@ -3,7 +3,7 @@
 
   var currentScript = document.currentScript;
   var siteRoot = new URL('../../', currentScript.src);
-  var version = '20261008-light-inner7';
+  var version = '20261014-ra3';
   var state = window.PETLAB_APP_SHELL || {};
   state.version = version;
   state.siteRoot = siteRoot.href;

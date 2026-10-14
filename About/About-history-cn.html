@@ -64,17 +64,9 @@
                 <h1 class="about-hero-title">发展历程</h1>
             </div>
         </section>
-        <section class="history-timeline" aria-labelledby="history-title">
-            <div class="history-timeline__heading">
-                <h2 id="history-title">三条历程 一条创新主线</h2>
-                <p>从科学发现、技术发明到产业发展，分别查看数字PET实验室如何把基础问题转化为原创技术，并进一步形成可用的科学仪器和医疗装备。</p>
-            </div>
-            <div class="history-timeline__tabs" role="tablist" aria-label="选择发展历程类别">
-                <button type="button" role="tab" aria-selected="true" data-history-group="科学发现">科学发现</button>
-                <button type="button" role="tab" aria-selected="false" data-history-group="技术发明">技术发明</button>
-                <button type="button" role="tab" aria-selected="false" data-history-group="产业发展">产业发展</button>
-            </div>
-            <div id="timeline-embed" role="tabpanel" aria-live="polite"></div>
+        <section class="history-timeline" aria-label="发展历程">
+            <div id="timeline-embed"></div>
+
 
             <script>
                 // 你的数据 👇 把这里换成你自己的所有数据
@@ -285,32 +277,7 @@
                     ]
                 };
 
-                const historyGroups = ["科学发现", "技术发明", "产业发展"];
-
-                function renderHistory(group) {
-                    const container = document.getElementById('timeline-embed');
-                    const filtered = {
-                        title: {
-                            text: {
-                                headline: group,
-                                text: group === "科学发现" ? "从新现象和新规律出发" : group === "技术发明" ? "把科学问题转化为可验证的技术" : "让原创技术形成仪器、标准与应用"
-                            }
-                        },
-                        events: data.events.filter((event) => event.group === group)
-                    };
-                    container.innerHTML = '';
-                    window.timeline = new TL.Timeline('timeline-embed', filtered);
-                }
-
-                document.querySelectorAll('[data-history-group]').forEach((button) => {
-                    button.addEventListener('click', () => {
-                        document.querySelectorAll('[data-history-group]').forEach((item) => item.setAttribute('aria-selected', 'false'));
-                        button.setAttribute('aria-selected', 'true');
-                        renderHistory(button.dataset.historyGroup);
-                    });
-                });
-
-                renderHistory(historyGroups[0]);
+                window.timeline = new TL.Timeline('timeline-embed', data);
             </script>
         </section>
 
